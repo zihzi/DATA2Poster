@@ -1,0 +1,385 @@
+{
+  "response": {
+    "set1": {
+      "Q": "How does the displacement of cars compare across different origins?",
+      "q1": {
+        "Decomposed_Question": "What is the average displacement of cars from the US?",
+        "Data_fact": "The highest (most) value of the Displacement is Origin US."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average displacement of cars from Japan?",
+        "Data_fact": "The lowest (least) value of the Displacement is Origin Japan."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the average displacement of cars from Europe?",
+        "Data_fact": "The lowest (least) value of the Displacement is Origin Europe."
+      }
+    },
+    "set2": {
+      "Q": "What is the relationship between displacement, MPG, and weight of cars?",
+      "q1": {
+        "Decomposed_Question": "What is the average MPG for cars with different displacement values?",
+        "Data_fact": "The mean MPG is 23.804290429042904."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average weight of cars based on their displacement?",
+        "Data_fact": "The mean weight is 2961."
+      },
+      "q3": {
+        "Decomposed_Question": "How does weight affect the MPG of cars?",
+        "Data_fact": "The standard deviation of MPG is 8.012557285068077."
+      }
+    },
+    "set3": {
+      "Q": "How does the displacement of cars change over the years by origin?",
+      "q1": {
+        "Decomposed_Question": "What is the trend of displacement for US cars from 1970 to 1982?",
+        "Data_fact": "The increasing trend of Displacement over Year(s) from 1978 to 1982."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the trend of displacement for Japan cars from 1970 to 1982?",
+        "Data_fact": "The lowest (least) value of the Displacement is Origin Japan when Year is 1980."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the trend of displacement for Europe cars from 1970 to 1982?",
+        "Data_fact": "The lowest (least) value of the Displacement is Origin Europe when Year is 1973."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does the weight of vehicles differ across different origins and how does it relate to the number of cylinders?",
+      "q1": {
+        "Decomposed_Question": "What is the average weight of vehicles from each origin?",
+        "Data_fact": "In the Weight ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average number of cylinders for vehicles from each origin?",
+        "Data_fact": "In the Cylinders ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between weight and number of cylinders?",
+        "Data_fact": "There is a strong relationship between Weight and Cylinders, with pearson correlation coefficient of 0.90."
+      }
+    },
+    "set2": {
+      "Q": "What impact does vehicle weight have on MPG and how does this vary over the years?",
+      "q1": {
+        "Decomposed_Question": "What is the average MPG of vehicles based on their weight?",
+        "Data_fact": "There is a strong relationship between Weight and MPG, with pearson correlation coefficient of -0.83."
+      },
+      "q2": {
+        "Decomposed_Question": "How does the average weight of vehicles change over the years?",
+        "Data_fact": "The increasing trend of Weight over Year(s) from 1970 to 1980."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the trend of MPG over the years?",
+        "Data_fact": "The lowest (least) value of the MPG is Year 1970 and the highest (most) value of the MPG is Year 1980."
+      }
+    },
+    "set3": {
+      "Q": "How do displacement and acceleration relate to vehicle weight?",
+      "q1": {
+        "Decomposed_Question": "What is the average displacement of vehicles based on their weight?",
+        "Data_fact": "The mean value of Displacement is 190.56."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average acceleration of vehicles based on their weight?",
+        "Data_fact": "The mean value of Acceleration is 15.72."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there a correlation between weight and acceleration?",
+        "Data_fact": "The correlation between Weight and Acceleration is not explicitly stated but can be inferred from the relationships with other variables."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Horsepower vary across different Origins, and what is the relationship between Horsepower and Cylinders?",
+      "q1": {
+        "Decomposed_Question": "What is the average Horsepower for vehicles from each Origin?",
+        "Data_fact": "In the Horsepower ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average number of Cylinders for vehicles from each Origin?",
+        "Data_fact": "In the Cylinders ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation coefficient between Horsepower and Cylinders?",
+        "Data_fact": "There is a strong relationship between Horsepower and Cylinders, with pearson correlation coefficient of 0.84."
+      }
+    },
+    "set2": {
+      "Q": "What are the trends in Horsepower and Weight over the years, and how do they compare across different years?",
+      "q1": {
+        "Decomposed_Question": "What is the average Horsepower for each Year?",
+        "Data_fact": "The increasing trend of Horsepower over Year(s) from 1970 to 1982."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Weight for each Year?",
+        "Data_fact": "The increasing trend of Weight over Year(s) from 1970 to 1980."
+      },
+      "q3": {
+        "Decomposed_Question": "How does the average Horsepower compare to the average Weight across the years?",
+        "Data_fact": "The highest (most) value of the Horsepower is Year 1973."
+      }
+    },
+    "set3": {
+      "Q": "What is the relationship between Horsepower, Displacement, and MPG, and how do they interact?",
+      "q1": {
+        "Decomposed_Question": "What is the average Displacement for vehicles based on Horsepower?",
+        "Data_fact": "The average Displacement is 190.56."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average MPG for vehicles based on Horsepower?",
+        "Data_fact": "The average MPG is 23.80."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation coefficient between Horsepower and MPG?",
+        "Data_fact": "There is a significant relationship between Horsepower and MPG."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does the number of cylinders impact the MPG across different origins?",
+      "q1": {
+        "Decomposed_Question": "What is the average MPG for each number of cylinders?",
+        "Data_fact": "There is a strong relationship between MPG and Cylinders, with pearson correlation coefficient of -0.77."
+      },
+      "q2": {
+        "Decomposed_Question": "How does the MPG differ by origin?",
+        "Data_fact": "In the MPG ranking of different Origin(s), the highest MPG is from Japan."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the distribution of cylinders among different origins?",
+        "Data_fact": "In the Cylinders ranking of different Origin(s), the highest number of cylinders is from US."
+      }
+    },
+    "set2": {
+      "Q": "What are the trends in MPG based on weight and year?",
+      "q1": {
+        "Decomposed_Question": "How does weight affect MPG?",
+        "Data_fact": "There is a strong relationship between MPG and Weight, with pearson correlation coefficient of -0.83."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average MPG for each year?",
+        "Data_fact": "The highest MPG was observed in 1980."
+      },
+      "q3": {
+        "Decomposed_Question": "How has the weight of vehicles changed over the years?",
+        "Data_fact": "The lowest value of weight is in Year 1971."
+      }
+    },
+    "set3": {
+      "Q": "What are the relationships between horsepower, displacement, and MPG?",
+      "q1": {
+        "Decomposed_Question": "What is the correlation between horsepower and MPG?",
+        "Data_fact": "The average horsepower is 102."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the correlation between displacement and MPG?",
+        "Data_fact": "The average displacement is 190.56."
+      },
+      "q3": {
+        "Decomposed_Question": "How do horsepower and displacement vary with MPG?",
+        "Data_fact": "The highest horsepower recorded is 230."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Displacement influence Horsepower across different Origins?",
+      "q1": {
+        "Decomposed_Question": "What is the average Horsepower for cars with different Displacement values?",
+        "Data_fact": "There is a strong relationship between Displacement and Horsepower, with a Pearson correlation coefficient of 0.87."
+      },
+      "q2": {
+        "Decomposed_Question": "How does the average Horsepower vary by Origin?",
+        "Data_fact": "In the Horsepower ranking of different Origin(s), the top three Origin(s) are US."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the relationship between Displacement and Horsepower for each Origin?",
+        "Data_fact": "The lowest value of Horsepower is for cars from Origin US."
+      }
+    },
+    "set2": {
+      "Q": "What trends can be observed in Weight and Displacement over the Years?",
+      "q1": {
+        "Decomposed_Question": "How has the average Weight changed over the Years?",
+        "Data_fact": "The lowest (least) value of the Weight is Year 1971."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Displacement over the Years?",
+        "Data_fact": "In the Displacement ranking of different Year(s), the top three Year(s) are 1973."
+      },
+      "q3": {
+        "Decomposed_Question": "How are Weight and Displacement related for different Years?",
+        "Data_fact": "The highest (most) value of the Weight is Year 1971."
+      }
+    },
+    "set3": {
+      "Q": "What is the distribution of MPG based on the number of Cylinders and Displacement?",
+      "q1": {
+        "Decomposed_Question": "What is the average MPG for cars with different Cylinder counts?",
+        "Data_fact": "The average MPG is 23.804290429042904."
+      },
+      "q2": {
+        "Decomposed_Question": "How does Displacement affect MPG across different Cylinder counts?",
+        "Data_fact": "There is a strong relationship between Displacement and Horsepower."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the relationship between Cylinders and MPG?",
+        "Data_fact": "The mean of Cylinders is 5."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Sleep Duration vary across different Occupations in relation to Stress Level?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each Occupation?",
+        "Data_fact": "In the Sleep Duration ranking of different Occupation(s), the top three Occupation(s) are engineer, followed by engineer, then engineer."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each Occupation?",
+        "Data_fact": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there a correlation between Sleep Duration and Stress Level for different Occupations?",
+        "Data_fact": "There is a strong relationship between Sleep Duration and Stress Level, with pearson correlation coefficient of -0.81."
+      }
+    },
+    "set2": {
+      "Q": "What is the relationship between Quality of Sleep and Physical Activity Level across different Occupations?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each Occupation?",
+        "Data_fact": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each Occupation?",
+        "Data_fact": "In the Physical Activity Level ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by engineer, then engineer."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there a correlation between Quality of Sleep and Physical Activity Level for different Occupations?",
+        "Data_fact": "There is a weak relationship between Quality of Sleep and Physical Activity Level, with pearson correlation coefficient of 0.19."
+      }
+    },
+    "set3": {
+      "Q": "How do Daily Steps vary by BMI Category in relation to Occupation?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each Occupation?",
+        "Data_fact": "In the Daily Steps ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then nurse."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "How does Daily Steps performance differ among various Occupations within each BMI Category?",
+        "Data_fact": "The BMI Category overweight accounts for 100.00% of the Daily Steps when Occupation is manager."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How do Sleep Duration and Quality of Sleep compare among different occupations?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each Occupation?",
+        "Data_fact": "In the Sleep Duration ranking of different Occupation(s), the top three Occupation(s) are engineer, followed by engineer, then engineer."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each Occupation?",
+        "Data_fact": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the strong relationship between Sleep Duration and Quality of Sleep?",
+        "Data_fact": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88."
+      }
+    },
+    "set2": {
+      "Q": "What is the relationship between Stress Level and Physical Activity Level across different occupations?",
+      "q1": {
+        "Decomposed_Question": "What is the average Stress Level for each Occupation?",
+        "Data_fact": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each Occupation?",
+        "Data_fact": "In the Physical Activity Level ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by engineer, then engineer."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Stress Level and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship between Stress Level and Physical Activity Level, with pearson correlation coefficient of -0.03."
+      }
+    },
+    "set3": {
+      "Q": "How do Daily Steps and Heart Rate vary among different occupations?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each Occupation?",
+        "Data_fact": "In the Daily Steps ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then nurse."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Heart Rate for each Occupation?",
+        "Data_fact": "In the Heart Rate ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by teacher, then teacher."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the relationship between Daily Steps and Heart Rate?",
+        "Data_fact": "There is a weak relationship between Daily Steps and Heart Rate, with pearson correlation coefficient of 0.28."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Sleep Duration affect Quality of Sleep among different genders?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each gender?",
+        "Data_fact": "The average Sleep Duration is 7.132 hours."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each gender?",
+        "Data_fact": "The average Quality of Sleep is 7.313."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Sleep Duration and Quality of Sleep?",
+        "Data_fact": "There is a strong relationship with a Pearson correlation coefficient of 0.88."
+      }
+    },
+    "set2": {
+      "Q": "What is the relationship between Stress Level and Physical Activity Level for different genders?",
+      "q1": {
+        "Decomposed_Question": "What is the average Stress Level for each gender?",
+        "Data_fact": "The average Stress Level is 5.385."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each gender?",
+        "Data_fact": "The average Physical Activity Level is 59.171."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Stress Level and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship with a Pearson correlation coefficient of -0.03."
+      }
+    },
+    "set3": {
+      "Q": "How do Daily Steps and Heart Rate vary across different genders?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each gender?",
+        "Data_fact": "The average Daily Steps is 6817."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Heart Rate for each gender?",
+        "Data_fact": "The average Heart Rate is 69.644."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Daily Steps and Heart Rate?",
+        "Data_fact": "There is a weak relationship with a Pearson correlation coefficient of 0.28."
+      }
+    }
+  }
+}

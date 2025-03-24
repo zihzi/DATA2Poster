@@ -1,0 +1,82 @@
+{
+    "title": "Extracted_Data_Pattern",
+    "type": "object",
+    "description": "Extract data pattern by combining multiple facts.",
+    "properties": {
+        "pattern1":{
+            "type":"object",
+            "description": "Containing extracted data pattern and combination of multiple facts",
+            "properties":{
+                "extracted_pattern":{
+                    "type":"string",
+                    "description": "Briefly describe the pattern"
+                },
+                "supporting_facts":{
+                    "type":"array",
+                    "description": "List of two or three facts that support the pattern",
+                    "items":{
+                        "type":"string",
+                        "description": "Multiple facts that support the pattern"
+                    }
+                },
+                "reasoning":{
+                    "type":"string",
+                    "description": "Explain why this pattern is interesting or surprising"
+                }
+            },
+            "required": ["pattern", "supporting_facts", "reasoning"]
+        },
+        "pattern2":{
+            "type":"object",
+            "description": "Containing extracted data pattern and combination of multiple facts",
+            "properties":{
+                "extracted_pattern":{
+                    "type":"string",
+                    "description": "Briefly describe the pattern"
+                },
+                "supporting_facts":{
+                    "type":"array",
+                    "description": "List of two or three facts that support the pattern",
+                    "items":{
+                        "type":"string",
+                        "description": "Multiple facts that support the pattern"
+                    }
+                },
+                "reasoning":{
+                    "type":"string",
+                    "description": "Explain why this pattern is interesting or surprising"
+                }
+            },
+            "required": ["pattern", "supporting_facts", "reasoning"]
+        },
+        "pattern3":{
+            "type":"object",
+            "description": "Containing extracted data pattern and combination of multiple facts",
+            "properties":{
+                "extracted_pattern":{
+                    "type":"string",
+                    "description": "Briefly describe the pattern"
+                },
+                "supporting_facts":{
+                    "type":"array",
+                    "description": "List of two or three facts that support the pattern",
+                    "items":{
+                        "type":"string",
+                        "description": "Multiple facts that support the pattern"
+                    }
+                },
+                "reasoning":{
+                    "type":"string",
+                    "description": "Explain why this pattern is interesting or surprising"
+                }
+            },
+            "required": ["pattern", "supporting_facts", "reasoning"]
+        }
+
+    },
+    "required": ["pattern1", "pattern2", "pattern3"]   
+  }
+
+    
+    
+   

@@ -1,0 +1,13 @@
+{
+    "title": "Insight",
+    "description": "Insight Description",
+    "type": "object",
+    "properties": {
+        "content": {
+            "type": "string",
+            "description": "Insight Description",
+            "maxLength": 10
+        }
+    },
+    "required": ["content"]
+}

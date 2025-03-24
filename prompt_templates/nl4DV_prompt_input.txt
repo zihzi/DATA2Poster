@@ -1,0 +1,6 @@
+Here's a subset of the original dataset with actual columns and rows for reference.\n\n
+{sample_data}\n\n
+Here is metadata for the dataset.\n\n
+{summary}\n\n
+Here is the query.\n\n
+{query}\n\n

@@ -1,0 +1,150 @@
+{
+    "title": "Visualization_Query_Schema",
+    "description": "Schema for a natural language query to generate visualizations.",
+    "type": "object",
+    "properties": {
+        "query": {
+            "type": "string",
+            "description": "Natural language query being parsed."
+        },
+        "query_raw": {
+            "type": "string",
+            "description": "Raw natural language query."
+        },
+        "dataset": {
+            "type": "string",
+            "description": "URL of the dataset."
+        },
+        "visType": {
+            "type": "string",
+            "description": "Explicitly specified visualization type in the query, or 'None' if not specified."
+        },
+        "visQueryPhrase": {
+            "type": "string",
+            "description": "Keywords found in the query used to detect the visType. 'None' if not specified."
+        },
+        "visList": {
+            "type": "array",
+            "description": "List of detected visualizations.",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "attributes": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "List of dataset attributes detected."
+                    },
+                    "queryPhrase": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Keywords found in query that were used to detect the taskMap and recommended visualization."
+                    },
+                    "visType": {
+                        "type": "string",
+                        "description": "Visualization type explicitly specified in query, or 'None' if not specified."
+                    },
+                    "tasks": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "List of detected tasks based on analytic task JSON mapping."
+                    },
+                    "inferenceType": {
+                        "type": "string",
+                        "enum": ["explicit", "implicit"],
+                        "description": "Explicit if visualization's 'queryPhrase' explicitly references a visualization type, otherwise implicit."
+                    },
+                    "vlSpec": {
+                        "type": "object",
+                        "description": "Vega-Lite specification for the recommended visualization."
+                    }
+                },
+                "required": ["attributes", "queryPhrase", "visType", "tasks", "inferenceType", "vlSpec"]
+            }
+        },
+        "attributeMap": {
+            "type": "object",
+            "description": "Mapping of dataset attributes detected in query.",
+            "additionalProperties": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Detected dataset column."
+                    },
+                    "queryPhrase": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "Keywords found in query that were used to detect the dataset attribute."
+                    },
+                    "encode": {
+                        "type": "boolean",
+                        "description": "True if the attribute appears on axes or color in Vega-Lite spec."
+                    },
+                    "metric": {
+                        "type": "string",
+                        "enum": ["attribute_exact_match", "attribute_similarity_match"],
+                        "description": "Set to 'attribute_exact_match' if directly found in query, otherwise 'attribute_similarity_match'."
+                    },
+                    "inferenceType": {
+                        "type": "string",
+                        "enum": ["explicit", "implicit"],
+                        "description": "Explicit if 'queryPhrase' references an attribute name, otherwise implicit."
+                    },
+                    "isAmbiguous": {
+                        "type": "boolean",
+                        "description": "True if 'queryPhrase' could refer to multiple attributes, otherwise false."
+                    },
+                    "ambiguity": {
+                        "type": "array",
+                        "items": {"type": "string"},
+                        "description": "List of possible attribute names if ambiguity is true, otherwise empty."
+                    }
+                },
+                "required": ["name", "queryPhrase", "encode", "metric", "inferenceType", "isAmbiguous", "ambiguity"]
+            }
+        },
+        "taskMap": {
+            "type": "object",
+            "description": "Mapping of detected analytic tasks.",
+            "additionalProperties": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "task": {
+                            "type": "string",
+                            "description": "Task detected based on 'taskMap Encoding'."
+                        },
+                        "queryPhrase": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                            "description": "Keywords found in query that were used to detect the task."
+                        },
+                        "values": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                            "description": "Filter values if the 'Filter' task was detected."
+                        },
+                        "attributes": {
+                            "type": "array",
+                            "items": {"type": "string"},
+                            "description": "List of attributes the task is mapped to."
+                        },
+                        "operator": {
+                            "type": "string",
+                            "enum": ["", "IN", "GT", "EQ", "AVG", "SUM", "MAX", "MIN"],
+                            "description": "Task operator: 'GT' (greater than), 'EQ' (equals), 'IN' (categorical filter), 'AVG', 'SUM', 'MAX', 'MIN'. Keep empty otherwise."
+                        },
+                        "inferenceType": {
+                            "type": "string",
+                            "enum": ["explicit", "implicit"],
+                            "description": "Explicit if 'queryPhrase' directly requests the task, otherwise implicit."
+                        }
+                    },
+                    "required": ["task", "queryPhrase", "values", "attributes", "operator", "inferenceType"]
+                }
+            }
+        }
+    },
+    "required": ["query", "query_raw", "dataset", "visList", "attributeMap", "taskMap", "visType", "visQueryPhrase"]
+}

@@ -1,0 +1,20 @@
+You are an domain expert of given dataset and you are excel in analyzing and understanding data relationships in structured datasets. 
+Based on the user-selected column {user_selected_column}, dataset name {chosen_dataset}, and data summary {chosen_data_schema} provided, 
+identify three sets of two columns related to the selected column based on logical, semantic, or contextual connections.
+[Instructions] 
+(1) Understand the Schema: Review the schema carefully to understand the data structure and types of columns available.
+(2) Identify theme: Identify the theme that can be explored using the columns combination.
+(3) Identify insights: Think about the different types of insights we want to uncover, such as relationships between columns, trends or anomalies.
+(4) Identify "breakdown" and "measure" dimensions:
+    Insights are obtained when a "measure" is compared across a "breakdown" dimension.
+    The "measure" is a quantity of interest expressed in terms of variables of the table. It consists of
+    - A measure function (aggregation) - COUNT, MEAN, MIN, MAX
+    - A measure column - a numerical(N) column of the table
+    The "breakdown" dimension is a variable of the table across which we would like to compare values of measure to obtain meaningful insights. It is
+    - A breakdown column - a categorical(C) or temporal(T) column of the table
+(5)Sets of columns MUST include both "breakdown" which dtype is "C" or "T" and "measure" which dtype is "N".
+[/Instructions] 
+You can use repeat column name in different set. 
+Return the result in JSON format, clearly listing the TWO related columns and the reason why you select the column.
+YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
+            

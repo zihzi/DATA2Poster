@@ -38,7 +38,7 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
                     with warnings.catch_warnings():
                         warnings.simplefilter("ignore")
                         pd.to_datetime(df[column], errors='raise')
-                        properties["dtype"] = "date"
+                        properties["dtype"] = "T"
                 except ValueError:
                     # Check if the string column has a limited number of values
                     if df[column].nunique() / len(df[column]) < 0.5:
@@ -48,13 +48,13 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
             elif pd.api.types.is_categorical_dtype(df[column]):
                 properties["dtype"] = "C"
             elif pd.api.types.is_datetime64_any_dtype(df[column]):
-                properties["dtype"] = "date"
+                properties["dtype"] = "T"
             
             else:
                 properties["dtype"] = str(dtype)
 
             # add min max if dtype is date
-            if properties["dtype"] == "date":
+            if properties["dtype"] == "T":
                 try:
                     properties["min"] = df[column].min()
                     properties["max"] = df[column].max()

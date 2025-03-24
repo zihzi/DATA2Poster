@@ -1,0 +1,10 @@
+import altair as alt
+import pandas as pd
+<imports>
+def plot(data: pd.Dataframe):
+
+
+    <stub> # only modify this section
+
+    return chart
+chart = plot(data) Always include this line. No additional code beyond this line.

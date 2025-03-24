@@ -1,0 +1,192 @@
+{ 
+    "title": "Selected_Column",
+    "type": "object", 
+    "description": "TWO related columns and the reason why you select the column.",
+    "properties": 
+        {        
+            "set1":{
+                    "type": "object",
+                    "description": "Contains selected column and related columns",
+                    "properties": 
+                        {
+                            "selected_column": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the selected column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the selected column.It can be one of the following: N, C, T."
+                                        }
+                                    },
+                                "required": ["name", "dtype"]
+                            },
+                            "related_column_1": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            },
+                            "related_column_2": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            }
+
+                        }
+                    }, 
+            "set2":{
+                    "type": "object",
+                    "description": "Contains selected column and related columns",
+                    "properties": 
+                        {
+                            "selected_column": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the selected column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the selected column.It can be one of the following: N, C, T."
+                                        }
+                                    },
+                                "required": ["name", "dtype"]
+                            },
+                            "related_column_1": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            },
+                            "related_column_2": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            }
+
+                        }
+                    },
+            "set3":{
+                    "type": "object",
+                    "description": "Contains selected column and related columns",
+                    "properties": 
+                        {
+                            "selected_column": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the selected column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the selected column.It can be one of the following: N, C, T."
+                                        }
+                                    },
+                                "required": ["name", "dtype"]
+                            },
+                            "related_column_1": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            },
+                            "related_column_2": {
+                                "type": "object",
+                                "properties": 
+                                    {
+                                        "name": {
+                                            "type": "string",
+                                            "description": "The name of the related column."
+                                        },
+                                        "dtype": {
+                                            "type": "string",
+                                            "description": "The data type of the related column.It can be one of the following: N, C, T."
+                                        },
+                                        "reason": {
+                                            "type": "string",
+                                            "description": "The reason why you select the column."
+                                        }
+                                    },
+                                "required": ["name", "dtype", "reason"]
+                            }
+
+                        }
+                    }
+        },                                                                     
+    "required": ["set1","set2","set3"]                 
+}

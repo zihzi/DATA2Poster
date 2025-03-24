@@ -1,0 +1,146 @@
+{
+    "title": "Question_for_Insights",
+    "type": "object",
+    "description": "Contains of questions based on a data patttern for further analysis.",
+    "properties": {
+      "refer_pattern_1": {
+        "type": "object",
+        "description": "The first data pattern and corresponding questions.",
+        "properties": {
+            "chosen_pattern": {
+              "type": "string",
+              "description": "The first data patterns."
+            },
+            "questions": {
+              "type": "object",
+              "description": "Questions based on further analysis.",
+              "properties": {
+                "question_1": {
+                  "type": "string",
+                  "description": "The first question."
+                },
+                "action_1": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_2": {
+                  "type": "string",
+                  "description": "The second question."
+                },
+                "action_2": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_3": {
+                  "type": "string",
+                  "description": "The third question."
+                },
+                "action_3": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                }            
+              },
+              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+            },
+            "conclusion": {
+              "type": "string",
+              "description": "A concluding interrogative sentence summarizing the three questions."
+            }
+        },
+        "required": ["chosen_pattern", "questions", "conclusion"]
+      },
+      "refer_pattern_2": {
+        "type": "object",
+        "description": "The second data pattern and corresponding questions.",
+        "properties": {
+            "chosen_pattern": {
+              "type": "string",
+              "description": "The second data patterns."
+            },
+            "questions": {
+              "type": "object",
+              "description": "Questions based on further analysis.",
+              "properties": {
+                "question_1": {
+                  "type": "string",
+                  "description": "The first question."
+                },
+                "action_1": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_2": {
+                  "type": "string",
+                  "description": "The second question."
+                },
+                "action_2": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_3": {
+                  "type": "string",
+                  "description": "The third question."
+                },
+                "action_3": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                }            
+              },
+              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+            },
+            "conclusion": {
+              "type": "string",
+              "description": "A concluding interrogative sentence summarizing the three questions."
+            }
+        },
+        "required": ["chosen_pattern", "questions", "conclusion"]
+      },
+      "refer_pattern_3":{
+        "type": "object",
+        "description": "The third data pattern and corresponding questions.",
+        "properties": {
+            "chosen_pattern": {
+              "type": "string",
+              "description": "The third data patterns."
+            },
+            "questions": {
+              "type": "object",
+              "description": "Questions based on further analysis.",
+              "properties": {
+                "question_1": {
+                  "type": "string",
+                  "description": "The first question."
+                },
+                "action_1": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_2": {
+                  "type": "string",
+                  "description": "The second question."
+                },
+                "action_2": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                },
+                "question_3": {
+                  "type": "string",
+                  "description": "The third question."
+                },
+                "action_3": {
+                  "type": "string",
+                  "description": "The description of how to solve the question using visualization."
+                }            
+              },
+              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+            },
+            "conclusion": {
+              "type": "string",
+              "description": "A concluding interrogative sentence summarizing the three questions."
+            }
+        },
+        "required": ["chosen_pattern", "questions", "conclusion"]
+      }
+    },
+    "required": ["refer_pattern_1", "refer_pattern_2", "refer_pattern_3"] 
+}
