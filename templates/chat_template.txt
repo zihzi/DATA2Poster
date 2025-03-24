@@ -1,0 +1,1 @@
+Base on {query} and {table}, generate Python Code Script which can visualize the data successfully.
