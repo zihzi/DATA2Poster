@@ -20,12 +20,10 @@ from poster_generator import create_pdf
 
 # Import langchain modules
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_community.chat_models.ollama import ChatOllama
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_community.vectorstores.faiss import FAISS
 # from langchain.retrievers.self_query.base import SelfQueryRetriever
-# from langchain_community.vectorstores.neo4j_vector import Neo4jVector,SelfQueryRetriever
 
     
 # Set page config
@@ -186,31 +184,30 @@ if try_true or (st.session_state["bt_try"] == "T"):
             st.write("Select a column:")
             selected_column = st.radio("Select one column:", head, index=None, label_visibility="collapsed")            
             skip_true = st.button("Skip")
-             # use gpt-4o-mini as llm
         
-            column_des_prompt_template = """
-            You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
-            Here are summary of the dataset:\n\n{chosen_data_schema}\n\n
-            Explain these column names WITHOUT mention the statistical value given by the summary in natural language description that can help the user understand the dataset better.
-            Please do not add any extra prose to your response.
-            You should list reponse as below format:\n\n
-            \"Overview of Columns(IN BOLD):\n\n
-              1.Column_Name: "Your description here."
+            # column_des_prompt_template = """
+            # You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
+            # Here are summary of the dataset:\n\n{chosen_data_schema}\n\n
+            # Explain these column names WITHOUT mention the statistical value given by the summary in natural language description that can help the user understand the dataset better.
+            # Please do not add any extra prose to your response.
+            # You should list reponse as below format:\n\n
+            # \"Overview of Columns(IN BOLD):\n\n
+            #   1.Column_Name: "Your description here."
 
-              2.Column_Name: "Your description here."
+            #   2.Column_Name: "Your description here."
 
-              3.Column_Name: "Your description here."
+            #   3.Column_Name: "Your description here."
 
-              4.Column_Name: "Your description here."\"
-            """
-            prompt = PromptTemplate(
-            template=column_des_prompt_template,
-            input_variables=["data_names","data_columns","chosen_data_schema"],
-            )
-            column_des_chain = prompt | llm
-            column_des = column_des_chain.invoke(input ={"data_name": chosen_dataset, "data_columns":head,"chosen_data_schema":chosen_data_schema})
+            #   4.Column_Name: "Your description here."\"
+            # """
+            # prompt = PromptTemplate(
+            # template=column_des_prompt_template,
+            # input_variables=["data_names","data_columns","chosen_data_schema"],
+            # )
+            # column_des_chain = prompt | llm
+            # column_des = column_des_chain.invoke(input ={"data_name": chosen_dataset, "data_columns":head,"chosen_data_schema":chosen_data_schema})
 
-            st.write(column_des.content)
+            # st.write(column_des.content)
 
             user_selected_column = ""
             if skip_true:
@@ -258,44 +255,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # Produce columns to generate fact list
                 column_list_for_Q = []
                 facts_list = []
-                facts_list_for_Q = []
                 for key in columns_from_gpt:
                     columns_dic = {columns_from_gpt["set1"]["selected_column"]["name"]: columns_from_gpt["set1"]["selected_column"]["dtype"]}
                     for i in range(1,3):
                         columns_dic[columns_from_gpt[key][f"related_column_{i}"]["name"]] = columns_from_gpt[key][f"related_column_{i}"]["dtype"]         
-                    breakdown = [col for col, dtype in columns_dic.items() if dtype == "C"or dtype == "T"]   
+                    breakdown = [col for col, dtype in columns_dic.items() if dtype == "C" or dtype == "T"]   
                     measure = [col for col, dtype in columns_dic.items() if dtype == "N"]
                     column_list_for_Q.append(columns_dic)
-                    combination = list(product(breakdown, measure))
-                    for b, m in combination:                 
-                        if columns_dic[b] == "C":
-                            facts = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=b,
-                                    measure=m,
-                                    series=None,
-                                    breakdown_type="C",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        elif columns_dic[b] == "T":
-                            facts = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=b,
-                                    measure=m,
-                                    series=None,
-                                    breakdown_type="T",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                                                            
+                    # list all possible combinations of breakdown and measure to generate facts
                     if len(breakdown) == 2: 
                         if columns_dic[breakdown[0]] == "C":
-                            facts = generate_facts(
+                            facts_1 = generate_facts(
                                             dataset=Path(f"data/{chosen_dataset}.csv"),
                                             breakdown=breakdown[0],
                                             measure=measure[0],
@@ -304,10 +274,21 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                             measure_type="N",
                                             with_vis=False,
                                         )
-                            for fact in facts:
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=None,
+                                            breakdown_type="C",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_2:
                                 facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
                         elif columns_dic[breakdown[0]] == "T":
-                            facts = generate_facts(
+                            facts_1 = generate_facts(
                                             dataset=Path(f"data/{chosen_dataset}.csv"),
                                             breakdown=breakdown[0],
                                             measure=measure[0],
@@ -316,12 +297,23 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                             measure_type="N",
                                             with_vis=False,
                                         )
-                            for fact in facts:
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=None,
+                                            breakdown_type="T",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_2:
                                 facts_list.append({"content":fact["content"], "score":fact["score_C"]})
                                             
                     if len(measure) == 2:
                         if columns_dic[breakdown[0]] == "C":
-                            facts = generate_facts(
+                            facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown[0],
                                 measure=measure[0],
@@ -331,10 +323,32 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                 measure_type="NxN",
                                 with_vis=False,
                             )
-                            for fact in facts:
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[0],
+                                    series=None,
+                                    breakdown_type="C",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_3 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[1],
+                                    series=None,
+                                    breakdown_type="C",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_3:
                                 facts_list.append({"content":fact["content"], "score":fact["score_C"]})
                         elif columns_dic[breakdown[0]] == "T": 
-                            facts = generate_facts(
+                            facts_1 = generate_facts(
                                     dataset=Path(f"data/{chosen_dataset}.csv"),
                                     breakdown=breakdown[0],
                                     measure=measure[0],
@@ -344,13 +358,34 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                     measure_type="NxN",
                                     with_vis=False,
                                 )
-                            for fact in facts:
+                            for fact in facts_1:
                                 facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
+                            facts_2 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[0],
+                                    series=None,
+                                    breakdown_type="T",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_3 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[1],
+                                    series=None,
+                                    breakdown_type="T",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_3:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
                     if "fact" in st.session_state:
                         st.session_state["fact"] = []
                     facts_list_sorted = sorted(facts_list, key=itemgetter('score'), reverse=True)
-                    for item in facts_list_sorted[:10]:
-                        facts_list_for_Q.append(item["content"])
+                    
                     for item in facts_list_sorted[:100]:
                         if item["content"] != "No fact.":
                             st.session_state["fact"].append(item["content"])
@@ -359,13 +394,12 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 vectorstore = FAISS.from_texts(
                 st.session_state["fact"],
                 OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
-                # persist_directory="./chroma_langchain_db",
                 )
                 st.session_state["vectorstore"] = vectorstore
                 
                 # Create intermediate output as knowledge
                 knowledge = self_augmented_knowledge(openai_key, chosen_dataset, column_list_for_Q, st.session_state["fact"])
-                st.write("0306:",knowledge)
+                st.write("KnowledgeBase:",knowledge)
 
                 # Combine facts into interesting patterns
                 llm_pattern_template = load_prompt_from_file("prompt_templates/fact_idea_prompt.txt")
@@ -400,7 +434,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     llm_Q_schema = json.load(f)
                 llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
                 llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":pattern_list[0],"pattern_1_fact_1":support_fact_list[0],"pattern_1_fact_2":support_fact_list[1],"pattern_1_fact_3":support_fact_list[2],"columns_set_1":column_list_for_Q[0],"pattern_2":pattern_list[1],"pattern_2_fact_1":support_fact_list[3],"pattern_2_fact_2":support_fact_list[4],"pattern_2_fact_3":support_fact_list[5],"columns_set_2":column_list_for_Q[1],"pattern_3":pattern_list[2],"pattern_3_fact_1":support_fact_list[6],"pattern_3_fact_2":support_fact_list[7],"pattern_3_fact_3":support_fact_list[8],"columns_set_3":column_list_for_Q[2],"knowledgebase":knowledge})
-                st.write("Test Question:",llm_Q_from_gpt)
+                st.write("Question:",llm_Q_from_gpt)
                 
                 # log the llm question
                 def log_response_to_json(knowledgebase, response):
@@ -408,36 +442,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     
                     with open("log/COT_Q_logs.json", "a") as f:
                         f.write(json.dumps(log_data,indent=2))  # Append new log entry
-
                 
                 # Save log
                 log_response_to_json(knowledge, llm_Q_from_gpt)
 
-############################################################################################################ llm_question_baseline 
-                # Call gpt-4o-mini to generate poster question based on the fact list
-                llm_question_template = load_prompt_from_file("prompt_templates/llm_question_baseline.txt")
-                prompt_Q = PromptTemplate(
-                                        template=llm_question_template,                 
-                                        input_variables=["columns","chosen_data_schema","facts"],
-                                        
-                            )
-                with open("json_schema/question_baseline_json_schema.json", "r") as f:
-                    Q_json_schema = json.load(f)
-                   
-                chain_Q = prompt_Q | llm.with_structured_output(Q_json_schema)
-                Q_from_gpt = chain_Q.invoke(input = {"column_1":column_list_for_Q[0], "column_2":column_list_for_Q[1], "column_3":column_list_for_Q[2], "chosen_data_schema":chosen_data_schema, "facts":st.session_state["fact"]})
-                
-
-                # log the llm-baseline question
-                def log_response_to_json(response):
-                    log_data = {"response": response}
-                    
-                    with open("log/direct_Q_logs.json", "a") as f:
-                        f.write(json.dumps(log_data,indent=2))  # Append new log entry               
-
-                # Save log
-                log_response_to_json(Q_from_gpt)
-############################################################################################################ llm_question_baseline 
 
                 st.session_state["Q_from_gpt"] = llm_Q_from_gpt
                 
@@ -546,46 +554,35 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 )
                  
                 
-                messages=[
-                    SystemMessage(content = f"""You are an expert data analyst. Below is a chart which is ploted  based on this question:\n\n {query}. 
-                                                Your task is hightlight the insight you get without exaggeration and summarize the chart concisely to answer the question.
-                                                AVOID speculative claims without statistical support."""),
-                    HumanMessage(
-                                content=[
-                                    {"type": "text", "text": "describe the weather in this image"},
-                                    {
-                                        "type": "image_url",
-                                        "image_url": {"url": f"data:image/svg;base64,{image_data}"},
-                                    },
-                                ],
-                            )
-                    ]
+                # messages=[
+                #     SystemMessage(content = f"""You are an expert data analyst. Below is a chart which is ploted  based on this question:\n\n {query}. 
+                #                                 Your task is hightlight the insight you get without exaggeration and summarize the chart concisely to answer the question.
+                #                                 AVOID speculative claims without statistical support."""),
+                #     HumanMessage(
+                #                 content=[
+                #                     {"type": "text", "text": "describe the weather in this image"},
+                #                     {
+                #                         "type": "image_url",
+                #                         "image_url": {"url": f"data:image/svg;base64,{image_data}"},
+                #                     },
+                #                 ],
+                #             )
+                #     ]
                 
 
-                chart_des = llm.invoke(messages)
+                # chart_des = llm.invoke(messages)
                             
-                # chart_chain = chart_des_prompt  | llm 
-                # chart_des = chart_chain.invoke(input = {"query":query, "image_path":f"DATA2Poster_img/image_{idx}.svg", "detail_parameter":"high"})
                 #  RAG
                 retrieve_docs = st.session_state["vectorstore"].max_marginal_relevance_search(query, k=3,fetch_k=25,lambda_mult=0.4)
                 retrieved_fact = [doc.page_content for doc in retrieve_docs] # retrieve_fact is a list of facts
                 vectorstore = st.session_state["vectorstore"]
-                # content_description = "Statments that can be visualized."
-                # metadata_field_info = ""
-                # retriever = SelfQueryRetriever.from_llm(
-                #     llm,
-                #     vectorstore,
-                #     content_description,
-                #     metadata_field_info,
-                #     enable_limit=True,
-                # )
-                # retrieved_fact = retriever.invoke(f"Find the three statement that are most relavent to the following statement:{chart_des.content}")
-                # fact_for_insight = [doc.page_content for doc in retrieved_fact] 
+                
                 fact_for_insight = retrieved_fact
-
+                supported_fact = selected_pattern["questions"][f"fact_{idx}"]
 
                 st.write(f'**Question for Chart:**',f'**{query}**')
-                st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
                 st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
 
                 # call gpt-4o-mini to generate insight description
@@ -593,7 +590,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
                 insight_prompt_input = PromptTemplate(
                             template=insight_prompt_input_template,
-                            input_variables=["query", "chart_des", "fact_1", "fact_2", "fact_3"],
+                            input_variables=["query", "fact"],
                             # response_format=Insight,                         
                 ) 
                 insight_prompt = ChatPromptTemplate.from_messages(
@@ -604,7 +601,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     )
                 # insight_llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key, max_tokens=15)
                 insight_chain = insight_prompt | llm
-                insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des.content, "fact_1":fact_for_insight[0], "fact_2":fact_for_insight[1], "fact_3":fact_for_insight[2] })
+                insight = insight_chain.invoke(input= {"query":query, "fact":supported_fact})
                 st.write(f'**Insight Description:**', f'**{insight.content}**')
                 insight_list.append(insight.content)
                 col1, col2 = st.columns(2)
@@ -623,7 +620,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             st.session_state["selection"] = ""
             # Create pdf and download
             pdf_title = selected_poster_question
-            create_pdf(chosen_dataset, q_for_nl4DV , pdf_title, insight_list, chosen_data_schema, openai_key)
+            create_pdf(chosen_dataset, q_for_nl4DV , pdf_title, insight_list, openai_key)
             st.success("Poster has been created successfully!🎉")
             with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
                 st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")

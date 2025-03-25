@@ -1,6 +1,4 @@
 Here is a question that used for visualization.\n\n
 Question: {query}\n\n
-Here is the chart description for your reference.\n\n
-Chart Description: {chart_des}\n\n
-Here are statements that maybe useful.\n\n
-Statements: {fact_1}\n\n{fact_2}\n\n{fact_3}\n\n
+Here are the answer to the quesiton.\n\n
+Answer: {fact}

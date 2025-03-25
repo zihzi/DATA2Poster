@@ -10,11 +10,10 @@ from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.colors import HexColor
 from text_generator import introduction, conclusion
-from langchain_openai import ChatOpenAI
 
 
 
-def create_pdf(dataset, q_for_nl4DV, title, description_list, summary,  openai_key):
+def create_pdf(dataset, q_for_nl4DV, title, insight_list,  openai_key):
     num = random.choice([1, 2, 3])
     if num == 1:
         text_color = "#feece9"
@@ -35,7 +34,7 @@ def create_pdf(dataset, q_for_nl4DV, title, description_list, summary,  openai_k
     text_introduction = introduction(title, q_for_nl4DV , openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(title,description_list, text_introduction, openai_key)
+    text_conclusion = conclusion(title, insight_list, text_introduction, openai_key)
     
     # Title
     p_title = Paragraph(title, ParagraphStyle(name='title', fontSize=32, fontName='Helvetica-Bold',leading=34, textColor=text_color))
@@ -52,45 +51,27 @@ def create_pdf(dataset, q_for_nl4DV, title, description_list, summary,  openai_k
     
      
     # Add images 1 and descriptions
-    img_1 = Image.open("data2poster_img/image_1.png")
-    # re_img1 = img_1.resize((512, 384))
-    # re_img1.save("data2poster_img/image_1.png")
     c.drawImage("data2poster_img/image_1.png", 55, height-580, width=280, height=210)
-    # c.setStrokeColor(HexColor("#2c2a32"))
-    # c.setLineWidth(2)
-    # c.rect(60, height-740, 360, 360, fill=0)
-    p_desc = Paragraph(description_list[0], ParagraphStyle(name="description", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(insight_list[0], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, width/4, 100)
     p_desc.drawOn(c, 50, height-670)
 
     # Add images 2 and descriptions
-    img_2 = Image.open("data2poster_img/image_2.png")
-    # re_img2 = img_2.resize((512, 384))
-    # re_img2.save("data2poster_img/image_2.png")
     c.drawImage("data2poster_img/image_2.png", 455, height-580, width=280, height=210)
-    # c.setStrokeColor(HexColor("#2c2a32"))   
-    # c.setLineWidth(2)
-    # c.rect(550, height-390, 280, 210, fill=0)
-    p_desc = Paragraph(description_list[1], ParagraphStyle(name="description", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(insight_list[1], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, width-900, 30)
     p_desc.drawOn(c, 450, height-670)
 
     # Add images 3 and descriptions
-    img_3 = Image.open("data2poster_img/image_3.png")
-    # re_img3 = img_3.resize((512, 384))
-    # re_img3.save("data2poster_img/image_3.png")
     c.drawImage("data2poster_img/image_3.png", 845, height-580, width=280, height=210)
-    # c.setStrokeColor(HexColor("#2c2a32"))
-    # c.setLineWidth(2)
-    # c.rect(550, height-660, 280, 210, fill=0)  
-    p_desc = Paragraph(description_list[2], ParagraphStyle(name="description", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(insight_list[2], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=18, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, width-900, 30)
     p_desc.drawOn(c, 840, height-670)
 
     # Conclusion content
     p_conclusion = Paragraph("Conclusion", ParagraphStyle(name='conclusion', fontSize=26, fontName='Helvetica-Bold', textColor=text_color))
     p_conclusion.wrapOn(c, width/2, 200)
-    p_conclusion.drawOn(c, 30, height-715)
+    p_conclusion.drawOn(c, 30, height-720)
     p_con = Paragraph(text_conclusion, ParagraphStyle(name="conclusion", fontSize=14, fontName='Helvetica', leading=18, alignment=4, textColor=text_color))
     p_con.wrapOn(c, width-70, 100)
     p_con.drawOn(c, 30, height-820)

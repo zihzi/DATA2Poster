@@ -382,4 +382,340 @@
       }
     }
   }
+}{
+  "response": {
+    "set1": {
+      "Q": "How do Quality of Sleep and Stress Level relate to different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Quality of Sleep and Stress Level?",
+        "Data_fact": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90."
+      }
+    },
+    "set2": {
+      "Q": "What is the impact of Sleep Duration and Daily Steps on different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average number of Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "How does Sleep Duration correlate with Daily Steps?",
+        "Data_fact": "No specific correlation fact available."
+      }
+    },
+    "set3": {
+      "Q": "How do Heart Rate and Blood Pressure vary across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Heart Rate for each BMI Category?",
+        "Data_fact": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal weight, followed by overweight, then overweight."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Blood Pressure for each BMI Category?",
+        "Data_fact": "In the Heart Rate ranking of different Blood Pressure(s), the top three Blood Pressure(s) are 130/86, followed by 130/85, then 130/85."
+      },
+      "q3": {
+        "Decomposed_Question": "How does Heart Rate relate to Blood Pressure across different BMI Categories?",
+        "Data_fact": "The BMI Category normal weight accounts for 50.00% of the Heart Rate when Blood Pressure is 115/78."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How do Quality of Sleep and Stress Level compare across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the Pearson correlation coefficient between Quality of Sleep and Stress Level?",
+        "Data_fact": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90."
+      }
+    },
+    "set2": {
+      "Q": "What are the differences in Sleep Duration and Daily Steps among different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "Which BMI Category has the lowest and highest Sleep Duration?",
+        "Data_fact": "The lowest (least) value of the Sleep Duration is BMI Category overweight; the highest (most) value of the Sleep Duration is BMI Category normal."
+      }
+    },
+    "set3": {
+      "Q": "How does Age vary across different BMI Categories and Gender?",
+      "q1": {
+        "Decomposed_Question": "What is the average Age for each BMI Category?",
+        "Data_fact": "In the Age ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Age for each Gender?",
+        "Data_fact": "In the Age ranking of different Gender(s), the top three Gender(s) are female, followed by female, then female."
+      },
+      "q3": {
+        "Decomposed_Question": "How does Age differ for each Gender when categorized by BMI Category?",
+        "Data_fact": "The lowest (least) value of the Age is Gender male when BMI Category is overweight; the highest (most) value of the Age is Gender female when BMI Category is overweight."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Sleep Duration impact Quality of Sleep across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation coefficient between Sleep Duration and Quality of Sleep?",
+        "Data_fact": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88."
+      }
+    },
+    "set2": {
+      "Q": "What are the relationships between Stress Level, Physical Activity Level, and BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each BMI Category?",
+        "Data_fact": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation coefficient between Stress Level and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship between Stress Level and Physical Activity Level, with pearson correlation coefficient of -0.03."
+      }
+    },
+    "set3": {
+      "Q": "What are the trends between Heart Rate, Daily Steps, and BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Heart Rate for each BMI Category?",
+        "Data_fact": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal weight, followed by overweight, then overweight."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation coefficient between Heart Rate and Daily Steps?",
+        "Data_fact": "There is a weak relationship between Heart Rate and Daily Steps, with pearson correlation coefficient of 0.28."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Quality of Sleep relate to Stress Level across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Quality of Sleep and Stress Level?",
+        "Data_fact": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90."
+      }
+    },
+    "set2": {
+      "Q": "What is the impact of Sleep Duration on Physical Activity Level across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each BMI Category?",
+        "Data_fact": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Sleep Duration and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship between Sleep Duration and Physical Activity Level, with pearson correlation coefficient of 0.21."
+      }
+    },
+    "set3": {
+      "Q": "How do Daily Steps relate to Heart Rate across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Heart Rate for each BMI Category?",
+        "Data_fact": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal weight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Daily Steps and Heart Rate?",
+        "Data_fact": "There is a weak relationship between Daily Steps and Heart Rate, with pearson correlation coefficient of 0.28."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How do Quality of Sleep and Stress Level impact BMI Category?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "Quality of Sleep average values per BMI Category"
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "Stress Level average values per BMI Category"
+      },
+      "q3": {
+        "Decomposed_Question": "What is the relationship between Quality of Sleep and Stress Level across different BMI Categories?",
+        "Data_fact": "Correlation between Quality of Sleep and Stress Level in relation to BMI Category"
+      }
+    },
+    "set2": {
+      "Q": "What is the relationship between Physical Activity Level and Daily Steps across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each BMI Category?",
+        "Data_fact": "Physical Activity Level average values per BMI Category"
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "Daily Steps average values per BMI Category"
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Physical Activity Level and Daily Steps for different BMI Categories?",
+        "Data_fact": "Correlation between Physical Activity Level and Daily Steps in relation to BMI Category"
+      }
+    },
+    "set3": {
+      "Q": "How does Age influence Sleep Duration across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Age for each BMI Category?",
+        "Data_fact": "Age average values per BMI Category"
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "Sleep Duration average values per BMI Category"
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Age and Sleep Duration for different BMI Categories?",
+        "Data_fact": "Correlation between Age and Sleep Duration in relation to BMI Category"
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How does Stress Level impact the Quality of Sleep across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "The average Stress Level is a numeric value based on BMI Category."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "The average Quality of Sleep is a numeric value based on BMI Category."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Stress Level and Quality of Sleep for each BMI Category?",
+        "Data_fact": "There is a strong relationship between Stress Level and Quality of Sleep with a Pearson correlation coefficient of -0.90."
+      }
+    },
+    "set2": {
+      "Q": "What are the relationships between Sleep Duration, Physical Activity Level, and BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Sleep Duration for each BMI Category?",
+        "Data_fact": "The average Sleep Duration is a numeric value based on BMI Category."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Physical Activity Level for each BMI Category?",
+        "Data_fact": "The average Physical Activity Level is a numeric value based on BMI Category."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Sleep Duration and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship between Sleep Duration and Physical Activity Level with a Pearson correlation coefficient of 0.21."
+      }
+    },
+    "set3": {
+      "Q": "What is the relationship between Daily Steps and Heart Rate across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "The average Daily Steps is a numeric value based on BMI Category."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Heart Rate for each BMI Category?",
+        "Data_fact": "The average Heart Rate is a numeric value based on BMI Category."
+      },
+      "q3": {
+        "Decomposed_Question": "What is the correlation between Daily Steps and Heart Rate?",
+        "Data_fact": "There is a weak relationship between Daily Steps and Heart Rate with a Pearson correlation coefficient of 0.28."
+      }
+    }
+  }
+}{
+  "response": {
+    "set1": {
+      "Q": "How do Quality of Sleep and Stress Level vary across different BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Quality of Sleep for each BMI Category?",
+        "Data_fact": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Stress Level for each BMI Category?",
+        "Data_fact": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there a correlation between Quality of Sleep and Stress Level across BMI Categories?",
+        "Data_fact": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90."
+      }
+    },
+    "set2": {
+      "Q": "What are the effects of Sleep Duration and Physical Activity Level on BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "How does Sleep Duration vary among different BMI Categories?",
+        "Data_fact": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal."
+      },
+      "q2": {
+        "Decomposed_Question": "How does Physical Activity Level vary among different BMI Categories?",
+        "Data_fact": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there any correlation between Sleep Duration and Physical Activity Level?",
+        "Data_fact": "There is a weak relationship between Sleep Duration and Physical Activity Level, with pearson correlation coefficient of 0.21."
+      }
+    },
+    "set3": {
+      "Q": "How do Daily Steps and Heart Rate differ across BMI Categories?",
+      "q1": {
+        "Decomposed_Question": "What is the average Daily Steps for each BMI Category?",
+        "Data_fact": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight."
+      },
+      "q2": {
+        "Decomposed_Question": "What is the average Heart Rate for each BMI Category?",
+        "Data_fact": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal weight, followed by overweight, then overweight."
+      },
+      "q3": {
+        "Decomposed_Question": "Is there a correlation between Daily Steps and Heart Rate?",
+        "Data_fact": "There is a weak relationship between Daily Steps and Heart Rate, with pearson correlation coefficient of 0.28."
+      }
+    }
+  }
 }

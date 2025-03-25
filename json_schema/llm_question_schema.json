@@ -15,6 +15,10 @@
               "type": "object",
               "description": "Questions based on further analysis.",
               "properties": {
+                "fact_1": {
+                  "type": "string",
+                  "description": "The first fact."
+                },
                 "question_1": {
                   "type": "string",
                   "description": "The first question."
@@ -23,6 +27,10 @@
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
                 },
+                "fact_2": {
+                  "type": "string",
+                  "description": "The second fact."
+                },
                 "question_2": {
                   "type": "string",
                   "description": "The second question."
@@ -30,6 +38,10 @@
                 "action_2": {
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
+                },
+                "fact_3": {
+                  "type": "string",
+                  "description": "The third fact."
                 },
                 "question_3": {
                   "type": "string",
@@ -40,7 +52,7 @@
                   "description": "The description of how to solve the question using visualization."
                 }            
               },
-              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+              "required": ["fact_1","question_1", "action_1", "fact_2","question_2", "action_2", "fact_3","question_3", "action_3"]
             },
             "conclusion": {
               "type": "string",
@@ -61,6 +73,10 @@
               "type": "object",
               "description": "Questions based on further analysis.",
               "properties": {
+                "fact_1":{ 
+                  "type": "string",
+                  "description": "The first fact."
+                },
                 "question_1": {
                   "type": "string",
                   "description": "The first question."
@@ -69,6 +85,10 @@
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
                 },
+                "fact_2": {
+                  "type": "string",
+                  "description": "The second fact."
+                },
                 "question_2": {
                   "type": "string",
                   "description": "The second question."
@@ -76,6 +96,10 @@
                 "action_2": {
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
+                },
+                "fact_3": {
+                  "type": "string",
+                  "description": "The third fact."
                 },
                 "question_3": {
                   "type": "string",
@@ -86,7 +110,7 @@
                   "description": "The description of how to solve the question using visualization."
                 }            
               },
-              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+              "required": ["fact_1","question_1", "action_1", "fact_2","question_2", "action_2", "fact_3","question_3", "action_3"]
             },
             "conclusion": {
               "type": "string",
@@ -107,6 +131,10 @@
               "type": "object",
               "description": "Questions based on further analysis.",
               "properties": {
+                "fact_1": {
+                  "type": "string",
+                  "description": "The first fact."
+                },
                 "question_1": {
                   "type": "string",
                   "description": "The first question."
@@ -115,6 +143,10 @@
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
                 },
+                "fact_2": {
+                  "type": "string",
+                  "description": "The second fact."
+                },
                 "question_2": {
                   "type": "string",
                   "description": "The second question."
@@ -122,6 +154,10 @@
                 "action_2": {
                   "type": "string",
                   "description": "The description of how to solve the question using visualization."
+                },
+                "fact_3": {
+                  "type": "string",
+                  "description": "The third fact."
                 },
                 "question_3": {
                   "type": "string",
@@ -132,7 +168,7 @@
                   "description": "The description of how to solve the question using visualization."
                 }            
               },
-              "required": ["question_1", "action_1", "question_2", "action_2", "question_3", "action_3"]
+              "required": ["fact_1","question_1", "action_1", "fact_2","question_2", "action_2", "fact_3","question_3", "action_3"]
             },
             "conclusion": {
               "type": "string",

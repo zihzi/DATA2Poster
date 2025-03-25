@@ -1,7 +1,7 @@
 {
     "title": "Extracted_Data_Pattern",
     "type": "object",
-    "description": "Extract data pattern by combining multiple facts.",
+    "description": "Extracted data pattern by combining multiple facts",
     "properties": {
         "pattern1":{
             "type":"object",
@@ -13,15 +13,15 @@
                 },
                 "supporting_facts":{
                     "type":"array",
-                    "description": "List of two or three facts that support the pattern",
+                    "description": "List of three facts that support the pattern",
                     "items":{
                         "type":"string",
-                        "description": "Multiple facts that support the pattern"
+                        "description": "Fact that support the pattern"
                     }
                 },
                 "reasoning":{
                     "type":"string",
-                    "description": "Explain why this pattern is interesting or surprising"
+                    "description": "Reason how these THREE facts can lead to this pattern"
                 }
             },
             "required": ["pattern", "supporting_facts", "reasoning"]
@@ -36,15 +36,15 @@
                 },
                 "supporting_facts":{
                     "type":"array",
-                    "description": "List of two or three facts that support the pattern",
+                    "description": "List of three facts that support the pattern",
                     "items":{
                         "type":"string",
-                        "description": "Multiple facts that support the pattern"
+                        "description": "Fact that support the pattern"
                     }
                 },
                 "reasoning":{
                     "type":"string",
-                    "description": "Explain why this pattern is interesting or surprising"
+                    "description": "Reason how these THREE facts can lead to this pattern"
                 }
             },
             "required": ["pattern", "supporting_facts", "reasoning"]
@@ -59,15 +59,15 @@
                 },
                 "supporting_facts":{
                     "type":"array",
-                    "description": "List of two or three facts that support the pattern",
+                    "description": "List of three facts that support the pattern",
                     "items":{
                         "type":"string",
-                        "description": "Multiple facts that support the pattern"
+                        "description": "Fact that support the pattern"
                     }
                 },
                 "reasoning":{
                     "type":"string",
-                    "description": "Explain why this pattern is interesting or surprising"
+                    "description": "Reason how these THREE facts can lead to this pattern"
                 }
             },
             "required": ["pattern", "supporting_facts", "reasoning"]
