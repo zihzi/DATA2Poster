@@ -24,9 +24,9 @@ def clean_csv_data(df):
     # Step 2: Handle missing values
     for col in df.columns:
         if df[col].dtype == "object":
-            df[col].fillna("Unknown", inplace=True)  # Fill missing categorical values
+            df[col] = df[col].fillna("Unknown", inplace=True)  # Fill missing categorical values
         else:
-            df[col].fillna(df[col].median(), inplace=True)  # Fill missing numeric values with median
+            df[col] = df[col].fillna(df[col].median(), inplace=True)  # Fill missing numeric values with median
 
     # Step 3: Convert data types
     for col in df.columns:

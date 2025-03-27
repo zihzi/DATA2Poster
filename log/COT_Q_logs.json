@@ -1010,4 +1010,1120 @@
       "conclusion": "Are there trends in Horsepower and Weight over years?"
     }
   }
+}{
+  "knowkedgebase": "The key takeaways are: \n\n1. Strong correlation (0.88) exists between Sleep Duration and Quality of Sleep, indicating that longer sleep may lead to better sleep quality.\n2. The top three occupations for Sleep Duration are consistently engineers, while the lowest is consistently scientists.\n3. Nurses rank highest in Quality of Sleep, while sales representatives rank lowest.\n4. Doctors have the highest Stress Levels, while nurses exhibit the lowest.\n5. Nurses also lead in Physical Activity Levels and Daily Steps, whereas sales representatives rank lowest in both metrics.\n6. A weak correlation (-0.03) exists between Stress Level and Physical Activity Level, suggesting that stress does not significantly influence physical activity.\n7. The highest Heart Rate is found in engineers, while the lowest is in teachers.\n8. The rankings reveal that occupations like doctor and engineer demonstrate high stress, while nurses show a balance of low stress and high physical activity.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Occupations with high stress levels tend to have lower quality of sleep.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "How does stress level vary among top occupations?",
+        "action_1": "Plot a bar chart of stress levels for top occupations.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the last three Occupation(s) are sales representative, followed by sales representative, then software engineer.",
+        "question_2": "What are the sleep quality levels of lowest ranked occupations?",
+        "action_2": "Create a bar chart showing quality of sleep for lowest occupations.",
+        "fact_3": "In the Stress Level ranking of different Occupation(s), the last three Occupation(s) are nurse, followed by engineer, then engineer.",
+        "question_3": "What are the stress levels of the lowest ranked occupations?",
+        "action_3": "Visualize stress levels for the lowest ranked occupations in a bar chart."
+      },
+      "conclusion": "Do high stress levels correlate with low sleep quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are: \n\n1. A strong negative correlation (-0.90) exists between Stress Level and Quality of Sleep, indicating that higher stress is associated with poorer sleep quality.\n2. Gender has a significant impact on both Stress Level and Quality of Sleep, with males ranking highest in Stress Level and females ranking highest in Quality of Sleep.\n3. Occupation influences Stress Level and Physical Activity Level, with doctors exhibiting the highest Stress Levels and nurses showing the highest Physical Activity Levels.\n4. There is a weak correlation (-0.03) between Stress Level and Physical Activity Level, suggesting that physical activity does not significantly affect stress.\n5. The Occupation of lawyer consistently accounts for 0.41% of the Physical Activity Level, indicating a potential area for further investigation regarding occupational stress and activity.\n6. Female individuals are associated with both the lowest and highest values of Quality of Sleep, indicating a potential issue of variability in sleep quality among females.\n7. The lowest Stress Level is linked to the Occupation of nurse, while the highest is associated with the Occupation of scientist, suggesting a need for stress management strategies in high-stress occupations.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Stress Levels in Males are correlated with lower Quality of Sleep among Females.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Stress Level and Quality of Sleep, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does Stress Level affect Quality of Sleep by Gender?",
+        "action_1": "Create a scatter plot showing Stress Level against Quality of Sleep, differentiated by Gender.",
+        "fact_2": "In the Stress Level ranking of different Gender(s), the top three Gender(s) are male, followed by male, then male.",
+        "question_2": "What are the average Stress Levels by Gender?",
+        "action_2": "Generate a bar chart displaying average Stress Levels for each Gender.",
+        "fact_3": "In the Quality of Sleep ranking of different Gender(s), the last three Gender(s) are male, followed by male, then male.",
+        "question_3": "How does Quality of Sleep vary across different Genders?",
+        "action_3": "Plot a box plot for Quality of Sleep by Gender to show distribution."
+      },
+      "conclusion": "Do higher stress levels correlate with lower sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Doctors exhibit the highest Stress Levels, while Nurses show the highest Physical Activity Levels, indicating a potential occupational stress imbalance.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "What are the average Stress Levels across different occupations?",
+        "action_1": "Create a bar chart showing average Stress Levels by Occupation.",
+        "fact_2": "In the Physical Activity Level ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by engineer, then engineer.",
+        "question_2": "How do Physical Activity Levels differ among various occupations?",
+        "action_2": "Generate a bar chart displaying average Physical Activity Levels by Occupation.",
+        "fact_3": "The lowest (least) value of the Stress Level is Occupation nurse, while the highest (most) value is Occupation scientist.",
+        "question_3": "What is the relationship between Stress Level and Occupation?",
+        "action_3": "Use a grouped bar chart comparing Stress Levels and Occupations."
+      },
+      "conclusion": "Do occupations affect stress and activity levels?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Gender variability in Quality of Sleep indicates a complex interplay of factors influencing sleep quality among females.",
+      "questions": {
+        "fact_1": "The lowest (least) value of the Quality of Sleep is Gender female.",
+        "question_1": "What is the distribution of Quality of Sleep by Gender?",
+        "action_1": "Create a box plot to visualize Quality of Sleep distribution by Gender.",
+        "fact_2": "The highest (most) value of the Quality of Sleep is Gender female.",
+        "question_2": "How does Quality of Sleep rank among Genders?",
+        "action_2": "Plot a bar chart showing average Quality of Sleep by Gender.",
+        "fact_3": "Female individuals are associated with both the lowest and highest values of Quality of Sleep, indicating a potential issue of variability in sleep quality among females.",
+        "question_3": "What factors contribute to variability in Quality of Sleep among females?",
+        "action_3": "Generate a scatter plot of Quality of Sleep against Stress Level for females."
+      },
+      "conclusion": "Does gender influence variability in sleep quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:  \n- There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep duration is associated with better sleep quality.  \n- The top three occupations with the highest Sleep Duration are consistently engineers, while the lowest is consistently scientists.  \n- In terms of Quality of Sleep, nurses rank highest, while sales representatives and software engineers rank lowest.  \n- Doctors experience the highest Stress Levels, while nurses have the lowest.  \n- Nurses also lead in Physical Activity Level and Daily Steps, whereas sales representatives rank lowest in both metrics.  \n- A weak correlation (-0.03) exists between Stress Level and Physical Activity Level, suggesting minimal relationship.  \n- The Heart Rate data shows that teachers have the lowest values, while engineers have the highest, indicating potential health implications based on occupation.  \n- The occupation of lawyer consistently accounts for 0.41% of the Physical Activity Level, reflecting a specific occupational trend that merits further exploration.  \n- Overall, the dataset reveals significant differences in health and lifestyle metrics across various occupations, highlighting the need for tailored health interventions.  ",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher occupation stress correlates with lower sleep quality and duration.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "How does stress level vary across different occupations?",
+        "action_1": "Create a bar chart to compare stress levels by occupation.",
+        "fact_2": "In the Sleep Duration ranking of different Occupation(s), the last three Occupation(s) are scientist, followed by scientist, then nurse.",
+        "question_2": "What are the sleep duration averages for various occupations?",
+        "action_2": "Create a box plot to visualize sleep duration by occupation.",
+        "fact_3": "In the Quality of Sleep ranking of different Occupation(s), the last three Occupation(s) are sales representative, followed by sales representative, then software engineer.",
+        "question_3": "How does sleep quality differ among various occupations?",
+        "action_3": "Create a bar chart to compare sleep quality by occupation."
+      },
+      "conclusion": "Does higher stress lead to lower sleep quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- There is a strong positive correlation between Sleep Duration and Quality of Sleep (Pearson correlation coefficient of 0.88).\n- The top three occupations for Sleep Duration are all engineers, while the bottom three are scientists.\n- The top three occupations for Quality of Sleep are all nurses, with scientists ranking the lowest.\n- Doctors rank highest in Stress Level, while nurses rank the lowest.\n- Nurses also lead in Physical Activity Level and Daily Steps, whereas doctors and sales representatives rank the lowest in these categories.\n- The correlation between Stress Level and Physical Activity Level is weak (Pearson correlation coefficient of -0.03).\n- The heart rate is lowest for teachers and highest for engineers, indicating potential health implications based on occupation.\n- The lawyer occupation consistently accounts for 0.41% of the Physical Activity Level, suggesting a stable but potentially low engagement in physical activity.\n- The dataset suggests a need to explore the impact of occupation on various health metrics and the potential for interventions to improve sleep and reduce stress.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Occupations with higher stress levels tend to have lower physical activity levels.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "What are the stress levels of different occupations?",
+        "action_1": "Create a bar chart showing stress levels by occupation.",
+        "fact_2": "In the Physical Activity Level ranking of different Occupation(s), the last three Occupation(s) are doctor, followed by engineer, then engineer.",
+        "question_2": "How does physical activity vary among different occupations?",
+        "action_2": "Create a bar chart for physical activity levels by occupation.",
+        "fact_3": "The lowest (least) value of the Physical Activity Level is Occupation doctor.",
+        "question_3": "Which occupation has the lowest physical activity level?",
+        "action_3": "Highlight the occupation with the lowest physical activity in the chart."
+      },
+      "conclusion": "Do higher stress levels correlate with lower physical activity?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Nurses exhibit the best health metrics among occupations, including sleep duration and physical activity.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different Occupation(s), the last three Occupation(s) are scientist, followed by scientist, then nurse.",
+        "question_1": "Which occupations have the lowest sleep duration?",
+        "action_1": "Create a bar chart comparing sleep duration among occupations.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer.",
+        "question_2": "What are the quality of sleep metrics across occupations?",
+        "action_2": "Create a bar chart showing quality of sleep by occupation.",
+        "fact_3": "In the Daily Steps ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then nurse.",
+        "question_3": "Which occupations lead in daily physical activity?",
+        "action_3": "Create a bar chart for daily steps by occupation."
+      },
+      "conclusion": "Do nurses have the best health metrics?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Higher sleep quality is associated with longer sleep duration in certain occupations.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "How does sleep quality relate to sleep duration?",
+        "action_1": "Create a scatter plot of sleep quality vs sleep duration.",
+        "fact_2": "In the Sleep Duration ranking of different Occupation(s), the top three Occupation(s) are engineer, followed by engineer, then engineer.",
+        "question_2": "Which occupations have the longest sleep duration?",
+        "action_2": "Create a bar chart for sleep duration by occupation.",
+        "fact_3": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer.",
+        "question_3": "Which occupations demonstrate the highest quality of sleep?",
+        "action_3": "Create a bar chart for quality of sleep by occupation."
+      },
+      "conclusion": "Is longer sleep duration linked to better sleep quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:  \n- There is a strong negative correlation (-0.90) between Stress Level and Quality of Sleep, indicating that higher stress levels are associated with poorer sleep quality.  \n- Sleep Duration shows a weak positive correlation (0.21) with Physical Activity Level, suggesting limited influence of physical activity on sleep duration.  \n- Daily Steps and Heart Rate have a weak positive correlation (0.28), implying a slight relationship between physical activity (steps) and heart rate.  \n- The BMI Category of \"normal\" ranks highest in Stress Level, while \"overweight\" ranks lowest, indicating that individuals in the normal weight category experience less stress.  \n- In contrast, \"overweight\" individuals rank highest in Physical Activity Level and Daily Steps, suggesting that this group may be more physically active despite having higher stress levels.  \n- Quality of Sleep is highest in the \"overweight\" category, while the \"obese\" category ranks lowest, highlighting a reversal of expectations regarding sleep quality and BMI.  \n- The lowest values of Heart Rate, Sleep Duration, and Quality of Sleep are observed in the \"overweight\" category, while the highest values of these metrics are found in the \"normal\" category, indicating potential health implications of BMI on these variables.  \n- The \"normal\" BMI Category accounts for a significant portion of the Physical Activity Level (0.41%), highlighting the importance of maintaining a healthy weight for physical activity.  \n- The \"overweight\" category accounts for similar percentages in both Physical Activity Level and Stress Level, suggesting a link between increased physical activity and stress management in this group.  \n- The repeated mention of the 0.41% contribution of the \"normal\" and \"overweight\" BMI categories to Physical Activity Level suggests a need for further investigation into the consistency of physical activity across different BMI categories.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher stress levels are associated with poorer sleep quality in individuals with normal BMI.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Stress Level and Quality of Sleep, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does stress level affect quality of sleep?",
+        "action_1": "Scatter plot Stress Level vs. Quality of Sleep to visualize correlation.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_2": "Which BMI category experiences the highest stress levels?",
+        "action_2": "Bar chart of average Stress Level by BMI Category to compare levels.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the last three BMI Category(s) are obese, followed by obese, then obese.",
+        "question_3": "What is the quality of sleep across different BMI categories?",
+        "action_3": "Box plot of Quality of Sleep by BMI Category to visualize differences."
+      },
+      "conclusion": "Do higher stress levels result in poorer sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals exhibit higher physical activity levels despite increased stress.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_1": "Which BMI category shows the highest physical activity levels?",
+        "action_1": "Bar chart of average Physical Activity Level by BMI Category to visualize rankings.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_2": "How does stress level compare among different BMI categories?",
+        "action_2": "Bar chart of average Stress Level by BMI Category to visualize differences.",
+        "fact_3": "The lowest (least) value of the Stress Level is BMI Category overweight.",
+        "question_3": "What is the stress level of overweight individuals?",
+        "action_3": "Single value visualization for Stress Level of overweight category."
+      },
+      "conclusion": "Do overweight individuals have higher activity levels despite stress?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal BMI individuals have the highest quality of sleep and lowest physical activity levels, implying a potential trade-off between sleep quality and activity levels.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_1": "Which BMI category has the highest sleep duration?",
+        "action_1": "Bar chart of average Sleep Duration by BMI Category to visualize rankings.",
+        "fact_2": "In the Physical Activity Level ranking of different BMI Category(s), the last three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_2": "What is the physical activity level across different BMI categories?",
+        "action_2": "Bar chart of average Physical Activity Level by BMI Category to visualize differences.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal.",
+        "question_3": "How does quality of sleep vary among BMI categories?",
+        "action_3": "Box plot of Quality of Sleep by BMI Category to visualize differences."
+      },
+      "conclusion": "Do normal BMI individuals trade-off sleep quality for activity?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. A strong negative correlation exists between Quality of Sleep and Stress Level (Pearson correlation coefficient of -0.90), suggesting that higher stress levels are associated with poorer sleep quality.\n2. There is a weak positive correlation between Sleep Duration and Physical Activity Level (Pearson correlation coefficient of 0.21), indicating a potential link but not a strong one.\n3. A weak positive correlation is also observed between Daily Steps and Heart Rate (Pearson correlation coefficient of 0.28), suggesting a mild relationship.\n4. In terms of Quality of Sleep, the BMI categories ranking highest are overweight, overweight, and normal, while the lowest ranks are occupied by obese individuals.\n5. For Stress Level, the top three BMI categories are all normal, while the lowest ranks include overweight and normal categories.\n6. The Sleep Duration rankings show that the normal BMI category performs best, while overweight individuals rank the lowest.\n7. Overweight individuals also rank highest in Physical Activity Level, while normal BMI individuals rank the lowest.\n8. Daily Steps ranking is led by overweight individuals, whereas obese individuals rank the lowest.\n9. Heart Rate is lowest in the overweight category and highest in the same category, indicating variability among individuals within this category.\n10. Repeated data indicates that the BMI category normal consistently accounts for 0.41% of the Physical Activity Level and 0.40% of the Stress Level, highlighting its significance in these metrics.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "The Quality of Sleep is significantly influenced by Stress Level and BMI category, particularly in overweight individuals.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does Stress Level affect Quality of Sleep?",
+        "action_1": "Plot a scatter chart with Stress Level on the x-axis and Quality of Sleep on the y-axis.",
+        "fact_2": "In the Quality of Sleep ranking of different BMI Category(s), the last three BMI Category(s) are obese, followed by obese, then obese.",
+        "question_2": "What is the Quality of Sleep across different BMI categories?",
+        "action_2": "Create a bar chart showing Quality of Sleep for each BMI Category.",
+        "fact_3": "In the Stress Level ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_3": "How does Stress Level vary among different BMI categories?",
+        "action_3": "Visualize a bar chart of Stress Level for each BMI Category."
+      },
+      "conclusion": "Is Stress Level impacting the Quality of Sleep?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Physical Activity Level shows a mild correlation with Daily Steps but is significantly influenced by BMI category rankings.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_1": "What is the Physical Activity Level across different BMI categories?",
+        "action_1": "Create a bar chart of Physical Activity Level by BMI Category.",
+        "fact_2": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then overweight.",
+        "question_2": "How do Daily Steps vary among different BMI categories?",
+        "action_2": "Visualize a bar chart showing Daily Steps for each BMI Category.",
+        "fact_3": "There is a weak relationship between Daily Steps and Heart Rate, with pearson correlation coefficient of 0.28.",
+        "question_3": "What is the relationship between Daily Steps and Heart Rate?",
+        "action_3": "Plot a scatter chart with Daily Steps on the x-axis and Heart Rate on the y-axis."
+      },
+      "conclusion": "Is BMI significantly influencing Physical Activity Level?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal BMI individuals consistently show better metrics in Stress Level and Sleep Duration compared to overweight individuals.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_1": "How does Sleep Duration compare among BMI categories?",
+        "action_1": "Create a bar chart showing Sleep Duration for each BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_2": "What are the Stress Level rankings across BMI categories?",
+        "action_2": "Visualize a bar chart of Stress Level for each BMI Category.",
+        "fact_3": "In the Sleep Duration ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by overweight, then overweight.",
+        "question_3": "How does Sleep Duration rank across different BMI categories?",
+        "action_3": "Create a bar chart comparing Sleep Duration for each BMI Category."
+      },
+      "conclusion": "Do normal BMI individuals perform better in metrics?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:  \n- There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep duration is associated with better sleep quality.  \n- The top three BMI categories for Sleep Duration are all classified as normal, while the bottom three are all classified as overweight.  \n- In Quality of Sleep, the top categories are predominantly overweight, while the lowest are all classified as obese.  \n- For Stress Level, the normal category ranks highest, while the overweight category ranks lowest.  \n- The Physical Activity Level is highest in the overweight category, with normal categories ranking lowest.  \n- Daily Steps are highest in the overweight category and lowest in the obese category.  \n- There is a weak positive correlation (0.28) between Daily Steps and Heart Rate, suggesting limited influence between these factors.  \n- The relationship between Stress Level and Physical Activity Level is weakly negative (-0.03), indicating a minimal connection.  \n- The BMI Category normal accounts for the highest percentage of Stress Level and Physical Activity Level, while overweight categories dominate in Daily Steps.  \n- The lowest levels of Heart Rate, Sleep Duration, and Quality of Sleep are consistently found in the overweight category.  \n- The highest levels of Sleep Duration and Quality of Sleep are observed in the normal category.  ",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Sleep Duration is linked to better Quality of Sleep, while lower Sleep Duration is associated with being overweight.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "How does Sleep Duration affect Quality of Sleep across BMI categories?",
+        "action_1": "Plot a scatter plot of Sleep Duration vs. Quality of Sleep, colored by BMI Category.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by overweight, then overweight.",
+        "question_2": "What are the average Sleep Durations across different BMI categories?",
+        "action_2": "Create a bar chart showing average Sleep Duration by BMI Category.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal.",
+        "question_3": "How does Quality of Sleep vary among different BMI categories?",
+        "action_3": "Generate a bar chart of average Quality of Sleep by BMI Category."
+      },
+      "conclusion": "Is higher Sleep Duration associated with better Sleep Quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Higher Physical Activity Levels are found in the overweight category despite higher Stress Levels.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_1": "What is the distribution of Physical Activity Levels among BMI categories?",
+        "action_1": "Create a bar chart displaying average Physical Activity Level by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_2": "How do Stress Levels compare across different BMI categories?",
+        "action_2": "Plot a bar chart of average Stress Level by BMI Category.",
+        "fact_3": "The lowest (least) value of the Stress Level is BMI Category overweight.",
+        "question_3": "What percentage of individuals in each BMI category report low Stress Levels?",
+        "action_3": "Create a pie chart showing the percentage of low Stress Levels by BMI Category."
+      },
+      "conclusion": "Do higher Physical Activity Levels correlate with being overweight?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal BMI individuals exhibit the best sleep metrics yet low Physical Activity Levels.",
+      "questions": {
+        "fact_1": "The highest (most) value of the Sleep Duration is BMI Category normal.",
+        "question_1": "What are the average Sleep Durations across BMI categories?",
+        "action_1": "Create a bar chart showing average Sleep Duration by BMI Category.",
+        "fact_2": "The highest (most) value of the Quality of Sleep is BMI Category overweight.",
+        "question_2": "How does Quality of Sleep differ among BMI categories?",
+        "action_2": "Generate a bar chart of average Quality of Sleep by BMI Category.",
+        "fact_3": "The lowest (least) value of the Physical Activity Level is BMI Category normal.",
+        "question_3": "What is the distribution of Physical Activity Levels across BMI categories?",
+        "action_3": "Create a bar chart displaying average Physical Activity Level by BMI Category."
+      },
+      "conclusion": "Do normal BMI individuals have the best sleep metrics?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- There is a strong correlation between Sleep Duration and Quality of Sleep (0.88), indicating that improving sleep duration may enhance sleep quality.\n- Physical Activity Level and Daily Steps also show a strong correlation (0.77), suggesting that increasing physical activity could lead to higher daily step counts.\n- The relationship between Stress Level and Heart Rate is significant (0.81), implying that lowering stress may help manage heart rate effectively.\n- In terms of Sleep Duration, the Normal BMI category ranks highest, while Overweight ranks lowest.\n- Overweight individuals have the highest Quality of Sleep ranking, despite also having the lowest Sleep Duration.\n- Physical Activity and Daily Steps rank highest in the Overweight category, suggesting that this group engages in more physical activity on average.\n- Normal BMI individuals report the lowest Stress Levels, while Overweight individuals report the highest.\n- Heart Rate varies with BMI categories, with Normal weight individuals having the lowest and Overweight individuals having the highest heart rate.\n- The dataset indicates that the Normal BMI category consistently ranks high across several metrics, while the Overweight category ranks low in Sleep Duration and high in Physical Activity and Daily Steps.\n- There are notable percentages of each BMI category associated with various health metrics, indicating potential trends in health and lifestyle behaviors across different groups.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Quality of Sleep is associated with lower Stress Levels.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by overweight, then normal.",
+        "question_1": "How does Quality of Sleep vary across BMI Categories?",
+        "action_1": "Create a bar chart comparing Quality of Sleep by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_2": "What is the distribution of Stress Levels across BMI Categories?",
+        "action_2": "Create a box plot showing Stress Levels by BMI Category.",
+        "fact_3": "The BMI Category overweight accounts for 0.40% of the Stress Level.",
+        "question_3": "What percentage of Stress Level is attributed to each BMI Category?",
+        "action_3": "Create a pie chart to show Stress Level percentages by BMI Category."
+      },
+      "conclusion": "Does higher sleep quality lead to lower stress levels?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Normal BMI individuals tend to have better overall health metrics compared to overweight individuals.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different BMI Category(s), the top three BMI Category(s) are normal, followed by normal, then normal.",
+        "question_1": "What are the Sleep Duration trends among different BMI Categories?",
+        "action_1": "Create a line chart for Sleep Duration by BMI Category.",
+        "fact_2": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal weight, followed by overweight, then overweight.",
+        "question_2": "How does Heart Rate differ across BMI Categories?",
+        "action_2": "Create a bar chart comparing Heart Rate by BMI Category.",
+        "fact_3": "Normal BMI individuals report the lowest Stress Levels, while Overweight individuals report the highest.",
+        "question_3": "What is the relationship between BMI and Stress Levels?",
+        "action_3": "Create a scatter plot to show Stress Levels against BMI Categories."
+      },
+      "conclusion": "Do normal BMI individuals have better health metrics?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Overweight individuals engage in more Physical Activity but have poorer Sleep Quality and Duration.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different BMI Category(s), the top three BMI Category(s) are overweight, followed by normal, then normal.",
+        "question_1": "How does Physical Activity Level vary among BMI Categories?",
+        "action_1": "Create a bar chart comparing Physical Activity Level by BMI Category.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the last three BMI Category(s) are overweight, followed by overweight, then overweight.",
+        "question_2": "What are the Sleep Duration statistics across BMI Categories?",
+        "action_2": "Create a box plot for Sleep Duration by BMI Category.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the last three BMI Category(s) are obese, followed by obese, then obese.",
+        "question_3": "How does Quality of Sleep differ across BMI Categories?",
+        "action_3": "Create a line chart for Quality of Sleep by BMI Category."
+      },
+      "conclusion": "Do overweight individuals have poor sleep despite high activity?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are: \n\n1. There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep is associated with better quality.\n2. The top three occupations for Sleep Duration are consistently engineers, suggesting they prioritize sleep.\n3. The lowest Sleep Duration is observed in scientists, reflecting potential lifestyle or work-related challenges.\n4. Nurses rank the highest in Quality of Sleep, while scientists and sales representatives rank the lowest, indicating discrepancies in sleep quality across occupations.\n5. Stress Level is highest among scientists and lowest among nurses, highlighting potential occupational stress variations.\n6. Nurses lead in Physical Activity Level and Daily Steps, while doctors rank the lowest in Physical Activity Level, suggesting differences in lifestyle habits.\n7. There is a weak correlation (-0.03) between Stress Level and Physical Activity Level, indicating minimal relationship between these two variables.\n8. Heart Rate shows a weak correlation (0.28) with Daily Steps, suggesting limited impact of daily physical activity on heart rate.\n9. Occupations such as doctors and engineers show consistently high Stress Levels, indicating potential areas for workplace wellness interventions.\n10. The data reflects varying distributions of Health and Lifestyle metrics across different occupations, which could inform targeted health initiatives.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Occupational stress levels significantly vary across professions, influencing sleep quality and duration.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "How do stress levels vary across different occupations?",
+        "action_1": "Create a bar chart to compare Stress Levels by Occupation.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer.",
+        "question_2": "What are the sleep quality levels across different occupations?",
+        "action_2": "Create a bar chart to visualize Quality of Sleep by Occupation.",
+        "fact_3": "In the Sleep Duration ranking of different Occupation(s), the last three Occupation(s) are scientist, followed by scientist, then nurse.",
+        "question_3": "How does sleep duration differ by occupation?",
+        "action_3": "Create a bar chart to compare Sleep Duration by Occupation."
+      },
+      "conclusion": "Do occupational stress levels impact sleep quality and duration?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Physical activity levels appear to have minimal impact on heart rate and stress levels across professions.",
+      "questions": {
+        "fact_1": "There is a weak relationship between Stress Level and Physical Activity Level, with pearson correlation coefficient of -0.03.",
+        "question_1": "What is the correlation between stress levels and physical activity?",
+        "action_1": "Plot a scatter plot to visualize the relationship between Stress Level and Physical Activity Level.",
+        "fact_2": "There is a weak relationship between Heart Rate and Daily Steps, with pearson correlation coefficient of 0.28.",
+        "question_2": "How does daily steps impact heart rate across occupations?",
+        "action_2": "Create a scatter plot to visualize Heart Rate versus Daily Steps.",
+        "fact_3": "In the Physical Activity Level ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by engineer, then engineer.",
+        "question_3": "What are the physical activity levels for different occupations?",
+        "action_3": "Create a bar chart to compare Physical Activity Levels by Occupation."
+      },
+      "conclusion": "Do physical activity levels affect stress and heart rate?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Occupations with higher sleep quality tend to have lower stress levels and higher sleep duration.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then engineer.",
+        "question_1": "How do sleep quality levels rank among different occupations?",
+        "action_1": "Create a bar chart to visualize Quality of Sleep by Occupation.",
+        "fact_2": "In the Stress Level ranking of different Occupation(s), the last three Occupation(s) are nurse, followed by engineer, then engineer.",
+        "question_2": "What are the stress levels across various occupations?",
+        "action_2": "Create a bar chart to compare Stress Levels by Occupation.",
+        "fact_3": "The lowest (least) value of the Sleep Duration is Occupation scientist.",
+        "question_3": "Which occupations have the highest and lowest sleep duration?",
+        "action_3": "Create a bar chart to compare Sleep Duration by Occupation."
+      },
+      "conclusion": "Do higher sleep quality occupations have lower stress levels?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- A strong relationship exists between Sleep Duration and Quality of Sleep (Pearson correlation coefficient of 0.88), indicating that longer sleep durations are associated with better sleep quality.\n- The top three occupations for Sleep Duration are consistently engineers, while the lowest is attributed to scientists.\n- The highest Quality of Sleep is reported by nurses, whereas scientists have the lowest Quality of Sleep.\n- Nurses achieve the highest scores in Daily Steps and Physical Activity Level, while sales representatives rank the lowest in both.\n- Doctors have the highest Stress Levels, while nurses report the lowest.\n- A weak negative correlation exists between Stress Level and Physical Activity Level (Pearson correlation coefficient of -0.03), suggesting that higher stress levels might be associated with lower physical activity.\n- The Heart Rate is lowest for teachers and highest for engineers, indicating potential differences in cardiovascular health across occupations.\n- The findings suggest that specific occupations, such as nurses, engineers, and doctors, have distinct patterns in sleep health, stress, and physical activity that warrant further investigation.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Stress Levels are associated with lower Quality of Sleep among specific occupations.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "How do stress levels vary across different occupations?",
+        "action_1": "Visualize Stress Levels by Occupation using a bar chart.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the last three Occupation(s) are sales representative, followed by sales representative, then software engineer.",
+        "question_2": "What is the Quality of Sleep across different occupations?",
+        "action_2": "Visualize Quality of Sleep by Occupation using a bar chart.",
+        "fact_3": "The highest (most) value of the Stress Level is Occupation scientist.",
+        "question_3": "Which occupation reports the highest Stress Level?",
+        "action_3": "Highlight the highest Stress Level occupation on a bar chart."
+      },
+      "conclusion": "Are higher stress levels linked to lower sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Occupations with higher Physical Activity Levels also report higher Daily Steps.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by engineer, then engineer.",
+        "question_1": "How does Physical Activity Level differ among occupations?",
+        "action_1": "Visualize Physical Activity Levels by Occupation using a bar chart.",
+        "fact_2": "In the Daily Steps ranking of different Occupation(s), the top three Occupation(s) are nurse, followed by nurse, then nurse.",
+        "question_2": "What are the Daily Steps reported by different occupations?",
+        "action_2": "Visualize Daily Steps by Occupation using a bar chart.",
+        "fact_3": "Nurses achieve the highest scores in Daily Steps and Physical Activity Level.",
+        "question_3": "Which occupation has the highest Daily Steps and Physical Activity Level?",
+        "action_3": "Highlight the top achieving occupation on a bar chart."
+      },
+      "conclusion": "Do higher activity levels correlate with increased daily steps?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Occupations characterized by the highest Stress Levels also show lower Physical Activity Levels.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top three Occupation(s) are doctor, followed by doctor, then doctor.",
+        "question_1": "What are the Stress Levels of various occupations?",
+        "action_1": "Visualize Stress Levels by Occupation using a bar chart.",
+        "fact_2": "In the Physical Activity Level ranking of different Occupation(s), the last three Occupation(s) are doctor, followed by engineer, then engineer.",
+        "question_2": "How does Physical Activity Level vary among different occupations?",
+        "action_2": "Visualize Physical Activity Levels by Occupation using a bar chart.",
+        "fact_3": "Doctors have the highest Stress Levels, while nurses report the lowest.",
+        "question_3": "What is the relationship between Stress Levels and Physical Activity?",
+        "action_3": "Create a scatter plot to show correlation between Stress Levels and Physical Activity."
+      },
+      "conclusion": "Are high stress levels linked to low physical activity?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- There is a strong positive correlation between Horsepower and both Cylinders (0.84) and Weight (0.85), indicating that higher horsepower is associated with more cylinders and greater weight.\n- The top three origins for Horsepower are consistently identified as US, while the lowest values for Horsepower originate from Japan and specific years, notably 1982.\n- The trend analysis shows an overall increasing trend in Horsepower from 1970 to 1982, with the highest Horsepower values recorded in 1973.\n- Weight shows a complex trend with both increases and decreases from 1970 through 1982, with peaks in 1971 and 1973.\n- Japan ranks lowest for Cylinders, while the US ranks highest, suggesting a significant difference in engine design and specifications by region.\n- The distribution of Horsepower shares highlights that the US origin has a dominant presence, accounting for a significant percentage of total Horsepower across multiple years.\n- The dataset indicates a consistent relationship between Horsepower and Weight over the years, suggesting that as cars become heavier, they also tend to have more horsepower.\n- The year 1973 is noteworthy as it consistently appears in top rankings for both Horsepower and Weight, indicating it as a pivotal year in automotive performance within the dataset.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Horsepower is associated with more Cylinders and greater Weight, indicating a trend in automotive engineering toward larger engines and heavier vehicles.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Horsepower and Cylinders, with pearson correlation coefficient of 0.84.",
+        "question_1": "How does Horsepower vary with the number of Cylinders?",
+        "action_1": "Scatter plot Horsepower vs. Cylinders to visualize correlation.",
+        "fact_2": "There is a strong relationship between Horsepower and Weight, with pearson correlation coefficient of 0.85.",
+        "question_2": "How does Horsepower relate to vehicle Weight?",
+        "action_2": "Scatter plot Horsepower vs. Weight to visualize correlation.",
+        "fact_3": "In the Horsepower ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US.",
+        "question_3": "What are the average Horsepower values by Origin?",
+        "action_3": "Bar chart displaying average Horsepower by Origin to compare regions."
+      },
+      "conclusion": "Is higher Horsepower linked to more Cylinders and Weight?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "The US has a consistent dominance in Horsepower and Cylinders, while Japan shows lower values in both categories, indicating regional differences in automotive design.",
+      "questions": {
+        "fact_1": "In the Cylinders ranking of different Origin(s), the top three Origin(s) are US, followed by US, then US.",
+        "question_1": "How do Cylinder counts compare across different Origins?",
+        "action_1": "Bar chart displaying average Cylinders by Origin to visualize dominance.",
+        "fact_2": "The lowest (least) value of the Cylinders is Origin Japan.",
+        "question_2": "What is the Cylinder count distribution by Origin?",
+        "action_2": "Box plot of Cylinders by Origin to show distribution differences.",
+        "fact_3": "The lowest (least) value of the Horsepower is Origin US.",
+        "question_3": "How does Horsepower vary across different Origins?",
+        "action_3": "Box plot of Horsepower by Origin to visualize regional differences."
+      },
+      "conclusion": "Is the US dominant in Horsepower and Cylinders?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "The year 1973 stands out as a peak year for both Horsepower and Weight, indicating a pivotal moment in automotive performance during this time.",
+      "questions": {
+        "fact_1": "The highest (most) value of the Horsepower is Year 1973.",
+        "question_1": "How does Horsepower trend over the years?",
+        "action_1": "Line chart of average Horsepower by Year to identify peak years.",
+        "fact_2": "In the Weight ranking of different Year(s), the top three Year(s) are 1971, followed by 1973, then 1971.",
+        "question_2": "What are the trends in vehicle Weight over the years?",
+        "action_2": "Line chart of average Weight by Year to show trends over time.",
+        "fact_3": "In the Horsepower ranking of different Year(s), the top three Year(s) are 1973, followed by 1973, then 1973.",
+        "question_3": "What years have the highest average Horsepower?",
+        "action_3": "Bar chart of average Horsepower by Year to highlight peak years."
+      },
+      "conclusion": "Is 1973 a pivotal year for Horsepower and Weight?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. There is a strong negative correlation between Quality of Sleep and Stress Level (Pearson correlation coefficient of -0.90).\n2. Quality of Sleep rankings show that individuals in the overweight category have the best quality of sleep, while those in the obese category rank the lowest.\n3. Stress Level rankings indicate that individuals in the normal category experience the least stress, whereas those in the overweight category have the highest stress levels.\n4. Daily Steps ranking reveals that the overweight category takes the most steps, while the obese category takes the fewest.\n5. Normal weight individuals rank highest in Sleep Duration, while the overweight category ranks the lowest.\n6. For Heart Rate, normal weight individuals have the most consistent and lowest heart rates across multiple blood pressure readings, while the overweight category shows the highest heart rates.\n7. The relationship between Daily Steps and Sleep Duration is weak, with a Pearson correlation coefficient of -0.04.\n8. Normal weight individuals make up 50% of Heart Rate at lower blood pressures, indicating potential cardiovascular health ties.\n9. The overweight category shows significant percentages across various metrics, suggesting a broader impact on health outcomes related to heart rate and stress levels.\n10. Blood pressure readings correlate with specific BMI categories, highlighting potential health risks for those in the obese category.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Quality of Sleep is inversely related to Stress Level across different BMI categories.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does Quality of Sleep relate to Stress Level?",
+        "action_1": "Plot a scatter chart with Quality of Sleep on the x-axis and Stress Level on the y-axis to visualize the correlation.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top three BMI Category(s) are normal.",
+        "question_2": "What are Stress Level averages across different BMI categories?",
+        "action_2": "Create a bar chart to compare average Stress Levels by BMI Category.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the last three BMI Category(s) are obese.",
+        "question_3": "How does Quality of Sleep vary across different BMI categories?",
+        "action_3": "Generate a box plot for Quality of Sleep across BMI Categories to see distributions."
+      },
+      "conclusion": "Is Quality of Sleep inversely related to Stress Level?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals exhibit the highest daily activity but the lowest quality of sleep and highest stress levels.",
+      "questions": {
+        "fact_1": "In the Daily Steps ranking of different BMI Category(s), the top three BMI Category(s) are overweight.",
+        "question_1": "What is the Daily Steps distribution among BMI categories?",
+        "action_1": "Create a bar chart displaying average Daily Steps for each BMI Category.",
+        "fact_2": "The lowest (least) value of the Quality of Sleep is BMI Category overweight.",
+        "question_2": "How does Quality of Sleep compare across BMI categories?",
+        "action_2": "Generate a bar chart comparing average Quality of Sleep across BMI Categories.",
+        "fact_3": "The lowest (least) value of the Stress Level is BMI Category overweight.",
+        "question_3": "What is the average Stress Level across different BMI categories?",
+        "action_3": "Plot a bar chart to illustrate average Stress Levels by BMI Category."
+      },
+      "conclusion": "Do overweight individuals have the highest activity?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal weight individuals maintain better cardiovascular health markers compared to overweight and obese categories.",
+      "questions": {
+        "fact_1": "The BMI Category normal weight accounts for 50.00% of the Heart Rate when Blood Pressure is 115/78.",
+        "question_1": "How does Heart Rate vary with BMI categories at 115/78 BP?",
+        "action_1": "Create a bar chart showing average Heart Rate by BMI Category at 115/78 BP.",
+        "fact_2": "In the Heart Rate ranking of different BMI Category(s), the top three BMI Category(s) are normal.",
+        "question_2": "What are the Heart Rate averages across different BMI categories?",
+        "action_2": "Generate a line chart comparing average Heart Rates across BMI Categories.",
+        "fact_3": "The lowest (least) value of the Heart Rate is BMI Category normal weight when Blood Pressure is 120/80.",
+        "question_3": "How does Heart Rate change with Blood Pressure in BMI categories?",
+        "action_3": "Plot a line chart of Heart Rate against Blood Pressure for each BMI Category."
+      },
+      "conclusion": "Do normal weight individuals have better cardiovascular health?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are: \n\n1. There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep durations are associated with better sleep quality.\n2. Daily Steps and Heart Rate have a weak positive correlation (0.28), suggesting minimal relationship between physical activity and heart rate.\n3. Normal BMI Category individuals have the highest Sleep Duration, while those categorized as overweight have the lowest Sleep Duration.\n4. Overweight individuals rank highest in Quality of Sleep, while obese individuals rank the lowest.\n5. Normal BMI individuals experience the lowest Stress Levels, whereas overweight individuals have the highest.\n6. Overweight individuals also have the highest Physical Activity Level and Daily Steps, while normal BMI individuals rank the lowest in these aspects.\n7. Heart Rate is lowest among overweight individuals, while also being the highest among the same group, indicating potential inconsistency or variability in this measure. \n8. The dataset indicates that the BMI Category normal consistently accounts for a significant percentage across various metrics, suggesting stability in health indicators compared to other categories. \n9. There are very weak relationships observed between Stress Level and Physical Activity Level, with a Pearson correlation coefficient of -0.03.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Overweight individuals show a paradox of high physical activity yet low sleep quality and duration.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_1": "How does sleep quality vary across BMI categories?",
+        "action_1": "Plot a bar chart showing Quality of Sleep by BMI Category.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the last one BMI Category(s) are overweight.",
+        "question_2": "What are the sleep duration differences across BMI categories?",
+        "action_2": "Create a box plot for Sleep Duration by BMI Category.",
+        "fact_3": "In the Physical Activity Level ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "How does physical activity level compare across BMI categories?",
+        "action_3": "Generate a bar chart for Physical Activity Level by BMI Category."
+      },
+      "conclusion": "Do overweight individuals have high activity yet low sleep?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Normal BMI individuals maintain lower stress levels and higher sleep quality compared to overweight and obese individuals.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_1": "What are the stress levels across different BMI categories?",
+        "action_1": "Visualize stress levels using a bar chart by BMI Category.",
+        "fact_2": "In the Quality of Sleep ranking of different BMI Category(s), the highest (most) value of the Quality of Sleep is BMI Category overweight.",
+        "question_2": "How does sleep quality compare between BMI categories?",
+        "action_2": "Create a line chart for Quality of Sleep by BMI Category.",
+        "fact_3": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_3": "What are the sleep duration averages across BMI categories?",
+        "action_3": "Plot a bar chart showing average Sleep Duration by BMI Category."
+      },
+      "conclusion": "Do normal BMI individuals experience better sleep and less stress?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "There is a strong inverse relationship between BMI categories and sleep quality metrics, where normal BMI correlates with better sleep outcomes.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "What is the correlation between sleep duration and quality?",
+        "action_1": "Scatter plot Sleep Duration vs. Quality of Sleep with trend line.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "How does sleep duration differ among BMI categories?",
+        "action_2": "Visualize Sleep Duration averages by BMI Category in a bar chart.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the last one BMI Category(s) are obese.",
+        "question_3": "What is the quality of sleep across BMI categories?",
+        "action_3": "Create a box plot for Quality of Sleep by BMI Category."
+      },
+      "conclusion": "Is there a strong link between BMI and sleep quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are: \n\n1. A strong positive correlation exists between Sleep Duration and Quality of Sleep (Pearson coefficient of 0.88).\n2. Heart Rate and Daily Steps show a weak correlation (Pearson coefficient of 0.28).\n3. Normal BMI category ranks highest in Sleep Duration, while overweight ranks lowest.\n4. Overweight BMI category has the highest Quality of Sleep, while obese ranks lowest.\n5. Normal BMI category ranks highest in Stress Level, while overweight ranks lowest.\n6. Overweight BMI category leads in Physical Activity Level, while normal ranks lowest.\n7. Normal weight category has the lowest Heart Rate, while overweight has the highest.\n8. Overweight category has the highest Daily Steps, whereas obese ranks lowest.\n9. The lowest values for both Sleep Duration and Quality of Sleep are found in the overweight category.\n10. Physical Activity Level is notably low in the normal BMI category, with a weak relationship to Stress Level (Pearson coefficient of -0.03).\n11. The distribution of BMI categories shows various percentages related to Physical Activity Level, Stress Level, Daily Steps, Quality of Sleep, and Sleep Duration, indicating distinct patterns among categories.\n12. The dataset indicates that overweight individuals experience both higher Stress Levels and Heart Rates.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Sleep Duration correlates with improved Quality of Sleep in individuals with Normal BMI.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "How does Sleep Duration affect Quality of Sleep?",
+        "action_1": "Plot a scatter plot with Sleep Duration on x-axis and Quality of Sleep on y-axis.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "Which BMI category has the highest Sleep Duration?",
+        "action_2": "Create a bar chart comparing Sleep Duration across different BMI categories.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "How does Quality of Sleep vary by BMI category?",
+        "action_3": "Create a bar chart comparing Quality of Sleep across different BMI categories."
+      },
+      "conclusion": "Does higher Sleep Duration lead to better Quality of Sleep?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals experience higher Stress Levels and Heart Rates despite higher Physical Activity Levels.",
+      "questions": {
+        "fact_1": "The BMI Category overweight accounts for 0.40% of the Stress Level.",
+        "question_1": "What is the relationship between BMI category and Stress Levels?",
+        "action_1": "Create a bar chart showing average Stress Levels by BMI category.",
+        "fact_2": "The BMI Category overweight accounts for 0.30% of the Heart Rate.",
+        "question_2": "How do Heart Rates differ across BMI categories?",
+        "action_2": "Create a bar chart showing average Heart Rates by BMI category.",
+        "fact_3": "In the Physical Activity Level ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "Which BMI category has the highest Physical Activity Level?",
+        "action_3": "Create a bar chart comparing Physical Activity Levels across different BMI categories."
+      },
+      "conclusion": "Do overweight individuals have higher Stress Levels and Heart Rates?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Obese individuals tend to have the lowest Sleep Duration and Quality of Sleep.",
+      "questions": {
+        "fact_1": "The lowest (least) value of the Sleep Duration is BMI Category overweight.",
+        "question_1": "Which BMI category has the lowest Sleep Duration?",
+        "action_1": "Create a bar chart comparing Sleep Duration across different BMI categories.",
+        "fact_2": "The lowest (least) value of the Quality of Sleep is BMI Category overweight.",
+        "question_2": "How does Quality of Sleep compare across BMI categories?",
+        "action_2": "Create a bar chart comparing Quality of Sleep across different BMI categories.",
+        "fact_3": "The BMI Category obese accounts for 0.28% of the Sleep Duration.",
+        "question_3": "What is the Sleep Duration of obese individuals compared to others?",
+        "action_3": "Create a bar chart showing Sleep Duration for each BMI category."
+      },
+      "conclusion": "Do obese individuals have the lowest Sleep Duration and Quality of Sleep?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. Age Distribution by Sex:\n   - The age class 70-79 years has the highest and lowest id values for females (femme).\n   - The age class 80 years and older has the highest id value for males (homme), while 60-69 years has the lowest id value for males.\n\n2. Sex Distribution by Age Class:\n   - For age classes 20-29 years and 30-39 years, females consistently rank higher than males, indicating a potential skew in cancer diagnoses or reporting in these age brackets.\n   - Males dominate the 50-59 years and 80 years and older categories, showing a higher id count compared to females.\n\n3. Percentage Distribution:\n   - The percentage of females in the age class \"moins de 20 ans\" is slightly higher than males, indicating a potential difference in cancer incidence or diagnosis reporting.\n   - There exists a significant drop in the percentage representation of both sexes in older age classes, particularly those over 80 years.\n\n4. Unusual Patterns:\n   - The fact that both the highest and lowest values for id occur within the same age class for females (age class 70-79 years) suggests a unique distribution pattern that may require further investigation.\n   - There is consistent representation of females in older age classes, which could indicate either a higher incidence rate or better reporting practices compared to males in similar age brackets.\n\n5. Correlations:\n   - The data suggests a correlation between age and sex distribution, with certain age classes favoring one sex over the other, particularly for the middle-aged groups (30-49 years) where females have a higher representation.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Distinct age and sex trends in the id distribution for cancer cases.",
+      "questions": {
+        "fact_1": "In the id ranking of different age_class(s), the top one age_class(s) are 70-79 ans, when sex is femme.",
+        "question_1": "What are the id distributions for age_class 70-79 by sex?",
+        "action_1": "Create a bar chart comparing id counts by sex for age_class 70-79.",
+        "fact_2": "In the id ranking of different age_class(s), the last one age_class(s) are 70-79 ans, when sex is femme.",
+        "question_2": "How does id distribution differ for age_class 70-79 by sex?",
+        "action_2": "Plot a pie chart showing id distribution by sex for age_class 70-79.",
+        "fact_3": "The lowest (least) value of the id is age_class 70-79 ans when sex is femme.",
+        "question_3": "What is the trend of id values for age_class 70-79 by sex?",
+        "action_3": "Use a line chart to visualize id trends of age_class 70-79 by sex."
+      },
+      "conclusion": "Do distinct age and sex trends exist in cancer cases?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Male dominance in older age classes with respect to id values.",
+      "questions": {
+        "fact_1": "In the id ranking of different sex(s), the top one sex(s) are homme, when age_class is 50-59 ans.",
+        "question_1": "How do id values compare for males in age_class 50-59?",
+        "action_1": "Create a bar chart showing id counts for males in age_class 50-59.",
+        "fact_2": "In the id ranking of different sex(s), the top one sex(s) are homme, when age_class is 80 ans et +.",
+        "question_2": "What is the id distribution for males in age_class 80+?",
+        "action_2": "Visualize id counts for males in age_class 80+ using a bar chart.",
+        "fact_3": "The highest (most) value of the id is sex homme when age_class is 80 ans et +.",
+        "question_3": "What trends exist in id values for males aged 80+?",
+        "action_3": "Use a line chart to depict id trends for males aged 80+."
+      },
+      "conclusion": "Is there male dominance in older age classes?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Higher representation of females in younger age classes, specifically in cancer cases.",
+      "questions": {
+        "fact_1": "In the id ranking of different sex(s), the top one sex(s) are femme, when age_class is 30-39 ans.",
+        "question_1": "What is the id distribution for females in age_class 30-39?",
+        "action_1": "Create a bar chart to show id counts for females in age_class 30-39.",
+        "fact_2": "In the id ranking of different sex(s), the top one sex(s) are femme, when age_class is moins de 20 ans.",
+        "question_2": "How does id distribution look for females in age_class <20?",
+        "action_2": "Visualize id counts for females in age_class <20 using a bar chart.",
+        "fact_3": "The sex femme accounts for 1.44% of the id when age_class is moins de 20 ans.",
+        "question_3": "What percentage of id cases are female in age_class <20?",
+        "action_3": "Display a pie chart showing female representation in age_class <20."
+      },
+      "conclusion": "Do females represent more in younger age classes?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. A strong negative correlation exists between Quality of Sleep and Stress Level (Pearson coefficient of -0.90), indicating that higher stress levels are associated with poorer sleep quality.\n2. Quality of Sleep rankings reveal that individuals categorized as overweight have the best sleep quality, while those categorized as obese have the poorest.\n3. In Stress Level rankings, individuals with a normal BMI have the lowest stress levels, whereas those who are overweight report the highest stress levels.\n4. Normal BMI individuals rank highest in Sleep Duration, while overweight individuals rank lowest.\n5. Physical Activity Level is highest among those categorized as overweight, with normal BMI individuals ranking the lowest.\n6. Daily Steps are highest for those categorized as overweight and lowest for those categorized as obese.\n7. Heart Rate is lowest for those categorized as overweight and highest for the same group, indicating a potential inconsistency or unusual pattern in heart rate measurements.\n8. The dataset shows a weak positive correlation between Sleep Duration and Physical Activity Level (Pearson coefficient of 0.21) and between Daily Steps and Heart Rate (Pearson coefficient of 0.28), suggesting minimal relationships between these variables.\n9. Multiple BMI categories show overlapping distributions across various health metrics, indicating a need for further investigation into how these categories interact with sleep, stress, and physical activity.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher stress levels correlate with poorer sleep quality among different BMI categories.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does stress level impact quality of sleep across BMI?",
+        "action_1": "Create a scatter plot of Stress Level vs. Quality of Sleep, colored by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "Which BMI category experiences the highest stress levels?",
+        "action_2": "Use a bar chart to rank average Stress Levels by BMI Category.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the last one BMI Category(s) are obese.",
+        "question_3": "How does quality of sleep vary among different BMI categories?",
+        "action_3": "Create a box plot of Quality of Sleep by BMI Category."
+      },
+      "conclusion": "Do higher stress levels correlate with poorer sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals engage in more physical activity, yet report lower sleep quality.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_1": "What is the relationship between physical activity level and BMI categories?",
+        "action_1": "Create a bar chart showing average Physical Activity Level by BMI Category.",
+        "fact_2": "In the Quality of Sleep ranking of different BMI Category(s), the last one BMI Category(s) are obese.",
+        "question_2": "How does sleep quality vary among different BMI categories?",
+        "action_2": "Use a box plot to visualize Quality of Sleep by BMI Category.",
+        "fact_3": "The lowest (least) value of the Quality of Sleep is BMI Category overweight.",
+        "question_3": "Do overweight individuals report the lowest quality of sleep?",
+        "action_3": "Plot a line graph of average Quality of Sleep by BMI Category."
+      },
+      "conclusion": "Do overweight individuals engage more in physical activity despite poor sleep?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal BMI individuals exhibit optimal sleep duration and quality, contrasting with overweight individuals who rank lower in both.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_1": "Which BMI category has the longest sleep duration?",
+        "action_1": "Create a bar chart for average Sleep Duration by BMI Category.",
+        "fact_2": "In the Quality of Sleep ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_2": "How does quality of sleep differ among BMI categories?",
+        "action_2": "Use a scatter plot of Quality of Sleep vs. BMI Category.",
+        "fact_3": "In the Sleep Duration ranking of different BMI Category(s), the last one BMI Category(s) are overweight.",
+        "question_3": "Do overweight individuals have the lowest sleep duration?",
+        "action_3": "Plot a box plot of Sleep Duration by BMI Category."
+      },
+      "conclusion": "Do normal BMI individuals have optimal sleep duration and quality?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- There is a moderate positive correlation (0.34) between Sleep Duration and Age, indicating that as age increases, sleep duration tends to increase.\n- The relationship between Sleep Duration and Physical Activity Level is weak (0.21), suggesting limited influence of physical activity on sleep duration.\n- Females generally report higher Sleep Duration compared to males, as evidenced by the rankings and the highest Sleep Duration values associated with females.\n- The highest average Sleep Duration is reported by engineers, while scientists have the lowest average Sleep Duration among occupations.\n- Physical Activity Level is highest among nurses and lowest among doctors, indicating potential areas for lifestyle improvement.\n- Age distribution shows that females have the highest age values, while males have the lowest, suggesting gender differences in age demographics.\n- The dataset highlights that specific occupations (e.g., nurse, engineer) are linked to better sleep and physical activity levels, indicating potential career-related health impacts.\n- Some occupations like lawyer and doctor show a low presence in terms of Physical Activity Level, raising concerns about their lifestyle choices.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Age influences sleep duration positively, particularly among females and engineers.",
+      "questions": {
+        "fact_1": "There is a moderate relationship between Sleep Duration and Age, with pearson correlation coefficient of 0.34.",
+        "question_1": "How does Age correlate with Sleep Duration across genders?",
+        "action_1": "Create a scatter plot of Age vs. Sleep Duration, colored by Gender.",
+        "fact_2": "In the Sleep Duration ranking of different Gender(s), the top one Gender(s) are female.",
+        "question_2": "Do females have significantly higher Sleep Duration compared to males?",
+        "action_2": "Use a box plot to compare Sleep Duration distributions by Gender.",
+        "fact_3": "In the Sleep Duration ranking of different Occupation(s), the top one Occupation(s) are engineer.",
+        "question_3": "How does Sleep Duration vary among different occupations, especially engineers?",
+        "action_3": "Generate a bar chart of average Sleep Duration by Occupation."
+      },
+      "conclusion": "Does Age positively influence sleep duration among females and engineers?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Occupational health influences physical activity levels and sleep duration.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_1": "Which occupations report the highest levels of physical activity?",
+        "action_1": "Create a bar chart of Physical Activity Level by Occupation.",
+        "fact_2": "In the Sleep Duration ranking of different Occupation(s), the last one Occupation(s) are scientist.",
+        "question_2": "How does sleep duration compare among various occupations, including scientists?",
+        "action_2": "Use a box plot to show Sleep Duration distributions by Occupation.",
+        "fact_3": "The Occupation lawyer accounts for 0.41% of the Physical Activity Level.",
+        "question_3": "What is the relationship between lawyers' physical activity and sleep duration?",
+        "action_3": "Create a scatter plot of Physical Activity Level vs. Sleep Duration for lawyers."
+      },
+      "conclusion": "Does occupational health influence physical activity and sleep duration?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Gender differences exist in both age demographics and sleep duration.",
+      "questions": {
+        "fact_1": "In the Age ranking of different Gender(s), the top one Gender(s) are female.",
+        "question_1": "What is the age distribution across different genders?",
+        "action_1": "Create a histogram of Age, segmented by Gender.",
+        "fact_2": "The highest (most) value of the Sleep Duration is Gender female.",
+        "question_2": "How does Sleep Duration compare between genders?",
+        "action_2": "Use a bar chart to compare average Sleep Duration by Gender.",
+        "fact_3": "The lowest (least) value of the Age is Gender male.",
+        "question_3": "What age demographic trends exist among males and females?",
+        "action_3": "Generate a line chart showing Age trends by Gender over time."
+      },
+      "conclusion": "Do gender differences affect age demographics and sleep duration?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep duration is associated with better quality of sleep.\n- The highest Sleep Duration and Quality of Sleep are reported in the nursing profession, while the lowest values are seen in scientists and sales representatives.\n- Doctors experience the highest Stress Levels, whereas nurses have the lowest Stress Levels, suggesting that occupation influences stress significantly.\n- Nurses also excel in Physical Activity Level and Daily Steps, indicating a potentially healthier lifestyle compared to other occupations.\n- There is a weak correlation (0.28) between Daily Steps and Heart Rate, suggesting that daily physical activity may not significantly affect heart rate.\n- The relationship between Stress Level and Physical Activity Level is weak (\u22120.03), indicating that higher physical activity does not necessarily correlate with lower stress.\n- The engineering profession shows the highest values for both Sleep Duration and Heart Rate, which may indicate a link between job type and health metrics.\n- Other occupations like teachers and sales representatives tend to have relatively lower health metrics across various categories, including sleep and physical activity.\n- The analysis of occupational distributions reveals that certain professions (nurse, doctor) consistently rank higher in multiple health metrics, indicating a trend that may be worth exploring further.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Stress Levels correlate with lower Quality of Sleep in certain professions.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top one Occupation(s) are doctor.",
+        "question_1": "How does stress level vary across different occupations?",
+        "action_1": "Create a bar chart displaying average stress levels by occupation.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the last one Occupation(s) are sales representative.",
+        "question_2": "Which occupations report the lowest quality of sleep?",
+        "action_2": "Generate a bar chart showing quality of sleep by occupation.",
+        "fact_3": "In the Quality of Sleep ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_3": "What is the relationship between stress levels and sleep quality?",
+        "action_3": "Plot a scatter plot of stress level vs. quality of sleep."
+      },
+      "conclusion": "Do higher stress levels correlate with lower sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Occupations with higher Physical Activity Levels tend to have better health metrics.",
+      "questions": {
+        "fact_1": "In the Physical Activity Level ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_1": "Which occupations have the highest physical activity levels?",
+        "action_1": "Create a bar chart for physical activity levels by occupation.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_2": "How does quality of sleep vary by physical activity?",
+        "action_2": "Generate a scatter plot of physical activity vs. quality of sleep.",
+        "fact_3": "In the Daily Steps ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_3": "Are higher daily steps associated with better health metrics?",
+        "action_3": "Visualize a line chart of daily steps by occupation."
+      },
+      "conclusion": "Do higher physical activity levels correlate with better health metrics?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Engineers have the highest Sleep Duration but also the highest Heart Rate, suggesting a trade-off between sleep quality and health metrics.",
+      "questions": {
+        "fact_1": "In the Sleep Duration ranking of different Occupation(s), the top one Occupation(s) are engineer.",
+        "question_1": "Which occupations report the highest sleep duration?",
+        "action_1": "Create a bar chart to display sleep duration by occupation.",
+        "fact_2": "The highest (most) value of the Heart Rate is Occupation engineer.",
+        "question_2": "How does heart rate vary across different occupations?",
+        "action_2": "Generate a bar chart showing heart rate by occupation.",
+        "fact_3": "There is a weak relationship between Daily Steps and Heart Rate, with pearson correlation coefficient of 0.28.",
+        "question_3": "What is the correlation between daily steps and heart rate?",
+        "action_3": "Visualize a scatter plot of daily steps vs. heart rate."
+      },
+      "conclusion": "Do engineers trade off sleep quality for health metrics?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:  \n- There is a strong negative correlation between Stress Level and Quality of Sleep (Pearson correlation coefficient of -0.90).  \n- Males exhibit the highest Stress Levels, while females experience the best Quality of Sleep.  \n- Doctors have the highest Stress Levels among occupations, while nurses have the lowest.  \n- Nurses show the highest Physical Activity Levels, contrasting with doctors, who exhibit the lowest.  \n- There is a weak correlation between Stress Level and Physical Activity Level (Pearson correlation coefficient of -0.03).  \n- Females consistently report both the highest and lowest values in Quality of Sleep and Stress Level, indicating potential variability in their responses.  \n- Occupations such as lawyer and engineer have a relatively low contribution to Physical Activity Levels, while nurse and doctor occupations show varied Stress Levels.  \n- The distribution of Stress Levels and Quality of Sleep among genders suggests a potential area for further investigation into gender-specific health interventions.  ",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "High Stress Levels in Males correlate with Poor Quality of Sleep.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Stress Level and Quality of Sleep, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does Stress Level impact Quality of Sleep for genders?",
+        "action_1": "Plot a scatter plot of Stress Level vs. Quality of Sleep, colored by Gender.",
+        "fact_2": "In the Stress Level ranking of different Gender(s), the top one Gender(s) are male.",
+        "question_2": "What are the Stress Levels across different genders?",
+        "action_2": "Create a bar chart of average Stress Levels by Gender.",
+        "fact_3": "In the Quality of Sleep ranking of different Gender(s), the last one Gender(s) are male.",
+        "question_3": "How does Quality of Sleep vary across genders?",
+        "action_3": "Visualize Quality of Sleep with a box plot split by Gender."
+      },
+      "conclusion": "Do high Stress Levels in males correlate with poor Sleep?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Nurses have lower Stress Levels and higher Physical Activity Levels compared to Doctors.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the last one Occupation(s) are nurse.",
+        "question_1": "How do Stress Levels compare between nurses and doctors?",
+        "action_1": "Create a bar chart comparing average Stress Levels by Occupation.",
+        "fact_2": "In the Stress Level ranking of different Occupation(s), the top one Occupation(s) are doctor.",
+        "question_2": "What is the correlation between Stress Levels and Physical Activity by Occupation?",
+        "action_2": "Plot a scatter plot of Stress Level vs. Physical Activity Level by Occupation.",
+        "fact_3": "In the Physical Activity Level ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_3": "Do nurses have higher Physical Activity Levels than doctors?",
+        "action_3": "Visualize Physical Activity Levels with a box plot by Occupation."
+      },
+      "conclusion": "Do nurses have lower Stress Levels than doctors?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Variability in responses among Females affects both Stress Levels and Quality of Sleep.",
+      "questions": {
+        "fact_1": "Females consistently report both the highest and lowest values in Quality of Sleep and Stress Level, indicating potential variability in their responses.",
+        "question_1": "How does variability in responses affect Stress Levels among females?",
+        "action_1": "Create a box plot for Stress Levels by Gender.",
+        "fact_2": "The lowest (least) value of the Stress Level is Gender female.",
+        "question_2": "What is the distribution of Stress Levels among females?",
+        "action_2": "Visualize the distribution of Stress Levels with a histogram for females.",
+        "fact_3": "The highest (most) value of the Stress Level is Gender female.",
+        "question_3": "How does Quality of Sleep correlate with Stress Levels in females?",
+        "action_3": "Plot a scatter plot of Quality of Sleep vs. Stress Level for females."
+      },
+      "conclusion": "Does variability in females affect Stress and Sleep?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. A strong inverse correlation exists between Quality of Sleep and Stress Level (Pearson coefficient = -0.90), indicating that lower stress levels are associated with better sleep quality.\n2. Sleep Duration has a weak positive correlation with Physical Activity Level (Pearson coefficient = 0.21), suggesting minimal association between the two.\n3. Heart Rate shows a weak positive correlation with Daily Steps (Pearson coefficient = 0.28), indicating a slight relationship between physical activity and heart rate.\n4. In terms of Quality of Sleep, individuals categorized as overweight rank the lowest, while those categorized as overweight also have the lowest values for Stress Level, Sleep Duration, and Physical Activity Level.\n5. Normal-weight individuals tend to have the best rankings across multiple measures, including Quality of Sleep and Heart Rate.\n6. The highest values for Daily Steps are found in the overweight category, while the obese category ranks the lowest.\n7. The normal category consistently shows better performance across various metrics, including Sleep Duration, Daily Steps, and Physical Activity Level.\n8. There are notable disparities in the ranking of BMI categories concerning different health metrics, indicating that weight status significantly influences sleep and lifestyle factors.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher quality of sleep is associated with lower stress levels and better sleep duration among normal-weight individuals.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does sleep quality relate to stress levels?",
+        "action_1": "Create a scatter plot of Quality of Sleep vs. Stress Level.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "How do stress levels compare among different BMI categories?",
+        "action_2": "Generate a bar chart showing Stress Levels by BMI Category.",
+        "fact_3": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_3": "What is the sleep duration across different BMI categories?",
+        "action_3": "Visualize sleep duration by creating a bar chart for BMI Categories."
+      },
+      "conclusion": "Is better sleep quality linked to lower stress levels?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals exhibit lower quality of sleep and higher stress levels despite high physical activity levels.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different BMI Category(s), the last one BMI Category(s) are obese.",
+        "question_1": "How does quality of sleep vary across BMI categories?",
+        "action_1": "Plot a bar chart of Quality of Sleep by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the last one BMI Category(s) are overweight.",
+        "question_2": "What are the stress levels for each BMI category?",
+        "action_2": "Create a bar chart comparing Stress Levels across BMI Categories.",
+        "fact_3": "In the Physical Activity Level ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "How does physical activity level relate to BMI categories?",
+        "action_3": "Visualize Physical Activity Levels with a bar chart by BMI Category."
+      },
+      "conclusion": "Are overweight individuals stressed despite high activity levels?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal-weight individuals consistently rank higher across multiple health metrics, indicating a holistic advantage in health.",
+      "questions": {
+        "fact_1": "Normal-weight individuals tend to have the best rankings across multiple measures, including Quality of Sleep and Heart Rate.",
+        "question_1": "How do health metrics compare among different BMI categories?",
+        "action_1": "Create a radar chart to compare health metrics by BMI Category.",
+        "fact_2": "The BMI Category normal accounts for 0.41% of the Physical Activity Level.",
+        "question_2": "What is the physical activity level distribution among BMI categories?",
+        "action_2": "Visualize Physical Activity Level with a pie chart by BMI Category.",
+        "fact_3": "The BMI Category normal accounts for 0.40% of the Stress Level.",
+        "question_3": "How do stress levels differ among various BMI categories?",
+        "action_3": "Generate a bar chart showing Stress Levels by BMI Category."
+      },
+      "conclusion": "Do normal-weight individuals excel in health metrics?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n- A strong negative correlation (-0.90) exists between Quality of Sleep and Stress Level, indicating that higher stress levels are associated with poorer sleep quality.\n- Among different BMI categories, those categorized as overweight rank the lowest in Quality of Sleep, while those classified as normal weight rank the highest.\n- Normal weight individuals also have the highest Sleep Duration, while overweight individuals have the lowest.\n- The highest Daily Steps are associated with the overweight category, while the lowest are seen in the obese category.\n- Normal weight individuals account for a significant percentage of Heart Rate values at various Blood Pressure levels, particularly at 115/78 and 117/76.\n- Obese individuals show the highest Heart Rate values at higher Blood Pressure levels (e.g., 140/90).\n- There is a weak correlation (-0.04) between Sleep Duration and Daily Steps, suggesting that these two factors are not significantly related.\n- Stress levels are highest among overweight individuals, while normal weight individuals exhibit the lowest levels of stress.\n- Several Blood Pressure levels correlate with specific BMI categories, indicating varying impacts on Heart Rate based on weight classifications.\n- The dataset reveals insights into lifestyle factors such as sleep quality, stress levels, and physical activity (daily steps) across different BMI categories, highlighting the importance of weight management for better sleep and lower stress.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher stress levels are correlated with poorer quality of sleep among individuals with varying BMI categories.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How do stress levels affect quality of sleep across BMI categories?",
+        "action_1": "Create a scatter plot of Stress Level vs. Quality of Sleep, colored by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "Which BMI category experiences the highest stress levels?",
+        "action_2": "Bar chart showing average stress levels by BMI Category.",
+        "fact_3": "In the Quality of Sleep ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "Which BMI category has the lowest quality of sleep?",
+        "action_3": "Bar chart displaying average quality of sleep by BMI Category."
+      },
+      "conclusion": "Are higher stress levels linked to poorer sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Obese individuals experience the highest heart rates at elevated blood pressure levels compared to other BMI categories.",
+      "questions": {
+        "fact_1": "Obese individuals show the highest Heart Rate values at higher Blood Pressure levels (e.g., 140/90).",
+        "question_1": "How does heart rate vary with blood pressure in BMI categories?",
+        "action_1": "Line graph of Heart Rate vs. Blood Pressure categorized by BMI.",
+        "fact_2": "In the Heart Rate ranking of different BMI Category(s), the top one BMI Category(s) are obese when Blood Pressure is 140/90.",
+        "question_2": "Which BMI category has the highest heart rate at 140/90 blood pressure?",
+        "action_2": "Bar chart comparing heart rates of different BMI categories at 140/90 blood pressure.",
+        "fact_3": "The BMI Category obese accounts for 50.00% of the Heart Rate when Blood Pressure is 139/91.",
+        "question_3": "What percentage of heart rate does obesity account for at 139/91?",
+        "action_3": "Pie chart showing heart rate distribution among BMI categories at 139/91."
+      },
+      "conclusion": "Do obese individuals have the highest heart rates?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Normal weight individuals have the best sleep quality and duration but exhibit lower stress levels compared to overweight individuals.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_1": "How does quality of sleep differ among BMI categories?",
+        "action_1": "Bar chart of average quality of sleep for each BMI category.",
+        "fact_2": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "Which BMI category has the longest sleep duration?",
+        "action_2": "Bar chart showing average sleep duration by BMI Category.",
+        "fact_3": "Stress levels are highest among overweight individuals, while normal weight individuals exhibit the lowest levels of stress.",
+        "question_3": "How do stress levels compare across different BMI categories?",
+        "action_3": "Box plot of stress levels categorized by BMI Category."
+      },
+      "conclusion": "Do normal weight individuals have better sleep and lower stress?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:  \n- A strong negative correlation exists between Quality of Sleep and Stress Level (Pearson coefficient = -0.90), indicating that higher stress levels are associated with poorer sleep quality.  \n- The relationship between Heart Rate and Age is weak (Pearson coefficient = -0.19), suggesting minimal influence of age on heart rate.  \n- In terms of Quality of Sleep, individuals categorized as overweight have the lowest scores, while those in the normal category rank the highest.  \n- Stress Level rankings indicate that individuals categorized as normal have the lowest stress levels, whereas overweight individuals exhibit the highest stress levels.  \n- For Sleep Duration, normal-weight individuals have the highest sleep duration, while overweight individuals have the lowest.  \n- Overweight individuals lead in Daily Steps, while obese individuals rank last.  \n- The lowest and highest values for Age, Heart Rate, and Sleep Duration are all associated with the overweight category.  \n- There is a weak correlation between Sleep Duration and Daily Steps (Pearson coefficient = -0.04), suggesting minimal relationship between these two factors.  \n- The distributions of BMI categories indicate disproportionate accountabilities in Stress Level, Daily Steps, Age, Quality of Sleep, and Sleep Duration, with overweight individuals consistently ranking poorly across multiple metrics.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher stress levels are associated with lower quality of sleep and sleep duration across BMI categories.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Quality of Sleep and Stress Level, with pearson correlation coefficient of -0.90.",
+        "question_1": "How does stress level impact sleep quality across BMI categories?",
+        "action_1": "Create a box plot of Quality of Sleep by Stress Level and BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_2": "Do normal BMI individuals report lower stress levels than others?",
+        "action_2": "Plot a bar chart comparing average Stress Levels across different BMI categories.",
+        "fact_3": "In the Sleep Duration ranking of different BMI Category(s), the top one BMI Category(s) are normal.",
+        "question_3": "How does sleep duration vary among different BMI categories?",
+        "action_3": "Generate a line chart showing average Sleep Duration by BMI Category."
+      },
+      "conclusion": "Are higher stress levels linked to poorer sleep quality?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Overweight individuals exhibit the poorest performance across multiple health metrics, including sleep quality and stress levels, yet lead in daily steps.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different BMI Category(s), the last one BMI Category(s) are obese.",
+        "question_1": "How does sleep quality differ among BMI categories?",
+        "action_1": "Create a bar chart of average Quality of Sleep by BMI Category.",
+        "fact_2": "In the Stress Level ranking of different BMI Category(s), the last one BMI Category(s) are overweight.",
+        "question_2": "Do overweight individuals experience higher stress levels than others?",
+        "action_2": "Plot a box plot comparing Stress Levels across BMI Categories.",
+        "fact_3": "In the Daily Steps ranking of different BMI Category(s), the top one BMI Category(s) are overweight.",
+        "question_3": "How do daily steps compare across various BMI categories?",
+        "action_3": "Generate a line chart of average Daily Steps by BMI Category."
+      },
+      "conclusion": "Do overweight individuals perform poorly in health metrics?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Age does not significantly influence heart rate but is correlated with BMI categories, particularly overweight.",
+      "questions": {
+        "fact_1": "There is a weak relationship between Heart Rate and Age, with pearson correlation coefficient of -0.19.",
+        "question_1": "What is the relationship between Age and Heart Rate?",
+        "action_1": "Create a scatter plot of Age vs. Heart Rate.",
+        "fact_2": "The BMI Category overweight accounts for 0.37% of the Age.",
+        "question_2": "How does Age distribution vary among different BMI categories?",
+        "action_2": "Plot a histogram of Age categorized by BMI Category.",
+        "fact_3": "The BMI Category overweight accounts for 0.35% of the Age.",
+        "question_3": "What percentage of each age group falls into overweight category?",
+        "action_3": "Generate a bar chart showing Age groups by BMI Category."
+      },
+      "conclusion": "Does age significantly influence heart rate across BMI categories?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. **Strong Correlation**: There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep is associated with better sleep quality.\n\n2. **Weak Correlation**: The relationship between Daily Steps and Heart Rate is weak (0.28), suggesting minimal influence of daily physical activity on heart rate.\n\n3. **Occupational Rankings**:\n   - **Sleep Duration**: Engineers have the highest sleep duration, while scientists have the lowest.\n   - **Quality of Sleep**: Nurses report the highest quality of sleep, while sales representatives report the lowest.\n   - **Stress Level**: Doctors experience the highest stress levels, whereas nurses have the lowest.\n   - **Physical Activity Level**: Nurses exhibit the highest physical activity levels, while doctors have the lowest.\n   - **Daily Steps**: Nurses take the most daily steps, while sales representatives take the least.\n\n4. **Heart Rate Extremes**: Teachers have the lowest heart rate, while engineers have the highest.\n\n5. **Stress and Physical Activity**: There is a weak negative correlation (-0.03) between Stress Level and Physical Activity Level, indicating that higher stress does not significantly relate to lower physical activity.\n\n6. **Occupational Contributions**: Multiple occupations (nurse, engineer, doctor) represent consistent contributions across various metrics, suggesting a potential focus area for health interventions.\n\n7. **Distribution Patterns**: Certain occupations consistently rank at both extremes across multiple metrics (e.g., nurses often rank high in physical activity and sleep quality, while scientists rank low in sleep duration and quality).\n\n8. **Health Implications**: The findings suggest that improving sleep duration could significantly enhance sleep quality among different occupations, particularly for those currently reporting low sleep quality.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher sleep quality is associated with higher sleep duration across occupations.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "How does sleep duration vary with sleep quality across occupations?",
+        "action_1": "Create a scatter plot of Sleep Duration vs. Quality of Sleep by Occupation.",
+        "fact_2": "In the Quality of Sleep ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_2": "Which occupation shows the highest quality of sleep?",
+        "action_2": "Use a bar chart to display average Quality of Sleep by Occupation.",
+        "fact_3": "In the Sleep Duration ranking of different Occupation(s), the top one Occupation(s) are engineer.",
+        "question_3": "How does sleep duration compare among various occupations?",
+        "action_3": "Create a bar chart to visualize Sleep Duration by Occupation."
+      },
+      "conclusion": "Is higher sleep quality associated with longer sleep duration?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Nurses exhibit the highest levels of daily physical activity and the best quality of sleep.",
+      "questions": {
+        "fact_1": "In the Quality of Sleep ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_1": "Which occupation has the best quality of sleep?",
+        "action_1": "Display a bar chart showing average Quality of Sleep by Occupation.",
+        "fact_2": "In the Physical Activity Level ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_2": "How does physical activity level vary across occupations?",
+        "action_2": "Create a bar chart comparing Physical Activity Level by Occupation.",
+        "fact_3": "In the Daily Steps ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_3": "What is the daily steps average for different occupations?",
+        "action_3": "Use a bar chart to show average Daily Steps by Occupation."
+      },
+      "conclusion": "Do nurses have the highest physical activity and sleep quality?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "High stress levels are correlated with lower physical activity levels among occupations.",
+      "questions": {
+        "fact_1": "The Occupation doctor accounts for 0.40% of the Stress Level.",
+        "question_1": "How does stress level vary among different occupations?",
+        "action_1": "Display a bar chart showing average Stress Level by Occupation.",
+        "fact_2": "The Occupation doctor accounts for 0.39% of the Daily Steps.",
+        "question_2": "How do daily steps compare across occupations?",
+        "action_2": "Create a bar chart comparing Daily Steps by Occupation.",
+        "fact_3": "There is a weak relationship between Stress Level and Physical Activity Level, with pearson correlation coefficient of -0.03.",
+        "question_3": "Is there a correlation between stress levels and physical activity?",
+        "action_3": "Generate a scatter plot of Stress Level vs. Physical Activity Level."
+      },
+      "conclusion": "Are high stress levels linked to low physical activity?"
+    }
+  }
+}{
+  "knowkedgebase": "The key takeaways are:\n\n1. There is a strong positive correlation (0.88) between Sleep Duration and Quality of Sleep, indicating that longer sleep duration is associated with higher quality of sleep.\n2. Nurse is the top-ranked occupation for Sleep Duration, Quality of Sleep, Physical Activity Level, Daily Steps, and the lowest Stress Level, suggesting that this occupation may promote better overall sleep health and lifestyle.\n3. Engineer is the top-ranked occupation for Sleep Duration but has the highest Stress Level, indicating a potential trade-off between sleep duration and stress in this profession.\n4. Scientist ranks lowest in both Sleep Duration and Quality of Sleep, suggesting that this occupation may experience poorer sleep health outcomes.\n5. There is a weak correlation (0.28) between Daily Steps and Heart Rate, implying that increased daily activity may have a minimal effect on heart rate among the subjects.\n6. The lowest values for Heart Rate and Sleep Duration are associated with the occupation of teacher, while the highest values for these metrics are associated with engineer.\n7. Stress Level shows a weak negative correlation (-0.03) with Physical Activity Level, indicating minimal impact of physical activity on stress levels.\n8. The distribution of occupations reveals that certain roles, such as doctor and scientist, experience higher stress levels, which may negatively affect their sleep quality and duration.",
+  "response": {
+    "refer_pattern_1": {
+      "chosen_pattern": "Higher Sleep Quality is linked to longer Sleep Duration across various occupations, with Nurses showing the best outcomes.",
+      "questions": {
+        "fact_1": "There is a strong relationship between Sleep Duration and Quality of Sleep, with pearson correlation coefficient of 0.88.",
+        "question_1": "How does Sleep Duration correlate with Quality of Sleep across occupations?",
+        "action_1": "Create a scatter plot of Sleep Duration vs. Quality of Sleep colored by Occupation.",
+        "fact_2": "In the Sleep Duration ranking of different Occupation(s), the top one Occupation(s) are engineer.",
+        "question_2": "Which occupations have the longest Sleep Duration and how do they compare?",
+        "action_2": "Generate a bar chart ranking occupations by Sleep Duration.",
+        "fact_3": "In the Quality of Sleep ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_3": "How does Quality of Sleep vary among top Sleep Duration occupations?",
+        "action_3": "Use a grouped bar chart to compare Quality of Sleep by top Sleep Duration occupations."
+      },
+      "conclusion": "Is higher Sleep Quality linked to longer Sleep Duration?"
+    },
+    "refer_pattern_2": {
+      "chosen_pattern": "Occupations with high Stress Levels tend to have poorer Sleep Quality and shorter Sleep Durations.",
+      "questions": {
+        "fact_1": "In the Stress Level ranking of different Occupation(s), the top one Occupation(s) are doctor.",
+        "question_1": "Which occupations have the highest Stress Levels and how do they relate to sleep?",
+        "action_1": "Create a bar chart of Stress Levels by Occupation.",
+        "fact_2": "In the Sleep Duration ranking of different Occupation(s), the last one Occupation(s) are scientist.",
+        "question_2": "How do Sleep Durations differ among high Stress Level occupations?",
+        "action_2": "Plot a bar chart comparing Sleep Duration of high Stress Level occupations.",
+        "fact_3": "In the Quality of Sleep ranking of different Occupation(s), the last one Occupation(s) are sales representative.",
+        "question_3": "What is the relationship between Stress Levels and Quality of Sleep across occupations?",
+        "action_3": "Create a scatter plot of Stress Levels vs. Quality of Sleep by Occupation."
+      },
+      "conclusion": "Do high Stress Levels correlate with poorer Sleep Quality?"
+    },
+    "refer_pattern_3": {
+      "chosen_pattern": "Higher Physical Activity Levels do not significantly relate to reduced Stress Levels across occupations.",
+      "questions": {
+        "fact_1": "There is a weak relationship between Stress Level and Physical Activity Level, with pearson correlation coefficient of -0.03.",
+        "question_1": "What is the correlation between Physical Activity Levels and Stress Levels?",
+        "action_1": "Generate a scatter plot of Physical Activity Levels vs. Stress Levels.",
+        "fact_2": "In the Physical Activity Level ranking of different Occupation(s), the top one Occupation(s) are nurse.",
+        "question_2": "Which occupations exhibit the highest Physical Activity Levels and Stress Levels?",
+        "action_2": "Create a bar chart of Physical Activity Levels by Occupation.",
+        "fact_3": "The Occupation doctor accounts for 0.40% of the Stress Level.",
+        "question_3": "How do specific occupations impact overall Stress Levels?",
+        "action_3": "Use a pie chart to visualize Stress Level contributions by occupation."
+      },
+      "conclusion": "Do higher Physical Activity Levels reduce Stress Levels?"
+    }
+  }
 }

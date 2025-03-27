@@ -12,6 +12,7 @@ from data_cleaning import clean_csv_data
 from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
+from question_evaluator import generate_questions
 from vis_generator import agent_1_generate_code, agent_2_improve_code, agent_3_fix_code
 # from chart_extract import chart_to_table
 from pathlib import Path
@@ -24,6 +25,7 @@ from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMess
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_community.vectorstores.faiss import FAISS
 # from langchain.retrievers.self_query.base import SelfQueryRetriever
+
 
     
 # Set page config
@@ -384,12 +386,13 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                 facts_list.append({"content":fact["content"], "score":fact["score_C"]})
                     if "fact" in st.session_state:
                         st.session_state["fact"] = []
-                    facts_list_sorted = sorted(facts_list, key=itemgetter('score'), reverse=True)
-                    
-                    for item in facts_list_sorted[:100]:
-                        if item["content"] != "No fact.":
+                    facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)
+                    seen = set()
+                    for item in facts_list:
+                        if item["content"] != "No fact." and item["content"] not in seen:
+                            seen.add(item["content"])
                             st.session_state["fact"].append(item["content"])
-                
+                st.write("Facts:",st.session_state["fact"])
                 # Create a vector store from facts
                 vectorstore = FAISS.from_texts(
                 st.session_state["fact"],
@@ -448,7 +451,18 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
 
                 st.session_state["Q_from_gpt"] = llm_Q_from_gpt
-                
+
+                # Refine the questions
+                refine_idx = 0
+                for refer_pattern in llm_Q_from_gpt:    
+                    q_for_refine = []
+                    q_for_refine.append(llm_Q_from_gpt[refer_pattern]["questions"]["question_1"])
+                    q_for_refine.append(llm_Q_from_gpt[refer_pattern]["questions"]["question_2"])
+                    q_for_refine.append(llm_Q_from_gpt[refer_pattern]["questions"]["question_3"])
+                    new_Q = generate_questions(openai_key,llm_Q_from_gpt[refer_pattern]["conclusion"], column_list_for_Q[refine_idx], q_for_refine)
+                    refine_idx += 1
+                    st.write(f"{refine_idx}:",new_Q)
+                    
                 questions_for_poster = []
                 for refer_pattern in llm_Q_from_gpt:
                     questions_for_poster.append(llm_Q_from_gpt[refer_pattern]["conclusion"])
@@ -554,23 +568,23 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 )
                  
                 
-                # messages=[
-                #     SystemMessage(content = f"""You are an expert data analyst. Below is a chart which is ploted  based on this question:\n\n {query}. 
-                #                                 Your task is hightlight the insight you get without exaggeration and summarize the chart concisely to answer the question.
-                #                                 AVOID speculative claims without statistical support."""),
-                #     HumanMessage(
-                #                 content=[
-                #                     {"type": "text", "text": "describe the weather in this image"},
-                #                     {
-                #                         "type": "image_url",
-                #                         "image_url": {"url": f"data:image/svg;base64,{image_data}"},
-                #                     },
-                #                 ],
-                #             )
-                #     ]
+                messages=[
+                    SystemMessage(content = f"""You are an expert data analyst. Below is a chart which is ploted  based on this question:\n\n {query}. 
+                                                Your task is hightlight the insight you get without exaggeration and summarize the chart concisely to answer the question.
+                                                AVOID speculative claims without statistical support."""),
+                    HumanMessage(
+                                content=[
+                                    {"type": "text", "text": "describe the weather in this image"},
+                                    {
+                                        "type": "image_url",
+                                        "image_url": {"url": f"data:image/svg;base64,{image_data}"},
+                                    },
+                                ],
+                            )
+                    ]
                 
 
-                # chart_des = llm.invoke(messages)
+                chart_des = llm.invoke(messages)
                             
                 #  RAG
                 retrieve_docs = st.session_state["vectorstore"].max_marginal_relevance_search(query, k=3,fetch_k=25,lambda_mult=0.4)
@@ -581,7 +595,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 supported_fact = selected_pattern["questions"][f"fact_{idx}"]
 
                 st.write(f'**Question for Chart:**',f'**{query}**')
-                # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                st.write(f'**Chart Description:**', f'**{chart_des.content}**')
                 st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
                 st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
 
@@ -590,7 +604,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
                 insight_prompt_input = PromptTemplate(
                             template=insight_prompt_input_template,
-                            input_variables=["query", "fact"],
+                            input_variables=["query", "chart_des", "fact"],
                             # response_format=Insight,                         
                 ) 
                 insight_prompt = ChatPromptTemplate.from_messages(
@@ -601,7 +615,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     )
                 # insight_llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key, max_tokens=15)
                 insight_chain = insight_prompt | llm
-                insight = insight_chain.invoke(input= {"query":query, "fact":supported_fact})
+                insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des,"fact":supported_fact})
                 st.write(f'**Insight Description:**', f'**{insight.content}**')
                 insight_list.append(insight.content)
                 col1, col2 = st.columns(2)

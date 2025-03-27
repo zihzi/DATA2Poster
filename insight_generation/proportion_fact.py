@@ -23,6 +23,7 @@ def gen_basic_proportion_facts(df, subject, visualizer):
         x = row[subject["breakdown"]]
         v = row[subject["measure"]]
         value = v / total if total != 0 else 0
+        # calculate score
         if value <0.5:
             p = value     
         facts.append(

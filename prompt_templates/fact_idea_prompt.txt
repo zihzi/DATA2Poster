@@ -7,8 +7,9 @@ Here is the data facts:\n\n{facts}
 [/Instructions] 
 (1) An fact idea is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
 (2) Combine THREE facts to identify patterns that are not immediately obvious.
-(3) List these THREE facts in "supporting_evidence for each pattern, and DO NOT rewrite them.
-(4) Reason how these THREE facts can lead to this pattern.
+(3) List these THREE facts in "supporting_evidence" for each pattern, and DO NOT rewrite them.
+(4) Present patterns objectively without introducing personal assumptions.
+(5) Reason how these THREE facts can lead to this pattern.
 [/Instructions] 
 
 Return the result in JSON format.

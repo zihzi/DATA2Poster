@@ -64,10 +64,10 @@ def style_proportion_fact(subject, x, value):
     return f"The {subject['breakdown']} {x} accounts for {value:.2%} of the{agg} {subject['measure']}{subspace}."
 
 
-def style_rank_fact(subject, x1, x2, x3, direction="top"):
+def style_rank_fact(subject, x1, direction="top"):
     subspace = template_subspace(subject)
     agg = template_aggregation(subject)
-    return f"In the{agg} {subject['measure']} ranking of different {subject['breakdown']}(s), the {direction} three {subject['breakdown']}(s) are {x1}, followed by {x2}, then {x3}{subspace}."
+    return f"In the{agg} {subject['measure']} ranking of different {subject['breakdown']}(s), the {direction} one {subject['breakdown']}(s) are {x1}, {subspace}."
 
 
 def style_trend_fact(subject, value, intervals):

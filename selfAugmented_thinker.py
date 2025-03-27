@@ -1,7 +1,6 @@
 
 from langchain_openai import ChatOpenAI
-from langchain_core.messages import HumanMessage
-from langchain_core.prompts import PromptTemplate, HumanMessagePromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 
 
