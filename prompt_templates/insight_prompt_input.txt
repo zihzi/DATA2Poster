@@ -2,5 +2,3 @@ Here is the chart description.\n\n
 {chart_des}\n\n
 Here is a question that used for visualization.\n\n
 Question: {query}\n\n
-Here are the answer to the quesiton.\n\n
-Answer: {fact}

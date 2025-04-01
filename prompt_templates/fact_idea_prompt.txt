@@ -1,13 +1,13 @@
 You are a creative and analytical thinker conducting exploratory data analysis(EDA). 
 Data facts are key statistics summarizing essential information from a tabular dataset.
-And here the information for enhancing your exoloration:\n\n{knowledgebase}.
-Your specific task is referring to the information and composing creative and relevant fact ideas from given data facts. 
+And here is the information for enhancing your exoloration:\n\n{knowledgebase}.
+Your specific task is referring to the information and composing creative and relevant fact candidates from given data facts. 
 Here is the data facts:\n\n{facts}
 
 [/Instructions] 
 (1) An fact idea is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
 (2) Combine THREE facts to identify patterns that are not immediately obvious.
-(3) List these THREE facts in "supporting_evidence" for each pattern, and DO NOT rewrite them.
+(3) List these THREE facts in "supporting_evidence", and DO NOT rewrite them.
 (4) Present patterns objectively without introducing personal assumptions.
 (5) Reason how these THREE facts can lead to this pattern.
 [/Instructions] 

@@ -3,10 +3,8 @@
     "type": "object",
     "description": "Extracted data pattern by combining multiple facts",
     "properties": {
-        "pattern1":{
-            "type":"object",
-            "description": "Containing extracted data pattern and combination of multiple facts",
-            "properties":{
+        
+            
                 "extracted_pattern":{
                     "type":"string",
                     "description": "Briefly describe the pattern"
@@ -24,57 +22,9 @@
                     "description": "Reason how these THREE facts can lead to this pattern"
                 }
             },
-            "required": ["pattern", "supporting_facts", "reasoning"]
-        },
-        "pattern2":{
-            "type":"object",
-            "description": "Containing extracted data pattern and combination of multiple facts",
-            "properties":{
-                "extracted_pattern":{
-                    "type":"string",
-                    "description": "Briefly describe the pattern"
-                },
-                "supporting_facts":{
-                    "type":"array",
-                    "description": "List of three facts that support the pattern",
-                    "items":{
-                        "type":"string",
-                        "description": "Fact that support the pattern"
-                    }
-                },
-                "reasoning":{
-                    "type":"string",
-                    "description": "Reason how these THREE facts can lead to this pattern"
-                }
-            },
-            "required": ["pattern", "supporting_facts", "reasoning"]
-        },
-        "pattern3":{
-            "type":"object",
-            "description": "Containing extracted data pattern and combination of multiple facts",
-            "properties":{
-                "extracted_pattern":{
-                    "type":"string",
-                    "description": "Briefly describe the pattern"
-                },
-                "supporting_facts":{
-                    "type":"array",
-                    "description": "List of three facts that support the pattern",
-                    "items":{
-                        "type":"string",
-                        "description": "Fact that support the pattern"
-                    }
-                },
-                "reasoning":{
-                    "type":"string",
-                    "description": "Reason how these THREE facts can lead to this pattern"
-                }
-            },
-            "required": ["pattern", "supporting_facts", "reasoning"]
-        }
-
-    },
-    "required": ["pattern1", "pattern2", "pattern3"]   
+    "required": ["pattern", "supporting_facts", "reasoning"]
+        
+    
   }
 
     

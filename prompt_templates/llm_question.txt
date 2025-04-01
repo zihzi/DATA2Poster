@@ -1,4 +1,5 @@
-You are a senior data analyst. Your specific task is composing exploratory data analysis (EDA) iteration for each data pattern.
+You are an experienced data analyst specializing in Exploratory Data Analysis (EDA). 
+Your specific task is composing exploratory data analysis (EDA) iteration for each data pattern.
 Your EDA iteration should lead to uncover the given data pattern.
 Consider the following example of an EDA iteration:
 
@@ -30,28 +31,25 @@ Conclusion: "Is high-income spending behavior driven by fewer, high-value purcha
 The answer is yes, and this insight suggests different marketing strategies for high- and low-income customers.
 [/Example]
 
-
-
-Here is the three interesting data patterns, their corresponding supporting data fact, and columns name you should only used for each data pattern:\n\n
-Pattern 1.{pattern_1}\n\n Supporting Data Facts:\n\n 1.{pattern_1_fact_1}\n\n 2.{pattern_1_fact_2}\n\n 3.{pattern_1_fact_3}\n\n Column Names:\n\n{columns_set_1}\n\n
-Pattern 2.{pattern_2}\n\n Supporting Data Facts:\n\n 1.{pattern_2_fact_1}\n\n 2.{pattern_2_fact_2}\n\n 3.{pattern_2_fact_3}\n\n Column Names:\n\n{columns_set_2}\n\n
-Pattern 3.{pattern_3}\n\n Supporting Data Facts:\n\n 1.{pattern_3_fact_1}\n\n 2.{pattern_3_fact_2}\n\n 3.{pattern_3_fact_3}\n\n Column Names:\n\n{columns_set_3}\n\n
-Here the information for enhancing your exoloration:\n\n{knowledgebase}.
+Here is the interesting data patterns, their corresponding supporting data fact, and columns name you should only used to raise questions:\n\n
+Pattern:\n\n{pattern_1}\n\n
+Supporting Data Facts:\n\n 1.{pattern_1_fact_1}\n\n 2.{pattern_1_fact_2}\n\n 3.{pattern_1_fact_3}\n\n 
+Column Names:\n\n{columns_set_1}\n\n
+Here the information for enhancing your exoloration:\n\n{knowledgebase}\n\n.
 
 [/Instructions] 
-(1)  Do NOT rewrite or shorten each data pattern.
+(1)  Do NOT rewrite or shorten data pattern.
 (2)  Raise three questions that is easy to transform into visualization chart for each supporting data fact.
-(3)  The visualization chart generated from the questions you raise should be able to convey meaningful insights rather than just fit for each supporting data fact.
-(4)  The supporting data facts SHOULD be easy to interpret from the visualization chart generated from the questions you raise.
-(5)  Do not use questions related to simple data statistics (e.g., What is the maximum sales revenue of the "Fashion"?).
-(6)  The three questions should be relevant and structured in a three-layered concept, where each question builds upon the previous one, diving deeper into specific topic.
-(7)  Ensure the three questions guide a smooth and coherent EDA process.
-(8)  These three questions MUST BE WITHIN 15 WORDS.
-(9)  The "Action" is simple and straightforward statements to transform question into visualization chart.
-(10)  Conclude this exploratory data analysis iteration with a single interrogative sentence.
-(11)  The answer of interrogative sentence SHOULD be the given data pattern.
-(12) ALWAYS fill interrogative sentence in "conclusion".
-(13)The interrogative sentence MUST BE WITHIN 10 WORDS.
+(3)  The visualization chart generated from the questions you raise should align with each supporting data fact.
+(4)  Do not use questions related to simple data statistics (e.g., What is the maximum sales revenue of the "Fashion"?).
+(5)  The three questions should be relevant and structured in a three-layered concept, where each question builds upon the previous one, diving deeper into specific topic.
+(6)  Ensure the three questions guide a smooth and coherent EDA process.
+(7)  These three questions MUST BE WITHIN 15 WORDS.
+(8)  The "Action" is simple and straightforward statements to transform question into visualization chart.
+(9)  Conclude this exploratory data analysis iteration with a single interrogative sentence.
+(10) The answer of interrogative sentence SHOULD be the given data pattern.
+(11) ALWAYS fill interrogative sentence in "conclusion".
+(12) The interrogative sentence MUST BE WITHIN 10 WORDS.
 [/Instructions] 
 
 Your response should include THREE EDA iterations for each data pattern.

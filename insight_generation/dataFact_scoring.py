@@ -32,19 +32,24 @@ def score_importance(data_schema):
     for i in range(len(data_schema)):
         dtype = data_schema[i]["properties"]["dtype"]
         if dtype == "C" or dtype == "T":
-            subspace_counts += 1 / data_schema[i]["properties"]["num_unique_values"]
+            if data_schema[i]["properties"]["num_unique_values"] == 0:
+                continue
+            else:
+                subspace_counts += 1 / data_schema[i]["properties"]["num_unique_values"]
     if "C" not in dtype_counts:
         dtype_counts["C"] = 0
     if "T" not in dtype_counts:
         dtype_counts["T"] = 0
     if (dtype_counts["C"] + dtype_counts["T"]) != 0:
         si = 1 / (dtype_counts["C"] + dtype_counts["T"]) * subspace_counts
-        mi_ti = 1 / dtype_counts["N"]
         bi_ti = 1 / (dtype_counts["C"] + dtype_counts["T"])
+        if "N" in dtype_counts.keys():
+             mi_ti = 1 / dtype_counts["N"]
     else:
         si = 1
-        mi_ti = 1 / dtype_counts["N"]
         bi_ti = 1
+        if "N" in dtype_counts.keys():
+             mi_ti = 1 / dtype_counts["N"]
     # value_fact  
         # S(fi) = the probability of the fact 
         # I(fi) = −log2(P(fi)) where P(fi)=P(mi∣ti)⋅P(si)
@@ -71,7 +76,7 @@ def score_importance(data_schema):
     # outlier_scatter_fact
         # I(fi) = −log2(P(fi)) where P(fi)=P(mi∣ti)⋅P(bi∣ti)⋅P(si)
         # measure is "N"x"N"
-    if dtype_counts["N"] >=2:
+    if "N" in dtype_counts.keys() and dtype_counts["N"] >=2:
         mi_ti_N = 1 / math.comb(dtype_counts["N"], 2)
         score_C["Association"] = (-np.log2(mi_ti_N*bi_ti*si))
         score_C["Outlier_scatter"] = (-np.log2(mi_ti_N*bi_ti*si))

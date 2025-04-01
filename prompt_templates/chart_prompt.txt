@@ -1,3 +1,11 @@
-You are an expert data analyst. Below is a chart which is ploted  based on this question:\n\n {query}. 
-Your task is provide brief description to answer the question.
+You are an expert data analyst. Below is chart information derived from vega-lite json.
+This chart is ploted  based on this question:\n\n {query}.\n\n 
+Your task is provide brief description that can  answer the question.
 AVOID speculative claims without statistical support.
+[\chart information]
+- Chart Type: {chart_type}
+- Chart Title: {chart_title}
+- X-Axis: {x_field}
+- Y-Axis: {y_field}
+- Chart Data: {chart_data}
+[\chart information]

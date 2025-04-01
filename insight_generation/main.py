@@ -9,6 +9,7 @@ from .rank_fact import gen_rank_facts
 # from .outlier_fact import gen_outlier_facts
 from .trend_fact import gen_trend_facts
 from .association_fact import gen_association_facts
+from .categorization_fact import gen_categorization_facts
 # from .outlier_scatter_fact import gen_outlier_scatter_facts
 from .visualizations import Visualizer
 import json
@@ -88,7 +89,7 @@ def _generate_facts(df, subject=None, bt=None, mt=None, visualizer: Visualizer=N
         facts += gen_trend_facts(df.copy(), subject, visualizer)
     # if bt == "C":
     #     if mt is None:
-    #         facts += gen_categorization_facts(df.copy(), subject)
+    # facts += gen_categorization_facts(df.copy(), subject)
     #     if mt == "N":
     #         facts += gen_distribution_facts(df.copy(), subject)
 

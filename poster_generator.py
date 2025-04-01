@@ -71,7 +71,7 @@ def create_pdf(dataset, q_for_nl4DV, title, insight_list,  openai_key):
     # Conclusion content
     p_conclusion = Paragraph("Conclusion", ParagraphStyle(name='conclusion', fontSize=26, fontName='Helvetica-Bold', textColor=text_color))
     p_conclusion.wrapOn(c, width/2, 200)
-    p_conclusion.drawOn(c, 30, height-720)
+    p_conclusion.drawOn(c, 30, height-725)
     p_con = Paragraph(text_conclusion, ParagraphStyle(name="conclusion", fontSize=14, fontName='Helvetica', leading=18, alignment=4, textColor=text_color))
     p_con.wrapOn(c, width-70, 100)
     p_con.drawOn(c, 30, height-820)
