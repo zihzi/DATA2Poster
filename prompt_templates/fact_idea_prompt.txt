@@ -12,5 +12,17 @@ Here is the data facts:\n\n{facts}
 (5) Reason how these THREE facts can lead to this pattern.
 [/Instructions] 
 
+[/Example]
+{{
+  "pattern": "Precipitation follows a seasonal pattern with a significant increase towards the end of the year, peaking in December.",
+  "supporting_evidence": [
+    "The maximum value of the precipitation is December.",
+    "The December accounts for 24.46% of the precipitation when year is 2015.",
+    "The increasing trend of precipitation over month(s) from September to December."
+  ],
+  "reasoning": "The data shows that December has the highest share of precipitation (24.46%) and is among the top three wettest months. Additionally, precipitation exhibits an increasing trend from September to December, suggesting a seasonal buildup leading to peak rainfall at the end of the year."
+}}
+
+[/Example]
 Return the result in JSON format.
 YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.

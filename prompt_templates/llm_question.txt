@@ -1,34 +1,38 @@
 You are an experienced data analyst specializing in Exploratory Data Analysis (EDA). 
-Your specific task is composing exploratory data analysis (EDA) iteration for each data pattern.
+Given a data pattern and corresponding supporting facts, your specific task is composing exploratory data analysis (EDA) iteration for each supporting facts.
 Your EDA iteration should lead to uncover the given data pattern.
 Consider the following example of an EDA iteration:
 
 [Example]
-A data analyst is exploring a dataset containing customer transactions.
-His goal is to understand how income and spending behavior are related.
-He follows an iterative EDA approach, focusing on three key columns:
+A data analyst is exploring a dataset containing weather observation records.
+Given the pattern:\n\n "Precipitation follows a seasonal pattern with a significant increase towards the end of the year, peaking in December."\n\n
+He follows an iterative EDA approach:
+"supporting_evidence": [
+    "The December accounts for 24.46% of the precipitation when year is 2015.",
+    "In the precipitation ranking of different month(s), the top three month(s) are December, November, and February.",
+    "The increasing trend of precipitation over month(s) from September to December."
+  ],
+Step 1: Identifying The General Pattern
+Supporting_fact_1:"The maximum value of the precipitation is December.",
+Question_1: "Is December always has maximum value in different year?"
+Action_1: "Create a bar chart to show the month which has maximum of total precipitation for each year."
+Finding_1: "December, November, and February tend to has maximum of total precipitation in a year."
 
-Income (Numerical, dtype: "N") – The annual income of each customer.
-Purchase Amount (Numerical, dtype: "N") – The amount spent in each transaction.
-Product Category (Categorical, dtype: "C") – The type of product purchased.
-Step 1: Identifying the General Pattern
-Question_1: "Does higher income lead to higher spending?"
-Action_1: Plots a scatter plot of Income vs. Purchase Amount to check correlation.
-Finding: While higher-income customers tend to spend more, the correlation is not perfect—some low-income customers also make large purchases.
+Step 2: Digging Deeper Into Specific Pattern
+Supporting_fact_2: "The December accounts for 24.46% of the precipitation when year is 2015."
+Question_2: "What does the precipitation distribution accross different month in 2015?"
+Action_2: "Filter out the monthly data when year is 2015. Create a bar chart order by month to show the percentage of total precipitation for each month."
+Finding_2: "Total precipitation show a significant increase towards the end of the year."
 
-Step 2: Digging Deeper into High-Spending Behavior
-Question_2: "Among high-income customers, do they spend more on specific product categories?"
-Action_2: Segments customers into income groups, then analyzes spending patterns by product category.
-Finding: High-income customers spend significantly more on Electronics and Luxury Goods, while low-income customers allocate more spending to necessities like Groceries.
-
-Step 3: Investigating Purchase Frequency vs. Purchase Amount
-Question_3: "Do high-income customers make frequent high-value purchases, or just occasional big purchases?"
-Action_3: Groups customers by income level and analyzes their purchase frequency vs. average transaction value.
-Finding: High-income customers tend to make fewer but larger transactions, while low-income customers make frequent but smaller purchases.
+Step 3: Generalizing Pattern From Previous Step
+Supporting_fact_3: "The increasing trend of precipitation over month(s) from September to December."
+Question_3: "Is increasing trend of precipitation over month(s) from September to December happens in different year?"
+Action_3: "Create a line chart order by year to show the trend of total precipitation for each month in different year."
+Finding_3: "Precipitation follows a seasonal pattern with a significant increase towards the end of the year."
 
 Step 4: Conclusion Interrogative Sentence
-Conclusion: "Is high-income spending behavior driven by fewer, high-value purchases rather than frequent transactions?"
-The answer is yes, and this insight suggests different marketing strategies for high- and low-income customers.
+Conclusion: "Does precipitation follows a seasonal pattern?"
+The answer is yes, and this insight suggests "precipitation follows a seasonal pattern with a significant increase towards the end of the year".
 [/Example]
 
 Here is the interesting data patterns, their corresponding supporting data fact, and columns name you should only used to raise questions:\n\n

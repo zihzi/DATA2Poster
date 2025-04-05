@@ -80,7 +80,7 @@ def gen_basic_rank_facts(df, subject, visualizer):
     facts.append(
         {
             "spec": visualizer.get_fact_visualized_chart("rank", subject, t1, t2, t3) if visualizer else None,
-            "content": style_rank_fact(subject, t1),
+            "content": style_rank_fact(subject, t1, t2, t3),
             "target": (t1, t2, t3),
             "score": score_rank_fact(),
             "score_C": significance*score_fact("Rank"),
@@ -89,7 +89,7 @@ def gen_basic_rank_facts(df, subject, visualizer):
     facts.append(
         {
             "spec": visualizer.get_fact_visualized_chart("rank", subject, b1, b2, b3) if visualizer else None,
-            "content": style_rank_fact(subject, b1,"last"),
+            "content": style_rank_fact(subject, b1, b2, b3,"last"),
             "target": (b1, b2, b3),
             "score": score_rank_fact(),
             "score_C": significance*score_fact("Rank"),

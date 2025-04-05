@@ -12,7 +12,7 @@ from data_cleaning import clean_csv_data
 from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
-from question_evaluator import generate_questions
+from question_evaluator import expand_questions
 from vis_generator import agent_1_generate_code, agent_2_improve_code, agent_3_fix_code
 from pathlib import Path
 from poster_generator import create_pdf
@@ -22,6 +22,7 @@ from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMessagePromptTemplate
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_community.vectorstores.faiss import FAISS
+from langchain_core.documents import Document
 
 
 
@@ -397,11 +398,18 @@ if try_true or (st.session_state["bt_try"] == "T"):
                         st.session_state["fact"].append(item["content"])
                 st.write("Facts:",st.session_state["fact"])
 
-                # Create a vector store from facts
-                # vectorstore = FAISS.from_texts(
-                # st.session_state["fact"],
-                # OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
-                # )
+                # Create a vector store
+                def load_json(json_file):
+                    with open(json_file, "r", encoding="utf-8") as fh:
+                        return json.load(fh)
+
+
+                data_list = load_json('vis_corpus.json')
+                docs = [Document(page_content=json.dumps(item)) for item in data_list]
+                vectorstore = FAISS.from_documents(
+                docs,
+                OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
+                )
                 # st.session_state["vectorstore"] = vectorstore
                 
                 # Create intermediate output as knowledge
@@ -437,33 +445,21 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt["extracted_pattern"],"pattern_1_fact_1":support_fact_list[0],"pattern_1_fact_2":support_fact_list[1],"pattern_1_fact_3":support_fact_list[2],"columns_set_1":column_list_for_Q[0],"knowledgebase":knowledge})
                 st.write("Question:",llm_Q_from_gpt)
                 
-                # log the llm question
-                def log_response_to_json(knowledgebase, response):
-                    log_data = {"knowkedgebase": knowledgebase, "response": response}
+                # # log the llm question
+                # def log_response_to_json(knowledgebase, response):
+                #     log_data = {"knowkedgebase": knowledgebase, "response": response}
                     
-                    with open("log/COT_Q_logs.json", "a") as f:
-                        f.write(json.dumps(log_data,indent=2))  # Append new log entry
+                #     with open("log/COT_Q_logs.json", "a") as f:
+                #         f.write(json.dumps(log_data,indent=2))  # Append new log entry
                 
-                # Save log
-                log_response_to_json(knowledge, llm_Q_from_gpt)
+                # # Save log
+                # log_response_to_json(knowledge, llm_Q_from_gpt)
 
-
-                
-
-                # Refine the questions
-                 
-                q_for_refine = [llm_Q_from_gpt["questions"]["question_1"],llm_Q_from_gpt["questions"]["question_2"],llm_Q_from_gpt["questions"]["question_3"]]
-                actions = [llm_Q_from_gpt["questions"]["action_1"],llm_Q_from_gpt["questions"]["action_2"],llm_Q_from_gpt["questions"]["action_3"]]
                     
-                advice, new_Q = generate_questions(openai_key,llm_Q_from_gpt["conclusion"], column_list_for_Q, q_for_refine,actions)
-                st.write("advice:", advice)
-                st.write("refine_Q:",new_Q)
-                    
-                questions_for_poster = [new_Q["poster_question"]]
+                questions_for_poster = [llm_Q_from_gpt["conclusion"]]
                 supported_fact = [llm_Q_from_gpt["questions"]["fact_1"],llm_Q_from_gpt["questions"]["fact_2"],llm_Q_from_gpt["questions"]["fact_3"]]
-                Q_for_vis =[new_Q["questions"][0]+new_Q["actions"][0],new_Q["questions"][1]+new_Q["actions"][1],new_Q["questions"][2]+new_Q["actions"][2]]
+                Q_for_vis =[llm_Q_from_gpt["questions"]["question_1"],llm_Q_from_gpt["questions"]["question_2"],llm_Q_from_gpt["questions"]["question_3"]]
                 st.session_state["Q_from_gpt"] = {"supported_fact":supported_fact,"questions":Q_for_vis}
-                
                 st.session_state["questions_for_poster"] = questions_for_poster
                 st.write("Select a poster question:")
                 selected_question=st.selectbox("Select a poster question:", questions_for_poster , on_change=select_question, label_visibility="collapsed",index=None,placeholder="Select one...", key="selection")      
@@ -476,14 +472,14 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
             
             q_for_nl4DV = st.session_state["Q_from_gpt"]["questions"]
-            # q_for_nl4DV.append(st.session_state["Q_from_gpt"]["questions"]["question_1"]+" "+st.session_state["Q_from_gpt"]["questions"]["action_1"])
-            # q_for_nl4DV.append(st.session_state["Q_from_gpt"]["questions"]["question_2"]+" "+st.session_state["Q_from_gpt"]["questions"]["action_2"])
-            # q_for_nl4DV.append(st.session_state["Q_from_gpt"]["questions"]["question_3"]+" "+st.session_state["Q_from_gpt"]["questions"]["action_3"])
+           
 
  
             # Call gpt-4o-mini to generate vlspec
             insight_list = []
             for query in q_for_nl4DV:
+                # Expand query
+                expanded_query = expand_questions(openai_key,query)
                 idx = q_for_nl4DV.index(query)+1
                 nl4DV_prompt_template = load_prompt_from_file("prompt_templates/nl4DV_prompt.txt")
                 code_template = load_prompt_from_file("prompt_templates/code_template.txt")
@@ -505,7 +501,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
                 # Call gpt-4o-mini to generate vis code
                 print("\n🟢 Step 1: Generating Initial Code...\n")
-                initial_code = agent_1_generate_code(query, datasets[chosen_dataset], nl4DV_json, nl4DV_json["visList"][0]["vlSpec"], code_template, openai_key)
+                initial_code = agent_1_generate_code(query, datasets[chosen_dataset], nl4DV_json, nl4DV_json["visList"][0]["vlSpec"], code_template, expanded_query, openai_key)
                 print(initial_code)
                 print("\n🟡 Step 2: Improving Code Quality...\n")
                 improved_code = agent_2_improve_code(query, initial_code, nl4DV_json, openai_key)
@@ -553,8 +549,14 @@ if try_true or (st.session_state["bt_try"] == "T"):
                         # json for chart_description
                         chart_type = chart["mark"]["type"]
                         chart_title = chart["title"]
-                        x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                        y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                        if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
+                            x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                        else:
+                            x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                        if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
+                            y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                        else:
+                            y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
                         for key in chart["datasets"]:
                             chart_data = chart["datasets"][key]
         
@@ -604,7 +606,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 
          
             # Reset session state
-
             st.session_state["df"] = pd.DataFrame()
             st.session_state["fact"] = []
             st.session_state["vectorstore"] = []

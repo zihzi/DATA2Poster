@@ -1,0 +1,17 @@
+You are an expert Python programmer specializing in data visualization.
+Your task is modify the given code template to generate visualization based on this question:\n\n{query}.\n\n 
+Here is the given code  template:\n\n{code_template}\n\n
+The following is vega-zero specification for your reference:\n\n{label}.
+Make good use of the following direction to write executable code:\n\n
+"chart": {chart}\n\n
+"column": {column}\n\n
+"filter": {filter}\n\n
+"aggregate": {aggregate}\n\n
+"mark": {mark}\n\n
+"encoding": {encoding}\n\n
+"sort": {sort}\n\n
+[\Instructions]
+- Think step by step to change coulmn, filter, and aggregate to fit the words appear in the query.
+- ONLY MODIFYING THE SPECIFIED PARTS OF THE TEMPLATE. 
+- ONLY return the code. DO NOT include any preamble text. Do not include explanations or prose.\n. 
+[\Instructions]

@@ -1,0 +1,57 @@
+[
+    {
+        "nl": "Give me a visual representation of the faculty members by their professional status.",
+        "chart": "Bar",
+        "label": "mark bar data faculty encoding x rank y aggregate count rank transform group x ",
+        "column": "Rank",
+        "filter": "none",
+        "aggregate": "count Rank",
+        "mark": "bar",
+        "encoding": "x=Rank,y=count Rank,color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "What does the allergy breakdown look like?",
+        "chart": "Bar",
+        "label": "mark bar data has_allergy encoding x allergy y aggregate count allergy transform group x",
+        "column": "Allergy",
+        "filter": "none",
+        "aggregate": "count Allergy",
+        "mark": "bar",
+        "encoding": "x=Allergy,y=count Allergy,color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "How does Sleep Duration vary across different Occupations?",
+        "chart": "Bar",
+        "label": "mark bar data sleep encoding x Occupation y Avg_Sleep Duration ",
+        "column": "Occupation, Avg_Sleep Duration",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Sleep Duration, color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "What is the correlation between stress levels and sleep quality?",
+        "chart": "Scatter",
+        "label": "mark point data sleep encoding x Avg_Stress Level y Avg_Sleep Quality",
+        "column": "Avg_Stress Level, Avg_Sleep Quality",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep_ uality",
+        "sort": "none"
+    },
+    {
+        "nl": "Which occupations experience the highest stress levels?",
+        "chart": "Bar",
+        "label": "mark bar data sleep encoding x Occupation y Avg_Stress Level ",
+        "column": "Occupation, Avg_Stress Level",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=none",
+        "sort": "y:desc"
+    }
+]
