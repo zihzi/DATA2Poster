@@ -16,7 +16,7 @@ def check_type(dtype: str, value):
 def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
         """Get properties of each column in a pandas DataFrame"""
         properties_list = []
-        temporal_keywords = ["year", "month", "day", "time", "week"]
+        temporal_keywords = ["year", "month", "date", "time", "week"]
         for column in df.columns:
             dtype = df[column].dtype
             properties = {}

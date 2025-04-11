@@ -2,27 +2,27 @@ You are a creative and analytical thinker conducting exploratory data analysis(E
 Data facts are key statistics summarizing essential information from a tabular dataset.
 And here is the information for enhancing your exoloration:\n\n{knowledgebase}.
 Your specific task is referring to the information and composing creative and relevant fact candidates from given data facts. 
-Here is the data facts:\n\n{facts}
+
 
 [/Instructions] 
-(1) An fact idea is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
-(2) Combine THREE facts to identify patterns that are not immediately obvious.
-(3) List these THREE facts in "supporting_evidence", and DO NOT rewrite them.
-(4) Present patterns objectively without introducing personal assumptions.
-(5) Reason how these THREE facts can lead to this pattern.
+- An fact idea is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
+- Combine THREE facts from the following list in "supporting_evidence":\n\n{facts} to identify patterns that are not immediately obvious.
+- DO NOT rewrite the given data facts.
+- ALWAYS SELECT the fact as "There is a relationship between...".
+- Present patterns objectively without introducing personal assumptions.
+- Reason how these THREE facts can lead to this pattern.
 [/Instructions] 
 
 [/Example]
 {{
-  "pattern": "Precipitation follows a seasonal pattern with a significant increase towards the end of the year, peaking in December.",
+  "pattern": "group b has better performance in both math score and writing score.",
   "supporting_evidence": [
-    "The maximum value of the precipitation is December.",
-    "The December accounts for 24.46% of the precipitation when year is 2015.",
-    "The increasing trend of precipitation over month(s) from September to December."
+    "In race/ethnicity, group c accounts for the largest proportion of records(29.2%).",
+    "The race/ethnicity group b accounts for 2.18% of the reading score.",
+    "There is a strong relationship between math score and reading score, with pearson correlation coefficient of 0.81.",
   ],
-  "reasoning": "The data shows that December has the highest share of precipitation (24.46%) and is among the top three wettest months. Additionally, precipitation exhibits an increasing trend from September to December, suggesting a seasonal buildup leading to peak rainfall at the end of the year."
+  "reasoning": "The data shows that group b has better performance in both math score and writing score."
 }}
-
 [/Example]
 Return the result in JSON format.
 YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.

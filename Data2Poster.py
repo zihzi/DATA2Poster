@@ -40,11 +40,13 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["Cars"] = pd.read_csv("data/Cars.csv")
     datasets["Sleep_health_and_lifestyle"] = pd.read_csv("data/Sleep_health_and_lifestyle.csv")
-    datasets["bike_sharing_day"] = pd.read_csv("data/bike_sharing_day.csv")
-    datasets["cancer_by_year"] = pd.read_csv("data/cancer_by_year.csv")
-    datasets["social_media"] = pd.read_csv("data/social_media.csv")
+    datasets["movies"] = pd.read_csv("data/movies.csv")
+    datasets["social_media_usage"] = pd.read_csv("data/social_media_usage.csv")
+    datasets["penguins"] = pd.read_csv("data/penguins.csv") #NO vis_corpus
+    datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
+    datasets["Cleaned_Car_sales"] = pd.read_csv("data/Cleaned_Car_sales.csv") #NO vis_corpus
+    datasets["Iris"] = pd.read_csv("data/Iris.csv")
    
     
     st.session_state["datasets"] = datasets
@@ -57,7 +59,7 @@ with st.sidebar:
     with st.expander("UserGuide"):
          st.write("""
             1. Input your OpenAI Key.
-            2. Select dataset from the list below or upload your own dataset.
+            2. Select dataset from the list below then you can start.
         """)
     # Set area for OpenAI key
     openai_key = st.text_input(label = "🔑 OpenAI Key:", help="Required for models.",type="password")
@@ -65,23 +67,8 @@ with st.sidebar:
     # First we want to choose the dataset, but we will fill it with choices once we've loaded one
     dataset_container = st.empty()
 
-    # Upload a dataset(!can only use the latest uploaded dataset for now)
-    try:
-        uploaded_file = st.file_uploader("📂 Load a CSV file:", type="csv")
-        index_no = 0
-        if uploaded_file:
-            # Read in the data, add it to the list of available datasets.
-            file_name = uploaded_file.name[:-4]
-            datasets[file_name] = pd.read_csv(uploaded_file)
-            # Clean the dataset
-            datasets[file_name] = clean_csv_data(datasets[file_name])
-            # Save the uploaded dataset as a CSV file to the data folder
-            datasets[file_name].to_csv(f"data/{file_name}.csv", index=False)
-            # default the radio button to the newly added dataset
-            index_no = len(datasets)-1
-    except Exception as e:
-        st.error("File failed to load. Please select a valid CSV file.")
-        print("File failed to load.\n" + str(e))
+    # default the radio button to the newly added dataset
+    index_no = len(datasets)-1
     # Radio buttons for dataset choice
     chosen_dataset = dataset_container.radio("👉 Choose your data :",datasets.keys(),index=index_no)
     # Save column names of the dataset for gpt to generate questions
@@ -161,7 +148,7 @@ def preprocess_json(code: str, count: str) -> str:
         code = code + "\nchart = plot(data)"
     if "def plot" in code:
         index = code.find("def plot")
-        code = code[:index] + f"data = pd.read_csv('data/{chosen_dataset}.csv')\n\n" + code[index:] + f"\n\nchart.save('DATA2Poster_json/vega_lite_json_{count}.json')"
+        code = code[:index] + f"data = pd.read_csv('data/{chosen_dataset}.csv')\n\n" + code[index:] + f"\n\nchart.save('DATA2Poster_img/image_{count}.png')\n\nchart_json = chart.to_json()\n\nwith open('DATA2Poster_json/vega_lite_json_{count}.json', 'w') as f:\n\n f.write(chart_json)"
         exec(code)
     return code
 
@@ -180,7 +167,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     if api_keys_entered:
         # use gpt-4o-mini as llm
-        llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", temperature=0.2,api_key = openai_key)
+        llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", temperature=0,api_key = openai_key)
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key)
         # Initial stage to generate facts and questions by user-selected column
@@ -410,7 +397,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 docs,
                 OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
                 )
-                # st.session_state["vectorstore"] = vectorstore
+                st.session_state["vectorstore"] = vectorstore
                 
                 # Create intermediate output as knowledge
                 knowledge = self_augmented_knowledge(openai_key, chosen_dataset, column_list_for_Q, st.session_state["fact"])
@@ -473,38 +460,35 @@ if try_true or (st.session_state["bt_try"] == "T"):
             
             q_for_nl4DV = st.session_state["Q_from_gpt"]["questions"]
            
-
- 
+            code_template = load_prompt_from_file("prompt_templates/code_template.txt")
             # Call gpt-4o-mini to generate vlspec
             insight_list = []
+            chart_des_list = []
+            idx=1
             for query in q_for_nl4DV:
-                # Expand query
-                expanded_query = expand_questions(openai_key,query)
-                idx = q_for_nl4DV.index(query)+1
-                nl4DV_prompt_template = load_prompt_from_file("prompt_templates/nl4DV_prompt.txt")
-                code_template = load_prompt_from_file("prompt_templates/code_template.txt")
-                nl4_DV_prompt_input = load_prompt_from_file("prompt_templates/nl4DV_prompt_input.txt")
-                nl4DV_prompt_input = PromptTemplate(
-                        template=nl4_DV_prompt_input,
-                        input_variables=["sample_data", "summary", "query"]
-                    )
-                nl4DV_prompt = ChatPromptTemplate.from_messages(
-                        messages=[
-                            SystemMessage(content = nl4DV_prompt_template),
-                            HumanMessagePromptTemplate.from_template(nl4DV_prompt_input.template)
-                        ]
-                    )
-                with open("json_schema/nl4DV_json_schema.json", "r") as f:
-                    nl4DV_json_schema = json.load(f)
-                nl4DV_chain = nl4DV_prompt | llm.with_structured_output(nl4DV_json_schema)      
-                nl4DV_json = nl4DV_chain.invoke(input= {"sample_data":sample_data, "summary": summary, "query":query})
+                st.write(f'**Question for Chart:**',f'**{query}**')
+                print("\n🟢 Step 1: Generating Initial Code...\n")
+                results = st.session_state["vectorstore"].similarity_search(
+                                    query,
+                                    k=1,
+                                )
+                chart_vega_json = json.loads(results[0].page_content)
+                st.write("RAG Vega-Lite JSON:",chart_vega_json)
+                chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
+                prompt_chart_test = PromptTemplate(
+                                    template=chart_test_template,
+                                    input_variables=["query","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
 
+                        )
+                chart_test_chain = prompt_chart_test | llm
+                chart_code = chart_test_chain.invoke(input = {"query":query,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
+                print(chart_code.content)
                 # Call gpt-4o-mini to generate vis code
                 print("\n🟢 Step 1: Generating Initial Code...\n")
-                initial_code = agent_1_generate_code(query, datasets[chosen_dataset], nl4DV_json, nl4DV_json["visList"][0]["vlSpec"], code_template, expanded_query, openai_key)
-                print(initial_code)
+                # initial_code = agent_1_generate_code(query, datasets[chosen_dataset], nl4DV_json, nl4DV_json["visList"][0]["vlSpec"], code_template, expanded_query, openai_key)
+                # print(initial_code)
                 print("\n🟡 Step 2: Improving Code Quality...\n")
-                improved_code = agent_2_improve_code(query, initial_code, nl4DV_json, openai_key)
+                improved_code = agent_2_improve_code(query, chart_code.content, openai_key)
                 print(improved_code)
                 exec_count=0
                 try:
@@ -538,28 +522,51 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
                 except Exception as final_exception:
                     print("\n❌ Failed to generate executable code after multiple attempts.")
-                    print(f"Final Error: {str(final_exception)}")
+                show_chart_flag = 1
+                if exec_count == 3:
+                    st.error("The code is failed to execute.")
+                    show_chart_flag = 0
                 
                 # load the vega_lite_json for insight_prompt
                 with open(f"DATA2Poster_json/vega_lite_json_{idx}.json", "r") as f:
                         chart = json.load(f)
-                        # image for pdf
-                        img = alt.Chart.from_dict(chart)
-                        img.save(f"DATA2Poster_img/image_{idx}.png")
                         # json for chart_description
-                        chart_type = chart["mark"]["type"]
-                        chart_title = chart["title"]
-                        if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
-                            x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                        if "layer" in chart:
+                            chart_type = chart["layer"][0]["mark"]["type"]
+                            if "title" in chart["layer"][0]:
+                                chart_title = chart["layer"][0]["title"]
+                            else:
+                                chart_title = chart["title"]
+                            x_field = "Title: " + chart["layer"][0]["encoding"]["x"]["title"] + " Type: " + chart["layer"][0]["encoding"]["x"]["type"]
+                            y_field = "Title: " + chart["layer"][0]["encoding"]["y"]["title"] + " Type: " + chart["layer"][0]["encoding"]["y"]["type"]
+                        elif "hconcat" in chart:
+                            chart_type = chart["hconcat"][0]["mark"]["type"]
+                            chart_title = chart["hconcat"][0]["title"]
+                            x_field = "Title: " + chart["hconcat"][0]["encoding"]["x"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["x"]["type"]
+                            y_field = "Title: " + chart["hconcat"][0]["encoding"]["y"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["y"]["type"]
                         else:
-                            x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                        if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
-                            y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
-                        else:
-                            y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                            chart_type = chart["mark"]["type"]
+                            if "title" in chart:
+                                chart_title = chart["title"]
+                            if "x" in chart["encoding"]:
+                                if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
+                                    x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                                else:
+                                    x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                            if "y" in chart["encoding"]:
+                                if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
+                                    y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                                else:
+                                    y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                            # It's Pie Chart
+                            else:
+                                x_field = "Title: " + chart["encoding"]["color"]["field"] + " Type: " + chart["encoding"]["color"]["type"]
+                                y_field = "Title: " + chart["encoding"]["theta"]["field"] + " Type: " + chart["encoding"]["theta"]["type"]
                         for key in chart["datasets"]:
                             chart_data = chart["datasets"][key]
-        
+                            
+                if show_chart_flag == 1:
+                    st.vega_lite_chart(chart, theme = None)
                 chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
                 prompt_chart = PromptTemplate(
                                         template=chart_prompt_template,
@@ -569,20 +576,13 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 chain_pattern = prompt_chart | llm
                 chart_des = chain_pattern.invoke(input = {"query":query,"chart_type":chart_type,"chart_title":chart_title,"x_field":x_field,"y_field":y_field,"chart_data":chart_data})
 
-                            
-                # #  RAG
-                # retrieve_docs = st.session_state["vectorstore"].max_marginal_relevance_search(query, k=3,fetch_k=25,lambda_mult=0.4)
-                # retrieved_fact = [doc.page_content for doc in retrieve_docs] # retrieve_fact is a list of facts
-                # vectorstore = st.session_state["vectorstore"]
-                
-                # fact_for_insight = retrieved_fact
                 supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
 
-                st.write(f'**Question for Chart:**',f'**{query}**')
+                
                 st.write(f'**Chart Description:**', f'**{chart_des.content}**')
                 st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
                 # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
-
+                
                 # call gpt-4o-mini to generate insight description
                 insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
                 insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
@@ -600,9 +600,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # insight_llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key, max_tokens=15)
                 insight_chain = insight_prompt | llm
                 insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-                st.write(f'**Insight Description:**', f'**{insight.content}**')
                 insight_list.append(insight.content)
-                st.vega_lite_chart(chart, theme = None)
+                st.write(f'**Insight Description:**', f'**{insight.content}**')
+                chart_des_list.append(chart_des.content)
+                idx+=1
                 
          
             # Reset session state
@@ -614,7 +615,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             st.session_state["selection"] = ""
             # Create pdf and download
             pdf_title = selected_poster_question
-            create_pdf(chosen_dataset, q_for_nl4DV , pdf_title, insight_list, openai_key)
+            create_pdf(chosen_dataset, q_for_nl4DV , pdf_title, chart_des_list,insight_list, openai_key)
             st.success("Poster has been created successfully!🎉")
             with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
                 st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")

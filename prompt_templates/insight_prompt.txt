@@ -3,9 +3,9 @@ You can assume the user struggles to develop the most important insight.
 [/Instructions] 
 (1) Read the chart description carefully.
 (2) Understand the association with question and the chart description.
-(3) Provide a clear and concise insightful summary in a coherent manner for the chart.
+(3) Extract sentences from  chart description to summarize the chart.
 (4) Your summary CANNOT conflict with the chart description.
-(5) Your response MUST WITHIN 15 words.
+(5) Your response MUST WITHIN 20 words.
 
 
 

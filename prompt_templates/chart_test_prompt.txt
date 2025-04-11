@@ -1,6 +1,6 @@
 You are an expert Python programmer specializing in data visualization.
-Your task is modify the given code template to generate visualization based on this question:\n\n{query}.\n\n 
-Here is the given code  template:\n\n{code_template}\n\n
+Your task is modify the given code template to generate visualization based on this question:\n\n{query}.\n\n
+Here is the given code template:\n\n{code_template}\n\n
 The following is vega-zero specification for your reference:\n\n{label}.
 Make good use of the following direction to write executable code:\n\n
 "chart": {chart}\n\n
@@ -11,7 +11,31 @@ Make good use of the following direction to write executable code:\n\n
 "encoding": {encoding}\n\n
 "sort": {sort}\n\n
 [\Instructions]
-- Think step by step to change coulmn, filter, and aggregate to fit the words appear in the query.
-- ONLY MODIFYING THE SPECIFIED PARTS OF THE TEMPLATE. 
-- ONLY return the code. DO NOT include any preamble text. Do not include explanations or prose.\n. 
+- ALWAYS have brief plan to change coulmn, filter, and aggregate from the list:{column_list} to fit the words appear in the query.
+- Think arefully how to transform data to meet the query requirement.
+- If data need to be transformed (Calculate mean, group by column,filter out,etc), transform data BEFORE creating the chart.
+- ONLY MODIFYING THE SPECIFIED PARTS OF THE TEMPLATE.
+- ONLY return the code. DO NOT include any preamble text. Do not include explanations or prose.\n.
 [\Instructions]
+The following is an example executable code for bar chart:\n\n
+[\Example]
+chart = alt.Chart(grouped_data).mark_bar().encode(
+        x=alt.X('Genre', title='Genre', sort='-y'),
+        y=alt.Y('mean(Production Budget)', title='Average Production Budget'),
+        color=alt.Color('Genre', scale=alt.Scale(domain=grouped_data['Genre'].unique(), range=["#FEC89A", "#FFD7D1", "#D8E2DC", "#FFE5D9", "#FFD7BA"])),
+        tooltip=[alt.Tooltip('Genre', title='Genre'), alt.Tooltip('mean(Production Budget)', title='Average Production Budget')]
+    ).properties(
+        title='Average Production Budget by Genre',
+        width=600,
+        height=400
+    ).configure_axis(
+        labelFontSize=12,
+        titleFontSize=14
+    ).configure_title(
+        fontSize=16,
+        anchor='start'
+    )
+
+    return chart
+
+[\Example]

@@ -13,7 +13,7 @@ from text_generator import introduction, conclusion
 
 
 
-def create_pdf(dataset, q_for_nl4DV, title, insight_list,  openai_key):
+def create_pdf(dataset, q_for_nl4DV, title, chart_des_list, insight_list,  openai_key):
     num = random.choice([1, 2, 3])
     if num == 1:
         text_color = "#feece9"
@@ -34,7 +34,7 @@ def create_pdf(dataset, q_for_nl4DV, title, insight_list,  openai_key):
     text_introduction = introduction(title, q_for_nl4DV , openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(title, insight_list, text_introduction, openai_key)
+    text_conclusion = conclusion(title, chart_des_list , text_introduction, openai_key)
     
     # Title
     p_title = Paragraph(title, ParagraphStyle(name='title', fontSize=32, fontName='Helvetica-Bold',leading=34, textColor=text_color))

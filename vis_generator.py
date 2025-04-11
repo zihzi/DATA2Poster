@@ -46,11 +46,11 @@ def agent_1_generate_code(query, dataset, nl4DV_json, vl_Spec, code_template, in
     
 
 # **Agent 2: Improves Code Quality**
-def agent_2_improve_code(query, code, nl4DV_json, openai_key):
+def agent_2_improve_code(query, code, openai_key):
     prompt = """
     You are a senior data visualization expert highly skilled in revising visualization code based on a given query.
     Your task is to make the visualization code intepret the query for better readability, aesthetics, and effectiveness.
-    Here is the query, the code, and the information for your reference.
+    Here is the query and code.
     DATA IS ALREADY IN THE GIVEN CODE, SO NEVER USE "<Add dataset URL here>" or LOAD ANY DATA ELSE.
     ONLY revise the code between the lines of "def plot(data):" and "return chart".
     You MUST return a full EXECUABLE code. DO NOT include any preamble text. Do not include explanations or prose.
@@ -58,9 +58,9 @@ def agent_2_improve_code(query, code, nl4DV_json, openai_key):
     - Carefully read and analyze the user query to understand the specific requirements. 
     - Examine the provided code to understand how the current plot is generated. 
     - Assess the plot type, the data it represents, labels, titles, colors, and any other visual elements. 
-    - Consider the information, focus on "attributeMap" and "taskMap", and evaluate how well is the code that applies any kind of data transformation (filtering, aggregation, grouping, null value handling etc).
+    - Evaluate how well is the code that applies any kind of data transformation (filtering, aggregation, grouping, null value handling etc).
     - Improvements for better visualization practices, such as clarity, readability, and aesthetics, while ensuring the primary focus is on meeting the user's specified requirements.
-    - ONLY USE COLORS from this color palette: ["E37663", "FCD5CE", "C1928B", "DFACA4", "BDBDB3", "D8E2DC", "E3D7CA", "FFE5D9", "FFD7BA", "FEC89A"].
+    - ONLY USE COLORS from this color palette: [""#FEC89A",#FFD7D1", "#D8E2DC", "#FFE5D9", "#FFD7BA"].
     - Return only the improved code, without explanations 
     [\Instructions]                                        
     """
@@ -70,10 +70,8 @@ def agent_2_improve_code(query, code, nl4DV_json, openai_key):
                         {query}\n\n
                         Here is the code.\n\n
                         {code}\n\n
-                        Here is the information.\n\n
-                        {nl4DV_json}\n\n
                         """,
-                       input_variables=["query", "code", "nl4DV_json"],
+                       input_variables=["query", "code"],
             )
     # interact with LLM
     llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key)
@@ -83,7 +81,7 @@ def agent_2_improve_code(query, code, nl4DV_json, openai_key):
                                   ]                         
                     )
     chain = prompt_for_chain | llm      
-    response = chain.invoke(input= {"query":query, "code":code, "nl4DV_json":nl4DV_json})
+    response = chain.invoke(input= {"query":query, "code":code})
     return response.content
 
 # **Agent 3: Ensures Code is Executable**

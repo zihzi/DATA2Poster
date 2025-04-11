@@ -1,1 +1,130 @@
-{"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-12ecc6d1bef23e9d126cb7a9a80e1afc"}, "mark": {"type": "bar"}, "encoding": {"x": {"field": "Occupation", "sort": null, "type": "nominal"}, "y": {"field": "Avg_Quality_of_Sleep", "type": "quantitative"}}, "title": "Average Quality of Sleep by Occupation", "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json", "datasets": {"data-12ecc6d1bef23e9d126cb7a9a80e1afc": [{"Occupation": "accountant", "Avg_Age": 39, "Avg_Sleep Duration": 7.1, "Avg_Quality of Sleep": 7.9, "Avg_Physical Activity Level": 58.1, "Avg_Stress Level": 4.6, "Avg_Heart Rate": 68.9, "Avg_Daily Steps": 6881}, {"Occupation": "doctor", "Avg_Age": 33, "Avg_Sleep Duration": 7.0, "Avg_Quality of Sleep": 6.6, "Avg_Physical Activity Level": 55.4, "Avg_Stress Level": 6.7, "Avg_Heart Rate": 70.7, "Avg_Daily Steps": 6808}, {"Occupation": "engineer", "Avg_Age": 47, "Avg_Sleep Duration": 8.0, "Avg_Quality of Sleep": 8.4, "Avg_Physical Activity Level": 51.9, "Avg_Stress Level": 3.9, "Avg_Heart Rate": 67.1, "Avg_Daily Steps": 5981}, {"Occupation": "lawyer", "Avg_Age": 39, "Avg_Sleep Duration": 7.4, "Avg_Quality of Sleep": 7.9, "Avg_Physical Activity Level": 70.4, "Avg_Stress Level": 5.1, "Avg_Heart Rate": 69.0, "Avg_Daily Steps": 7662}, {"Occupation": "nurse", "Avg_Age": 52, "Avg_Sleep Duration": 7.1, "Avg_Quality of Sleep": 7.4, "Avg_Physical Activity Level": 78.6, "Avg_Stress Level": 5.5, "Avg_Heart Rate": 71.7, "Avg_Daily Steps": 8058}, {"Occupation": "salesperson", "Avg_Age": 44, "Avg_Sleep Duration": 6.4, "Avg_Quality of Sleep": 6.0, "Avg_Physical Activity Level": 44.9, "Avg_Stress Level": 7.0, "Avg_Heart Rate": 72.0, "Avg_Daily Steps": 5983}, {"Occupation": "scientist", "Avg_Age": 34, "Avg_Sleep Duration": 6.0, "Avg_Quality of Sleep": 5.0, "Avg_Physical Activity Level": 41.0, "Avg_Stress Level": 6.8, "Avg_Heart Rate": 72.8, "Avg_Daily Steps": 5440}, {"Occupation": "software engineer", "Avg_Age": 31, "Avg_Sleep Duration": 6.8, "Avg_Quality of Sleep": 6.5, "Avg_Physical Activity Level": 48.0, "Avg_Stress Level": 6.0, "Avg_Heart Rate": 71.8, "Avg_Daily Steps": 5800}, {"Occupation": "teacher", "Avg_Age": 42, "Avg_Sleep Duration": 6.7, "Avg_Quality of Sleep": 7.0, "Avg_Physical Activity Level": 45.6, "Avg_Stress Level": 4.5, "Avg_Heart Rate": 66.9, "Avg_Daily Steps": 5958}]}}
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16
+    },
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "data-12ad329858363e2d7b83bccf04ab9e70"
+  },
+  "datasets": {
+    "data-12ad329858363e2d7b83bccf04ab9e70": [
+      {
+        "Avg_Sleep Duration": 7.1,
+        "Occupation": "accountant"
+      },
+      {
+        "Avg_Sleep Duration": 7.0,
+        "Occupation": "doctor"
+      },
+      {
+        "Avg_Sleep Duration": 8.0,
+        "Occupation": "engineer"
+      },
+      {
+        "Avg_Sleep Duration": 7.4,
+        "Occupation": "lawyer"
+      },
+      {
+        "Avg_Sleep Duration": 7.1,
+        "Occupation": "nurse"
+      },
+      {
+        "Avg_Sleep Duration": 6.4,
+        "Occupation": "salesperson"
+      },
+      {
+        "Avg_Sleep Duration": 6.0,
+        "Occupation": "scientist"
+      },
+      {
+        "Avg_Sleep Duration": 6.8,
+        "Occupation": "software engineer"
+      },
+      {
+        "Avg_Sleep Duration": 6.7,
+        "Occupation": "teacher"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "Occupation",
+      "scale": {
+        "domain": [
+          "accountant",
+          "doctor",
+          "engineer",
+          "lawyer",
+          "nurse",
+          "salesperson",
+          "scientist",
+          "software engineer",
+          "teacher"
+        ],
+        "range": [
+          "#FEC89A",
+          "#FFD7D1",
+          "#D8E2DC",
+          "#FFE5D9",
+          "#FFD7BA"
+        ]
+      },
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Occupation",
+        "title": "Occupation",
+        "type": "nominal"
+      },
+      {
+        "aggregate": "mean",
+        "field": "Avg_Sleep Duration",
+        "title": "Average Sleep Duration (hours)",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Occupation",
+      "sort": "-y",
+      "title": "Occupation",
+      "type": "nominal"
+    },
+    "y": {
+      "aggregate": "mean",
+      "field": "Avg_Sleep Duration",
+      "title": "Average Sleep Duration (hours)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "mark": {
+    "type": "bar"
+  },
+  "params": [
+    {
+      "bind": "scales",
+      "name": "param_3",
+      "select": {
+        "encodings": [
+          "x",
+          "y"
+        ],
+        "type": "interval"
+      }
+    }
+  ],
+  "title": "Average Sleep Duration by Occupation",
+  "width": 600
+}

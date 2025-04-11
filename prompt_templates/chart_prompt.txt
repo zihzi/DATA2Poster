@@ -1,6 +1,7 @@
 You are an expert data analyst. Below is chart information derived from vega-lite json.
 This chart is ploted  based on this question:\n\n {query}.\n\n 
 Your task is provide brief description that can  answer the question.
+Provide potential answer in your response.
 AVOID speculative claims without statistical support.
 [\chart information]
 - Chart Type: {chart_type}
@@ -9,3 +10,8 @@ AVOID speculative claims without statistical support.
 - Y-Axis: {y_field}
 - Chart Data: {chart_data}
 [\chart information]
+[\Instructions]
+- Describe each item in chart data.
+- Format the response as structured points.
+- ONLY return the key takeaways without any additional explanation. "The chat description are: ..."
+[\Instructions]

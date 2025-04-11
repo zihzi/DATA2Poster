@@ -1,57 +1,684 @@
 [
-    {
-        "nl": "Give me a visual representation of the faculty members by their professional status.",
-        "chart": "Bar",
-        "label": "mark bar data faculty encoding x rank y aggregate count rank transform group x ",
-        "column": "Rank",
-        "filter": "none",
-        "aggregate": "count Rank",
-        "mark": "bar",
-        "encoding": "x=Rank,y=count Rank,color=none",
-        "sort": "none"
-    },
-    {
-        "nl": "What does the allergy breakdown look like?",
-        "chart": "Bar",
-        "label": "mark bar data has_allergy encoding x allergy y aggregate count allergy transform group x",
-        "column": "Allergy",
-        "filter": "none",
-        "aggregate": "count Allergy",
-        "mark": "bar",
-        "encoding": "x=Allergy,y=count Allergy,color=none",
-        "sort": "none"
-    },
+
     {
         "nl": "How does Sleep Duration vary across different Occupations?",
         "chart": "Bar",
-        "label": "mark bar data sleep encoding x Occupation y Avg_Sleep Duration ",
+        "label": "mark bar data encoding x Occupation y Avg_Sleep Duration ",
         "column": "Occupation, Avg_Sleep Duration",
         "filter": "none",
         "aggregate": "none",
         "mark": "bar",
-        "encoding": "x=Occupation, y=Avg_Sleep Duration, color=none",
-        "sort": "none"
+        "encoding": "x=Occupation, y=Avg_Sleep Duration, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "How does Avg_Sleep Duration compare between engineers and scientists?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Sleep Duration ",
+        "column": "Occupation, Avg_Sleep Duration",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Sleep Duration, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "How do average daily steps compare across different occupations?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Daily Steps",
+        "column": "Occupation, Avg_Daily Steps",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Daily Steps, color=Occupatione",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "How does Stress Level vary across different Occupations?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Stress Level ",
+        "column": "Occupation, Avg_Stress Level",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "What is the Avg_Stress Level for salespeople compared to engineers?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Stress Level ",
+        "column": "Occupation, Avg_Stress Level",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "What is the Avg_Quality of Sleep for each occupation?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Quality of Sleep ",
+        "column": "Occupation, Avg_Quality of Sleep",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Quality of Sleep, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "How does Sleep Quality vary across different Occupations?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Quality of Sleep ",
+        "column": "Occupation, Avg_Quality of Sleep",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Quality of Sleep, color=Occupation",
+        "sort": "y:desc"
+    },
+    {
+        "nl": "How do top occupations rank in Avg_Quality of Sleep?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Quality of Sleep ",
+        "column": "Occupation, Avg_Quality of Sleep",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Quality of Sleep, color=Occupation",
+        "sort": "y:desc"
     },
     {
         "nl": "What is the correlation between stress levels and sleep quality?",
         "chart": "Scatter",
-        "label": "mark point data sleep encoding x Avg_Stress Level y Avg_Sleep Quality",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Quality",
         "column": "Avg_Stress Level, Avg_Sleep Quality",
         "filter": "none",
         "aggregate": "none",
         "mark": "point",
-        "encoding": "x=Avg_Stress Level, y=Avg_Sleep_ uality",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Quality, color=none",
+        "sort": "none"
+    },
+    {
+        "nl":"How are Avg_Sleep Duration and Avg_Stress Level related?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Duration",
+        "column": "Avg_Stress Level, Avg_Sleep Duration",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Duration, color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "How do accountants' sleep metrics compare to scientists?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Quality",
+        "column": "Avg_Stress Level, Avg_Sleep Quality",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Quality, color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "Is there a correlation between average daily steps and sleep duration?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Daily Steps y Avg_Sleep Duration",
+        "column": "Avg_Daily Steps, Avg_Sleep Duration",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Daily Steps, y=Avg_Sleep Duration, color=none",
+        "sort": "none"
+    }, 
+    {
+        "nl":"How does Avg_Stress Level vary with Avg_Quality of Sleep?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Quality",
+        "column": "Avg_Stress Level, Avg_Sleep Quality",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Quality, color=none",
+        "sort": "none"
+    },  
+    {
+        "nl": "How does Avg_Stress Level of doctors compare to engineers?",
+       "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Quality",
+        "column": "Avg_Stress Level, Avg_Sleep Quality",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Quality, color=none",
+        "sort": "none"
+    },
+    {
+        "nl":"How do Avg_Heart Rates compare among top Avg_Stress Level occupations?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Heart Rates",
+        "column": "Avg_Stress Level, Avg_Heart Rates",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Heart Rates, color=none",
+        "sort": "none"
+    },
+    {
+        "nl":"How does Avg_Sleep Duration relate to Avg_Quality of Sleep across occupations?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Sleep Duration y Avg_Quality of Sleep",
+        "column": "Avg_Sleep Duration, Avg_Quality of Sleep",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Sleep Duration, y=Avg_Quality of Sleep, color=none",
+        "sort": "none"
+    },
+    {
+        "nl": "Which occupations have the highest and lowest sleep quality?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Avg_Stress Level y Avg_Sleep Duration",
+        "column": "Avg_Stress Level, Avg_Sleep Duration",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=Avg_Stress Level, y=Avg_Sleep Duration",
         "sort": "none"
     },
     {
         "nl": "Which occupations experience the highest stress levels?",
         "chart": "Bar",
-        "label": "mark bar data sleep encoding x Occupation y Avg_Stress Level ",
+        "label": "mark bar data encoding x Occupation y Avg_Stress Level ",
         "column": "Occupation, Avg_Stress Level",
         "filter": "none",
         "aggregate": "none",
         "mark": "bar",
-        "encoding": "x=Occupation, y=Avg_Stress Level, color=none",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=Occupation",
         "sort": "y:desc"
+    },
+    {
+        "nl": "Which occupation has the lowest Avg_Stress Level?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Stress Level ",
+        "column": "Occupation, Avg_Stress Level",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=Occupation",
+        "sort": "y:asc"
+    },
+    {
+        "nl":"What are the Avg_Stress Levels for top Avg_Heart Rate occupations?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Occupation y Avg_Stress Level ",
+        "column": "Occupation, Avg_Stress Level",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "bar",
+        "encoding": "x=Occupation, y=Avg_Stress Level, color=Occupation",
+        "sort": "y:desc"
+
+    },
+    {
+        "nl":"What is the distribution of PetalLengthCm among species?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x PetalLengthCm y count(PetalLengthCm)",
+        "column": "PetalLengthCm, Species",
+        "filter": "none",
+        "aggregate": "count(PetalLengthCm)",
+        "mark": "point",
+        "encoding": "x=PetalLengthCm, y=count(PetalLengthCm), color=Species",
+        "sort": "none"
+    },
+    {
+        "nl":"How does SepalLengthCm vary across different species?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x SepalLengthCm y count(SepalLengthCm)",
+        "column": "SepalLengthCm, Species",
+        "filter": "none",
+        "aggregate": "count(SepalLengthCm)",
+        "mark": "point",
+        "encoding": "x=SepalLengthCm, y=count(SepalLengthCm), color=Species",
+        "sort": "none"
+   },
+   {
+        "nl":"How do PetalLengthCm and PetalWidthCm correlate across species?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x PetalLengthCm y PetalWidthCm",
+        "column": "PetalLengthCm, PetalWidthCm, Species",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=PetalLengthCm, y=PetalWidthCm, color=Species",
+        "sort": "none"
+   },
+   {
+        "nl":"Does Iris-virginica consistently have the highest PetalLengthCm?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Species y mean(PetalLengthCm) group by Species",
+        "column": "Species, PetalLengthCm",
+        "filter": "none",
+        "aggregate": "mean(PetalLengthCm) group by Species",
+        "mark": "bar",
+        "encoding": "x=Species, y=mean(PetalLengthCm), color=Species",
+        "sort": "y:desc"
+
+   },
+   {
+        "nl":"How does the average PetalWidthCm compare across species?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Species y mean(PetalWidthCm) group by Species",
+        "column": "Species, PetalWidthCm",
+        "filter": "none",
+        "aggregate": "mean(PetalWidthCm) group by Species",
+        "mark": "bar",
+        "encoding": "x=Species, y=mean(PetalWidthCm), color=Species",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"How does Iris-setosa compare to other species in SepalWidthCm?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Species y maen(SepalLengthCm)",
+        "column": "Species, SepalLengthCm",
+        "filter": "none",
+        "aggregate": "mean(SepalLengthCm)",
+        "mark": "bar",
+        "encoding": "x=Species, y=mean(SepalLengthCm), color=Species",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"How does Iris-virginica compare in petal measurements?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Species y mean(PetalLengthCm)",
+        "column": "Species, PetalLengthCm",
+        "filter": "none",
+        "aggregate": "mean(PetalLengthCm)",
+        "mark": "bar",
+        "encoding": "x=Species, y=mean(PetalLengthCm), color=Species",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"How does the highest Sepal Width compare with Sepal Length?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x SepalWidthCm y SepalLengthCm",
+        "column": "SepalWidthCm, ,SepalLengthCm, Species",
+        "filter": "none",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x=SepalWidthCm, y=SepalLengthCm, color=Species",
+        "sort": "none"
+   },
+   {
+        "nl":"What is the distribution of species representation in the dataset?",
+        "chart": "Pie",
+        "label": "mark arc data encoding theta count(Species) color Species",
+        "column": "Species",
+        "filter": "none",
+        "aggregate": "count(Species)",
+        "mark": "arc",
+        "encoding": "theta=count(Species), color=Species",
+        "sort": "theta:desc"
+   },
+   {
+        "nl":"What percentage of Worldwide Gross does Adventure contribute compared to other genres?",
+        "chart": "Pie",
+        "label": "mark arc data encoding theta aggregate sum(Worldwide Gross) group by Genre color Genre",
+        "column": "Genre, Worldwide_Gross",
+        "filter": "none",
+        "aggregate": "sum(Worldwide Gross) group by Genre",
+        "mark": "arc",
+        "encoding": "theta=sum(Worldwide Gross), color=Genre",
+        "sort": "theta:desc"
+   },
+   {
+        "nl":"How does the average Worldwide Gross compare across genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(Worldwide Gross) group by Genre",
+        "column": "Genre, Worldwide Gross",
+        "filter": "none",
+        "aggregate": "mean(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=mean(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"Is Adventure genre overrepresented in financial success compared to others?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y sum(Worldwide Gross) group by Genre",
+        "column": "Genre, Worldwide Gross",
+        "filter": "none",
+        "aggregate": "sum(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=sum(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"How do Adventure and Action genres rank in Worldwide Gross?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y sum(Worldwide Gross) group by Genre",
+        "column": "Genre, Worldwide Gross",
+        "filter": "none",
+        "aggregate": "sum(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=sum(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+   },
+   {    
+        "nl":"How does the average Worldwide Gross compare across genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(Worldwide Gross) group by Genre",
+        "column": "Genre, Worldwide Gross",
+        "filter": "none",
+        "aggregate": "mean(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=mean(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+   },
+   {
+        "nl":"How does Adventure's Production Budget compare to other genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(Production Budget) group by Genre",
+        "column": "Genre, Production Budget",
+        "filter": "none",
+        "aggregate": "mean(Production Budget) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=mean(Production Budget), color=Genre",
+        "sort": "y:desc"
+   },
+    {
+          "nl":"How does Adventure genre's budget compare to other genres?",
+          "chart": "Bar",
+          "label": "mark bar data encoding x Genre y mean(Production Budget) group by Genre",
+          "column": "Genre, Production Budget",
+          "filter": "none",
+          "aggregate": "mean(Production Budget) group by Genre",
+          "mark": "bar",
+          "encoding": "x=Genre, y=mean(Production Budget), color=Genre",
+          "sort": "y:desc"
+    },
+   {
+        "nl":"What is the Production Budget distribution for Adventure and Action genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(Production Budget) group by Genre",
+        "column": "Genre, Production Budget",
+        "filter": "none",
+        "aggregate": "mean(Production Budget) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=mean(Production Budget), color=Genre",
+        "sort": "y:desc"
+
+   },
+   {
+        "nl":"Is Adventure's performance consistent across budget and gross?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Production Budget y Worldwide Gross",
+        "column": "Production Budget, Worldwide Gross",
+        "filter": "Genre =='Adventure'",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x= Production Budget, y= Worldwide Gross, color=none",
+        "sort": "none"
+   },
+   {
+        "nl":"How does Adventure's percentage in Worldwide Gross compare to Production Budget?",
+        "chart": "Scatter",
+        "label": "mark point data encoding x Production Budget y Worldwide Gross",
+        "column": "Production Budget, Worldwide Gross",
+        "filter": "Genre =='Adventure'",
+        "aggregate": "none",
+        "mark": "point",
+        "encoding": "x= Production Budget, y= Worldwide Gross, color=none",
+        "sort": "none"
+   },
+    {
+          "nl":"How does Adventure's Production Budget relate to its Worldwide Gross?",
+          "chart": "Scatter",
+          "label": "mark point data encoding x Production Budget y Worldwide Gross",
+          "column": "Production Budget, Worldwide Gross",
+          "filter": "Genre =='Adventure'",
+          "aggregate": "none",
+          "mark": "point",
+          "encoding": "x= Production Budget, y= Worldwide Gross, color=none",
+          "sort": "none"
+    },
+    {
+          "nl":"How does Worldwide Gross vary with different Production Budgets?",
+          "chart": "Scatter",
+          "label": "mark point data encoding x Production Budget y Worldwide Gross",
+          "column": "Production Budget, Worldwide Gross",
+          "filter": "none",
+          "aggregate": "none",
+          "mark": "point",
+          "encoding": "x= Production Budget, y= Worldwide Gross, color=none",
+          "sort": "none"
+    },
+   {
+        "nl":"What is the gross revenue distribution among top genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y sum(Worldwide Gross) group by Genre",
+        "column": "Genre, Worldwide Gross",
+        "filter": "none",
+        "aggregate": "sum(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=sum(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+
+   },
+   {
+        "nl":"How many entries does Adventure have compared to other genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y count(Genre)",
+        "column": "Genre",
+        "filter": "none",
+        "aggregate": "count(Genre)",
+        "mark": "bar",
+        "encoding": "x=Genre, y=count(Genre), color=Genre",
+        "sort": "y:desc"
+        
+   },
+   {
+        "nl":"How does Adventure genre compare to other genres in Worldwide Gross?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y sum(Worldwide Gross) group by Genre",
+        "column": "Genre , Worldwide Gross",
+        "filter": "none",
+        "aggregate": "sum(Worldwide Gross) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=sum(Worldwide Gross), color=Genre",
+        "sort": "y:desc"
+    },
+    {
+        "nl":"How do IMDB Rating compare across different genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(IMDB Rating) group by Genre",
+        "column": "Genre , IMDB Rating",
+        "filter": "none",
+        "aggregate": "sum(IMDB Rating) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=sum(IMDB Rating), color=Genre",
+        "sort": "y:desc"
+    },
+    {
+        "nl":"What is the Rotten Tomatoes Rating distribution across genres?",
+        "chart": "Bar",
+        "label": "mark bar data encoding x Genre y mean(Rotten Tomatoes Rating) group by Genre",
+        "column": "Genre , Rotten Tomatoes Rating",
+        "filter": "none",
+        "aggregate": "mean(Rotten Tomatoes Rating) group by Genre",
+        "mark": "bar",
+        "encoding": "x=Genre, y=mean(Rotten Tomatoes Rating), color=Genre",
+        "sort": "y:desc"
+    },
+    {
+        "nl":"How does Drama's record proportion compare to other genres?",
+        "chart":"Pie",
+        "label":"mark arc data encoding theta count(Genre) color Genre",
+        "column":"Genre",
+        "filter":"none",
+        "aggregate":"count(Genre)",
+        "mark":"arc",
+        "encoding":"theta=count(Genre), color=Genre",
+        "sort":"theta:desc"
+    },
+    {
+        "nl":"What is the distribution of genres in the dataset?",
+        "chart":"Pie",
+        "label":"mark arc data encoding theta count(Genre) color Genre",
+        "column":"Genre",
+        "filter":"none",
+        "aggregate":"count(Genre)",
+        "mark":"arc",
+        "encoding":"theta=count(Genre), color=Genre",
+        "sort":"theta:desc"
+    },
+    {
+        "nl":"Does Adventure consistently have the highest budget across years?",
+        "chart":"Line",
+        "label":"mark line data encoding x Release Year y Production Budget ",
+        "column":"Release Year, Genre, Production Budget",
+        "filter":"Genre =='Adventure'",
+        "aggregate":"Production Budget ",
+        "mark":"line",
+        "encoding":"x=Release Year, y=Production Budget , color=Release Year",
+        "sort":"x:asc"
+    },
+    {
+        "nl":"How does Worldwide Gross vary across different years?",
+        "chart":"Line",
+        "label":"mark line data encoding x Release Year y sum(Worldwide Gross) group by Release Year",
+        "column":"Release Year, Worldwide Gross",
+        "filter":"none",
+        "aggregate":"sum(Worldwide Gross) group by Release Year",
+        "mark":"line",
+        "encoding":"x=Release Year, y=sum(Worldwide Gross), color=Release Year",
+        "sort":"x:asc"
+    },
+    {
+        "nl":"What are the trends in Worldwide Gross over the years?",
+        "chart":"Line",
+        "label":"mark line data encoding x Release Year y sum(Worldwide Gross) group by Release Year",
+        "column":"Release Year, Worldwide Gross",
+        "filter":"none",
+        "aggregate":"sum(Worldwide Gross) group by Release Year",
+        "mark":"line",
+        "encoding":"x=Release Year, y=sum(Worldwide Gross), color=Release Year",
+        "sort":"x:asc"
+    },
+    {
+        "nl":"What is the IMDB Rating distribution among top genres including Thriller?",
+        "chart":"Bar",
+        "label":"mark bar data encoding x Genre y mean(IMDB Rating) group by Genre",
+        "column":"Genre, IMDB Rating",
+        "filter":"none",
+        "aggregate":"mean(IMDB Rating) group by Genre",
+        "mark":"bar",
+        "encoding":"x=Genre, y=mean(IMDB Rating), color=Genre",
+        "sort":"y:desc"
+    },
+    {
+        "nl":"What is the trend of Worldwide Gross from 1996 to 1997?",
+        "chart":"Line",
+        "label":"mark line data encoding x Release Year y sum(Worldwide Gross) group by Release Year",
+        "column":"Release Year, Worldwide Gross",
+        "filter":"Release Year >= 1996 and Release Year <= 1997",
+        "aggregate":"sum(Worldwide Gross) group by Release Year",
+        "mark":"line",
+        "encoding":"x=Release Year, y=sum(Worldwide Gross), color=Release Year",
+        "sort":"x:asc"
+    },
+    {
+        "nl":"How does Adventure genre compare to other genres' ratings?",
+        "chart":"Bar",
+        "label":"mark bar data encoding x Genre y mean(IMDB Rating) group by Genre",
+        "column":"Genre, IMDB Rating",
+        "filter":"none",
+        "aggregate":"mean(IMDB Rating) group by Genre",
+        "mark":"bar",
+        "encoding":"x=Genre, y=mean(IMDB Rating), color=Genre",
+        "sort":"y:desc"
+    },
+    {
+        "nl":" What is the distribution of ratings for Drama and similar genres?",
+        "chart":"Scatter",
+        "label":"mark point data encoding x Rotten Tomatoes Rating y IMDB Rating",
+        "column":"Genre, Rotten  Tomatoes Rating ,IMDB Rating",
+        "filter":"Genre =='Drama'",
+        "aggregate":"none",
+        "mark":"point",
+        "encoding":"x=Rotten Romatoes Rating, y=IMDB Rating, color=Genre",
+        "sort":"none"
+    },
+    {
+        "nl":"How do Rotten Tomatoes Ratings compare with IMDB Ratings across genres?",
+        "chart":"Scatter",
+        "label":"mark point data encoding x Rotten Tomatoes Rating y IMDB Rating",
+        "column":"Genre, Rotten  Tomatoes Rating ,IMDB Rating",
+        "filter":"none",
+        "aggregate":"none",
+        "mark":"point",
+        "encoding":"x=Rotten Romatoes Rating, y=IMDB Rating, color=Genre",
+        "sort":"none"
+    },
+    {
+        "nl":"What is the distribution of Daily Minutes Spent across different apps?",
+        "chart":"Bar",
+        "label":"mark bar data encoding x App y mean(Daily_Minutes_Spent) group by App",
+        "column":"App, Daily_Minutes_Spent",
+        "filter":"none",
+        "aggregate":"mean(Daily_Minutes_Spent) group by App",
+        "mark":"bar",
+        "encoding":"x=App, y=mean(Daily_Minutes_Spent), color=App",
+        "sort":"y:desc"
+    },
+    {
+        "nl":"How does Snapchat's record proportion compare to other apps?",
+        "chart": "Pie",
+        "label": "mark arc data encoding theta aggregate count(App)",
+        "column": "App",
+        "filter": "none",
+        "aggregate": "count(App)",
+        "mark": "arc",
+        "encoding": "theta=count(App), color=App",
+        "sort": "theta:desc"
+    },
+    {
+        "nl":"What is the correlation between Daily_Minutes_Spent and Posts_Per_Day?",
+        "chart":"Scatter",
+        "label":"mark point data encoding x Daily_Minutes_Spent y Posts_Per_Day",
+        "column":"Daily_Minutes_Spent, Posts_Per_Day",
+        "filter":"none",
+        "aggregate":"none",
+        "mark":"point",
+        "encoding":"x=Daily_Minutes_Spent, y=Posts_Per_Day, color=none",
+        "sort":"none"
+    },
+    {
+        "nl":"How does TikTok's Posts_Per_Day compare to other apps?",
+        "chart":"Bar",
+        "label":"mark bar data encoding x App y mean(Posts_Per_Day) group by App",
+        "column":"App, Posts_Per_Day",
+        "filter":"none",
+        "aggregate":"mean(Posts_Per_Day) group by App",
+        "mark":"bar",
+        "encoding":"x=App, y=mean(Posts_Per_Day), color=App",
+        "sort":"y:desc"
+    },
+    {
+        "nl":"What is the proportion of records for each app?",
+        "chart":"Pie",
+        "label":"mark arc data encoding theta aggregate count(App)",
+        "column":"App",
+        "filter":"none",
+        "aggregate":"count(App)",
+        "mark":"arc",
+        "encoding":"theta=count(App), color=App",
+        "sort":"theta:desc"
+
     }
+   
+    
 ]
+
+
