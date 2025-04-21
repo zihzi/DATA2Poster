@@ -1,0 +1,138 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "config": {
+    "axis": {
+      "labelAngle": -45
+    },
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "data-07910988cf6ada387ff9004db3e50cf1"
+  },
+  "datasets": {
+    "data-07910988cf6ada387ff9004db3e50cf1": [
+      {
+        "Gender": "female",
+        "Occupation": "accountant",
+        "Sleep Duration": 7.111111111111111
+      },
+      {
+        "Gender": "female",
+        "Occupation": "doctor",
+        "Sleep Duration": 8.2
+      },
+      {
+        "Gender": "female",
+        "Occupation": "engineer",
+        "Sleep Duration": 8.425
+      },
+      {
+        "Gender": "female",
+        "Occupation": "lawyer",
+        "Sleep Duration": 7.15
+      },
+      {
+        "Gender": "female",
+        "Occupation": "manager",
+        "Sleep Duration": 6.9
+      },
+      {
+        "Gender": "female",
+        "Occupation": "nurse",
+        "Sleep Duration": 7.0630136986301375
+      },
+      {
+        "Gender": "female",
+        "Occupation": "scientist",
+        "Sleep Duration": 6.0
+      },
+      {
+        "Gender": "female",
+        "Occupation": "teacher",
+        "Sleep Duration": 6.7057142857142855
+      },
+      {
+        "Gender": "male",
+        "Occupation": "accountant",
+        "Sleep Duration": 7.2
+      },
+      {
+        "Gender": "male",
+        "Occupation": "doctor",
+        "Sleep Duration": 6.934782608695652
+      },
+      {
+        "Gender": "male",
+        "Occupation": "engineer",
+        "Sleep Duration": 7.535483870967742
+      },
+      {
+        "Gender": "male",
+        "Occupation": "lawyer",
+        "Sleep Duration": 7.4222222222222225
+      },
+      {
+        "Gender": "male",
+        "Occupation": "sales representative",
+        "Sleep Duration": 5.9
+      },
+      {
+        "Gender": "male",
+        "Occupation": "salesperson",
+        "Sleep Duration": 6.403125
+      },
+      {
+        "Gender": "male",
+        "Occupation": "software engineer",
+        "Sleep Duration": 6.75
+      },
+      {
+        "Gender": "male",
+        "Occupation": "teacher",
+        "Sleep Duration": 6.58
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "Gender",
+      "title": "Gender",
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Gender",
+        "type": "nominal"
+      },
+      {
+        "field": "Occupation",
+        "type": "nominal"
+      },
+      {
+        "field": "Sleep Duration",
+        "format": ".2f",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Occupation",
+      "sort": "-y",
+      "title": "Occupation",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Sleep Duration",
+      "title": "Average Sleep Duration (hours)",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "mark": {
+    "type": "bar"
+  },
+  "title": "Average Sleep Duration by Gender and Occupation",
+  "width": 600
+}

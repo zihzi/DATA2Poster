@@ -1,0 +1,152 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "name": "data-49289b999e2ce5bf153fd5663aab3d36"
+  },
+  "datasets": {
+    "data-49289b999e2ce5bf153fd5663aab3d36": [
+      {
+        "Quality of Sleep": 4.0,
+        "Sleep Duration": 5.86,
+        "Stress Level": 8.0
+      },
+      {
+        "Quality of Sleep": 5.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Quality of Sleep": 6.0,
+        "Sleep Duration": 6.15,
+        "Stress Level": 6.0
+      },
+      {
+        "Quality of Sleep": 6.0,
+        "Sleep Duration": 6.436111111111111,
+        "Stress Level": 7.0
+      },
+      {
+        "Quality of Sleep": 6.0,
+        "Sleep Duration": 6.064615384615385,
+        "Stress Level": 8.0
+      },
+      {
+        "Quality of Sleep": 7.0,
+        "Sleep Duration": 6.58,
+        "Stress Level": 4.0
+      },
+      {
+        "Quality of Sleep": 7.0,
+        "Sleep Duration": 7.1000000000000005,
+        "Stress Level": 5.0
+      },
+      {
+        "Quality of Sleep": 7.0,
+        "Sleep Duration": 7.6157894736842096,
+        "Stress Level": 6.0
+      },
+      {
+        "Quality of Sleep": 7.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Quality of Sleep": 8.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Quality of Sleep": 8.0,
+        "Sleep Duration": 7.241860465116279,
+        "Stress Level": 4.0
+      },
+      {
+        "Quality of Sleep": 8.0,
+        "Sleep Duration": 7.528333333333333,
+        "Stress Level": 5.0
+      },
+      {
+        "Quality of Sleep": 8.0,
+        "Sleep Duration": 7.225,
+        "Stress Level": 6.0
+      },
+      {
+        "Quality of Sleep": 9.0,
+        "Sleep Duration": 8.247826086956522,
+        "Stress Level": 3.0
+      },
+      {
+        "Quality of Sleep": 9.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 4.0
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "field": "Sleep Duration",
+      "scale": {
+        "scheme": "viridis"
+      },
+      "title": "Mean Sleep Duration",
+      "type": "quantitative"
+    },
+    "size": {
+      "field": "Sleep Duration",
+      "title": "Mean Sleep Duration",
+      "type": "quantitative"
+    },
+    "tooltip": [
+      {
+        "field": "Quality of Sleep",
+        "type": "quantitative"
+      },
+      {
+        "field": "Stress Level",
+        "type": "quantitative"
+      },
+      {
+        "field": "Sleep Duration",
+        "format": ".2f",
+        "title": "Mean Sleep Duration",
+        "type": "quantitative"
+      }
+    ],
+    "x": {
+      "field": "Quality of Sleep",
+      "title": "Quality of Sleep",
+      "type": "quantitative"
+    },
+    "y": {
+      "field": "Stress Level",
+      "title": "Stress Level",
+      "type": "quantitative"
+    }
+  },
+  "height": 400,
+  "mark": {
+    "size": 100,
+    "type": "circle"
+  },
+  "params": [
+    {
+      "bind": "scales",
+      "name": "param_12",
+      "select": {
+        "encodings": [
+          "x",
+          "y"
+        ],
+        "type": "interval"
+      }
+    }
+  ],
+  "title": "Joint Effect of Quality of Sleep and Stress Level on Sleep Duration",
+  "width": 500
+}
