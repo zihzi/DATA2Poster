@@ -43,7 +43,7 @@ def introduction(title, vis_q, openai_key):
             input_variables=["title", "vis_q"],
         )
         
-    llm = ChatOpenAI(model_name='gpt-4o-mini-2024-07-18', api_key = openai_key)
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
     # structured_llm = llm.with_structured_output(Text)
     introduction_chain = prompt | llm.with_structured_output(introduction_schema)
     response = introduction_chain.invoke(input= {"title":title, "vis_q":vis_q})
@@ -64,7 +64,54 @@ def conclusion(title,insight, intro, openai_key):
             input_variables=["title","insight", "intro"],
         )
         
-    llm = ChatOpenAI(model_name='gpt-4o-mini-2024-07-18', api_key = openai_key)
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
     response = conclusion_chain.invoke(input= {'title':title,'insight':insight, 'intro':intro} )
+    return response["content"]
+
+def improve_title(conclusion,openai_key):
+    prompt = PromptTemplate(
+            template="""
+            You are an excellent data scientist writing a data visualization poster title in a question.
+            You will be given a conclusion drawn from data visualization charts. 
+            Your task is to:Generate an engaging poster title in the form of a question whose answer is the extracted insight.
+            [\Instructions]
+            Step 1: Analyze the Visualization Conclusion.
+                    Carefully read the provided conclusion and identify:
+                    - The main finding or pattern
+                    - The variables or relationships being described
+                    - Any contextual information about magnitude, trends, or comparisons
+                    - The implications of the finding
+
+            Step 2: Extract the Core Insight.
+                    Distill the conclusion into a single, clear insight statement that captures:
+                    - The most important and interesting relationship or pattern
+                    - Specific metrics or comparisons when relevant
+                    - The significance of the finding
+
+            Step 3: Formulate a Question-Based Title.
+                    Create a title in question form that:
+                    - Is concise and attention-grabbing (ideally 5-12 words)
+                    - Directly leads to the insight as its answer
+                    - Creates curiosity or tension that the visualization resolves
+            [\Instructions]
+
+            [\Examples]
+            Given Conclusion:\n\n
+            "Among all renewable energy sources, solar power installation costs decreased most dramatically, falling 82%% between 2010 and 2022, while wind power costs fell by only 39%% in the same period."
+            
+            The Core Insight before generating the title:\n\n
+            "Solar power installation costs decreased most dramatically."
+            
+            Finally generate  the Question-Based Poster Title:\n\n
+            "Is Solar Power Winning the Renewable Cost Reduction Race?"
+            [\Examples]
+            Here is conclusion for writing a poster title :\n\n{conclusion}
+            """,
+            input_variables=["conclusion"],
+        )
+        
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
+    title_chain = prompt | llm.with_structured_output(conclusion_schema)
+    response = title_chain.invoke(input= {'conclusion':conclusion} )
     return response["content"]

@@ -12,8 +12,7 @@ def agent_1_generate_code(query, dataset, nl4DV_json, vl_Spec, code_template, in
     Refer to the instructions and use the vega-lite specification to generate full vega-lite visualization code BY MODIFYING THE SPECIFIED PARTS OF THE TEMPLATE. 
     ALWAYS make sure visualize each attributes and the task in the information. 
     The visualization code MUST BE EXECUTABLE and MUST NOT CONTAIN ANY SYNTAX OR LOGIC ERRORS (e.g., it must consider the data types and use them correctly). 
-    You MUST first generate a brief plan for how you would solve the task e.g. what transformations you would apply if you need to construct a new column, 
-    what attributes you would use for what fields, what aesthetics you would use, etc.
+    You MUST first generate a brief plan for how you would solve the task e.g. how to set the parameters in each function correctly, how to prepare the data, how to manipulate the data so that it becomes appropriate for later functions to call etc,.
     ONLY return the code. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
     """                      
     prompt_input = PromptTemplate(
@@ -34,7 +33,7 @@ def agent_1_generate_code(query, dataset, nl4DV_json, vl_Spec, code_template, in
                         input_variables=["query", "dataset", "nl4DV_json", "vl_Spec", "code_template", "instructions"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),                         
                         SystemMessagePromptTemplate.from_template(prompt_input.template)
@@ -58,9 +57,10 @@ def agent_2_improve_code(query, code, openai_key):
     - Carefully read and analyze the user query to understand the specific requirements. 
     - Examine the provided code to understand how the current plot is generated. 
     - Assess the plot type, the data it represents, labels, titles, colors, and any other visual elements. 
+    - ALWAYS ADD LEGEND TO THE PLOT.
     - Evaluate how well is the code that applies any kind of data transformation (filtering, aggregation, grouping, null value handling etc).
     - Improvements for better visualization practices, such as clarity, readability, and aesthetics, while ensuring the primary focus is on meeting the user's specified requirements.
-    - ONLY USE COLORS from this color palette: [""#FEC89A",#FFD7D1", "#D8E2DC", "#FFE5D9", "#FFD7BA"].
+    - ONLY USE COLORS from this color palette: 'D9ED92','B5E48C','99D98C','76C893','52B69A','34A0A4','168AAD','1A759F','1E6091','184E77'.
     - Return only the improved code, without explanations 
     [\Instructions]                                        
     """
@@ -74,7 +74,7 @@ def agent_2_improve_code(query, code, openai_key):
                        input_variables=["query", "code"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   SystemMessagePromptTemplate.from_template(prompt_input.template)
@@ -107,7 +107,7 @@ def agent_3_fix_code(code,openai_key):
                         input_variables=["code"]
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   SystemMessagePromptTemplate.from_template(prompt_input.template)

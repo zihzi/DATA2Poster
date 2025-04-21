@@ -1,32 +1,76 @@
 {
-    "title": "Extracted_Data_Pattern",
-    "type": "object",
-    "description": "Extracted data pattern by combining multiple facts",
-    "properties": {
-        
-            
-                "extracted_pattern":{
-                    "type":"string",
-                    "description": "Briefly describe the pattern"
-                },
-                "supporting_facts":{
-                    "type":"array",
-                    "description": "List of three facts that support the pattern",
-                    "items":{
-                        "type":"string",
-                        "description": "Fact that support the pattern"
-                    }
-                },
-                "reasoning":{
-                    "type":"string",
-                    "description": "Reason how these THREE facts can lead to this pattern"
-                }
-            },
-    "required": ["pattern", "supporting_facts", "reasoning"]
-        
-    
+  "title": "Extracted_Data_Pattern",
+  "type": "object",
+  "description": "Extracted data pattern by combining multiple facts",
+  "properties": {
+    "P1": {
+      "type": "object",
+      "description": "The first data pattern.",
+      "properties": {
+        "extracted_pattern": {
+          "type": "string",
+          "description": "Briefly describe the pattern"
+        },
+        "supporting_facts": {
+          "type": "array",
+          "description": "List of three facts that support the pattern",
+          "items": {
+            "type": "string",
+            "description": "Fact that support the pattern"
+          }
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Reason how these THREE facts can lead to this pattern"
+        }
+      },
+      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+    },
+    "P2": {
+      "type": "object",
+      "description": "The second data pattern.",
+      "properties": {
+        "extracted_pattern": {
+          "type": "string",
+          "description": "Briefly describe the pattern"
+        },
+        "supporting_facts": {
+          "type": "array",
+          "description": "List of three facts that support the pattern",
+          "items": {
+            "type": "string",
+            "description": "Fact that support the pattern"
+          }
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Reason how these THREE facts can lead to this pattern"
+        }
+      },
+      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+    },
+    "P3": {
+      "type": "object",
+      "description": "The third data pattern.",
+      "properties": {
+        "extracted_pattern": {
+          "type": "string",
+          "description": "Briefly describe the pattern"
+        },
+        "supporting_facts": {
+          "type": "array",
+          "description": "List of three facts that support the pattern",
+          "items": {
+            "type": "string",
+            "description": "Fact that support the pattern"
+          }
+        },
+        "reasoning": {
+          "type": "string",
+          "description": "Reason how these THREE facts can lead to this pattern"
+        }
+      },
+      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+    }
   }
-
-    
-    
-   
+}

@@ -1,27 +1,27 @@
 You are a creative and analytical thinker conducting exploratory data analysis(EDA). 
 Data facts are key statistics summarizing essential information from a tabular dataset.
 And here is the information for enhancing your exoloration:\n\n{knowledgebase}.
-Your specific task is referring to the information and composing creative and relevant fact candidates from given data facts. 
-
+Your specific task is to come up with three insightful pattern which is MOST RELATED TO the selected column: '{user_selected_column}' and combine three relevant fact candidates from given data facts. 
 
 [/Instructions] 
-- An fact idea is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
-- Combine THREE facts from the following list in "supporting_evidence":\n\n{facts} to identify patterns that are not immediately obvious.
+- An pattern is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
+- Read and understand the given information carefully.
+- Think about composing three patterns to identify insight that are not immediately obvious.
+- Combine THREE facts related to the pattern from the following list:\n\n{facts}.
 - DO NOT rewrite the given data facts.
-- ALWAYS SELECT the fact as "There is a relationship between...".
-- Present patterns objectively without introducing personal assumptions.
+- Present pattern objectively without introducing personal assumptions.
 - Reason how these THREE facts can lead to this pattern.
 [/Instructions] 
 
 [/Example]
 {{
-  "pattern": "group b has better performance in both math score and writing score.",
-  "supporting_evidence": [
-    "In race/ethnicity, group c accounts for the largest proportion of records(29.2%).",
-    "The race/ethnicity group b accounts for 2.18% of the reading score.",
-    "There is a strong relationship between math score and reading score, with pearson correlation coefficient of 0.81.",
-  ],
-  "reasoning": "The data shows that group b has better performance in both math score and writing score."
+  "extracted_pattern":"Body Mass (g) is strongly positively correlated with Flipper Length (mm), indicating larger penguins have longer flippers."
+  "supporting_facts":[
+  0:"There is a strong relationship between Flipper Length (mm) and Body Mass (g), with pearson correlation coefficient of 0.87."
+  1:"Gentoos generally have higher Body Mass (g) compared to Adelie and Chinstrap species within the same islands, indicating species-specific size differences."
+  2:"Male penguins tend to have higher Body Mass (g) than females within each species, highlighting sexual dimorphism in size."
+  ]
+  "reasoning":"The strong correlation coefficient of 0.87 between Body Mass and Flipper Length shows a direct size relationship. The species-specific size differences and sexual dimorphism further support that Body Mass and Flipper Length vary consistently with biological factors."
 }}
 [/Example]
 Return the result in JSON format.

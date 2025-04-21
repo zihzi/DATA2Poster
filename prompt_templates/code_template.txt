@@ -3,7 +3,7 @@ import pandas as pd
 import json
 <imports>
 def plot(data: pd.Dataframe):
-    # If data need to be transformed (ex.Calculate the mean, Filter the data, Group the data), trnasform data FIRST.
+    # IF data need to be transformed (ex.Calculate the sum,max,min,mean, Filter the data, Group the data), trnasform data FIRST.
 
     <stub> # only modify this section
 

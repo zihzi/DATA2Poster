@@ -6,7 +6,7 @@ from langchain_core.prompts import PromptTemplate
 
 
 def expand_questions(openai_key,questions):
-    llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-nano-2025-04-14", api_key = openai_key)
     expanded_query_prompt_template = """
     You are an experienced data analyst specializing in Exploratory Data Analysis (EDA).
     Your task is to expand and solidify the query into a step by step detailed instruction (or comment) on how to write python code to fulfill the user query's requirements. 

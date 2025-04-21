@@ -1,13 +1,10 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
-    "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 14
-    },
     "title": {
-      "anchor": "start",
-      "fontSize": 16
+      "anchor": "middle",
+      "font": "Arial",
+      "fontSize": 20
     },
     "view": {
       "continuousHeight": 300,
@@ -15,117 +12,2157 @@
     }
   },
   "data": {
-    "name": "data-eae4475444e8eb0350e32ba999a1948a"
+    "name": "data-d9cfb6ef63b6cc884907e33c32a4341f"
   },
   "datasets": {
-    "data-eae4475444e8eb0350e32ba999a1948a": [
+    "data-d9cfb6ef63b6cc884907e33c32a4341f": [
       {
-        "Avg_Stress Level": 4.6,
-        "Occupation": "accountant"
+        "Age": 27.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 6.0
       },
       {
-        "Avg_Stress Level": 6.7,
-        "Occupation": "doctor"
+        "Age": 28.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
       },
       {
-        "Avg_Stress Level": 3.9,
-        "Occupation": "engineer"
+        "Age": 28.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
       },
       {
-        "Avg_Stress Level": 5.1,
-        "Occupation": "lawyer"
+        "Age": 28.0,
+        "Sleep Duration": 5.9,
+        "Stress Level": 8.0
       },
       {
-        "Avg_Stress Level": 5.5,
-        "Occupation": "nurse"
+        "Age": 28.0,
+        "Sleep Duration": 5.9,
+        "Stress Level": 8.0
       },
       {
-        "Avg_Stress Level": 7.0,
-        "Occupation": "salesperson"
+        "Age": 28.0,
+        "Sleep Duration": 5.9,
+        "Stress Level": 8.0
       },
       {
-        "Avg_Stress Level": 6.8,
-        "Occupation": "scientist"
+        "Age": 29.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
       },
       {
-        "Avg_Stress Level": 6.0,
-        "Occupation": "software engineer"
+        "Age": 29.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
       },
       {
-        "Avg_Stress Level": 4.5,
-        "Occupation": "teacher"
+        "Age": 29.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 29.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 30.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 31.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 32.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 33.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 34.0,
+        "Sleep Duration": 5.8,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 34.0,
+        "Sleep Duration": 5.8,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 6.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 6.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 35.0,
+        "Sleep Duration": 7.4,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 36.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.4,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.4,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.4,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 37.0,
+        "Sleep Duration": 7.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 38.0,
+        "Sleep Duration": 7.4,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 6.9,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 39.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 40.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 40.0,
+        "Sleep Duration": 7.2,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 40.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 40.0,
+        "Sleep Duration": 7.9,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 41.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 6.8,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 42.0,
+        "Sleep Duration": 6.8,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.7,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.7,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.7,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.9,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.7,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 7.8,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 43.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.3,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.8,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.4,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 44.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.8,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 45.0,
+        "Sleep Duration": 6.9,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 48.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 48.0,
+        "Sleep Duration": 5.9,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 48.0,
+        "Sleep Duration": 7.3,
+        "Stress Level": 5.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 6.2,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 49.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 8.3,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 50.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 7.1,
+        "Stress Level": 6.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 6.0,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 51.0,
+        "Sleep Duration": 6.1,
+        "Stress Level": 8.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.5,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 6.6,
+        "Stress Level": 7.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 52.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.3,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.3,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.3,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.3,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 53.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.4,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 54.0,
+        "Sleep Duration": 8.5,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 55.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 55.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 4.0
+      },
+      {
+        "Age": 56.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 56.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 57.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 58.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.2,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.0,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
+      },
+      {
+        "Age": 59.0,
+        "Sleep Duration": 8.1,
+        "Stress Level": 3.0
       }
     ]
   },
-  "encoding": {
-    "color": {
-      "field": "Occupation",
-      "scale": {
-        "domain": [
-          "accountant",
-          "doctor",
-          "engineer",
-          "lawyer",
-          "nurse",
-          "salesperson",
-          "scientist",
-          "software engineer",
-          "teacher"
-        ],
-        "range": [
-          "#FEC89A",
-          "#FFD7D1",
-          "#D8E2DC",
-          "#FFE5D9",
-          "#FFD7BA"
-        ]
-      },
-      "type": "nominal"
-    },
-    "tooltip": [
-      {
-        "field": "Occupation",
-        "title": "Occupation",
-        "type": "nominal"
-      },
-      {
-        "aggregate": "mean",
-        "field": "Avg_Stress Level",
-        "format": ".2f",
-        "title": "Average Stress Level",
-        "type": "quantitative"
-      }
-    ],
-    "x": {
-      "field": "Occupation",
-      "sort": "-y",
-      "title": "Occupation",
-      "type": "nominal"
-    },
-    "y": {
-      "aggregate": "mean",
-      "field": "Avg_Stress Level",
-      "title": "Average Stress Level",
-      "type": "quantitative"
-    }
-  },
-  "height": 400,
-  "mark": {
-    "type": "bar"
-  },
-  "params": [
+  "title": "Pairwise Relationships between Age, Stress Level, and Sleep Duration",
+  "vconcat": [
     {
-      "bind": "scales",
-      "name": "param_4",
-      "select": {
-        "encodings": [
-          "x",
-          "y"
+      "hconcat": [
+        {
+          "encoding": {
+            "color": {
+              "field": "Age",
+              "legend": {
+                "title": "Age"
+              },
+              "scale": {
+                "domain": [
+                  27.0,
+                  28.0,
+                  29.0,
+                  30.0,
+                  31.0,
+                  32.0,
+                  33.0,
+                  34.0,
+                  35.0,
+                  36.0,
+                  37.0,
+                  38.0,
+                  39.0,
+                  40.0,
+                  41.0,
+                  42.0,
+                  43.0,
+                  44.0,
+                  45.0,
+                  48.0,
+                  49.0,
+                  50.0,
+                  51.0,
+                  52.0,
+                  53.0,
+                  54.0,
+                  55.0,
+                  56.0,
+                  57.0,
+                  58.0,
+                  59.0
+                ],
+                "range": [
+                  "#D9ED92",
+                  "#B5E48C",
+                  "#99D98C",
+                  "#76C893",
+                  "#52B69A",
+                  "#34A0A4",
+                  "#168AAD",
+                  "#1A759F",
+                  "#1E6091",
+                  "#184E77"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "type": "quantitative"
+              },
+              {
+                "field": "Sleep Duration",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Age",
+              "title": "Age",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Stress Level",
+              "title": "Stress Level",
+              "type": "quantitative"
+            }
+          },
+          "height": 350,
+          "mark": {
+            "filled": true,
+            "size": 60,
+            "type": "point"
+          },
+          "title": "Age vs Stress Level",
+          "width": 350
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Age",
+              "legend": {
+                "title": "Age"
+              },
+              "scale": {
+                "domain": [
+                  27.0,
+                  28.0,
+                  29.0,
+                  30.0,
+                  31.0,
+                  32.0,
+                  33.0,
+                  34.0,
+                  35.0,
+                  36.0,
+                  37.0,
+                  38.0,
+                  39.0,
+                  40.0,
+                  41.0,
+                  42.0,
+                  43.0,
+                  44.0,
+                  45.0,
+                  48.0,
+                  49.0,
+                  50.0,
+                  51.0,
+                  52.0,
+                  53.0,
+                  54.0,
+                  55.0,
+                  56.0,
+                  57.0,
+                  58.0,
+                  59.0
+                ],
+                "range": [
+                  "#D9ED92",
+                  "#B5E48C",
+                  "#99D98C",
+                  "#76C893",
+                  "#52B69A",
+                  "#34A0A4",
+                  "#168AAD",
+                  "#1A759F",
+                  "#1E6091",
+                  "#184E77"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Age",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "type": "quantitative"
+              },
+              {
+                "field": "Sleep Duration",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Age",
+              "title": "Age",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Sleep Duration",
+              "title": "Sleep Duration",
+              "type": "quantitative"
+            }
+          },
+          "height": 350,
+          "mark": {
+            "filled": true,
+            "size": 60,
+            "type": "point"
+          },
+          "title": "Age vs Sleep Duration",
+          "width": 350
+        }
+      ]
+    },
+    {
+      "encoding": {
+        "color": {
+          "field": "Age",
+          "legend": {
+            "title": "Age"
+          },
+          "scale": {
+            "domain": [
+              27.0,
+              28.0,
+              29.0,
+              30.0,
+              31.0,
+              32.0,
+              33.0,
+              34.0,
+              35.0,
+              36.0,
+              37.0,
+              38.0,
+              39.0,
+              40.0,
+              41.0,
+              42.0,
+              43.0,
+              44.0,
+              45.0,
+              48.0,
+              49.0,
+              50.0,
+              51.0,
+              52.0,
+              53.0,
+              54.0,
+              55.0,
+              56.0,
+              57.0,
+              58.0,
+              59.0
+            ],
+            "range": [
+              "#D9ED92",
+              "#B5E48C",
+              "#99D98C",
+              "#76C893",
+              "#52B69A",
+              "#34A0A4",
+              "#168AAD",
+              "#1A759F",
+              "#1E6091",
+              "#184E77"
+            ]
+          },
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Age",
+            "type": "quantitative"
+          },
+          {
+            "field": "Stress Level",
+            "type": "quantitative"
+          },
+          {
+            "field": "Sleep Duration",
+            "type": "quantitative"
+          }
         ],
-        "type": "interval"
-      }
+        "x": {
+          "field": "Stress Level",
+          "title": "Stress Level",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "Sleep Duration",
+          "title": "Sleep Duration",
+          "type": "quantitative"
+        }
+      },
+      "height": 350,
+      "mark": {
+        "filled": true,
+        "size": 60,
+        "type": "point"
+      },
+      "title": "Stress Level vs Sleep Duration",
+      "width": 350
     }
-  ],
-  "title": "Average Stress Level by Occupation",
-  "width": 600
+  ]
 }

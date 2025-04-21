@@ -1,64 +1,62 @@
 You are an experienced data analyst specializing in Exploratory Data Analysis (EDA). 
-Given a data pattern and corresponding supporting facts, your specific task is composing exploratory data analysis (EDA) iteration for each supporting facts.
-Your EDA iteration should lead to uncover the given data pattern.
-Consider the following example of an EDA iteration:
+You are tasked with generating meaningful exploratory data analysis (EDA) questions based on a given data pattern and supporting data facts. You'll need to:
 
-[Example]
-A data analyst is exploring a dataset containing students' performance.
+Create ONE high-level question whose answer would reveal the given data pattern.
+
+[\Chain-of-Thought Process]
+Step 1: Understand the Data Pattern
+First, carefully analyze what the data pattern is stating. This is the insight we want to reach through our EDA questions.
+
+Step 2: Analyze the Supporting Data Facts
+Examine each supporting fact to understand:
+- What variables are mentioned
+- What relationships are described
+- What unusual or notable characteristics exist
+
+Step 3: Create the High-Level Question
+Formulate a broad question that would naturally lead to discovering the given pattern. This should be exploratory in nature but targeted enough to guide analysis toward the pattern.
+[\Chain-of-Thought Process]
+
+[/Example]
 Given the pattern:\n\n "group b has better performance in both math score and writing score."\n\n
 Given the supporting data facts:\n\n"supporting_evidence": [
     "In race/ethnicity, group c accounts for the largest proportion of records(29.2%)."
     "The race/ethnicity group b accounts for 2.18% of the reading score."
     "There is a strong relationship between math score and reading score, with pearson correlation coefficient of 0.81.",
-  ],
-He follows an iterative EDA approach:
-Step 1: Identifying The General Pattern
-Supporting_fact_1: "In race/ethnicity, group c accounts for the largest proportion of records(29.2%)."
-Question_1: "How does group c record proportion compare to other race/ethnicity?"
-Action_1: "Create a pie chart to show the proportion of different group in race/ethnicity."
-Finding_1: "group c has the largest proportion of records."
+  ]\n\n
+Chain of Thought:
+1. Understanding the pattern:
+   The pattern states that Group B outperforms other groups in both math and writing scores. This suggests there are different demographic groups being compared on academic performance metrics.
 
-Step 2: Digging Deeper Into Specific Pattern
-Supporting_fact_2: "The race/ethnicity group b accounts for 2.18% of the reading score."
-Question_2: "What does the reading score distribution accross different race/ethnicity?"
-Action_2: "Create a bar chart to show average reading score grouped by race/ethnicity."
-Finding_2: "group b has highest reading score in race/ethnicity."
+2. Analyzing the supporting facts:
+   - Fact 1 tells us Group C is the largest demographic (29.2%)
+   - Fact 2 mentions Group B in relation to reading scores (though the phrasing "accounts for 2.18% of the reading score" is unclear)
+   - Fact 3 indicates math and reading scores are strongly correlated (0.81)
 
-Step 3: Generalizing Pattern From Previous Step
-Supporting_fact_3: "There is a strong relationship between math score and reading score, with pearson correlation coefficient of 0.81."
-Question_3: "How is math score correlated to reading score?"
-Action_3: "Create a scatter chart to show the correlation of math score and reading score."
-Finding_3: "There is a strong relationship between math score and reading score, suggesting that students usually both have good math and writing score."
-
-Step 4: Conclusion Interrogative Sentence
-Conclusion: "Are race/ethnicity groups B has better performance?""
-The answer is yes, aligned with the given pattern "group b has better performance in both math score and writing score.".
+3. Creating the high-level question:
+   I need a question that would lead to comparing performance across demographic groups. The most direct approach would be:"How do academic performance metrics compare across different race/ethnicity groups?"
 [/Example]
 
-Here is the interesting data pattern, corresponding supporting data facts, and columns name you should only used to raise questions:\n\n
+[/Instructions] 
+- DO NOT rewrite or shorten data pattern.
+- Raise ONE high-level question that is easy to transform into visualization chart.
+- The high-level question CANNOT be too abstract. 
+- The visualization chart generated from the high-level question you raise should align with data pattern.
+- Do not raise the high-level question related to simple data statistics (e.g., What is the maximum sales revenue of the "Fashion"?).
+- The high-level question should ONLY contain the GIVEN COLUMN NAMES rather than unseen variables.
+- DO NOT use more than THREE column names in the question.
+- The high-level question MUST BE WITHIN 15 WORDS.
+- The "Action" is detailed and straightforward statements to transform the high-level question into visualization chart.
+- The answer of the high-level question SHOULD be the given data pattern.
+
+[/Instructions] 
+
+Here is the interesting data pattern, corresponding supporting data facts, and columns name you should only use for creating questions:\n\n
 Pattern:\n\n{pattern_1}\n\n
 Supporting Data Facts:\n\n 1.{pattern_1_fact_1}\n\n 2.{pattern_1_fact_2}\n\n 3.{pattern_1_fact_3}\n\n 
 Column Names:\n\n{columns_set_1}\n\n
 Here the information for enhancing your exoloration:\n\n{knowledgebase}\n\n.
 
-[/Instructions] 
-- DO NOT rewrite or shorten data pattern and supporting data facts.
-- Raise three questions that is easy to transform into visualization chart for each supporting data fact.
-- The visualization chart generated from the questions you raise should align with each supporting data fact.
-- Do not use questions related to simple data statistics (e.g., What is the maximum sales revenue of the "Fashion"?).
-- The three questions should ONLY contain the GIVEN COLUMN NAMES rather than unseen variables.
-- The three questions should be relevant and structured in a three-layered concept, diving deeper into specific topic.
-- Do NOT raise identical or similar questions.
-- Ensure the three questions guide a smooth and coherent EDA process.
-- These three questions MUST BE WITHIN 15 WORDS.
-- The "Action" is simple and straightforward statements to transform question into visualization chart.
-- Conclude this exploratory data analysis iteration with a single interrogative sentence.
-- The answer of interrogative sentence SHOULD be the given data pattern.
-- ALWAYS fill interrogative sentence in "conclusion".
-- The interrogative sentence MUST BE WITHIN 10 WORDS.
-[/Instructions] 
-
-Your response should include THREE EDA iterations for each data pattern.
 YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
 
 

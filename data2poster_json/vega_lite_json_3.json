@@ -2,14 +2,17 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
     "axis": {
-      "gridColor": "#FFD7D1",
       "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "orient": "top",
       "titleFontSize": 14
     },
     "title": {
       "anchor": "start",
-      "color": "#D8E2DC",
-      "fontSize": 16
+      "fontSize": 18
     },
     "view": {
       "continuousHeight": 300,
@@ -17,92 +20,1180 @@
     }
   },
   "data": {
-    "name": "data-faa70bdaeaaca745ce1381b2cdf18af2"
+    "name": "data-76e19ba3189977e3d8f11b0edc50aaed"
   },
   "datasets": {
-    "data-faa70bdaeaaca745ce1381b2cdf18af2": [
+    "data-76e19ba3189977e3d8f11b0edc50aaed": [
       {
-        "Avg_Sleep Duration": 8.0,
-        "Avg_Stress Level": 3.9
+        "Average": 7.111111111111111,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "accountant"
       },
       {
-        "Avg_Sleep Duration": 6.7,
-        "Avg_Stress Level": 4.5
+        "Average": 7.2,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "accountant"
       },
       {
-        "Avg_Sleep Duration": 7.1,
-        "Avg_Stress Level": 4.6
+        "Average": 8.2,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "doctor"
       },
       {
-        "Avg_Sleep Duration": 7.4,
-        "Avg_Stress Level": 5.1
+        "Average": 6.934782608695652,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "doctor"
       },
       {
-        "Avg_Sleep Duration": 7.1,
-        "Avg_Stress Level": 5.5
+        "Average": 8.425,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "engineer"
       },
       {
-        "Avg_Sleep Duration": 6.8,
-        "Avg_Stress Level": 6.0
+        "Average": 7.535483870967742,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "engineer"
       },
       {
-        "Avg_Sleep Duration": 7.0,
-        "Avg_Stress Level": 6.7
+        "Average": 7.15,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "lawyer"
       },
       {
-        "Avg_Sleep Duration": 6.0,
-        "Avg_Stress Level": 6.8
+        "Average": 7.4222222222222225,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "lawyer"
       },
       {
-        "Avg_Sleep Duration": 6.4,
-        "Avg_Stress Level": 7.0
+        "Average": 6.9,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "manager"
+      },
+      {
+        "Average": 7.0630136986301375,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "nurse"
+      },
+      {
+        "Average": 5.9,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "sales representative"
+      },
+      {
+        "Average": 6.403125,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "salesperson"
+      },
+      {
+        "Average": 6.0,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "scientist"
+      },
+      {
+        "Average": 6.75,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "software engineer"
+      },
+      {
+        "Average": 6.7057142857142855,
+        "Gender": "female",
+        "Measure": "Sleep Duration",
+        "Occupation": "teacher"
+      },
+      {
+        "Average": 6.58,
+        "Gender": "male",
+        "Measure": "Sleep Duration",
+        "Occupation": "teacher"
+      },
+      {
+        "Average": 4.555555555555555,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "accountant"
+      },
+      {
+        "Average": 6.0,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "accountant"
+      },
+      {
+        "Average": 3.0,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "doctor"
+      },
+      {
+        "Average": 6.840579710144928,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "doctor"
+      },
+      {
+        "Average": 3.0,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "engineer"
+      },
+      {
+        "Average": 4.806451612903226,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "engineer"
+      },
+      {
+        "Average": 5.5,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "lawyer"
+      },
+      {
+        "Average": 5.044444444444444,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "lawyer"
+      },
+      {
+        "Average": 5.0,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "manager"
+      },
+      {
+        "Average": 5.5479452054794525,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "nurse"
+      },
+      {
+        "Average": 8.0,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "sales representative"
+      },
+      {
+        "Average": 7.0,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "salesperson"
+      },
+      {
+        "Average": 7.0,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "scientist"
+      },
+      {
+        "Average": 6.0,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "software engineer"
+      },
+      {
+        "Average": 4.285714285714286,
+        "Gender": "female",
+        "Measure": "Stress Level",
+        "Occupation": "teacher"
+      },
+      {
+        "Average": 6.2,
+        "Gender": "male",
+        "Measure": "Stress Level",
+        "Occupation": "teacher"
+      },
+      {
+        "Average": 7.888888888888889,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "accountant"
+      },
+      {
+        "Average": 8.0,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "accountant"
+      },
+      {
+        "Average": 9.0,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "doctor"
+      },
+      {
+        "Average": 6.579710144927536,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "doctor"
+      },
+      {
+        "Average": 9.0,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "engineer"
+      },
+      {
+        "Average": 7.806451612903226,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "engineer"
+      },
+      {
+        "Average": 7.0,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "lawyer"
+      },
+      {
+        "Average": 7.933333333333334,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "lawyer"
+      },
+      {
+        "Average": 7.0,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "manager"
+      },
+      {
+        "Average": 7.36986301369863,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "nurse"
+      },
+      {
+        "Average": 4.0,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "sales representative"
+      },
+      {
+        "Average": 6.0,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "salesperson"
+      },
+      {
+        "Average": 5.0,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "scientist"
+      },
+      {
+        "Average": 6.5,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "software engineer"
+      },
+      {
+        "Average": 7.114285714285714,
+        "Gender": "female",
+        "Measure": "Quality of Sleep",
+        "Occupation": "teacher"
+      },
+      {
+        "Average": 6.0,
+        "Gender": "male",
+        "Measure": "Quality of Sleep",
+        "Occupation": "teacher"
       }
     ]
   },
-  "encoding": {
-    "tooltip": [
-      {
-        "field": "Avg_Stress Level",
-        "title": "Avg Stress Level",
-        "type": "quantitative"
+  "vconcat": [
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
       },
-      {
-        "aggregate": "mean",
-        "field": "Avg_Sleep Duration",
-        "title": "Avg Sleep Duration",
-        "type": "quantitative"
-      }
-    ],
-    "x": {
-      "field": "Avg_Stress Level",
-      "scale": {
-        "domain": [
-          3.9,
-          7.0
-        ]
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'accountant')"
+          }
+        ],
+        "width": 130
       },
-      "title": "Avg Stress Level",
-      "type": "quantitative"
+      "title": "accountant"
     },
-    "y": {
-      "aggregate": "mean",
-      "field": "Avg_Sleep Duration",
-      "scale": {
-        "domain": [
-          6.0,
-          8.0
-        ]
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
       },
-      "title": "Avg Sleep Duration",
-      "type": "quantitative"
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'doctor')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "doctor"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'engineer')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "engineer"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'lawyer')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "lawyer"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'manager')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "manager"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'nurse')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "nurse"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'sales representative')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "sales representative"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'salesperson')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "salesperson"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'scientist')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "scientist"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'software engineer')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "software engineer"
+    },
+    {
+      "columns": 3,
+      "facet": {
+        "field": "Measure",
+        "header": {
+          "labelFontSize": 14,
+          "titleFontSize": 16
+        },
+        "title": "Measure",
+        "type": "nominal"
+      },
+      "spec": {
+        "encoding": {
+          "color": {
+            "field": "Gender",
+            "legend": {
+              "title": "Gender"
+            },
+            "scale": {
+              "domain": [
+                "Male",
+                "Female"
+              ],
+              "range": [
+                "#52B69A",
+                "#1E6091"
+              ]
+            },
+            "type": "nominal"
+          },
+          "tooltip": [
+            {
+              "field": "Occupation",
+              "title": "Occupation",
+              "type": "nominal"
+            },
+            {
+              "field": "Gender",
+              "title": "Gender",
+              "type": "nominal"
+            },
+            {
+              "field": "Measure",
+              "title": "Measure",
+              "type": "nominal"
+            },
+            {
+              "field": "Average",
+              "format": ".2f",
+              "title": "Average",
+              "type": "quantitative"
+            }
+          ],
+          "x": {
+            "axis": {
+              "labelAngle": 0
+            },
+            "field": "Gender",
+            "title": "Gender",
+            "type": "nominal"
+          },
+          "y": {
+            "field": "Average",
+            "title": "Average Value",
+            "type": "quantitative"
+          }
+        },
+        "height": 350,
+        "mark": {
+          "type": "bar"
+        },
+        "transform": [
+          {
+            "filter": "(datum.Occupation === 'teacher')"
+          }
+        ],
+        "width": 130
+      },
+      "title": "teacher"
     }
-  },
-  "height": 400,
-  "mark": {
-    "color": "#FEC89A",
-    "size": 100,
-    "type": "point"
-  },
-  "title": "Correlation between Avg Sleep Duration and Avg Stress Level",
-  "width": 600
+  ]
 }

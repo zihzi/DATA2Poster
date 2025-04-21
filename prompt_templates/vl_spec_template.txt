@@ -1,8 +1,0 @@
-"chart":"#same as direction",
-"label":"mark #same as direction data encoding x <stub> # only modify this section y  <stub> # only modify this section",
-"column":"<stub> # only modify this section",
-"filter":"<stub> # only modify this section",
-"aggregate":" <stub> # only modify this section",
-"mark":"#same as direction",
-"encoding":"x= <stub> # only modify this section, y= <stub> # only modify this section, color= <stub> # only modify this section",
-"sort":"#same as direction"

@@ -3,7 +3,9 @@ import pandas as pd
 import re
 import base64
 import json
+import itertools
 import altair as alt
+from collections import Counter
 from operator import itemgetter
 from dataclasses import asdict
 from nl4dv import NL4DV
@@ -42,12 +44,14 @@ if "datasets" not in st.session_state:
     # Preload datasets
     datasets["Sleep_health_and_lifestyle"] = pd.read_csv("data/Sleep_health_and_lifestyle.csv")
     datasets["movies"] = pd.read_csv("data/movies.csv")
-    datasets["social_media_usage"] = pd.read_csv("data/social_media_usage.csv")
-    datasets["penguins"] = pd.read_csv("data/penguins.csv") #NO vis_corpus
     datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
-    datasets["Cleaned_Car_sales"] = pd.read_csv("data/Cleaned_Car_sales.csv") #NO vis_corpus
+    datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
     datasets["Iris"] = pd.read_csv("data/Iris.csv")
-   
+    datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
+    datasets["Employee"] = pd.read_csv("data/Employee.csv")
+    datasets["Housing"] = pd.read_csv("data/Housing.csv")
+    datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
+    datasets["UberDataset"] = pd.read_csv("data/UberDataset.csv")
     
     st.session_state["datasets"] = datasets
 else:
@@ -112,12 +116,101 @@ try_true = st.button("Try it out!")
 nl4dv_instance = NL4DV(data_value = datasets[chosen_dataset])
 summary = nl4dv_instance.get_metadata()
 
+# Get 'CNC', 'TNC', 'TNT', 'CNN', 'TNN' for calculating data facts
+
+
+def organize_by_dtype_combinations(data, desired_combinations):
+    """
+    Organize data by dtype combinations, showing columns in the dict for each combination
+    with column names as keys and their dtypes as values.
+    
+    This implementation prevents duplicates by tracking combinations via frozensets.
+    
+    Args:
+        data: List of column objects with properties including dtype
+        desired_combinations: List of dtype pattern strings (e.g., 'CNC', 'CNN')
+        
+    Returns:
+        List of combination objects with unique combinations
+    """
+    # Get all columns by their data types
+    dtype_columns = {}
+    for item in data:
+        dtype = item["properties"]["dtype"]
+        if dtype not in dtype_columns:
+            dtype_columns[dtype] = []
+        dtype_columns[dtype].append(item["column"])
+    
+    # Count occurrences of each dtype in each pattern
+    pattern_dtype_counts = {}
+    for pattern in desired_combinations:
+        pattern_dtype_counts[pattern] = Counter(pattern)
+    
+    # Initialize results and track unique combinations
+    results = []
+    processed_combinations = set()
+    
+    # Generate all combinations for each pattern
+    for pattern in desired_combinations:
+        # Skip patterns with dtypes that don't exist in our data
+        valid_pattern = True
+        for dtype, count in pattern_dtype_counts[pattern].items():
+            if dtype not in dtype_columns or len(dtype_columns[dtype]) < count:
+                valid_pattern = False
+                break
+        
+        if not valid_pattern:
+            continue
+        
+        # For each dtype, get all possible combinations of the required count
+        dtype_combinations = {}
+        for dtype, count in pattern_dtype_counts[pattern].items():
+            dtype_combinations[dtype] = list(itertools.combinations(dtype_columns[dtype], count))
+        
+        # Generate the Cartesian product of all dtype combinations
+        dtype_keys = list(dtype_combinations.keys())
+        
+        # Generate and process all combinations
+        for combo_parts in itertools.product(*[dtype_combinations[dtype] for dtype in dtype_keys]):
+            # Create a mapping of columns to dtypes
+            columns_dtype_mapping = {}
+            
+            # Iterate through the combination elements
+            for dtype_idx, columns_tuple in enumerate(combo_parts):
+                dtype = dtype_keys[dtype_idx]
+                
+                # Add each column with its dtype
+                for col in columns_tuple:
+                    columns_dtype_mapping[col] = dtype
+            
+            # Create a unique key for this combination to detect duplicates
+            combo_key = frozenset(columns_dtype_mapping.items())
+            
+            # Only add if we haven't seen this exact mapping before
+            if combo_key not in processed_combinations:
+                processed_combinations.add(combo_key)
+                results.append({
+                    "combinations": pattern,
+                    "columns_dtype_mapping": columns_dtype_mapping
+                })
+    
+    return results
+
+# Remove duplicates data facts
+def remove_duplicates(strings: list) -> list:
+    seen = set()
+    unique = []
+    for s in strings:
+        if s not in seen:
+            seen.add(s)
+            unique.append(s)
+    return unique
 # load a prompt from a file
 def load_prompt_from_file(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
         return file.read()
     
-# preprocess the code generated by gpt-4o-mini
+# preprocess the code generated by GPT
 def preprocess_json(code: str, count: str) -> str:
     """Preprocess code to remove any preamble and explanation text"""
 
@@ -166,8 +259,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     
     if api_keys_entered:
-        # use gpt-4o-mini as llm
-        llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", temperature=0,api_key = openai_key)
+        # use GPT as llm
+        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openai_key)
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key)
         # Initial stage to generate facts and questions by user-selected column
@@ -180,10 +273,13 @@ if try_true or (st.session_state["bt_try"] == "T"):
             # column_des_prompt_template = """
             # You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
             # Here are summary of the dataset:\n\n{chosen_data_schema}\n\n
+            # Describe this dataset to a user the structure of the table and the data it contains.
             # Explain these column names WITHOUT mention the statistical value given by the summary in natural language description that can help the user understand the dataset better.
             # Please do not add any extra prose to your response.
             # You should list reponse as below format:\n\n
-            # \"Overview of Columns(IN BOLD):\n\n
+            # "\"Data Description(IN BOLD):\n\n
+            #   "Your description here."
+            #   Columns Overview(IN BOLD):\n\n
             #   1.Column_Name: "Your description here."
 
             #   2.Column_Name: "Your description here."
@@ -216,167 +312,185 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.write(f'**Selected column:**', f'**{user_selected_column}**')
             elif selected_column: 
                 user_selected_column = selected_column
-            # Call gpt-4o-mini to select columns related to user-selected column in JSON format 
+            # Call GPT to select columns related to user-selected column in JSON format 
             if skip_true or selected_column:
-                user_select_column_template = load_prompt_from_file("prompt_templates/user_select_column.txt")       
-                prompt_column = PromptTemplate(
-                                            template=user_select_column_template,
-                                            input_variables=["user_selected_column", "chosen_dataset", "chosen_data_schema"],        
-                                )
-                with open("json_schema/column_json_schema.json", "r") as f:
-                    column_json_schema = json.load(f)
-                chain_column = prompt_column | llm.with_structured_output(column_json_schema)
-                columns_from_gpt = chain_column.invoke(input = {"user_selected_column":user_selected_column, "chosen_dataset":chosen_dataset, "chosen_data_schema":chosen_data_schema})
+                # user_select_column_template = load_prompt_from_file("prompt_templates/user_select_column.txt")       
+                # prompt_column = PromptTemplate(
+                #                             template=user_select_column_template,
+                #                             input_variables=["user_selected_column", "chosen_dataset", "chosen_data_schema"],        
+                #                 )
+                # with open("json_schema/column_json_schema.json", "r") as f:
+                #     column_json_schema = json.load(f)
+                # chain_column = prompt_column | llm.with_structured_output(column_json_schema)
+                # columns_from_gpt = chain_column.invoke(input = {"user_selected_column":user_selected_column, "chosen_dataset":chosen_dataset, "chosen_data_schema":chosen_data_schema})
                 
-                # log the selected column and related columns
-                st.subheader(f"related column set:",divider = True)
-                for i in range(1,3):
-                    st.write("\"", f'**{columns_from_gpt[f"related_column_{i}"]["name"]}**',"\"")
-                    st.write(f'**Reason:**', f'**{columns_from_gpt[f"related_column_{i}"]["reason"]}**')
+                # # log the selected column and related columns
+                # st.subheader(f"related column set:",divider = True)
+                # for i in range(1,3):
+                #     st.write("\"", f'**{columns_from_gpt[f"related_column_{i}"]["name"]}**',"\"")
+                #     st.write(f'**Reason:**', f'**{columns_from_gpt[f"related_column_{i}"]["reason"]}**')
                         
-                # Extract dataFrame by user_selected_column and the related columns from gpt 
-                related_column = [columns_from_gpt["related_column_1"]["name"],columns_from_gpt["related_column_2"]["name"]]
-                df_for_cal = datasets[chosen_dataset][[user_selected_column] + related_column]   
+                # # Extract dataFrame by user_selected_column and the related columns from gpt 
+                # related_column = [columns_from_gpt["related_column_1"]["name"],columns_from_gpt["related_column_2"]["name"]]
+                # df_for_cal = datasets[chosen_dataset][[user_selected_column] + related_column]   
 
-                # Produce columns to generate fact list
-                column_list_for_Q = []
+                # # Produce columns to generate fact list
+                # column_list_for_Q = []
                 facts_list = []
-                columns_dic = {columns_from_gpt["selected_column"]["name"]: columns_from_gpt["selected_column"]["dtype"]}
-                for i in range(1,3):
-                    columns_dic[columns_from_gpt[f"related_column_{i}"]["name"]] = columns_from_gpt[f"related_column_{i}"]["dtype"]         
-                breakdown = [col for col, dtype in columns_dic.items() if dtype == "C" or dtype == "T"]   
-                measure = [col for col, dtype in columns_dic.items() if dtype == "N"]
-                column_list_for_Q.append(columns_dic)
-                st.write("Columns for generating facts:",column_list_for_Q)
+                # columns_dic = {columns_from_gpt["selected_column"]["name"]: columns_from_gpt["selected_column"]["dtype"]}
+                # for i in range(1,3):
+                #     columns_dic[columns_from_gpt[f"related_column_{i}"]["name"]] = columns_from_gpt[f"related_column_{i}"]["dtype"]         
+                # breakdown = [col for col, dtype in columns_dic.items() if dtype == "C" or dtype == "T"]   
+                # measure = [col for col, dtype in columns_dic.items() if dtype == "N"]
+                # column_list_for_Q.append(columns_dic)
+                # st.write("Columns for generating facts:",column_list_for_Q)
+                # TEST: USE ALL COLUMNS TO GENERATE FACTS#####################################################################
+                desired_combinations = ['CNC', 'TNC', 'TNT', 'CNN', 'TNN']
+
+                # Get and print results
+                output = organize_by_dtype_combinations(chosen_data_schema, desired_combinations)
+
                 # Categorization_facts ? to be fixed, not suitable for dataset type
-                for col, dtype in columns_dic.items():
-                    if dtype == "C":
-                        ratio = round(df_for_cal[col].value_counts()[0]/len(df_for_cal),3)*100
-                        focus = df_for_cal[col].value_counts().idxmax()
-                        facts_list.append({"content":f"In {col}, {focus} accounts for the largest proportion of records({ratio}%).","score":1})
+                for item in output:
+                    for key, value in item["columns_dtype_mapping"].items():
+                        if value == "C":
+                            ratio = round(datasets[chosen_dataset][key].value_counts()[0]/len(datasets[chosen_dataset]),3)*100
+                            focus = datasets[chosen_dataset][key].value_counts().idxmax()
+                            facts_list.append({"content":f"In {key}, {focus} accounts for the largest proportion of records({ratio}%).","score":1})
+                
+                for item in output:
+                    breakdown = []  
+                    measure = [] 
+                    for key, value in item["columns_dtype_mapping"].items():
+                        if value == "C" or value == "T":
+                            breakdown.append(key)
+                        else:
+                            measure.append(key)
                     
-                # list all possible combinations of breakdown and measure to generate facts
-                if len(breakdown) == 2: 
-                    if columns_dic[breakdown[0]] == "C":
-                        facts_1 = generate_facts(
-                                        dataset=Path(f"data/{chosen_dataset}.csv"),
-                                        breakdown=breakdown[0],
-                                        measure=measure[0],
-                                        series=breakdown[1],
-                                        breakdown_type="C",
-                                        measure_type="N",
-                                        with_vis=False,
-                                    )
-                        for fact in facts_1:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        facts_2 = generate_facts(
-                                        dataset=Path(f"data/{chosen_dataset}.csv"),
-                                        breakdown=breakdown[0],
-                                        measure=measure[0],
-                                        series=None,
-                                        breakdown_type="C",
-                                        measure_type="N",
-                                        with_vis=False,
-                                    )
-                        for fact in facts_2:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
-                    elif columns_dic[breakdown[0]] == "T":
-                        facts_1 = generate_facts(
-                                        dataset=Path(f"data/{chosen_dataset}.csv"),
-                                        breakdown=breakdown[0],
-                                        measure=measure[0],
-                                        series=breakdown[1],
-                                        breakdown_type="T",
-                                        measure_type="N",
-                                        with_vis=False,
-                                    )
-                        for fact in facts_1:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        facts_2 = generate_facts(
-                                        dataset=Path(f"data/{chosen_dataset}.csv"),
-                                        breakdown=breakdown[0],
-                                        measure=measure[0],
-                                        series=None,
-                                        breakdown_type="T",
-                                        measure_type="N",
-                                        with_vis=False,
-                                    )
-                        for fact in facts_2:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                                        
-                if len(measure) == 2:
-                    if columns_dic[breakdown[0]] == "C":
-                        facts_1 = generate_facts(
-                            dataset=Path(f"data/{chosen_dataset}.csv"),
-                            breakdown=breakdown[0],
-                            measure=measure[0],
-                            measure2=measure[1],
-                            series=None,
-                            breakdown_type="C",
-                            measure_type="NxN",
-                            with_vis=False,
-                        )
-                        for fact in facts_1:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        facts_2 = generate_facts(
-                                dataset=Path(f"data/{chosen_dataset}.csv"),
-                                breakdown=breakdown[0],
-                                measure=measure[0],
-                                series=None,
-                                breakdown_type="C",
-                                measure_type="N",
-                                with_vis=False,
-                            )
-                        for fact in facts_2:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        facts_3 = generate_facts(
-                                dataset=Path(f"data/{chosen_dataset}.csv"),
-                                breakdown=breakdown[0],
-                                measure=measure[1],
-                                series=None,
-                                breakdown_type="C",
-                                measure_type="N",
-                                with_vis=False,
-                            )
-                        for fact in facts_3:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                    elif columns_dic[breakdown[0]] == "T": 
-                        facts_1 = generate_facts(
+                    # list all possible combinations of breakdown and measure to generate facts
+                    if len(breakdown) == 2: 
+                        if item["columns_dtype_mapping"][breakdown[0]] == "C":
+                            facts_1 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=breakdown[1],
+                                            breakdown_type="C",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=None,
+                                            breakdown_type="C",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
+                        elif item["columns_dtype_mapping"][breakdown[0]] == "T":
+                            facts_1 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=breakdown[1],
+                                            breakdown_type="T",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                                            breakdown=breakdown[0],
+                                            measure=measure[0],
+                                            series=None,
+                                            breakdown_type="T",
+                                            measure_type="N",
+                                            with_vis=False,
+                                        )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                                            
+                    if len(measure) == 2:
+                        if item["columns_dtype_mapping"][breakdown[0]] == "C":
+                            facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown[0],
                                 measure=measure[0],
                                 measure2=measure[1],
                                 series=None,
-                                breakdown_type="T",
+                                breakdown_type="C",
                                 measure_type="NxN",
                                 with_vis=False,
                             )
-                        for fact in facts_1:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
-                        facts_2 = generate_facts(
-                                dataset=Path(f"data/{chosen_dataset}.csv"),
-                                breakdown=breakdown[0],
-                                measure=measure[0],
-                                series=None,
-                                breakdown_type="T",
-                                measure_type="N",
-                                with_vis=False,
-                            )
-                        for fact in facts_2:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        facts_3 = generate_facts(
-                                dataset=Path(f"data/{chosen_dataset}.csv"),
-                                breakdown=breakdown[0],
-                                measure=measure[1],
-                                series=None,
-                                breakdown_type="T",
-                                measure_type="N",
-                                with_vis=False,
-                            )
-                        for fact in facts_3:
-                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_2 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[0],
+                                    series=None,
+                                    breakdown_type="C",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_3 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[1],
+                                    series=None,
+                                    breakdown_type="C",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_3:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        elif item["columns_dtype_mapping"][breakdown[0]] == "T": 
+                            facts_1 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[0],
+                                    measure2=measure[1],
+                                    series=None,
+                                    breakdown_type="T",
+                                    measure_type="NxN",
+                                    with_vis=False,
+                                )
+                            for fact in facts_1:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
+                            facts_2 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[0],
+                                    series=None,
+                                    breakdown_type="T",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_2:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                            facts_3 = generate_facts(
+                                    dataset=Path(f"data/{chosen_dataset}.csv"),
+                                    breakdown=breakdown[0],
+                                    measure=measure[1],
+                                    series=None,
+                                    breakdown_type="T",
+                                    measure_type="N",
+                                    with_vis=False,
+                                )
+                            for fact in facts_3:
+                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
                 if "fact" in st.session_state:
                     st.session_state["fact"] = []
+                # Remove duplicates from facts_list
+                contents = [fact["content"] for fact in facts_list]
                 facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)
                 seen = set()
                 for item in facts_list[:200]:
@@ -400,38 +514,51 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.session_state["vectorstore"] = vectorstore
                 
                 # Create intermediate output as knowledge
-                knowledge = self_augmented_knowledge(openai_key, chosen_dataset, column_list_for_Q, st.session_state["fact"])
+                knowledge = self_augmented_knowledge(openai_key, chosen_dataset, list(head),user_selected_column, st.session_state["fact"])
                 st.write("KnowledgeBase:",knowledge)
 
                 # Combine facts into interesting patterns
                 llm_pattern_template = load_prompt_from_file("prompt_templates/fact_idea_prompt.txt")
                 prompt_pattern = PromptTemplate(
                                         template=llm_pattern_template,
-                                        input_variables=["knowledgebase","facts"],
+                                        input_variables=["knowledgebase","facts","user_selected_column"],
 
                             )
                 with open("json_schema/fact_idea_schema.json", "r") as f:
                     pattern_json_schema = json.load(f)
                 chain_pattern = prompt_pattern | llm.with_structured_output(pattern_json_schema)
-                patterns_from_gpt = chain_pattern.invoke(input = {"knowledgebase":knowledge,"facts":st.session_state["fact"]})
+                patterns_from_gpt = chain_pattern.invoke(input = {"knowledgebase":knowledge,"facts":st.session_state["fact"],"user_selected_column":user_selected_column})
                 st.write("Interesting Patterns:",patterns_from_gpt)
 
-                
+                question_list=[]
+                vis_q=[]
+                supported_fact= []
                 # Generate poster question based on interesting patterns
-                support_fact_list = [patterns_from_gpt["supporting_facts"][0],patterns_from_gpt["supporting_facts"][1],patterns_from_gpt["supporting_facts"][2]]  
-                
-                llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
-                prompt_llm_Q = PromptTemplate(
-                                        template=llm_Q_template,
-                                        input_variables=["pattern_1","pattern_1_fact_1","pattern_1_fact_2","pattern_1_fact_3","columns_set_1","knowledgebase"],
+                for pattern in patterns_from_gpt:
+                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
+                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
+                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
+                    support_fact_list = [patterns_from_gpt[pattern]["supporting_facts"][0],patterns_from_gpt[pattern]["supporting_facts"][1],patterns_from_gpt[pattern]["supporting_facts"][2]]  
+                    vis_q.append(patterns_from_gpt[pattern]["extracted_pattern"])
+                    llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
+                    prompt_llm_Q = PromptTemplate(
+                                            template=llm_Q_template,
+                                            input_variables=["pattern_1","pattern_1_fact_1","pattern_1_fact_2","pattern_1_fact_3","columns_set_1","knowledgebase"],
 
-                            )
-                with open ("json_schema/llm_question_schema.json", "r") as f:
-                    llm_Q_schema = json.load(f)
-                llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
-                llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt["extracted_pattern"],"pattern_1_fact_1":support_fact_list[0],"pattern_1_fact_2":support_fact_list[1],"pattern_1_fact_3":support_fact_list[2],"columns_set_1":column_list_for_Q[0],"knowledgebase":knowledge})
-                st.write("Question:",llm_Q_from_gpt)
-                
+                                )
+                    with open ("json_schema/llm_question_schema.json", "r") as f:
+                        llm_Q_schema = json.load(f)
+                    llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
+                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt[pattern]["extracted_pattern"],"pattern_1_fact_1":support_fact_list[0],"pattern_1_fact_2":support_fact_list[1],"pattern_1_fact_3":support_fact_list[2],"columns_set_1":list(head),"knowledgebase":knowledge})
+                    st.write(llm_Q_from_gpt)
+                    question_list.append(llm_Q_from_gpt["questions"]["question"]+llm_Q_from_gpt["questions"]["action"])
+                poster_Q_prompt = PromptTemplate(
+                template="You are a senior data analyst. You are writing a poster title in question format to present the data analysis results. This poster want to convey the following insights {vis_q}.Think step by step to raise a question that can be covered by the insights. Do not use columnar formulas. ONLY respond with the question.",
+                input_variables=["vis_q"],
+                )
+                poster_Q_chain = poster_Q_prompt | llm
+                poster_Q = poster_Q_chain.invoke(input ={"vis_q": vis_q})
+                    
                 # # log the llm question
                 # def log_response_to_json(knowledgebase, response):
                 #     log_data = {"knowkedgebase": knowledgebase, "response": response}
@@ -442,10 +569,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # # Save log
                 # log_response_to_json(knowledge, llm_Q_from_gpt)
 
-                    
-                questions_for_poster = [llm_Q_from_gpt["conclusion"]]
-                supported_fact = [llm_Q_from_gpt["questions"]["fact_1"],llm_Q_from_gpt["questions"]["fact_2"],llm_Q_from_gpt["questions"]["fact_3"]]
-                Q_for_vis =[llm_Q_from_gpt["questions"]["question_1"],llm_Q_from_gpt["questions"]["question_2"],llm_Q_from_gpt["questions"]["question_3"]]
+                st.write(question_list)
+                questions_for_poster = [poster_Q.content]
+                # supported_fact = [llm_Q_from_gpt["questions"]["fact_1"],llm_Q_from_gpt["questions"]["fact_2"],llm_Q_from_gpt["questions"]["fact_3"]]
+                Q_for_vis = question_list
                 st.session_state["Q_from_gpt"] = {"supported_fact":supported_fact,"questions":Q_for_vis}
                 st.session_state["questions_for_poster"] = questions_for_poster
                 st.write("Select a poster question:")
@@ -461,7 +588,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             q_for_nl4DV = st.session_state["Q_from_gpt"]["questions"]
            
             code_template = load_prompt_from_file("prompt_templates/code_template.txt")
-            # Call gpt-4o-mini to generate vlspec
+            # Call GPT to generate vlspec
             insight_list = []
             chart_des_list = []
             idx=1
@@ -483,7 +610,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 chart_test_chain = prompt_chart_test | llm
                 chart_code = chart_test_chain.invoke(input = {"query":query,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
                 print(chart_code.content)
-                # Call gpt-4o-mini to generate vis code
+                # Call GPT to generate vis code
                 print("\n🟢 Step 1: Generating Initial Code...\n")
                 # initial_code = agent_1_generate_code(query, datasets[chosen_dataset], nl4DV_json, nl4DV_json["visList"][0]["vlSpec"], code_template, expanded_query, openai_key)
                 # print(initial_code)
@@ -531,37 +658,52 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 with open(f"DATA2Poster_json/vega_lite_json_{idx}.json", "r") as f:
                         chart = json.load(f)
                         # json for chart_description
-                        if "layer" in chart:
-                            chart_type = chart["layer"][0]["mark"]["type"]
-                            if "title" in chart["layer"][0]:
-                                chart_title = chart["layer"][0]["title"]
-                            else:
-                                chart_title = chart["title"]
-                            x_field = "Title: " + chart["layer"][0]["encoding"]["x"]["title"] + " Type: " + chart["layer"][0]["encoding"]["x"]["type"]
-                            y_field = "Title: " + chart["layer"][0]["encoding"]["y"]["title"] + " Type: " + chart["layer"][0]["encoding"]["y"]["type"]
-                        elif "hconcat" in chart:
-                            chart_type = chart["hconcat"][0]["mark"]["type"]
-                            chart_title = chart["hconcat"][0]["title"]
-                            x_field = "Title: " + chart["hconcat"][0]["encoding"]["x"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["x"]["type"]
-                            y_field = "Title: " + chart["hconcat"][0]["encoding"]["y"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["y"]["type"]
-                        else:
-                            chart_type = chart["mark"]["type"]
-                            if "title" in chart:
-                                chart_title = chart["title"]
-                            if "x" in chart["encoding"]:
-                                if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
-                                    x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                                else:
-                                    x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                            if "y" in chart["encoding"]:
-                                if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
-                                    y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
-                                else:
-                                    y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
-                            # It's Pie Chart
-                            else:
-                                x_field = "Title: " + chart["encoding"]["color"]["field"] + " Type: " + chart["encoding"]["color"]["type"]
-                                y_field = "Title: " + chart["encoding"]["theta"]["field"] + " Type: " + chart["encoding"]["theta"]["type"]
+                        # if "layer" in chart:
+                        #     chart_type = chart["layer"][0]["mark"]["type"]
+                        #     if "title" in chart["layer"][0]:
+                        #         chart_title = chart["layer"][0]["title"]
+                        #     else:
+                        #         chart_title = chart["title"]
+                        #     x_field = "Title: " + chart["layer"][0]["encoding"]["x"]["title"] + " Type: " + chart["layer"][0]["encoding"]["x"]["type"]
+                        #     y_field = "Title: " + chart["layer"][0]["encoding"]["y"]["title"] + " Type: " + chart["layer"][0]["encoding"]["y"]["type"]
+                        # elif "hconcat" in chart:
+                        #     if "spec" in chart["hconcat"][0]:
+                        #         if "layer" in chart["hconcat"][0]["spec"]:
+                        #             chart_type = chart["hconcat"][0]["spec"]["layer"][0]["mark"]["type"]                             
+                        #             chart_title = chart["spec"]["title"]
+                        #         else:   
+                        #             chart_type = chart["hconcat"][0]["spec"]["mark"]["type"]
+                        #             chart_title = chart["hconcat"][0]["spec"]["title"]
+                        #     else:
+                        #         chart_type = chart["hconcat"][0]["mark"]["type"]
+                        #         chart_title = chart["hconcat"][0]["title"]
+                        #         x_field = "Title: " + chart["hconcat"][0]["encoding"]["x"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["x"]["type"]
+                        #         y_field = "Title: " + chart["hconcat"][0]["encoding"]["y"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["y"]["type"]
+                        # elif "spec" in chart:
+                        #     if "layer" in chart["spec"]:
+                        #         chart_type = chart["spec"]["layer"][0]["mark"]["type"]
+                        #         chart_title = chart["spec"]["title"]
+                        #     else:
+                        #         chart_type = chart["spec"]["mark"]["type"]
+                        #         chart_title = chart["spec"]["title"]
+                        # else:
+                        #     chart_type = chart["mark"]["type"]
+                        #     if "title" in chart:
+                        #         chart_title = chart["title"]
+                        #     if "x" in chart["encoding"]:
+                        #         if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
+                        #             x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                        #         else:
+                        #             x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
+                        #     if "y" in chart["encoding"]:
+                        #         if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
+                        #             y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                        #         else:
+                        #             y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
+                        #     # It's Pie Chart
+                        #     else:
+                        #         x_field = "Title: " + chart["encoding"]["color"]["field"] + " Type: " + chart["encoding"]["color"]["type"]
+                        #         y_field = "Title: " + chart["encoding"]["theta"]["field"] + " Type: " + chart["encoding"]["theta"]["type"]
                         for key in chart["datasets"]:
                             chart_data = chart["datasets"][key]
                             
@@ -574,7 +716,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             )
                 
                 chain_pattern = prompt_chart | llm
-                chart_des = chain_pattern.invoke(input = {"query":query,"chart_type":chart_type,"chart_title":chart_title,"x_field":x_field,"y_field":y_field,"chart_data":chart_data})
+                chart_des = chain_pattern.invoke(input = {"query":query,"chart_data":chart_data})
 
                 supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
 
@@ -583,7 +725,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
                 # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
                 
-                # call gpt-4o-mini to generate insight description
+                # call GPT to generate insight description
                 insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
                 insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
                 insight_prompt_input = PromptTemplate(
@@ -597,7 +739,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
                         ]
                     )
-                # insight_llm = ChatOpenAI(model_name="gpt-4o-mini-2024-07-18", api_key = openai_key, max_tokens=15)
+                
                 insight_chain = insight_prompt | llm
                 insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
                 insight_list.append(insight.content)

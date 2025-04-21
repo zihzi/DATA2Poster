@@ -9,7 +9,7 @@ from reportlab.platypus import Paragraph
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib import colors
 from reportlab.lib.colors import HexColor
-from text_generator import introduction, conclusion
+from text_generator import introduction, conclusion, improve_title
 
 
 
@@ -35,9 +35,12 @@ def create_pdf(dataset, q_for_nl4DV, title, chart_des_list, insight_list,  opena
 
     # Generate conclusion 
     text_conclusion = conclusion(title, chart_des_list , text_introduction, openai_key)
+
+    # Generate Title from conclusion
+    new_title = improve_title(text_conclusion, openai_key)
     
     # Title
-    p_title = Paragraph(title, ParagraphStyle(name='title', fontSize=32, fontName='Helvetica-Bold',leading=34, textColor=text_color))
+    p_title = Paragraph(new_title, ParagraphStyle(name='title', fontSize=32, fontName='Helvetica-Bold',leading=34, textColor=text_color))
     p_title.wrapOn(c, width/2,200)
     p_title.drawOn(c, width/2-10, height-200)
     

@@ -5,9 +5,9 @@
       "labelFontSize": 12,
       "titleFontSize": 14
     },
-    "title": {
-      "anchor": "start",
-      "fontSize": 16
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 13
     },
     "view": {
       "continuousHeight": 300,
@@ -15,116 +15,481 @@
     }
   },
   "data": {
-    "name": "data-12ad329858363e2d7b83bccf04ab9e70"
+    "name": "data-be1ce8835f4e4de6fbd8b8e477ce84ec"
   },
   "datasets": {
-    "data-12ad329858363e2d7b83bccf04ab9e70": [
+    "data-be1ce8835f4e4de6fbd8b8e477ce84ec": [
       {
-        "Avg_Sleep Duration": 7.1,
-        "Occupation": "accountant"
+        "Quality of Sleep": 3,
+        "Sleep Duration": 7.0,
+        "Stress Level": 2
       },
       {
-        "Avg_Sleep Duration": 7.0,
-        "Occupation": "doctor"
+        "Quality of Sleep": 4,
+        "Sleep Duration": 6.0,
+        "Stress Level": 3
       },
       {
-        "Avg_Sleep Duration": 8.0,
-        "Occupation": "engineer"
+        "Quality of Sleep": 5,
+        "Sleep Duration": 8.0,
+        "Stress Level": 1
       },
       {
-        "Avg_Sleep Duration": 7.4,
-        "Occupation": "lawyer"
+        "Quality of Sleep": 2,
+        "Sleep Duration": 5.0,
+        "Stress Level": 5
       },
       {
-        "Avg_Sleep Duration": 7.1,
-        "Occupation": "nurse"
+        "Quality of Sleep": 4,
+        "Sleep Duration": 7.0,
+        "Stress Level": 2
       },
       {
-        "Avg_Sleep Duration": 6.4,
-        "Occupation": "salesperson"
-      },
-      {
-        "Avg_Sleep Duration": 6.0,
-        "Occupation": "scientist"
-      },
-      {
-        "Avg_Sleep Duration": 6.8,
-        "Occupation": "software engineer"
-      },
-      {
-        "Avg_Sleep Duration": 6.7,
-        "Occupation": "teacher"
+        "Quality of Sleep": 3,
+        "Sleep Duration": 6.5,
+        "Stress Level": 4
       }
     ]
   },
-  "encoding": {
-    "color": {
-      "field": "Occupation",
-      "scale": {
-        "domain": [
-          "accountant",
-          "doctor",
-          "engineer",
-          "lawyer",
-          "nurse",
-          "salesperson",
-          "scientist",
-          "software engineer",
-          "teacher"
-        ],
-        "range": [
-          "#FEC89A",
-          "#FFD7D1",
-          "#D8E2DC",
-          "#FFE5D9",
-          "#FFD7BA"
-        ]
-      },
-      "type": "nominal"
-    },
-    "tooltip": [
-      {
-        "field": "Occupation",
-        "title": "Occupation",
-        "type": "nominal"
-      },
-      {
-        "aggregate": "mean",
-        "field": "Avg_Sleep Duration",
-        "title": "Average Sleep Duration (hours)",
-        "type": "quantitative"
-      }
-    ],
-    "x": {
-      "field": "Occupation",
-      "sort": "-y",
-      "title": "Occupation",
-      "type": "nominal"
-    },
-    "y": {
-      "aggregate": "mean",
-      "field": "Avg_Sleep Duration",
-      "title": "Average Sleep Duration (hours)",
-      "type": "quantitative"
-    }
-  },
-  "height": 400,
-  "mark": {
-    "type": "bar"
-  },
-  "params": [
+  "title": "Scatter Plot Matrix of Sleep Duration, Quality of Sleep, and Stress Level",
+  "vconcat": [
     {
-      "bind": "scales",
-      "name": "param_3",
-      "select": {
-        "encodings": [
-          "x",
-          "y"
-        ],
-        "type": "interval"
-      }
+      "hconcat": [
+        {
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "bin": {
+                "maxbins": 30
+              },
+              "field": "Sleep Duration",
+              "title": null,
+              "type": "quantitative"
+            },
+            "y": {
+              "aggregate": "count",
+              "title": null,
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "color": "#52B69A",
+            "opacity": 0.7,
+            "type": "bar"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Quality of Sleep",
+              "title": "Quality of Sleep",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Sleep Duration",
+              "title": "Sleep Duration",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Stress Level",
+              "title": "Stress Level",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Sleep Duration",
+              "title": "Sleep Duration",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Sleep Duration",
+              "title": "Sleep Duration",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Quality of Sleep",
+              "title": "Quality of Sleep",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "Quality of Sleep",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "bin": {
+                "maxbins": 30
+              },
+              "field": "Quality of Sleep",
+              "title": null,
+              "type": "quantitative"
+            },
+            "y": {
+              "aggregate": "count",
+              "title": null,
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "color": "#168AAD",
+            "opacity": 0.7,
+            "type": "bar"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Stress Level",
+              "title": "Stress Level",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Quality of Sleep",
+              "title": "Quality of Sleep",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        }
+      ]
+    },
+    {
+      "hconcat": [
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Sleep Duration",
+              "title": "Sleep Duration",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Stress Level",
+              "title": "Stress Level",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "color": {
+              "field": "Quality of Sleep",
+              "legend": {
+                "title": "Quality of Sleep"
+              },
+              "scale": {
+                "domain": [
+                  2.0,
+                  5.0
+                ],
+                "range": [
+                  "#52B69A",
+                  "#168AAD",
+                  "#1A759F"
+                ]
+              },
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "Sleep Duration",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Quality of Sleep",
+                "format": ".2f",
+                "type": "quantitative"
+              },
+              {
+                "field": "Stress Level",
+                "format": ".2f",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "field": "Quality of Sleep",
+              "title": "Quality of Sleep",
+              "type": "quantitative"
+            },
+            "y": {
+              "field": "Stress Level",
+              "title": "Stress Level",
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "filled": true,
+            "size": 50,
+            "type": "point"
+          },
+          "width": 180
+        },
+        {
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "Stress Level",
+                "type": "quantitative"
+              }
+            ],
+            "x": {
+              "bin": {
+                "maxbins": 30
+              },
+              "field": "Stress Level",
+              "title": null,
+              "type": "quantitative"
+            },
+            "y": {
+              "aggregate": "count",
+              "title": null,
+              "type": "quantitative"
+            }
+          },
+          "height": 180,
+          "mark": {
+            "color": "#1A759F",
+            "opacity": 0.7,
+            "type": "bar"
+          },
+          "width": 180
+        }
+      ]
     }
-  ],
-  "title": "Average Sleep Duration by Occupation",
-  "width": 600
+  ]
 }
