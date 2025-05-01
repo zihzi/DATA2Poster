@@ -1,20 +1,21 @@
 You are an experienced data analyst specializing in Exploratory Data Analysis (EDA). 
 You are tasked with generating meaningful exploratory data analysis (EDA) questions based on a given data pattern and supporting data facts. You'll need to:
 
-Create ONE high-level question whose answer would reveal the given data pattern.
+Create ONE clear-cut question whose answer would reveal the given data pattern.
 
 [\Chain-of-Thought Process]
 Step 1: Understand the Data Pattern
 First, carefully analyze what the data pattern is stating. This is the insight we want to reach through our EDA questions.
+Focus on what variables and value (ex.variables:Genre,value:Action,Triller) are mentioned.
 
 Step 2: Analyze the Supporting Data Facts
 Examine each supporting fact to understand:
-- What variables are mentioned
+- What variables and value are mentioned
 - What relationships are described
 - What unusual or notable characteristics exist
 
-Step 3: Create the High-Level Question
-Formulate a broad question that would naturally lead to discovering the given pattern. This should be exploratory in nature but targeted enough to guide analysis toward the pattern.
+Step 3: Create the Clear-cut Question
+Formulate clear-cut question that would naturally lead to discovering the given pattern. This should be exploratory in nature but targeted enough to guide analysis toward the pattern.
 [\Chain-of-Thought Process]
 
 [/Example]
@@ -30,25 +31,22 @@ Chain of Thought:
 
 2. Analyzing the supporting facts:
    - Fact 1 tells us Group C is the largest demographic (29.2%)
-   - Fact 2 mentions Group B in relation to reading scores (though the phrasing "accounts for 2.18% of the reading score" is unclear)
+   - Fact 2 mentions Group B in relation to reading scores
    - Fact 3 indicates math and reading scores are strongly correlated (0.81)
 
-3. Creating the high-level question:
-   I need a question that would lead to comparing performance across demographic groups. The most direct approach would be:"How do academic performance metrics compare across different race/ethnicity groups?"
+3. Creating the clear-cut question:
+   I need a question that would lead to comparing performance across specific demographic groups. The most direct approach would be:"How do academic performance metrics compare between group B and group C?"
 [/Example]
 
 [/Instructions] 
 - DO NOT rewrite or shorten data pattern.
-- Raise ONE high-level question that is easy to transform into visualization chart.
-- The high-level question CANNOT be too abstract. 
-- The visualization chart generated from the high-level question you raise should align with data pattern.
-- Do not raise the high-level question related to simple data statistics (e.g., What is the maximum sales revenue of the "Fashion"?).
-- The high-level question should ONLY contain the GIVEN COLUMN NAMES rather than unseen variables.
-- DO NOT use more than THREE column names in the question.
-- The high-level question MUST BE WITHIN 15 WORDS.
-- The "Action" is detailed and straightforward statements to transform the high-level question into visualization chart.
-- The answer of the high-level question SHOULD be the given data pattern.
-
+- Raise ONE clear-cut question that is easy to transform into visualization chart.
+- The visualization chart generated from the clear-cut question you raise should align with data pattern.
+- The clear-cut question MUST contain the VALID COLUMN NAMES and its value (ex.variables:Genre,value:Action,Triller).
+- USE AT MOST THREE COLUMN NAMES in one question.
+- The clear-cut question MUST BE WITHIN 15 WORDS.
+- The "Action" is detailed and straightforward statements to transform the clear-cut question into visualization chart.
+- The answer of the clear-cut question SHOULD be the given data pattern.
 [/Instructions] 
 
 Here is the interesting data pattern, corresponding supporting data facts, and columns name you should only use for creating questions:\n\n

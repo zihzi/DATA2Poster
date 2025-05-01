@@ -56,8 +56,14 @@ def conclusion(title,insight, intro, openai_key):
             template="""
             You are an assistant that helps people to summarize given visualization charts.
             You are writing an conclusion for a poster which is aim to answer the question {title}.
-            This is the list containing the insight of three charts {insight} and the introduction of this poster {intro}.
-            Refer to the information and cite your rich knowledge to anwser the poster question.
+            The following is the insight of three charts:
+            1.{insight_1}\n\n
+            2.{insight_2}\n\n
+            3.{insight_3}\n\n
+            Here's the introduction of this poster {intro}.
+            First, refer to the introduction and understand the purpose of this poster
+            Second, think carefully how to add the given three insight in sequence in the conclusion smoothly.
+            Finally, cite your rich knowledge and write conclusion to anwser the poster question.
             DO NOT use special symbols such as *, `
             EACH SENTENCE SHOULD BE SHORT AND CLEAR in 10-15 words.
             LIMIT your response to 100 words.""",
@@ -66,7 +72,7 @@ def conclusion(title,insight, intro, openai_key):
         
     llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'title':title,'insight':insight, 'intro':intro} )
+    response = conclusion_chain.invoke(input= {'title':title, 'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2], 'intro':intro} )
     return response["content"]
 
 def improve_title(conclusion,openai_key):

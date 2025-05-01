@@ -5,9 +5,14 @@
       "labelFontSize": 12,
       "titleFontSize": 14
     },
+    "legend": {
+      "labelFontSize": 12,
+      "orient": "top-right",
+      "titleFontSize": 14
+    },
     "title": {
       "anchor": "start",
-      "fontSize": 16
+      "fontSize": 18
     },
     "view": {
       "continuousHeight": 300,
@@ -15,131 +20,73 @@
     }
   },
   "data": {
-    "name": "data-cc985740966fce7961a622c5dc6432e7"
+    "name": "data-4f53cda18c2baa0c0354bb5f9a3ecbe5"
   },
   "datasets": {
-    "data-cc985740966fce7961a622c5dc6432e7": [
-      {
-        "Avg_Sleep Duration": 7.111111111111111,
-        "Gender": "female",
-        "Occupation": "accountant"
-      },
-      {
-        "Avg_Sleep Duration": 8.2,
-        "Gender": "female",
-        "Occupation": "doctor"
-      },
-      {
-        "Avg_Sleep Duration": 8.425,
-        "Gender": "female",
-        "Occupation": "engineer"
-      },
-      {
-        "Avg_Sleep Duration": 7.15,
-        "Gender": "female",
-        "Occupation": "lawyer"
-      },
-      {
-        "Avg_Sleep Duration": 6.9,
-        "Gender": "female",
-        "Occupation": "manager"
-      },
-      {
-        "Avg_Sleep Duration": 7.0630136986301375,
-        "Gender": "female",
-        "Occupation": "nurse"
-      },
-      {
-        "Avg_Sleep Duration": 6.0,
-        "Gender": "female",
-        "Occupation": "scientist"
-      },
-      {
-        "Avg_Sleep Duration": 6.7057142857142855,
-        "Gender": "female",
-        "Occupation": "teacher"
-      },
-      {
-        "Avg_Sleep Duration": 7.2,
-        "Gender": "male",
-        "Occupation": "accountant"
-      },
-      {
-        "Avg_Sleep Duration": 6.934782608695652,
-        "Gender": "male",
-        "Occupation": "doctor"
-      },
-      {
-        "Avg_Sleep Duration": 7.535483870967742,
-        "Gender": "male",
-        "Occupation": "engineer"
-      },
-      {
-        "Avg_Sleep Duration": 7.4222222222222225,
-        "Gender": "male",
-        "Occupation": "lawyer"
-      },
-      {
-        "Avg_Sleep Duration": 5.9,
-        "Gender": "male",
-        "Occupation": "sales representative"
-      },
-      {
-        "Avg_Sleep Duration": 6.403125,
-        "Gender": "male",
-        "Occupation": "salesperson"
-      },
-      {
-        "Avg_Sleep Duration": 6.75,
-        "Gender": "male",
-        "Occupation": "software engineer"
-      },
-      {
-        "Avg_Sleep Duration": 6.58,
-        "Gender": "male",
-        "Occupation": "teacher"
-      }
-    ]
+    "data-4f53cda18c2baa0c0354bb5f9a3ecbe5": []
   },
   "encoding": {
     "color": {
-      "field": "Gender",
-      "title": "Gender",
-      "type": "nominal"
+      "field": "Year",
+      "legend": {
+        "title": "Year"
+      },
+      "scale": {
+        "domain": [
+          70,
+          71
+        ],
+        "range": [
+          "#52B69A",
+          "#1E6091"
+        ]
+      },
+      "title": "Year",
+      "type": "ordinal"
     },
     "tooltip": [
       {
-        "field": "Gender",
-        "title": "Gender",
+        "field": "Origin",
+        "title": "Origin",
         "type": "nominal"
       },
       {
-        "field": "Occupation",
-        "title": "Occupation",
-        "type": "nominal"
-      },
-      {
-        "field": "Avg_Sleep Duration",
-        "title": "Average Sleep Duration",
+        "field": "Weight",
+        "format": ",.1f",
+        "title": "Average Weight",
         "type": "quantitative"
+      },
+      {
+        "field": "Year",
+        "title": "Year",
+        "type": "ordinal"
       }
     ],
     "x": {
-      "field": "Occupation",
-      "sort": "-y",
-      "title": "Occupation",
+      "field": "Origin",
+      "sort": [
+        "USA",
+        "Europe",
+        "Japan"
+      ],
+      "title": "Origin",
       "type": "nominal"
     },
     "y": {
-      "field": "Avg_Sleep Duration",
-      "title": "Average Sleep Duration",
+      "field": "Weight",
+      "scale": {
+        "zero": true
+      },
+      "title": "Average Vehicle Weight",
       "type": "quantitative"
     }
   },
-  "height": 400,
+  "height": 350,
   "mark": {
+    "cornerRadiusTopLeft": 3,
+    "cornerRadiusTopRight": 3,
     "type": "bar"
   },
-  "title": "Average Sleep Duration by Gender and Occupation",
-  "width": 600
+  "title": "Average Vehicle Weight by Origin for Years 1970 and 1971",
+  "width": 200
 }

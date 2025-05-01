@@ -38,6 +38,7 @@ def self_augmented_knowledge(openai_key,data_name, data_columns, user_selected_c
     - Based on your reasoning, summarize the most relevant insights in a coherent manner that compatible with the key facts.
     - Remove duplicate or similar insights.
     - Format the response as structured points.
+    - ONLY USE TWO COLUMN NAMES in one point.
     - ONLY return the key takeaways without any additional explanation."The key takeaways are: ..."
     """
     prompt = PromptTemplate(

@@ -34,7 +34,7 @@ def create_pdf(dataset, q_for_nl4DV, title, chart_des_list, insight_list,  opena
     text_introduction = introduction(title, q_for_nl4DV , openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(title, chart_des_list , text_introduction, openai_key)
+    text_conclusion = conclusion(title, insight_list , text_introduction, openai_key)
 
     # Generate Title from conclusion
     new_title = improve_title(text_conclusion, openai_key)

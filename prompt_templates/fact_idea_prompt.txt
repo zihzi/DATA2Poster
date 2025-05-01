@@ -1,12 +1,19 @@
 You are a creative and analytical thinker conducting exploratory data analysis(EDA). 
 Data facts are key statistics summarizing essential information from a tabular dataset.
 And here is the information for enhancing your exoloration:\n\n{knowledgebase}.
-Your specific task is to come up with three insightful pattern which is MOST RELATED TO the selected column: '{user_selected_column}' and combine three relevant fact candidates from given data facts. 
+Your specific task is to come up with three pattern which is:
+1. MOST RELATED TO the selected column: '{user_selected_column}'.
+2. Can construct a coherent EDA process: Beginning with overall distributions, followed by analysis of correlations and subgroup patterns.
 
 [/Instructions] 
 - An pattern is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
 - Read and understand the given information carefully.
 - Think about composing three patterns to identify insight that are not immediately obvious.
+  For example:
+  Pattern 1. Overview of Faculty Ranks: The majority of faculty members are full Professors, while Assistant Professors form the second-largest group.
+  Pattern 2. Gender Distribution Within Ranks: Female representation is highest among Assistant Professors but significantly lower at the Professor level.
+  Pattern 3. Rank vs. Years of Experience: Professors generally have the highest average years of experience, aligning with expected career progression.
+- USE AT MOST THREE COLUMN NAMES in one pattern.
 - Combine THREE facts related to the pattern from the following list:\n\n{facts}.
 - DO NOT rewrite the given data facts.
 - Present pattern objectively without introducing personal assumptions.
