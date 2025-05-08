@@ -10,7 +10,7 @@ def self_augmented_knowledge(openai_key,data_name, data_columns, user_selected_c
     You are a senior data analyst. You are analyzing a dataset named:\n\n{data_name} and it has columns:\n\n{data_columns}.
 
     Here are key facts summarizing essential information from this dataset:\n\n{data_facts}
-    Your task is to generate insightful takeaways most related to the selected column: '{user_selected_column}'.
+    Your task is to generate insightful takeaways focus on the selected column: '{user_selected_column}'.
     Think step by step:
 
     Step 1: Understand the dataset and its context
@@ -25,10 +25,10 @@ def self_augmented_knowledge(openai_key,data_name, data_columns, user_selected_c
     Step 3: Generate deeper insights using Chain-of-Thought reasoning
 
     - Begin by analyzing how the selected column varies across different values of other columns.
-    -Examine any trends, correlations, or anomalies associated with this column.
-    -Consider temporal, categorical, or numerical relationships depending on column types (e.g., time-based trends, category distributions, or value ranges).
-    -Identify patterns or insights that suggest causality, segmentation, or comparisons across subgroups.
-    -Think in terms of common analysis tasks such as:
+    - Examine any trends, correlations, or anomalies associated with this column.
+    - Consider temporal, categorical, or numerical relationships depending on column types (e.g., time-based trends, category distributions, or value ranges).
+    - Identify patterns or insights that suggest causality, segmentation, or comparisons across subgroups.
+    - Think in terms of common analysis tasks such as:
     “What drives higher or lower values of this column?”
     “How does this column behave across different groups?”
     “Are there outliers or exceptions?”

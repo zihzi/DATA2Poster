@@ -41,7 +41,9 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
                         properties["dtype"] = "T"
                 except ValueError:
                     # Check if the string column has a limited number of values
-                    if df[column].nunique() / len(df[column]) < 0.5:
+                    if len(df[column])>=8 and df[column].nunique() / len(df[column]) < 0.5:
+                        properties["dtype"] = "C"
+                    elif len(df[column]) < 8 and df[column].nunique() / len(df[column]) > 0.5:
                         properties["dtype"] = "C"
                     else:
                         properties["dtype"] = "string"

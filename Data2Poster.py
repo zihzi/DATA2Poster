@@ -42,7 +42,6 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["Sleep_health_and_lifestyle"] = pd.read_csv("data/Sleep_health_and_lifestyle.csv")
     datasets["movies"] = pd.read_csv("data/movies.csv")
     datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
     datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
@@ -50,7 +49,7 @@ if "datasets" not in st.session_state:
     datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
     datasets["Employee"] = pd.read_csv("data/Employee.csv")
     datasets["Housing"] = pd.read_csv("data/Housing.csv")
-    datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
+    datasets["regional_presidential_election"] = pd.read_csv("data/regional_presidential_election.csv")
     datasets["UberDataset"] = pd.read_csv("data/UberDataset.csv")
     
     st.session_state["datasets"] = datasets
@@ -82,7 +81,7 @@ with st.sidebar:
 
 # Get the schema of the chosen dataset    
 chosen_data_schema = get_column_properties(datasets[chosen_dataset])
-
+st.write("Data Schema:",chosen_data_schema)
 
 # Calculate the importance score of data facts
 score_importance(chosen_data_schema)

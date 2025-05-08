@@ -2,12 +2,16 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
     "axis": {
-      "labelFontSize": 12,
-      "titleFontSize": 14
+      "labelFontSize": 13,
+      "titleFontSize": 15
     },
     "legend": {
+      "direction": "horizontal",
       "labelFontSize": 12,
-      "orient": "top-right",
+      "orient": "top",
+      "padding": 10,
+      "symbolSize": 150,
+      "symbolType": "circle",
       "titleFontSize": 14
     },
     "title": {
@@ -20,73 +24,108 @@
     }
   },
   "data": {
-    "name": "data-4f53cda18c2baa0c0354bb5f9a3ecbe5"
+    "name": "data-17aff208eee30df8564cdcffb763b9df"
   },
   "datasets": {
-    "data-4f53cda18c2baa0c0354bb5f9a3ecbe5": []
+    "data-17aff208eee30df8564cdcffb763b9df": [
+      {
+        "Democrat": 42.78666666666667,
+        "Region": "Midwest",
+        "Republican": 55.39166666666666
+      },
+      {
+        "Democrat": 55.18,
+        "Region": "Northeast",
+        "Republican": 42.78888888888889
+      },
+      {
+        "Democrat": 39.3125,
+        "Region": "Southeast",
+        "Republican": 59.20666666666667
+      },
+      {
+        "Democrat": 43.225,
+        "Region": "Southwest",
+        "Republican": 55.0925
+      },
+      {
+        "Democrat": 46.09727272727272,
+        "Region": "West",
+        "Republican": 50.93818181818181
+      }
+    ]
   },
   "encoding": {
     "color": {
-      "field": "Year",
-      "legend": {
-        "title": "Year"
-      },
+      "field": "Party",
       "scale": {
         "domain": [
-          70,
-          71
+          "Democrat",
+          "Republican"
         ],
         "range": [
-          "#52B69A",
-          "#1E6091"
+          "#168AAD",
+          "#D9ED92"
         ]
       },
-      "title": "Year",
-      "type": "ordinal"
+      "title": "Party",
+      "type": "nominal"
     },
     "tooltip": [
       {
-        "field": "Origin",
-        "title": "Origin",
+        "field": "Region",
+        "title": "Region",
         "type": "nominal"
       },
       {
-        "field": "Weight",
-        "format": ",.1f",
-        "title": "Average Weight",
-        "type": "quantitative"
+        "field": "Party",
+        "title": "Party",
+        "type": "nominal"
       },
       {
-        "field": "Year",
-        "title": "Year",
-        "type": "ordinal"
+        "field": "Percent",
+        "format": ".2f",
+        "title": "Average Percent",
+        "type": "quantitative"
       }
     ],
     "x": {
-      "field": "Origin",
-      "sort": [
-        "USA",
-        "Europe",
-        "Japan"
-      ],
-      "title": "Origin",
+      "field": "Region",
+      "sort": {
+        "field": "Percent",
+        "op": "sum",
+        "order": "descending"
+      },
+      "title": "Region",
       "type": "nominal"
     },
     "y": {
-      "field": "Weight",
-      "scale": {
-        "zero": true
+      "axis": {
+        "format": "%"
       },
-      "title": "Average Vehicle Weight",
+      "field": "Percent",
+      "title": "Average Percentage",
       "type": "quantitative"
     }
   },
-  "height": 350,
+  "height": 450,
   "mark": {
     "cornerRadiusTopLeft": 3,
     "cornerRadiusTopRight": 3,
     "type": "bar"
   },
-  "title": "Average Vehicle Weight by Origin for Years 1970 and 1971",
-  "width": 200
+  "title": "Average DEM_PERCENT and REP_PERCENT by Region",
+  "transform": [
+    {
+      "as": [
+        "Party",
+        "Percent"
+      ],
+      "fold": [
+        "Democrat",
+        "Republican"
+      ]
+    }
+  ],
+  "width": 700
 }

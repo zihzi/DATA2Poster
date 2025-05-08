@@ -1,70 +1,64 @@
+# import pandas as pd
+# import json
+# import altair as alt
+# import altair_saver
+# df = pd.read_csv("data/cas_cancer_nc.csv")
+# df.drop(columns=["id"],inplace=True)
+# df.drop(columns=["ICD-10"],inplace=True)
+# df.to_csv("data/cas_cancer_nc.csv", index=False)
+
 import pandas as pd
-import json
-import altair as alt
-import altair_saver
-df = pd.read_csv("data/cas_cancer_nc.csv")
-df.drop(columns=["id"],inplace=True)
-df.drop(columns=["ICD-10"],inplace=True)
-df.to_csv("data/cas_cancer_nc.csv", index=False)
 
+# Load CSV data
+df = pd.read_csv("data/2024USA_presidential_election.csv")
+df["REP_PERCENT"] = df["REP_PERCENT"].str.rstrip('%').astype(float)
+df["DEM_PERCENT"] = df["DEM_PERCENT"].str.rstrip('%').astype(float)
+df["OTH_PERCENT"] = df["OTH_PERCENT"].str.rstrip('%').astype(float)
+df["STATE"] = df["STATE"].astype("category")
 
-# def strip_datasets(vega_lite_json_path, output_path):
-#     with open(vega_lite_json_path, 'r') as f:
-#         chart = json.load(f)
+# Define region mapping
+region_map = {
+    "Northeast": [
+        "Connecticut", "Maine", "Massachusetts", "New Hampshire",
+        "Rhode Island", "Vermont", "New Jersey", "New York", "Pennsylvania"
+    ],
+    "Southeast": [
+        "Alabama", "Arkansas", "Florida", "Georgia", "Kentucky", "Louisiana",
+        "Mississippi", "North Carolina", "South Carolina", "Tennessee",
+        "Virginia", "West Virginia"
+    ],
+    "Midwest": [
+        "Illinois", "Indiana", "Iowa", "Kansas", "Michigan", "Minnesota",
+        "Missouri", "Nebraska", "North Dakota", "Ohio", "South Dakota", "Wisconsin"
+    ],
+    "Southwest": ["Arizona", "New Mexico", "Oklahoma", "Texas"],
+    "West": [
+        "Alaska", "California", "Colorado", "Hawaii", "Idaho", "Montana",
+        "Nevada", "Oregon", "Utah", "Washington", "Wyoming"
+    ],
+}
 
-#     # Save datasets separately if needed
-#     datasets = chart.pop("datasets", None)  # Remove 'datasets'
-#     with open("DATA2Poster_json/dataset_only.json", "w") as f:
-#         json.dump(datasets, f, indent=2)
+# Create reverse map: State → Region
+state_to_region = {}
+for region, states in region_map.items():
+    for state in states:
+        state_to_region[state] = region
 
+# Add a Region column
+df["Region"] = df["STATE"].map(state_to_region)
 
-#     # Save only the chart spec without datasets
-#     with open(output_path, 'w') as f:
-#         json.dump(chart, f, indent=2)
+# Show grouped data (e.g., total votes per region)
+grouped = df.groupby("Region").agg({
+    "TOTAL_VOTES": "sum",
+    "DEM_VOTES": "sum",
+    "DEM_PERCENT": "mean",
+    "DEM_EV": "sum",
+    "REP_VOTES": "sum",
+    "REP_PERCENT": "mean",
+    "REP_EV": "sum",
+    "OTH_VOTES": "sum",
+    "OTH_PERCENT": "mean",
+    "OTH_EV": "sum"}).reset_index()
 
-#     print("Chart specification saved to:", output_path)
-#     if datasets:
-#         print("Note: datasets section removed.")
-
-# # Example usage
-# strip_datasets("DATA2Poster_json/vega_lite_json_3.json", "DATA2Poster_json/chart_spec_only.json")
-
-
-
-# # Create a multiline json
-# record_dict = json.loads(df.to_json(orient = "records"))
-# record_json = json.dumps(record_dict)
-
-# with open(output_path, 'w') as f:
-#     f.write(record_json)
-
-# # def load_json(json_file):
-# #                     with open(json_file, "r", encoding="utf-8") as fh:
-# #                         return json.load(fh)
-
-
-# # data_list = load_json('train_set.json')
-# # docs = [item for item in data_list] 
-# # print(docs[0])
-# data = pd.read_csv('data/Sleep_health_and_lifestyle.csv')
-# chart = alt.Chart(data).mark_bar().encode(
-#         x=alt.X('Occupation:N', title='Occupation', sort='-y'),
-#         y=alt.Y('Avg_Heart Rate:Q', title='Average Heart Rate'),
-#         color=alt.Color('Occupation:N', scale=alt.Scale(domain=data['Occupation'].unique(), range=["#FFD7D1", "#D8E2DC", "#FFE5D9", "#FFD7BA", "#FEC89A"])),
-#         tooltip=['Occupation:N', 'Avg_Heart Rate:Q']
-#     ).properties(
-#         title='Average Heart Rate by Occupation',
-#         width=600,
-#         height=400
-#     ).configure_axis(
-#         labelFontSize=12,
-#         titleFontSize=14
-#     ).configure_title(
-#         fontSize=16,
-#         anchor='start'
-#     )
-#     # Save the chart as a PNG file
-# chart_json = chart.to_json()
-# with open('data/occupation_heart_rate.json', 'w') as f:
-#     f.write(chart_json)
-# # chart.save('data/occupation_heart_rate.png')
+print(grouped)
+grouped.to_csv("regional_vote_summary.csv", index=False)

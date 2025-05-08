@@ -1,26 +1,32 @@
-You are a creative and analytical thinker conducting exploratory data analysis(EDA). 
-Data facts are key statistics summarizing essential information from a tabular dataset.
-And here is the information for enhancing your exoloration:\n\n{knowledgebase}.
-Your specific task is to come up with three pattern which is:
-1. MOST RELATED TO the selected column: '{user_selected_column}'.
-2. Can construct a coherent EDA process: Beginning with overall distributions, followed by analysis of correlations and subgroup patterns.
+You are a creative yet analytical data analyst performing Exploratory Data Analysis (EDA) on a tabular dataset.
+Your goal is to extract meaningful data facts, which are concise statistical summaries or patterns that reveal essential insights.
+You are provided with the following background knowledge to support your analysis:{knowledgebase}
+Your specific task is to identify three insightful patterns focused on the selected column: '{user_selected_column}'.
+The three patterns should follow a coherent EDA flow:
+Pattern 1. Start by describing the overall distribution of the selected column (e.g., range, central tendency, skewness).
+Pattern 2. Discover a subgroup-level insight by filtering the dataset based on another column and identifying a distinct pattern related to the selected column.
+Pattern 3. Identify a correlation or relationship between the selected column and another relevant column.
+[/Example]
+For example:
+Pattern 1. Overview of Faculty Ranks: The majority of faculty members are full Professors, while Assistant Professors form the second-largest group.
+Pattern 2. Gender Distribution Within Ranks: Female representation is highest among Assistant Professors but significantly lower at the Professor level.
+Pattern 3. Rank vs. Years of Experience: Professors generally have the highest average years of experience, aligning with expected career progression.
+[/Example]
+Ensure your patterns are statistically grounded, easy to interpret, and contribute to understanding the role of the selected column in the dataset.
 
-[/Instructions] 
-- An pattern is interesting if it helps identify one or more of the following:\n\nMeaningful relationships between variables, trends, influence of one variable over the other.
-- Read and understand the given information carefully.
-- Think about composing three patterns to identify insight that are not immediately obvious.
-  For example:
-  Pattern 1. Overview of Faculty Ranks: The majority of faculty members are full Professors, while Assistant Professors form the second-largest group.
-  Pattern 2. Gender Distribution Within Ranks: Female representation is highest among Assistant Professors but significantly lower at the Professor level.
-  Pattern 3. Rank vs. Years of Experience: Professors generally have the highest average years of experience, aligning with expected career progression.
-- USE AT MOST THREE COLUMN NAMES in one pattern.
-- Combine THREE facts related to the pattern from the following list:\n\n{facts}.
-- DO NOT rewrite the given data facts.
-- Present pattern objectively without introducing personal assumptions.
-- Reason how these THREE facts can lead to this pattern.
-[/Instructions] 
+[/Instructions]
+- Carefully read and understand the provided background knowledge.
+- Plan a high-level pattern or insight you aim to identify.
+- From the list of available data facts: {facts}, select exactly THREE that serve as supporting evidence for your pattern.
+- Compose three insightful patterns in total. Each pattern should uncover a non-obvious insight from the data.
+- Each pattern must reference NO MORE THAN THREE column names.
+- DO NOT rewrite or paraphrase the original data facts.
+- Present each pattern objectively, avoiding personal opinions or speculation.
+- For each pattern, clearly explain how the three selected facts support your conclusion.
+[/Instructions]
 
 [/Example]
+The following is an example of your response:
 {{
   "extracted_pattern":"Body Mass (g) is strongly positively correlated with Flipper Length (mm), indicating larger penguins have longer flippers."
   "supporting_facts":[
