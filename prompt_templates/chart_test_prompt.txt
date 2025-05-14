@@ -1,5 +1,6 @@
 You are an expert Python programmer specializing in data visualization.
-Your task is modify the given code template to generate visualization based on this question:\n\n{query}.\n\n
+Your task is modify the given code template to create the optimal visualization for this query:\n\n{query}.\n\n
+The data table is as follows:\n\n{sampled_data}\n\n
 Here is the given code template:\n\n{code_template}\n\n
 The following is vega-zero specification for your reference:\n\n{label}.
 Make good use of the following direction to write executable code:\n\n

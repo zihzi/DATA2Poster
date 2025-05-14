@@ -15,7 +15,7 @@ from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
 from question_evaluator import expand_questions
-from vis_generator import agent_1_generate_code, agent_2_improve_code, agent_3_fix_code
+from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code
 from pathlib import Path
 from poster_generator import create_pdf
 
@@ -635,19 +635,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
                 prompt_chart_test = PromptTemplate(
                                     template=chart_test_template,
-                                    input_variables=["query","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
+                                    input_variables=["query","sampled_data","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
 
                         )
                 chart_test_chain = prompt_chart_test | llm
-                chart_code = chart_test_chain.invoke(input = {"query":query,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
+                chart_code = chart_test_chain.invoke(input = {"query":query,"sampled_data":summary,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
                 print(chart_code.content)
-                print("\n🟡 Step 2: Improving Code Quality...\n")
-                improved_code = agent_2_improve_code(query, chart_code.content, openai_key)
-                print(improved_code)
+              
                 exec_count=0
                 try:
                     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
-                    final_code = agent_3_fix_code(improved_code, openai_key)
+                    final_code = agent_3_fix_code(chart_code.content, openai_key)
                     while exec_count < 3:  # Loop until the code executes successfully
                         try:
                             print("\n🟢 Trying to execute the code...\n")
@@ -680,57 +678,52 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 if exec_count == 3:
                     st.error("The code is failed to execute.")
                     show_chart_flag = 0
-                
+                binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
+                url = f'data:image/png;base64,{base64_utf8_str}'
+
+                feedback = agent_2_improve_code(query, url, openai_key)
+                st.write(feedback)
+                exec_count=0
+                improved_code = agent_improve_vis(chart_code.content, feedback, openai_key)
+                try:
+                    print("\n🔵 Step 3: Ensuring Code is Executable...\n")
+                    final_code = agent_3_fix_code(improved_code, openai_key)
+                    while exec_count < 3:  # Loop until the code executes successfully
+                        try:
+                            print("\n🟢 Trying to execute the code...\n")
+                            code_executed = preprocess_json_2(final_code, idx)
+                            print("\n✅ Code executed successfully!\n")
+                            break  # Exit loop when execution is successful
+                        
+                        except Exception as e:
+                            exec_count += 1
+                            error = str(e)
+                            error_code = final_code
+                            print(f"\n🔴 Error encountered: {error}\n")
+                            
+                            # Load error-handling prompt
+                            error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+                            error_prompt = PromptTemplate(
+                                template=error_prompt_template,
+                                input_variables=["error_code", "error"],
+                            )    
+
+                            error_chain = error_prompt | llm 
+                            
+                            # Invoke the chain to fix the code
+                            corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
+                            final_code = corrected_code.content  # Update with the corrected code
+
+                except Exception as final_exception:
+                    print("\n❌ Failed to generate executable code after multiple attempts.")
+                show_chart_flag = 1
+                if exec_count == 3:
+                    st.error("The code is failed to execute.")
+                    show_chart_flag = 0
                 # load the vega_lite_json for insight_prompt
-                with open(f"DATA2Poster_json/vega_lite_json_{idx}.json", "r") as f:
+                with open(f"nl4DV_json/vega_lite_json_{idx}.json", "rb") as f:
                         chart = json.load(f)
-                        # json for chart_description
-                        # if "layer" in chart:
-                        #     chart_type = chart["layer"][0]["mark"]["type"]
-                        #     if "title" in chart["layer"][0]:
-                        #         chart_title = chart["layer"][0]["title"]
-                        #     else:
-                        #         chart_title = chart["title"]
-                        #     x_field = "Title: " + chart["layer"][0]["encoding"]["x"]["title"] + " Type: " + chart["layer"][0]["encoding"]["x"]["type"]
-                        #     y_field = "Title: " + chart["layer"][0]["encoding"]["y"]["title"] + " Type: " + chart["layer"][0]["encoding"]["y"]["type"]
-                        # elif "hconcat" in chart:
-                        #     if "spec" in chart["hconcat"][0]:
-                        #         if "layer" in chart["hconcat"][0]["spec"]:
-                        #             chart_type = chart["hconcat"][0]["spec"]["layer"][0]["mark"]["type"]                             
-                        #             chart_title = chart["spec"]["title"]
-                        #         else:   
-                        #             chart_type = chart["hconcat"][0]["spec"]["mark"]["type"]
-                        #             chart_title = chart["hconcat"][0]["spec"]["title"]
-                        #     else:
-                        #         chart_type = chart["hconcat"][0]["mark"]["type"]
-                        #         chart_title = chart["hconcat"][0]["title"]
-                        #         x_field = "Title: " + chart["hconcat"][0]["encoding"]["x"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["x"]["type"]
-                        #         y_field = "Title: " + chart["hconcat"][0]["encoding"]["y"]["title"] + " Type: " + chart["hconcat"][0]["encoding"]["y"]["type"]
-                        # elif "spec" in chart:
-                        #     if "layer" in chart["spec"]:
-                        #         chart_type = chart["spec"]["layer"][0]["mark"]["type"]
-                        #         chart_title = chart["spec"]["title"]
-                        #     else:
-                        #         chart_type = chart["spec"]["mark"]["type"]
-                        #         chart_title = chart["spec"]["title"]
-                        # else:
-                        #     chart_type = chart["mark"]["type"]
-                        #     if "title" in chart:
-                        #         chart_title = chart["title"]
-                        #     if "x" in chart["encoding"]:
-                        #         if "axis" in chart["encoding"]["x"] and "title" in chart["encoding"]["x"]["axis"]:
-                        #             x_field = "Title: " + chart["encoding"]["x"]["axis"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                        #         else:
-                        #             x_field = "Title: " + chart["encoding"]["x"]["title"] + " Type: " + chart["encoding"]["x"]["type"]
-                        #     if "y" in chart["encoding"]:
-                        #         if "axis" in chart["encoding"]["y"] and "title" in chart["encoding"]["y"]["axis"]:
-                        #             y_field = "Title: " + chart["encoding"]["y"]["axis"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
-                        #         else:
-                        #             y_field = "Title: " + chart["encoding"]["y"]["title"] + " Type: " + chart["encoding"]["y"]["type"]
-                        #     # It's Pie Chart
-                        #     else:
-                        #         x_field = "Title: " + chart["encoding"]["color"]["field"] + " Type: " + chart["encoding"]["color"]["type"]
-                        #         y_field = "Title: " + chart["encoding"]["theta"]["field"] + " Type: " + chart["encoding"]["theta"]["type"]
                         for key in chart["datasets"]:
                             chart_data = chart["datasets"][key]
                             

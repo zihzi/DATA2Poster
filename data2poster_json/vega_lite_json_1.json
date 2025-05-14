@@ -5,13 +5,6 @@
       "labelFontSize": 12,
       "titleFontSize": 14
     },
-    "legend": {
-      "direction": "horizontal",
-      "labelFontSize": 12,
-      "orient": "top",
-      "padding": 10,
-      "titleFontSize": 14
-    },
     "title": {
       "anchor": "start",
       "fontSize": 16
@@ -22,77 +15,78 @@
     }
   },
   "data": {
-    "name": "data-6f10a23f680ee7c64540bc65e42812ce"
+    "name": "data-af5719ff0fe5087c1672c8af0597b883"
   },
   "datasets": {
-    "data-6f10a23f680ee7c64540bc65e42812ce": [
+    "data-af5719ff0fe5087c1672c8af0597b883": [
       {
-        "DEM_PERCENT": 45.32028787878788,
-        "Region_Group": "Other"
+        "gender": "female",
+        "mean(math score)": 66.9,
+        "race/ethnicity": "group b"
+      },
+      {
+        "gender": "male",
+        "mean(math score)": 58.0,
+        "race/ethnicity": "group b"
+      },
+      {
+        "gender": "female",
+        "mean(math score)": 62.666666666666664,
+        "race/ethnicity": "group e"
+      },
+      {
+        "gender": "male",
+        "mean(math score)": 77.4,
+        "race/ethnicity": "group e"
       }
     ]
   },
   "encoding": {
     "color": {
-      "field": "Region_Group",
-      "legend": {
-        "title": "Region Group"
-      },
-      "scale": {
-        "domain": [
-          "Northeast",
-          "Southeast",
-          "Other"
-        ],
-        "range": [
-          "#168AAD",
-          "#52B69A",
-          "#D9ED92"
-        ]
-      },
+      "field": "race/ethnicity",
+      "title": "Race/Ethnicity",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "race/ethnicity",
+      "title": "Race/Ethnicity",
       "type": "nominal"
     },
     "tooltip": [
       {
-        "field": "Region_Group",
-        "title": "Region",
+        "field": "gender",
+        "title": "Gender",
         "type": "nominal"
       },
       {
-        "field": "DEM_PERCENT",
+        "field": "race/ethnicity",
+        "title": "Race/Ethnicity",
+        "type": "nominal"
+      },
+      {
+        "aggregate": "mean",
+        "field": "math score",
         "format": ".2f",
-        "title": "Average DEM_PERCENT",
+        "title": "Average Math Score",
         "type": "quantitative"
       }
     ],
     "x": {
-      "field": "Region_Group",
-      "sort": [
-        "Northeast",
-        "Southeast",
-        "Other"
-      ],
-      "title": "Region",
+      "field": "gender",
+      "title": "Gender",
       "type": "nominal"
     },
     "y": {
-      "field": "DEM_PERCENT",
-      "scale": {
-        "domain": [
-          0,
-          49.852316666666674
-        ]
-      },
-      "title": "Average DEM_PERCENT",
+      "aggregate": "mean",
+      "field": "math score",
+      "title": "Average Math Score",
       "type": "quantitative"
     }
   },
-  "height": 400,
+  "height": 300,
   "mark": {
-    "cornerRadiusTopLeft": 5,
-    "cornerRadiusTopRight": 5,
     "type": "bar"
   },
-  "title": "Average DEM_PERCENT across Northeast, Southeast, and Other Regions",
-  "width": 600
+  "title": "Average Math Scores by Gender for Race/Ethnicity Groups B and E",
+  "width": 150
 }

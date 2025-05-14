@@ -2,17 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
     "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 15
-    },
-    "legend": {
       "labelFontSize": 12,
-      "orient": "bottom",
       "titleFontSize": 14
     },
     "title": {
       "anchor": "start",
-      "fontSize": 18
+      "fontSize": 16
     },
     "view": {
       "continuousHeight": 300,
@@ -20,220 +15,92 @@
     }
   },
   "data": {
-    "name": "data-b7d7dbbf7bd9db327c1cb6533382c17a"
+    "name": "data-c74e2217043cca176c8dc612f1f963f5"
   },
   "datasets": {
-    "data-b7d7dbbf7bd9db327c1cb6533382c17a": [
+    "data-c74e2217043cca176c8dc612f1f963f5": [
       {
-        "Highlight": false,
-        "Release Year": 1996,
-        "Type": "All Genres",
-        "Worldwide Gross": 6301997160
+        "math score": 87.33333333333333,
+        "parental level of education": "associate's degree",
+        "race/ethnicity": "group B"
       },
       {
-        "Highlight": false,
-        "Release Year": 1997,
-        "Type": "All Genres",
-        "Worldwide Gross": 7649693356
+        "math score": 80.0,
+        "parental level of education": "bachelor's degree",
+        "race/ethnicity": "group A"
       },
       {
-        "Highlight": false,
-        "Release Year": 1998,
-        "Type": "All Genres",
-        "Worldwide Gross": 7123701119
+        "math score": 74.0,
+        "parental level of education": "high school",
+        "race/ethnicity": "group A"
       },
       {
-        "Highlight": false,
-        "Release Year": 1999,
-        "Type": "All Genres",
-        "Worldwide Gross": 8664519262
+        "math score": 92.33333333333333,
+        "parental level of education": "master's degree",
+        "race/ethnicity": "group C"
       },
       {
-        "Highlight": true,
-        "Release Year": 2000,
-        "Type": "All Genres",
-        "Worldwide Gross": 8881249917
+        "math score": 87.33333333333333,
+        "parental level of education": "some college",
+        "race/ethnicity": "group B"
       },
       {
-        "Highlight": false,
-        "Release Year": 2001,
-        "Type": "All Genres",
-        "Worldwide Gross": 7628727034
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2002,
-        "Type": "All Genres",
-        "Worldwide Gross": 9315754571
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2003,
-        "Type": "All Genres",
-        "Worldwide Gross": 9310453454
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2004,
-        "Type": "All Genres",
-        "Worldwide Gross": 12122353390
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2005,
-        "Type": "All Genres",
-        "Worldwide Gross": 7468057481
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2006,
-        "Type": "All Genres",
-        "Worldwide Gross": 6048750803
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2007,
-        "Type": "All Genres",
-        "Worldwide Gross": 11992104053
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2008,
-        "Type": "All Genres",
-        "Worldwide Gross": 6398500182
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2009,
-        "Type": "All Genres",
-        "Worldwide Gross": 6998311063
-      },
-      {
-        "Highlight": false,
-        "Release Year": 2010,
-        "Type": "All Genres",
-        "Worldwide Gross": 1141538864
-      },
-      {
-        "Highlight": true,
-        "Release Year": 2000,
-        "Type": "Concert",
-        "Worldwide Gross": 38236338
+        "math score": 66.33333333333333,
+        "parental level of education": "some high school",
+        "race/ethnicity": "group C"
       }
     ]
   },
-  "height": 450,
-  "layer": [
-    {
-      "encoding": {
-        "color": {
-          "field": "Type",
-          "scale": {
-            "range": [
-              "#76C893",
-              "#168AAD"
-            ]
-          },
-          "title": "Genre",
-          "type": "nominal"
-        },
-        "tooltip": [
-          {
-            "field": "Release Year",
-            "title": "Release Year",
-            "type": "ordinal"
-          },
-          {
-            "field": "Worldwide Gross",
-            "format": ",",
-            "title": "Worldwide Gross",
-            "type": "quantitative"
-          },
-          {
-            "field": "Type",
-            "title": "Genre",
-            "type": "nominal"
-          }
-        ],
-        "x": {
-          "field": "Release Year",
-          "sort": "ascending",
-          "title": "Release Year",
-          "type": "ordinal"
-        },
-        "y": {
-          "field": "Worldwide Gross",
-          "title": "Sum of Worldwide Gross",
-          "type": "quantitative"
-        }
+  "encoding": {
+    "color": {
+      "field": "race/ethnicity",
+      "scale": {
+        "scheme": "category10"
       },
-      "mark": {
-        "point": false,
-        "type": "line"
-      },
-      "title": "Worldwide Gross for Concert Genre vs All Genres by Release Year"
+      "title": "Race/Ethnicity",
+      "type": "nominal"
     },
-    {
-      "encoding": {
-        "color": {
-          "field": "Type",
-          "scale": {
-            "range": [
-              "#76C893",
-              "#168AAD"
-            ]
-          },
-          "title": "Genre",
-          "type": "nominal"
-        },
-        "opacity": {
-          "condition": {
-            "test": "datum.Highlight",
-            "value": 1
-          },
-          "value": 0.3
-        },
-        "size": {
-          "condition": {
-            "test": "datum.Highlight",
-            "value": 150
-          },
-          "value": 50
-        },
-        "tooltip": [
-          {
-            "field": "Release Year",
-            "title": "Release Year",
-            "type": "ordinal"
-          },
-          {
-            "field": "Worldwide Gross",
-            "format": ",",
-            "title": "Worldwide Gross",
-            "type": "quantitative"
-          },
-          {
-            "field": "Type",
-            "title": "Genre",
-            "type": "nominal"
-          }
-        ],
-        "x": {
-          "field": "Release Year",
-          "sort": "ascending",
-          "title": "Release Year",
-          "type": "ordinal"
-        },
-        "y": {
-          "field": "Worldwide Gross",
-          "title": "Sum of Worldwide Gross",
-          "type": "quantitative"
-        }
+    "tooltip": [
+      {
+        "field": "parental level of education",
+        "title": "Parental Level of Education",
+        "type": "nominal"
       },
-      "mark": {
-        "type": "circle"
+      {
+        "field": "race/ethnicity",
+        "title": "Race/Ethnicity",
+        "type": "nominal"
+      },
+      {
+        "field": "math score",
+        "format": ".2f",
+        "title": "Average Math Score",
+        "type": "quantitative"
       }
+    ],
+    "x": {
+      "field": "parental level of education",
+      "sort": [
+        "some high school",
+        "high school",
+        "associate's degree",
+        "some college",
+        "bachelor's degree",
+        "master's degree"
+      ],
+      "title": "Parental Level of Education",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "math score",
+      "title": "Average Math Score",
+      "type": "quantitative"
     }
-  ],
-  "width": 700
+  },
+  "height": 400,
+  "mark": {
+    "type": "bar"
+  },
+  "title": "Average Math Scores by Race/Ethnicity within Parental Education Levels",
+  "width": 600
 }

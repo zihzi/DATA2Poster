@@ -1,152 +1,91 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
+    "axis": {
+      "grid": true,
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16
+    },
     "view": {
       "continuousHeight": 300,
       "continuousWidth": 300
     }
   },
   "data": {
-    "name": "data-49289b999e2ce5bf153fd5663aab3d36"
+    "name": "data-734aa861e4d3825417bf134c9f83ff3a"
   },
   "datasets": {
-    "data-49289b999e2ce5bf153fd5663aab3d36": [
+    "data-734aa861e4d3825417bf134c9f83ff3a": [
       {
-        "Quality of Sleep": 4.0,
-        "Sleep Duration": 5.86,
-        "Stress Level": 8.0
+        "Genre": "Drama",
+        "Worldwide Gross": 220000000
       },
       {
-        "Quality of Sleep": 5.0,
-        "Sleep Duration": 6.5,
-        "Stress Level": 7.0
-      },
-      {
-        "Quality of Sleep": 6.0,
-        "Sleep Duration": 6.15,
-        "Stress Level": 6.0
-      },
-      {
-        "Quality of Sleep": 6.0,
-        "Sleep Duration": 6.436111111111111,
-        "Stress Level": 7.0
-      },
-      {
-        "Quality of Sleep": 6.0,
-        "Sleep Duration": 6.064615384615385,
-        "Stress Level": 8.0
-      },
-      {
-        "Quality of Sleep": 7.0,
-        "Sleep Duration": 6.58,
-        "Stress Level": 4.0
-      },
-      {
-        "Quality of Sleep": 7.0,
-        "Sleep Duration": 7.1000000000000005,
-        "Stress Level": 5.0
-      },
-      {
-        "Quality of Sleep": 7.0,
-        "Sleep Duration": 7.6157894736842096,
-        "Stress Level": 6.0
-      },
-      {
-        "Quality of Sleep": 7.0,
-        "Sleep Duration": 6.6,
-        "Stress Level": 7.0
-      },
-      {
-        "Quality of Sleep": 8.0,
-        "Sleep Duration": 7.5,
-        "Stress Level": 3.0
-      },
-      {
-        "Quality of Sleep": 8.0,
-        "Sleep Duration": 7.241860465116279,
-        "Stress Level": 4.0
-      },
-      {
-        "Quality of Sleep": 8.0,
-        "Sleep Duration": 7.528333333333333,
-        "Stress Level": 5.0
-      },
-      {
-        "Quality of Sleep": 8.0,
-        "Sleep Duration": 7.225,
-        "Stress Level": 6.0
-      },
-      {
-        "Quality of Sleep": 9.0,
-        "Sleep Duration": 8.247826086956522,
-        "Stress Level": 3.0
-      },
-      {
-        "Quality of Sleep": 9.0,
-        "Sleep Duration": 8.1,
-        "Stress Level": 4.0
+        "Genre": "Thriller",
+        "Worldwide Gross": 280000000
       }
     ]
   },
   "encoding": {
     "color": {
-      "field": "Sleep Duration",
-      "scale": {
-        "scheme": "viridis"
+      "field": "Genre",
+      "legend": {
+        "title": "Genre"
       },
-      "title": "Mean Sleep Duration",
-      "type": "quantitative"
-    },
-    "size": {
-      "field": "Sleep Duration",
-      "title": "Mean Sleep Duration",
-      "type": "quantitative"
+      "scale": {
+        "domain": [
+          "Drama",
+          "Thriller"
+        ],
+        "range": [
+          "#1E6091",
+          "#168AAD"
+        ]
+      },
+      "type": "nominal"
     },
     "tooltip": [
       {
-        "field": "Quality of Sleep",
-        "type": "quantitative"
+        "field": "Genre",
+        "title": "Genre",
+        "type": "nominal"
       },
       {
-        "field": "Stress Level",
-        "type": "quantitative"
-      },
-      {
-        "field": "Sleep Duration",
-        "format": ".2f",
-        "title": "Mean Sleep Duration",
+        "field": "Worldwide Gross",
+        "format": "$,",
+        "title": "Total Worldwide Gross",
         "type": "quantitative"
       }
     ],
     "x": {
-      "field": "Quality of Sleep",
-      "title": "Quality of Sleep",
-      "type": "quantitative"
+      "axis": {
+        "labelAngle": 0
+      },
+      "field": "Genre",
+      "title": "Genre",
+      "type": "nominal"
     },
     "y": {
-      "field": "Stress Level",
-      "title": "Stress Level",
+      "axis": {
+        "format": "$,",
+        "grid": true
+      },
+      "field": "Worldwide Gross",
+      "scale": {
+        "zero": true
+      },
+      "title": "Total Worldwide Gross (USD)",
       "type": "quantitative"
     }
   },
-  "height": 400,
+  "height": 300,
   "mark": {
-    "size": 100,
-    "type": "circle"
+    "type": "bar"
   },
-  "params": [
-    {
-      "bind": "scales",
-      "name": "param_12",
-      "select": {
-        "encodings": [
-          "x",
-          "y"
-        ],
-        "type": "interval"
-      }
-    }
-  ],
-  "title": "Joint Effect of Quality of Sleep and Stress Level on Sleep Duration",
-  "width": 500
+  "title": "Total Worldwide Gross for Drama vs. Thriller Genres",
+  "width": 400
 }

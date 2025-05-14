@@ -2,21 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
   "config": {
     "axis": {
-      "labelFontSize": 13,
-      "titleFontSize": 15
-    },
-    "legend": {
-      "direction": "horizontal",
       "labelFontSize": 12,
-      "orient": "top",
-      "padding": 10,
-      "symbolSize": 150,
-      "symbolType": "circle",
       "titleFontSize": 14
     },
     "title": {
       "anchor": "start",
-      "fontSize": 18
+      "fontSize": 16
     },
     "view": {
       "continuousHeight": 300,
@@ -24,108 +15,181 @@
     }
   },
   "data": {
-    "name": "data-17aff208eee30df8564cdcffb763b9df"
+    "name": "data-10f8affb28990309ba3dfa820248620e"
   },
   "datasets": {
-    "data-17aff208eee30df8564cdcffb763b9df": [
+    "data-10f8affb28990309ba3dfa820248620e": [
       {
-        "Democrat": 42.78666666666667,
-        "Region": "Midwest",
-        "Republican": 55.39166666666666
+        "gender": "female",
+        "math score": 55.0,
+        "race/ethnicity": "group a",
+        "test preparation course": "completed"
       },
       {
-        "Democrat": 55.18,
-        "Region": "Northeast",
-        "Republican": 42.78888888888889
+        "gender": "female",
+        "math score": 50.0,
+        "race/ethnicity": "group a",
+        "test preparation course": "none"
       },
       {
-        "Democrat": 39.3125,
-        "Region": "Southeast",
-        "Republican": 59.20666666666667
+        "gender": "male",
+        "math score": 78.0,
+        "race/ethnicity": "group a",
+        "test preparation course": "completed"
       },
       {
-        "Democrat": 43.225,
-        "Region": "Southwest",
-        "Republican": 55.0925
+        "gender": "male",
+        "math score": 55.25,
+        "race/ethnicity": "group a",
+        "test preparation course": "none"
       },
       {
-        "Democrat": 46.09727272727272,
-        "Region": "West",
-        "Republican": 50.93818181818181
+        "gender": "female",
+        "math score": 76.5,
+        "race/ethnicity": "group b",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "female",
+        "math score": 64.5,
+        "race/ethnicity": "group b",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "male",
+        "math score": 59.0,
+        "race/ethnicity": "group b",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "male",
+        "math score": 57.75,
+        "race/ethnicity": "group b",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "female",
+        "math score": 70.0,
+        "race/ethnicity": "group c",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "female",
+        "math score": 61.0,
+        "race/ethnicity": "group c",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "male",
+        "math score": 64.0,
+        "race/ethnicity": "group c",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "male",
+        "math score": 66.66666666666667,
+        "race/ethnicity": "group c",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "female",
+        "math score": 66.0,
+        "race/ethnicity": "group d",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "female",
+        "math score": 62.8,
+        "race/ethnicity": "group d",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "male",
+        "math score": 65.33333333333333,
+        "race/ethnicity": "group d",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "male",
+        "math score": 55.0,
+        "race/ethnicity": "group d",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "female",
+        "math score": 82.0,
+        "race/ethnicity": "group e",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "female",
+        "math score": 53.0,
+        "race/ethnicity": "group e",
+        "test preparation course": "none"
+      },
+      {
+        "gender": "male",
+        "math score": 79.0,
+        "race/ethnicity": "group e",
+        "test preparation course": "completed"
+      },
+      {
+        "gender": "male",
+        "math score": 75.0,
+        "race/ethnicity": "group e",
+        "test preparation course": "none"
       }
     ]
   },
   "encoding": {
     "color": {
-      "field": "Party",
-      "scale": {
-        "domain": [
-          "Democrat",
-          "Republican"
-        ],
-        "range": [
-          "#168AAD",
-          "#D9ED92"
-        ]
-      },
-      "title": "Party",
+      "field": "gender",
+      "title": "Gender",
+      "type": "nominal"
+    },
+    "column": {
+      "field": "test preparation course",
+      "title": "Test Preparation Course",
       "type": "nominal"
     },
     "tooltip": [
       {
-        "field": "Region",
-        "title": "Region",
+        "field": "race/ethnicity",
+        "title": "Race/Ethnicity",
         "type": "nominal"
       },
       {
-        "field": "Party",
-        "title": "Party",
+        "field": "gender",
+        "title": "Gender",
         "type": "nominal"
       },
       {
-        "field": "Percent",
+        "field": "test preparation course",
+        "title": "Test Preparation Course",
+        "type": "nominal"
+      },
+      {
+        "field": "math score",
         "format": ".2f",
-        "title": "Average Percent",
+        "title": "Average Math Score",
         "type": "quantitative"
       }
     ],
     "x": {
-      "field": "Region",
-      "sort": {
-        "field": "Percent",
-        "op": "sum",
-        "order": "descending"
-      },
-      "title": "Region",
+      "field": "race/ethnicity",
+      "title": "Race/Ethnicity",
       "type": "nominal"
     },
     "y": {
-      "axis": {
-        "format": "%"
-      },
-      "field": "Percent",
-      "title": "Average Percentage",
+      "field": "math score",
+      "title": "Average Math Score",
       "type": "quantitative"
     }
   },
-  "height": 450,
+  "height": 300,
   "mark": {
-    "cornerRadiusTopLeft": 3,
-    "cornerRadiusTopRight": 3,
     "type": "bar"
   },
-  "title": "Average DEM_PERCENT and REP_PERCENT by Region",
-  "transform": [
-    {
-      "as": [
-        "Party",
-        "Percent"
-      ],
-      "fold": [
-        "Democrat",
-        "Republican"
-      ]
-    }
-  ],
-  "width": 700
+  "title": "Average Math Scores by Race/Ethnicity, Gender, and Test Preparation Course",
+  "width": 150
 }
