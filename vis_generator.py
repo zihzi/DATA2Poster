@@ -4,38 +4,51 @@ from langchain_core.messages import SystemMessage, HumanMessage
 
 
 # **Agent 1: Generates Initial Visualization Code**
-def agent_1_generate_code(query, dataset, nl4DV_json, code_template, openai_key):
+def agent_1_generate_code(table_name, query,sampled_data, openai_key):
     prompt = """
-    You are an expert Python programmer specializing in data visualization.
-    Here is the query, dataset, visualization taskinformation, and code template for the viusalization chart.
-    Refer to the vega-lite specification to generate full vega-lite visualization code BY MODIFYING THE SPECIFIED PARTS OF THE TEMPLATE. 
-    ALWAYS make sure visualize each attributes and the task in the information. 
-    The visualization code MUST BE EXECUTABLE and MUST NOT CONTAIN ANY SYNTAX OR LOGIC ERRORS (e.g., it must consider the data types and use them correctly). 
-    You MUST first generate a brief plan for how you would solve the task e.g. how to set the parameters in each function correctly, how to prepare the data, how to manipulate the data so that it becomes appropriate for later functions to call etc,.
-    ONLY return the code. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
+    You are a data analysis assistant that uses Vega-Lite to create data visualizations.
+    Your task is to create the optimal visualization for the {table_name} data table using Vega-Lite to complete this query:{query}
+    The {table_name} data table is as follows:{sampled_data}
+    [\Instructions]
+    Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
+    Rule 2: The "transform" property should be put ahead of the "encoding" property.
+    Rule 3: Always include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
+    Rule 4: Rule 3: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
+    Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
+    Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
+    You MUST first generate a brief plan for how you would solve the query e.g.  how to prepare the data, how to manipulate the data.
+    ONLY return the Vega-Lite specification. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
+    [\Instructions]
+    example of Vega-Lite specification:
+    [\Example]
+    The query is:"Show all majors and corresponding number of students by a scatter plot."
+    The Vega-Lite specification is:
+            {{
+                "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                "data": {{"url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/students.csv"}},
+                "transform": [
+                    {{"aggregate": [{{"op": "count", "field": "Major", "as": "Number of Students"}}],"groupby": ["Major"]}}
+                ],
+                "mark": "point",
+                "encoding": {{
+                    "x": {{"field": "Major", "type": "nominal"}},
+                    "y": {{"field": "Number of Students", "type": "quantitative"}}
+                }}
+            }}
+    [\Example]
     """                      
     prompt_input = PromptTemplate(
-                        template="""
-                        Here is the query.\n\n
-                        {query}\n\n
-                        Here is the dataset.\n\n
-                        {dataset}\n\n
-                        Here is the information.\n\n
-                        {nl4DV_json}\n\n
-                        Here is the code template.\n\n
-                        {code_template}\n\n
-                        """,
-                        input_variables=["query", "dataset", "nl4DV_json", "code_template"],
+                        template=prompt,
+                        input_variables=["table_name", "query", "sampled_data"],
             )
     # interact with LLM
     llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
-                        messages=[SystemMessage(content=prompt),                         
-                        SystemMessagePromptTemplate.from_template(prompt_input.template)
+                        messages=[SystemMessagePromptTemplate.from_template(prompt_input.template)
                         ]
                     )
     chain = prompt_for_chain | llm      
-    response = chain.invoke(input= {"query":query, "dataset":dataset, "nl4DV_json":nl4DV_json, "code_template":code_template})
+    response = chain.invoke(input= {"table_name":table_name, "query":query, "sampled_data":sampled_data})
     return response.content
     
 

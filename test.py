@@ -1,6 +1,6 @@
 # import pandas as pd
 # import json
-# import altair as alt
+import altair as alt
 # import altair_saver
 # df = pd.read_csv("data/cas_cancer_nc.csv")
 # df.drop(columns=["id"],inplace=True)
@@ -9,56 +9,82 @@
 
 import pandas as pd
 
-# Load CSV data
-df = pd.read_csv("data/2024USA_presidential_election.csv")
-df["REP_PERCENT"] = df["REP_PERCENT"].str.rstrip('%').astype(float)
-df["DEM_PERCENT"] = df["DEM_PERCENT"].str.rstrip('%').astype(float)
-df["OTH_PERCENT"] = df["OTH_PERCENT"].str.rstrip('%').astype(float)
-df["STATE"] = df["STATE"].astype("category")
 
-# Define region mapping
-region_map = {
-    "Northeast": [
-        "Connecticut", "Maine", "Massachusetts", "New Hampshire",
-        "Rhode Island", "Vermont", "New Jersey", "New York", "Pennsylvania"
+dic ={
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.17.0.json",
+  "config": {
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 14
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 16
+    },
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 300
+    }
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Movies.csv"
+  },
+  "encoding": {
+    "color": {
+      "field": "Genre",
+      "legend": {
+        "title": "Genre"
+      },
+      "scale": {
+        "domain": [
+          "Drama",
+          "Thriller"
+        ],
+        "range": [
+          "#1E6091",
+          "#168AAD"
+        ]
+      },
+      "type": "nominal"
+    },
+    "tooltip": [
+      {
+        "field": "Genre",
+        "title": "Genre",
+        "type": "nominal"
+      },
+      {
+        "field": "Worldwide Gross",
+        "format": "$,",
+        "title": "Total Worldwide Gross",
+        "type": "quantitative"
+      }
     ],
-    "Southeast": [
-        "Alabama", "Arkansas", "Florida", "Georgia", "Kentucky", "Louisiana",
-        "Mississippi", "North Carolina", "South Carolina", "Tennessee",
-        "Virginia", "West Virginia"
-    ],
-    "Midwest": [
-        "Illinois", "Indiana", "Iowa", "Kansas", "Michigan", "Minnesota",
-        "Missouri", "Nebraska", "North Dakota", "Ohio", "South Dakota", "Wisconsin"
-    ],
-    "Southwest": ["Arizona", "New Mexico", "Oklahoma", "Texas"],
-    "West": [
-        "Alaska", "California", "Colorado", "Hawaii", "Idaho", "Montana",
-        "Nevada", "Oregon", "Utah", "Washington", "Wyoming"
-    ],
+    "x": {
+      "axis": {
+        "labelAngle": 0
+      },
+      "field": "Genre",
+      "title": "Genre",
+      "type": "nominal"
+    },
+    "y": {
+      "axis": {
+        "format": "$,",
+    
+      },
+      "field": "Worldwide Gross",
+      "title": "Total Worldwide Gross (USD)",
+      "type": "quantitative"
+    }
+  },
+  "height": 300,
+  "mark": {
+    "type": "bar"
+  },
+  "title": "Total Worldwide Gross for Drama vs. Thriller Genres",
+  "width": 400
 }
-
-# Create reverse map: State → Region
-state_to_region = {}
-for region, states in region_map.items():
-    for state in states:
-        state_to_region[state] = region
-
-# Add a Region column
-df["Region"] = df["STATE"].map(state_to_region)
-
-# Show grouped data (e.g., total votes per region)
-grouped = df.groupby("Region").agg({
-    "TOTAL_VOTES": "sum",
-    "DEM_VOTES": "sum",
-    "DEM_PERCENT": "mean",
-    "DEM_EV": "sum",
-    "REP_VOTES": "sum",
-    "REP_PERCENT": "mean",
-    "REP_EV": "sum",
-    "OTH_VOTES": "sum",
-    "OTH_PERCENT": "mean",
-    "OTH_EV": "sum"}).reset_index()
-
-print(grouped)
-grouped.to_csv("regional_vote_summary.csv", index=False)
+chart = alt.Chart.from_dict(dic)
+chart.save('chart.json')
+chart.save('chart.png')

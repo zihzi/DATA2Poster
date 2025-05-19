@@ -15,7 +15,7 @@ from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
 from question_evaluator import expand_questions
-from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code
+from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code, agent_1_generate_code
 from pathlib import Path
 from poster_generator import create_pdf
 
@@ -42,7 +42,7 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["movies"] = pd.read_csv("data/movies.csv")
+    datasets["Movies"] = pd.read_csv("data/Movies.csv")
     datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
     datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
     datasets["Iris"] = pd.read_csv("data/Iris.csv")
@@ -626,145 +626,152 @@ if try_true or (st.session_state["bt_try"] == "T"):
             for query in q_for_nl4DV:
                 st.write(f'**Question for Chart:**',f'**{query}**')
                 print("\n🟢 Step 1: Generating Initial Code...\n")
-                results = st.session_state["vectorstore"].similarity_search(
-                                    query,
-                                    k=1,
-                                )
-                chart_vega_json = json.loads(results[0].page_content)
-                st.write("RAG Vega-Lite JSON:",chart_vega_json)
-                chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
-                prompt_chart_test = PromptTemplate(
-                                    template=chart_test_template,
-                                    input_variables=["query","sampled_data","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
+                # results = st.session_state["vectorstore"].similarity_search(
+                #                     query,
+                #                     k=1,
+                #                 )
+                # chart_vega_json = json.loads(results[0].page_content)
+                # st.write("RAG Vega-Lite JSON:",chart_vega_json)
+                # chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
+                # prompt_chart_test = PromptTemplate(
+                #                     template=chart_test_template,
+                #                     input_variables=["query","sampled_data","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
 
-                        )
-                chart_test_chain = prompt_chart_test | llm
-                chart_code = chart_test_chain.invoke(input = {"query":query,"sampled_data":summary,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
-                print(chart_code.content)
-              
-                exec_count=0
-                try:
-                    print("\n🔵 Step 3: Ensuring Code is Executable...\n")
-                    final_code = agent_3_fix_code(chart_code.content, openai_key)
-                    while exec_count < 3:  # Loop until the code executes successfully
-                        try:
-                            print("\n🟢 Trying to execute the code...\n")
-                            code_executed = preprocess_json(final_code, idx)
-                            print("\n✅ Code executed successfully!\n")
-                            break  # Exit loop when execution is successful
+                #         )
+                # chart_test_chain = prompt_chart_test | llm
+                # chart_code = chart_test_chain.invoke(input = {"query":query,"sampled_data":summary,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
+                # print(chart_code.content)
+                st.session_state["df"] = datasets[chosen_dataset]
+                vlspec = agent_1_generate_code(chosen_dataset,query,summary,openai_key)
+                st.write("Vega-Lite JSON:",vlspec)
+                json_code = json.loads(vlspec)
+                test_chart = alt.Chart.from_dict(json_code)
+                test_chart.save(f"json_code_{idx}.json")
+                test_chart.save(f"image_{idx}.png")
+                st.altair_chart(test_chart, theme = None)
+                # exec_count=0
+                # try:
+                #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
+                #     final_code = agent_3_fix_code(chart_code.content, openai_key)
+                #     while exec_count < 3:  # Loop until the code executes successfully
+                #         try:
+                #             print("\n🟢 Trying to execute the code...\n")
+                #             code_executed = preprocess_json(final_code, idx)
+                #             print("\n✅ Code executed successfully!\n")
+                #             break  # Exit loop when execution is successful
                         
-                        except Exception as e:
-                            exec_count += 1
-                            error = str(e)
-                            error_code = final_code
-                            print(f"\n🔴 Error encountered: {error}\n")
+                #         except Exception as e:
+                #             exec_count += 1
+                #             error = str(e)
+                #             error_code = final_code
+                #             print(f"\n🔴 Error encountered: {error}\n")
                             
-                            # Load error-handling prompt
-                            error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
-                            error_prompt = PromptTemplate(
-                                template=error_prompt_template,
-                                input_variables=["error_code", "error"],
-                            )    
+                #             # Load error-handling prompt
+                #             error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+                #             error_prompt = PromptTemplate(
+                #                 template=error_prompt_template,
+                #                 input_variables=["error_code", "error"],
+                #             )    
 
-                            error_chain = error_prompt | llm 
+                #             error_chain = error_prompt | llm 
                             
-                            # Invoke the chain to fix the code
-                            corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
-                            final_code = corrected_code.content  # Update with the corrected code
+                #             # Invoke the chain to fix the code
+                #             corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
+                #             final_code = corrected_code.content  # Update with the corrected code
 
-                except Exception as final_exception:
-                    print("\n❌ Failed to generate executable code after multiple attempts.")
-                show_chart_flag = 1
-                if exec_count == 3:
-                    st.error("The code is failed to execute.")
-                    show_chart_flag = 0
-                binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
-                url = f'data:image/png;base64,{base64_utf8_str}'
+                # except Exception as final_exception:
+                #     print("\n❌ Failed to generate executable code after multiple attempts.")
+                # show_chart_flag = 1
+                # if exec_count == 3:
+                #     st.error("The code is failed to execute.")
+                #     show_chart_flag = 0
+                # binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                # base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
+                # url = f'data:image/png;base64,{base64_utf8_str}'
 
-                feedback = agent_2_improve_code(query, url, openai_key)
-                st.write(feedback)
-                exec_count=0
-                improved_code = agent_improve_vis(chart_code.content, feedback, openai_key)
-                try:
-                    print("\n🔵 Step 3: Ensuring Code is Executable...\n")
-                    final_code = agent_3_fix_code(improved_code, openai_key)
-                    while exec_count < 3:  # Loop until the code executes successfully
-                        try:
-                            print("\n🟢 Trying to execute the code...\n")
-                            code_executed = preprocess_json_2(final_code, idx)
-                            print("\n✅ Code executed successfully!\n")
-                            break  # Exit loop when execution is successful
+                # feedback = agent_2_improve_code(query, url, openai_key)
+                # st.write(feedback)
+                # exec_count=0
+                # improved_code = agent_improve_vis(chart_code.content, feedback, openai_key)
+                # try:
+                #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
+                #     final_code = agent_3_fix_code(improved_code, openai_key)
+                #     while exec_count < 3:  # Loop until the code executes successfully
+                #         try:
+                #             print("\n🟢 Trying to execute the code...\n")
+                #             code_executed = preprocess_json_2(final_code, idx)
+                #             print("\n✅ Code executed successfully!\n")
+                #             break  # Exit loop when execution is successful
                         
-                        except Exception as e:
-                            exec_count += 1
-                            error = str(e)
-                            error_code = final_code
-                            print(f"\n🔴 Error encountered: {error}\n")
+                #         except Exception as e:
+                #             exec_count += 1
+                #             error = str(e)
+                #             error_code = final_code
+                #             print(f"\n🔴 Error encountered: {error}\n")
                             
-                            # Load error-handling prompt
-                            error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
-                            error_prompt = PromptTemplate(
-                                template=error_prompt_template,
-                                input_variables=["error_code", "error"],
-                            )    
+                #             # Load error-handling prompt
+                #             error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+                #             error_prompt = PromptTemplate(
+                #                 template=error_prompt_template,
+                #                 input_variables=["error_code", "error"],
+                #             )    
 
-                            error_chain = error_prompt | llm 
+                #             error_chain = error_prompt | llm 
                             
-                            # Invoke the chain to fix the code
-                            corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
-                            final_code = corrected_code.content  # Update with the corrected code
+                #             # Invoke the chain to fix the code
+                #             corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
+                #             final_code = corrected_code.content  # Update with the corrected code
 
-                except Exception as final_exception:
-                    print("\n❌ Failed to generate executable code after multiple attempts.")
-                show_chart_flag = 1
-                if exec_count == 3:
-                    st.error("The code is failed to execute.")
-                    show_chart_flag = 0
-                # load the vega_lite_json for insight_prompt
-                with open(f"nl4DV_json/vega_lite_json_{idx}.json", "rb") as f:
-                        chart = json.load(f)
-                        for key in chart["datasets"]:
-                            chart_data = chart["datasets"][key]
+                # except Exception as final_exception:
+                #     print("\n❌ Failed to generate executable code after multiple attempts.")
+                # show_chart_flag = 1
+                # if exec_count == 3:
+                #     st.error("The code is failed to execute.")
+                #     show_chart_flag = 0
+                # # load the vega_lite_json for insight_prompt
+                # with open(f"nl4DV_json/vega_lite_json_{idx}.json", "rb") as f:
+                #         chart = json.load(f)
+                #         for key in chart["datasets"]:
+                #             chart_data = chart["datasets"][key]
                             
-                if show_chart_flag == 1:
-                    st.vega_lite_chart(chart, theme = None)
-                chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-                prompt_chart = PromptTemplate(
-                                        template=chart_prompt_template,
-                                        input_variables=["query","chart_type","chart_title","x_field","y_field","chart_data"],
-                            )
+                # if show_chart_flag == 1:
+                #     st.vega_lite_chart(chart, theme = None)
+                # chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+                # prompt_chart = PromptTemplate(
+                #                         template=chart_prompt_template,
+                #                         input_variables=["query","chart_type","chart_title","x_field","y_field","chart_data"],
+                #             )
                 
-                chain_pattern = prompt_chart | llm
-                chart_des = chain_pattern.invoke(input = {"query":query,"chart_data":chart_data})
+                # chain_pattern = prompt_chart | llm
+                # chart_des = chain_pattern.invoke(input = {"query":query,"chart_data":chart_data})
 
-                supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
+                # supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
 
                 
-                st.write(f'**Chart Description:**', f'**{chart_des.content}**')
-                st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
-                # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
+                # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
+                # # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
                 
-                # call GPT to generate insight description
-                insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
-                insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
-                insight_prompt_input = PromptTemplate(
-                            template=insight_prompt_input_template,
-                            input_variables=["query", "chart_des"],
-                            # response_format=Insight,                         
-                ) 
-                insight_prompt = ChatPromptTemplate.from_messages(
-                        messages=[
-                            SystemMessage(content = insight_prompt_template),
-                            HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
-                        ]
-                    )
+                # # call GPT to generate insight description
+                # insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
+                # insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
+                # insight_prompt_input = PromptTemplate(
+                #             template=insight_prompt_input_template,
+                #             input_variables=["query", "chart_des"],
+                #             # response_format=Insight,                         
+                # ) 
+                # insight_prompt = ChatPromptTemplate.from_messages(
+                #         messages=[
+                #             SystemMessage(content = insight_prompt_template),
+                #             HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
+                #         ]
+                #     )
                 
-                insight_chain = insight_prompt | llm
-                insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-                insight_list.append(insight.content)
-                st.write(f'**Insight Description:**', f'**{insight.content}**')
-                chart_des_list.append(chart_des.content)
+                # insight_chain = insight_prompt | llm
+                # insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
+                # insight_list.append(insight.content)
+                # st.write(f'**Insight Description:**', f'**{insight.content}**')
+                # chart_des_list.append(chart_des.content)
                 idx+=1
                 
          
