@@ -15,7 +15,8 @@ from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
 from question_evaluator import expand_questions
-from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code, agent_1_generate_code
+from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code, agent_1_generate_code,agent_4_validate_spec
+import vl_convert as vlc
 from pathlib import Path
 from poster_generator import create_pdf
 
@@ -42,7 +43,7 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["Movies"] = pd.read_csv("data/Movies.csv")
+    datasets["movies"] = pd.read_csv("data/movies.csv")
     datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
     datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
     datasets["Iris"] = pd.read_csv("data/Iris.csv")
@@ -50,7 +51,8 @@ if "datasets" not in st.session_state:
     datasets["Employee"] = pd.read_csv("data/Employee.csv")
     datasets["Housing"] = pd.read_csv("data/Housing.csv")
     datasets["regional_presidential_election"] = pd.read_csv("data/regional_presidential_election.csv")
-    datasets["UberDataset"] = pd.read_csv("data/UberDataset.csv")
+    datasets["bike_sharing_day"] = pd.read_csv("data/bike_sharing_day.csv")
+    datasets["cancer_by_year"] = pd.read_csv("data/cancer_by_year.csv")
     
     st.session_state["datasets"] = datasets
 else:
@@ -81,7 +83,9 @@ with st.sidebar:
 
 # Get the schema of the chosen dataset    
 chosen_data_schema = get_column_properties(datasets[chosen_dataset])
-st.write("Data Schema:",chosen_data_schema)
+
+
+
 
 # Calculate the importance score of data facts
 score_importance(chosen_data_schema)
@@ -114,6 +118,7 @@ try_true = st.button("Try it out!")
 # Use NL4DV to generate chosen_dataset's summary
 nl4dv_instance = NL4DV(data_value = datasets[chosen_dataset])
 summary = nl4dv_instance.get_metadata()
+
 
 # Get 'CNC', 'TNC', 'TNT', 'CNN', 'TNN' for calculating data facts
 
@@ -291,7 +296,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     if api_keys_entered:
         # use GPT as llm
-        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openai_key)
+        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14",api_key = openai_key)
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key)
         # Initial stage to generate facts and questions by user-selected column
@@ -626,12 +631,12 @@ if try_true or (st.session_state["bt_try"] == "T"):
             for query in q_for_nl4DV:
                 st.write(f'**Question for Chart:**',f'**{query}**')
                 print("\n🟢 Step 1: Generating Initial Code...\n")
-                # results = st.session_state["vectorstore"].similarity_search(
-                #                     query,
-                #                     k=1,
-                #                 )
-                # chart_vega_json = json.loads(results[0].page_content)
-                # st.write("RAG Vega-Lite JSON:",chart_vega_json)
+                result = st.session_state["vectorstore"].similarity_search(
+                                    query,
+                                    k=1,
+                                )
+                # chart_vega_json = json.loads(result[0].page_content)
+                st.write("RAG Vega-Lite JSON:",result[0].page_content)
                 # chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
                 # prompt_chart_test = PromptTemplate(
                 #                     template=chart_test_template,
@@ -642,13 +647,16 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # chart_code = chart_test_chain.invoke(input = {"query":query,"sampled_data":summary,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
                 # print(chart_code.content)
                 st.session_state["df"] = datasets[chosen_dataset]
-                vlspec = agent_1_generate_code(chosen_dataset,query,summary,openai_key)
+                vlspec = agent_1_generate_code(chosen_dataset,query,chosen_data_schema,result, openai_key)
                 st.write("Vega-Lite JSON:",vlspec)
                 json_code = json.loads(vlspec)
-                test_chart = alt.Chart.from_dict(json_code)
-                test_chart.save(f"json_code_{idx}.json")
-                test_chart.save(f"image_{idx}.png")
-                st.altair_chart(test_chart, theme = None)
+                json_code["height"] = 400
+                json_code["width"] = 600
+                st.write("Vega-Lite JSON:",json_code)
+                png_data = vlc.vegalite_to_png(vl_spec=json_code,scale=2.0)
+                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                    f.write(png_data)
+                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Generated Chart")
                 # exec_count=0
                 # try:
                 #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
@@ -685,21 +693,58 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # if exec_count == 3:
                 #     st.error("The code is failed to execute.")
                 #     show_chart_flag = 0
-                # binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                # base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
-                # url = f'data:image/png;base64,{base64_utf8_str}'
-
-                # feedback = agent_2_improve_code(query, url, openai_key)
-                # st.write(feedback)
+                binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
+                url = f'data:image/png;base64,{base64_utf8_str}'
+                feedback = agent_2_improve_code(query, url, openai_key)
+                st.write(feedback)
                 # exec_count=0
-                # improved_code = agent_improve_vis(chart_code.content, feedback, openai_key)
+                improved_code = agent_improve_vis(vlspec, feedback,chosen_data_schema, openai_key)
+                improved_json = json.loads(improved_code)
+                improved_json["height"] = 400
+                improved_json["width"] = 600
+                st.write("Improved Vega-Lite JSON:",improved_json)
+                improved_png_data = vlc.vegalite_to_png(vl_spec=improved_json,scale=3.0)
+                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                    f.write(improved_png_data)
+                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Improved Chart")
+                
+                final_code = agent_4_validate_spec(improved_code,chosen_data_schema, openai_key)
+                final_json = json.loads(final_code)
+                final_json["height"] = 400
+                final_json["width"] = 600
+                st.write("Final Vega-Lite JSON:",final_json)
+                final_png_data = vlc.vegalite_to_png(vl_spec=final_json,scale=3.0)
+                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                    f.write(final_png_data)
+                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
+
+                # # alt_template = load_prompt_from_file("prompt_templates/altiar_templates.txt")
+            
+                # # prompt = [
+                # #     SystemMessage(content=alt_template),
+                # #     HumanMessage(content=[
+                # #         {
+                # #             "type": "text", 
+                # #             "text": f"Here is the given code template:\n\n{code_template}\n\n"
+                # #         },
+                # #         {
+                # #             "type": "text", 
+                # #             "text": f"Here is the given Vega-Lite JSON specification:{improved_code}"
+                # #         }
+                # #     ])
+                # # ] 
+                # # response = llm.invoke(prompt)
+                # # st.code(response.content)
                 # try:
                 #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
                 #     final_code = agent_3_fix_code(improved_code, openai_key)
                 #     while exec_count < 3:  # Loop until the code executes successfully
                 #         try:
                 #             print("\n🟢 Trying to execute the code...\n")
-                #             code_executed = preprocess_json_2(final_code, idx)
+                #             improved_chart = alt.Chart.from_dict(improved_json)
+                #             improved_chart.save(f"vega_lite_json_{idx}.json")
+                #             improved_chart.save(f"image_{idx}.png")
                 #             print("\n✅ Code executed successfully!\n")
                 #             break  # Exit loop when execution is successful
                         
@@ -728,6 +773,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # if exec_count == 3:
                 #     st.error("The code is failed to execute.")
                 #     show_chart_flag = 0
+                # st.altair_chart(improved_chart, theme = None)
                 # # load the vega_lite_json for insight_prompt
                 # with open(f"nl4DV_json/vega_lite_json_{idx}.json", "rb") as f:
                 #         chart = json.load(f)
@@ -736,42 +782,59 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             
                 # if show_chart_flag == 1:
                 #     st.vega_lite_chart(chart, theme = None)
-                # chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-                # prompt_chart = PromptTemplate(
-                #                         template=chart_prompt_template,
-                #                         input_variables=["query","chart_type","chart_title","x_field","y_field","chart_data"],
-                #             )
+                binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
+                img_url = f'data:image/png;base64,{base64_utf8_chart}' 
+                chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+                chart_des_prompt = [
+                    SystemMessage(content=chart_prompt_template),
+                    HumanMessage(content=[
+                        {
+                            "type": "text", 
+                            "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
+                        },
+                        {
+                                "type": "text", 
+                                "text": "Here is the chart to describe:"
+                        },
+                        {
+                                "type": "image_url",
+                                "image_url": {
+                                    "url": img_url
+                                },
+                        },
+                    ])
+                ] 
                 
-                # chain_pattern = prompt_chart | llm
-                # chart_des = chain_pattern.invoke(input = {"query":query,"chart_data":chart_data})
+                chart_des =  llm.invoke(chart_des_prompt)
 
-                # supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
+                supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
 
                 
-                # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
-                # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
-                # # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
+                st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
+                # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
                 
-                # # call GPT to generate insight description
-                # insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
-                # insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
-                # insight_prompt_input = PromptTemplate(
-                #             template=insight_prompt_input_template,
-                #             input_variables=["query", "chart_des"],
-                #             # response_format=Insight,                         
-                # ) 
-                # insight_prompt = ChatPromptTemplate.from_messages(
-                #         messages=[
-                #             SystemMessage(content = insight_prompt_template),
-                #             HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
-                #         ]
-                #     )
+                # call GPT to generate insight description
+                insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
+                insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
+                insight_prompt_input = PromptTemplate(
+                            template=insight_prompt_input_template,
+                            input_variables=["query", "chart_des"],
+                            # response_format=Insight,                         
+                ) 
+                insight_prompt = ChatPromptTemplate.from_messages(
+                        messages=[
+                            SystemMessage(content = insight_prompt_template),
+                            HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
+                        ]
+                    )
                 
-                # insight_chain = insight_prompt | llm
-                # insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-                # insight_list.append(insight.content)
-                # st.write(f'**Insight Description:**', f'**{insight.content}**')
-                # chart_des_list.append(chart_des.content)
+                insight_chain = insight_prompt | llm
+                insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
+                insight_list.append(insight.content)
+                st.write(f'**Insight Description:**', f'**{insight.content}**')
+                chart_des_list.append(chart_des.content)
                 idx+=1
                 
          

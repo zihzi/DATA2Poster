@@ -40,8 +40,8 @@ Chain of Thought:
 3. Creating the clear-cut question:
    I need a question that would lead to comparing performance across specific demographic groups. The most direct approach would be:"How do academic performance metrics compare between group B and group C?"
 
-4. Creating the Action:
-   "Create a grouped bar chart comparing average math and writing scores for each race/ethnicity group."
+4. Creating the action:
+   "What are the differences in academic performance metrics (e.g., reading scores) between group B and group C, and how can these differences be effectively visualized using comparative charts such as grouped bar charts or box plots to highlight central tendencies and variability?"
 [/Example]
 
 [/Instructions] 
@@ -50,8 +50,10 @@ Chain of Thought:
 - The question must be suitable for visualization and align directly with the given pattern.
 - Use only VALID column names and values that appear in the pattern. These are semantically important and must be retained to ensure specificity and relevance.
 - Include column values in your question if they are explicitly mentioned in the pattern. Including values (e.g., Genre = Action, Thriller) only if they enables more targeted visualizations such as filtered comparisons or subgroup analysis.
-- Limit to a maximum of THREE column names per question.
+- Limit to a maximum of TWO column names per question.
+- Ensure there is no identical or similar questions.
 - The question MUST BE WITHIN 15 WORDS.
+- "action" is detailed statements that clarifies the visualization intent.
 - The answer to your question should directly reflect the original pattern.
 [/Instructions] 
 

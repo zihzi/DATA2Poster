@@ -22,8 +22,10 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
             properties = {}
             # Detect columns that are likely to represent temporal data.
             if any(keyword in column.lower() for keyword in temporal_keywords):
+                properties["data_type"] = dtype
                 properties["dtype"] = "T"
             elif dtype in [int, float, complex]:
+                properties["data_type"] = dtype
                 properties["dtype"] = "N"
                 properties["std"] = check_type(dtype, df[column].std())
                 properties["mean"] = check_type(dtype, df[column].mean())
@@ -42,8 +44,13 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
                 except ValueError:
                     # Check if the string column has a limited number of values
                     if len(df[column])>=8 and df[column].nunique() / len(df[column]) < 0.5:
+                        properties["dtype"] = dtype
                         properties["dtype"] = "C"
                     elif len(df[column]) < 8 and df[column].nunique() / len(df[column]) > 0.5:
+                        properties["dtype"] = dtype
+                        properties["dtype"] = "C"
+                    elif len(df[column]) >= 8 and df[column].nunique() / len(df[column]) > 0.5:
+                        properties["dtype"] = dtype
                         properties["dtype"] = "C"
                     else:
                         properties["dtype"] = "string"

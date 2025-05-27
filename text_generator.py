@@ -72,7 +72,7 @@ def conclusion(title,insight, intro, openai_key):
         
     llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'title':title, 'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2], 'intro':intro} )
+    response = conclusion_chain.invoke(input= {'title':title,'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2], 'intro':intro} )
     return response["content"]
 
 def improve_title(conclusion,openai_key):
