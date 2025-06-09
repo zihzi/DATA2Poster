@@ -51,8 +51,8 @@ if "datasets" not in st.session_state:
     datasets["Employee"] = pd.read_csv("data/Employee.csv")
     datasets["Housing"] = pd.read_csv("data/Housing.csv")
     datasets["regional_presidential_election"] = pd.read_csv("data/regional_presidential_election.csv")
-    datasets["bike_sharing_day"] = pd.read_csv("data/bike_sharing_day.csv")
-    datasets["cancer_by_year"] = pd.read_csv("data/cancer_by_year.csv")
+    datasets["2024USA_presidential_election"] = pd.read_csv("data/2024USA_presidential_election.csv")
+    datasets["Occupational gaps by gender"] = pd.read_csv("data/Occupational gaps by gender.csv")
     
     st.session_state["datasets"] = datasets
 else:
