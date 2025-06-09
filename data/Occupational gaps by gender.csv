@@ -1,322 +1,207 @@
 Pacific Island Countries,Sex,Economic sector,Number of employed persons
 Cook Islands,Female,Accommodation and Food service,443
-Cook Islands,Total,Accommodation and Food service,843
 Cook Islands,Male,Accommodation and Food service,399
-Palau,Total,Accommodation and Food service,1021
 Palau,Male,Accommodation and Food service,478
 Palau,Female,Accommodation and Food service,543
-Cook Islands,Total,Support Service,517
 Cook Islands,Male,Support Service,217
 Cook Islands,Female,Support Service,300
-Palau,Total,Support Service,1338
 Palau,Female,Support Service,456
 Palau,Male,Support Service,882
-Cook Islands,Total,Agricultur and Fishery,245
 Cook Islands,Male,Agricultur and Fishery,198
 Palau,Male,Agricultur and Fishery,434
 Palau,Female,Agricultur and Fishery,83
-Palau,Total,Agricultur and Fishery,517
 Cook Islands,Male,Construction,496
-Cook Islands,Total,Construction,506
-Palau,Total,Construction,769
 Palau,Male,Construction,743
 Palau,Female,Construction,26
-Tokelau,Total,Construction,28
 Tokelau,Male,Construction,28
 Cook Islands,Female,Education,220
-Cook Islands,Total,Education,316
 Cook Islands,Male,Education,95
 Palau,Male,Education,219
-Palau,Total,Education,686
 Palau,Female,Education,467
-Tokelau,Total,Education,66
 Tokelau,Male,Education,17
 Tokelau,Female,Education,49
-Cook Islands,Total,Electricity and Gas,47
 Cook Islands,Male,Electricity and Gas,43
 Palau,Male,Electricity and Gas,97
-Palau,Total,Electricity and Gas,116
 Palau,Female,Electricity and Gas,19
-Tokelau,Total,Electricity and Gas,22
 Tokelau,Male,Electricity and Gas,22
 Cook Islands,Male,Financial and Insurance,45
 Cook Islands,Female,Financial and Insurance,195
-Cook Islands,Total,Financial and Insurance,241
-Palau,Total,Financial and Insurance,102
 Palau,Male,Financial and Insurance,33
 Palau,Female,Financial and Insurance,69
 Cook Islands,Female,Human health and Social work ,244
 Cook Islands,Male,Human health and Social work ,43
-Cook Islands,Total,Human health and Social work ,287
 Palau,Female,Human health and Social work ,285
 Palau,Male,Human health and Social work ,116
-Palau,Total,Human health and Social work ,401
 Tokelau,Female,Human health and Social work ,27
-Tokelau,Total,Human health and Social work ,31
-Cook Islands,Total,Transportation and Storage,304
 Cook Islands,Male,Transportation and Storage,256
 Cook Islands,Female,Transportation and Storage,47
 Palau,Female,Transportation and Storage,53
 Palau,Male,Transportation and Storage,273
-Palau,Total,Transportation and Storage,326
 Cook Islands,Male,Wholesale and Retail,477
-Cook Islands,Total,Wholesale and Retail,1076
 Cook Islands,Female,Wholesale and Retail,598
 Palau,Female,Wholesale and Retail,499
-Palau,Total,Wholesale and Retail,1122
 Palau,Male,Wholesale and Retail,623
-Tokelau,Total,Wholesale and Retail,30
 Tokelau,Female,Wholesale and Retail,13
 Tokelau,Male,Wholesale and Retail,16
 Kiribati,Female,Accommodation and Food service,432
-Kiribati,Total,Accommodation and Food service,751
 Kiribati,Male,Accommodation and Food service,318
 Marshall Islands,Male,Accommodation and Food service,373
-Marshall Islands,Total,Accommodation and Food service,702
 Marshall Islands,Female,Accommodation and Food service,329
 Vanuatu,Female,Accommodation and Food service,2657
-Vanuatu,Total,Accommodation and Food service,5507
 Vanuatu,Male,Accommodation and Food service,2850
 Kiribati,Male,Support Service,652
-Kiribati,Total,Support Service,737
 Kiribati,Female,Support Service,84
-Marshall Islands,Total,Support Service,1128
 Marshall Islands,Female,Support Service,383
 Marshall Islands,Male,Support Service,744
 Vanuatu,Male,Support Service,1662
 Vanuatu,Female,Support Service,1687
-Vanuatu,Total,Support Service,3350
 Kiribati,Male,Agricultur and Fishery,3765
-Kiribati,Total,Agricultur and Fishery,4264
 Kiribati,Female,Agricultur and Fishery,498
-Marshall Islands,Total,Agricultur and Fishery,825
 Marshall Islands,Male,Agricultur and Fishery,760
 Vanuatu,Male,Agricultur and Fishery,19655
-Vanuatu,Total,Agricultur and Fishery,31617
 Vanuatu,Female,Agricultur and Fishery,11962
-Kiribati,Total,Construction,661
 Kiribati,Male,Construction,659
-Marshall Islands,Total,Construction,1149
 Marshall Islands,Male,Construction,1137
 Vanuatu,Female,Construction,133
-Vanuatu,Total,Construction,3299
 Vanuatu,Male,Construction,3165
 Kiribati,Male,Education,625
 Kiribati,Female,Education,1809
-Kiribati,Total,Education,2434
-Marshall Islands,Total,Education,2016
 Marshall Islands,Male,Education,1106
 Marshall Islands,Female,Education,909
 Vanuatu,Male,Education,1722
 Vanuatu,Female,Education,3071
-Vanuatu,Total,Education,4793
 Kiribati,Male,Electricity and Gas,182
-Kiribati,Total,Electricity and Gas,217
-Marshall Islands,Total,Electricity and Gas,695
 Marshall Islands,Male,Electricity and Gas,628
-Vanuatu,Total,Electricity and Gas,182
 Vanuatu,Male,Electricity and Gas,147
 Kiribati,Male,Financial and Insurance,87
 Kiribati,Female,Financial and Insurance,130
-Kiribati,Total,Financial and Insurance,218
-Marshall Islands,Total,Financial and Insurance,353
 Marshall Islands,Male,Financial and Insurance,163
 Marshall Islands,Female,Financial and Insurance,190
 Vanuatu,Female,Financial and Insurance,600
 Vanuatu,Male,Financial and Insurance,493
-Vanuatu,Total,Financial and Insurance,1094
 Kiribati,Male,Human health and Social work ,297
 Kiribati,Female,Human health and Social work ,838
-Kiribati,Total,Human health and Social work ,1136
 Marshall Islands,Female,Human health and Social work ,441
-Marshall Islands,Total,Human health and Social work ,836
 Marshall Islands,Male,Human health and Social work ,394
 Vanuatu,Male,Human health and Social work ,507
-Vanuatu,Total,Human health and Social work ,1167
 Vanuatu,Female,Human health and Social work ,660
 Kiribati,Male,Transportation and Storage,1748
-Kiribati,Total,Transportation and Storage,2139
 Kiribati,Female,Transportation and Storage,391
 Marshall Islands,Female,Transportation and Storage,134
 Marshall Islands,Male,Transportation and Storage,903
-Marshall Islands,Total,Transportation and Storage,1037
 Vanuatu,Male,Transportation and Storage,3313
-Vanuatu,Total,Transportation and Storage,3629
 Vanuatu,Female,Transportation and Storage,316
 Kiribati,Female,Wholesale and Retail,3483
-Kiribati,Total,Wholesale and Retail,6252
 Kiribati,Male,Wholesale and Retail,2769
 Marshall Islands,Male,Wholesale and Retail,961
-Marshall Islands,Total,Wholesale and Retail,1736
 Marshall Islands,Female,Wholesale and Retail,775
-Vanuatu,Total,Wholesale and Retail,11180
 Vanuatu,Female,Wholesale and Retail,7898
 Vanuatu,Male,Wholesale and Retail,3281
-Nauru,Total,Accommodation and Food service,71
 Nauru,Male,Accommodation and Food service,31
 Nauru,Female,Accommodation and Food service,40
 Nauru,Female,Support Service,254
 Nauru,Male,Support Service,376
-Nauru,Total,Support Service,630
-Nauru,Total,Agricultur and Fishery,57
 Nauru,Male,Agricultur and Fishery,43
 Nauru,Female,Agricultur and Fishery,14
-Nauru,Total,Construction,82
 Nauru,Male,Construction,77
 Nauru,Female,Education,171
-Nauru,Total,Education,203
 Nauru,Male,Education,32
 Nauru,Male,Electricity and Gas,71
-Nauru,Total,Electricity and Gas,87
 Nauru,Female,Electricity and Gas,16
-Nauru,Total,Financial and Insurance,15
 Nauru,Female,Financial and Insurance,13
 Nauru,Female,Human health and Social work ,119
-Nauru,Total,Human health and Social work ,165
 Nauru,Male,Human health and Social work ,46
-Nauru,Total,Transportation and Storage,129
 Nauru,Female,Transportation and Storage,24
 Nauru,Male,Transportation and Storage,105
-Nauru,Total,Wholesale and Retail,193
 Nauru,Female,Wholesale and Retail,71
 Nauru,Male,Wholesale and Retail,122
 Micronesia (Federated States of),Female,Accommodation and Food service,542
-Micronesia (Federated States of),Total,Accommodation and Food service,859
 Micronesia (Federated States of),Male,Accommodation and Food service,317
-Samoa,Total,Accommodation and Food service,1548
 Samoa,Female,Accommodation and Food service,727
 Samoa,Male,Accommodation and Food service,821
 Micronesia (Federated States of),Male,Support Service,159
-Micronesia (Federated States of),Total,Support Service,246
 Micronesia (Federated States of),Female,Support Service,87
 Samoa,Male,Support Service,1703
 Samoa,Female,Support Service,758
-Samoa,Total,Support Service,2461
 Micronesia (Federated States of),Male,Agricultur and Fishery,779
-Micronesia (Federated States of),Total,Agricultur and Fishery,821
 Micronesia (Federated States of),Female,Agricultur and Fishery,42
 Samoa,Male,Agricultur and Fishery,2138
-Samoa,Total,Agricultur and Fishery,2336
 Samoa,Female,Agricultur and Fishery,197
-Micronesia (Federated States of),Total,Construction,878
 Micronesia (Federated States of),Male,Construction,853
 Samoa,Male,Construction,1322
-Samoa,Total,Construction,1362
 Micronesia (Federated States of),Male,Education,1442
 Micronesia (Federated States of),Female,Education,1282
-Micronesia (Federated States of),Total,Education,2725
 Samoa,Female,Education,2115
 Samoa,Male,Education,1180
-Samoa,Total,Education,3295
 Micronesia (Federated States of),Male,Electricity and Gas,279
-Micronesia (Federated States of),Total,Electricity and Gas,322
 Samoa,Male,Electricity and Gas,421
-Samoa,Total,Electricity and Gas,455
 Micronesia (Federated States of),Female,Financial and Insurance,112
 Micronesia (Federated States of),Male,Financial and Insurance,91
-Micronesia (Federated States of),Total,Financial and Insurance,203
 Samoa,Female,Financial and Insurance,797
-Samoa,Total,Financial and Insurance,1369
 Samoa,Male,Financial and Insurance,572
 Micronesia (Federated States of),Female,Human health and Social work ,738
-Micronesia (Federated States of),Total,Human health and Social work ,1277
 Micronesia (Federated States of),Male,Human health and Social work ,538
 Samoa,Male,Human health and Social work ,386
 Samoa,Female,Human health and Social work ,579
-Samoa,Total,Human health and Social work ,965
 Micronesia (Federated States of),Male,Transportation and Storage,580
-Micronesia (Federated States of),Total,Transportation and Storage,702
 Micronesia (Federated States of),Female,Transportation and Storage,122
-Samoa,Total,Transportation and Storage,1603
 Samoa,Female,Transportation and Storage,305
 Samoa,Male,Transportation and Storage,1297
 Micronesia (Federated States of),Female,Wholesale and Retail,1719
 Micronesia (Federated States of),Male,Wholesale and Retail,1560
-Micronesia (Federated States of),Total,Wholesale and Retail,3280
-Samoa,Total,Wholesale and Retail,3992
 Samoa,Male,Wholesale and Retail,2184
 Samoa,Female,Wholesale and Retail,1807
 Solomon Islands,Male,Accommodation and Food service,328
-Solomon Islands,Total,Accommodation and Food service,1384
 Solomon Islands,Female,Accommodation and Food service,1055
-Solomon Islands,Total,Support Service,5418
 Solomon Islands,Female,Support Service,1129
 Solomon Islands,Male,Support Service,4289
-Solomon Islands,Male,Agricultur and Fishery,30646
-Solomon Islands,Total,Agricultur and Fishery,44668
+Solomon Islands,Male,Agricultur and Fishery,306468
 Solomon Islands,Female,Agricultur and Fishery,14021
 Solomon Islands,Female,Construction,97
 Solomon Islands,Male,Construction,4340
-Solomon Islands,Total,Construction,4438
 Solomon Islands,Female,Education,5982
 Solomon Islands,Male,Education,7385
-Solomon Islands,Total,Education,13368
 Solomon Islands,Male,Electricity and Gas,144
-Solomon Islands,Total,Electricity and Gas,155
 Solomon Islands,Male,Financial and Insurance,987
 Solomon Islands,Female,Financial and Insurance,450
-Solomon Islands,Total,Financial and Insurance,1438
-Solomon Islands,Total,Human health and Social work ,2068
 Solomon Islands,Male,Human health and Social work ,1000
 Solomon Islands,Female,Human health and Social work ,1068
 Solomon Islands,Male,Transportation and Storage,4082
-Solomon Islands,Total,Transportation and Storage,4299
 Solomon Islands,Female,Transportation and Storage,217
 Solomon Islands,Male,Wholesale and Retail,10454
 Solomon Islands,Female,Wholesale and Retail,7350
-Solomon Islands,Total,Wholesale and Retail,17805
-Niue,Total,Accommodation and Food service,62
 Niue,Male,Accommodation and Food service,25
 Niue,Female,Accommodation and Food service,37
 Tuvalu,Male,Accommodation and Food service,15
-Tuvalu,Total,Accommodation and Food service,42
 Tuvalu,Female,Accommodation and Food service,27
 Niue,Female,Support Service,65
-Niue,Total,Support Service,89
 Niue,Male,Support Service,24
 Tuvalu,Female,Support Service,71
-Tuvalu,Total,Support Service,128
 Tuvalu,Male,Support Service,57
 Niue,Male,Agricultur and Fishery,42
 Niue,Female,Agricultur and Fishery,17
-Niue,Total,Agricultur and Fishery,59
 Tuvalu,Female,Agricultur and Fishery,35
 Tuvalu,Male,Agricultur and Fishery,178
-Tuvalu,Total,Agricultur and Fishery,213
-Niue,Total,Construction,54
 Niue,Male,Construction,53
 Tuvalu,Male,Construction,238
-Tuvalu,Total,Construction,241
 Niue,Male,Education,19
-Niue,Total,Education,66
 Niue,Female,Education,47
 Tuvalu,Female,Education,199
-Tuvalu,Total,Education,269
 Tuvalu,Male,Education,70
-Niue,Total,Electricity and Gas,23
 Niue,Male,Electricity and Gas,22
-Tuvalu,Total,Electricity and Gas,28
 Tuvalu,Male,Electricity and Gas,25
-Niue,Total,Financial and Insurance,13
 Niue,Female,Financial and Insurance,9
 Tuvalu,Female,Financial and Insurance,83
-Tuvalu,Total,Financial and Insurance,143
 Tuvalu,Male,Financial and Insurance,60
 Niue,Male,Human health and Social work ,11
 Niue,Female,Human health and Social work ,34
-Niue,Total,Human health and Social work ,45
 Tuvalu,Male,Human health and Social work ,21
 Tuvalu,Female,Human health and Social work ,62
-Tuvalu,Total,Human health and Social work ,83
 Niue,Male,Transportation and Storage,23
-Niue,Total,Transportation and Storage,33
 Niue,Female,Transportation and Storage,10
 Tuvalu,Female,Transportation and Storage,13
 Tuvalu,Male,Transportation and Storage,114
-Tuvalu,Total,Transportation and Storage,127
 Niue,Female,Wholesale and Retail,29
 Niue,Male,Wholesale and Retail,45
-Niue,Total,Wholesale and Retail,74
-Tuvalu,Total,Wholesale and Retail,233
 Tuvalu,Female,Wholesale and Retail,107
 Tuvalu,Male,Wholesale and Retail,126
