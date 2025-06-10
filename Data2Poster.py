@@ -529,10 +529,13 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 contents = [fact["content"] for fact in facts_list]
                 facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)
                 seen = set()
-                for item in facts_list[:200]:
+                for item in facts_list[:500]:
                     if item["content"] != "No fact." and item["content"] not in seen:
                         seen.add(item["content"])
                         st.session_state["fact"].append(item["content"])
+                for item in st.session_state["fact"]:
+                    if user_selected_column not in item:
+                        st.session_state["fact"].remove(item)
                 st.write("Facts:",st.session_state["fact"])
 
                 # Create a vector store
@@ -569,12 +572,12 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 question_list=[]
                 vis_q=[]
                 supported_fact= []
-                # Generate poster question based on interesting patterns
+                # Generate EDA question based on interesting patterns
                 for pattern in patterns_from_gpt:
                     supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
                     supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
                     supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
-                    support_fact_list = [patterns_from_gpt[pattern]["supporting_facts"][0],patterns_from_gpt[pattern]["supporting_facts"][1],patterns_from_gpt[pattern]["supporting_facts"][2]]  
+        
                     vis_q.append(patterns_from_gpt[pattern]["extracted_pattern"])
                     llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
                     prompt_llm_Q = PromptTemplate(
@@ -585,15 +588,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     with open ("json_schema/llm_question_schema.json", "r") as f:
                         llm_Q_schema = json.load(f)
                     llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
-                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt[pattern]["extracted_pattern"],"pattern_1_fact_1":support_fact_list[0],"pattern_1_fact_2":support_fact_list[1],"pattern_1_fact_3":support_fact_list[2],"columns_set_1":list(head),"knowledgebase":knowledge})
+                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt[pattern]["extracted_pattern"],"pattern_1_fact_1":supported_fact[0],"pattern_1_fact_2":supported_fact[1],"pattern_1_fact_3":supported_fact[2],"columns_set_1":list(head),"knowledgebase":knowledge})
                     st.write(llm_Q_from_gpt)
                     question_list.append(llm_Q_from_gpt["questions"]["question"])
-                poster_Q_prompt = PromptTemplate(
-                template="You are a senior data analyst. You are writing a poster title in question format to present the data analysis results. This poster want to convey the following insights {vis_q}.Think step by step to raise a question that can be covered by the insights. Do not use columnar formulas. ONLY respond with the question.",
-                input_variables=["vis_q"],
-                )
-                poster_Q_chain = poster_Q_prompt | llm
-                poster_Q = poster_Q_chain.invoke(input ={"vis_q": vis_q})
+                # poster_Q_prompt = PromptTemplate(
+                # template="You are a senior data analyst. You are writing a poster title in question format to present the data analysis results. This poster want to convey the following insights {vis_q}.Think step by step to raise a question that can be covered by the insights. Do not use columnar formulas. ONLY respond with the question.",
+                # input_variables=["vis_q"],
+                # )
+                # poster_Q_chain = poster_Q_prompt | llm
+                # poster_Q = poster_Q_chain.invoke(input ={"vis_q": vis_q})
                     
                 # # log the llm question
                 # def log_response_to_json(knowledgebase, response):
