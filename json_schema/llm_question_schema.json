@@ -1,32 +1,33 @@
 {
-    "title": "Question_for_Insights",
-    "type": "object",
-    "description": "Contains of questions based on a data patttern for further analysis.",
-    "properties": {
-      
-       
-          "chosen_pattern": {
-            "type": "string",
-            "description": "The first data patterns."
-          },
-          "questions": {
-            "type": "object",
-            "description": "Questions based on further analysis.",
-            "properties": {
-              "question": {
-                "type": "string",
-                "description": "The high-level question."
-              },
-              "action": {
-                "type": "string",
-                "description": "The description of how to solve the question using visualization."
-              }     
-            },
-            "required": ["question", "action"]
-          }
-          
+  "title": "Question_for_Insights",
+  "type": "object",
+  "description": "Contains of question and its action based on a data patttern for further analysis.",
+  "properties": {
+    "chosen_pattern": {
+      "type": "string",
+      "description": "The first data patterns."
+    },
+    "query_object": {
+      "type": "object",
+      "description": "One question and its action for further analysis.",
+      "properties": {
+        "question": {
+          "type": "string",
+          "description": "The question."
+        },
+        "action": {
+          "type": "string",
+          "description": "The description of how to solve the question using visualization."
+        }
       },
-    "required": ["chosen_pattern", "questions" ]
-    
-      
+      "required": [
+        "question",
+        "action"
+      ]
+    }
+  },
+  "required": [
+    "chosen_pattern",
+    "query_object"
+  ]
 }

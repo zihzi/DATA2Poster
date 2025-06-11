@@ -13,7 +13,7 @@ from text_generator import introduction, conclusion, improve_title
 
 
 
-def create_pdf(dataset, q_for_nl4DV, title, chart_des_list, insight_list,  openai_key):
+def create_pdf(dataset, q_for_nl4DV, title, insight_list,  openai_key):
     # num = random.choice([1, 2, 3])
     # if num == 1:
     #     text_color = "#feece9"

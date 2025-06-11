@@ -33,7 +33,7 @@ def introduction(title, vis_q, openai_key):
 
     prompt = PromptTemplate(
             template="""You are an excellent data scientist. 
-                        You are writing an introduction for a poster whose title is a question {title} to present the data analysis results.
+                        You are writing an introduction for a poster {title} to present the data analysis results.
                         Acoording to the information from {vis_q}, there is three questions which will be represented as viusalization charts.
                         These charts are designed to interpret the main question(i.e. poster title) in different aspects.
                         Think step by step about what is the purpose to explore the main question(i.e. poster title) and write a brief introduction for the poster IN THREE SENTENCES.
@@ -55,7 +55,7 @@ def conclusion(title,insight, intro, openai_key):
     prompt = PromptTemplate(
             template="""
             You are an assistant that helps people to summarize given visualization charts.
-            You are writing an conclusion for a poster which is aim to answer the question {title}.
+            You are writing an conclusion for a poster {title}.
             The following is the insight of three charts:
             1.{insight_1}\n\n
             2.{insight_2}\n\n

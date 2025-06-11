@@ -5,41 +5,46 @@ from langchain_core.prompts import PromptTemplate
 
 
 def self_augmented_knowledge(openai_key,data_name, data_columns, user_selected_column, data_facts):
-    llm = ChatOpenAI(model_name="gpt-4.1-nano-2025-04-14", api_key =openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key =openai_key)
     intermediate_prompt_template = """
-    You are a senior data analyst. You are analyzing a dataset named:\n\n{data_name} and it has columns:\n\n{data_columns}.
+    You are a senior data analyst. You are examining a dataset named **{data_name}** with these columns: **{data_columns}**. 
+    Here are key facts extracted from this dataset:{data_facts} 
+    **Your goal:**  
+    Generate **3–5** focused, structured takeaways about **{user_selected_column}**, using chain-of-thought reasoning.
 
-    Here are key facts summarizing essential information from this dataset:\n\n{data_facts}
-    Your task is to generate insightful takeaways focus on the selected column: '{user_selected_column}'.
-    Think step by step:
+    **Instructions for your internal reasoning (do NOT include these steps in your response):**   
 
-    Step 1: Understand the dataset and its context
-    - What is the dataset about?
-    - What are the key columns and their types?
-    - What are the key facts summarizing essential information from this dataset?
+    1. **Context & Exploration**  
+    - Briefly restate what the dataset covers and the role of **{user_selected_column}**.  
+    - List 1–2 hypotheses or questions about how **{user_selected_column}** might vary or relate to other columns.  
 
-    Step 2: Identify what should be explored
-    - What are the most relevant aspects to analyze?
-    - What potential relationships or distributions deserve further investigation?
+    2. **Deep Dive**  
+    For each hypothesis or question:  
+    - **Analyze** how **{user_selected_column}** changes across values of one other column.  
+    - **Highlight** any trends, correlations, anomalies, or group differences.  
+    - **Limit** each point to **two** column names (the target plus one comparator).  
 
-    Step 3: Generate deeper insights using Chain-of-Thought reasoning
+    3. **Chain-of-Thought**  
+    - Show your reasoning in 2–3 short bullet steps per insight.  
+    - Use phrases like “Because…”, “When comparing…”, “We observe that…”.  
 
-    - Begin by analyzing how the selected column varies across different values of other columns.
-    - Examine any trends, correlations, or anomalies associated with this column.
-    - Consider temporal, categorical, or numerical relationships depending on column types (e.g., time-based trends, category distributions, or value ranges).
-    - Identify patterns or insights that suggest causality, segmentation, or comparisons across subgroups.
-    - Think in terms of common analysis tasks such as:
-    “What drives higher or lower values of this column?”
-    “How does this column behave across different groups?”
-    “Are there outliers or exceptions?”
-    “Which features are most related to this column's variation?”
+    4. **Summarize**  
+    - Choose into **3–5** strongest observations.
+    - Each takeaway should be a single sentence, mentioning exactly two columns.  
+    - Order by importance or strength of insight.  
+    - Do **not** include extra commentary or metadata.  
 
-    Step 4: Summarize insightful  takeaways
-    - Based on your reasoning, summarize the most relevant insights in a coherent manner that compatible with the key facts.
-    - Remove duplicate or similar insights.
-    - Format the response as structured points.
-    - ONLY USE TWO COLUMN NAMES in one point.
-    - ONLY return the key takeaways without any additional explanation."The key takeaways are: ..."
+    **Output requirements (ONLY return this; no reasoning or extra text):**  
+    - A numbered list of **3–5** one-sentence insights.  
+    - Each sentence mentions **{user_selected_column}** and exactly **one** other column.  
+    - No explanations, no bullet steps, no metadata.
+
+
+    **Example output:**  
+    1. **{user_selected_column}** increases by 25% when **OtherColumn** is “X”.  
+    2. **{user_selected_column}** is lowest for **OtherColumn** = “Y”.  
+    3. …
+
     """
     prompt = PromptTemplate(
         template=intermediate_prompt_template,

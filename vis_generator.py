@@ -4,15 +4,12 @@ from langchain_core.messages import SystemMessage, HumanMessage
 
 
 # **Agent 1: Generates Initial Visualization Code**
-def agent_1_generate_code(table_name, query,sampled_data,label, openai_key):
+def agent_1_generate_code(table_name, query,sampled_data, openai_key):
     prompt = """
     You are a data analysis assistant that uses Vega-Lite to create data visualizations.
     Your task is to create the optimal visualization for the {table_name} data table using Vega-Lite to complete this query:{query}
     The {table_name} sample data table is as follows:{sampled_data}
-    Create a Vega-Lite specification based on the following Vega-Lite specification for your reference:\n\n{label}. 
-    
-
-    The Vega-Lite specification must follow the following rules:
+    Create a Vega-Lite specification obey the following rules:
     [\Rules]
     Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
     Rule 2: The "transform" property should be put ahead of the "encoding" property.
@@ -59,7 +56,7 @@ def agent_1_generate_code(table_name, query,sampled_data,label, openai_key):
                         ]
                     )
     chain = prompt_for_chain | llm      
-    response = chain.invoke(input= {"table_name":table_name, "query":query, "sampled_data":sampled_data, "label":label})
+    response = chain.invoke(input= {"table_name":table_name, "query":query, "sampled_data":sampled_data})
     return response.content
     
 
@@ -211,7 +208,7 @@ def agent_3_fix_code(code,openai_key):
 # ** Agent 4:Validator Agent**
 def agent_4_validate_spec(vlspec, sampled_data, openai_key):
     prompt = """
-    You are an AI assistant specializing in data visualization and Vega-Lite. 
+    You are a validator for Vega-Lite specifications.   
     Your task is to check a Vega-Lite JSON specification and correct if it has error. 
     Please approach this task methodically and reason step by step.
     [/Background]
@@ -245,13 +242,30 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
     [/Rules for Improvement]
 
     [/Constraints]
-    - The Vega-Lite spec must be valid according to the Vega-Lite schema(https://vega.github.io/schema/vega-lite/v5.json).
-    - Do not use SQL expressions in "field" names or filters
-    - Only include necessary fields in "encoding" or "transform"
-    - Ensure aggregate fields are used with "type": "quantitative"
-    - For binned or time-encoded fields, avoid nested transformations
-    - Output must be a valid JSON object
-    - ONLY return the full corrected Vega-Lite JSON specification without any additional text
+    1.Mark‐specific encodings
+        - line, area, trail marks must have both x and y.
+        - bar marks must have at least one positional (x or y) and one size/ordinal encoding.
+    2. Scale‐type <-> field‐type consistency
+        - scale.type == "log"|"pow" requires the field’s type == "quantitative".
+        - scale.type == "time"|"utc" requires type == "temporal".
+    3. Aggregate functions
+        - Allowed aggregates: count, sum, mean, median, min, max, stdev, stdevp, variance, variancep.
+    4. Binning
+        - bin: true (or object) only on type == "quantitative".
+        - Cannot combine bin with continuous scales like "log".
+    5. Time units
+        - timeUnit only on type == "temporal".
+    6. Stacking
+        - stack: "zero"|"normalize"|"center" only on bar/area/line and requires a quantitative axis.
+    7. Color/Opacity/Size channels
+        - Field-based color/opacity/size must be quantitative or ordinal.
+        - Literal encodings must use value.
+    8. Sort order
+        - sort must reference an encoded field of matching type.
+    9. Parameter binding.
+        - bind on parameters must use a supported input type (legend, scales, or form controls).
+    10. Output must be a valid JSON object
+    11. ONLY return the full corrected Vega-Lite JSON specification without any additional text
     [/Constraints]
     """
     prompt_input = PromptTemplate(
@@ -262,7 +276,7 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
                        input_variables=["vlspec"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
+    llm = ChatOpenAI(model_name="o4-mini-2025-04-16", temperature=1,api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   HumanMessagePromptTemplate.from_template(prompt_input.template)

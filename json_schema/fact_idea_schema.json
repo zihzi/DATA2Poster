@@ -13,7 +13,7 @@
         },
         "supporting_facts": {
           "type": "array",
-          "description": "List of three facts that support the pattern",
+          "description": "List of facts that support the pattern",
           "items": {
             "type": "string",
             "description": "Fact that support the pattern"
@@ -21,10 +21,14 @@
         },
         "reasoning": {
           "type": "string",
-          "description": "Reason how these THREE facts can lead to this pattern"
+          "description": "Reason how these facts can lead to this pattern"
         }
       },
-      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+      "required": [
+        "extracted_pattern",
+        "supporting_facts",
+        "reasoning"
+      ]
     },
     "P2": {
       "type": "object",
@@ -36,7 +40,7 @@
         },
         "supporting_facts": {
           "type": "array",
-          "description": "List of three facts that support the pattern",
+          "description": "List of facts that support the pattern",
           "items": {
             "type": "string",
             "description": "Fact that support the pattern"
@@ -44,10 +48,14 @@
         },
         "reasoning": {
           "type": "string",
-          "description": "Reason how these THREE facts can lead to this pattern"
+          "description": "Reason how these facts can lead to this pattern"
         }
       },
-      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+      "required": [
+        "extracted_pattern",
+        "supporting_facts",
+        "reasoning"
+      ]
     },
     "P3": {
       "type": "object",
@@ -59,7 +67,7 @@
         },
         "supporting_facts": {
           "type": "array",
-          "description": "List of three facts that support the pattern",
+          "description": "List of facts that support the pattern",
           "items": {
             "type": "string",
             "description": "Fact that support the pattern"
@@ -67,10 +75,14 @@
         },
         "reasoning": {
           "type": "string",
-          "description": "Reason how these THREE facts can lead to this pattern"
+          "description": "Reason how these facts can lead to this pattern"
         }
       },
-      "required": ["extracted_pattern", "supporting_facts", "reasoning"]
+      "required": [
+        "extracted_pattern",
+        "supporting_facts",
+        "reasoning"
+      ]
     }
   }
 }

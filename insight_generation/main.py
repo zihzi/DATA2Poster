@@ -77,10 +77,10 @@ def _generate_facts(df, subject=None, bt=None, mt=None, visualizer: Visualizer=N
         if mt == "N":
             facts += gen_value_facts(df.copy(), subject, visualizer)
             facts += gen_difference_facts(df.copy(), subject, visualizer)
-            if not "percentage" in subject["measure"].lower():
-                facts += gen_proportion_facts(df.copy(), subject, visualizer)
+            # if not "percentage" in subject["measure"].lower():
+            #     facts += gen_proportion_facts(df.copy(), subject, visualizer)
             facts += gen_rank_facts(df.copy(), subject, top=3, visualizer=visualizer)
-            facts += gen_extremum_facts(df.copy(), subject, visualizer)
+            # facts += gen_extremum_facts(df.copy(), subject, visualizer)
             # facts += gen_outlier_facts(df.copy(), subject, visualizer)
         if mt == "NxN":
             facts += gen_association_facts(df.copy(), subject, visualizer)

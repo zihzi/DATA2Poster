@@ -296,10 +296,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     if api_keys_entered:
         # use GPT as llm
-        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14",api_key = openai_key)
+        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=1,api_key = openai_key)
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key)
-        # Initial stage to generate facts and questions by user-selected column
+        # To generate facts and questions by user-selected column
         if st.session_state["stage"] == "initial": 
             # For user to select a column
             st.write("Select a column:")
@@ -527,9 +527,9 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     st.session_state["fact"] = []
                 # Remove duplicates from facts_list
                 contents = [fact["content"] for fact in facts_list]
-                facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)
+                # facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)  
                 seen = set()
-                for item in facts_list[:500]:
+                for item in facts_list[:1000]:
                     if item["content"] != "No fact." and item["content"] not in seen:
                         seen.add(item["content"])
                         st.session_state["fact"].append(item["content"])
@@ -537,20 +537,21 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     if user_selected_column not in item:
                         st.session_state["fact"].remove(item)
                 st.write("Facts:",st.session_state["fact"])
+                
 
-                # Create a vector store
-                def load_json(json_file):
-                    with open(json_file, "r", encoding="utf-8") as fh:
-                        return json.load(fh)
+                # # Create a vector store
+                # def load_json(json_file):
+                #     with open(json_file, "r", encoding="utf-8") as fh:
+                #         return json.load(fh)
 
 
-                data_list = load_json('vis_corpus.json')
-                docs = [Document(page_content=json.dumps(item)) for item in data_list]
-                vectorstore = FAISS.from_documents(
-                docs,
-                OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
-                )
-                st.session_state["vectorstore"] = vectorstore
+                # data_list = load_json('vis_corpus.json')
+                # docs = [Document(page_content=json.dumps(item)) for item in data_list]
+                # vectorstore = FAISS.from_documents(
+                # docs,
+                # OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
+                # )
+                # st.session_state["vectorstore"] = vectorstore
                 
                 # Create intermediate output as knowledge
                 knowledge = self_augmented_knowledge(openai_key, chosen_dataset, list(head),user_selected_column, st.session_state["fact"])
@@ -560,44 +561,48 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 llm_pattern_template = load_prompt_from_file("prompt_templates/fact_idea_prompt.txt")
                 prompt_pattern = PromptTemplate(
                                         template=llm_pattern_template,
-                                        input_variables=["knowledgebase","facts","user_selected_column"],
+                                        input_variables=["facts","user_selected_column"],
 
                             )
                 with open("json_schema/fact_idea_schema.json", "r") as f:
                     pattern_json_schema = json.load(f)
                 chain_pattern = prompt_pattern | llm.with_structured_output(pattern_json_schema)
-                patterns_from_gpt = chain_pattern.invoke(input = {"knowledgebase":knowledge,"facts":st.session_state["fact"],"user_selected_column":user_selected_column})
+                patterns_from_gpt = chain_pattern.invoke(input = {"facts":st.session_state["fact"],"user_selected_column":user_selected_column})
                 st.write("Interesting Patterns:",patterns_from_gpt)
 
                 question_list=[]
                 vis_q=[]
-                supported_fact= []
-                # Generate EDA question based on interesting patterns
+                # supported_fact= []
+                # Generate EDA questions based on interesting patterns
                 for pattern in patterns_from_gpt:
-                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
-                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
-                    supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
+                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
+                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
+                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
         
                     vis_q.append(patterns_from_gpt[pattern]["extracted_pattern"])
                     llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
                     prompt_llm_Q = PromptTemplate(
                                             template=llm_Q_template,
-                                            input_variables=["pattern_1","pattern_1_fact_1","pattern_1_fact_2","pattern_1_fact_3","columns_set_1","knowledgebase"],
+                                            input_variables=["pattern_1","columns_set_1"],
 
                                 )
                     with open ("json_schema/llm_question_schema.json", "r") as f:
                         llm_Q_schema = json.load(f)
                     llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
-                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt[pattern]["extracted_pattern"],"pattern_1_fact_1":supported_fact[0],"pattern_1_fact_2":supported_fact[1],"pattern_1_fact_3":supported_fact[2],"columns_set_1":list(head),"knowledgebase":knowledge})
+                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":patterns_from_gpt[pattern]["extracted_pattern"],"columns_set_1":list(head)})
                     st.write(llm_Q_from_gpt)
-                    question_list.append(llm_Q_from_gpt["questions"]["question"])
-                # poster_Q_prompt = PromptTemplate(
-                # template="You are a senior data analyst. You are writing a poster title in question format to present the data analysis results. This poster want to convey the following insights {vis_q}.Think step by step to raise a question that can be covered by the insights. Do not use columnar formulas. ONLY respond with the question.",
-                # input_variables=["vis_q"],
-                # )
-                # poster_Q_chain = poster_Q_prompt | llm
-                # poster_Q = poster_Q_chain.invoke(input ={"vis_q": vis_q})
-                    
+                    question_list.append(llm_Q_from_gpt["query_object"]["question"]+llm_Q_from_gpt["query_object"]["action"])
+                new_Q_prompt = PromptTemplate(
+                template="""You are an assistant specialized in exploratory data analysis (EDA). Evaluate the following three queries:{query}
+                            Identify if the queries are duplicates, similar, or distinct.
+                            If any queries are duplicates or similar (leading to similar visualizations), suggest replacing the redundant query with a new distinct query that contributes to a coherent exploratory data analysis narrative.
+                            Only provide a new query array if you find redundancy; otherwise, only return the original queries as they are.
+                            """,
+                input_variables=["query"],
+                )
+                new_Q_chain = new_Q_prompt | llm
+                new_Q = new_Q_chain.invoke(input ={"query":question_list})
+                st.write("New Question:",new_Q.content)    
                 # # log the llm question
                 # def log_response_to_json(knowledgebase, response):
                 #     log_data = {"knowkedgebase": knowledgebase, "response": response}
@@ -609,251 +614,169 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # log_response_to_json(knowledge, llm_Q_from_gpt)
 
                 st.write(question_list)
-                questions_for_poster = [poster_Q.content]
-                # supported_fact = [llm_Q_from_gpt["questions"]["fact_1"],llm_Q_from_gpt["questions"]["fact_2"],llm_Q_from_gpt["questions"]["fact_3"]]
-                Q_for_vis = question_list
-                st.session_state["Q_from_gpt"] = {"supported_fact":supported_fact,"questions":Q_for_vis}
-                st.session_state["questions_for_poster"] = questions_for_poster
-                st.write("Select a poster question:")
-                selected_question=st.selectbox("Select a poster question:", questions_for_poster , on_change=select_question, label_visibility="collapsed",index=None,placeholder="Select one...", key="selection")      
-        # Second stage to score related facts based on the selected question
-        elif st.session_state["stage"] == "question_selected":
-            st.session_state["bt_try"] = ""
-            st.session_state["stage"] = "initial"            
-            selected_poster_question = st.session_state["selection"]
-            st.subheader(selected_poster_question)
-
-            
-            q_for_nl4DV = st.session_state["Q_from_gpt"]["questions"]
+                # st.session_state["Q_from_gpt"] = {"questions":question_list}
+                
+                
+            # To visualize the EDA questions
+       
+                st.session_state["bt_try"] = ""     
            
-            code_template = load_prompt_from_file("prompt_templates/code_template.txt")
-            # Call GPT to generate vlspec
-            insight_list = []
-            chart_des_list = []
-            idx=1
-            for query in q_for_nl4DV:
-                st.write(f'**Question for Chart:**',f'**{query}**')
-                print("\n🟢 Step 1: Generating Initial Code...\n")
-                result = st.session_state["vectorstore"].similarity_search(
-                                    query,
-                                    k=1,
-                                )
-                # chart_vega_json = json.loads(result[0].page_content)
-                st.write("RAG Vega-Lite JSON:",result[0].page_content)
-                # chart_test_template = load_prompt_from_file("prompt_templates/chart_test_prompt.txt")
-                # prompt_chart_test = PromptTemplate(
-                #                     template=chart_test_template,
-                #                     input_variables=["query","sampled_data","label","chart","column","filter","aggregate","mark","encoding","sort","column_list"],
-
-                #         )
-                # chart_test_chain = prompt_chart_test | llm
-                # chart_code = chart_test_chain.invoke(input = {"query":query,"sampled_data":summary,"code_template":code_template,"label":chart_vega_json["label"],"chart":chart_vega_json["chart"],"column":chart_vega_json["column"],"filter":chart_vega_json["filter"],"aggregate":chart_vega_json["aggregate"],"mark":chart_vega_json["mark"],"encoding":chart_vega_json["encoding"],"sort":chart_vega_json["sort"],"column_list":datasets[chosen_dataset].columns.tolist()})
-                # print(chart_code.content)
-                st.session_state["df"] = datasets[chosen_dataset]
-                vlspec = agent_1_generate_code(chosen_dataset,query,chosen_data_schema,result, openai_key)
-                st.write("Vega-Lite JSON:",vlspec)
-                json_code = json.loads(vlspec)
-                json_code["height"] = 400
-                json_code["width"] = 600
-                st.write("Vega-Lite JSON:",json_code)
-                png_data = vlc.vegalite_to_png(vl_spec=json_code,scale=2.0)
-                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                    f.write(png_data)
-                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Generated Chart")
-                # exec_count=0
-                # try:
-                #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
-                #     final_code = agent_3_fix_code(chart_code.content, openai_key)
-                #     while exec_count < 3:  # Loop until the code executes successfully
-                #         try:
-                #             print("\n🟢 Trying to execute the code...\n")
-                #             code_executed = preprocess_json(final_code, idx)
-                #             print("\n✅ Code executed successfully!\n")
-                #             break  # Exit loop when execution is successful
-                        
-                #         except Exception as e:
-                #             exec_count += 1
-                #             error = str(e)
-                #             error_code = final_code
-                #             print(f"\n🔴 Error encountered: {error}\n")
-                            
-                #             # Load error-handling prompt
-                #             error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
-                #             error_prompt = PromptTemplate(
-                #                 template=error_prompt_template,
-                #                 input_variables=["error_code", "error"],
-                #             )    
-
-                #             error_chain = error_prompt | llm 
-                            
-                #             # Invoke the chain to fix the code
-                #             corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
-                #             final_code = corrected_code.content  # Update with the corrected code
-
-                # except Exception as final_exception:
-                #     print("\n❌ Failed to generate executable code after multiple attempts.")
-                # show_chart_flag = 1
-                # if exec_count == 3:
-                #     st.error("The code is failed to execute.")
-                #     show_chart_flag = 0
-                binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
-                url = f'data:image/png;base64,{base64_utf8_str}'
-                feedback = agent_2_improve_code(query, url, openai_key)
-                st.write(feedback)
-                # exec_count=0
-                improved_code = agent_improve_vis(vlspec, feedback,chosen_data_schema, openai_key)
-                improved_json = json.loads(improved_code)
-                improved_json["height"] = 400
-                improved_json["width"] = 600
-                st.write("Improved Vega-Lite JSON:",improved_json)
-                improved_png_data = vlc.vegalite_to_png(vl_spec=improved_json,scale=3.0)
-                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                    f.write(improved_png_data)
-                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Improved Chart")
-                
-                final_code = agent_4_validate_spec(improved_code,chosen_data_schema, openai_key)
-                final_json = json.loads(final_code)
-                final_json["height"] = 400
-                final_json["width"] = 600
-                st.write("Final Vega-Lite JSON:",final_json)
-                final_png_data = vlc.vegalite_to_png(vl_spec=final_json,scale=3.0)
-                with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                    f.write(final_png_data)
-                st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
-
-                # # alt_template = load_prompt_from_file("prompt_templates/altiar_templates.txt")
+                # Call GPT to generate initial vlspec
+                insight_list = []
+                chart_des_list = []
+                idx=1
+                for query in question_list:
+                #     st.write(f'**Question for Chart:**',f'**{query}**')
+                #     print("\n🟢 Step 1: Generating Initial Code...\n")
+                #     result = st.session_state["vectorstore"].similarity_search(
+                #                         query,
+                #                         k=1,
+                #                     )
+                # st.write("RAG Vega-Lite JSON:",result[0].page_content)
+                    st.write(f'**Question for Chart {idx}:**',f'**{query}**')
+                    vlspec = agent_1_generate_code(chosen_dataset,query,chosen_data_schema, openai_key)
+                    json_code = json.loads(vlspec)
+                    json_code["height"] = 400
+                    json_code["width"] = 600
+                    st.write("Vega-Lite JSON:",json_code)
+                    png_data = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0)
+                    with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                        f.write(png_data)
+                    st.image(f"DATA2Poster_img/image_{idx}.png", caption="Generated Chart")
+                    # Evaluate the generated vlspec
+                    binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                    base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
+                    url = f'data:image/png;base64,{base64_utf8_str}'
+                    feedback = agent_2_improve_code(query, url, openai_key)
+                    st.write(feedback)
+                    # Improve the vlspec based on feedback
+                    improved_code = agent_improve_vis(vlspec, feedback,chosen_data_schema, openai_key)
+                    improved_json = json.loads(improved_code)
+                    improved_json["height"] = 400
+                    improved_json["width"] = 600
+                    st.write("Improved Vega-Lite JSON:",improved_json)
+                    exec_count=0
+                    try: 
+                        improved_png_data = vlc.vegalite_to_png(vl_spec=improved_json,scale=3.0)
+                        with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                            f.write(improved_png_data)
+                        st.image(f"DATA2Poster_img/image_{idx}.png", caption="Improved Chart")
+                    except Exception as e:
+                        st.error("The code is failed to execute.")
             
-                # # prompt = [
-                # #     SystemMessage(content=alt_template),
-                # #     HumanMessage(content=[
-                # #         {
-                # #             "type": "text", 
-                # #             "text": f"Here is the given code template:\n\n{code_template}\n\n"
-                # #         },
-                # #         {
-                # #             "type": "text", 
-                # #             "text": f"Here is the given Vega-Lite JSON specification:{improved_code}"
-                # #         }
-                # #     ])
-                # # ] 
-                # # response = llm.invoke(prompt)
-                # # st.code(response.content)
-                # try:
-                #     print("\n🔵 Step 3: Ensuring Code is Executable...\n")
-                #     final_code = agent_3_fix_code(improved_code, openai_key)
-                #     while exec_count < 3:  # Loop until the code executes successfully
-                #         try:
-                #             print("\n🟢 Trying to execute the code...\n")
-                #             improved_chart = alt.Chart.from_dict(improved_json)
-                #             improved_chart.save(f"vega_lite_json_{idx}.json")
-                #             improved_chart.save(f"image_{idx}.png")
-                #             print("\n✅ Code executed successfully!\n")
-                #             break  # Exit loop when execution is successful
+                    
+                    # Inspect logic error of the vlspec for final validation(at most 3 times)
+                    pre_final_code = agent_4_validate_spec(improved_code,chosen_data_schema, openai_key)
+                    pre_final_json = json.loads(pre_final_code)
+                    pre_final_json["height"] = 400
+                    pre_final_json["width"] = 600
+                    st.write("Final Vega-Lite JSON:",pre_final_json)
+                    try:
+                        pre_final_png_data = vlc.vegalite_to_png(vl_spec= pre_final_json,scale=3.0)
+                        with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                            f.write(pre_final_png_data)
+                        st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
+                    except Exception as e:
+                        exec_count += 1
+                        error = str(e)
+                        error_code =  pre_final_code
+                        print(f"\n🔴 Error encountered: {error}\n")
                         
-                #         except Exception as e:
-                #             exec_count += 1
-                #             error = str(e)
-                #             error_code = final_code
-                #             print(f"\n🔴 Error encountered: {error}\n")
-                            
-                #             # Load error-handling prompt
-                #             error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
-                #             error_prompt = PromptTemplate(
-                #                 template=error_prompt_template,
-                #                 input_variables=["error_code", "error"],
-                #             )    
+                        # Load error-handling prompt
+                        error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+                        error_prompt = PromptTemplate(
+                            template=error_prompt_template,
+                            input_variables=["error_code", "error"],
+                        )    
 
-                #             error_chain = error_prompt | llm 
+                        error_chain = error_prompt | llm 
+                        
+                        # Invoke the chain to fix the code
+                        corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
+                        final_code = corrected_code.content  # Update with the corrected code
+                        
+                        if exec_count == 3:
+                            st.error("The code is failed to execute.")
+                        else:
+                        
+                            final_json = json.loads(final_code)
+                            final_json["height"] = 400
+                            final_json["width"] = 600
+                            final_png_data = vlc.vegalite_to_png(vl_spec=final_json,scale=3.0)
+                            with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+                                f.write(final_png_data)
+                            st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
+                           
                             
-                #             # Invoke the chain to fix the code
-                #             corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
-                #             final_code = corrected_code.content  # Update with the corrected code
-
-                # except Exception as final_exception:
-                #     print("\n❌ Failed to generate executable code after multiple attempts.")
-                # show_chart_flag = 1
-                # if exec_count == 3:
-                #     st.error("The code is failed to execute.")
-                #     show_chart_flag = 0
-                # st.altair_chart(improved_chart, theme = None)
-                # # load the vega_lite_json for insight_prompt
-                # with open(f"nl4DV_json/vega_lite_json_{idx}.json", "rb") as f:
-                #         chart = json.load(f)
-                #         for key in chart["datasets"]:
-                #             chart_data = chart["datasets"][key]
-                            
-                # if show_chart_flag == 1:
-                #     st.vega_lite_chart(chart, theme = None)
-                binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
-                img_url = f'data:image/png;base64,{base64_utf8_chart}' 
-                chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-                chart_des_prompt = [
-                    SystemMessage(content=chart_prompt_template),
-                    HumanMessage(content=[
-                        {
-                            "type": "text", 
-                            "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
-                        },
-                        {
+                    binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+                    base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
+                    img_url = f'data:image/png;base64,{base64_utf8_chart}' 
+                    chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+                    chart_des_prompt = [
+                        SystemMessage(content=chart_prompt_template),
+                        HumanMessage(content=[
+                            {
                                 "type": "text", 
-                                "text": "Here is the chart to describe:"
-                        },
-                        {
-                                "type": "image_url",
-                                "image_url": {
-                                    "url": img_url
-                                },
-                        },
-                    ])
-                ] 
-                
-                chart_des =  llm.invoke(chart_des_prompt)
+                                "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
+                            },
+                            {
+                                    "type": "text", 
+                                    "text": "Here is the chart to describe:"
+                            },
+                            {
+                                    "type": "image_url",
+                                    "image_url": {
+                                        "url": img_url
+                                    },
+                            },
+                        ])
+                    ] 
+                    
+                    chart_des =  llm.invoke(chart_des_prompt)
 
-                supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
+                    # supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
 
-                
-                st.write(f'**Chart Description:**', f'**{chart_des.content}**')
-                st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
-                # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
-                
-                # call GPT to generate insight description
-                insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
-                insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
-                insight_prompt_input = PromptTemplate(
-                            template=insight_prompt_input_template,
-                            input_variables=["query", "chart_des"],
-                            # response_format=Insight,                         
-                ) 
-                insight_prompt = ChatPromptTemplate.from_messages(
-                        messages=[
-                            SystemMessage(content = insight_prompt_template),
-                            HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
-                        ]
-                    )
-                
-                insight_chain = insight_prompt | llm
-                insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-                insight_list.append(insight.content)
-                st.write(f'**Insight Description:**', f'**{insight.content}**')
-                chart_des_list.append(chart_des.content)
-                idx+=1
+                    
+                    st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+                    # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
+                    # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
+                    
+                    # call GPT to generate insight description
+                    insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
+                    insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
+                    insight_prompt_input = PromptTemplate(
+                                template=insight_prompt_input_template,
+                                input_variables=["query", "chart_des"],
+                                                      
+                    ) 
+                    insight_prompt = ChatPromptTemplate.from_messages(
+                            messages=[
+                                SystemMessage(content = insight_prompt_template),
+                                HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
+                            ]
+                        )
+                    
+                    insight_chain = insight_prompt | llm
+                    insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
+                    insight_list.append(insight.content)
+                    st.write(f'**Insight Description:**', f'**{insight.content}**')
+                    chart_des_list.append(chart_des.content)
+                    idx+=1
                 
          
-            # Reset session state
-            st.session_state["df"] = pd.DataFrame()
-            st.session_state["fact"] = []
-            st.session_state["vectorstore"] = []
-            st.session_state["questions_for_poster"] = []
-            st.session_state["Q_from_gpt"] = {}
-            st.session_state["selection"] = ""
-            # Create pdf and download
-            pdf_title = selected_poster_question
-            create_pdf(chosen_dataset, q_for_nl4DV , pdf_title, chart_des_list,insight_list, openai_key)
-            st.success("Poster has been created successfully!🎉")
-            with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
-                st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")
+                # Reset session state
+                st.session_state["df"] = pd.DataFrame()
+                st.session_state["fact"] = []
+                st.session_state["vectorstore"] = []
+                st.session_state["questions_for_poster"] = []
+                # st.session_state["Q_from_gpt"] = {}
+                st.session_state["selection"] = ""
+                # Create pdf and download
+                pdf_title = f"{chosen_dataset} Poster"
+                create_pdf(chosen_dataset, question_list, pdf_title, insight_list, openai_key)
+                st.success("Poster has been created successfully!🎉")
+                with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
+                    st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")
 
 # Display chosen datasets 
 if chosen_dataset :

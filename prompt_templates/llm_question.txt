@@ -1,69 +1,44 @@
 You are an experienced data analyst specializing in Exploratory Data Analysis (EDA).
-Your task is to generate one clear-cut EDA question that, when answered, would reveal a specific data pattern. This question should be based on the provided data pattern and three supporting data facts.
 
-Create ONE clear-cut question whose answer would reveal the given data pattern.
+**Task**
+You will be given three data patterns, and a small set of allowed column names. For each pattern, generate:
+- ONE clear-cut EDA question (≤15 words, using at most two column names from the pattern).
+- ONE “action” statement that specifies exactly how to turn that question into a visualization (e.g. chart type, axes, filters).
 
-[\Chain-of-Thought Process]
+**Provided Information**
+Pattern:\n\n{pattern_1}\n\n
+Column Names(allowed):\n\n{columns_set_1}\n\n
+
+**Instructions of Chain-of-Thought Process**
 Step 1: Understand the Data Pattern
 Carefully interpret the pattern provided. This is the target insight that your question should help uncover.
-Pay attention to the variables and values explicitly mentioned in the pattern (e.g., Genre = Action, Thriller).
 
-Step 2: Analyze the Supporting Data Facts
-Examine each supporting fact to determine:
-- What variables and values are mentioned
-- What relationships are implied
-- What statistical or structural clues might support the pattern
+Step 2: Create the Clear-cut Question
+- Formulate a question that, if answered using a visualization, would directly support the pattern.
+- Ensure it is exploratory yet specific, and easily translatable into a visualization (e.g., bar chart, pie chart).
 
-Step 3: Create the Clear-cut Question
-- Formulate a question that, if answered using a visualization, would directly support or reveal the pattern.
-- Ensure it is exploratory yet specific, and easily translatable into a visualization (e.g., bar chart, comparison plot).
+Step 3: Create the Action that is detailed and straightforward statements to transform the clear-cut question into visualization chart.
 
-Step 4: Create the Action that is detailed and straightforward statements to transform the clear-cut question into visualization chart.
-[\Chain-of-Thought Process]
+**Constraints**
+- Question ≤15 words.
+- Use only the provided column names.
+- Each question can ONLY reference up to two column names.
+- No duplicate or paraphrased questions.
 
-[/Example]
-Pattern:\n\n "group b has better performance in both math score and writing score."\n\n
-Supporting Data Facts:\n\n"supporting_evidence": [
-    "In race/ethnicity, group c accounts for the largest proportion of records(29.2%)."
-    "The race/ethnicity group b accounts for 2.18% of the reading score."
-    "There is a strong relationship between math score and reading score, with pearson correlation coefficient of 0.81.",
-  ]\n\n
-Chain of Thought:
+**Example**
+Given the following:
+Pattern: "Japanese origin cars consistently rank highest in MPG, showcasing regional differences in fuel efficiency."
+Column Names(allowed): Model,MPG,Cylinders,Displacement,Acceleration,Year,Origin\n
+Using Chain of Thought:
 1. Understanding the pattern:
-   The pattern states that Group B outperforms other groups in both math and writing scores. This suggests there are different demographic groups being compared on academic performance metrics.
+   The pattern states that Japanese cars outperforms other origin in  MPG. This suggests there are different countries of origin being compared on cars performance metrics.
 
-2. Analyzing the supporting facts:
-   - Fact 1 tells that Group C is the largest demographic (29.2%)
-   - Fact 2 mentions Group B in relation to reading scores
-   - Fact 3 indicates math and reading scores are strongly correlated (0.81)
+2. Creating the clear-cut question:
+   I need a question that would lead to comparing performance across different origin. The most direct question would be:"How do MPG performance metrics compare acoross different origin?"
 
-3. Creating the clear-cut question:
-   I need a question that would lead to comparing performance across specific demographic groups. The most direct approach would be:"How do academic performance metrics compare between group B and group C?"
+3. Creating the action:
+   "Create side-by-side box plots of MPG (y-axis) by Origin (x-axis), showing quartiles and medians."
 
-4. Creating the action:
-   "What are the differences in academic performance metrics (e.g., reading scores) between group B and group C, and how can these differences be effectively visualized using comparative charts such as grouped bar charts or box plots to highlight central tendencies and variability?"
-[/Example]
-
-[/Instructions] 
-- DO NOT rewrite or shorten data pattern.
-- Generate only ONE clear-cut question.
-- The question must be suitable for visualization and align directly with the given pattern.
-- Use only VALID column names and values that appear in the pattern. These are semantically important and must be retained to ensure specificity and relevance.
-- Include column values in your question if they are explicitly mentioned in the pattern. Including values (e.g., Genre = Action, Thriller) only if they enables more targeted visualizations such as filtered comparisons or subgroup analysis.
-- Limit to a maximum of TWO column names per question.
-- Ensure there is no identical or similar questions.
-- The question MUST BE WITHIN 15 WORDS.
-- "action" is detailed statements that clarifies the visualization intent.
-- The answer to your question should directly reflect the original pattern.
-[/Instructions] 
-
-[/Provided Information] 
-Here is the interesting data pattern, corresponding supporting data facts, and columns name you should only use for creating questions:\n\n
-Pattern:\n\n{pattern_1}\n\n
-Supporting Data Facts:\n\n 1.{pattern_1_fact_1}\n\n 2.{pattern_1_fact_2}\n\n 3.{pattern_1_fact_3}\n\n 
-Column Names(allowed):\n\n{columns_set_1}\n\n
-Here the background knowledge for enhancing your exoloration:\n\n{knowledgebase}\n\n.
-[/Provided Information] 
 YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
 
 
