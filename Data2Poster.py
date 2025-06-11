@@ -46,10 +46,10 @@ if "datasets" not in st.session_state:
     datasets["movies"] = pd.read_csv("data/movies.csv")
     datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
     datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
-    datasets["Iris"] = pd.read_csv("data/Iris.csv")
+    datasets["ramen_ratings"] = pd.read_csv("data/ramen_ratings.csv")
     datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
-    datasets["Employee"] = pd.read_csv("data/Employee.csv")
-    datasets["Housing"] = pd.read_csv("data/Housing.csv")
+    datasets["personality_dataset"] = pd.read_csv("data/personality_dataset.csv")
+    datasets["Korean_demographics"] = pd.read_csv("data/Korean_demographics.csv")
     datasets["regional_presidential_election"] = pd.read_csv("data/regional_presidential_election.csv")
     datasets["2024USA_presidential_election"] = pd.read_csv("data/2024USA_presidential_election.csv")
     datasets["Occupational gaps by gender"] = pd.read_csv("data/Occupational gaps by gender.csv")
