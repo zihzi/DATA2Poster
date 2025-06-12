@@ -17,9 +17,8 @@ def agent_1_generate_code(table_name, query,sampled_data, openai_key):
     Rule 4: Rule 3: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 7: Make sure no "layer","facet","hconcat", "vconcat", "concat", "repeat" property exist in the Vega-Lite specification.
-    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 9: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 7: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:
@@ -30,20 +29,84 @@ def agent_1_generate_code(table_name, query,sampled_data, openai_key):
     [\Instructions]
     The example of Vega-Lite specification:
     [\Example]
-    The query is:"Show all majors and corresponding number of students by a scatter plot."
+    The query is:"What is the proportion of records by Sex, and how does the share of Male compare to other categories across the entire dataset?Create a pie chart showing the proportion of records by Sex. Filter the dataset to include all records, calculate the percentage share for each Sex category, and highlight that Male accounts for approximately 54.4%."
     The Vega-Lite specification is:
-            {{
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                "data": {{"url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/students.csv"}},
-                "transform": [
-                    {{"aggregate": [{{"op": "count", "field": "Major", "as": "Number of Students"}}],"groupby": ["Major"]}}
-                ],
-                "mark": "point",
-                "encoding": {{
-                    "x": {{"field": "Major", "type": "nominal"}},
-                    "y": {{"field": "Number of Students", "type": "quantitative"}}
-                }}
-            }}
+           {{
+                    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+                    "data": {{
+                        "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupationalgapsbygender.csv"
+                    }},
+                    "transform": [
+                        {{
+                        "aggregate": [
+                            {{
+                            "op": "count",
+                            "field": "Sex",
+                            "as": "count"
+                            }}
+                        ],
+                        "groupby": ["Sex"]
+                        }},
+                        {{
+                        "joinaggregate": [
+                            {{
+                            "op": "sum",
+                            "field": "count",
+                            "as": "total"
+                            }}
+                        ]
+                        }},
+                        {{
+                        "calculate": "datum.count / datum.total",
+                        "as": "percentage"
+                        }}
+                    ],
+                    "mark": {{
+                        "type": "arc",
+                        "tooltip": true
+                    }},
+                    "encoding": {{
+                        "theta": {{
+                        "field": "percentage",
+                        "type": "quantitative",
+
+                        }},
+                        "color": {{
+                        "field": "Sex",
+                        "type": "nominal",
+                        "scale": {{
+                            "scheme": "yellowgreenblue"
+                        }}
+                        }},
+                        "tooltip": [
+                        {{
+                            "field": "Sex",
+                            "type": "nominal",
+                            "title": "Sex"
+                        }},
+                        {{
+                            "field": "percentage",
+                            "type": "quantitative",
+                            "format": ".1%",
+                            "title": "Percentage"
+                        }}
+                        ]
+                    }},
+                    "layer": [{{
+                        "mark": {{"type": "arc", "outerRadius": 100}}
+                    }}, {{
+                        "mark": {{"type": "text", "outerRadius": 100, "radiusOffset":20,"fontWeight":"bold"}},
+                        "encoding": {{
+                        "text": {{"field": "percentage", "type": "quantitative", "format": ".1%"}},
+                        "color":{{
+                    "value":"black"
+                    }}
+                        }}
+                    }}],
+                    "height": 400,
+                    "width": 600
+                    }}
+
     [\Example]
     """                      
     prompt_input = PromptTemplate(
@@ -127,9 +190,8 @@ def agent_improve_vis(code,feedback,sampled_data, openai_key):
     Rule 4: Rule 3: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 7: Make sure no "layer","facet","hconcat", "vconcat", "concat", "repeat" property exist in the Vega-Lite specification.
-    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 9: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 7: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for improving the chart:

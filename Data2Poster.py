@@ -84,7 +84,7 @@ with st.sidebar:
 
 # Get the schema of the chosen dataset    
 chosen_data_schema = get_column_properties(datasets[chosen_dataset])
-
+st.write("**Dataset Schema:**",chosen_data_schema)
 
 
 
@@ -840,7 +840,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 #                     )
                 # st.write("RAG Vega-Lite JSON:",result[0].page_content)
                     st.write(f'**Question for Chart {idx}:**',f'**{query}**')
-                    vlspec = agent_1_generate_code(chosen_dataset,query,summary, openai_key)
+                    vlspec = agent_1_generate_code(chosen_dataset,query,sample_data, openai_key)
                     st.write("Vega-Lite Specification:",vlspec)
                     json_code = json.loads(vlspec)
                     json_code["height"] = 400
@@ -857,7 +857,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     feedback = agent_2_improve_code(query, url, openai_key)
                     st.write(feedback)
                     # Improve the vlspec based on feedback
-                    improved_code = agent_improve_vis(vlspec, feedback,summary, openai_key)
+                    improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
                     st.write("Improved Vega-Lite Specification:",improved_code)
                     improved_json = json.loads(improved_code)
                     improved_json["height"] = 400
@@ -874,7 +874,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             
                     
                     # Inspect logic error of the vlspec for final validation(at most 3 times)
-                    pre_final_code = agent_4_validate_spec(improved_code,summary, openai_key)
+                    pre_final_code = agent_4_validate_spec(improved_code,sample_data, openai_key)
                     pre_final_json = json.loads(pre_final_code)
                     pre_final_json["height"] = 400
                     pre_final_json["width"] = 600
