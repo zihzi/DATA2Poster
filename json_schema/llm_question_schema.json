@@ -1,15 +1,15 @@
 {
   "title": "Question_for_Insights",
   "type": "object",
-  "description": "Contains of question and its action based on a data patttern for further analysis.",
+  "description": "Contains of question and its action based on a data patttern for EDA analysis.",
   "properties": {
     "chosen_pattern": {
       "type": "string",
-      "description": "The first data patterns."
+      "description": "The original data pattern description."
     },
     "query_object": {
       "type": "object",
-      "description": "One question and its action for further analysis.",
+      "description": "One question and its action for EDA analysis.",
       "properties": {
         "question": {
           "type": "string",

@@ -1,0 +1,18 @@
+{
+  "title": "Question_for_Insights",
+  "type": "object",
+  "description": "Contains of questions.",
+  "properties": {
+    "query_set": {
+      "type": "array",
+      "description": "Three question for a coherent exploratory data analysis.",
+      "items": {
+        "type": "string",
+        "description": "The question."
+      }
+    }
+  },
+  "required": [
+    "query_set"
+  ]
+}

@@ -1,35 +1,17 @@
 You are a creative yet analytical data analyst performing Exploratory Data Analysis (EDA) on a tabular dataset.
-Your goal is to extract three meaningful data patterns focused on **{user_selected_column}**, each supported by a number list of **1–3** data facts.
+Your goal is to extract three interesting data patterns focused on **{user_selected_column}**, each supported by a number list of **1–3** data facts.
 Here are available data facts: {facts}
-
-**Task**
-The three patterns should follow a coherent EDA flow:
-Pattern 1. Overall Distribution
-- Describe the overall distribution of {user_selected_column} (e.g., range, central tendency, skewness).
-- Select a number list of **1–3** facts that illustrate this distribution.
-
-Pattern 2. Drill Down to Subgroup Insight
--Identify a distinct pattern by filtering on one other column and examining {user_selected_column} within that subgroup.
--Select a number list of **1–3** facts that highlight this subgroup’s behavior.
-
-Pattern 3. Drill Down in Subgroup for deeper Insight
--Uncover a deeper insight about {user_selected_column} and one other relevant column in a filtered subgroup.
--Select a number list of **1–3** facts that demonstrate this relationship.
-
-**Example**
-Pattern 1. Sex Male accounts for the highest proportion of employed persons across all Pacific Island Countries.
-Pattern 2. The Top 3 Countries of gender gap is Marshall Islands, Samoa, Solomon Islands.
-Pattern 3. The Occupations dominated by male in the country with highest gender gap(Marshall Islands) are construction, Agricultur and Fishery, and Electricity and Gas.
 
 **Instruction**
 - Plan an insight you aim to identify in one data pattern.
-- Ensure each pattern uncover a non-obvious insight from the data.
+- Select a number list of **1–3** facts for each data pattern.
+- Ensure each pattern uncover a surprising insight from the data.
 - Clearly explain how the selected facts support for each pattern.
 
 **Constraints**
-- Each pattern can ONLY reference up to two column names.
+- Each pattern can ONLY reference up to **TWO** column names.For example, given the column names:Genre,Worldwide Gross,Production Budget,Release Year, the pattern:"Worldwide Gross shows a ranking variation within genres across different years, indicating diverse financial success patterns over time." is unvalid due to contain three column names(Worldwide Gross, genres, years).
 - Do not paraphrase or rewrite  the available data facts; use them verbatim.
-- Patterns must be non‐obvious, statistically grounded, and objectively phrased.
+- Patterns must be statistically grounded, and objectively phrased.
 
 **Output Example**
 The following is an example of your response:

@@ -76,6 +76,8 @@ def agent_2_improve_code(query, url, openai_key):
     - Check if the tick labels are difficult to read, e.g., are they overlapped?
     4. Legend Completeness:
     - Is the legend complete?
+    5. Number of Subplots:
+    - Are there too many subplots? There should never be more than 2 subplots in a single chart.
     [\Instructions]
     - Provide an ordered list of actionable steps (e.g., Step 1, Step 2…). 
     - Each step should be specific and implementable (e.g., "Change the y-axis scale to logarithmic” rather than “Consider using a logarithmic scale").
@@ -276,7 +278,7 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
                        input_variables=["vlspec"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="o4-mini-2025-04-16", temperature=1,api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   HumanMessagePromptTemplate.from_template(prompt_input.template)
