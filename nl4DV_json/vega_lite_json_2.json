@@ -1,69 +1,33 @@
 {
-  "themes": [
-    {
-      "name": "Genre-Specific Gross Trends Over Years",
-      "fact_ids": [
-        1,
-        24,
-        41,
-        61,
-        8
-      ],
-      "insight": "Across the studied period, the Action genre shows strong periods of increasing worldwide gross (e.g., 1998-2000, 2002, 2004-2005) but also notable declines (e.g., 1999, 2005-2007), indicating volatility in audience reception. Comedy and Drama also display intermittent upward trends, with Comedy showing growth spikes around 2004-2006 and Drama increasing notably in 2004-2006. Thriller exhibits generally decreasing gross in many intervals, except brief increases in 1997 and 2007-2008.",
-      "visualization": {
-        "type": "line",
-        "x": "Release Year",
-        "y": "Worldwide Gross",
-        "color": "Genre"
+  "schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
+  },
+  "transform": [],
+  "mark": "point",
+  "encoding": {
+    "x": {
+      "field": "Domestic m",
+      "type": "quantitative",
+      "axis": {
+        "title": "Domestic Gross (m)"
+      },
+      "scale": {
+        "zero": false
       }
     },
-    {
-      "name": "Overall Worldwide Gross Temporal Patterns",
-      "fact_ids": [
-        15,
-        16,
-        18,
-        22,
-        26
-      ],
-      "insight": "Overall worldwide gross exhibits distinct phases of growth from the late 1990s into the late 2000s, with increasing trends particularly evident from 1997 to 2002 and 2006 to 2009, contrasted by marked decreases at several intervals such as 1996-1999, 2000-2002, and 2004-2009. These fluctuations suggest cyclical or market-driven influences on total gross revenues across years regardless of genre.",
-      "visualization": {
-        "type": "line",
-        "x": "Release Year",
-        "y": "Worldwide Gross"
+    "y": {
+      "field": "Worldwide m",
+      "type": "quantitative",
+      "axis": {
+        "title": "Worldwide Gross ($m)"
+      },
+      "scale": {
+        "zero": false
       }
     },
-    {
-      "name": "Declining Trends in Specific Genres",
-      "fact_ids": [
-        0,
-        54,
-        37,
-        48,
-        58
-      ],
-      "insight": "Certain genres show consistent decreasing worldwide gross trends over various periods, such as Thriller (e.g., 2004-2006), Horror (2000-2005), and Adventure (notably 1998-2001). These declines may reflect changing audience preferences or market saturation in those genres during these years.",
-      "visualization": {
-        "type": "line",
-        "x": "Release Year",
-        "y": "Worldwide Gross",
-        "color": "Genre"
-      }
-    },
-    {
-      "name": "Rankings Highlighting Genre Performance",
-      "fact_ids": [
-        27,
-        36,
-        73
-      ],
-      "insight": "Ranking data for specific years reveal consistent low performance of certain genres, e.g., Comedy, Adventure, and Action at the bottom in 2001, and Drama, Horror, and Action ranking low in 2005. These rankings underscore persistent underperformance of these genres in particular years, which can inform strategic investment decisions.",
-      "visualization": {
-        "type": "bar",
-        "x": "Genre",
-        "y": "Worldwide Gross Rank",
-        "color": "Release Year"
-      }
+    "color": {
+      "value": "yellowgreen"
     }
-  ]
+  }
 }

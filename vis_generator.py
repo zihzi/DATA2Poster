@@ -18,7 +18,8 @@ def agent_1_generate_code(table_name, query,sampled_data, openai_key):
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
     Rule 7: Make sure no "layer","facet","hconcat", "vconcat", "concat", "repeat" property exist in the Vega-Lite specification.
-    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:
@@ -127,7 +128,8 @@ def agent_improve_vis(code,feedback,sampled_data, openai_key):
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
     Rule 7: Make sure no "layer","facet","hconcat", "vconcat", "concat", "repeat" property exist in the Vega-Lite specification.
-    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for improving the chart:
@@ -240,7 +242,8 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
        - Use "timeUnit" for temporal groupings — prefer over transforming raw dates
     d. Include "tooltip" encoding for better readability
     e. Adjust axis ticks, titles, and labels for clarity
-    f. Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    f. Make sure no "false" and "true" is used in the Vega-Lite specification.
+    g. Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
     [/Rules for Improvement]
 
     [/Constraints]

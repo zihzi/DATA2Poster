@@ -45,8 +45,8 @@ if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
     datasets["movies"] = pd.read_csv("data/movies.csv")
-    datasets["StudentsPerformance"] = pd.read_csv("data/StudentsPerformance.csv") #NO vis_corpus
-    datasets["Cars"] = pd.read_csv("data/Cars.csv") #NO vis_corpus
+    datasets["movies_record"] = pd.read_csv("data/movies_record.csv") #NO vis_corpus
+    datasets["carsales"] = pd.read_csv("data/carsales.csv") #NO vis_corpus
     datasets["Japan_life_expectancy"] = pd.read_csv("data/Japan_life_expectancy.csv")
     datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
     datasets["personality_dataset"] = pd.read_csv("data/personality_dataset.csv")
@@ -528,74 +528,134 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     st.session_state["fact"] = []
                 # Remove duplicates from facts_list
                 contents = [fact["content"] for fact in facts_list]
-                # facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)  
+                # Ranking facts by score
+                facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)  
                 seen = set()
                 for item in facts_list:
                     if item["content"] != "No fact." and item["content"] not in seen:
                         seen.add(item["content"])
                         st.session_state["fact"].append(item["content"])
-                # for item in st.session_state["fact"]:
-                #     if user_selected_column not in item:
-                #         st.session_state["fact"].remove(item)
-                # Randomly select 100 items from st.session_state["fact"]
+                # st.write("Facts generated from the dataset:",st.session_state["fact"])
+                # Remove facts not related to user-selected column
+                st.session_state["fact"] = [s for s in st.session_state["fact"] if str(user_selected_column) in s]
+                # st.write("Facts related to the selected column:",st.session_state["fact"])
+                # Randomly select 100 facts
                 if len(st.session_state["fact"]) > 100:
-                    st.session_state["fact"] = random.sample(st.session_state["fact"], 200)
+                    st.session_state["fact"] = random.sample(st.session_state["fact"], 100)
                 st.write("Facts:",st.session_state["fact"])
                 # TEST#########
-                eda_prompt=PromptTemplate(template="""
-                        You are an expert exploratory data analysis assistant. You will help synthesize a large set of individual data facts into a concise, insightful narrative closely related to **{column}** by following these steps:
+                only_fact_template = """You are an expert data analyst specializing in Exploratory Data Analysis (EDA). 
+                                        Here is a list of data facts : {facts_list}
 
-                        **Task**:
-                        1. **Enrich & Tag**  
-                        For each fact in facts_list, generate or extract:
-                        - dimensions: list of relevant dimensions (e.g. “Genre”, “Year”, “Region”)
-                        - pattern_type: one of (trend, outlier, correlation, ranking, other)
-                        - direction: one of (increasing, decreasing, high, low, none)
-                        - magnitude: a short quantitative descriptor (e.g. “+25%”, “rank 5 of 10”, “p-value 0.01”)
-                        - time_window: the years or range involved
-                        - value_tag: one of (actionable, contextual, anomalous)
+                                    Task:
+                                    1. Use the facts to construct a EDA process focus on {column}.
+                                    1. Select exactly three facts from that list which, when taken together, form a logical, step-by-step EDA process.
+                                    2. Outline the three analysis steps you’d take—one for each fact—in the order you’ve chosen them.
+                                    3. State the single most interesting insight that emerges from this sequence.
 
-                        2. **Filter & Prioritize**  
-                        - Discard facts with magnitude below noise threshold (e.g. <10%% change).  
-                        - Keep only facts whose value_tag is "actionable" or matches priority_tags.  
+                                    Format your answer as JSON with three keys:
 
-                        3. **Cluster by Theme**  
-                        - Group the remaining facts into 3-5 themes, based on shared dimensions or pattern_types.  
-                        - Label each theme with a short name (e.g. "Genre Polarization", "Budget vs. Return").
+                                    {{
+                                    "selected_facts": [ "Fact A", "Fact B", "Fact C" ],
+                                    "eda_steps": [
+                                        "Step 1: …",
+                                        "Step 2: …",
+                                        "Step 3: …"
+                                    ],
+                                    "insight": "Here goes the insight."
+                                    }}
+                                    Do not INCLUDE ```json```.Do not add other sentences after this json data."""
+                only_fact_prompt = PromptTemplate(
+                    template=only_fact_template,
+                    input_variables=["facts_list","column"]
 
-                        4. **Select Representatives**  
-                        - Within each theme, pick 1-2 facts that are both strong (largest magnitude) and novel.  
+                )
+                only_fact_chain = only_fact_prompt | llm
+                only_fact_result = only_fact_chain.invoke(input ={"facts_list":st.session_state["fact"], "column":user_selected_column})
+                only_fact_json = json.loads(only_fact_result.content)
+                st.write("Selected Facts:",only_fact_json)
+                nl_viz_template = """You are an expert data visualization specialist.
+                                        Here three data facts: {fact}
 
-                        5. **Synthesize Patterns**  
-                        - For each theme, write a 1-2 sentence insight summarizing the pattern (e.g. "Since 2010, Action's share of total gross has doubled…").  
-                        - Recommend one visualization per theme (type of chart, key fields to encode).
+                                        Task:
+                                        For each fact, propose exactly one **natural-language** question that:
+                                        - Is phrased as an analytic query suitable to drive a visualization
+                                        - Clearly specifies what should be plotted (e.g. fields, filters)
+                                        - Could be handed off directly to a data-viz tool or dashboard
+                                        - Create the Action that is detailed and straightforward statements to transform the each query into visualization chart.
+                                        - Ensure it is detailed enough and easily translatable into a visualization (e.g., bar chart, pie chart).
+                                        Format your answer as JSON where each key is number and each value is the NL query. For example:
 
-                        6. **Output Format**  
-                        Do not INCLUDE ```json```.Do not add other sentences after this json data.
-                        Return a JSON object with:
-                            {{
-                            "themes": [
-                                {{
-                                "name": "<theme name>",
-                                "fact_ids": [<indexes of chosen facts>],
-                                "insight": “<1-2 sentence takeaway>”,
-                                "visualization": {{
-                                    "type": "line|bar|scatter|boxplot|…", 
-                                    "x": "<field>", 
-                                    "y": "<field>", 
-                                    "color": "<optional field>"
-                                }}
-                                }},
-                                ...
-                            ]
-                            }}
-                        **** Inputs: {facts_list}*******"""
-                        ,
-                        input_variables=["column","facts_list"])
-                eda_chain = eda_prompt | llm
-                eda_result = eda_chain.invoke(input ={"column":user_selected_column,"facts_list":st.session_state["fact"]})
-                eda_result_json = json.loads(eda_result.content)
-                st.write("EDA Result:",eda_result_json)
+                                        {{
+                                            "question": ["How has the average Worldwide Gross for Thriller films changed over the years?",
+                                                                            "What are the top five countries by total export volume in 2023?",
+                                                                            "..."],
+                                            "action": ["...", "...","..."]
+                                                                            
+                                        }}
+                                        Do not INCLUDE ```json```.Do not add other sentences after this json data."""
+                nl_viz_prompt = PromptTemplate(
+                    template=nl_viz_template,
+                    input_variables=["fact"],
+                )
+                nl_viz_chain = nl_viz_prompt | llm
+                nl_viz_result = nl_viz_chain.invoke(input ={"fact":only_fact_json["selected_facts"]})
+                nl_viz_json = json.loads(nl_viz_result.content)
+                st.write("Natural Language Queries:",nl_viz_json)
+
+                #         You are an expert exploratory data analysis assistant. You will help synthesize a large set of individual data facts into a concise, insightful narrative closely related to **{column}** by following these steps:
+
+                #         **Task**:
+                #         1. **Enrich & Tag**  
+                #         For each fact in facts_list, generate or extract:
+                #         - dimensions: list of relevant dimensions (e.g. “Genre”, “Year”, “Region”)
+                #         - pattern_type: one of (trend, outlier, correlation, ranking, other)
+                #         - direction: one of (increasing, decreasing, high, low, none)
+                #         - magnitude: a short quantitative descriptor (e.g. “+25%”, “rank 5 of 10”, “p-value 0.01”)
+                #         - time_window: the years or range involved
+                #         - value_tag: one of (actionable, contextual, anomalous)
+
+                #         2. **Filter & Prioritize**  
+                #         - Discard facts with magnitude below noise threshold (e.g. <10%% change).  
+                #         - Keep only facts whose value_tag is "actionable" or matches priority_tags.  
+
+                #         3. **Cluster by Theme**  
+                #         - Group the remaining facts into 3-5 themes, based on shared dimensions or pattern_types.  
+                #         - Label each theme with a short name (e.g. "Genre Polarization", "Budget vs. Return").
+
+                #         4. **Select Representatives**  
+                #         - Within each theme, pick 1-2 facts that are both strong (largest magnitude) and novel.  
+
+                #         5. **Synthesize Patterns**  
+                #         - For each theme, write a 1-2 sentence insight summarizing the pattern (e.g. "Since 2010, Action's share of total gross has doubled…").  
+                #         - Recommend one visualization per theme (type of chart, key fields to encode).
+
+                #         6. **Output Format**  
+                #         Do not INCLUDE ```json```.Do not add other sentences after this json data.
+                #         Return a JSON object with:
+                #             {{
+                #             "themes": [
+                #                 {{
+                #                 "name": "<theme name>",
+                #                 "fact_ids": [<indexes of chosen facts>],
+                #                 "insight": “<1-2 sentence takeaway>”,
+                #                 "visualization": {{
+                #                     "type": "line|bar|scatter|boxplot|…", 
+                #                     "x": "<field>", 
+                #                     "y": "<field>", 
+                #                     "color": "<optional field>"
+                #                 }}
+                #                 }},
+                #                 ...
+                #             ]
+                #             }}
+                #         **** Inputs: {facts_list}*******"""
+                #         ,
+                #         input_variables=["column","facts_list"])
+                # eda_chain = eda_prompt | llm
+                # eda_result = eda_chain.invoke(input ={"column":user_selected_column,"facts_list":st.session_state["fact"]})
+                # eda_result_json = json.loads(eda_result.content)
+                # st.write("EDA Result:",eda_result_json)
 
                 # eda_goal_prompt = PromptTemplate(template="""You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
                 # Here are key facts extracted from this dataset:{fact}
@@ -692,58 +752,62 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 #                         input_variables=["facts","user_selected_column"],
 
                 #             )
-                # with open("json_schema/fact_idea_schema.json", "r") as f:
-                #     pattern_json_schema = json.load(f)
-                # chain_pattern = prompt_pattern | llm.with_structured_output(pattern_json_schema)
+                # # with open("json_schema/fact_idea_schema.json", "r") as f:
+                # #     pattern_json_schema = json.load(f)
+                # chain_pattern = prompt_pattern | llm
                 # patterns_from_gpt = chain_pattern.invoke(input = {"facts":st.session_state["fact"],"user_selected_column":user_selected_column})
-                # st.write("Interesting Patterns:",patterns_from_gpt)
-
+                # st.write("Interesting Patterns:",patterns_from_gpt.content)
+                # eda_result_json = json.loads(patterns_from_gpt.content)
+                # st.write("EDA Result:",eda_result_json)
                 question_list=[]
+                for i in range(0,3):
+                    question_list.append(nl_viz_json["question"][i]+nl_viz_json["action"][i])
                 # supported_fact= []
                 # Generate EDA questions based on interesting patterns
-                for pattern in eda_result_json["themes"]:
-                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
-                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
-                    # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
+                # for pattern in nl_viz_json["themes"]:
+                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
+                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
+                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
            
-                    llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
-                    prompt_llm_Q = PromptTemplate(
-                                            template=llm_Q_template,
-                                            input_variables=["pattern_1","columns_set_1"],
+                #     llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
+                #     prompt_llm_Q = PromptTemplate(
+                #                             template=llm_Q_template,
+                #                             input_variables=["pattern_1","columns_set_1"],
 
-                                )
-                    with open ("json_schema/llm_question_schema.json", "r") as f:
-                        llm_Q_schema = json.load(f)
-                    llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
-                    llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":pattern["insight"],"columns_set_1":list(head)})
-                    st.write(llm_Q_from_gpt)
-                    question_list.append(llm_Q_from_gpt["query_object"]["question"]+llm_Q_from_gpt["query_object"]["action"])
-                Q_advice_prompt = PromptTemplate(
-                template="""You are an assistant specialized in exploratory data analysis (EDA). Evaluate the following three queries:{query}
-                            Identify if the queries are duplicates, similar, or distinct.
-                            If any queries are duplicates or similar (leading to similar visualizations), suggest replacing the redundant query with a new distinct query that contributes to a coherent exploratory data analysis narrative.
-                            Provide the new queries set with exactly **3** query if you find redundancy; otherwise, only return the original queries as they are.
-                            """,
-                input_variables=["query"],
-                )
+                #                 )
+                #     with open ("json_schema/llm_question_schema.json", "r") as f:
+                #         llm_Q_schema = json.load(f)
+                #     llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
+                #     llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":pattern["insight"],"columns_set_1":list(head)})
+                #     st.write(llm_Q_from_gpt)
+                #     question_list.append(llm_Q_from_gpt["query_object"]["question"]+llm_Q_from_gpt["query_object"]["action"])
+                # Q_advice_prompt = PromptTemplate(
+                # template="""You are an assistant specialized in exploratory data analysis (EDA). Evaluate the following three queries:{query}
+                #             Identify if the queries are duplicates, similar, or distinct.
+                #             If any queries are duplicates or similar (leading to similar visualizations), suggest replacing the redundant query with a new distinct query that contributes to a coherent exploratory data analysis narrative.
+                #             Provide the new queries set with exactly **3** query if you find redundancy; otherwise, only return the original queries as they are.
+                #             """,
+                # input_variables=["query"],
+                # )
 
-                Q_advice_chain = Q_advice_prompt | llm
-                Q_advice = Q_advice_chain.invoke(input ={"query":question_list})
-                st.write("Question Advice:",Q_advice.content)
-                new_Q_prompt = PromptTemplate(
-                template="""You are an assistant specialized in exploratory data analysis (EDA). 
-                            Provide the new queries based on the following advice for refining EDA query:{advice}
-                            Please approach this task methodically and reason step by step.
-                            ONLY return the queries in JSON format without your reasoning or any additional text.
-                            YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
-                            """,
-                input_variables=["advice"],
-                )
-                with open("json_schema/new_question_schema copy.json", "r") as f:
-                    new_Q_schema = json.load(f)
-                new_Q_chain = new_Q_prompt | llm.with_structured_output(new_Q_schema)
-                new_Q = new_Q_chain.invoke(input ={"advice":Q_advice.content})
-                st.write("New Question:",new_Q)    
+                # Q_advice_chain = Q_advice_prompt | llm
+                # Q_advice = Q_advice_chain.invoke(input ={"query":question_list})
+                # st.write("Question Advice:",Q_advice.content)
+                # new_Q_prompt = PromptTemplate(
+                # template="""You are an assistant specialized in exploratory data analysis (EDA). 
+                #             The following is advice about refining EDA query:{advice}. 
+                #             Focus on the final new queries and choose exactly **3** queries for leading a coherent EDA process. 
+                #             Please approach this task methodically and reason step by step.
+                #             ONLY return the queries in JSON format without your reasoning or any additional text.
+                #             YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
+                #             """,
+                # input_variables=["advice"],
+                # )
+                # with open("json_schema/new_question_schema copy.json", "r") as f:
+                #     new_Q_schema = json.load(f)
+                # new_Q_chain = new_Q_prompt | llm.with_structured_output(new_Q_schema)
+                # new_Q = new_Q_chain.invoke(input ={"advice":Q_advice.content})
+                # st.write("New Question:",new_Q)    
                 # # log the llm question
                 # def log_response_to_json(knowledgebase, response):
                 #     log_data = {"knowkedgebase": knowledgebase, "response": response}
@@ -754,7 +818,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # # Save log
                 # log_response_to_json(knowledge, llm_Q_from_gpt)
 
-                st.write(question_list)
+                # st.write(question_list)
                 # st.session_state["Q_from_gpt"] = {"questions":question_list}
                 
                 
@@ -766,7 +830,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 insight_list = []
                 chart_des_list = []
                 idx=1
-                for query in new_Q["query_set"]:
+                for query in question_list:
                     
                 #     st.write(f'**Question for Chart:**',f'**{query}**')
                 #     print("\n🟢 Step 1: Generating Initial Code...\n")
@@ -777,6 +841,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 # st.write("RAG Vega-Lite JSON:",result[0].page_content)
                     st.write(f'**Question for Chart {idx}:**',f'**{query}**')
                     vlspec = agent_1_generate_code(chosen_dataset,query,summary, openai_key)
+                    st.write("Vega-Lite Specification:",vlspec)
                     json_code = json.loads(vlspec)
                     json_code["height"] = 400
                     json_code["width"] = 600
@@ -793,6 +858,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     st.write(feedback)
                     # Improve the vlspec based on feedback
                     improved_code = agent_improve_vis(vlspec, feedback,summary, openai_key)
+                    st.write("Improved Vega-Lite Specification:",improved_code)
                     improved_json = json.loads(improved_code)
                     improved_json["height"] = 400
                     improved_json["width"] = 600
