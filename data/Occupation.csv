@@ -1,0 +1,427 @@
+Countries,Education level,Occupation,Count
+Tuvalu,Upper secondary education,Agricultural related Workers,39
+Marshall Islands,Lower secondary education,Agricultural related Workers,444
+Tonga,Upper secondary education,Craft Workers,863
+Marshall Islands,Upper secondary education,Services and Sales Workers,1049
+Nauru,Upper secondary education,Services and Sales Workers,611
+Palau,Primary education,Services and Sales Workers,43
+Tonga,Lower secondary education,Mechanic,719
+Marshall Islands,Upper secondary education,Clerical Support Workers,448
+Nauru,Lower secondary education,Craft Workers,53
+Tonga,Upper secondary education,Agricultural related Workers,509
+Tonga,Upper secondary education,Mechanic,206
+Nauru,Upper secondary education,Agricultural related Workers,35
+Tonga,Post-secondary non-tertiary education,Services and Sales Workers,412
+Marshall Islands,Lower secondary education,Craft Workers,1000
+Nauru,Upper secondary education,Clerical Support Workers,278
+Tuvalu,Upper secondary education,Services and Sales Workers,245
+Tuvalu,Lower secondary education,Mechanic,53
+Tuvalu,Lower secondary education,Services and Sales Workers,161
+Tuvalu,Lower secondary education,Agricultural related Workers,58
+Marshall Islands,Upper secondary education,Agricultural related Workers,202
+Tuvalu,Upper secondary education,Clerical Support Workers,201
+Tuvalu,Lower secondary education,Craft Workers,205
+Marshall Islands,Upper secondary education,Craft Workers,1019
+Tonga,Upper secondary education,Elementary Occupations,247
+Nauru,Upper secondary education,Craft Workers,220
+Nauru,Upper secondary education,Technicians,213
+Tonga,Upper secondary education,Services and Sales Workers,1245
+Tonga,Lower secondary education,Professionals,566
+Nauru,Lower secondary education,Clerical Support Workers,16
+Nauru,Lower secondary education,Mechanic,46
+Tonga,Post-secondary non-tertiary education,Clerical Support Workers,489
+Tuvalu,Upper secondary education,Craft Workers,177
+Tonga,Upper secondary education,Managers,464
+Marshall Islands,Lower secondary education,Managers,85
+Tuvalu,Upper secondary education,Elementary Occupations,70
+Marshall Islands,Lower secondary education,Services and Sales Workers,700
+Tonga,Lower secondary education,Agricultural related Workers,2655
+Marshall Islands,Lower secondary education,Technicians,107
+Tonga,Lower secondary education,Armed Forces Occupations,104
+Tonga,Upper secondary education,Technicians,639
+Marshall Islands,Upper secondary education,Elementary Occupations,537
+Nauru,Post-secondary non-tertiary education,Managers,51
+Tonga,Lower secondary education,Technicians,582
+Tuvalu,Upper secondary education,Professionals,245
+Marshall Islands,Lower secondary education,Professionals,37
+Tuvalu,Lower secondary education,Technicians,53
+Marshall Islands,Lower secondary education,Elementary Occupations,859
+Marshall Islands,Primary education,Elementary Occupations,83
+Nauru,Lower secondary education,Elementary Occupations,162
+Tonga,Post-secondary non-tertiary education,Technicians,564
+Tuvalu,Upper secondary education,Managers,103
+Nauru,Primary education,Elementary Occupations,24
+Palau,Upper secondary education,Professionals,218
+Marshall Islands,Upper secondary education,Mechanic,282
+Tonga,Upper secondary education,Professionals,765
+Nauru,Upper secondary education,Mechanic,130
+Marshall Islands,Upper secondary education,Armed Forces Occupations,6
+Marshall Islands,Upper secondary education,Professionals,395
+Nauru,Upper secondary education,Managers,70
+Tonga,Post-secondary non-tertiary education,Professionals,2159
+Palau,Primary education,Elementary Occupations,85
+Marshall Islands,Upper secondary education,Managers,180
+Tonga,Primary education,Elementary Occupations,52
+Tuvalu,Lower secondary education,Managers,63
+Nauru,Upper secondary education,Professionals,209
+Tonga,Post-secondary non-tertiary education,Managers,459
+Tuvalu,Lower secondary education,Professionals,39
+Tuvalu,Upper secondary education,Technicians,190
+Tuvalu,Upper secondary education,Mechanic,63
+Marshall Islands,Lower secondary education,Clerical Support Workers,96
+Tuvalu,Lower secondary education,Elementary Occupations,155
+Marshall Islands,Lower secondary education,Mechanic,279
+Tuvalu,Lower secondary education,Clerical Support Workers,42
+Tonga,Primary education,Craft Workers,225
+Nauru,Post-secondary non-tertiary education,Professionals,50
+Marshall Islands,Upper secondary education,Technicians,365
+Tonga,Lower secondary education,Elementary Occupations,889
+Tonga,Upper secondary education,Armed Forces Occupations,199
+Tonga,Lower secondary education,Managers,425
+Tonga,Upper secondary education,Clerical Support Workers,601
+Tonga,Lower secondary education,Craft Workers,3233
+Nauru,Lower secondary education,Services and Sales Workers,152
+Tonga,Lower secondary education,Services and Sales Workers,1849
+Nauru,Lower secondary education,Technicians,17
+Solomon Islands,Post-secondary non-tertiary education,Services and Sales Workers,212
+Palau,Lower secondary education,Mechanic,10
+Samoa,Lower secondary education,Craft Workers,520
+Tuvalu,Upper secondary education,Agricultural related Workers,24
+Marshall Islands,Lower secondary education,Agricultural related Workers,319
+Solomon Islands,Upper secondary education,Agricultural related Workers,4599
+Cook Islands,Lower secondary education,Clerical Support Workers,141
+Kiribati,Upper secondary education,Managers,891
+Palau,Upper secondary education,Craft Workers,568
+Niue,Upper secondary education,Technicians,32
+Tuvalu,Post-secondary non-tertiary education,Services and Sales Workers,16
+Cook Islands,Upper secondary education,Technicians,304
+Vanuatu,Post-secondary non-tertiary education,Professionals,748
+Solomon Islands,No schooling,Craft Workers,443
+Micronesia (Federated States of),Upper secondary education,Services and Sales Workers,2064
+Niue,No schooling,Clerical Support Workers,7
+Vanuatu,Lower secondary education,Technicians,970
+Marshall Islands,Upper secondary education,Services and Sales Workers,1565
+Marshall Islands,No schooling,Craft Workers,25
+Kiribati,Upper secondary education,Elementary Occupations,3928
+Tuvalu,No schooling,Craft Workers,11
+Vanuatu,Upper secondary education,Technicians,1197
+Marshall Islands,Primary education,Clerical Support Workers,9
+Kiribati,Primary education,Mechanic,120
+Samoa,Primary education,Services and Sales Workers,194
+Cook Islands,Post-secondary non-tertiary education,Technicians,86
+Vanuatu,Primary education,Professionals,752
+Vanuatu,Primary education,Elementary Occupations,3049
+Marshall Islands,Primary education,Technicians,11
+Tonga,Primary education,Services and Sales Workers,143
+Vanuatu,Lower secondary education,Clerical Support Workers,442
+Micronesia (Federated States of),Lower secondary education,Agricultural related Workers,141
+Tonga,Primary education,Agricultural related Workers,280
+Palau,Primary education,Agricultural related Workers,17
+Nauru,Lower secondary education,Agricultural related Workers,16
+Kiribati,Primary education,Craft Workers,222
+Samoa,Upper secondary education,Agricultural related Workers,7477
+Marshall Islands,Upper secondary education,Clerical Support Workers,592
+Kiribati,Upper secondary education,Professionals,2577
+Palau,Upper secondary education,Agricultural related Workers,140
+Palau,Upper secondary education,Mechanic,174
+Niue,Upper secondary education,Clerical Support Workers,41
+Micronesia (Federated States of),Lower secondary education,Craft Workers,177
+Samoa,Lower secondary education,Agricultural related Workers,1393
+Samoa,Lower secondary education,Mechanic,172
+Vanuatu,No schooling,Services and Sales Workers,273
+Marshall Islands,Lower secondary education,Craft Workers,1343
+Cook Islands,Lower secondary education,Services and Sales Workers,345
+Vanuatu,Upper secondary education,Professionals,2643
+Vanuatu,Post-secondary non-tertiary education,Technicians,303
+Solomon Islands,Lower secondary education,Mechanic,2053
+Kiribati,Primary education,Agricultural related Workers,72
+Palau,Post-secondary non-tertiary education,Services and Sales Workers,87
+Solomon Islands,Primary education,Services and Sales Workers,8607
+Marshall Islands,Primary education,Services and Sales Workers,36
+Nauru,Post-secondary non-tertiary education,Services and Sales Workers,17
+Tuvalu,Primary education,Services and Sales Workers,22
+Tuvalu,Upper secondary education,Services and Sales Workers,159
+Tonga,No schooling,Managers,84
+Tonga,No schooling,Elementary Occupations,25
+Nauru,Primary education,Services and Sales Workers,26
+Solomon Islands,Upper secondary education,Services and Sales Workers,4487
+Micronesia (Federated States of),Primary education,Services and Sales Workers,179
+Micronesia (Federated States of),Upper secondary education,Clerical Support Workers,338
+Cook Islands,Primary education,Managers,152
+Kiribati,Lower secondary education,Elementary Occupations,791
+Tuvalu,Lower secondary education,Mechanic,28
+Tonga,Post-secondary non-tertiary education,Craft Workers,303
+Niue,No schooling,Services and Sales Workers,27
+Marshall Islands,No schooling,Agricultural related Workers,7
+Solomon Islands,Lower secondary education,Agricultural related Workers,8521
+Cook Islands,Upper secondary education,Services and Sales Workers,673
+Palau,Post-secondary non-tertiary education,Craft Workers,103
+Tonga,No schooling,Professionals,71
+Vanuatu,Upper secondary education,Clerical Support Workers,876
+Marshall Islands,Post-secondary non-tertiary education,Technicians,94
+Marshall Islands,Post-secondary non-tertiary education,Services and Sales Workers,47
+Samoa,Primary education,Technicians,89
+Kiribati,Lower secondary education,Managers,48
+Tuvalu,Lower secondary education,Services and Sales Workers,83
+Marshall Islands,Post-secondary non-tertiary education,Clerical Support Workers,47
+Micronesia (Federated States of),Upper secondary education,Craft Workers,552
+Palau,No schooling,Craft Workers,20
+Palau,No schooling,Elementary Occupations,54
+Tuvalu,Lower secondary education,Agricultural related Workers,21
+Tonga,Post-secondary non-tertiary education,Armed Forces Occupations,57
+Vanuatu,Primary education,Managers,1952
+Marshall Islands,Upper secondary education,Agricultural related Workers,169
+Nauru,Post-secondary non-tertiary education,Clerical Support Workers,17
+Samoa,Lower secondary education,Services and Sales Workers,507
+Tuvalu,Upper secondary education,Clerical Support Workers,121
+Tonga,No schooling,Mechanic,17
+Solomon Islands,Upper secondary education,Clerical Support Workers,567
+Tuvalu,Lower secondary education,Craft Workers,108
+Tonga,Post-secondary non-tertiary education,Agricultural related Workers,144
+Marshall Islands,Upper secondary education,Craft Workers,1313
+Nauru,Post-secondary non-tertiary education,Technicians,37
+Solomon Islands,Lower secondary education,Craft Workers,3148
+Cook Islands,Upper secondary education,Clerical Support Workers,337
+Palau,Post-secondary non-tertiary education,Agricultural related Workers,13
+Tokelau,Primary education,Elementary Occupations,11
+Tokelau,Upper secondary education,Elementary Occupations,43
+Tonga,No schooling,Craft Workers,83
+Nauru,No schooling,Services and Sales Workers,29
+Solomon Islands,Primary education,Technicians,1508
+Solomon Islands,Primary education,Clerical Support Workers,251
+Micronesia (Federated States of),Upper secondary education,Agricultural related Workers,409
+Palau,Upper secondary education,Elementary Occupations,556
+Niue,No schooling,Technicians,6
+Solomon Islands,Post-secondary non-tertiary education,Technicians,270
+Micronesia (Federated States of),Lower secondary education,Clerical Support Workers,82
+Samoa,Lower secondary education,Managers,90
+Samoa,Lower secondary education,Elementary Occupations,469
+Cook Islands,Post-secondary non-tertiary education,Managers,152
+Vanuatu,No schooling,Agricultural related Workers,2201
+Marshall Islands,Primary education,Professionals,7
+Cook Islands,Lower secondary education,Agricultural related Workers,48
+Solomon Islands,Lower secondary education,Elementary Occupations,1252
+Solomon Islands,Upper secondary education,Mechanic,1074
+Niue,Upper secondary education,Services and Sales Workers,46
+Micronesia (Federated States of),Lower secondary education,Mechanic,143
+Niue,Upper secondary education,Managers,30
+Niue,Upper secondary education,Elementary Occupations,19
+Samoa,Upper secondary education,Clerical Support Workers,1221
+Palau,No schooling,Agricultural related Workers,13
+Kiribati,Primary education,Services and Sales Workers,492
+Kiribati,Primary education,Elementary Occupations,516
+Palau,Post-secondary non-tertiary education,Mechanic,16
+Vanuatu,Lower secondary education,Professionals,1409
+Samoa,Primary education,Craft Workers,238
+Vanuatu,Primary education,Craft Workers,2730
+Solomon Islands,Lower secondary education,Clerical Support Workers,234
+Solomon Islands,No schooling,Professionals,160
+Palau,Primary education,Craft Workers,44
+Cook Islands,Upper secondary education,Professionals,252
+Niue,No schooling,Craft Workers,14
+Vanuatu,Lower secondary education,Agricultural related Workers,5853
+Nauru,Post-secondary non-tertiary education,Craft Workers,29
+Samoa,Post-secondary non-tertiary education,Technicians,141
+Tuvalu,No schooling,Managers,17
+Tokelau,Lower secondary education,Elementary Occupations,54
+Tonga,Post-secondary non-tertiary education,Elementary Occupations,63
+Marshall Islands,Post-secondary non-tertiary education,Professionals,189
+Solomon Islands,Primary education,Craft Workers,5156
+Solomon Islands,No schooling,Agricultural related Workers,4618
+Micronesia (Federated States of),Upper secondary education,Technicians,503
+Vanuatu,Upper secondary education,Mechanic,666
+Marshall Islands,No schooling,Elementary Occupations,21
+Palau,Lower secondary education,Elementary Occupations,76
+Tuvalu,Upper secondary education,Craft Workers,93
+Tuvalu,No schooling,Services and Sales Workers,13
+Vanuatu,Post-secondary non-tertiary education,Managers,265
+Marshall Islands,Lower secondary education,Managers,243
+Kiribati,Upper secondary education,Mechanic,1433
+Cook Islands,Primary education,Elementary Occupations,72
+Tonga,No schooling,Technicians,30
+Tuvalu,Post-secondary non-tertiary education,Clerical Support Workers,7
+Tuvalu,Upper secondary education,Elementary Occupations,122
+Marshall Islands,Lower secondary education,Services and Sales Workers,706
+Tuvalu,Post-secondary non-tertiary education,Agricultural related Workers,6
+Palau,Lower secondary education,Craft Workers,23
+Palau,Upper secondary education,Clerical Support Workers,289
+Tokelau,Lower secondary education,Craft Workers,54
+Niue,No schooling,Elementary Occupations,22
+Tuvalu,Post-secondary non-tertiary education,Professionals,15
+Tokelau,Lower secondary education,Managers,12
+Tonga,Lower secondary education,Clerical Support Workers,186
+Solomon Islands,Primary education,Elementary Occupations,2890
+Samoa,Post-secondary non-tertiary education,Services and Sales Workers,167
+Samoa,Post-secondary non-tertiary education,Craft Workers,120
+Samoa,Upper secondary education,Mechanic,2325
+Samoa,No schooling,Agricultural related Workers,164
+Tuvalu,Post-secondary non-tertiary education,Mechanic,26
+Solomon Islands,Post-secondary non-tertiary education,Craft Workers,1204
+Samoa,Primary education,Elementary Occupations,183
+Marshall Islands,Lower secondary education,Technicians,150
+Palau,Lower secondary education,Services and Sales Workers,63
+Samoa,Post-secondary non-tertiary education,Managers,135
+Tokelau,Lower secondary education,Services and Sales Workers,13
+Vanuatu,Post-secondary non-tertiary education,Elementary Occupations,109
+Palau,Primary education,Technicians,8
+Nauru,Lower secondary education,Professionals,16
+Niue,Upper secondary education,Craft Workers,25
+Tuvalu,No schooling,Technicians,11
+Vanuatu,Post-secondary non-tertiary education,Agricultural related Workers,191
+Nauru,Upper secondary education,Elementary Occupations,329
+Micronesia (Federated States of),Primary education,Mechanic,70
+Samoa,Lower secondary education,Technicians,106
+Samoa,Post-secondary non-tertiary education,Professionals,300
+Marshall Islands,Post-secondary non-tertiary education,Managers,47
+Kiribati,Lower secondary education,Services and Sales Workers,697
+Tuvalu,Post-secondary non-tertiary education,Elementary Occupations,28
+Kiribati,Upper secondary education,Services and Sales Workers,5404
+Vanuatu,Upper secondary education,Craft Workers,821
+Marshall Islands,Primary education,Mechanic,18
+Marshall Islands,Post-secondary non-tertiary education,Elementary Occupations,12
+Nauru,Primary education,Mechanic,7
+Solomon Islands,Post-secondary non-tertiary education,Managers,102
+Tuvalu,Post-secondary non-tertiary education,Managers,12
+Solomon Islands,Primary education,Mechanic,3683
+Tonga,Primary education,Professionals,35
+Niue,No schooling,Managers,8
+Solomon Islands,Primary education,Managers,522
+Tokelau,Upper secondary education,Services and Sales Workers,15
+Tuvalu,Primary education,Managers,17
+Vanuatu,No schooling,Managers,56
+Marshall Islands,Upper secondary education,Elementary Occupations,1241
+Palau,Lower secondary education,Technicians,17
+Cook Islands,Upper secondary education,Mechanic,63
+Solomon Islands,Lower secondary education,Technicians,1213
+Micronesia (Federated States of),Upper secondary education,Elementary Occupations,732
+Samoa,Upper secondary education,Professionals,2251
+Cook Islands,Upper secondary education,Craft Workers,278
+Niue,No schooling,Mechanic,11
+Solomon Islands,Upper secondary education,Professionals,4974
+Samoa,Primary education,Managers,88
+Tuvalu,Upper secondary education,Professionals,152
+Tonga,No schooling,Clerical Support Workers,18
+Marshall Islands,Lower secondary education,Professionals,163
+Tonga,Primary education,Managers,32
+Tuvalu,Lower secondary education,Technicians,45
+Niue,Upper secondary education,Mechanic,14
+Marshall Islands,Lower secondary education,Elementary Occupations,940
+Palau,No schooling,Services and Sales Workers,29
+Cook Islands,Primary education,Services and Sales Workers,112
+Palau,Post-secondary non-tertiary education,Technicians,45
+Vanuatu,Primary education,Clerical Support Workers,146
+Marshall Islands,Primary education,Elementary Occupations,85
+Micronesia (Federated States of),Primary education,Elementary Occupations,183
+Cook Islands,Primary education,Craft Workers,166
+Tuvalu,No schooling,Clerical Support Workers,6
+Vanuatu,Post-secondary non-tertiary education,Services and Sales Workers,377
+Kiribati,No schooling,Services and Sales Workers,78
+Tuvalu,Upper secondary education,Managers,86
+Tonga,No schooling,Services and Sales Workers,94
+Solomon Islands,Upper secondary education,Managers,795
+Samoa,Upper secondary education,Technicians,1928
+Cook Islands,Upper secondary education,Managers,468
+Vanuatu,Lower secondary education,Managers,1335
+Vanuatu,Upper secondary education,Agricultural related Workers,2254
+Marshall Islands,Upper secondary education,Mechanic,385
+Cook Islands,Lower secondary education,Elementary Occupations,524
+Cook Islands,Upper secondary education,Agricultural related Workers,29
+Vanuatu,Primary education,Agricultural related Workers,20584
+Tokelau,Upper secondary education,Craft Workers,25
+Niue,Upper secondary education,Agricultural related Workers,11
+Marshall Islands,Upper secondary education,Armed Forces Occupations,102
+Cook Islands,Lower secondary education,Managers,270
+Kiribati,Upper secondary education,Agricultural related Workers,1098
+Marshall Islands,Primary education,Agricultural related Workers,53
+Marshall Islands,Upper secondary education,Professionals,623
+Vanuatu,Lower secondary education,Elementary Occupations,1783
+Micronesia (Federated States of),Upper secondary education,Managers,415
+Micronesia (Federated States of),Upper secondary education,Mechanic,489
+Palau,Post-secondary non-tertiary education,Managers,23
+Marshall Islands,Upper secondary education,Managers,522
+Kiribati,Lower secondary education,Craft Workers,297
+Palau,Post-secondary non-tertiary education,Professionals,23
+Palau,Primary education,Mechanic,8
+Kiribati,Lower secondary education,Agricultural related Workers,168
+Kiribati,Upper secondary education,Technicians,1455
+Tonga,Primary education,Mechanic,44
+Vanuatu,Lower secondary education,Craft Workers,1570
+Solomon Islands,Lower secondary education,Professionals,2149
+Solomon Islands,Upper secondary education,Technicians,1351
+Micronesia (Federated States of),Upper secondary education,Professionals,445
+Cook Islands,Lower secondary education,Mechanic,104
+Kiribati,Upper secondary education,Clerical Support Workers,712
+Tuvalu,Lower secondary education,Managers,38
+Nauru,Primary education,Craft Workers,9
+Micronesia (Federated States of),Primary education,Agricultural related Workers,141
+Cook Islands,Lower secondary education,Professionals,227
+Vanuatu,Lower secondary education,Mechanic,988
+Vanuatu,Upper secondary education,Services and Sales Workers,3629
+Marshall Islands,Primary education,Craft Workers,164
+Micronesia (Federated States of),Lower secondary education,Elementary Occupations,393
+Cook Islands,Lower secondary education,Craft Workers,243
+Tuvalu,Lower secondary education,Professionals,35
+Tuvalu,Upper secondary education,Technicians,88
+Vanuatu,Primary education,Services and Sales Workers,6336
+Palau,Upper secondary education,Services and Sales Workers,1388
+Tuvalu,Post-secondary non-tertiary education,Technicians,20
+Vanuatu,Post-secondary non-tertiary education,Clerical Support Workers,287
+Vanuatu,Upper secondary education,Managers,983
+Marshall Islands,Lower secondary education,Armed Forces Occupations,9
+Solomon Islands,Lower secondary education,Managers,349
+Tuvalu,Upper secondary education,Mechanic,31
+Tonga,Primary education,Technicians,15
+Vanuatu,Upper secondary education,Elementary Occupations,1047
+Marshall Islands,Lower secondary education,Clerical Support Workers,92
+Tuvalu,Lower secondary education,Elementary Occupations,160
+Tonga,Post-secondary non-tertiary education,Mechanic,58
+Tonga,No schooling,Agricultural related Workers,90
+Marshall Islands,Lower secondary education,Mechanic,298
+Solomon Islands,Lower secondary education,Services and Sales Workers,5466
+Vanuatu,Primary education,Technicians,553
+Palau,Post-secondary non-tertiary education,Clerical Support Workers,19
+Samoa,Upper secondary education,Managers,1360
+Tuvalu,Lower secondary education,Clerical Support Workers,17
+Tuvalu,No schooling,Professionals,17
+Vanuatu,Lower secondary education,Services and Sales Workers,5095
+Samoa,No schooling,Services and Sales Workers,78
+Niue,Upper secondary education,Professionals,18
+Solomon Islands,Primary education,Agricultural related Workers,26662
+Palau,Post-secondary non-tertiary education,Elementary Occupations,37
+Nauru,No schooling,Elementary Occupations,10
+Vanuatu,Primary education,Mechanic,1173
+Marshall Islands,Upper secondary education,Technicians,713
+Kiribati,Upper secondary education,Craft Workers,1539
+Marshall Islands,Post-secondary non-tertiary education,Craft Workers,42
+Solomon Islands,Upper secondary education,Craft Workers,1465
+Micronesia (Federated States of),Lower secondary education,Managers,54
+Palau,Upper secondary education,Managers,148
+Samoa,Primary education,Agricultural related Workers,605
+Samoa,Upper secondary education,Services and Sales Workers,6381
+Tuvalu,Primary education,Craft Workers,22
+Vanuatu,No schooling,Craft Workers,140
+Solomon Islands,Primary education,Professionals,2421
+Solomon Islands,No schooling,Services and Sales Workers,1602
+Cook Islands,Lower secondary education,Technicians,140
+Micronesia (Federated States of),Lower secondary education,Services and Sales Workers,483
+Samoa,Primary education,Professionals,93
+Cook Islands,Post-secondary non-tertiary education,Professionals,55
+Cook Islands,Upper secondary education,Elementary Occupations,382
+Solomon Islands,Upper secondary education,Elementary Occupations,996
+Solomon Islands,Post-secondary non-tertiary education,Agricultural related Workers,565
+Samoa,Primary education,Mechanic,105
+Samoa,Upper secondary education,Craft Workers,4531
+Samoa,Post-secondary non-tertiary education,Clerical Support Workers,115
+Vanuatu,No schooling,Elementary Occupations,155
+Samoa,Post-secondary non-tertiary education,Agricultural related Workers,135
+Solomon Islands,Post-secondary non-tertiary education,Professionals,870
+Samoa,No schooling,Craft Workers,107
+Solomon Islands,Post-secondary non-tertiary education,Mechanic,233
+Tokelau,Upper secondary education,Technicians,18
+Vanuatu,Early childhood education,Agricultural related Workers,90
+Samoa,Upper secondary education,Elementary Occupations,3021
+Solomon Islands,No schooling,Elementary Occupations,520
+Palau,Upper secondary education,Technicians,399
+Palau,Lower secondary education,Agricultural related Workers,7
+Kiribati,No schooling,Elementary Occupations,87
+Tuvalu,Post-secondary non-tertiary education,Craft Workers,23

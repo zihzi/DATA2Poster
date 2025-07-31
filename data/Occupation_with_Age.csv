@@ -1,0 +1,806 @@
+Countries,Sex,Age,Economic sector,Count
+Palau,Female,25-54,Construction,18
+Tonga,Female,15-24,Construction,17
+Tonga,Female,25-54,Construction,38
+Palau,Male,25-54,Construction,567
+Palau,Male,65,Construction,16
+Palau,Male,55-64,Construction,123
+Palau,Male,15-24,Construction,37
+Tuvalu,Male,15-24,Construction,45
+Tuvalu,Male,25-54,Construction,172
+Tuvalu,Male,55-64,Construction,18
+Kiribati,Male,25-54,Construction,491
+Kiribati,Male,15-24,Construction,114
+Marshall Islands,Male,15-24,Construction,75
+Marshall Islands,Male,25-54,Construction,956
+Nauru,Male,15-24,Construction,30
+Nauru,Male,25-54,Construction,79
+Tonga,Male,55-64,Construction,135
+Tonga,Male,15-24,Construction,445
+Tonga,Male,65,Construction,39
+Tonga,Male,25-54,Construction,1437
+Niue,Male,25-54,Construction,46
+Niue,Male,25-54,Construction,39
+Niue,Male,15-24,Construction,10
+Tokelau,Male,25-54,Construction,14
+Solomon Islands,Male,15-24,Construction,359
+Solomon Islands,Male,55-64,Construction,243
+Solomon Islands,Male,25-54,Construction,3682
+Micronesia,Male,55-64,Construction,97
+Micronesia,Male,25-54,Construction,676
+Micronesia,Male,15-24,Construction,74
+Samoa,Male,55-64,Construction,110
+Samoa,Male,15-24,Construction,209
+Samoa,Male,25-54,Construction,1002
+Vanuatu,Male,55-64,Construction,188
+Vanuatu,Male,15-24,Construction,621
+Vanuatu,Male,65,Construction,120
+Vanuatu,Male,25-54,Construction,2235
+Cook Islands,Male,25-54,Construction,379
+Cook Islands,Male,15-24,Construction,69
+Palau,Female,15-24,Wholesale ,62
+Palau,Female,25-54,Wholesale ,398
+Palau,Female,55-64,Wholesale ,35
+Tuvalu,Female,55-64,Wholesale ,6
+Tuvalu,Female,25-54,Wholesale ,66
+Tuvalu,Female,15-24,Wholesale ,34
+Kiribati,Female,15-24,Wholesale ,544
+Kiribati,Female,55-64,Wholesale ,347
+Kiribati,Female,25-54,Wholesale ,2558
+Marshall Islands,Female,25-54,Wholesale ,594
+Marshall Islands,Female,15-24,Wholesale ,80
+Nauru,Female,15-24,Wholesale ,31
+Nauru,Female,25-54,Wholesale ,95
+Tonga,Female,25-54,Wholesale ,828
+Tonga,Female,15-24,Wholesale ,252
+Tonga,Female,65,Wholesale ,33
+Tonga,Female,55-64,Wholesale ,88
+Niue,Female,25-54,Wholesale ,22
+Solomon Islands,Female,25-54,Wholesale ,5044
+Solomon Islands,Female,55-64,Wholesale ,393
+Solomon Islands,Female,15-24,Wholesale ,1856
+Micronesia,Female,25-54,Wholesale ,1164
+Micronesia,Female,15-24,Wholesale ,428
+Micronesia,Female,55-64,Wholesale ,126
+Samoa,Female,15-24,Wholesale ,456
+Samoa,Female,25-54,Wholesale ,1212
+Samoa,Female,55-64,Wholesale ,125
+Vanuatu,Female,15-24,Wholesale ,1298
+Vanuatu,Female,25-54,Wholesale ,5649
+Vanuatu,Female,55-64,Wholesale ,655
+Vanuatu,Female,65,Wholesale ,295
+Cook Islands,Female,25-54,Wholesale ,447
+Cook Islands,Female,55-64,Wholesale ,68
+Cook Islands,Female,15-24,Wholesale ,61
+Palau,Male,55-64,Wholesale ,54
+Palau,Male,65,Wholesale ,23
+Palau,Male,15-24,Wholesale ,92
+Palau,Male,25-54,Wholesale ,454
+Tuvalu,Male,25-54,Wholesale ,89
+Tuvalu,Male,55-64,Wholesale ,15
+Tuvalu,Male,15-24,Wholesale ,19
+Kiribati,Male,55-64,Wholesale ,235
+Kiribati,Male,15-24,Wholesale ,555
+Kiribati,Male,25-54,Wholesale ,1946
+Marshall Islands,Male,15-24,Wholesale ,144
+Marshall Islands,Male,25-54,Wholesale ,736
+Nauru,Male,15-24,Wholesale ,53
+Nauru,Male,25-54,Wholesale ,101
+Tonga,Male,15-24,Wholesale ,263
+Tonga,Male,65,Wholesale ,37
+Tonga,Male,25-54,Wholesale ,926
+Tonga,Male,55-64,Wholesale ,82
+Niue,Male,25-54,Wholesale ,19
+Niue,Male,55-64,Wholesale ,8
+Niue,Male,25-54,Wholesale ,28
+Niue,Male,15-24,Wholesale ,9
+Solomon Islands,Male,65,Wholesale ,374
+Solomon Islands,Male,15-24,Wholesale ,1605
+Solomon Islands,Male,25-54,Wholesale ,7457
+Solomon Islands,Male,55-64,Wholesale ,1016
+Micronesia,Male,15-24,Wholesale ,266
+Micronesia,Male,55-64,Wholesale ,173
+Micronesia,Male,25-54,Wholesale ,1107
+Samoa,Male,25-54,Wholesale ,1554
+Samoa,Male,15-24,Wholesale ,463
+Samoa,Male,55-64,Wholesale ,133
+Vanuatu,Male,65,Wholesale ,267
+Vanuatu,Male,25-54,Wholesale ,2101
+Vanuatu,Male,15-24,Wholesale ,611
+Vanuatu,Male,55-64,Wholesale ,300
+Cook Islands,Male,15-24,Wholesale ,112
+Cook Islands,Male,55-64,Wholesale ,40
+Cook Islands,Male,25-54,Wholesale ,318
+Palau,Female,25-54,Agriculture and fishing,47
+Palau,Female,55-64,Agriculture and fishing,28
+Palau,Female,65,Agriculture and fishing,8
+Tuvalu,Female,25-54,Agriculture and fishing,30
+Kiribati,Female,25-54,Agriculture and fishing,403
+Kiribati,Female,55-64,Agriculture and fishing,66
+Tonga,Female,25-54,Agriculture and fishing,125
+Tonga,Female,15-24,Agriculture and fishing,22
+Tonga,Female,65,Agriculture and fishing,9
+Tonga,Female,55-64,Agriculture and fishing,13
+Niue,Female,25-54,Agriculture and fishing,10
+Solomon Islands,Female,65,Agriculture and fishing,322
+Solomon Islands,Female,25-54,Agriculture and fishing,9978
+Solomon Islands,Female,15-24,Agriculture and fishing,2728
+Solomon Islands,Female,55-64,Agriculture and fishing,992
+Samoa,Female,25-54,Agriculture and fishing,117
+Vanuatu,Female,25-54,Agriculture and fishing,8005
+Vanuatu,Female,65,Agriculture and fishing,533
+Vanuatu,Female,15-24,Agriculture and fishing,2208
+Vanuatu,Female,55-64,Agriculture and fishing,1214
+Palau,Male,65,Agriculture and fishing,9
+Palau,Male,15-24,Agriculture and fishing,37
+Palau,Male,55-64,Agriculture and fishing,52
+Palau,Male,25-54,Agriculture and fishing,336
+Tuvalu,Male,55-64,Agriculture and fishing,8
+Tuvalu,Male,15-24,Agriculture and fishing,26
+Tuvalu,Male,25-54,Agriculture and fishing,142
+Kiribati,Male,65,Agriculture and fishing,38
+Kiribati,Male,15-24,Agriculture and fishing,732
+Kiribati,Male,25-54,Agriculture and fishing,2774
+Kiribati,Male,55-64,Agriculture and fishing,220
+Marshall Islands,Male,25-54,Agriculture and fishing,678
+Marshall Islands,Male,15-24,Agriculture and fishing,25
+Nauru,Male,25-54,Agriculture and fishing,50
+Tonga,Male,15-24,Agriculture and fishing,685
+Tonga,Male,25-54,Agriculture and fishing,2490
+Tonga,Male,65,Agriculture and fishing,363
+Tonga,Male,55-64,Agriculture and fishing,530
+Niue,Male,15-24,Agriculture and fishing,6
+Niue,Male,55-64,Agriculture and fishing,7
+Niue,Male,25-54,Agriculture and fishing,28
+Solomon Islands,Male,65,Agriculture and fishing,780
+Solomon Islands,Male,25-54,Agriculture and fishing,22100
+Solomon Islands,Male,15-24,Agriculture and fishing,4442
+Solomon Islands,Male,55-64,Agriculture and fishing,3323
+Micronesia,Male,15-24,Agriculture and fishing,114
+Micronesia,Male,55-64,Agriculture and fishing,106
+Micronesia,Male,25-54,Agriculture and fishing,557
+Samoa,Male,55-64,Agriculture and fishing,270
+Samoa,Male,65,Agriculture and fishing,99
+Samoa,Male,25-54,Agriculture and fishing,1365
+Samoa,Male,15-24,Agriculture and fishing,402
+Vanuatu,Male,65,Agriculture and fishing,816
+Vanuatu,Male,25-54,Agriculture and fishing,13691
+Vanuatu,Male,55-64,Agriculture and fishing,1863
+Vanuatu,Male,15-24,Agriculture and fishing,3283
+Cook Islands,Male,25-54,Agriculture and fishing,119
+Cook Islands,Male,55-64,Agriculture and fishing,60
+Palau,Female,25-54,Manufacturing,26
+Palau,Female,55-64,Manufacturing,12
+Tuvalu,Female,25-54,Manufacturing,30
+Tuvalu,Female,55-64,Manufacturing,6
+Tuvalu,Female,15-24,Manufacturing,9
+Kiribati,Female,55-64,Manufacturing,93
+Kiribati,Female,15-24,Manufacturing,83
+Kiribati,Female,25-54,Manufacturing,412
+Marshall Islands,Female,25-54,Manufacturing,112
+Tonga,Female,65,Manufacturing,197
+Tonga,Female,55-64,Manufacturing,349
+Tonga,Female,15-24,Manufacturing,218
+Tonga,Female,25-54,Manufacturing,1774
+Tokelau,Female,25-54,Manufacturing,30
+Tokelau,Female,65,Manufacturing,14
+Tokelau,Female,55-64,Manufacturing,12
+Solomon Islands,Female,15-24,Manufacturing,262
+Solomon Islands,Female,55-64,Manufacturing,205
+Solomon Islands,Female,25-54,Manufacturing,1635
+Micronesia,Female,25-54,Manufacturing,193
+Samoa,Female,55-64,Manufacturing,64
+Samoa,Female,15-24,Manufacturing,207
+Samoa,Female,25-54,Manufacturing,815
+Vanuatu,Female,55-64,Manufacturing,266
+Vanuatu,Female,15-24,Manufacturing,125
+Vanuatu,Female,65,Manufacturing,107
+Vanuatu,Female,25-54,Manufacturing,1438
+Palau,Male,25-54,Manufacturing,106
+Palau,Male,55-64,Manufacturing,20
+Tuvalu,Male,55-64,Manufacturing,22
+Tuvalu,Male,25-54,Manufacturing,119
+Tuvalu,Male,15-24,Manufacturing,21
+Kiribati,Male,25-54,Manufacturing,537
+Marshall Islands,Male,25-54,Manufacturing,172
+Tonga,Male,25-54,Manufacturing,348
+Tonga,Male,55-64,Manufacturing,58
+Tonga,Male,15-24,Manufacturing,141
+Tonga,Male,65,Manufacturing,16
+Solomon Islands,Male,55-64,Manufacturing,760
+Solomon Islands,Male,15-24,Manufacturing,1048
+Solomon Islands,Male,25-54,Manufacturing,5414
+Solomon Islands,Male,65,Manufacturing,182
+Micronesia,Male,25-54,Manufacturing,156
+Samoa,Male,15-24,Manufacturing,630
+Samoa,Male,25-54,Manufacturing,2110
+Samoa,Male,55-64,Manufacturing,170
+Vanuatu,Male,25-54,Manufacturing,1490
+Vanuatu,Male,15-24,Manufacturing,213
+Vanuatu,Male,55-64,Manufacturing,135
+Vanuatu,Male,65,Manufacturing,78
+Cook Islands,Male,25-54,Manufacturing,78
+Cook Islands,Male,15-24,Manufacturing,26
+Nauru,Female,25-54,Mining,119
+Tonga,Female,25-54,Mining,15
+Solomon Islands,Female,25-54,Mining,185
+Palau,Male,55-64,Mining,6
+Palau,Male,25-54,Mining,32
+Nauru,Male,55-64,Mining,37
+Nauru,Male,25-54,Mining,449
+Nauru,Male,15-24,Mining,147
+Tonga,Male,25-54,Mining,101
+Tonga,Male,15-24,Mining,17
+Tonga,Male,55-64,Mining,9
+Niue,Male,25-54,Mining,7
+Solomon Islands,Male,25-54,Mining,717
+Solomon Islands,Male,15-24,Mining,197
+Vanuatu,Male,25-54,Mining,86
+Palau,Female,25-54,Education,380
+Palau,Female,65,Education,7
+Palau,Female,15-24,Education,19
+Palau,Female,55-64,Education,61
+Tuvalu,Female,15-24,Education,13
+Tuvalu,Female,25-54,Education,167
+Tuvalu,Female,55-64,Education,15
+Kiribati,Female,25-54,Education,1528
+Kiribati,Female,55-64,Education,67
+Kiribati,Female,15-24,Education,184
+Marshall Islands,Female,55-64,Education,148
+Marshall Islands,Female,25-54,Education,738
+Nauru,Female,25-54,Education,197
+Tonga,Female,55-64,Education,139
+Tonga,Female,15-24,Education,134
+Tonga,Female,25-54,Education,1187
+Tonga,Female,65,Education,19
+Niue,Female,25-54,Education,23
+Niue,Female,55-64,Education,9
+Niue,Female,25-54,Education,36
+Tokelau,Female,25-54,Education,31
+Solomon Islands,Female,25-54,Education,5212
+Solomon Islands,Female,15-24,Education,639
+Micronesia,Female,55-64,Education,165
+Micronesia,Female,25-54,Education,1067
+Samoa,Female,15-24,Education,191
+Samoa,Female,55-64,Education,175
+Samoa,Female,65,Education,74
+Samoa,Female,25-54,Education,1673
+Vanuatu,Female,15-24,Education,395
+Vanuatu,Female,25-54,Education,2597
+Cook Islands,Female,55-64,Education,42
+Cook Islands,Female,25-54,Education,119
+Palau,Male,65,Education,7
+Palau,Male,25-54,Education,160
+Palau,Male,55-64,Education,39
+Palau,Male,15-24,Education,13
+Tuvalu,Male,55-64,Education,7
+Tuvalu,Male,25-54,Education,54
+Tuvalu,Male,15-24,Education,7
+Kiribati,Male,25-54,Education,541
+Marshall Islands,Male,25-54,Education,762
+Marshall Islands,Male,55-64,Education,219
+Nauru,Male,25-54,Education,26
+Tonga,Male,15-24,Education,53
+Tonga,Male,55-64,Education,81
+Tonga,Male,25-54,Education,627
+Tonga,Male,65,Education,9
+Niue,Male,25-54,Education,15
+Tokelau,Male,25-54,Education,12
+Solomon Islands,Male,15-24,Education,377
+Solomon Islands,Male,55-64,Education,509
+Solomon Islands,Male,25-54,Education,6443
+Micronesia,Male,55-64,Education,373
+Micronesia,Male,25-54,Education,1062
+Samoa,Male,15-24,Education,114
+Samoa,Male,25-54,Education,885
+Samoa,Male,55-64,Education,143
+Vanuatu,Male,25-54,Education,1561
+Cook Islands,Male,25-54,Education,73
+Palau,Female,25-54,Information,44
+Palau,Female,55-64,Information,9
+Tuvalu,Female,25-54,Information,27
+Kiribati,Female,25-54,Information,101
+Tonga,Female,15-24,Information,69
+Tonga,Female,55-64,Information,10
+Tonga,Female,25-54,Information,212
+Niue,Female,25-54,Information,16
+Solomon Islands,Female,25-54,Information,194
+Micronesia,Female,25-54,Information,89
+Samoa,Female,25-54,Information,117
+Vanuatu,Female,25-54,Information,89
+Cook Islands,Female,25-54,Information,88
+Palau,Male,25-54,Information,79
+Palau,Male,55-64,Information,7
+Palau,Male,15-24,Information,6
+Tuvalu,Male,25-54,Information,27
+Tuvalu,Male,15-24,Information,9
+Kiribati,Male,25-54,Information,90
+Marshall Islands,Male,25-54,Information,116
+Tonga,Male,25-54,Information,280
+Tonga,Male,15-24,Information,58
+Tonga,Male,55-64,Information,20
+Tonga,Male,65,Information,7
+Niue,Male,25-54,Information,16
+Solomon Islands,Male,25-54,Information,538
+Micronesia,Male,25-54,Information,78
+Samoa,Male,15-24,Information,117
+Samoa,Male,25-54,Information,426
+Vanuatu,Male,25-54,Information,360
+Cook Islands,Male,25-54,Information,86
+Palau,Female,25-54,Water supply,9
+Tuvalu,Female,25-54,Water supply,7
+Tonga,Female,25-54,Water supply,23
+Palau,Male,25-54,Water supply,76
+Palau,Male,55-64,Water supply,18
+Tuvalu,Male,15-24,Water supply,7
+Tuvalu,Male,55-64,Water supply,6
+Tuvalu,Male,25-54,Water supply,47
+Marshall Islands,Male,25-54,Water supply,62
+Tonga,Male,25-54,Water supply,62
+Tonga,Male,15-24,Water supply,19
+Tonga,Male,55-64,Water supply,13
+Micronesia,Male,25-54,Water supply,70
+Samoa,Male,25-54,Water supply,198
+Palau,Female,25-54,Arts,58
+Palau,Female,15-24,Arts,8
+Tuvalu,Female,25-54,Arts,6
+Tonga,Female,25-54,Arts,38
+Tonga,Female,15-24,Arts,7
+Solomon Islands,Female,25-54,Arts,179
+Samoa,Female,25-54,Arts,81
+Vanuatu,Female,25-54,Arts,102
+Palau,Male,15-24,Arts,9
+Palau,Male,55-64,Arts,8
+Palau,Male,25-54,Arts,57
+Kiribati,Male,25-54,Arts,89
+Tonga,Male,25-54,Arts,66
+Tonga,Male,15-24,Arts,10
+Tonga,Male,55-64,Arts,11
+Solomon Islands,Male,25-54,Arts,238
+Samoa,Male,25-54,Arts,107
+Vanuatu,Male,25-54,Arts,403
+Cook Islands,Male,25-54,Arts,88
+Palau,Female,15-24,Public administration,10
+Palau,Female,55-64,Public administration,29
+Palau,Female,25-54,Public administration,211
+Tuvalu,Female,15-24,Public administration,19
+Tuvalu,Female,25-54,Public administration,131
+Tuvalu,Female,55-64,Public administration,6
+Kiribati,Female,25-54,Public administration,957
+Kiribati,Female,15-24,Public administration,143
+Marshall Islands,Female,25-54,Public administration,349
+Nauru,Female,15-24,Public administration,44
+Nauru,Female,25-54,Public administration,216
+Nauru,Female,55-64,Public administration,21
+Tonga,Female,55-64,Public administration,45
+Tonga,Female,25-54,Public administration,608
+Tonga,Female,65,Public administration,8
+Tonga,Female,15-24,Public administration,113
+Niue,Female,15-24,Public administration,26
+Niue,Female,25-54,Public administration,88
+Niue,Female,25-54,Public administration,23
+Tokelau,Female,15-24,Public administration,15
+Tokelau,Female,25-54,Public administration,43
+Solomon Islands,Female,25-54,Public administration,1587
+Micronesia,Female,25-54,Public administration,540
+Micronesia,Female,55-64,Public administration,108
+Samoa,Female,25-54,Public administration,717
+Samoa,Female,15-24,Public administration,99
+Vanuatu,Female,25-54,Public administration,1080
+Vanuatu,Female,15-24,Public administration,172
+Cook Islands,Female,55-64,Public administration,155
+Cook Islands,Female,25-54,Public administration,498
+Cook Islands,Female,15-24,Public administration,71
+Palau,Male,55-64,Public administration,95
+Palau,Male,15-24,Public administration,45
+Palau,Male,25-54,Public administration,432
+Palau,Male,65,Public administration,16
+Tuvalu,Male,25-54,Public administration,199
+Tuvalu,Male,55-64,Public administration,19
+Tuvalu,Male,65,Public administration,7
+Tuvalu,Male,15-24,Public administration,24
+Kiribati,Male,25-54,Public administration,1534
+Kiribati,Male,55-64,Public administration,238
+Kiribati,Male,15-24,Public administration,230
+Marshall Islands,Male,55-64,Public administration,307
+Marshall Islands,Male,65,Public administration,81
+Marshall Islands,Male,25-54,Public administration,1283
+Nauru,Male,25-54,Public administration,227
+Nauru,Male,15-24,Public administration,58
+Tonga,Male,15-24,Public administration,212
+Tonga,Male,65,Public administration,43
+Tonga,Male,55-64,Public administration,178
+Tonga,Male,25-54,Public administration,1491
+Niue,Male,55-64,Public administration,19
+Niue,Male,25-54,Public administration,52
+Niue,Male,55-64,Public administration,10
+Niue,Male,25-54,Public administration,33
+Niue,Male,65,Public administration,9
+Tokelau,Male,55-64,Public administration,22
+Tokelau,Male,15-24,Public administration,56
+Tokelau,Male,25-54,Public administration,105
+Tokelau,Male,65,Public administration,23
+Solomon Islands,Male,15-24,Public administration,94
+Solomon Islands,Male,25-54,Public administration,2545
+Solomon Islands,Male,55-64,Public administration,272
+Micronesia,Male,25-54,Public administration,1870
+Micronesia,Male,15-24,Public administration,69
+Micronesia,Male,55-64,Public administration,582
+Samoa,Male,55-64,Public administration,81
+Samoa,Male,25-54,Public administration,891
+Samoa,Male,15-24,Public administration,110
+Vanuatu,Male,15-24,Public administration,148
+Vanuatu,Male,55-64,Public administration,231
+Vanuatu,Male,25-54,Public administration,2578
+Cook Islands,Male,15-24,Public administration,104
+Cook Islands,Male,65,Public administration,35
+Cook Islands,Male,25-54,Public administration,488
+Cook Islands,Male,55-64,Public administration,211
+Palau,Female,55-64,Other,17
+Palau,Female,15-24,Other,6
+Palau,Female,25-54,Other,80
+Tuvalu,Female,25-54,Other,11
+Kiribati,Female,25-54,Other,87
+Marshall Islands,Female,25-54,Other,93
+Tonga,Female,15-24,Other,59
+Tonga,Female,65,Other,14
+Tonga,Female,25-54,Other,318
+Tonga,Female,55-64,Other,41
+Niue,Female,25-54,Other,9
+Solomon Islands,Female,15-24,Other,273
+Solomon Islands,Female,25-54,Other,988
+Micronesia,Female,25-54,Other,75
+Samoa,Female,65,Other,71
+Samoa,Female,15-24,Other,73
+Samoa,Female,55-64,Other,229
+Samoa,Female,25-54,Other,971
+Palau,Male,25-54,Other,50
+Palau,Male,55-64,Other,10
+Tuvalu,Male,25-54,Other,23
+Tuvalu,Male,55-64,Other,9
+Kiribati,Male,25-54,Other,238
+Kiribati,Male,55-64,Other,87
+Marshall Islands,Male,25-54,Other,158
+Tonga,Male,55-64,Other,182
+Tonga,Male,65,Other,106
+Tonga,Male,25-54,Other,543
+Tonga,Male,15-24,Other,76
+Solomon Islands,Male,65,Other,208
+Solomon Islands,Male,55-64,Other,568
+Solomon Islands,Male,25-54,Other,3199
+Micronesia,Male,25-54,Other,51
+Samoa,Male,25-54,Other,2137
+Samoa,Male,15-24,Other,415
+Samoa,Male,55-64,Other,431
+Samoa,Male,65,Other,121
+Vanuatu,Male,55-64,Other,106
+Vanuatu,Male,25-54,Other,410
+Palau,Female,65,Accommodation,11
+Palau,Female,55-64,Accommodation,58
+Palau,Female,25-54,Accommodation,432
+Palau,Female,15-24,Accommodation,42
+Tuvalu,Female,15-24,Accommodation,9
+Tuvalu,Female,25-54,Accommodation,16
+Kiribati,Female,15-24,Accommodation,100
+Kiribati,Female,25-54,Accommodation,321
+Marshall Islands,Female,25-54,Accommodation,316
+Nauru,Female,15-24,Accommodation,32
+Nauru,Female,25-54,Accommodation,82
+Tonga,Female,15-24,Accommodation,216
+Tonga,Female,25-54,Accommodation,470
+Tonga,Female,55-64,Accommodation,22
+Tonga,Female,65,Accommodation,9
+Niue,Female,25-54,Accommodation,36
+Niue,Female,25-54,Accommodation,29
+Solomon Islands,Female,25-54,Accommodation,917
+Solomon Islands,Female,15-24,Accommodation,138
+Micronesia,Female,15-24,Accommodation,65
+Micronesia,Female,25-54,Accommodation,446
+Samoa,Female,25-54,Accommodation,500
+Samoa,Female,15-24,Accommodation,171
+Vanuatu,Female,15-24,Accommodation,515
+Vanuatu,Female,25-54,Accommodation,2009
+Vanuatu,Female,55-64,Accommodation,98
+Cook Islands,Female,15-24,Accommodation,133
+Cook Islands,Female,55-64,Accommodation,48
+Cook Islands,Female,25-54,Accommodation,241
+Palau,Male,25-54,Accommodation,397
+Palau,Male,15-24,Accommodation,48
+Palau,Male,55-64,Accommodation,27
+Palau,Male,65,Accommodation,6
+Tuvalu,Male,25-54,Accommodation,11
+Kiribati,Male,25-54,Accommodation,228
+Kiribati,Male,15-24,Accommodation,57
+Marshall Islands,Male,25-54,Accommodation,291
+Nauru,Male,15-24,Accommodation,37
+Nauru,Male,25-54,Accommodation,85
+Tonga,Male,25-54,Accommodation,258
+Tonga,Male,15-24,Accommodation,143
+Tonga,Male,55-64,Accommodation,18
+Niue,Male,25-54,Accommodation,14
+Solomon Islands,Male,25-54,Accommodation,263
+Solomon Islands,Male,55-64,Accommodation,51
+Micronesia,Male,55-64,Accommodation,62
+Micronesia,Male,25-54,Accommodation,228
+Samoa,Male,25-54,Accommodation,569
+Samoa,Male,15-24,Accommodation,217
+Vanuatu,Male,55-64,Accommodation,235
+Vanuatu,Male,65,Accommodation,134
+Vanuatu,Male,25-54,Accommodation,1905
+Vanuatu,Male,15-24,Accommodation,575
+Cook Islands,Male,15-24,Accommodation,97
+Cook Islands,Male,25-54,Accommodation,255
+Palau,Female,25-54,Financial,61
+Tuvalu,Female,25-54,Financial,67
+Tuvalu,Female,15-24,Financial,16
+Kiribati,Female,25-54,Financial,81
+Marshall Islands,Female,25-54,Financial,188
+Nauru,Female,25-54,Financial,37
+Tonga,Female,15-24,Financial,89
+Tonga,Female,25-54,Financial,402
+Tonga,Female,55-64,Financial,20
+Niue,Female,25-54,Financial,19
+Niue,Female,25-54,Financial,7
+Solomon Islands,Female,15-24,Financial,108
+Solomon Islands,Female,25-54,Financial,341
+Micronesia,Female,25-54,Financial,94
+Samoa,Female,15-24,Financial,132
+Samoa,Female,25-54,Financial,631
+Vanuatu,Female,25-54,Financial,502
+Cook Islands,Female,25-54,Financial,133
+Palau,Male,55-64,Financial,7
+Palau,Male,25-54,Financial,25
+Tuvalu,Male,25-54,Financial,44
+Tuvalu,Male,15-24,Financial,11
+Kiribati,Male,25-54,Financial,87
+Marshall Islands,Male,25-54,Financial,96
+Nauru,Male,15-24,Financial,53
+Nauru,Male,25-54,Financial,58
+Tonga,Male,65,Financial,12
+Tonga,Male,25-54,Financial,204
+Tonga,Male,15-24,Financial,40
+Tonga,Male,55-64,Financial,32
+Solomon Islands,Male,25-54,Financial,865
+Samoa,Male,15-24,Financial,122
+Samoa,Male,25-54,Financial,404
+Vanuatu,Male,15-24,Financial,99
+Vanuatu,Male,25-54,Financial,394
+Palau,Female,55-64,Households,58
+Palau,Female,25-54,Households,225
+Palau,Female,15-24,Households,7
+Palau,Female,65,Households,11
+Tuvalu,Female,25-54,Households,8
+Kiribati,Female,25-54,Households,233
+Marshall Islands,Female,15-24,Households,73
+Marshall Islands,Female,55-64,Households,125
+Marshall Islands,Female,25-54,Households,621
+Tonga,Female,15-24,Households,19
+Tonga,Female,55-64,Households,13
+Tonga,Female,25-54,Households,103
+Solomon Islands,Female,15-24,Households,1114
+Solomon Islands,Female,55-64,Households,143
+Solomon Islands,Female,25-54,Households,3515
+Micronesia,Female,25-54,Households,182
+Samoa,Female,55-64,Households,249
+Samoa,Female,15-24,Households,595
+Samoa,Female,65,Households,132
+Samoa,Female,25-54,Households,2645
+Vanuatu,Female,15-24,Households,242
+Vanuatu,Female,55-64,Households,278
+Vanuatu,Female,25-54,Households,1263
+Cook Islands,Female,25-54,Households,66
+Palau,Male,15-24,Households,20
+Palau,Male,25-54,Households,142
+Kiribati,Male,25-54,Households,202
+Kiribati,Male,15-24,Households,86
+Marshall Islands,Male,25-54,Households,670
+Marshall Islands,Male,15-24,Households,86
+Tonga,Male,15-24,Households,30
+Tonga,Male,55-64,Households,19
+Tonga,Male,65,Households,17
+Tonga,Male,25-54,Households,99
+Solomon Islands,Male,55-64,Households,154
+Solomon Islands,Male,15-24,Households,358
+Solomon Islands,Male,25-54,Households,1100
+Solomon Islands,Male,65,Households,115
+Micronesia,Male,25-54,Households,63
+Samoa,Male,15-24,Households,3025
+Samoa,Male,55-64,Households,1173
+Samoa,Male,25-54,Households,6464
+Samoa,Male,65,Households,404
+Vanuatu,Male,25-54,Households,221
+Vanuatu,Male,15-24,Households,119
+Palau,Female,25-54,Administrative,367
+Palau,Female,55-64,Administrative,40
+Palau,Female,15-24,Administrative,47
+Tuvalu,Female,15-24,Administrative,11
+Tuvalu,Female,25-54,Administrative,53
+Tuvalu,Female,55-64,Administrative,7
+Marshall Islands,Female,25-54,Administrative,300
+Nauru,Female,25-54,Administrative,154
+Nauru,Female,15-24,Administrative,27
+Tonga,Female,55-64,Administrative,18
+Tonga,Female,65,Administrative,6
+Tonga,Female,25-54,Administrative,181
+Tonga,Female,15-24,Administrative,36
+Niue,Female,55-64,Administrative,11
+Niue,Female,15-24,Administrative,6
+Niue,Female,25-54,Administrative,47
+Solomon Islands,Female,25-54,Administrative,953
+Solomon Islands,Female,15-24,Administrative,125
+Micronesia,Female,25-54,Administrative,66
+Samoa,Female,25-54,Administrative,473
+Samoa,Female,55-64,Administrative,73
+Samoa,Female,15-24,Administrative,187
+Vanuatu,Female,25-54,Administrative,1309
+Vanuatu,Female,15-24,Administrative,315
+Cook Islands,Female,25-54,Administrative,234
+Palau,Male,65,Administrative,12
+Palau,Male,15-24,Administrative,84
+Palau,Male,25-54,Administrative,674
+Palau,Male,55-64,Administrative,112
+Tuvalu,Male,25-54,Administrative,41
+Tuvalu,Male,15-24,Administrative,10
+Kiribati,Male,25-54,Administrative,541
+Kiribati,Male,15-24,Administrative,70
+Marshall Islands,Male,25-54,Administrative,566
+Nauru,Male,25-54,Administrative,254
+Nauru,Male,15-24,Administrative,134
+Tonga,Male,15-24,Administrative,67
+Tonga,Male,55-64,Administrative,52
+Tonga,Male,25-54,Administrative,308
+Tonga,Male,65,Administrative,16
+Niue,Male,25-54,Administrative,16
+Niue,Male,55-64,Administrative,6
+Solomon Islands,Male,25-54,Administrative,3375
+Solomon Islands,Male,55-64,Administrative,321
+Solomon Islands,Male,15-24,Administrative,474
+Micronesia,Male,25-54,Administrative,113
+Samoa,Male,15-24,Administrative,335
+Samoa,Male,65,Administrative,73
+Samoa,Male,55-64,Administrative,91
+Samoa,Male,25-54,Administrative,1202
+Vanuatu,Male,15-24,Administrative,207
+Vanuatu,Male,55-64,Administrative,118
+Vanuatu,Male,25-54,Administrative,1276
+Cook Islands,Male,25-54,Administrative,147
+Palau,Female,25-54,"Electricity; gas, steam and air conditioning supply",17
+Tonga,Female,15-24,"Electricity; gas, steam and air conditioning supply",15
+Tonga,Female,25-54,"Electricity; gas, steam and air conditioning supply",35
+Palau,Male,25-54,"Electricity; gas, steam and air conditioning supply",82
+Palau,Male,55-64,"Electricity; gas, steam and air conditioning supply",9
+Tuvalu,Male,25-54,"Electricity; gas, steam and air conditioning supply",21
+Kiribati,Male,25-54,"Electricity; gas, steam and air conditioning supply",177
+Marshall Islands,Male,25-54,"Electricity; gas, steam and air conditioning supply",524
+Nauru,Male,25-54,"Electricity; gas, steam and air conditioning supply",67
+Tonga,Male,25-54,"Electricity; gas, steam and air conditioning supply",230
+Tonga,Male,15-24,"Electricity; gas, steam and air conditioning supply",52
+Tonga,Male,55-64,"Electricity; gas, steam and air conditioning supply",19
+Niue,Male,25-54,"Electricity; gas, steam and air conditioning supply",16
+Tokelau,Male,25-54,"Electricity; gas, steam and air conditioning supply",15
+Solomon Islands,Male,25-54,"Electricity; gas, steam and air conditioning supply",101
+Micronesia,Male,25-54,"Electricity; gas, steam and air conditioning supply",237
+Samoa,Male,15-24,"Electricity; gas, steam and air conditioning supply",85
+Samoa,Male,25-54,"Electricity; gas, steam and air conditioning supply",288
+Vanuatu,Male,25-54,"Electricity; gas, steam and air conditioning supply",134
+Palau,Female,25-54,Real estate,15
+Palau,Female,55-64,Real estate,6
+Palau,Male,55-64,Real estate,6
+Palau,Male,25-54,Real estate,25
+Kiribati,Male,25-54,Real estate,127
+Tonga,Male,25-54,Real estate,11
+Samoa,Male,25-54,Real estate,77
+Palau,Female,25-54,Human health,236
+Palau,Female,55-64,Human health,37
+Palau,Female,15-24,Human health,8
+Tuvalu,Female,25-54,Human health,55
+Kiribati,Female,25-54,Human health,687
+Marshall Islands,Female,25-54,Human health,309
+Nauru,Female,55-64,Human health,21
+Nauru,Female,15-24,Human health,25
+Nauru,Female,25-54,Human health,159
+Tonga,Female,15-24,Human health,99
+Tonga,Female,55-64,Human health,35
+Tonga,Female,25-54,Human health,483
+Niue,Female,25-54,Human health,36
+Niue,Female,25-54,Human health,24
+Niue,Female,55-64,Human health,6
+Tokelau,Female,25-54,Human health,19
+Solomon Islands,Female,25-54,Human health,935
+Micronesia,Female,55-64,Human health,79
+Micronesia,Female,25-54,Human health,640
+Samoa,Female,25-54,Human health,425
+Samoa,Female,15-24,Human health,93
+Vanuatu,Female,55-64,Human health,97
+Vanuatu,Female,25-54,Human health,478
+Cook Islands,Female,55-64,Human health,39
+Cook Islands,Female,25-54,Human health,200
+Palau,Male,55-64,Human health,12
+Palau,Male,25-54,Human health,96
+Tuvalu,Male,25-54,Human health,16
+Kiribati,Male,25-54,Human health,209
+Marshall Islands,Male,25-54,Human health,280
+Nauru,Male,15-24,Human health,51
+Nauru,Male,25-54,Human health,107
+Tonga,Male,25-54,Human health,217
+Tonga,Male,55-64,Human health,28
+Tonga,Male,15-24,Human health,55
+Niue,Male,25-54,Human health,6
+Solomon Islands,Male,25-54,Human health,774
+Micronesia,Male,55-64,Human health,118
+Micronesia,Male,25-54,Human health,376
+Samoa,Male,25-54,Human health,322
+Vanuatu,Male,25-54,Human health,419
+Cook Islands,Male,25-54,Human health,33
+Palau,Female,25-54,Transportation,46
+Tuvalu,Female,25-54,Transportation,12
+Kiribati,Female,25-54,Transportation,227
+Kiribati,Female,15-24,Transportation,90
+Marshall Islands,Female,25-54,Transportation,121
+Tonga,Female,25-54,Transportation,147
+Tonga,Female,55-64,Transportation,13
+Tonga,Female,15-24,Transportation,32
+Niue,Female,25-54,Transportation,6
+Solomon Islands,Female,25-54,Transportation,158
+Micronesia,Female,25-54,Transportation,105
+Samoa,Female,25-54,Transportation,227
+Samoa,Female,15-24,Transportation,78
+Vanuatu,Female,25-54,Transportation,295
+Cook Islands,Female,25-54,Transportation,43
+Palau,Male,55-64,Transportation,32
+Palau,Male,15-24,Transportation,16
+Palau,Male,25-54,Transportation,216
+Palau,Male,65,Transportation,9
+Tuvalu,Male,25-54,Transportation,95
+Tuvalu,Male,15-24,Transportation,16
+Kiribati,Male,25-54,Transportation,1490
+Kiribati,Male,15-24,Transportation,194
+Marshall Islands,Male,55-64,Transportation,157
+Marshall Islands,Male,25-54,Transportation,703
+Nauru,Male,25-54,Transportation,76
+Tonga,Male,15-24,Transportation,91
+Tonga,Male,25-54,Transportation,642
+Tonga,Male,65,Transportation,21
+Tonga,Male,55-64,Transportation,63
+Niue,Male,25-54,Transportation,18
+Solomon Islands,Male,25-54,Transportation,3365
+Solomon Islands,Male,55-64,Transportation,205
+Solomon Islands,Male,15-24,Transportation,511
+Micronesia,Male,25-54,Transportation,467
+Micronesia,Male,55-64,Transportation,81
+Samoa,Male,55-64,Transportation,68
+Samoa,Male,25-54,Transportation,1012
+Samoa,Male,15-24,Transportation,205
+Vanuatu,Male,65,Transportation,89
+Vanuatu,Male,55-64,Transportation,268
+Vanuatu,Male,25-54,Transportation,2541
+Vanuatu,Male,15-24,Transportation,413
+Cook Islands,Male,25-54,Transportation,165
+Palau,Female,55-64,Technical activities,13
+Palau,Female,25-54,Technical activities,128
+Tuvalu,Female,25-54,Technical activities,37
+Tuvalu,Female,15-24,Technical activities,11
+Tonga,Female,15-24,Technical activities,20
+Tonga,Female,25-54,Technical activities,107
+Tonga,Female,55-64,Technical activities,7
+Niue,Female,25-54,Technical activities,13
+Solomon Islands,Female,25-54,Technical activities,339
+Samoa,Female,25-54,Technical activities,264
+Vanuatu,Female,25-54,Technical activities,1160
+Palau,Male,25-54,Technical activities,130
+Palau,Male,65,Technical activities,10
+Palau,Male,55-64,Technical activities,32
+Tuvalu,Male,25-54,Technical activities,29
+Tuvalu,Male,55-64,Technical activities,12
+Marshall Islands,Male,25-54,Technical activities,129
+Nauru,Male,25-54,Technical activities,27
+Tonga,Male,55-64,Technical activities,23
+Tonga,Male,15-24,Technical activities,20
+Tonga,Male,25-54,Technical activities,120
+Tonga,Male,65,Technical activities,9
+Niue,Male,25-54,Technical activities,16
+Solomon Islands,Male,25-54,Technical activities,803
+Micronesia,Male,25-54,Technical activities,108
+Samoa,Male,15-24,Technical activities,75
+Samoa,Male,25-54,Technical activities,366
+Vanuatu,Male,25-54,Technical activities,1063
