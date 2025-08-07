@@ -24,10 +24,10 @@ Nauru,Female,Financial and Insurance,41
 Nauru,Male,Financial and Insurance,124
 Solomon Islands,Female,Financial and Insurance,450
 Solomon Islands,Male,Financial and Insurance,987
-Nauru,Female,Social Work and Human Health ,207
-Nauru,Male,Social Work and Human Health ,162
-Solomon Islands,Female,Social Work and Human Health ,1068
-Solomon Islands,Male,Social Work and Human Health ,1000
+Nauru,Female,Social Work and Health ,207
+Nauru,Male,Social Work and Health ,162
+Solomon Islands,Female,Social Work and Health ,1068
+Solomon Islands,Male,Social Work and Health ,1000
 Nauru,Male,Transportation and Storage,82
 Solomon Islands,Female,Transportation and Storage,217
 Solomon Islands,Male,Transportation and Storage,4082
@@ -59,10 +59,10 @@ Micronesia (Federated States of),Female,Financial and Insurance,112
 Micronesia (Federated States of),Male,Financial and Insurance,91
 Samoa,Female,Financial and Insurance,797
 Samoa,Male,Financial and Insurance,572
-Micronesia (Federated States of),Female,Social Work and Human Health ,738
-Micronesia (Federated States of),Male,Social Work and Human Health ,538
-Samoa,Female,Social Work and Human Health ,579
-Samoa,Male,Social Work and Human Health ,386
+Micronesia (Federated States of),Female,Social Work and Health ,738
+Micronesia (Federated States of),Male,Social Work and Health ,538
+Samoa,Female,Social Work and Health ,579
+Samoa,Male,Social Work and Health ,386
 Micronesia (Federated States of),Female,Transportation and Storage,122
 Micronesia (Federated States of),Male,Transportation and Storage,580
 Samoa,Female,Transportation and Storage,305
@@ -100,11 +100,11 @@ Cook Islands,Female,Financial and Insurance,195
 Cook Islands,Male,Financial and Insurance,45
 Palau,Female,Financial and Insurance,69
 Palau,Male,Financial and Insurance,33
-Cook Islands,Female,Social Work and Human Health ,244
-Cook Islands,Male,Social Work and Human Health ,43
-Palau,Female,Social Work and Human Health ,285
-Palau,Male,Social Work and Human Health ,116
-Tokelau,Female,Social Work and Human Health ,27
+Cook Islands,Female,Social Work and Health ,244
+Cook Islands,Male,Social Work and Health ,43
+Palau,Female,Social Work and Health ,285
+Palau,Male,Social Work and Health ,116
+Tokelau,Female,Social Work and Health ,27
 Cook Islands,Female,Transportation and Storage,47
 Cook Islands,Male,Transportation and Storage,256
 Palau,Female,Transportation and Storage,53
@@ -138,10 +138,10 @@ Tuvalu,Male,Electricity and Gas,25
 Niue,Female,Financial and Insurance,9
 Tuvalu,Female,Financial and Insurance,83
 Tuvalu,Male,Financial and Insurance,60
-Niue,Female,Social Work and Human Health ,34
-Niue,Male,Social Work and Human Health ,11
-Tuvalu,Female,Social Work and Human Health ,62
-Tuvalu,Male,Social Work and Human Health ,21
+Niue,Female,Social Work and Health ,34
+Niue,Male,Social Work and Health ,11
+Tuvalu,Female,Social Work and Health ,62
+Tuvalu,Male,Social Work and Health ,21
 Niue,Female,Transportation and Storage,10
 Niue,Male,Transportation and Storage,23
 Tuvalu,Female,Transportation and Storage,13
@@ -186,12 +186,12 @@ Marshall Islands,Female,Financial and Insurance,190
 Marshall Islands,Male,Financial and Insurance,163
 Vanuatu,Female,Financial and Insurance,600
 Vanuatu,Male,Financial and Insurance,493
-Kiribati,Female,Social Work and Human Health ,838
-Kiribati,Male,Social Work and Human Health ,297
-Marshall Islands,Female,Social Work and Human Health ,441
-Marshall Islands,Male,Social Work and Human Health ,394
-Vanuatu,Female,Social Work and Human Health ,660
-Vanuatu,Male,Social Work and Human Health ,507
+Kiribati,Female,Social Work and Health ,838
+Kiribati,Male,Social Work and Health ,297
+Marshall Islands,Female,Social Work and Health ,441
+Marshall Islands,Male,Social Work and Health ,394
+Vanuatu,Female,Social Work and Health ,660
+Vanuatu,Male,Social Work and Health ,507
 Kiribati,Female,Transportation and Storage,391
 Kiribati,Male,Transportation and Storage,1748
 Marshall Islands,Female,Transportation and Storage,134
@@ -216,8 +216,8 @@ Tonga,Male,Education,605
 Tonga,Male,Electricity and Gas,214
 Tonga,Female,Financial and Insurance,305
 Tonga,Male,Financial and Insurance,155
-Tonga,Female,Social Work and Human Health ,611
-Tonga,Male,Social Work and Human Health ,252
+Tonga,Female,Social Work and Health ,611
+Tonga,Male,Social Work and Health ,252
 Tonga,Female,Transportation and Storage,240
 Tonga,Male,Transportation and Storage,840
 Tonga,Female,Wholesale and Retail,2478
