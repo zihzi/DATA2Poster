@@ -1,0 +1,115 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Universal Studio Revenue by Movie: Domestic vs Overseas",
+    "data": {
+        "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/movies_record.csv",
+        "format": {
+            "type": "csv"
+        }
+    },
+    "transform": [
+        {
+            "filter": "datum.Studio == 'Uni.'"
+        }
+    ],
+    "encoding": {
+        "x": {
+            "field": "Movie",
+            "type": "nominal",
+            "sort": "-y",
+            "axis": {
+                "title": "Movie"
+            }
+        }
+    },
+    "layer": [
+        {
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "y": {
+                    "field": "Domestic $m",
+                    "type": "quantitative",
+                    "axis": {
+                        "title": "Revenue ($m)"
+                    }
+                },
+                "color": {
+                    "value": "#1f77b4"
+                },
+                "tooltip": [
+                    {
+                        "field": "Movie",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Domestic $m",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "Overseas $m",
+                        "type": "quantitative"
+                    }
+                ]
+            }
+        },
+        {
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "y": {
+                    "field": "Overseas $m",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "value": "#ff7f0e"
+                },
+                "tooltip": [
+                    {
+                        "field": "Movie",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Domestic $m",
+                        "type": "quantitative"
+                    },
+                    {
+                        "field": "Overseas $m",
+                        "type": "quantitative"
+                    }
+                ]
+            }
+        }
+    ],
+    "resolve": {
+        "scale": {
+            "y": "shared"
+        }
+    },
+    "config": {
+        "bar": {
+            "binSpacing": 3
+        },
+        "axis": {
+            "labelFontSize": 30,
+            "titleFontSize": 26
+        },
+        "mark": {
+            "invalid": null
+        },
+        "title": {
+            "fontSize": 36
+        },
+        "legend": {
+            "titleFontSize": 30,
+            "labelFontSize": 26
+        },
+        "text": {
+            "fontSize": 26
+        }
+    },
+    "width": 800,
+    "height": 400
+}

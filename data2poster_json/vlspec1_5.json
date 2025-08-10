@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Purchased Bike by Income for 4-Car Owners with 10+ Mile Commute",
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Cars == 4 && datum['Commute Distance'] == '10+ Miles'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "field": "Income",
+          "as": "Count"
+        }
+      ],
+      "groupby": [
+        "Purchased Bike",
+        "Income"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "Income",
+      "type": "ordinal",
+      "title": "Income",
+      "axis": {
+        "labelAngle": -30,
+        "tickCount": 6
+      }
+    },
+    "y": {
+      "field": "Count",
+      "type": "quantitative",
+      "title": "Count",
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "color": {
+      "field": "Purchased Bike",
+      "type": "nominal",
+      "title": "Purchased Bike",
+      "scale": {
+        "scheme": "tableau10"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Income",
+        "type": "ordinal",
+        "title": "Income"
+      },
+      {
+        "field": "Purchased Bike",
+        "type": "nominal",
+        "title": "Bike Purchased"
+      },
+      {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "Count"
+      }
+    ]
+  },
+  "width": 400,
+  "height": 400,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

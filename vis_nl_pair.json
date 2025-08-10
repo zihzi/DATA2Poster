@@ -1,0 +1,1246 @@
+{
+    "1": {
+        "nl": "Pacific Island Countries Employment distribution by Sex",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v6.json",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "total"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                },
+                {
+                    "pivot": "Sex",
+                    "value": "total",
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "calculate": "datum.Female",
+                    "as": "sum_Female"
+                },
+                {
+                    "calculate": "datum.Male",
+                    "as": "sum_Male"
+                }
+            ],
+            "repeat": {
+                "layer": [
+                    "Male",
+                    "Female"
+                ]
+            },
+            "spec": {
+                "mark": "bar",
+                "encoding": {
+                    "x": {
+                        "field": "Pacific Island Countries",
+                        "type": "nominal"
+                    },
+                    "y": {
+                        "aggregate": "sum",
+                        "field": {
+                            "repeat": "layer"
+                        },
+                        "type": "quantitative",
+                        "title": "Number of Employed Persons"
+                    },
+                    "color": {
+                        "datum": {
+                            "repeat": "layer"
+                        },
+                        "title": "Sex"
+                    },
+                    "xOffset": {
+                        "datum": {
+                            "repeat": "layer"
+                        }
+                    }
+                }
+            },
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "2": {
+        "nl": "Employment distribution by Sex",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "total_employed"
+                        }
+                    ],
+                    "groupby": [
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_employed",
+                            "as": "grand_total"
+                        }
+                    ]
+                },
+                {
+                    "calculate": "datum.total_employed / datum.grand_total",
+                    "as": "proportion"
+                }
+            ],
+            "mark": {
+                "type": "arc",
+                "tooltip": true
+            },
+            "encoding": {
+                "theta": {
+                    "field": "proportion",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal"
+                },
+                "tooltip": [
+                    {
+                        "field": "Sex",
+                        "type": "nominal",
+                        "title": "Sex"
+                    },
+                    {
+                        "field": "proportion",
+                        "type": "quantitative",
+                        "format": ".1%",
+                        "title": "Proportion"
+                    },
+                    {
+                        "field": "total_employed",
+                        "type": "quantitative",
+                        "title": "Number of Employed Persons"
+                    }
+                ]
+            },
+            "layer": [
+                {
+                    "mark": {
+                        "type": "arc",
+                        "outerRadius": 120
+                    }
+                },
+                {
+                    "mark": {
+                        "type": "text",
+                        "outerRadius": 120,
+                        "radiusOffset": 20,
+                        "fontWeight": "bold"
+                    },
+                    "encoding": {
+                        "text": {
+                            "field": "proportion",
+                            "type": "quantitative",
+                            "format": ".1%"
+                        },
+                        "color": {
+                            "value": "black"
+                        }
+                    }
+                }
+            ],
+            "height": 400,
+            "width": 600
+        }
+    },
+    "3": {
+        "nl": "Top 5 Pacific Island Countries by Total Employment",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 5 Pacific Island Countries by Total Employment",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "SexTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "SexTotal",
+                            "as": "CountryTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "SectorRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "CountryTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.SectorRank <= 5"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "sort": {
+                        "field": "SectorTotal",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": -45,
+                        "title": "Pacific Island Countries"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "SexTotal",
+                    "type": "quantitative",
+                    "title": "Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex",
+                    "scale": {
+                        "scheme": "category10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Economic sector",
+                        "type": "nominal",
+                        "title": "Sector"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "SexSectorTotal",
+                        "type": "quantitative",
+                        "title": "Employed",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 720,
+            "height": 480
+        }
+    },
+    "4": {
+        "nl": "Top 5 Pacific Island Countries by Male Employment",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum.Sex == 'Male'"
+                },
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "Total_Male_Employed"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "rank",
+                            "as": "CountryRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "Total_Male_Employed",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.CountryRank <= 5"
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "sort": "-y",
+                    "title": "Pacific Island Country"
+                },
+                "y": {
+                    "field": "Total_Male_Employed",
+                    "type": "quantitative",
+                    "title": "Number of Employed Males"
+                }
+            },
+            "title": "Top 5 Pacific Island Countries by Male Employment",
+            "height": 400,
+            "width": 400
+        }
+    },
+    "6": {
+        "nl": "Employment by Sex across Pacific Island Countries",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Employment by Sex across Pacific Island Countries",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "Total_Employed"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "title": "Pacific Island Country",
+                    "axis": {
+                        "labelAngle": -25
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "Total_Employed",
+                    "type": "quantitative",
+                    "title": "Number of Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex"
+                },
+                "tooltip": [
+                    {
+                        "field": "Pacific Island Countries",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Total_Employed",
+                        "type": "quantitative",
+                        "title": "Number Employed"
+                    }
+                ]
+            },
+            "height": 400,
+            "width": 420,
+            "config": {
+                "view": {
+                    "stroke": null
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "7": {
+        "nl": "Top 5 Economic Sectors by Number of Employed Persons",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 5 Economic Sectors by Number of Employed Persons and Sex",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "total_employed"
+                        }
+                    ],
+                    "groupby": [
+                        "Economic sector",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_employed",
+                            "as": "sector_total"
+                        }
+                    ],
+                    "groupby": [
+                        "Economic sector"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "rank",
+                            "as": "sector_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "sector_total",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.sector_rank <= 9"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Economic sector",
+                    "type": "nominal",
+                    "title": "Economic Sector",
+                    "sort": {
+                        "field": "total_employed",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": -25
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "total_employed",
+                    "type": "quantitative",
+                    "title": "Number of Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex"
+                },
+                "tooltip": [
+                    {
+                        "field": "Economic sector",
+                        "type": "nominal",
+                        "title": "Economic Sector"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal",
+                        "title": "Sex"
+                    },
+                    {
+                        "field": "total_employed",
+                        "type": "quantitative",
+                        "title": "Number of Employed Persons"
+                    }
+                ]
+            },
+            "width": 400,
+            "height": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "8": {
+        "nl": "Employment by Sex and Economic Sector in Vanuatu",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Employment by Sex and Economic Sector in Vanuatu",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum['Pacific Island Countries'] == 'Vanuatu'"
+                }
+            ],
+            "mark": "bar",
+            "encoding": {
+                "x": {
+                    "field": "Economic sector",
+                    "type": "nominal",
+                    "axis": {
+                        "title": "Economic Sector"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "Number of employed persons",
+                    "type": "quantitative",
+                    "axis": {
+                        "title": "Number of Employed Persons"
+                    }
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex"
+                },
+                "tooltip": [
+                    {
+                        "field": "Economic sector",
+                        "type": "nominal",
+                        "title": "Economic Sector"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal",
+                        "title": "Sex"
+                    },
+                    {
+                        "field": "Number of employed persons",
+                        "type": "quantitative",
+                        "title": "Number of Employed Persons"
+                    }
+                ]
+            },
+            "height": 400,
+            "width": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "9": {
+        "nl": "Top 3 Pacific Island Countries Employment by Sex",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Pacific Island Countries Employment by Sex",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "total_employed"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_employed",
+                            "as": "country_total"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "rank",
+                            "as": "country_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "country_total",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.country_rank <= 5"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "title": "Pacific Island Country",
+                    "axis": {
+                        "labelAngle": -25
+                    },
+                    "sort": {
+                        "field": "country_total",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "total_employed",
+                    "type": "quantitative",
+                    "title": "Number of Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex"
+                },
+                "tooltip": [
+                    {
+                        "field": "Pacific Island Countries",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal",
+                        "title": "Sex"
+                    },
+                    {
+                        "field": "total_employed",
+                        "type": "quantitative",
+                        "title": "Number Employed"
+                    }
+                ]
+            },
+            "height": 400,
+            "width": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "10": {
+        "nl": "Universal Studio - Domestic Revenue by Movie Type and Year",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Universal Studio - Domestic Revenue by Movie Type and Year",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/movies_record.csv",
+                "format": {
+                    "type": "csv"
+                }
+            },
+            "transform": [
+                {
+                    "filter": "datum['Studio'] == 'Uni.'"
+                },
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Domestic $m",
+                            "as": "Total_Domestic_m"
+                        }
+                    ],
+                    "groupby": [
+                        "Year",
+                        "Type"
+                    ]
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "ordinal",
+                    "title": "Year",
+                    "axis": {
+                        "labelAngle": 0
+                    }
+                },
+                "y": {
+                    "field": "Total_Domestic_m",
+                    "type": "quantitative",
+                    "title": "Domestic Revenue (million $)"
+                },
+                "color": {
+                    "field": "Type",
+                    "type": "nominal",
+                    "title": "Movie Type"
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "ordinal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "Type",
+                        "type": "nominal",
+                        "title": "Movie Type"
+                    },
+                    {
+                        "field": "Total_Domestic_m",
+                        "type": "quantitative",
+                        "title": "Domestic Revenue ($m)"
+                    }
+                ]
+            },
+            "width": 400,
+            "height": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "11": {
+        "nl": "Sales Trends by Brand Over Years",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Sales Trends by Brand Over Years",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/carsales.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Sales",
+                            "as": "TotalSales"
+                        }
+                    ],
+                    "groupby": [
+                        "Year",
+                        "Brand"
+                    ]
+                }
+            ],
+            "mark": {
+                "type": "line",
+                "strokeWidth": 3
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "temporal",
+                    "title": "Year",
+                    "axis": {
+                        "format": "%Y",
+                        "labelOverlap": "parity",
+                        "labelFlush": true,
+                        "labelAngle": 0,
+                        "tickCount": {
+                            "interval": "year",
+                            "step": 1
+                        }
+                    }
+                },
+                "y": {
+                    "field": "TotalSales",
+                    "type": "quantitative",
+                    "title": "Total Sales",
+                    "axis": {
+                        "format": ","
+                    }
+                },
+                "color": {
+                    "field": "Brand",
+                    "type": "nominal",
+                    "title": "Brand",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "temporal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "Brand",
+                        "type": "nominal",
+                        "title": "Brand"
+                    },
+                    {
+                        "field": "TotalSales",
+                        "type": "quantitative",
+                        "title": "Total Sales",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 400,
+            "height": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "12": {
+        "nl": "Volkswagen Total Sales Trend (2007-2011)",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": {
+                "text": "Volkswagen Total Sales Trend (2007-2011)",
+                "anchor": "middle"
+            },
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/carsales.csv"
+            },
+            "transform": [
+                {
+                    "filter": "datum.Brand == 'Volkswagen' && datum.Year >= 2007 && datum.Year <= 2011"
+                },
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Sales",
+                            "as": "TotalSales"
+                        }
+                    ],
+                    "groupby": [
+                        "Year"
+                    ]
+                }
+            ],
+            "mark": {
+                "type": "line",
+                "point": true,
+                "tooltip": {
+                    "content": "encoding"
+                }
+            },
+            "encoding": {
+                "x": {
+                    "field": "Year",
+                    "type": "ordinal",
+                    "title": "Year",
+                    "axis": {
+                        "grid": false,
+                        "labelAngle": 0
+                    }
+                },
+                "y": {
+                    "field": "TotalSales",
+                    "type": "quantitative",
+                    "title": "Total Sales",
+                    "axis": {
+                        "grid": false,
+                        "zero": false
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Year",
+                        "type": "ordinal",
+                        "title": "Year"
+                    },
+                    {
+                        "field": "TotalSales",
+                        "type": "quantitative",
+                        "title": "Total Sales"
+                    }
+                ]
+            },
+            "width": 400,
+            "height": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "13": {
+        "nl": "Top 5 Category by total Sales",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 5 Category by total Sales",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/carsales.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Sales",
+                            "as": "total_sales"
+                        }
+                    ],
+                    "groupby": [
+                        "Category"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "rank",
+                            "as": "brand_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "total_sales",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.brand_rank <= 5"
+                }
+            ],
+            "mark": {
+                "type": "bar",
+                "cornerRadius": 2
+            },
+            "encoding": {
+                "y": {
+                    "field": "Category",
+                    "type": "nominal",
+                    "sort": "-x",
+                    "title": "Category"
+                },
+                "x": {
+                    "field": "total_sales",
+                    "type": "quantitative",
+                    "title": "Average Sales"
+                },
+                "xOffset": {
+                    "field": "Category"
+                },
+                "color": {
+                    "field": "Category",
+                    "type": "nominal",
+                    "title": "Category"
+                },
+                "tooltip": [
+                    {
+                        "field": "Brand",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Category",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "avg_sales",
+                        "type": "quantitative",
+                        "format": ",",
+                        "title": "Avg Sales"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "14": {
+        "nl": "Top 5 Economic Sectors by Total Employment",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 5 Economic Sectors by Total Employment",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "SexSectorTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Economic sector",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "SexSectorTotal",
+                            "as": "SectorTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Economic sector"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "SectorRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "SectorTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.SectorRank <= 5"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Economic sector",
+                    "type": "nominal",
+                    "sort": {
+                        "field": "SectorTotal",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": -45,
+                        "title": "Economic Sector"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "SexSectorTotal",
+                    "type": "quantitative",
+                    "title": "Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex",
+                    "scale": {
+                        "scheme": "category10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Economic sector",
+                        "type": "nominal",
+                        "title": "Sector"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "SexSectorTotal",
+                        "type": "quantitative",
+                        "title": "Employed",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 720,
+            "height": 480,
+            "config": {
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "15": {
+        "nl": "Top 5 Pacific Island Countries by Total Employment",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 5 Pacific Island Countries by Total Employment",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "SexTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "SexTotal",
+                            "as": "CountryTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "SectorRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "CountryTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.SectorRank <= 5"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "sort": {
+                        "field": "SectorTotal",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": -45,
+                        "title": "Pacific Island Countries"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "SexTotal",
+                    "type": "quantitative",
+                    "title": "Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex",
+                    "scale": {
+                        "scheme": "category10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Economic sector",
+                        "type": "nominal",
+                        "title": "Sector"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "SexSectorTotal",
+                        "type": "quantitative",
+                        "title": "Employed",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 720,
+            "height": 480
+        }
+    }
+}

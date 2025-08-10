@@ -1,0 +1,7 @@
+Commute Distance,CommuteRank,Metric,Value
+10+ Miles,1.0,MeanIncome,74864.86486486487
+2-5 Miles,2.0,MeanIncome,60370.37037037037
+5-10 Miles,3.0,MeanIncome,59114.583333333336
+10+ Miles,1.0,MeanCars,2.4414414414414414
+2-5 Miles,2.0,MeanCars,1.2592592592592593
+5-10 Miles,3.0,MeanCars,1.875

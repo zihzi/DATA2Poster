@@ -1,0 +1,82 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "total_employed"
+        }
+      ],
+      "groupby": [
+        "Economic sector",
+        "Sex"
+      ]
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Economic sector",
+      "type": "nominal",
+      "title": "Economic Sector",
+      "axis": {
+        "labelAngle": 45
+      }
+    },
+    "y": {
+      "field": "total_employed",
+      "type": "quantitative",
+      "title": "Number of Employed Persons",
+      "axis": {
+        "format": "~s"
+      }
+    },
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "title": "Sex"
+    },
+    "tooltip": [
+      {
+        "field": "Economic sector",
+        "type": "nominal",
+        "title": "Economic Sector"
+      },
+      {
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex"
+      },
+      {
+        "field": "total_employed",
+        "type": "quantitative",
+        "title": "Number of Employed Persons"
+      }
+    ]
+  },
+  "width": 900,
+  "height": 500,
+  "title": "Number of Employed Persons by Economic Sector and Sex",
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 34,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 34,
+      "labelLimit": 0
+    }
+  }
+}

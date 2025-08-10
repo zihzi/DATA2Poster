@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Top 3 Commute Distances by Cars Owned",
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "Count"
+        }
+      ],
+      "groupby": [
+        "Cars",
+        "Commute Distance"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Count",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.Rank <= 3"
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "Cars",
+      "type": "ordinal",
+      "title": "Number of Cars Owned",
+      "axis": {
+        "labelAngle": -30,
+        "tickCount": 6
+      }
+    },
+    "y": {
+      "field": "Count",
+      "type": "quantitative",
+      "title": "Number of People",
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "color": {
+      "field": "Commute Distance",
+      "type": "nominal",
+      "title": "Commute Distance",
+      "scale": {
+        "scheme": "tableau10"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Cars",
+        "type": "ordinal",
+        "title": "Cars"
+      },
+      {
+        "field": "Commute Distance",
+        "type": "nominal",
+        "title": "Distance"
+      },
+      {
+        "field": "Count",
+        "type": "quantitative",
+        "title": "People"
+      }
+    ]
+  },
+  "width": 400,
+  "height": 400,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

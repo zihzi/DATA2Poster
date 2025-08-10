@@ -1,0 +1,459 @@
+Team,Position,College,Salary
+boston celtics,pg,texas,7730337
+boston celtics,sf,marquette,6796117
+boston celtics,sg,boston university,2839073
+boston celtics,sg,georgia state,1148640
+boston celtics,pf,unknown,5000000
+boston celtics,pf,unknown,2839073
+boston celtics,pf,lsu,1170960
+boston celtics,c,gonzaga,2165160
+boston celtics,pg,louisville,1824360
+boston celtics,pg,oklahoma state,3431040
+boston celtics,c,ohio state,2569260
+boston celtics,pg,washington,6912869
+boston celtics,sg,ohio state,3425510
+boston celtics,sg,kentucky,1749840
+boston celtics,c,north carolina,2616975
+brooklyn nets,sg,unknown,3425510
+brooklyn nets,sg,oklahoma state,845059
+brooklyn nets,sg,north carolina,1500000
+brooklyn nets,sg,arizona,1335480
+brooklyn nets,pg,georgia tech,6300000
+brooklyn nets,sg,unknown,1599840
+brooklyn nets,sg,cincinnati,134215
+brooklyn nets,pg,miami (fl),1500000
+brooklyn nets,c,stanford,2839073
+brooklyn nets,pf,syracuse,1140240
+brooklyn nets,pf,saint louis,947276
+brooklyn nets,pf,kansas,981348
+brooklyn nets,c,georgetown,947276
+brooklyn nets,pg,texas a&m,947276
+brooklyn nets,pf,georgia tech,2839073
+new york knicks,sg,ucla,8000000
+new york knicks,pf,unlv,1635476
+new york knicks,sf,unknown,30888
+new york knicks,sf,syracuse,2839073
+new york knicks,pg,unknown,7402812
+new york knicks,sf,wichita state,845059
+new york knicks,sg,saint joseph's,845059
+new york knicks,pg,notre dame,1572360
+new york knicks,c,stanford,2839073
+new york knicks,pf,norfolk state,3750000
+new york knicks,pf,unknown,4131720
+new york knicks,c,unknown,2814000
+new york knicks,sf,duke,1636842
+new york knicks,sg,unknown,947276
+new york knicks,pf,arizona,4000000
+new york knicks,sg,washington,167406
+philadelphia 76ers,pf,duke,2839073
+philadelphia 76ers,pg,murray state,947276
+philadelphia 76ers,sf,tennessee state,1000000
+philadelphia 76ers,c,kansas,4626960
+philadelphia 76ers,sf,syracuse,845059
+philadelphia 76ers,pf,bowling green,1074169
+philadelphia 76ers,pf,purdue,6500000
+philadelphia 76ers,pg,north carolina,2144772
+philadelphia 76ers,pg,arizona,525093
+philadelphia 76ers,pf,kentucky,3457800
+philadelphia 76ers,c,duke,4582680
+philadelphia 76ers,pg,wake forest,947276
+philadelphia 76ers,sg,michigan,2869440
+philadelphia 76ers,sg,georgetown,947276
+philadelphia 76ers,pf,unlv,525093
+toronto raptors,c,unknown,2814000
+toronto raptors,sf,unknown,1524000
+toronto raptors,sf,missouri,2839073
+toronto raptors,sg,usc,2839073
+toronto raptors,pf,wake forest,2500000
+toronto raptors,pg,texas,7000000
+toronto raptors,pg,villanova,2839073
+toronto raptors,c,unknown,1842000
+toronto raptors,pf,kentucky,6268675
+toronto raptors,sg,ucla,650000
+toronto raptors,sf,washington,3553917
+toronto raptors,pf,unknown,2900000
+toronto raptors,pf,rider,245177
+toronto raptors,c,unknown,4660482
+toronto raptors,pg,utah,1509360
+golden state warriors,sg,unknown,2500000
+golden state warriors,sf,north carolina,3873398
+golden state warriors,c,utah,2839073
+golden state warriors,sg,belmont,947276
+golden state warriors,pg,davidson,2839073
+golden state warriors,c,vanderbilt,2008748
+golden state warriors,pf,michigan state,2839073
+golden state warriors,sf,arizona,2839073
+golden state warriors,pg,unknown,5543725
+golden state warriors,sf,ucla,1131960
+golden state warriors,sf,north carolina,845059
+golden state warriors,sf,kansas,1270964
+golden state warriors,c,florida,3815000
+golden state warriors,sg,washington state,2839073
+golden state warriors,pf,unknown,289755
+los angeles clippers,c,kansas,1100602
+los angeles clippers,pf,arizona state,111444
+los angeles clippers,sg,michigan,5675000
+los angeles clippers,sf,michigan state,525093
+los angeles clippers,sf,georgetown,9650000
+los angeles clippers,pf,oklahoma,2839073
+los angeles clippers,sf,syracuse,1100602
+los angeles clippers,c,texas a&m,2839073
+los angeles clippers,pf,ucla,947276
+los angeles clippers,pg,wake forest,2839073
+los angeles clippers,sf,kansas,3376000
+los angeles clippers,pg,unknown,947726
+los angeles clippers,sg,duke,7085000
+los angeles clippers,pg,duke,3110796
+los angeles clippers,sg,washington,1159680
+los angeles lakers,pf,lsu,3000000
+los angeles lakers,c,kansas,845059
+los angeles lakers,sf,stanford,700000
+los angeles lakers,sf,unknown,2839073
+los angeles lakers,pg,missouri,845059
+los angeles lakers,c,georgetown,2839073
+los angeles lakers,pg,unknown,525093
+los angeles lakers,pf,duke,1724250
+los angeles lakers,pf,wyoming,1155600
+los angeles lakers,pf,kentucky,3132240
+los angeles lakers,pg,ohio state,5103120
+los angeles lakers,c,gonzaga,981348
+los angeles lakers,sg,unknown,7000000
+los angeles lakers,sf,st. john's,947276
+los angeles lakers,sf,usc,5219169
+phoenix suns,pg,kentucky,2839073
+phoenix suns,sg,kentucky,2127840
+phoenix suns,sf,arizona,206192
+phoenix suns,c,unknown,2839073
+phoenix suns,sg,kentucky,1160160
+phoenix suns,sg,vanderbilt,981348
+phoenix suns,pg,kentucky,2839073
+phoenix suns,c,maryland,3807120
+phoenix suns,pf,wisconsin,1035000
+phoenix suns,pg,missouri,55722
+phoenix suns,pg,utah valley,947276
+phoenix suns,pf,unknown,5500000
+phoenix suns,sf,texas,5500000
+phoenix suns,sf,north carolina state,2041080
+phoenix suns,c,uc santa barbara,83397
+sacramento kings,sf,baylor,981348
+sacramento kings,sg,oklahoma state,1015421
+sacramento kings,sg,unknown,6060606
+sacramento kings,sf,connecticut,1449187
+sacramento kings,sf,unknown,2836186
+sacramento kings,c,kentucky,3398280
+sacramento kings,pg,ucla,5013559
+sacramento kings,c,kentucky,2839073
+sacramento kings,sg,duke,947276
+sacramento kings,pf,wisconsin,525093
+sacramento kings,sf,connecticut,2839073
+sacramento kings,c,ohio state,7700000
+sacramento kings,sg,kansas,3156600
+sacramento kings,pf,oregon state,845059
+sacramento kings,pg,kentucky,9500000
+chicago bulls,pf,new mexico,845059
+chicago bulls,pg,oregon,2250000
+chicago bulls,sg,marquette,2839073
+chicago bulls,sg,duke,4500000
+chicago bulls,pf,unknown,525093
+chicago bulls,c,unknown,7448760
+chicago bulls,pf,usc,8500000
+chicago bulls,sg,washington,947276
+chicago bulls,sf,creighton,2380440
+chicago bulls,pf,unknown,5543725
+chicago bulls,sg,purdue,1015421
+chicago bulls,c,florida,2839073
+chicago bulls,pf,arkansas,1391160
+chicago bulls,pg,memphis,2839073
+chicago bulls,sf,new mexico,1535880
+cleveland cavaliers,pg,saint mary's,1147276
+cleveland cavaliers,pf,arizona,8193029
+cleveland cavaliers,pg,duke,2839073
+cleveland cavaliers,sf,unknown,2839073
+cleveland cavaliers,sf,arizona,947276
+cleveland cavaliers,sg,duke,2839073
+cleveland cavaliers,sg,miami (fl),947276
+cleveland cavaliers,c,kansas,1276000
+cleveland cavaliers,pf,ucla,2839073
+cleveland cavaliers,sg,tennessee,111196
+cleveland cavaliers,c,unknown,4950000
+cleveland cavaliers,sg,georgia tech,8988765
+cleveland cavaliers,sg,unknown,5000000
+cleveland cavaliers,c,texas,2839073
+cleveland cavaliers,pg,alabama,2100000
+detroit pistons,c,unlv,2500000
+detroit pistons,c,washington state,6500000
+detroit pistons,pg,maryland,2170465
+detroit pistons,pg,north carolina state,111444
+detroit pistons,sf,north carolina,1252440
+detroit pistons,sg,georgia,2891760
+detroit pistons,pg,colorado,845059
+detroit pistons,c,connecticut,3272091
+detroit pistons,sf,tennessee,2839073
+detroit pistons,sf,villanova,600000
+detroit pistons,pg,boston college,2839073
+detroit pistons,sf,arizona,2841960
+detroit pistons,sg,kentucky,6270000
+detroit pistons,pf,kansas,5000000
+detroit pistons,pf,creighton,3000000
+indiana pacers,pf,temple,4050000
+indiana pacers,pf,syracuse,1007026
+indiana pacers,sg,unknown,2839073
+indiana pacers,sf,fresno state,2839073
+indiana pacers,pg,iupui,8000000
+indiana pacers,c,arizona,4000000
+indiana pacers,sf,arizona,1358880
+indiana pacers,pg,north carolina,211744
+indiana pacers,c,unknown,4000000
+indiana pacers,sf,unknown,4394225
+indiana pacers,sg,michigan,1100000
+indiana pacers,pg,eastern washington,7000000
+indiana pacers,pf,texas,2357760
+indiana pacers,pf,western michigan,845059
+indiana pacers,pg,oregon,1007026
+milwaukee bucks,sf,unknown,1953960
+milwaukee bucks,pg,arizona,3000000
+milwaukee bucks,pg,syracuse,2399040
+milwaukee bucks,sg,oregon state,947276
+milwaukee bucks,pg,syracuse,1662360
+milwaukee bucks,pf,north carolina,2943221
+milwaukee bucks,sf,unknown,855000
+milwaukee bucks,sg,usc,8000000
+milwaukee bucks,sg,texas a&m,2839073
+milwaukee bucks,c,georgetown,2839073
+milwaukee bucks,sf,marquette,295327
+milwaukee bucks,pf,lsu,845059
+milwaukee bucks,pf,duke,5152440
+milwaukee bucks,c,duke,2109294
+milwaukee bucks,pg,maryland,6600000
+milwaukee bucks,sg,unlv,1733040
+dallas mavericks,sg,virginia,1449000
+dallas mavericks,pg,northeastern,4290000
+dallas mavericks,sf,western kentucky,1100602
+dallas mavericks,pg,north carolina,3950313
+dallas mavericks,pg,wisconsin,4053446
+dallas mavericks,pf,florida,2085671
+dallas mavericks,sg,marquette,2839073
+dallas mavericks,c,nevada,1270964
+dallas mavericks,c,unknown,525093
+dallas mavericks,pf,unknown,8333334
+dallas mavericks,c,unknown,5200000
+dallas mavericks,sf,florida,2839073
+dallas mavericks,pf,stanford,845059
+dallas mavericks,pf,connecticut,947276
+dallas mavericks,pg,illinois,5378974
+houston rockets,sf,ucla,8193030
+houston rockets,sf,kansas state,306527
+houston rockets,pg,arkansas,6486486
+houston rockets,sg,florida,8229375
+houston rockets,pf,unknown,1242720
+houston rockets,sf,wisconsin,1646400
+houston rockets,pg,charleston,200600
+houston rockets,sg,arizona state,2839073
+houston rockets,pf,louisville,1000000
+houston rockets,c,unknown,2839073
+houston rockets,pf,kentucky,2489530
+houston rockets,sg,clemson,3189794
+houston rockets,pf,unknown,2288205
+houston rockets,c,unknown,947276
+houston rockets,sg,arizona,947276
+memphis grizzlies,sg,ucla,1404600
+memphis grizzlies,sg,oklahoma state,5158539
+memphis grizzlies,pf,blinn college,5000000
+memphis grizzlies,sf,ucla,3542500
+memphis grizzlies,sg,north carolina,4088019
+memphis grizzlies,pg,ohio state,9588426
+memphis grizzlies,pg,providence,700902
+memphis grizzlies,pg,ucla,2839073
+memphis grizzlies,c,unknown,2839073
+memphis grizzlies,pf,alabama,845059
+memphis grizzlies,sf,north carolina,1201440
+memphis grizzlies,pf,lsu,1230840
+memphis grizzlies,pg,detroit,2839073
+memphis grizzlies,pg,rhode island,2839073
+memphis grizzlies,pf,michigan state,9638555
+memphis grizzlies,sf,cincinnati,9000000
+memphis grizzlies,pf,usc,2839073
+memphis grizzlies,pf,north carolina,5464000
+new orleans pelicans,c,unknown,4389607
+new orleans pelicans,pf,california,8500000
+new orleans pelicans,c,unknown,9213483
+new orleans pelicans,sf,nevada,1100602
+new orleans pelicans,pg,cleveland state,3036927
+new orleans pelicans,pf,villanova,2850000
+new orleans pelicans,pf,kentucky,7070730
+new orleans pelicans,sg,iowa state,169883
+new orleans pelicans,pg,florida state,1164858
+new orleans pelicans,sf,long beach state,845059
+new orleans pelicans,sg,memphis,2839073
+new orleans pelicans,pg,penn state,845059
+new orleans pelicans,sf,alabama,1320000
+new orleans pelicans,sg,indiana,2839073
+new orleans pelicans,sg,texas,1015421
+new orleans pelicans,pg,ucla,2839073
+new orleans pelicans,sg,uc santa barbara,55722
+new orleans pelicans,c,unknown,947276
+new orleans pelicans,sf,washington,3382023
+san antonio spurs,pf,texas,2839073
+san antonio spurs,sf,ucla,1142880
+san antonio spurs,c,florida,947276
+san antonio spurs,c,unknown,7500000
+san antonio spurs,c,wake forest,5250000
+san antonio spurs,sg,unknown,2814000
+san antonio spurs,sg,north carolina,10000000
+san antonio spurs,sf,san diego state,2839073
+san antonio spurs,c,unknown,1200000
+san antonio spurs,sg,western carolina,200600
+san antonio spurs,pg,utah,250750
+san antonio spurs,pg,saint mary's,3578947
+san antonio spurs,pg,unknown,2839073
+san antonio spurs,sg,houston,525093
+san antonio spurs,pf,xavier,1499187
+atlanta hawks,sf,old dominion,2000000
+atlanta hawks,sg,michigan,1304520
+atlanta hawks,sg,kansas,2854940
+atlanta hawks,c,florida,2839073
+atlanta hawks,pf,minnesota,1000000
+atlanta hawks,sg,creighton,5746479
+atlanta hawks,pf,louisiana tech,2839073
+atlanta hawks,pf,bucknell,947276
+atlanta hawks,sg,pittsburgh,525093
+atlanta hawks,pg,unknown,1763400
+atlanta hawks,pf,virginia,3333333
+atlanta hawks,sf,unknown,4000000
+atlanta hawks,c,unknown,9756250
+atlanta hawks,c,unknown,1000000
+atlanta hawks,pg,wake forest,8000000
+charlotte hornets,sg,unknown,2839073
+charlotte hornets,sg,virginia commonwealth,947276
+charlotte hornets,pg,california,189455
+charlotte hornets,pf,north carolina,947276
+charlotte hornets,sg,kentucky,525093
+charlotte hornets,pf,washington,6110034
+charlotte hornets,c,unknown,2839073
+charlotte hornets,c,wisconsin,2612520
+charlotte hornets,sf,kentucky,6331404
+charlotte hornets,sg,connecticut,3034356
+charlotte hornets,sg,western kentucky,5675000
+charlotte hornets,pg,harvard,2139000
+charlotte hornets,pg,connecticut,2839073
+charlotte hornets,pf,north carolina,7000000
+charlotte hornets,c,indiana,4204200
+miami heat,pf,georgia tech,2839073
+miami heat,sf,duke,2839073
+miami heat,pg,unknown,2839073
+miami heat,sf,unknown,947276
+miami heat,pf,florida,2854940
+miami heat,sf,arkansas,261894
+miami heat,sg,fresno state,845059
+miami heat,pf,duke,5543725
+miami heat,sg,tennessee,525093
+miami heat,pf,unknown,947276
+miami heat,sg,marquette,2839073
+miami heat,pg,virginia commonwealth,2839073
+miami heat,c,marshall,981348
+miami heat,sf,duke,2481720
+miami heat,sf,unknown,2839073
+orlando magic,c,usc,947276
+orlando magic,sg,unknown,2288205
+orlando magic,pf,arizona,4171680
+orlando magic,sg,unknown,3741480
+orlando magic,pf,unknown,7900000
+orlando magic,pg,unknown,8344497
+orlando magic,sf,iowa,845059
+orlando magic,pg,connecticut,1294440
+orlando magic,pf,st. bonaventure,2380593
+orlando magic,sg,indiana,5192520
+orlando magic,pg,louisiana-lafayette,2505720
+orlando magic,pf,colorado state,4300000
+orlando magic,c,usc,2839073
+orlando magic,pg,tennessee,5000000
+washington wizards,sg,michigan state,4000000
+washington wizards,sg,florida,5694674
+washington wizards,sf,boston college,4375000
+washington wizards,sg,virginia tech,561716
+washington wizards,pf,kansas,3300000
+washington wizards,c,unknown,2839073
+washington wizards,c,north carolina state,273038
+washington wizards,c,unknown,2839073
+washington wizards,pf,kansas,8000000
+washington wizards,sf,kansas,1920240
+washington wizards,sf,georgetown,4662960
+washington wizards,pg,nevada,2170465
+washington wizards,sg,lsu,1100602
+washington wizards,sf,lsu,200600
+washington wizards,pg,kentucky,2839073
+denver nuggets,pf,kansas,2814000
+denver nuggets,pg,texas,3000000
+denver nuggets,sf,memphis,3533333
+denver nuggets,sf,depaul,2839073
+denver nuggets,pf,morehead state,2839073
+denver nuggets,sf,unknown,2839073
+denver nuggets,sg,michigan state,1584480
+denver nuggets,c,unknown,1300000
+denver nuggets,c,unknown,1709719
+denver nuggets,sg,florida,947276
+denver nuggets,pg,unknown,3102240
+denver nuggets,pg,saint joseph's,4345000
+denver nuggets,c,unknown,1842000
+denver nuggets,sg,st. john's,258489
+denver nuggets,sg,unknown,2839073
+minnesota timberwolves,pf,unknown,3950001
+minnesota timberwolves,c,louisville,1474440
+minnesota timberwolves,pf,unknown,8500000
+minnesota timberwolves,pg,duke,1282080
+minnesota timberwolves,pg,ucla,2148360
+minnesota timberwolves,sf,ucla,2056920
+minnesota timberwolves,pf,michigan state,1938840
+minnesota timberwolves,c,unknown,2839073
+minnesota timberwolves,sf,kentucky,947276
+minnesota timberwolves,pg,unknown,2839073
+minnesota timberwolves,sf,unknown,1149500
+minnesota timberwolves,pf,fresno state,2839073
+minnesota timberwolves,c,kentucky,5703600
+minnesota timberwolves,sg,kansas,5758680
+oklahoma city thunder,c,pittsburgh,2279040
+oklahoma city thunder,pf,kansas,3750000
+oklahoma city thunder,sf,texas,2839073
+oklahoma city thunder,sg,villanova,3135000
+oklahoma city thunder,sf,stanford,1140240
+oklahoma city thunder,pf,unknown,2839073
+oklahoma city thunder,c,kentucky,2839073
+oklahoma city thunder,pf,michigan,1463040
+oklahoma city thunder,c,kentucky,222888
+oklahoma city thunder,sg,georgia tech,3344000
+oklahoma city thunder,pg,murray state,2021520
+oklahoma city thunder,sg,colorado,1210800
+oklahoma city thunder,sf,duke,4500000
+oklahoma city thunder,sg,syracuse,5138430
+oklahoma city thunder,pg,ucla,2839073
+portland trail blazers,pf,kansas,525093
+portland trail blazers,sf,wake forest,8042895
+portland trail blazers,sg,notre dame,625093
+portland trail blazers,sg,california,947276
+portland trail blazers,c,north carolina,6980802
+portland trail blazers,sf,st. john's,2894059
+portland trail blazers,sg,duke,6000000
+portland trail blazers,c,central michigan,5016000
+portland trail blazers,pf,illinois,3075880
+portland trail blazers,pg,weber state,4236287
+portland trail blazers,sg,lehigh,2525160
+portland trail blazers,sg,westchester cc,525093
+portland trail blazers,c,duke,1415520
+portland trail blazers,pg,dayton,2854940
+portland trail blazers,pf,indiana,2637720
+utah jazz,pf,clemson,4775000
+utah jazz,pg,michigan,2658240
+utah jazz,sg,colorado,9463484
+utah jazz,pg,unknown,3777720
+utah jazz,pf,georgia tech,2839073
+utah jazz,c,unknown,1175880
+utah jazz,sf,butler,2839073
+utah jazz,sg,duke,1348440
+utah jazz,sf,unknown,2050000
+utah jazz,sf,dayton,981348
+utah jazz,pf,kentucky,2239800
+utah jazz,pg,butler,2433333
+utah jazz,pg,unknown,900000
+utah jazz,c,unknown,2900000
+utah jazz,c,kansas,947276
+unknown,unknown,unknown,2839073

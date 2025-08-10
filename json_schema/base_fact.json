@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+        "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupational gaps by gender.csv"
+    },
+    "transform": [
+        {
+            "aggregate": [
+                {
+                    "op": "sum",
+                    "field": "Number of employed persons",
+                    "as": "total_employed"
+                }
+            ],
+            "groupby": [
+                "Sex"
+            ]
+        }
+    ],
+    "mark": {
+        "type": "bar"
+    },
+    "encoding": {
+        "x": {
+            "field": "Studio",
+            "type": "nominal",
+            "axis": {
+                "labelAngle": 45,
+                "title": "Pacific Island Countries",
+                "titleFontWeight": "bold",
+                "titleFontSize": 14,
+                "labelFontSize": 12
+            },
+            "sort": "-y"
+        },
+        "y": {
+            "field": "total_employed",
+            "type": "quantitative",
+            "axis": {
+                "title": "Number of Employed Persons",
+                "titleFontWeight": "bold",
+                "titleFontSize": 14
+            }
+        },
+        "color": {
+            "field": "Pacific Island Countries",
+            "type": "nominal",
+            "scale": {
+                "range": [
+                    "#234EA0"
+                ]
+            },
+            "legend": null
+        }
+    },
+    "width": 600,
+    "height": 400,
+    "title": {
+        "text": "Number of Employed Persons by Sex across Economic Sectors",
+        "fontSize": 16,
+        "fontWeight": "bold",
+        "anchor": "middle"
+    }
+}

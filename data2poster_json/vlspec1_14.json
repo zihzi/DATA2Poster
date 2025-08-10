@@ -1,0 +1,127 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Cars and Income by Top Commute Distances",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Income",
+          "as": "MeanIncome"
+        },
+        {
+          "op": "mean",
+          "field": "Cars",
+          "as": "MeanCars"
+        }
+      ],
+      "groupby": [
+        "Commute Distance"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "CommuteRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "MeanIncome",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.CommuteRank <= 3"
+    },
+    {
+      "fold": [
+        "MeanIncome",
+        "MeanCars"
+      ],
+      "as": [
+        "Metric",
+        "Value"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "Commute Distance",
+      "type": "nominal",
+      "axis": {
+        "title": "Commute Distance",
+        "labelAngle": -25
+      }
+    },
+    "xOffset": {
+      "field": "Metric",
+      "type": "nominal"
+    },
+    "y": {
+      "field": "Value",
+      "type": "quantitative",
+      "title": "Mean Value"
+    },
+    "color": {
+      "field": "Metric",
+      "type": "nominal",
+      "title": "Metric",
+      "scale": {
+        "domain": [
+          "MeanIncome",
+          "MeanCars"
+        ],
+        "range": [
+          "#1f77b4",
+          "#ff7f0e"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Commute Distance",
+        "type": "nominal",
+        "title": "Commute Distance"
+      },
+      {
+        "field": "Metric",
+        "type": "nominal",
+        "title": "Metric"
+      },
+      {
+        "field": "Value",
+        "type": "quantitative",
+        "title": "Mean Value",
+        "format": ".2f"
+      }
+    ]
+  },
+  "width": 700,
+  "height": 480,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Average Cars by Age Group",
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "calculate": "datum.Age < 30 ? '25-29' : datum.Age < 40 ? '30-39' : datum.Age < 50 ? '40-49' : datum.Age < 60 ? '50-59' : datum.Age < 70 ? '60-69' : '70+'",
+      "as": "Age Group"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Cars",
+          "as": "Average Cars"
+        }
+      ],
+      "groupby": [
+        "Age Group"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "color": "#5470c6"
+  },
+  "encoding": {
+    "x": {
+      "field": "Age Group",
+      "type": "ordinal",
+      "title": "Age Group",
+      "axis": {
+        "labelAngle": -30,
+        "tickCount": 6
+      },
+      "sort": [
+        "25-29",
+        "30-39",
+        "40-49",
+        "50-59",
+        "60-69",
+        "70+"
+      ]
+    },
+    "y": {
+      "field": "Average Cars",
+      "type": "quantitative",
+      "title": "Average Number of Cars",
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Age Group",
+        "type": "ordinal",
+        "title": "Age Group"
+      },
+      {
+        "field": "Average Cars",
+        "type": "quantitative",
+        "title": "Avg Cars"
+      }
+    ]
+  },
+  "width": 400,
+  "height": 400,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

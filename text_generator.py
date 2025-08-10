@@ -1,6 +1,6 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate
-
+from langchain_core.messages import HumanMessage, SystemMessage
 
 introduction_schema ={
                     "title": "text",
@@ -23,56 +23,119 @@ conclusion_schema ={
                         "content": {
                             "type": "string",
                             "description": "Conclusion Description",
-                            "maxLength": 100
+                            "maxLength": 80
                         }
                     },
                     "required": ["content"],
                 }
 
-def introduction(title, vis_q, openai_key):
-
-    prompt = PromptTemplate(
-            template="""You are an excellent data scientist. 
-                        You are writing an introduction for a poster {title} to present the data analysis results.
-                        Acoording to the information from {vis_q}, there is three questions which will be represented as viusalization charts.
-                        These charts are designed to interpret the main question(i.e. poster title) in different aspects.
-                        Think step by step about what is the purpose to explore the main question(i.e. poster title) and write a brief introduction for the poster IN THREE SENTENCES.
-                        EACH SENTENCE SHOULD BE SHORT AND CLEAR in 10-15 words.
+def introduction(vis, openai_key):
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
+    intro_prompt = [
+                SystemMessage(content="""
+                                        You are an excellent data scientist. 
+                        You are writing an introduction for a poster to present the data analysis results.
+                        Read the viusalization charts.
+                        **Intsruction (think step by step)**
+                        Write a concise **poster introduction** that:
+                        1. Hooks the reader with context or a surprising stat.
+                        2. States the poster's purpose and data scope in plain language.
+                        3.Use **ONLY THREE** SENTENCES. EACH SENTENCE SHOULD BE SHORT AND CLEAR in **10-15** words.
                         Do not use columnar formulas. Do not use special symbols such as *, `. 
-                        LIMIT your response to 100 words.""",
-            input_variables=["title", "vis_q"],
-        )
+                        """),              
+
+                                HumanMessage(content=[
+                                    
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[0]
+                                            },
+                                    },
+                                    
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[1]
+                                            },
+                                    },
+                                    
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[2]
+                                            },
+                                    },
+                                    
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[3]
+                                            },
+                                    },
+                                    
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[4]
+                                            },
+                                    },
+                                   
+                                    {
+                                            "type": "image_url",
+                                            "image_url": {
+                                                "url": vis[5]
+                                            },
+                                    }
+                                    
+                                ])
+                                ] 
+    section_des =  llm.invoke(intro_prompt)
+    return section_des.content
         
-    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
+    # prompt = PromptTemplate(
+    #         template="""You are an excellent data scientist. 
+    #                     You are writing an introduction for a poster to present the data analysis results.
+    #                     Acoording to the information from {vis_q}, there are two or three questions which will be represented as viusalization charts.
+    #                     These charts are designed to interpret the main question(i.e. poster title) in different aspects.
+    #                     Think step by step about what is the purpose to explore the main question(i.e. poster title) and write a brief introduction for the poster IN THREE SENTENCES.
+    #                     EACH SENTENCE SHOULD BE SHORT AND CLEAR in 10-15 words.
+    #                     Do not use columnar formulas. Do not use special symbols such as *, `. 
+    #                     LIMIT your response to 100 words.""",
+    #         input_variables=["title", "vis_q"],
+    #     )
+        
+    
     # structured_llm = llm.with_structured_output(Text)
-    introduction_chain = prompt | llm.with_structured_output(introduction_schema)
-    response = introduction_chain.invoke(input= {"title":title, "vis_q":vis_q})
-    return response["content"]
-
-
-def conclusion(title,insight, intro, openai_key):
+    # introduction_chain = prompt | llm.with_structured_output(introduction_schema)
+    # response = introduction_chain.invoke(input= {"title":title, "vis_q":vis_q})
+    
    
+
+
+def conclusion(insight, intro, openai_key):
+    
     prompt = PromptTemplate(
             template="""
             You are an assistant that helps people to summarize given visualization charts.
-            You are writing an conclusion for a poster {title}.
             The following is the insight of three charts:
-            1.{insight_1}\n\n
-            2.{insight_2}\n\n
-            3.{insight_3}\n\n
+            Insight 1.{insight_1}\n\n
+            Insight 2.{insight_2}\n\n
+            Insight 3.{insight_3}\n\n
             Here's the introduction of this poster {intro}.
-            First, refer to the introduction and understand the purpose of this poster
-            Second, think carefully how to add the given three insight in sequence in the conclusion smoothly.
-            Finally, cite your rich knowledge and write conclusion to anwser the poster question.
+            **Instruction (think step by step)**
+            1. Refer to the introduction and understand the purpose of this poster
+            2. Read and understand the given three insight carefully.
+            3. Cite your rich knowledge and write conclusion.
+            4.Use **ONLY FOUR** SENTENCES. EACH SENTENCE SHOULD BE SHORT AND CLEAR in **10-15** words.
             DO NOT use special symbols such as *, `
-            EACH SENTENCE SHOULD BE SHORT AND CLEAR in 10-15 words.
-            LIMIT your response to 100 words.""",
-            input_variables=["title","insight", "intro"],
+            """,
+            input_variables=["insight", "intro"],
         )
         
-    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'title':title,'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2], 'intro':intro} )
+    response = conclusion_chain.invoke(input= {'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2], 'intro':intro} )
     return response["content"]
 
 def improve_title(conclusion,openai_key):
@@ -117,7 +180,7 @@ def improve_title(conclusion,openai_key):
             input_variables=["conclusion"],
         )
         
-    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', api_key = openai_key)
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
     title_chain = prompt | llm.with_structured_output(conclusion_schema)
     response = title_chain.invoke(input= {'conclusion':conclusion} )
     return response["content"]

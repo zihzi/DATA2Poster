@@ -1,0 +1,204 @@
+Beverage_category,Beverage,Beverage_prep,Calories
+Frappuccino® Blended Coffee,Coffee,Whole Milk,180
+Frappuccino® Blended Coffee,Coffee,Whole Milk,240
+Frappuccino® Blended Coffee,Coffee,Whole Milk,350
+Frappuccino® Blended Coffee,Mocha,Whole Milk,200
+Frappuccino® Blended Coffee,Mocha,Whole Milk,290
+Frappuccino® Blended Coffee,Mocha,Whole Milk,390
+Frappuccino® Blended Coffee,Caramel,Whole Milk,200
+Frappuccino® Blended Coffee,Caramel,Whole Milk,280
+Frappuccino® Blended Coffee,Caramel,Whole Milk,370
+Frappuccino® Blended Coffee,Java Chip,Whole Milk,240
+Frappuccino® Blended Coffee,Java Chip,Whole Milk,340
+Frappuccino® Blended Coffee,Java Chip,Whole Milk,460
+Frappuccino® Blended Crème,Strawberries & Crème,Whole Milk,190
+Frappuccino® Blended Crème,Strawberries & Crème,Whole Milk,260
+Frappuccino® Blended Crème,Strawberries & Crème,Whole Milk,350
+Frappuccino® Blended Crème,Vanilla Bean,Whole Milk,200
+Classic Espresso Drinks,Caffè Latte,Venti Nonfat Milk,170
+Classic Espresso Drinks,Caffè Mocha,Venti Nonfat Milk,280
+Classic Espresso Drinks,Vanilla Latte,Venti Nonfat Milk,250
+Classic Espresso Drinks,Cappuccino,Venti Nonfat Milk,110
+Classic Espresso Drinks,Skinny Latte,Venti Nonfat Milk,160
+Signature Espresso Drinks,Caramel Macchiato,Venti Nonfat Milk,240
+Signature Espresso Drinks,White Chocolate Mocha,Venti Nonfat Milk,450
+Signature Espresso Drinks,Hot Chocolate,Venti Nonfat Milk,320
+Tazo® Tea Drinks,Chai Tea Latte,Venti Nonfat Milk,260
+Tazo® Tea Drinks,Green Tea Latte,Venti Nonfat Milk,370
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Venti Nonfat Milk,190
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Venti Nonfat Milk,190
+Shaken Iced Beverages,Iced Brewed Coffee,Venti Nonfat Milk,160
+Frappuccino® Blended Coffee,Coffee,Venti Nonfat Milk,310
+Frappuccino® Blended Coffee,Mocha,Venti Nonfat Milk,340
+Frappuccino® Blended Coffee,Caramel,Venti Nonfat Milk,330
+Frappuccino® Blended Coffee,Java Chip,Venti Nonfat Milk,420
+Frappuccino® Light Blended Coffee,Coffee,Venti Nonfat Milk,160
+Frappuccino® Light Blended Coffee,Mocha,Venti Nonfat Milk,210
+Frappuccino® Light Blended Coffee,Caramel,Venti Nonfat Milk,200
+Frappuccino® Light Blended Coffee,Java Chip,Venti Nonfat Milk,290
+Frappuccino® Blended Crème,Strawberries & Crème,Venti Nonfat Milk,310
+Classic Espresso Drinks,Caffè Latte,Tall Nonfat Milk,100
+Classic Espresso Drinks,Caffè Mocha,Tall Nonfat Milk,170
+Classic Espresso Drinks,Vanilla Latte,Tall Nonfat Milk,150
+Classic Espresso Drinks,Cappuccino,Tall Nonfat Milk,60
+Classic Espresso Drinks,Skinny Latte,Tall Nonfat Milk,100
+Signature Espresso Drinks,Caramel Macchiato,Tall Nonfat Milk,140
+Signature Espresso Drinks,White Chocolate Mocha,Tall Nonfat Milk,270
+Signature Espresso Drinks,Hot Chocolate,Tall Nonfat Milk,190
+Tazo® Tea Drinks,Chai Tea Latte,Tall Nonfat Milk,160
+Tazo® Tea Drinks,Green Tea Latte,Tall Nonfat Milk,210
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Tall Nonfat Milk,120
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Tall Nonfat Milk,120
+Shaken Iced Beverages,Iced Brewed Coffee,Tall Nonfat Milk,80
+Frappuccino® Blended Coffee,Coffee,Tall Nonfat Milk,160
+Frappuccino® Blended Coffee,Mocha,Tall Nonfat Milk,180
+Frappuccino® Blended Coffee,Caramel,Tall Nonfat Milk,180
+Frappuccino® Blended Coffee,Java Chip,Tall Nonfat Milk,220
+Frappuccino® Light Blended Coffee,Coffee,Tall Nonfat Milk,90
+Frappuccino® Light Blended Coffee,Mocha,Tall Nonfat Milk,110
+Frappuccino® Light Blended Coffee,Caramel,Tall Nonfat Milk,100
+Frappuccino® Light Blended Coffee,Java Chip,Tall Nonfat Milk,150
+Frappuccino® Blended Crème,Strawberries & Crème,Tall Nonfat Milk,170
+Frappuccino® Blended Crème,Vanilla Bean,Tall Nonfat Milk,170
+Classic Espresso Drinks,Caffè Latte,Soymilk,70
+Classic Espresso Drinks,Caffè Latte,Soymilk,110
+Classic Espresso Drinks,Caffè Latte,Soymilk,150
+Classic Espresso Drinks,Caffè Latte,Soymilk,190
+Classic Espresso Drinks,Caffè Mocha,Soymilk,110
+Classic Espresso Drinks,Caffè Mocha,Soymilk,180
+Classic Espresso Drinks,Caffè Mocha,Soymilk,230
+Classic Espresso Drinks,Caffè Mocha,Soymilk,290
+Classic Espresso Drinks,Vanilla Latte,Soymilk,110
+Classic Espresso Drinks,Vanilla Latte,Soymilk,160
+Classic Espresso Drinks,Vanilla Latte,Soymilk,210
+Classic Espresso Drinks,Vanilla Latte,Soymilk,270
+Classic Espresso Drinks,Cappuccino,Soymilk,50
+Classic Espresso Drinks,Cappuccino,Soymilk,70
+Classic Espresso Drinks,Cappuccino,Soymilk,100
+Classic Espresso Drinks,Cappuccino,Soymilk,120
+Signature Espresso Drinks,Caramel Macchiato,Soymilk,100
+Signature Espresso Drinks,Caramel Macchiato,Soymilk,150
+Signature Espresso Drinks,Caramel Macchiato,Soymilk,200
+Signature Espresso Drinks,Caramel Macchiato,Soymilk,250
+Signature Espresso Drinks,White Chocolate Mocha,Soymilk,180
+Signature Espresso Drinks,White Chocolate Mocha,Soymilk,280
+Signature Espresso Drinks,White Chocolate Mocha,Soymilk,370
+Signature Espresso Drinks,White Chocolate Mocha,Soymilk,460
+Signature Espresso Drinks,Hot Chocolate,Soymilk,130
+Signature Espresso Drinks,Hot Chocolate,Soymilk,200
+Signature Espresso Drinks,Hot Chocolate,Soymilk,250
+Signature Espresso Drinks,Hot Chocolate,Soymilk,330
+Tazo® Tea Drinks,Chai Tea Latte,Soymilk,110
+Tazo® Tea Drinks,Chai Tea Latte,Soymilk,160
+Tazo® Tea Drinks,Chai Tea Latte,Soymilk,220
+Tazo® Tea Drinks,Chai Tea Latte,Soymilk,280
+Tazo® Tea Drinks,Green Tea Latte,Soymilk,140
+Tazo® Tea Drinks,Green Tea Latte,Soymilk,230
+Tazo® Tea Drinks,Green Tea Latte,Soymilk,310
+Tazo® Tea Drinks,Green Tea Latte,Soymilk,390
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Soymilk,80
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Soymilk,130
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Soymilk,170
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Soymilk,210
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Soymilk,80
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Soymilk,130
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Soymilk,170
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Soymilk,210
+Shaken Iced Beverages,Iced Brewed Coffee,Soymilk,80
+Shaken Iced Beverages,Iced Brewed Coffee,Soymilk,110
+Shaken Iced Beverages,Iced Brewed Coffee,Soymilk,170
+Smoothies,Banana Chocolate,Soymilk,290
+Smoothies,Orange Mango Banana,Soymilk,270
+Smoothies,Strawberry Banana,Soymilk,290
+Frappuccino® Blended Coffee,Coffee,Soymilk,160
+Frappuccino® Blended Coffee,Coffee,Soymilk,220
+Frappuccino® Blended Coffee,Coffee,Soymilk,310
+Frappuccino® Blended Coffee,Mocha,Soymilk,180
+Frappuccino® Blended Coffee,Mocha,Soymilk,260
+Frappuccino® Blended Coffee,Mocha,Soymilk,350
+Frappuccino® Blended Coffee,Caramel,Soymilk,180
+Frappuccino® Blended Coffee,Caramel,Soymilk,260
+Frappuccino® Blended Coffee,Caramel,Soymilk,340
+Frappuccino® Blended Coffee,Java Chip,Soymilk,220
+Frappuccino® Blended Coffee,Java Chip,Soymilk,310
+Frappuccino® Blended Coffee,Java Chip,Soymilk,430
+Frappuccino® Blended Crème,Strawberries & Crème,Soymilk,170
+Frappuccino® Blended Crème,Strawberries & Crème,Soymilk,240
+Frappuccino® Blended Crème,Strawberries & Crème,Soymilk,320
+Frappuccino® Blended Crème,Vanilla Bean,Soymilk,180
+Classic Espresso Drinks,Caffè Latte,Grande Nonfat Milk,130
+Classic Espresso Drinks,Caffè Mocha,Grande Nonfat Milk,220
+Classic Espresso Drinks,Vanilla Latte,Grande Nonfat Milk,200
+Classic Espresso Drinks,Cappuccino,Grande Nonfat Milk,80
+Classic Espresso Drinks,Skinny Latte,Grande Nonfat Milk,120
+Signature Espresso Drinks,Caramel Macchiato,Grande Nonfat Milk,190
+Signature Espresso Drinks,White Chocolate Mocha,Grande Nonfat Milk,350
+Signature Espresso Drinks,Hot Chocolate,Grande Nonfat Milk,240
+Tazo® Tea Drinks,Chai Tea Latte,Grande Nonfat Milk,210
+Tazo® Tea Drinks,Green Tea Latte,Grande Nonfat Milk,290
+Tazo® Tea Drinks,Full-Leaf Tea Latte,Grande Nonfat Milk,150
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,Grande Nonfat Milk,150
+Shaken Iced Beverages,Iced Brewed Coffee,Grande Nonfat Milk,110
+Smoothies,Banana Chocolate,Grande Nonfat Milk,280
+Smoothies,Orange Mango Banana,Grande Nonfat Milk,260
+Smoothies,Strawberry Banana,Grande Nonfat Milk,290
+Frappuccino® Blended Coffee,Coffee,Grande Nonfat Milk,220
+Frappuccino® Blended Coffee,Mocha,Grande Nonfat Milk,260
+Frappuccino® Blended Coffee,Caramel,Grande Nonfat Milk,280
+Frappuccino® Blended Coffee,Java Chip,Grande Nonfat Milk,310
+Frappuccino® Light Blended Coffee,Coffee,Grande Nonfat Milk,120
+Frappuccino® Light Blended Coffee,Mocha,Grande Nonfat Milk,150
+Frappuccino® Light Blended Coffee,Caramel,Grande Nonfat Milk,150
+Frappuccino® Light Blended Coffee,Java Chip,Grande Nonfat Milk,220
+Frappuccino® Blended Crème,Strawberries & Crème,Grande Nonfat Milk,230
+Frappuccino® Blended Crème,Vanilla Bean,Grande Nonfat Milk,240
+Classic Espresso Drinks,Caffè Latte,2% Milk,100
+Classic Espresso Drinks,Caffè Latte,2% Milk,150
+Classic Espresso Drinks,Caffè Latte,2% Milk,190
+Classic Espresso Drinks,Caffè Latte,2% Milk,240
+Classic Espresso Drinks,Caffè Mocha,2% Milk,130
+Classic Espresso Drinks,Caffè Mocha,2% Milk,200
+Classic Espresso Drinks,Caffè Mocha,2% Milk,260
+Classic Espresso Drinks,Caffè Mocha,2% Milk,340
+Classic Espresso Drinks,Vanilla Latte,2% Milk,130
+Classic Espresso Drinks,Vanilla Latte,2% Milk,200
+Classic Espresso Drinks,Vanilla Latte,2% Milk,250
+Classic Espresso Drinks,Vanilla Latte,2% Milk,320
+Classic Espresso Drinks,Cappuccino,2% Milk,80
+Classic Espresso Drinks,Cappuccino,2% Milk,90
+Classic Espresso Drinks,Cappuccino,2% Milk,120
+Classic Espresso Drinks,Cappuccino,2% Milk,150
+Signature Espresso Drinks,Caramel Macchiato,2% Milk,120
+Signature Espresso Drinks,Caramel Macchiato,2% Milk,180
+Signature Espresso Drinks,Caramel Macchiato,2% Milk,240
+Signature Espresso Drinks,Caramel Macchiato,2% Milk,300
+Signature Espresso Drinks,White Chocolate Mocha,2% Milk,200
+Signature Espresso Drinks,White Chocolate Mocha,2% Milk,310
+Signature Espresso Drinks,White Chocolate Mocha,2% Milk,400
+Signature Espresso Drinks,White Chocolate Mocha,2% Milk,510
+Signature Espresso Drinks,Hot Chocolate,2% Milk,150
+Signature Espresso Drinks,Hot Chocolate,2% Milk,230
+Signature Espresso Drinks,Hot Chocolate,2% Milk,290
+Signature Espresso Drinks,Hot Chocolate,2% Milk,380
+Tazo® Tea Drinks,Chai Tea Latte,2% Milk,120
+Tazo® Tea Drinks,Chai Tea Latte,2% Milk,190
+Tazo® Tea Drinks,Chai Tea Latte,2% Milk,240
+Tazo® Tea Drinks,Chai Tea Latte,2% Milk,310
+Tazo® Tea Drinks,Green Tea Latte,2% Milk,170
+Tazo® Tea Drinks,Green Tea Latte,2% Milk,260
+Tazo® Tea Drinks,Green Tea Latte,2% Milk,350
+Tazo® Tea Drinks,Green Tea Latte,2% Milk,450
+Tazo® Tea Drinks,Full-Leaf Tea Latte,2% Milk,90
+Tazo® Tea Drinks,Full-Leaf Tea Latte,2% Milk,140
+Tazo® Tea Drinks,Full-Leaf Tea Latte,2% Milk,190
+Tazo® Tea Drinks,Full-Leaf Tea Latte,2% Milk,230
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,2% Milk,90
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,2% Milk,140
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,2% Milk,190
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,2% Milk,230
+Shaken Iced Beverages,Iced Brewed Coffee,2% Milk,90
+Shaken Iced Beverages,Iced Brewed Coffee,2% Milk,120
+Shaken Iced Beverages,Iced Brewed Coffee,2% Milk,180
+Smoothies,Banana Chocolate,2% Milk,300
+Smoothies,Orange Mango Banana,2% Milk,270
+Smoothies,Strawberry Banana,2% Milk,290

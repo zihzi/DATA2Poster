@@ -46,24 +46,24 @@ def calculate_significance(x, y):
     print(f"Significance: {significance}")
     return significance
 
-def find_peaks_and_valleys(y):
-    peaks, valleys = [], []
-    for i in range(0, len(y)):
-        if i == 0:
-            if y[i] > y[i + 1]:
-                peaks.append(i)
-            elif y[i] < y[i + 1]:
-                valleys.append(i)
-        elif i == len(y) - 1:
-            if y[i] > y[i - 1]:
-                peaks.append(i)
-            elif y[i] < y[i - 1]:
-                valleys.append(i)
-        elif y[i - 1] < y[i] and y[i] > y[i + 1]:
-            peaks.append(i)
-        elif y[i - 1] > y[i] and y[i] < y[i + 1]:
-            valleys.append(i)
-    return peaks, valleys
+# def find_peaks_and_valleys(y):
+#     peaks, valleys = [], []
+#     for i in range(0, len(y)):
+#         if i == 0:
+#             if y[i] > y[i + 1]:
+#                 peaks.append(i)
+#             elif y[i] < y[i + 1]:
+#                 valleys.append(i)
+#         elif i == len(y) - 1:
+#             if y[i] > y[i - 1]:
+#                 peaks.append(i)
+#             elif y[i] < y[i - 1]:
+#                 valleys.append(i)
+#         elif y[i - 1] < y[i] and y[i] > y[i + 1]:
+#             peaks.append(i)
+#         elif y[i - 1] > y[i] and y[i] < y[i + 1]:
+#             valleys.append(i)
+#     return peaks, valleys
 
 
 def analyze_segment_trend(y_subset):
@@ -89,39 +89,39 @@ def gen_basic_trend_facts(df, subject, visualizer):
     else:
         significance = calculate_significance(x, y)
     # Detailed trend analysis
-    peaks, valleys = find_peaks_and_valleys(y)
-    segments = sorted(peaks + valleys)
+    # peaks, valleys = find_peaks_and_valleys(y)
+    # segments = sorted(peaks + valleys)
     detailed_trends = set()
-    for i in range(len(segments) - 1):
-        start, end = segments[i], segments[i + 1]
-        # avoid repeating with overall trend
-        if start == 0 and end == len(y) - 1:
-            continue
-        segment_trend = None
-        if y[start] < y[end]:
-            segment_trend = "increasing"
-        elif y[start] > y[end]:
-            segment_trend = "decreasing"
-        if segment_trend:
-            detailed_trends.add(segment_trend)
-            facts.append(
-                {
-                    "spec": visualizer.get_fact_visualized_chart(
-                        "trend",
-                        subject,
-                        x[start],
-                        x[end],
-                        segment_trend,
-                        float(end - start) / len(x),
-                    ) if visualizer else None,
-                    "content": style_trend_fact(
-                        subject, segment_trend, [x[start], x[end]]
-                    ),
-                    "target": (x[start], x[end], segment_trend),
-                    "score": score_trend_fact(),
-                    "score_C": significance*score_fact("Trend"),
-                }
-            )
+    # for i in range(len(segments) - 1):
+    #     start, end = segments[i], segments[i + 1]
+    #     # avoid repeating with overall trend
+    #     if start == 0 and end == len(y) - 1:
+    #         continue
+    #     segment_trend = None
+    #     if y[start] < y[end]:
+    #         segment_trend = "increasing"
+    #     elif y[start] > y[end]:
+    #         segment_trend = "decreasing"
+    #     if segment_trend:
+    #         detailed_trends.add(segment_trend)
+    #         facts.append(
+    #             {
+    #                 "spec": visualizer.get_fact_visualized_chart(
+    #                     "trend",
+    #                     subject,
+    #                     x[start],
+    #                     x[end],
+    #                     segment_trend,
+    #                     float(end - start) / len(x),
+    #                 ) if visualizer else None,
+    #                 "content": style_trend_fact(
+    #                     subject, segment_trend, [x[start], x[end]]
+    #                 ),
+    #                 "target": (x[start], x[end], segment_trend),
+    #                 "score": score_trend_fact(),
+    #                 "score_C": significance*score_fact("Trend"),
+    #             }
+    #         )
 
     # Overall trend analysis
     overall_trend = analyze_segment_trend(y)

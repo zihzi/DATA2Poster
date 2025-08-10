@@ -1,0 +1,116 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Top 3 Commute Distances by Cars and Income",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "NumPeople"
+        },
+        {
+          "op": "mean",
+          "field": "Income",
+          "as": "AvgIncome"
+        }
+      ],
+      "groupby": [
+        "Commute Distance",
+        "Cars"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "CommuteRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "NumPeople",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.CommuteRank <= 3"
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "Commute Distance",
+      "type": "nominal",
+      "axis": {
+        "title": "Commute Distance",
+        "labelAngle": -30
+      }
+    },
+    "xOffset": {
+      "field": "Cars",
+      "type": "ordinal",
+      "title": "Number of Cars"
+    },
+    "y": {
+      "field": "AvgIncome",
+      "type": "quantitative",
+      "title": "Average Income"
+    },
+    "color": {
+      "field": "Cars",
+      "type": "ordinal",
+      "title": "Number of Cars",
+      "scale": {
+        "scheme": "set1"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Commute Distance",
+        "type": "nominal",
+        "title": "Commute Distance"
+      },
+      {
+        "field": "Cars",
+        "type": "ordinal",
+        "title": "Number of Cars"
+      },
+      {
+        "field": "NumPeople",
+        "type": "quantitative",
+        "title": "People"
+      },
+      {
+        "field": "AvgIncome",
+        "type": "quantitative",
+        "title": "Avg. Income",
+        "format": ","
+      }
+    ]
+  },
+  "width": 720,
+  "height": 480,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

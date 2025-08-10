@@ -1,0 +1,90 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "Total Employed"
+        }
+      ],
+      "groupby": [
+        "Pacific Island Countries",
+        "Sex"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "country_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Total Employed",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.country_rank <= 5"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Pacific Island Countries",
+      "type": "nominal",
+      "title": "Country",
+      "axis": {
+        "labelAngle": 45,
+        "labelOverlap": "parity"
+      },
+      "sort": {
+        "field": "Total Employed",
+        "order": "descending"
+      }
+    },
+    "y": {
+      "field": "Total Employed",
+      "type": "quantitative",
+      "title": "Number of Employed Persons",
+      "scale": {
+        "zero": true,
+        "nice": true
+      }
+    },
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "title": "Sex"
+    },
+    "xOffset": {
+      "field": "Sex"
+    }
+  },
+  "title": "Top 5 Countries Employment by Sex",
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 34,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 34,
+      "labelLimit": 0,
+      "orient": "right"
+    }
+  }
+}

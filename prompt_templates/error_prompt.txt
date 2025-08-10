@@ -1,7 +1,7 @@
-GIVEN CODE:\n
+GIVEN Vega-Lite Specification:\n
 {error_code}
-There are some errors in the code above:\n
+There are some errors in the pecification above:\n
 {error}\n
 Please correct the errors.
-Give the complete code and don't omit anything in the given code.
+Give the complete Vega-Lite Specification in JSON format and don't omit anything else.
 DO NOT include any preamble text. Do not include explanations or prose.

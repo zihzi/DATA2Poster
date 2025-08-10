@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Top Commute Distances by Age and Cars",
+    "anchor": "middle"
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Age",
+          "as": "Average Age"
+        }
+      ],
+      "groupby": [
+        "Cars",
+        "Commute Distance"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "RankAge"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Average Age",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.RankAge <= 3"
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "x": {
+      "field": "Cars",
+      "type": "ordinal",
+      "title": "Number of Cars Owned",
+      "axis": {
+        "labelAngle": -30,
+        "tickCount": 6
+      }
+    },
+    "y": {
+      "field": "Average Age",
+      "type": "quantitative",
+      "title": "Average Age",
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "color": {
+      "field": "Commute Distance",
+      "type": "nominal",
+      "title": "Commute Distance",
+      "scale": {
+        "scheme": "tableau10"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Cars",
+        "type": "ordinal",
+        "title": "Cars"
+      },
+      {
+        "field": "Commute Distance",
+        "type": "nominal",
+        "title": "Distance"
+      },
+      {
+        "field": "Average Age",
+        "type": "quantitative",
+        "title": "Avg Age"
+      }
+    ]
+  },
+  "width": 400,
+  "height": 400,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 36,
+      "labelFontSize": 30,
+      "labelLimit": 0
+    }
+  }
+}

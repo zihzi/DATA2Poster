@@ -15,10 +15,10 @@ from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from selfAugmented_thinker import self_augmented_knowledge
 from question_evaluator import expand_questions
-from vis_generator import agent_improve_vis, agent_2_improve_code, agent_3_fix_code, agent_1_generate_code,agent_4_validate_spec
+from vis_generator import agent_improve_vis, agent_2_improve_code, agent_1_generate_code,agent_4_validate_spec, agent_consistent
 import vl_convert as vlc
 from pathlib import Path
-from poster_generator import create_pdf
+from poster_generator_test import create_pdf
 
 # Import langchain modules
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -44,16 +44,20 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["movies"] = pd.read_csv("data/movies.csv")
+    datasets["bike_buyers"] = pd.read_csv("data/bike_buyers.csv")
     datasets["movies_record"] = pd.read_csv("data/movies_record.csv") #NO vis_corpus
     datasets["carsales"] = pd.read_csv("data/carsales.csv") #NO vis_corpus
-    datasets["Japan_life_expectancy"] = pd.read_csv("data/Japan_life_expectancy.csv")
-    datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
+    datasets["Birth_of_Japan"] = pd.read_csv("data/Birth_of_Japan.csv")
+    datasets["disasters"] = pd.read_csv("data/disasters.csv")
     datasets["personality_dataset"] = pd.read_csv("data/personality_dataset.csv")
-    datasets["Korean_demographics"] = pd.read_csv("data/Korean_demographics.csv")
-    datasets["regional_presidential_election"] = pd.read_csv("data/regional_presidential_election.csv")
-    datasets["2024USA_presidential_election"] = pd.read_csv("data/2024USA_presidential_election.csv")
-    datasets["Occupational gaps by gender"] = pd.read_csv("data/Occupational gaps by gender.csv")
+    datasets["jobs"] = pd.read_csv("data/jobs.csv")
+    datasets["restaurant_dishes"] = pd.read_csv("data/restaurant_dishes.csv")
+    datasets["Occupation_Gender_Gap"] = pd.read_csv("data/Occupation_Gender_Gap.csv")
+    datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
+    datasets["fitness_client_progress"] = pd.read_csv("data/fitness_client_progress.csv")
+    datasets["tips"] = pd.read_csv("data/tips.csv")
+    datasets["Occupation"] = pd.read_csv("data/Occupation.csv")
+    datasets["coffee_shop_orders"] = pd.read_csv("data/coffee_shop_orders.csv")
     
     st.session_state["datasets"] = datasets
 else:
@@ -92,24 +96,15 @@ st.write("**Dataset Schema:**",chosen_data_schema)
 score_importance(chosen_data_schema)
 
 # Session state variables for workflow
-def select_question():
-    st.session_state["stage"] = "question_selected"
+
 if "bt_try" not in st.session_state:
     st.session_state["bt_try"] = ""
-if "stage" not in st.session_state:
-    st.session_state["stage"] = "initial"
-if "df" not in st.session_state:
-    st.session_state["df"] = pd.DataFrame()
+if "base_fact" not in st.session_state:
+    st.session_state["base_fact"] = []
 if "fact" not in st.session_state:
-    st.session_state["fact"] = []
-if "vectorstore" not in st.session_state:
-    st.session_state["vectorstore"] = []
-if "questions_for_pster" not in st.session_state:
-    st.session_state["questions_for_pster"] = []
-if "Q_from_gpt" not in st.session_state:
-    st.session_state["Q_from_gpt"] = {}
-if "selection" not in st.session_state:
-    st.session_state["selection"] = ""
+    st.session_state["sub_fact"] = []
+
+
 
 
 # page content 
@@ -283,7 +278,47 @@ def preprocess_json_2(code: str, count: str) -> str:
         code = code[:index] + f"data = pd.read_csv('data/{chosen_dataset}.csv')\n\n" + code[index:] + f"\n\nchart.save('nl4DV_img/image_{count}.png')\n\nchart_json = chart.to_json()\n\nwith open('nl4DV_json/vega_lite_json_{count}.json', 'w') as f:\n\n f.write(chart_json)"
         exec(code)
     return code
+def expand_vis_query(query,columns, openai_key):
+    """Expand the query using OpenAI API"""
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0, api_key=openai_key)
+    prompt = PromptTemplate(
+        template="""
+                You are an expert data visualization analyst. 
+                **Task**
+                Analyze a natural language query and expand it about creating a visualization and expand it into a comprehensive, detailed specification that can guide the creation of an effective chart.
+                **Instructions**
+                When given a natural language visualization query, analyze it thoroughly and provide a detailed expansion covering all aspects needed to create the visualization.
+                Think step by step and consider the following aspects:          
+                Step 1. Query Understanding
+                - Intent: Summarize what the user wants to visualize
+                - Key Elements: Identify the main data components mentioned
+                - Implicit Requirements: Note any unstated but implied needs
+                Step 2. Data Requirements
+                - Data Types: Specify categorical, numerical, temporal, geographical, etc.
+                - Data Preprocessing: Any transformations, aggregations, or calculations needed
+                Step 3. Visualization Specification
+                - Chart Type: Recommend **one** that is the most appropriate visualization type 
+                - Visual Encoding: Specify how data should map to visual elements (x-axis, y-axis, color, size, shape, etc.)
+                - Scales and Axes: Define axis types, scales (linear, log, categorical), ranges, and labels
+                Step 4. Write a comprehensive, detailed specification that can guide the creation of an effective chart.
 
+                Now analyze the following natural language visualization query and provide a comprehensive expansion following the instruction above:
+                Query: {query}
+                Dataset columns available: {columns}  
+                **Output ONLY the comprehensive detailed specification without intermediate step. NO extra commentary. "The expanded query is ..."**
+               
+
+                    """,
+        input_variables=["query","columns"],
+    )
+    
+    chain = prompt | llm
+    expanded_query = chain.invoke(input={"query": query,"columns": columns})
+    return expanded_query.content
+def load_json(json_file):
+    with open(json_file, "r", encoding="utf-8") as fh:
+
+        return json.load(fh)
  
 # Check if the user has tried and entered an OpenAI key
 api_keys_entered = True  # Assume the user has entered an OpenAI key
@@ -297,694 +332,1385 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     if api_keys_entered:
         # use GPT as llm
-        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=1,api_key = openai_key)
+        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openai_key)
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key)
-        # To generate facts and questions by user-selected column
-        if st.session_state["stage"] == "initial": 
-            # For user to select a column
-            st.write("Select a column:")
-            selected_column = st.radio("Select one column:", head, index=None, label_visibility="collapsed")            
-            skip_true = st.button("Skip")
-        
-            # column_des_prompt_template = """
-            # You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
-            # Here are summary of the dataset:\n\n{chosen_data_schema}\n\n
-            # Describe this dataset to a user the structure of the table and the data it contains.
-            # Explain these column names WITHOUT mention the statistical value given by the summary in natural language description that can help the user understand the dataset better.
-            # Please do not add any extra prose to your response.
-            # You should list reponse as below format:\n\n
-            # "\"Data Description(IN BOLD):\n\n
-            #   "Your description here."
-            #   Columns Overview(IN BOLD):\n\n
-            #   1.Column_Name: "Your description here."
-
-            #   2.Column_Name: "Your description here."
-
-            #   3.Column_Name: "Your description here."
-
-            #   4.Column_Name: "Your description here."\"
-            # """
-            # prompt = PromptTemplate(
-            # template=column_des_prompt_template,
-            # input_variables=["data_names","data_columns","chosen_data_schema"],
-            # )
-            # column_des_chain = prompt | llm
-            # column_des = column_des_chain.invoke(input ={"data_name": chosen_dataset, "data_columns":head,"chosen_data_schema":chosen_data_schema})
-
-            # st.write(column_des.content)
-
-            user_selected_column = ""
-            if skip_true:
-                llm_select_column_template = load_prompt_from_file("prompt_templates/llm_select_column.txt")
-                prompt_select_column = PromptTemplate(
-                                        template=llm_select_column_template,
-                                        input_variables=["chosen_dataset", "chosen_data_schema"],
-                                        
-                                        )
+        # Create a vector store
                
-                chain_llm_selected_column = prompt_select_column | llm 
-                selected_column_from_gpt = chain_llm_selected_column.invoke(input = {"chosen_dataset":chosen_dataset, "chosen_data_schema":chosen_data_schema})
-                user_selected_column = selected_column_from_gpt.content
-                st.write(f'**Selected column:**', f'**{user_selected_column}**')
-            elif selected_column: 
-                user_selected_column = selected_column
-            # Call GPT to select columns related to user-selected column in JSON format 
-            if skip_true or selected_column:
-                # user_select_column_template = load_prompt_from_file("prompt_templates/user_select_column.txt")       
-                # prompt_column = PromptTemplate(
-                #                             template=user_select_column_template,
-                #                             input_variables=["user_selected_column", "chosen_dataset", "chosen_data_schema"],        
-                #                 )
-                # with open("json_schema/column_json_schema.json", "r") as f:
-                #     column_json_schema = json.load(f)
-                # chain_column = prompt_column | llm.with_structured_output(column_json_schema)
-                # columns_from_gpt = chain_column.invoke(input = {"user_selected_column":user_selected_column, "chosen_dataset":chosen_dataset, "chosen_data_schema":chosen_data_schema})
+
+
+        data_list = load_json('vis_corpus.json')
+        docs = [Document(page_content=json.dumps(item)) for item in data_list]
+        vectorstore = FAISS.from_documents(
+        docs,
+        OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
+        )
+      
                 
-                # # log the selected column and related columns
-                # st.subheader(f"related column set:",divider = True)
-                # for i in range(1,3):
-                #     st.write("\"", f'**{columns_from_gpt[f"related_column_{i}"]["name"]}**',"\"")
-                #     st.write(f'**Reason:**', f'**{columns_from_gpt[f"related_column_{i}"]["reason"]}**')
-                        
-                # # Extract dataFrame by user_selected_column and the related columns from gpt 
-                # related_column = [columns_from_gpt["related_column_1"]["name"],columns_from_gpt["related_column_2"]["name"]]
-                # df_for_cal = datasets[chosen_dataset][[user_selected_column] + related_column]   
+        
+        # To generate facts and questions by user-selected column
+        # For user to select a column
+        st.write("Select a column:")
+        selected_column = st.radio("Select one column:", head, index=None, label_visibility="collapsed")            
+        skip_true = st.button("Skip")
+    
+        user_selected_column = ""
+        if skip_true:
+            llm_select_column_template = load_prompt_from_file("prompt_templates/llm_select_column.txt")
+            prompt_select_column = PromptTemplate(
+                                    template=llm_select_column_template,
+                                    input_variables=["chosen_dataset", "chosen_data_schema"],
+                                    
+                                    )
+            
+            chain_llm_selected_column = prompt_select_column | llm 
+            selected_column_from_gpt = chain_llm_selected_column.invoke(input = {"chosen_dataset":chosen_dataset, "chosen_data_schema":chosen_data_schema})
+            user_selected_column = selected_column_from_gpt.content
+            st.write(f'**Selected column:**', f'**{user_selected_column}**')
+        elif selected_column: 
+            user_selected_column = selected_column
+        # Call GPT to select columns related to user-selected column in JSON format 
+        if skip_true or selected_column:
+            
+            facts_list = []
+            # USE ALL COLUMNS TO GENERATE FACTS#####################################################################
+            desired_combinations = ['CNC', 'TNC', 'TNT', 'CNN', 'TNN']
 
-                # # Produce columns to generate fact list
-                # column_list_for_Q = []
-                facts_list = []
-                # columns_dic = {columns_from_gpt["selected_column"]["name"]: columns_from_gpt["selected_column"]["dtype"]}
-                # for i in range(1,3):
-                #     columns_dic[columns_from_gpt[f"related_column_{i}"]["name"]] = columns_from_gpt[f"related_column_{i}"]["dtype"]         
-                # breakdown = [col for col, dtype in columns_dic.items() if dtype == "C" or dtype == "T"]   
-                # measure = [col for col, dtype in columns_dic.items() if dtype == "N"]
-                # column_list_for_Q.append(columns_dic)
-                # st.write("Columns for generating facts:",column_list_for_Q)
-                # TEST: USE ALL COLUMNS TO GENERATE FACTS#####################################################################
-                desired_combinations = ['CNC', 'TNC', 'TNT', 'CNN', 'TNN']
+            # Get and print results
+            output = organize_by_dtype_combinations(chosen_data_schema, desired_combinations)
 
-                # Get and print results
-                output = organize_by_dtype_combinations(chosen_data_schema, desired_combinations)
-
-                # Categorization_facts ? to be fixed, not suitable for dataset type
-                for item in output:
-                    for key, value in item["columns_dtype_mapping"].items():
-                        if value == "C":
-                            ratio = round(datasets[chosen_dataset][key].value_counts()[0]/len(datasets[chosen_dataset]),3)*100
-                            focus = datasets[chosen_dataset][key].value_counts().idxmax()
-                            facts_list.append({"content":f"In {key}, {focus} accounts for the largest proportion of records({ratio}%).","score":1})
+            # Categorization_facts ? to be fixed, not suitable for dataset type
+            # for item in output:
+            #     for key, value in item["columns_dtype_mapping"].items():
+            #         if value == "C":
+            #             ratio = round(datasets[chosen_dataset][key].value_counts()[0]/len(datasets[chosen_dataset]),3)*100
+            #             focus = datasets[chosen_dataset][key].value_counts().idxmax()
+            #             facts_list.append({"content":f"In {key}, {focus} accounts for the largest proportion ({ratio}%).","score":1})
+            base_fact = []
+            for item in output:
+                breakdown = []  
+                measure = [] 
+                for key, value in item["columns_dtype_mapping"].items():
+                    if value == "C" or value == "T":
+                        breakdown.append(key)
+                    else:
+                        measure.append(key)
+            
                 
-                for item in output:
-                    breakdown = []  
-                    measure = [] 
-                    for key, value in item["columns_dtype_mapping"].items():
-                        if value == "C" or value == "T":
-                            breakdown.append(key)
-                        else:
-                            measure.append(key)
+                # list all possible combinations of breakdown and measure to generate facts
+                if len(breakdown) == 2: 
                     
-                    # list all possible combinations of breakdown and measure to generate facts
-                    if len(breakdown) == 2: 
-                        if item["columns_dtype_mapping"][breakdown[0]] == "C":
-                            facts_1 = generate_facts(
-                                            dataset=Path(f"data/{chosen_dataset}.csv"),
-                                            breakdown=breakdown[0],
-                                            measure=measure[0],
-                                            series=breakdown[1],
-                                            breakdown_type="C",
-                                            measure_type="N",
-                                            with_vis=False,
-                                        )
-                            for fact in facts_1:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                            facts_2 = generate_facts(
-                                            dataset=Path(f"data/{chosen_dataset}.csv"),
-                                            breakdown=breakdown[0],
-                                            measure=measure[0],
-                                            series=None,
-                                            breakdown_type="C",
-                                            measure_type="N",
-                                            with_vis=False,
-                                        )
-                            for fact in facts_2:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
-                        elif item["columns_dtype_mapping"][breakdown[0]] == "T":
-                            facts_1 = generate_facts(
-                                            dataset=Path(f"data/{chosen_dataset}.csv"),
-                                            breakdown=breakdown[0],
-                                            measure=measure[0],
-                                            series=breakdown[1],
-                                            breakdown_type="T",
-                                            measure_type="N",
-                                            with_vis=False,
-                                        )
-                            for fact in facts_1:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                            facts_2 = generate_facts(
-                                            dataset=Path(f"data/{chosen_dataset}.csv"),
-                                            breakdown=breakdown[0],
-                                            measure=measure[0],
-                                            series=None,
-                                            breakdown_type="T",
-                                            measure_type="N",
-                                            with_vis=False,
-                                        )
-                            for fact in facts_2:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                                            
-                    if len(measure) == 2:
-                        if item["columns_dtype_mapping"][breakdown[0]] == "C":
-                            facts_1 = generate_facts(
+                    if item["columns_dtype_mapping"][breakdown[0]] == "C":
+                        facts_1 = generate_facts(
+                                        dataset=Path(f"data/{chosen_dataset}.csv"),
+                                        breakdown=breakdown[0],
+                                        measure=measure[0],
+                                        series=breakdown[1],
+                                        breakdown_type="C",
+                                        measure_type="N",
+                                        with_vis=False,
+                                    )
+                        for fact in facts_1:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        facts_2 = generate_facts(
+                                        dataset=Path(f"data/{chosen_dataset}.csv"),
+                                        breakdown=breakdown[0],
+                                        measure=measure[0],
+                                        series=None,
+                                        breakdown_type="C",
+                                        measure_type="N",
+                                        with_vis=False,
+                                    )
+                        for fact in facts_2:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
+                    elif item["columns_dtype_mapping"][breakdown[0]] == "T":
+                        facts_1 = generate_facts(
+                                        dataset=Path(f"data/{chosen_dataset}.csv"),
+                                        breakdown=breakdown[0],
+                                        measure=measure[0],
+                                        series=breakdown[1],
+                                        breakdown_type="T",
+                                        measure_type="N",
+                                        with_vis=False,
+                                    )
+                        for fact in facts_1:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        facts_2 = generate_facts(
+                                        dataset=Path(f"data/{chosen_dataset}.csv"),
+                                        breakdown=breakdown[0],
+                                        measure=measure[0],
+                                        series=None,
+                                        breakdown_type="T",
+                                        measure_type="N",
+                                        with_vis=False,
+                                    )
+                        for fact in facts_2:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                                        
+                if len(measure) == 2:
+                    if item["columns_dtype_mapping"][breakdown[0]] == "C":
+                        facts_1 = generate_facts(
+                            dataset=Path(f"data/{chosen_dataset}.csv"),
+                            breakdown=breakdown[0],
+                            measure=measure[0],
+                            measure2=measure[1],
+                            series=None,
+                            breakdown_type="C",
+                            measure_type="NxN",
+                            with_vis=False,
+                        )
+                        for fact in facts_1:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        facts_2 = generate_facts(
+                                dataset=Path(f"data/{chosen_dataset}.csv"),
+                                breakdown=breakdown[0],
+                                measure=measure[0],
+                                series=None,
+                                breakdown_type="C",
+                                measure_type="N",
+                                with_vis=False,
+                            )
+                        for fact in facts_2:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        facts_3 = generate_facts(
+                                dataset=Path(f"data/{chosen_dataset}.csv"),
+                                breakdown=breakdown[0],
+                                measure=measure[1],
+                                series=None,
+                                breakdown_type="C",
+                                measure_type="N",
+                                with_vis=False,
+                            )
+                        for fact in facts_3:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                    elif item["columns_dtype_mapping"][breakdown[0]] == "T": 
+                        facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown[0],
                                 measure=measure[0],
                                 measure2=measure[1],
                                 series=None,
-                                breakdown_type="C",
+                                breakdown_type="T",
                                 measure_type="NxN",
                                 with_vis=False,
                             )
-                            for fact in facts_1:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                            facts_2 = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=breakdown[0],
-                                    measure=measure[0],
-                                    series=None,
-                                    breakdown_type="C",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts_2:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                            facts_3 = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=breakdown[0],
-                                    measure=measure[1],
-                                    series=None,
-                                    breakdown_type="C",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts_3:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                        elif item["columns_dtype_mapping"][breakdown[0]] == "T": 
-                            facts_1 = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=breakdown[0],
-                                    measure=measure[0],
-                                    measure2=measure[1],
-                                    series=None,
-                                    breakdown_type="T",
-                                    measure_type="NxN",
-                                    with_vis=False,
-                                )
-                            for fact in facts_1:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
-                            facts_2 = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=breakdown[0],
-                                    measure=measure[0],
-                                    series=None,
-                                    breakdown_type="T",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts_2:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                            facts_3 = generate_facts(
-                                    dataset=Path(f"data/{chosen_dataset}.csv"),
-                                    breakdown=breakdown[0],
-                                    measure=measure[1],
-                                    series=None,
-                                    breakdown_type="T",
-                                    measure_type="N",
-                                    with_vis=False,
-                                )
-                            for fact in facts_3:
-                                facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                if "fact" in st.session_state:
-                    st.session_state["fact"] = []
-                # Remove duplicates from facts_list
-                contents = [fact["content"] for fact in facts_list]
+                        for fact in facts_1:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
+                        facts_2 = generate_facts(
+                                dataset=Path(f"data/{chosen_dataset}.csv"),
+                                breakdown=breakdown[0],
+                                measure=measure[0],
+                                series=None,
+                                breakdown_type="T",
+                                measure_type="N",
+                                with_vis=False,
+                            )
+                        for fact in facts_2:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+                        facts_3 = generate_facts(
+                                dataset=Path(f"data/{chosen_dataset}.csv"),
+                                breakdown=breakdown[0],
+                                measure=measure[1],
+                                series=None,
+                                breakdown_type="T",
+                                measure_type="N",
+                                with_vis=False,
+                            )
+                        for fact in facts_3:
+                            facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+            if "fact" in st.session_state:
+                st.session_state["sub_fact"] = []
+            if "base_fact" in st.session_state:
+                st.session_state["base_fact"] = []
+            # Remove duplicates from facts_list
+            contents = [fact["content"] for fact in facts_list]
                 # Ranking facts by score
-                facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)  
-                seen = set()
-                for item in facts_list:
-                    if item["content"] != "No fact." and item["content"] not in seen:
-                        seen.add(item["content"])
-                        st.session_state["fact"].append(item["content"])
-                # st.write("Facts generated from the dataset:",st.session_state["fact"])
-                # Remove facts not related to user-selected column
-                st.session_state["fact"] = [s for s in st.session_state["fact"] if str(user_selected_column) in s]
-                # st.write("Facts related to the selected column:",st.session_state["fact"])
-                # Randomly select 100 facts
-                if len(st.session_state["fact"]) > 100:
-                    st.session_state["fact"] = random.sample(st.session_state["fact"], 100)
-                st.write("Facts:",st.session_state["fact"])
-                # TEST#########
-                only_fact_template = """You are an expert data analyst specializing in Exploratory Data Analysis (EDA). 
-                                        Here is a list of data facts : {facts_list}
+            facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True)  
+            seen = set()
+            seen_1 = set()
+            for item in facts_list:
+                if f"when {user_selected_column}" in item["content"] and item["content"] not in seen:
+                    seen.add(item["content"])
+                    st.session_state["sub_fact"].append(item["content"])
+                elif f"{user_selected_column}" in item["content"] and "when" in item["content"] and item["content"] not in seen:
+                    seen_1.add(item["content"])
+                    st.session_state["sub_fact"].append(item["content"])
+                elif item["content"] != "No fact." and "when" not in item["content"] and item["content"] not in seen_1 :
+                        seen_1.add(item["content"])
+                        st.session_state["base_fact"].append(item["content"])
+            # Randomly select 100 facts
+            # if len(st.session_state["sub_fact"]) > 100:
+            #     st.session_state["sub_fact"] = random.sample(st.session_state["sub_fact"], 100)
+            st.write("Base Facts:",st.session_state["base_fact"])
+            st.write("Subspace Facts:",st.session_state["sub_fact"])
 
-                                    Task:
-                                    1. Use the facts to construct a EDA process focus on {column}.
-                                    1. Select exactly three facts from that list which, when taken together, form a logical, step-by-step EDA process.
-                                    2. Outline the three analysis steps you’d take—one for each fact—in the order you’ve chosen them.
-                                    3. State the single most interesting insight that emerges from this sequence.
+            base_col_com_set = set()
+            base_fact_col_com = []
+            for c in chosen_data_schema:
+                if c["properties"]["dtype"] == "C":
+                    for c2 in chosen_data_schema:
+                        if c2["properties"]["dtype"] == "N" and (c["column"], c2["column"]) not in base_col_com_set:
+                            base_col_com_set.add((c["column"], c2["column"]))
+                            base_fact_col_com.append({"x": c["column"], "y": c2["column"]})
+                elif c["properties"]["dtype"] == "N" :
+                    for c2 in chosen_data_schema:
+                        if c2["column"] != c["column"] and (c2["column"], c["column"]) not in base_col_com_set:
+                            base_col_com_set.add((c2["column"], c["column"]))
+                            base_fact_col_com.append({"x": c2["column"], "y": c["column"]})
+            st.write("Base Facts Column Combinations:",base_fact_col_com)
+                
+            # Index for base chart  
+            b_idx = 1
+            img_num = 1
+            chart_title = []
+            chart_query = []
+            with open ("json_schema/base_fact.json", "r") as f:
+                base_fact_json = json.load(f)
+            # Randomly select 3 base facts to generate base charts
+            new_base_fact_col_com = random.sample(base_fact_col_com, 3)
+            for bf in new_base_fact_col_com:
+                # base_fact_json["data"]["url"] = f"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{chosen_dataset}.csv"
+                # base_fact_json["encoding"]["x"]["field"] = bf["x"]
+                # base_fact_json["encoding"]["x"]["axis"]["title"] = bf["x"]
+                # base_fact_json["transform"][0]["aggregate"][0]["field"] = bf["y"]
+                # base_fact_json["transform"][0]["groupby"][0] = bf["x"]
+                # base_fact_json["encoding"]["y"]["axis"]["title"] = bf["y"]   
+                # base_fact_json["encoding"]["color"]["field"] = bf["x"]                
+                # base_fact_json["title"]["text"] = f"{bf['y']} across {bf['x']}"
+                # if "year" in bf["x"].lower():
+                #     base_fact_json["encoding"]["x"]["sort"] = "x"
+                # base_png = vlc.v(vl_spec=base_fact_json,scale=3.0)
+                # with open(f"DATA2Poster_img/base/base_img_{b_idx}.png", "wb") as f:
+                #     f.write(base_png)
+                # st.image(f"DATA2Poster_img/base/base_img_{b_idx}.png", caption="Base Chart")
+                # Aggregate total Y(ex.employed persons) by X(ex.sex)
+                agg = datasets[chosen_dataset].groupby(bf["x"])[bf["y"]].sum().reset_index()
+                # b_idx += 1
+            
+            # To iterate through the base facts and generate first-level follow-up questions
+            # for i in range(1,b_idx):
+                # binary_base_chart     = open(f"DATA2Poster_img/base/base_img_{i}.png", 'rb').read()  
+                # base64_utf8_base_chart = base64.b64encode(binary_base_chart).decode('utf-8')
+                # base_img_url = f'data:image/png;base64,{base64_utf8_base_chart}' 
 
-                                    Format your answer as JSON with three keys:
+                # Use llm to generate the base chart description 
+                bc_des_prompt = """
+                                    You are a data visualization expert.
 
-                                    {{
-                                    "selected_facts": [ "Fact A", "Fact B", "Fact C" ],
-                                    "eda_steps": [
-                                        "Step 1: …",
-                                        "Step 2: …",
-                                        "Step 3: …"
-                                    ],
-                                    "insight": "Here goes the insight."
-                                    }}
-                                    Do not INCLUDE ```json```.Do not add other sentences after this json data."""
-                only_fact_prompt = PromptTemplate(
-                    template=only_fact_template,
-                    input_variables=["facts_list","column"]
+                                    Below is the raw data that will populate a **bar chart**:
 
+                                    {data_table}\n\n
+                                    
+                                    Read the numbers carefully, pretending you are *seeing* the chart bars and their exact heights.
+
+                                    **Your task**
+
+                                    Write a concise narrative that to describe the chart, focusing on the most important insights.
+
+                                    **Instructions**
+
+                                    1. Think step-by-step:
+                                    - Identify high, low, and median bars.  
+                                    - Note any obvious clusters, gaps.  
+                                    - Calculate at least one simple statistic if useful (e.g., top vs bottom difference).
+
+                                    2. Write a concise narrative that:
+                                    - Starts with a strong headline insight.  
+                                    - Highlights 2-3 secondary observations (comparisons, rank order, surprising values).  
+                                    - Uses actual numbers or percentages from the data where appropriate.  
+                                    - Uses plain language suited to the audience.
+
+                                    **Output**
+
+                                    Return **only** plain text in this structure:
+
+                                    <Headline insight>
+                                    • <Bullet 1>
+                                    • <Bullet 2>
+                                    • ...
+                                """
+                
+                bc_prompt = PromptTemplate(
+                    template=bc_des_prompt,
+                    input_variables=["data_table"]
                 )
-                only_fact_chain = only_fact_prompt | llm
-                only_fact_result = only_fact_chain.invoke(input ={"facts_list":st.session_state["fact"], "column":user_selected_column})
-                only_fact_json = json.loads(only_fact_result.content)
-                st.write("Selected Facts:",only_fact_json)
-                nl_viz_template = """You are an expert data visualization specialist.
-                                        Here three data facts: {fact}
+                bc_chain = bc_prompt | llm
+                bc_result = bc_chain.invoke(input = {"data_table": agg.to_string(index=False)})
+                st.write("base chart description:",bc_result.content)
+                
 
-                                        Task:
-                                        For each fact, propose exactly one **natural-language** question that:
-                                        - Is phrased as an analytic query suitable to drive a visualization
-                                        - Clearly specifies what should be plotted (e.g. fields, filters)
-                                        - Could be handed off directly to a data-viz tool or dashboard
-                                        - Create the Action that is detailed and straightforward statements to transform the each query into visualization chart.
-                                        - Ensure it is detailed enough and easily translatable into a visualization (e.g., bar chart, pie chart).
-                                        Format your answer as JSON where each key is number and each value is the NL query. For example:
+                # ////zero shot//// Use llm to read the base chart description to generate section 1 follow-up questions(and provide with the base facts)
+                eda_q_for_sec1_template="""
+                You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
+                The user has just viewed the following **bar chart**:
+                **What it shows (summary):** {chart_summary}  
 
-                                        {{
-                                            "question": ["How has the average Worldwide Gross for Thriller films changed over the years?",
-                                                                            "What are the top five countries by total export volume in 2023?",
-                                                                            "..."],
-                                            "action": ["...", "...","..."]
-                                                                            
-                                        }}
-                                        Do not INCLUDE ```json```.Do not add other sentences after this json data."""
-                nl_viz_prompt = PromptTemplate(
-                    template=nl_viz_template,
-                    input_variables=["fact"],
+                Additional dataset columns may not represented in the chart: {key_columns}
+
+                **Your Task**
+                Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
+                {data_facts}\n\n
+                1. Briefly note which fact most directly extend insights from the current chart.
+                2. Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
+                3. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - The question must refer to **ONLY** one column from {key_columns}. 
+                    - The question should be high-level and only mention column from {key_columns} rather than specific value.
+                    - Make them answerable with the existing dataset.
+                4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - ONLY choose rank facts from {data_facts}.
+                    - The question must refer to  **two** column from {key_columns}. 
+                    - The question should be extend from the first question and add new angle to the analysis.
+                    - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
+                    - *ALWAYS* use a new metric or dimension different from the first question for ranking.
+                    - Make them answerable with the existing dataset.
+                5. Write a title for the chart **(≤7 words each)** based on the question.
+                
+                
+                **Constraints**
+                - Never rewrite th data facts from {data_facts}.
+
+                **Example**
+                Dataset columns: [gender, racial groups, math score, reading score, writing score]
+                Follow-up questions:
+                Question 1. How do the average math scores across different races?
+                Question 2. Which five racial groups show the largest gender gap in average math scores?
+                Rationale: 
+                The first question provide an overview of students from different races on math scores performance.
+                The second question extends the analysis by comparing the average math scores between gender(both male and female) and racial groups, which is a new angle to the analysis.
+
+                **Avoid**
+                Question: What are the TOP 3 reading score by writing score for Male and Female in the top racial groups?
+                Rationale: It contains three columns: 'writing score', 'gender (Male and Female)' and 'racial groups', which is not allowed.
+
+                **Output (exact JSON)**  
+                Do not INCLUDE ```json```.Do not add other sentences after this json data.
+                {{
+                "follow_up_questions": [
+                    {{
+                    "selected_facts": "<fact 1>",
+                    "question": "<Question 1>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Why this deepens the analysis>"
+                    }},
+                    {{
+                    "selected_facts": "<fact 2>",
+                    "question": "<Question 2>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Rationale>"
+                    }}
+                    
+                ]
+                }}"""
+                eda_q_for_sec1_prompt = PromptTemplate(
+                    template=eda_q_for_sec1_template,
+                    input_variables=["chart_summary","key_columns","data_facts"]
                 )
-                nl_viz_chain = nl_viz_prompt | llm
-                nl_viz_result = nl_viz_chain.invoke(input ={"fact":only_fact_json["selected_facts"]})
-                nl_viz_json = json.loads(nl_viz_result.content)
-                st.write("Natural Language Queries:",nl_viz_json)
-
-                #         You are an expert exploratory data analysis assistant. You will help synthesize a large set of individual data facts into a concise, insightful narrative closely related to **{column}** by following these steps:
-
-                #         **Task**:
-                #         1. **Enrich & Tag**  
-                #         For each fact in facts_list, generate or extract:
-                #         - dimensions: list of relevant dimensions (e.g. “Genre”, “Year”, “Region”)
-                #         - pattern_type: one of (trend, outlier, correlation, ranking, other)
-                #         - direction: one of (increasing, decreasing, high, low, none)
-                #         - magnitude: a short quantitative descriptor (e.g. “+25%”, “rank 5 of 10”, “p-value 0.01”)
-                #         - time_window: the years or range involved
-                #         - value_tag: one of (actionable, contextual, anomalous)
-
-                #         2. **Filter & Prioritize**  
-                #         - Discard facts with magnitude below noise threshold (e.g. <10%% change).  
-                #         - Keep only facts whose value_tag is "actionable" or matches priority_tags.  
-
-                #         3. **Cluster by Theme**  
-                #         - Group the remaining facts into 3-5 themes, based on shared dimensions or pattern_types.  
-                #         - Label each theme with a short name (e.g. "Genre Polarization", "Budget vs. Return").
-
-                #         4. **Select Representatives**  
-                #         - Within each theme, pick 1-2 facts that are both strong (largest magnitude) and novel.  
-
-                #         5. **Synthesize Patterns**  
-                #         - For each theme, write a 1-2 sentence insight summarizing the pattern (e.g. "Since 2010, Action's share of total gross has doubled…").  
-                #         - Recommend one visualization per theme (type of chart, key fields to encode).
-
-                #         6. **Output Format**  
-                #         Do not INCLUDE ```json```.Do not add other sentences after this json data.
-                #         Return a JSON object with:
-                #             {{
-                #             "themes": [
-                #                 {{
-                #                 "name": "<theme name>",
-                #                 "fact_ids": [<indexes of chosen facts>],
-                #                 "insight": “<1-2 sentence takeaway>”,
-                #                 "visualization": {{
-                #                     "type": "line|bar|scatter|boxplot|…", 
-                #                     "x": "<field>", 
-                #                     "y": "<field>", 
-                #                     "color": "<optional field>"
-                #                 }}
-                #                 }},
-                #                 ...
-                #             ]
-                #             }}
-                #         **** Inputs: {facts_list}*******"""
-                #         ,
-                #         input_variables=["column","facts_list"])
-                # eda_chain = eda_prompt | llm
-                # eda_result = eda_chain.invoke(input ={"column":user_selected_column,"facts_list":st.session_state["fact"]})
-                # eda_result_json = json.loads(eda_result.content)
-                # st.write("EDA Result:",eda_result_json)
-
-                # eda_goal_prompt = PromptTemplate(template="""You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
-                # Here are key facts extracted from this dataset:{fact}
-                # **Your goal:**  
-                # Generate a focused, structured EDA goal, using chain-of-thought reasoning.
-                # **Instructions for your internal reasoning (do NOT include these steps in your response):**
-                # 1. **Context & Exploration**
-                # - Briefly restate what the dataset covers.
-                # - List 1–2 hypotheses or questions.
-                # 2. **Deep Dive**
-                # For each hypothesis or question:
-                # - **Analyze** how a column changes across values of one other column.
-                # - **Highlight** any trends, correlations, anomalies, or group differences.
-                # - **Limit** each point to **two** column names (the target plus one comparator).
-                # 3. **Chain-of-Thought**
-                # - Show your reasoning in 2–3 short bullet steps per insight.
-                # - Use phrases like “Because…”, “When comparing…”, “We observe that…”.
-                # **Output requirements (ONLY return this; no reasoning or extra text):**
-                # - ONE sentence to describe your EDA GOAL.
-                # - No explanations, no bullet steps, no metadata.
-                # """,
-                # input_variables=["data_name","data_columns","fact"])
-                # eda_goal_chain = eda_goal_prompt | llm
-                # eda_goal = eda_goal_chain.invoke(input ={"data_name":chosen_dataset, "data_columns":chosen_data_schema,"fact":st.session_state["fact"]})
+                eda_q_for_sec1_chain = eda_q_for_sec1_prompt | llm
+                eda_q_for_sec1_result = eda_q_for_sec1_chain.invoke(input = {"chart_summary":bc_result.content,
+                                                                "key_columns":chosen_data_schema,
+                                                                "data_facts":str(st.session_state["base_fact"])})
+                eda_q_for_sec1_json = json.loads(eda_q_for_sec1_result.content)
+                st.write("Follow-up Questions sec 1:",eda_q_for_sec1_json)
+                chart_query.append(eda_q_for_sec1_json["follow_up_questions"][0]["question"])
+                chart_query.append(eda_q_for_sec1_json["follow_up_questions"][1]["question"])
+                chart_title.append(eda_q_for_sec1_json["follow_up_questions"][0]["suggested_viz_title"])
+                chart_title.append(eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"])
                 
-                # st.write("EDA Goal:",eda_goal.content)
-                # eda_task_prompt = PromptTemplate(template="""
-                #                                             Your are a senior data analyst. You are analyzing a dataset: {data_columns}.
-                #                                             Your need to come up with a short plan to help a user
-                #                                             accomplish the goal:{goal}. Please recommend 3 exploratory tasks. For task type, you may consider the trend,
-                #                                             correlation, category, distribution, etc., to explore the goal
-                #                                             from different aspects. Do not use advanced modeling
-                #                                             methods.Each task is a sentence. For data variables, the task may not correspond
-                #                                             to the data, so you need to go to the dataset and find the
-                #                                             corresponding data variables, and even if transformation is
-                #                                             required, you need to write the original column name. There
-                #                                             may be more than one column of data so it is an array. No
-                #                                             need to say Here is the requested JSON format listing the
-                #                                             tasks:. Do not INCLUDE ```json```.Do not add other sentences after this json data.
-                #                                             The following is output JSON example:
-                #                                             {{
-                #                                                 "tasks": ["","",""],
-                #                                                 "data variables":[],
-                #                                                 "task type": ["","",""]
-                #                                                 }}
-                #                                  """,
-                # input_variables=["data_columns","goal"])
-                # eda_task_chain = eda_task_prompt | llm
-                # eda_task = eda_task_chain.invoke(input ={"data_columns":chosen_data_schema,"goal":eda_goal.content})
-                # task_json = json.loads(eda_task.content)
-                # st.write("EDA Task:",task_json)
-                # q_prompt = PromptTemplate(
-                #                         template="""You are a senior data analyst. You are analyzing a dataset named: {data_name} and it has columns: {data_columns}.
-                #                         Your goal is to generate a set of concise EDA questions for solving the following tasks:{eda_task}
-                #                         Please generate questions that are specific to each tasks and these questions can be answered through visualizaing the data.
-                #                         Do not INCLUDE ```json```.Do not add other sentences after this json data.
-                #                         The following is output JSON example:
-                #                         {{
-                #                             "questions": [
-                #                                 {{"task": "task_1", "question": "question_1"}},
-                #                                 {{"task": "task_2", "question": "question_2"}},
-                #                                 {{"task": "task_3", "question": "question_3"}}
-                #                             ]
-                #                         }}
-                #                         """,
-                # input_variables=["data_name","data_columns","eda_task"])
-                # q_chain = q_prompt | llm
-                # q_from_gpt = q_chain.invoke(input ={"data_name":chosen_dataset,"data_columns":chosen_data_schema,"eda_task":eda_task.content})
-                # q_json = json.loads(q_from_gpt.content)
-                # st.write("EDA Questions:",q_json)
-
-                # # Create a vector store
-                # def load_json(json_file):
-                #     with open(json_file, "r", encoding="utf-8") as fh:
-                #         return json.load(fh)
 
 
-                # data_list = load_json('vis_corpus.json')
-                # docs = [Document(page_content=json.dumps(item)) for item in data_list]
-                # vectorstore = FAISS.from_documents(
-                # docs,
-                # OpenAIEmbeddings(model="text-embedding-3-small", api_key = openai_key),
-                # )
-                # st.session_state["vectorstore"] = vectorstore
+               # ////one shot//// Use llm to read the base chart description to generate section 2 follow-up questions(and provide with the base facts)
+                eda_q_for_sec2_template="""
+                You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
+
+                **Your Task**
+                Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
+                {data_facts}\n\n
+
+                Additional dataset columns may not represented in the chart: {key_columns}
+                The column that you **SHOULD NEVER** use for follow-up questions: {not_use_column}
+
+                1. Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
+                2. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - The question must refer to **ONLY** one column from {key_columns}. 
+                    - The question should be high-level and only mention column from {key_columns} rather than specific value.
+                    - Make them answerable with the existing dataset.
+                3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - ONLY choose rank facts from {data_facts}.
+                    - The question must refer to **ONLY TWO** column from {key_columns}. 
+                    - The question should be extend from the first question and add new angle to the analysis.
+                    - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
+                    - *ALWAYS* use a new metric or dimension different from the first question for ranking.
+                    - Make them answerable with the existing dataset.
+                4. Write a title for the chart **(≤7 words each)** based on the question.
                 
-                # Create intermediate output as knowledge
-                # knowledge = self_augmented_knowledge(openai_key, chosen_dataset, list(head),user_selected_column, st.session_state["fact"])
-                # st.write("KnowledgeBase:",knowledge)
+                **Constraints**
+                - Never rewrite th data facts from {data_facts}.
 
-                # Combine facts into interesting patterns
-                # llm_pattern_template = load_prompt_from_file("prompt_templates/fact_idea_prompt.txt")
-                # prompt_pattern = PromptTemplate(
-                #                         template=llm_pattern_template,
-                #                         input_variables=["facts","user_selected_column"],
+                **Example**
+                Dataset columns: [gender, racial groups, math score,reading score, writing score]
+                Follow-up questions:
+                Question 1. How do the average math scores across different racial groups?
+                Question 2. Which five racial groups show the largest gender gap in average math scores?
+                Rationale: 
+                The first question provide an overview of students from different racial groups on math scores performance.
+                The second question extends the analysis by comparing the average math scores between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
-                #             )
-                # # with open("json_schema/fact_idea_schema.json", "r") as f:
-                # #     pattern_json_schema = json.load(f)
-                # chain_pattern = prompt_pattern | llm
-                # patterns_from_gpt = chain_pattern.invoke(input = {"facts":st.session_state["fact"],"user_selected_column":user_selected_column})
-                # st.write("Interesting Patterns:",patterns_from_gpt.content)
-                # eda_result_json = json.loads(patterns_from_gpt.content)
-                # st.write("EDA Result:",eda_result_json)
-                question_list=[]
-                for i in range(0,3):
-                    question_list.append(nl_viz_json["question"][i]+nl_viz_json["action"][i])
-                # supported_fact= []
-                # Generate EDA questions based on interesting patterns
-                # for pattern in nl_viz_json["themes"]:
-                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][0])
-                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][1])
-                #     # supported_fact.append(patterns_from_gpt[pattern]["supporting_facts"][2])
-           
-                #     llm_Q_template = load_prompt_from_file("prompt_templates/llm_question.txt")
-                #     prompt_llm_Q = PromptTemplate(
-                #                             template=llm_Q_template,
-                #                             input_variables=["pattern_1","columns_set_1"],
+                **Avoid**
+                Question: What are the TOP 3 reading score by writing score for Male and Female in the top racial groups?
+                Rationale: It contains three columns: 'writing score', 'gender (Male and Female)' and 'racial groups', which is not allowed.
 
-                #                 )
-                #     with open ("json_schema/llm_question_schema.json", "r") as f:
-                #         llm_Q_schema = json.load(f)
-                #     llm_Q_chain = prompt_llm_Q | llm.with_structured_output(llm_Q_schema)
-                #     llm_Q_from_gpt = llm_Q_chain.invoke(input = {"pattern_1":pattern["insight"],"columns_set_1":list(head)})
-                #     st.write(llm_Q_from_gpt)
-                #     question_list.append(llm_Q_from_gpt["query_object"]["question"]+llm_Q_from_gpt["query_object"]["action"])
-                # Q_advice_prompt = PromptTemplate(
-                # template="""You are an assistant specialized in exploratory data analysis (EDA). Evaluate the following three queries:{query}
-                #             Identify if the queries are duplicates, similar, or distinct.
-                #             If any queries are duplicates or similar (leading to similar visualizations), suggest replacing the redundant query with a new distinct query that contributes to a coherent exploratory data analysis narrative.
-                #             Provide the new queries set with exactly **3** query if you find redundancy; otherwise, only return the original queries as they are.
-                #             """,
-                # input_variables=["query"],
-                # )
-
-                # Q_advice_chain = Q_advice_prompt | llm
-                # Q_advice = Q_advice_chain.invoke(input ={"query":question_list})
-                # st.write("Question Advice:",Q_advice.content)
-                # new_Q_prompt = PromptTemplate(
-                # template="""You are an assistant specialized in exploratory data analysis (EDA). 
-                #             The following is advice about refining EDA query:{advice}. 
-                #             Focus on the final new queries and choose exactly **3** queries for leading a coherent EDA process. 
-                #             Please approach this task methodically and reason step by step.
-                #             ONLY return the queries in JSON format without your reasoning or any additional text.
-                #             YOUR RESPONSE SHOULD NEVER INCLUDE "```json```".Please do not add any extra prose to your response.
-                #             """,
-                # input_variables=["advice"],
-                # )
-                # with open("json_schema/new_question_schema copy.json", "r") as f:
-                #     new_Q_schema = json.load(f)
-                # new_Q_chain = new_Q_prompt | llm.with_structured_output(new_Q_schema)
-                # new_Q = new_Q_chain.invoke(input ={"advice":Q_advice.content})
-                # st.write("New Question:",new_Q)    
-                # # log the llm question
-                # def log_response_to_json(knowledgebase, response):
-                #     log_data = {"knowkedgebase": knowledgebase, "response": response}
+                **Output (exact JSON)**  
+                Do not INCLUDE ```json```.Do not add other sentences after this json data.
+                {{
+                "follow_up_questions": [
+                    {{
+                    "selected_facts": "<fact 1>",
+                    "question": "<Question 1>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Why this deepens the analysis>"
+                    }},
+                    {{
+                    "selected_facts": "<fact 2>",
+                    "question": "<Question 2>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Rationale>"
+                    }}
                     
-                #     with open("log/COT_Q_logs.json", "a") as f:
-                #         f.write(json.dumps(log_data,indent=2))  # Append new log entry
-                
-                # # Save log
-                # log_response_to_json(knowledge, llm_Q_from_gpt)
+                ]
+                }}"""
+                eda_q_for_sec2_prompt = PromptTemplate(
+                    template=eda_q_for_sec2_template,
+                    input_variables=["data_facts","key_columns","not_use_column"]
+                )
+                eda_q_for_sec2_chain = eda_q_for_sec2_prompt | llm
+                eda_q_for_sec2_result = eda_q_for_sec2_chain.invoke(input = {
+                                                                "data_facts":str(st.session_state["base_fact"]),
+                                                                "key_columns":chosen_data_schema,
+                                                                "not_use_column":eda_q_for_sec1_json["follow_up_questions"][0]["column"]
+                                                                })
+                eda_q_for_sec2_json = json.loads(eda_q_for_sec2_result.content)
+                st.write("Follow-up Questions sec 2:",eda_q_for_sec2_json)
+                chart_query.append(eda_q_for_sec2_json["follow_up_questions"][0]["question"])
+                chart_query.append(eda_q_for_sec2_json["follow_up_questions"][1]["question"])
+                chart_title.append(eda_q_for_sec2_json["follow_up_questions"][0]["suggested_viz_title"])
+                chart_title.append(eda_q_for_sec2_json["follow_up_questions"][1]["suggested_viz_title"])
 
-                # st.write(question_list)
-                # st.session_state["Q_from_gpt"] = {"questions":question_list}
-                
-                
-            # To visualize the EDA questions
-       
-                st.session_state["bt_try"] = ""     
-           
-                # Call GPT to generate initial vlspec
-                insight_list = []
-                chart_des_list = []
-                idx=1
-                for query in question_list:
+            # Section 1 Chart 1
+                # with open ("vis_nl_pair.json", "r") as f:
+                #     vis_nl_json = json.load(f)
+                #     query = eda_q_for_sec1_json["follow_up_questions"][0]["question"]
+                #     # expanded_query = expand_vis_query(query,list(head), openai_key)
+                #     # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                #     # RAG to extract vlspec of similar questions from the vectorstore
+                #     st.write(f'**Question for Section 1 Chart 1:**',f'**{query}**')
                     
-                #     st.write(f'**Question for Chart:**',f'**{query}**')
-                #     print("\n🟢 Step 1: Generating Initial Code...\n")
-                #     result = st.session_state["vectorstore"].similarity_search(
+                #     result = vectorstore.similarity_search(
                 #                         query,
                 #                         k=1,
                 #                     )
-                # st.write("RAG Vega-Lite JSON:",result[0].page_content)
-                    st.write(f'**Question for Chart {idx}:**',f'**{query}**')
-                    vlspec = agent_1_generate_code(chosen_dataset,query,sample_data, openai_key)
-                    st.write("Vega-Lite Specification:",vlspec)
-                    json_code = json.loads(vlspec)
-                    json_code["height"] = 400
-                    json_code["width"] = 600
-                    st.write("Vega-Lite JSON:",json_code)
-                    png_data = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0)
-                    with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                        f.write(png_data)
-                    st.image(f"DATA2Poster_img/image_{idx}.png", caption="Generated Chart")
-                    # Evaluate the generated vlspec
-                    binary_fc       = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                    base64_utf8_str = base64.b64encode(binary_fc).decode('utf-8')
-                    url = f'data:image/png;base64,{base64_utf8_str}'
-                    feedback = agent_2_improve_code(query, url, openai_key)
-                    st.write(feedback)
-                    # Improve the vlspec based on feedback
-                    improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
-                    st.write("Improved Vega-Lite Specification:",improved_code)
-                    improved_json = json.loads(improved_code)
-                    improved_json["height"] = 400
-                    improved_json["width"] = 600
-                    st.write("Improved Vega-Lite JSON:",improved_json)
-                    exec_count=0
-                    try: 
-                        improved_png_data = vlc.vegalite_to_png(vl_spec=improved_json,scale=3.0)
-                        with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                            f.write(improved_png_data)
-                        st.image(f"DATA2Poster_img/image_{idx}.png", caption="Improved Chart")
-                    except Exception as e:
-                        st.error("The code is failed to execute.")
-            
+                #     result_json = json.loads(result[0].page_content)
+                #     st.write("RAG Result:",result_json)
+                #     target_nl = ""
+                #     for key, value in result_json.items():
+                #         target_nl = value
+                #     st.write("Target NL:",target_nl)
+                #     for nl in vis_nl_json.values():
+                #         if nl["nl"] == target_nl:
+                #             sample_vlspec = nl["spec"]
+                #             st.write("vlspec:",sample_vlspec)
+                #             break
                     
-                    # Inspect logic error of the vlspec for final validation(at most 3 times)
-                    pre_final_code = agent_4_validate_spec(improved_code,sample_data, openai_key)
-                    pre_final_json = json.loads(pre_final_code)
-                    pre_final_json["height"] = 400
-                    pre_final_json["width"] = 600
-                    st.write("Final Vega-Lite JSON:",pre_final_json)
-                    try:
-                        pre_final_png_data = vlc.vegalite_to_png(vl_spec= pre_final_json,scale=3.0)
-                        with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                            f.write(pre_final_png_data)
-                        st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
-                    except Exception as e:
-                        exec_count += 1
-                        error = str(e)
-                        error_code =  pre_final_code
-                        print(f"\n🔴 Error encountered: {error}\n")
-                        
-                        # Load error-handling prompt
-                        error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
-                        error_prompt = PromptTemplate(
-                            template=error_prompt_template,
-                            input_variables=["error_code", "error"],
-                        )    
-
-                        error_chain = error_prompt | llm 
-                        
-                        # Invoke the chain to fix the code
-                        corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
-                        final_code = corrected_code.content  # Update with the corrected code
-                        
-                        if exec_count == 3:
-                            st.error("The code is failed to execute.")
-                        else:
-                        
-                            final_json = json.loads(final_code)
-                            final_json["height"] = 400
-                            final_json["width"] = 600
-                            final_png_data = vlc.vegalite_to_png(vl_spec=final_json,scale=3.0)
-                            with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
-                                f.write(final_png_data)
-                            st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
-                           
-                            
-                    binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-                    base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
-                    img_url = f'data:image/png;base64,{base64_utf8_chart}' 
-                    chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-                    chart_des_prompt = [
-                        SystemMessage(content=chart_prompt_template),
-                        HumanMessage(content=[
-                            {
-                                "type": "text", 
-                                "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
-                            },
-                            {
-                                    "type": "text", 
-                                    "text": "Here is the chart to describe:"
-                            },
-                            {
-                                    "type": "image_url",
-                                    "image_url": {
-                                        "url": img_url
-                                    },
-                            },
-                        ])
-                    ] 
-                    
-                    chart_des =  llm.invoke(chart_des_prompt)
-
-                    # supported_fact = st.session_state["Q_from_gpt"]["supported_fact"][idx-1]
-
-                    
-                    st.write(f'**Chart Description:**', f'**{chart_des.content}**')
-                    # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
-                    # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
-                    
-                    # call GPT to generate insight description
-                    insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
-                    insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
-                    insight_prompt_input = PromptTemplate(
-                                template=insight_prompt_input_template,
-                                input_variables=["query", "chart_des"],
-                                                      
-                    ) 
-                    insight_prompt = ChatPromptTemplate.from_messages(
-                            messages=[
-                                SystemMessage(content = insight_prompt_template),
-                                HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
-                            ]
-                        )
-                    
-                    insight_chain = insight_prompt | llm
-                    insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-                    insight_list.append(insight.content)
-                    st.write(f'**Insight Description:**', f'**{insight.content}**')
-                    chart_des_list.append(chart_des.content)
-                    idx+=1
+                # vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec1_json["follow_up_questions"][0]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                # st.write("Vega-Lite Specification:",vlspec)
+                # json_code = json.loads(vlspec)
+                # with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # try:
+                #     chart_1 = alt.Chart.from_dict(json_code)
+                #     chart_1.save(f"DATA2Poster_img/image{img_num}.png")
+                #     # fl_png = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0) # fl aka first_level
+                #     # with open(f"DATA2Poster_img/image{img_num}.png", "wb") as f:
+                #     #     f.write(fl_png)
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 1 Chart 1")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
                 
+                # # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)      
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_1 = alt.Chart.from_dict(improved_json)
+                #     chart_1.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 1 Chart 1")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+
+               
+                img_num += 1
+
+                # Section 1 Chart 2
+                with open ("vis_nl_pair.json", "r") as f:
+                    vis_nl_json = json.load(f)
+                    query = eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"]
+                    # expanded_query = expand_vis_query(query,list(head), openai_key)
+                    # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                    # RAG to extract vlspec of similar questions from the vectorstore
+                    st.write(f'**Question for Section 1 Chart 2:**',f'**{query}**')
+
+                    result = vectorstore.similarity_search(
+                                        query,
+                                        k=1,
+                                    )
+                    result_json = json.loads(result[0].page_content)
+                    st.write("RAG Result:",result_json)
+                    target_nl = ""
+                    for key, value in result_json.items():
+                        target_nl = value
+                    st.write("Target NL:",target_nl)
+                    for nl in vis_nl_json.values():
+                        if nl["nl"] == target_nl:
+                            sample_vlspec = nl["spec"]
+                            st.write("vlspec:",sample_vlspec)
+                            break
+                    
+                vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                st.write("Vega-Lite Specification:",vlspec)
+                json_code = json.loads(vlspec)
+                with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                    json.dump(json_code, f, indent=2)
+                trans_json = json_code["transform"]
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # st.write("Vega-Lite JSON:",json_code)
+                # try:
+                #     chart_2 = alt.Chart.from_dict(json_code)
+                #     chart_2.save(f"DATA2Poster_img/image{img_num}.png")
+                #     # fl_png = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0) # fl aka first_level
+                #     # with open(f"DATA2Poster_img/image{img_num}.png", "wb") as f:
+                #     #     f.write(fl_png)
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 1 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.") 
+                
+                #  # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_2 = alt.Chart.from_dict(improved_json)
+                #     chart_2.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 1 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+            
+               
+
+                img_num += 1
+
+                # Extract data table from section 1 chart 2 and send it for section 3 question generation
+                data_transform_prompt = """You are a Python coding expert.
+                You are given the following Vega-Lite transformation specification:{trans_json}
+                **Your Task**
+                Write the equivalent Python code using Pandas to perform the same transformation on a DataFrame named df. 
+                The output should be a new DataFrame after transformed.
+                Only return the Python code without any explanation or additional text.
+                NEVER include ```python``` in your response.
+                Only modify the code in the middle of the following code snippet:        
+                    def trans_data(df):\n\n
+                    # Assuming "df" is the input DataFrame\n\n
+                    # Grouping and aggregating\n\n
+                    result_df =         ####only modify this line#####
+                    \n\n
+                    return result_df
+                """
+                data_transform_prompt = PromptTemplate(
+                    template=data_transform_prompt,
+                    input_variables = {"trans_json"})
+                data_transform_chain = data_transform_prompt | llm
+                data_transform_result = data_transform_chain.invoke(input={"trans_json":json.dumps(trans_json)})
+                trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
+                exec(trans_code)
+                new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
+
+               
+                
+                # ////one shot//// Use llm to read the base chart description to generate section 3 follow-up questions
+                    
+                eda_q_for_sec3_template="""
+                You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
+                Here is the data from the visualization chart:{new_df}
+                This title of chart is:{title}
+                Additional dataset columns may not represented in the chart: {key_columns}
+
+                **Your Task**
+                Generate **two** distinct follow-up questions that logically extend the current EDA:
+                1. Read the data carefully. Understand the significant value of the data.
+                    - Identify high and low statistic.
+                2. Only focus the top N entities in the title.
+                3. For the first question, choose the entity with highest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
+                    - This question drill down to reveal the pattern within this entity.
+                    - The question must refer to **two** column from {key_columns}. 
+                    - Make them answerable with the existing dataset.
+                4. For the second question, choose the entity with lowest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
+                    - This question drill down to reveal the pattern within this entity.
+                    - The question must refer to **two** column from {key_columns}. 
+                    - Make them answerable with the existing dataset.
+
+                **Example**
+                Dataset columns: [gender, racial groups, math score,reading score, writing score]
+                Follow-up questions:
+                Question 1. How do the math scores by gender in white people group?
+                Question 2. How do the math scores by gender in black people group?
+                Rationale: 
+                The  white people group has the highest average math scores from the top N racial groups. The first question provide an overview of students of different gender on math scores performance in this group.
+                The  black people group has the lowest average math scores from the top N racial groups. The second question provide an overview of students of different gender on math scores performance in this group.
+
+                **Output (exact JSON)**  
+                Do not INCLUDE ```json```.Do not add other sentences after this json data.
+                {{
+                "follow_up_questions": [
+                    {{
+                    "question": "<Question 1>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Why this deepens the analysis>"
+                    }},
+                    {{
+                    "question": "<Question 2>",
+                    "suggested_viz_title": "title for the chart",
+                    "suggested_viz_type": "<bar|line|pie|scatter|...>",
+                    "column": "<column name that the question is related to>",
+                    "rationale": "<Rationale>"
+                    }}
+                    
+                ]
+                }}"""
+                eda_q_for_sec3_prompt = PromptTemplate(
+                    template=eda_q_for_sec3_template,
+                    input_variables=["new_df","query","key_columns"]
+                )
+                eda_q_for_sec3_chain = eda_q_for_sec3_prompt | llm
+                eda_q_for_sec3_result = eda_q_for_sec3_chain.invoke(input = {
+                                                                "new_df":new_df.to_string(index=False),
+                                                                "title":eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"],
+                                                                "key_columns":list(head),
+                                                               
+                                                                })
+                eda_q_for_sec3_json = json.loads(eda_q_for_sec3_result.content)
+                st.write("Follow-up Questions sec 3:",eda_q_for_sec3_json)
+                chart_query.append(eda_q_for_sec3_json["follow_up_questions"][0]["question"])
+                chart_query.append(eda_q_for_sec3_json["follow_up_questions"][1]["question"])
+                chart_title.append(eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"])
+                chart_title.append(eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"])
+
+                # Section 2 Chart 1
+                # with open ("vis_nl_pair.json", "r") as f:
+                #     vis_nl_json = json.load(f)
+                #     query = eda_q_for_sec2_json["follow_up_questions"][0]["question"]
+                #     chart_title.append(eda_q_for_sec2_json["follow_up_questions"][0]["suggested_viz_title"])
+                #     # expanded_query = expand_vis_query(query,list(head), openai_key)
+                #     # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                #     # RAG to extract vlspec of similar questions from the vectorstore
+                #     st.write(f'**Question for Section 2 Chart 1:**',f'**{query}**')
+                    
+                #     result = vectorstore.similarity_search(
+                #                         query,
+                #                         k=1,
+                #                     )
+                #     result_json = json.loads(result[0].page_content)
+                #     st.write("RAG Result:",result_json)
+                #     target_nl = ""
+                #     for key, value in result_json.items():
+                #         target_nl = value
+                #     st.write("Target NL:",target_nl)
+                #     for nl in vis_nl_json.values():
+                #         if nl["nl"] == target_nl:
+                #             sample_vlspec = nl["spec"]
+                #             st.write("vlspec:",sample_vlspec)
+                #             break
+                    
+                # vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec2_json["follow_up_questions"][0]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                # st.write("Vega-Lite Specification:",vlspec)
+                # json_code = json.loads(vlspec)
+                # with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # st.write("Vega-Lite JSON:",json_code)
+                # try:
+                #     chart_3 = alt.Chart.from_dict(json_code)
+                #     chart_3.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 2 Chart 1")
+                #     # fl_png = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0) # fl aka first_level
+                #     # with open(f"DATA2Poster_img/image{img_num}.png", "wb") as f:
+                #     #     f.write(fl_png)
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+                
+                #  # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_3 = alt.Chart.from_dict(improved_json)
+                #     chart_3.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 2 Chart 1")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+            
+                img_num += 1
+
+                # Section 2 Chart 2
+                # with open ("vis_nl_pair.json", "r") as f:
+                #     vis_nl_json = json.load(f)
+                #     query = eda_q_for_sec2_json["follow_up_questions"][1]["question"]
+                #     # expanded_query = expand_vis_query(query,list(head), openai_key)
+                #     # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                #     # RAG to extract vlspec of similar questions from the vectorstore
+                #     st.write(f'**Question for Section 2 Chart 2:**',f'**{query}**')
+                    
+                #     result = vectorstore.similarity_search(
+                #                         query,
+                #                         k=1,
+                #                     )
+                #     result_json = json.loads(result[0].page_content)
+                #     st.write("RAG Result:",result_json)
+                #     target_nl = ""
+                #     for key, value in result_json.items():
+                #         target_nl = value
+                #     st.write("Target NL:",target_nl)
+                #     for nl in vis_nl_json.values():
+                #         if nl["nl"] == target_nl:
+                #             sample_vlspec = nl["spec"]
+                #             st.write("vlspec:",sample_vlspec)
+                #             break
+                    
+                # vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec2_json["follow_up_questions"][1]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                # st.write("Vega-Lite Specification:",vlspec)
+                # json_code = json.loads(vlspec)
+                # with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # st.write("Vega-Lite JSON:",json_code)
+                # try:
+                #     chart_4 = alt.Chart.from_dict(json_code)
+                #     chart_4.save(f"DATA2Poster_img/image{img_num}.png")
+                #     # fl_png = vlc.vegalite_to_png(vl_spec=json_code,scale=3.0) # fl aka first_level
+                #     # with open(f"DATA2Poster_img/image{img_num}.png", "wb") as f:
+                #     #     f.write(fl_png)
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 2 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+                # # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_4 = alt.Chart.from_dict(improved_json)
+                #     chart_4.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 2 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+                
+
+                img_num += 1
+
+                # Section 3 Chart 1
+                # with open ("vis_nl_pair.json", "r") as f:
+                #     vis_nl_json = json.load(f)
+                #     query = eda_q_for_sec3_json["follow_up_questions"][0]["question"]
+                #     # expanded_query = expand_vis_query(query,list(head), openai_key)
+                #     # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                #     # RAG to extract vlspec of similar questions from the vectorstore
+                #     st.write(f'**Question for Section 3 Chart 1:**',f'**{query}**')
+                    
+                #     result = vectorstore.similarity_search(
+                #                         query,
+                #                         k=1,
+                #                     )
+                #     result_json = json.loads(result[0].page_content)
+                #     st.write("RAG Result:",result_json)
+                #     target_nl = ""
+                #     for key, value in result_json.items():
+                #         target_nl = value
+                #     st.write("Target NL:",target_nl)
+                #     for nl in vis_nl_json.values():
+                #         if nl["nl"] == target_nl:
+                #             sample_vlspec = nl["spec"]
+                #             st.write("vlspec:",sample_vlspec)
+                #             break
+                    
+                # vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                # st.write("Vega-Lite Specification:",vlspec)
+                # json_code = json.loads(vlspec)
+                # with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # st.write("Vega-Lite JSON:",json_code)
+           
+                # try:
+                #     chart_5 = alt.Chart.from_dict(json_code)
+                #     chart_5.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 3 Chart 1")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+                
+                # # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_5 = alt.Chart.from_dict(improved_json)
+                #     chart_5.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 3 Chart 1")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+            
+
+                img_num += 1
+
+                # Section 3 Chart 2
+                # with open ("vis_nl_pair.json", "r") as f:
+                #     vis_nl_json = json.load(f)
+                #     query = eda_q_for_sec3_json["follow_up_questions"][1]["question"]
+                #     # expanded_query = expand_vis_query(query,list(head), openai_key)
+                #     # st.write(f'Expanded Query for Chart:',f'**{expanded_query}**')
+                #     # RAG to extract vlspec of similar questions from the vectorstore
+                #     st.write(f'**Question for Section 3 Chart 2:**',f'**{query}**')
+                    
+                #     result = vectorstore.similarity_search(
+                #                         query,
+                #                         k=1,
+                #                     )
+                #     result_json = json.loads(result[0].page_content)
+                #     st.write("RAG Result:",result_json)
+                #     target_nl = ""
+                #     for key, value in result_json.items():
+                #         target_nl = value
+                #     st.write("Target NL:",target_nl)
+                #     for nl in vis_nl_json.values():
+                #         if nl["nl"] == target_nl:
+                #             sample_vlspec = nl["spec"]
+                #             st.write("vlspec:",sample_vlspec)
+                #             break
+                    
+                # vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
+                # st.write("Vega-Lite Specification:",vlspec)
+                # json_code = json.loads(vlspec)
+                # with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
+                #     json.dump(json_code, f, indent=2)
+                # json_code["height"] =600
+                # json_code["width"] =800
+                # st.write("Vega-Lite JSON:",json_code)
+  
+                # try:
+                #     chart_6 = alt.Chart.from_dict(json_code)
+                #     chart_6.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Section 3 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+                
+                # # Evaluate the generated first-level chart
+                # binary_fl       = open(f"DATA2Poster_img/image{img_num}.png", 'rb').read()  
+                # base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+                # fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+                # feedback = agent_2_improve_code(query, fl_url, openai_key)
+                # st.write(feedback)
+
+                # # Improve the first-level chart based on feedback
+                # improved_code = agent_improve_vis(vlspec, feedback,sample_data, openai_key)
+                # st.write("Improved Vega-Lite Specification:",improved_code)
+                # improved_json = json.loads(improved_code)
+                # with open(f"DATA2Poster_json/vlspec2_{img_num}.json", "w") as f:
+                #     json.dump(improved_json, f, indent=2)
+                # st.write("Improved Vega-Lite JSON:",improved_json)
+                # improved_json["height"] =600
+                # improved_json["width"] =800
+                # try:
+                #     chart_6 = alt.Chart.from_dict(improved_json)
+                #     chart_6.save(f"DATA2Poster_img/image{img_num}.png")
+                #     st.image(f"DATA2Poster_img/image{img_num}.png", caption="Improved Section 3 Chart 2")
+                # except Exception as e:
+                #     st.error("The code is failed to execute.")
+
+            
+
+                img_num += 1
+                    
+                    
+                    
+        
+                
+            #     # # Inspect logic error of the vlspec for final validation(at most 3 times)
+            #     # pre_final_code = agent_4_validate_spec(improved_code,sample_data, openai_key)
+            #     # pre_final_json = json.loads(pre_final_code)
+            #     # pre_final_json["height"] =600
+            #     # pre_final_json["width"] =800
+            #     # st.write("Final Vega-Lite JSON:",pre_final_json)
+            #     # exec_count=0
+            #     # try:
+            #     #     pre_final_png_data = vlc.vegalite_to_png(vl_spec= pre_final_json,scale=3.0)
+            #     #     with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+            #     #         f.write(pre_final_png_data)
+            #     #     st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
+            #     # except Exception as e:
+            #     #     exec_count += 1
+            #     #     error = str(e)
+            #     #     error_code =  pre_final_code
+            #     #     print(f"\n🔴 Error encountered: {error}\n")
+                    
+            #     #     # Load error-handling prompt
+            #     #     error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+            #     #     error_prompt = PromptTemplate(
+            #     #         template=error_prompt_template,
+            #     #         input_variables=["error_code", "error"],
+            #     #     )    
+
+            #     #     error_chain = error_prompt | llm 
+                    
+            #     #     # Invoke the chain to fix the code
+            #     #     corrected_code = error_chain.invoke(input={"error_code": error_code, "error": error})
+            #     #     final_code = corrected_code.content  # Update with the corrected code
+                    
+            #     #     if exec_count == 3:
+            #     #         st.error("The code is failed to execute.")
+            #     #     else:
+                    
+            #     #         final_json = json.loads(final_code)
+            #     #         final_json["height"] =600
+            #     #         final_json["width"] =800
+            #     #         final_png_data = vlc.vegalite_to_png(vl_spec=final_json,scale=3.0)
+            #     #         with open(f"DATA2Poster_img/image_{idx}.png", "wb") as f:
+            #     #             f.write(final_png_data)
+            #     #         st.image(f"DATA2Poster_img/image_{idx}.png", caption="Final Chart")
+                        
+                        
+            #     # binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
+            #     # base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
+            #     # img_url = f'data:image/png;base64,{base64_utf8_chart}' 
+            #     # chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+            #     # chart_des_prompt = [
+            #     #     SystemMessage(content=chart_prompt_template),
+            #     #     HumanMessage(content=[
+            #     #         {
+            #     #             "type": "text", 
+            #     #             "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
+            #     #         },
+            #     #         {
+            #     #                 "type": "text", 
+            #     #                 "text": "Here is the chart to describe:"
+            #     #         },
+            #     #         {
+            #     #                 "type": "image_url",
+            #     #                 "image_url": {
+            #     #                     "url": img_url
+            #     #                 },
+            #     #         },
+            #     #     ])
+            #     # ] 
+                
+            #     # chart_des =  llm.invoke(chart_des_prompt)
+
+                
+            #     # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
+            #     # # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
+            #     # # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
+                
+            #     # # call GPT to generate insight description
+            #     # insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
+            #     # insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
+            #     # insight_prompt_input = PromptTemplate(
+            #     #             template=insight_prompt_input_template,
+            #     #             input_variables=["query", "chart_des"],
+                                                    
+            #     # ) 
+            #     # insight_prompt = ChatPromptTemplate.from_messages(
+            #     #         messages=[
+            #     #             SystemMessage(content = insight_prompt_template),
+            #     #             HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
+            #     #         ]
+            #     #     )
+                
+            #     # insight_chain = insight_prompt | llm
+            #     # insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
+            #     # insight_list.append(insight.content)
+            #     # st.write(f'**Insight Description:**', f'**{insight.content}**')
+            #     # chart_des_list.append(chart_des.content)
+
+            # # # Test chart combiner#############################
+            img_to_llm_list = []
+            for i in range(1,img_num):
+                
+            #         binary_chart     = open(f"DATA2Poster_img/image{i}.png", 'rb').read()
+            #         base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
+            #         img_url = f'data:image/png;base64,{base64_utf8_chart}'
+                    img_to_llm_list.append({"chart_id": i, "title": chart_title[i-1]})
+            #         img_to_llm_list.append({"type": "image_url", "image_url": {"url": img_url}})
          
-                # Reset session state
-                st.session_state["df"] = pd.DataFrame()
-                st.session_state["fact"] = []
-                st.session_state["vectorstore"] = []
-                st.session_state["questions_for_poster"] = []
-                # st.session_state["Q_from_gpt"] = {}
-                st.session_state["selection"] = ""
-                # Create pdf and download
-                pdf_title = f"{chosen_dataset} Poster"
-                create_pdf(chosen_dataset, question_list, pdf_title, insight_list, openai_key)
-                st.success("Poster has been created successfully!🎉")
-                with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
-                    st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")
+        
+
+            # ////zero shot//// Use llm to generate the base chart description              
+            chart_check_prompt ="""
+                
+
+                                        You are “ChartSelector-Bot”, an assistant that builds a 3-section poster.
+                                        You are given only the chart titles and its id listed below:{img_to_llm_list}
+                                        
+                                        ** Your Tasks(Think step by step)**
+                                        1. Read and evaluate each chart title for subject matter, variables, and implied insight.
+                                        2. Identify which charts title are identical or nearly identical.
+                                        3. Select **exactly six chart titles** that are distinct to each other and no duplication.
+                                        4. Group the selected chart titles into three sections with the following roles and order:
+                                        SECTION 1
+                                            • Chart 1 — Overall trend / distribution.          
+                                            • Chart 2 — Top-N ranking that extends Chart 1.    
+
+                                        SECTION 2
+                                            • Chart 3 — Overall trend using a DIFFERENT dimension than Section 1.                      
+                                            • Chart 4 — Top-N ranking that extends Chart 3.    
+
+                                        SECTION 3
+                                            • Chart 5 — Drill-down on the HIGHEST entity from SECTION 1 Chart 2.
+                                            • Chart 6 — Drill-down on the LOWEST  entity from SECTION 1 Chart 2. 
+                                        
+                                        **EXAMPLE**
+                                        Chart 1  "Total Sales Trend 2010-2024"
+                                        Chart 2  "Top 5 Countries by Total Sales"
+                                        Chart 3  "Sales by Product Category 2010-2024"
+                                        Chart 4  "Top 5 Product Categories by Sales"
+                                        Chart 5  "Category Breakdown for USA (highest)"
+                                        Chart 6  "Category Breakdown for Iceland (lowest)"
+                                            
+                                        
+                                        **RULES**
+                                        1. Do not repeat a chart ID.
+                                        2. Section 1 and Section 2 must use different categorical dimensions.
+                                        3. Charts in the same section are closely related and, when viewed together, communicate a single, higher-level insight.
+                                        4. Create a concise section heading that captures the shared insight of each group.
+                                        5. For each section, write a one sentence (shorter than 20 words) that captures the key insight conveyed in that section.
+                                      
+                                        **Output (JSON)**
+                                        Do not INCLUDE ```json```.Do not add other sentences after this json data.
+                                        Return **only** the final JSON in this structure:
+                                        {{
+                                        "sections": [
+                                            {{
+                                            "section": "A",
+                                            "heading": "<section heading>",
+                                            "charts_id": ["<chart id 1>", "<chart id 2>"],
+                                            "charts_title": ["<chart title 1>", "<chart title 2>"],
+                                            "insight": "<one-sentence synthesis>"
+                                            }},
+                                            {{
+                                            "section": "B",
+                                            "heading": "...",
+                                            "charts_id": ["<chart id 1>", "<chart id 2>"],
+                                            "charts_title": ["<chart title 1>", "<chart title 2>"],
+                                            "insight": "..."
+                                            }},
+                                            {{
+                                            "section": "C",
+                                            "heading": "...",
+                                            "charts_id": ["<chart id 1>", "<chart id 2>"],
+                                            "charts_title": ["<chart title 1>", "<chart title 2>"],
+                                            "insight": "..."
+                                            }}
+                                        ]
+                                        }}"""
+                                        
+            chart_check_prompt = PromptTemplate(
+                            template=chart_check_prompt,
+                            input_variables=["img_to_llm_list"]
+                        )
+            chart_check_chain = chart_check_prompt | llm
+            chart_check = chart_check_chain.invoke(input = {"img_to_llm_list":img_to_llm_list})
+            chart_check_json = json.loads(chart_check.content)
+            st.write("Chart Check JSON:",chart_check_json)
+            chart_id_list = []
+            insight_list = []
+
+            for section in chart_check_json["sections"]:
+                insight_list.append(section["insight"])
+                for chart_id in section["charts_id"]:
+                    chart_id_list.append(int(chart_id))
+            rag_spec = []
+            for id in chart_id_list:
+                with open ("vis_nl_pair.json", "r") as f:
+                    vis_nl_json = json.load(f)
+                    query = chart_title[id-1]
+                    # st.write(f'**Question for Chart {id}:**',f'**{query}**')
+                    # st.write("Chart Title:",chart_title[id-1])
+                    # RAG to extract vlspec of similar questions from the vectorstore
+                    result = vectorstore.similarity_search(
+                                        query,
+                                        k=1,
+                                    )
+                    result_json = json.loads(result[0].page_content)
+                    st.write("RAG Result:",result_json)
+                    target_nl = ""
+                    for key, value in result_json.items():
+                        target_nl = value
+                    st.write("Target NL:",target_nl)
+                    for nl in vis_nl_json.values():
+                        if nl["nl"] == target_nl:
+                            sample_vlspec = nl["spec"]
+                            # st.write("vlspec:",sample_vlspec)
+                            rag_spec.append(sample_vlspec)
+                            break
+
+            vlspec = agent_consistent(chosen_dataset,chart_query,chart_title,chosen_data_schema,sample_data, rag_spec, openai_key)
+            st.write("Vega-Lite Specification:",vlspec)
+            json_vlspec = json.loads(vlspec)
+            spec_id = 0
+            for spec in json_vlspec["visualizations"]:
+                with open(f"DATA2Poster_json/vlspec1_{spec_id}.json", "w") as f:
+                    json.dump(spec, f, indent=2)
+                spec["height"] =600
+                spec["width"] =800
+                try:
+                    chart_3 = alt.Chart.from_dict(spec)
+                    chart_3.save(f"DATA2Poster_chart/image{spec_id}.png")
+                    st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
+
+                except Exception as e:
+                    error = str(e)
+                    print(f"\n🔴 Error encountered: {error}\n")
+                    
+                    # Load error-handling prompt
+                    error_prompt_template = load_prompt_from_file("prompt_templates/error_prompt.txt")
+                    error_prompt = PromptTemplate(
+                        template=error_prompt_template,
+                        input_variables=["error_code", "error"],
+                    )    
+
+                    error_chain = error_prompt | llm 
+                    
+                    # Invoke the chain to fix the code
+                    corrected_vlspec = error_chain.invoke(input={"error_code": spec, "error": error})
+                    json_corrected_vlspec = json.loads(corrected_vlspec.content)
+                    json_corrected_vlspec["height"] =600
+                    json_corrected_vlspec["width"] =800
+                    final_chart = alt.Chart.from_dict(json_corrected_vlspec)
+                    final_chart.save(f"DATA2Poster_chart/image{spec_id}.png")
+                    st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
+                spec_id += 1
+            
+            # for i in range(0,6):          
+            # # Evaluate the generated first-level chart
+            #     binary_fl       = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()
+            #     base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
+            #     fl_url = f'data:image/png;base64,{base64_utf8_fl}'
+            #     feedback = agent_2_improve_code(chart_query[i], fl_url, openai_key)
+            #     st.write(feedback)
+
+            #     # Improve the first-level chart based on feedback
+            #     improved_code = agent_improve_vis(json_vlspec["visualizations"][i], feedback, sample_data, openai_key)
+            #     st.write("Improved Vega-Lite Specification:",improved_code)
+            #     improved_json = json.loads(improved_code)
+            #     with open(f"DATA2Poster_json/vlspec2_{id}.json", "w") as f:
+            #         json.dump(improved_json, f, indent=2)
+            #     st.write("Improved Vega-Lite JSON:",improved_json)
+            #     improved_json["height"] =600
+            #     improved_json["width"] =800
+            #     try:
+            #         chart_ = alt.Chart.from_dict(improved_json)
+            #         chart_.save(f"DATA2Poster_chart/image{id}.png")
+            #         st.image(f"DATA2Poster_chart/image{id}.png", caption="Improved Chart "+str(id))
+            #     except Exception as e:
+            #         st.error("The code is failed to execute.")
+                
+
+            chartid_for_pdf = []
+            chart_for_pdf = []
+           
+            for id in range(0,spec_id):
+                chartid_for_pdf.append(id)
+                binary_chart     = open(f"DATA2Poster_chart/image{id}.png", 'rb').read()
+                base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
+                img_url = f'data:image/png;base64,{base64_utf8_chart}'              
+                chart_for_pdf.append(img_url)
+            st.write("Chart IDs before dedup:",chartid_for_pdf)
+            # chart_dedup_prompt = [
+            #         SystemMessage(content="""
+            #                                 You are a senior data-visualisation reviewer.
+            #                                 You will receive **three groups**, each containing two chart link to Vega-Lite specifications.  
+            #                                 For every group:
+
+            #                                 1. **Check visual consistency** between the two charts in that group only.  
+            #                                 Consider at least these aspects:  
+            #                                 - colour palette / category ordering  
+            #                                 - font family & font sizes (title, axis, legend)  
+            #                                 - axis & gridline style (position, tick count, rotation, grid visibility)  
+            #                                 - legend placement & formatting  
+            #                                 - mark style (strokeWidth, cornerRadius, opacity)  
+            #                                 2. **Rate** the pair on a 5-point scale where 5 = perfectly consistent, 1 = very inconsistent.  
+            #                                 3. **List every inconsistency** you find (bullet points).  
+            #                                 4. **Recommend precise changes** (bullet points) to make the two charts visually consistent, using the smaller change principle.
+
+            #                                 Output format (strict markdown):
+            #                                 Group A (score: X/5)
+            #                                 Inconsistencies
+            #                                 ...
+
+
+            #                                 Recommendations
+
+            #                                 ...
+
+            #                                 Group B (score: X/5)
+
+            #                                 ...
+
+            #                                 Group C (score: X/5)
+            #                                 ..."""),
+            # # You are a data-visualization expert. You will receive three groups, each with two chart IDs. 
+            # #                       For each pair, if the chart is blank, replace the id of duplicate one with "99".
+            # #                       Additionally, if the charts are identical, keep one id and replace the id of duplicate one with "99". 
+            # #                       Return exactly six chart IDs, preserving their original order. Replace any duplicate with 99. 
+            # #                       Output only the JSON object in this form:{ "chart": [id1, id2, id3, id4, id5, id6] }. 
+            # #                       Do not INCLUDE ```json```. No additional text after this json."""),
+            #         HumanMessage(content=[
+            #             {
+            #                 "type": "text", 
+            #                 "text": f"Group 1.\n\n"
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[0]
+            #                     },
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[1]
+            #                     },
+            #             },
+                       
+            #             {
+            #                 "type": "text", 
+            #                 "text": f"Group 2.\n\n"
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[2]
+            #                     },
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[3]
+            #                     },
+            #             },
+            #              {
+            #                 "type": "text", 
+            #                 "text": f"Group 3.\n\n"
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[4]
+            #                     },
+            #             },
+            #             {
+            #                     "type": "image_url",
+            #                     "image_url": {
+            #                         "url": chart_for_pdf[5]
+            #                     },
+            #             },
+            #         ])
+            #     ] 
+                
+            # chart_dedup =  llm.invoke(chart_dedup_prompt)
+            # # chart_dedup_json = json.loads(chart_dedup.content)
+            # # chartid_for_pdf = chart_dedup_json["chart"]
+            # st.write("Chart improve consistency feedback:",chart_dedup.content)
+        
+            # Reset session state
+            st.session_state["bt_try"] = ""  
+            st.session_state["sub_fact"] = []
+            st.session_state["questions_for_poster"] = []
+            # Create pdf and download
+            pdf_title = f"{chosen_dataset} Poster"
+            create_pdf(chosen_dataset,insight_list,chartid_for_pdf,chart_for_pdf,openai_key)
+            st.success("Poster has been created successfully!🎉")
+            with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
+                st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")
 
 # Display chosen datasets 
 if chosen_dataset :

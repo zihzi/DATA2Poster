@@ -3,124 +3,184 @@ from langchain_core.prompts import PromptTemplate,ChatPromptTemplate,SystemMessa
 from langchain_core.messages import SystemMessage, HumanMessage
 
 
-# **Agent 1: Generates Initial Visualization Code**
-def agent_1_generate_code(table_name, query,sampled_data, openai_key):
+
+def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, openai_key):
     prompt = """
     You are a data analysis assistant that uses Vega-Lite to create data visualizations.
-    Your task is to create the optimal visualization for the {table_name} data table using Vega-Lite to complete this query:{query}
+    Your task is to create **six** optimal visualizations for the six query {query} based on the {table_name} data table using Vega-Lite.
+    The visualizations title for the six charts should be the following titles in order:{title}
+    The data content overview of the {table_name} table is as follows:{data_schema}
     The {table_name} sample data table is as follows:{sampled_data}
-    Create a Vega-Lite specification obey the following rules:
+    Here is the Vega-Lite specification suitable for these queries for your reference:{vlspec}
+    Create six Vega-Lite specifications for each query that obey the following rules:
     [\Rules]
     Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
     Rule 2: The "transform" property should be put ahead of the "encoding" property.
     Rule 3: Always include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
-    Rule 4: Rule 3: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
+    Rule 4: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
-    Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 7: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 6: If you use "window" operation to rank data in the "transform" property, make sure **NO "groupby" property** exists after "window" operation in the "transform" property.
+    Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:
     [\Instructions]
+    - Read the data content overview and the sample data table carefully to understand the data type and valid value for each column in the data table.
     - You MUST first generate a brief plan for how you would solve the query e.g.  how to prepare the data, how to manipulate the data.
     - The Vega-Lite specification should be a valid JSON object.
     - ONLY return the Vega-Lite specification. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
     [\Instructions]
-    The example of Vega-Lite specification:
-    [\Example]
-    The query is:"What is the proportion of records by Sex, and how does the share of Male compare to other categories across the entire dataset?Create a pie chart showing the proportion of records by Sex. Filter the dataset to include all records, calculate the percentage share for each Sex category, and highlight that Male accounts for approximately 54.4%."
-    The Vega-Lite specification is:
-           {{
-                    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                    "data": {{
-                        "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupationalgapsbygender.csv"
-                    }},
-                    "transform": [
-                        {{
-                        "aggregate": [
-                            {{
-                            "op": "count",
-                            "field": "Sex",
-                            "as": "count"
-                            }}
-                        ],
-                        "groupby": ["Sex"]
-                        }},
-                        {{
-                        "joinaggregate": [
-                            {{
-                            "op": "sum",
-                            "field": "count",
-                            "as": "total"
-                            }}
-                        ]
-                        }},
-                        {{
-                        "calculate": "datum.count / datum.total",
-                        "as": "percentage"
-                        }}
-                    ],
-                    "mark": {{
-                        "type": "arc",
-                        "tooltip": true
-                    }},
-                    "encoding": {{
-                        "theta": {{
-                        "field": "percentage",
-                        "type": "quantitative",
 
-                        }},
-                        "color": {{
-                        "field": "Sex",
-                        "type": "nominal",
-                        "scale": {{
-                            "scheme": "yellowgreenblue"
-                        }}
-                        }},
-                        "tooltip": [
-                        {{
-                            "field": "Sex",
-                            "type": "nominal",
-                            "title": "Sex"
-                        }},
-                        {{
-                            "field": "percentage",
-                            "type": "quantitative",
-                            "format": ".1%",
-                            "title": "Percentage"
-                        }}
-                        ]
-                    }},
-                    "layer": [{{
-                        "mark": {{"type": "arc", "outerRadius": 100}}
-                    }}, {{
-                        "mark": {{"type": "text", "outerRadius": 100, "radiusOffset":20,"fontWeight":"bold"}},
-                        "encoding": {{
-                        "text": {{"field": "percentage", "type": "quantitative", "format": ".1%"}},
-                        "color":{{
-                    "value":"black"
-                    }}
-                        }}
-                    }}],
-                    "height": 400,
-                    "width": 600
-                    }}
+    Visual-design contract that apply to **every** spec:
+    [\Visual-design contract]
+    1. Tick labels & counts
+     - Always use -30° rotation for x-axis categorical labels.
+     - Max six ticks per axis.
 
-    [\Example]
-    """                      
+    2. Colour encoding
+     - The six charts should use the same color scheme.
+     - The same column should use the same color across all charts.
+     - The first chart and the third chart should **only use the same one color**, and do not add a redundant legend.
+     - Make sure the colors are harmonious.
+
+    [\Visual-design contract]
+
+    [\Constraints]
+    - Using a grouped bar chart to compare different value if one column. For example, compare male vs. female employment across economic sectors.
+    - NEVER generate multiple subplots.
+    - NEVER USE stacked bar chart.
+    - ALWAYS add the following properties in the output Vega-Lite specification and do not revise them:
+        {{
+            "config": {{
+            "title": {{ "fontSize": 44 }},
+            "axis": {{
+            "titleFontSize": 44,
+            "labelFontSize": 30,
+            "tickCount": 6,
+            "labelLimit": 0,
+            "titlePadding": 10
+            }},
+            "legend": {{
+            "titleFontSize": 36,
+            "labelFontSize": 30,
+            "labelLimit": 0
+            }}
+            
+        }}
+    [\Constraints]
+   
+    **Output (exact JSON)**  
+    Do not INCLUDE ```json```.Do not add other sentences after this json data.
+    Return **only** the final JSON in this structure:
+        {{
+        "visualizations": [
+            {{
+            "<Vega-Lite JSON specification for chart 1>",
+            }},
+            {{
+            "<Vega-Lite JSON specification for chart 2>",
+            }},
+            {{
+            "<Vega-Lite JSON specification for chart 3>",
+            }},
+            {{
+            "<Vega-Lite JSON specification for chart 4>",
+            }},
+            {{
+            "<Vega-Lite JSON specification for chart 5>",
+            }},
+            {{
+            "<Vega-Lite JSON specification for chart 6>",
+            }}
+        ]
+        }}"""                      
     prompt_input = PromptTemplate(
                         template=prompt,
-                        input_variables=["table_name", "query", "sampled_data", "label"],
+                        input_variables=["table_name", "query", "title","sampled_data", "vlspec"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessagePromptTemplate.from_template(prompt_input.template)
                         ]
                     )
     chain = prompt_for_chain | llm      
-    response = chain.invoke(input= {"table_name":table_name, "query":query, "sampled_data":sampled_data})
+    response = chain.invoke(input= {"table_name":table_name, "query":query, "title":title,"data_schema":data_schema,"sampled_data":sampled_data,"vlspec":vlspec})
+    return response.content
+
+
+# **Agent 1: Generates Initial Visualization Code**
+def agent_1_generate_code(table_name, query,title, data_schema,sampled_data, vlspec, openai_key):
+    prompt = """
+    You are a data analysis assistant that uses Vega-Lite to create data visualizations.
+    Your task is to create the optimal visualization for the {table_name} data table using Vega-Lite to complete this query:{query}
+    The visualization chart title should be:{title}
+    The data content overview of the {table_name} table is as follows:{data_schema}
+    The {table_name} sample data table is as follows:{sampled_data}
+    Here is the Vega-Lite specification suitable for this query for your reference:{vlspec}
+    Create a Vega-Lite specification obey the following rules:
+    [\Rules]
+    Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
+    Rule 2: The "transform" property should be put ahead of the "encoding" property.
+    Rule 3: Always include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
+    Rule 4: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
+    Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
+    Rule 6: If you use "window" operation to rank data in the "transform" property, make sure no "groupby" operations exist after "window" operation in the "transform" property.
+    Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
+
+    [\Rules]
+
+    Instructions for generating the Vega-Lite specification:
+    [\Instructions]
+    - Read the data content overview and the sample data table carefully to understand the data type and valid value for each column in the data table.
+    - You MUST first generate a brief plan for how you would solve the query e.g.  how to prepare the data, how to manipulate the data.
+    - The Vega-Lite specification should be a valid JSON object.
+    - ONLY return the Vega-Lite specification. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
+    [\Instructions]
+
+    [\Constraints]
+    - Using a grouped bar chart to compare different value if one column. For example, compare male vs. female employment across economic sectors.
+    - NEVER generate multiple subplots.
+    - Never use stacked bar chart.
+    - ALWAYS add the following properties in the output Vega-Lite specification and do not revise them:
+        {{
+            "config": {{
+            "title": {{ "fontSize": 44 }},
+            "axis": {{
+            "titleFontSize": 44,
+            "labelFontSize": 30,
+            "tickCount": 6,
+            "labelLimit": 0,
+            "titlePadding": 10
+            }},
+            "legend": {{
+            "titleFontSize": 36,
+            "labelFontSize": 30,
+            "labelLimit": 0
+            }}
+            
+        }}
+    [\Constraints]
+   
+    **Output (exact JSON)**  
+    Do not INCLUDE ```json```.Do not add other sentences after this json data.
+    """                      
+    prompt_input = PromptTemplate(
+                        template=prompt,
+                        input_variables=["table_name", "query", "title","sampled_data", "vlspec"],
+            )
+    # interact with LLM
+    llm = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openai_key)
+    prompt_for_chain = ChatPromptTemplate.from_messages(
+                        messages=[SystemMessagePromptTemplate.from_template(prompt_input.template)
+                        ]
+                    )
+    chain = prompt_for_chain | llm      
+    response = chain.invoke(input= {"table_name":table_name, "query":query, "title":title,"data_schema":data_schema,"sampled_data":sampled_data,"vlspec":vlspec})
     return response.content
     
 
@@ -131,29 +191,31 @@ def agent_2_improve_code(query, url, openai_key):
     Your task is to review and critique visualization and clearly outline concrete steps to improve it, avoiding vague or suggestive phrasing.
     The visualization is aim to complete a query.
     Think step by step how to complete the query and evaluate the visualization based on the following aspects:
-    1. Chart Type and Design:
-    - Is the chart type appropriate for the data and the story being told? If not, suggest a more suitable type.
-    2. Title and Axis Labels:
-    - Ensure the chart has a clear title.
-    - Check if the X-axis and Y-axis labels are difficult to read, e.g., are they overlapped?
-    3.Tick Labels:
-    - Check if the tick labels are difficult to read, e.g., are they overlapped?
-    4. Legend Completeness:
-    - Is the legend complete?
-    5. Number of Subplots:
-    - Are there too many subplots? There should never be more than 2 subplots in a single chart.
+    1. Title and Axis Labels:
+    - Check if the x-axis label is "year" or "time", it should not be expressed with a decimal point.
+    2. Number of Subplots:
+    - Make sure the chart is a single plot **without any subplots**.
+    3. Color Scheme:
+    - There should be no redundant colors if the chart has only one category.
+    4. Data Integrity:
+    - When the title is including 'Top N', ensure the chart **only** displays the correct number of top N items.
+
     [\Instructions]
     - Provide an ordered list of actionable steps (e.g., Step 1, Step 2…). 
-    - Each step should be specific and implementable (e.g., "Change the y-axis scale to logarithmic” rather than “Consider using a logarithmic scale").
-    - Avoid weak suggestions like "Consider using...", "You might want to...", "If possible," or "It may help to...".
-    - Focus on visual clarity, interpretability, and correctness. 
+    - Each step should be specific and implementable. Avoid weak suggestions like "Consider using...", "You might want to...", "If possible," or "It may help to...".
+    - Focus on visual clarity and correctness. 
     - Assume the visualization is built using vega-lite declarative charting library.
     - ONLY return the concise and clear steps about how to improve the visualization as structured points without any additional explanation."The steps are: ...".
+
     [\Instructions]
+    [\Constraints]
+    - Limit the list of necessary improvements up to five items.
+    - NEVER suggest to add text or annotations on the bar.
+    [\Constraints]
     """
     
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0, api_key = openai_key)
     prompt = [
         SystemMessage(content=prompt),
         HumanMessage(content=[
@@ -179,7 +241,7 @@ def agent_2_improve_code(query, url, openai_key):
 def agent_improve_vis(code,feedback,sampled_data, openai_key):
     prompt = """
     You are a data visualization engineer tasked with improving a chart based on expert feedback. 
-    Your task is to revise the Vega-Lite specification so that it addresses each point in the critique below, while preserving the original chart’s intent.
+    Your task is to revise the Vega-Lite specification so that it addresses each point in the critique below, while preserving the original chart's intent.
 
 
     The Vega-Lite specification must follow the following rules:
@@ -187,11 +249,12 @@ def agent_improve_vis(code,feedback,sampled_data, openai_key):
     Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
     Rule 2: The "transform" property should be put ahead of the "encoding" property.
     Rule 3: Always include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
-    Rule 4: Rule 3: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
+    Rule 4: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
-    Rule 6: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 7: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 8: Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    Rule 6: If you use "window" operation to rank data in the "transform" property, make sure no "groupby" operations exist after "window" operation in the "transform" property.
+    Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
     [\Rules]
 
     Instructions for improving the chart:
@@ -201,34 +264,56 @@ def agent_improve_vis(code,feedback,sampled_data, openai_key):
     - ONLY return improved the Vega-Lite specification. DO NOT include any preamble text. Do not include explanations or prose.
     [\Instructions] 
 
-    The example of Vega-Lite specification:
-    [\Example]
-    The query is:"Show all majors and corresponding number of students by a scatter plot."
-    The Vega-Lite specification is:
-            {{
-                "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-                "data": {{"url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/students.csv"}},
-                "transform": [
-                    {{"aggregate": [{{"op": "count", "field": "Major", "as": "Number of Students"}}],"groupby": ["Major"]}}
-                ],
-                "mark": "point",
-                "encoding": {{
-                    "x": {{"field": "Major", "type": "nominal"}},
-                    "y": {{"field": "Number of Students", "type": "quantitative"}}
-                }}
+
+    Visual-design contract that apply to **every** spec:
+    [\Visual-design contract]
+    1. Tick labels & counts
+     - Always use -30° rotation for x-axis categorical labels.
+     - Max six ticks per axis.
+
+    2. Colour encoding
+     - DO NOT CHANGE the color if the feedback does not mention color.
+     - If the x-axis has only one single category, render it with just **ONE** solid color, and do not add a redundant legend. 
+  
+    [\Visual-design contract]
+
+    [\Constraints]
+    - Using a grouped bar chart to compare different value if one column. For example, compare male vs. female employment across economic sectors.
+    - NEVER generate multiple subplots.
+    - NEVER USE stacked bar chart.
+    - ALWAYS add the following properties in the output Vega-Lite specification and do not revise them:
+        {{
+            "config": {{
+            "title": {{ "fontSize": 44 }},
+            "axis": {{
+            "titleFontSize": 44,
+            "labelFontSize": 30,
+            "tickCount": 6,
+            "labelLimit": 0,
+            "titlePadding": 10
+            }},
+            "legend": {{
+            "titleFontSize": 36,
+            "labelFontSize": 30,
+            "labelLimit": 0
             }}
-    [\Example]                                       
+            
+        }}
+    [\Constraints]
+ 
+    **Output (exact JSON)**  
+    Do not INCLUDE ```json```.Do not add other sentences after this json data.                                      
     """
     prompt_input = PromptTemplate(
                         template="""
-                        Here is the code to revise:{code}\n\n    
+                        Here is the vega-lite specification to revise:{code}\n\n    
                         The the critique is as follows:{feedback}\n\n
                         The  sample data table for the Vega-Lite specification is as follows:{sampled_data}\n\n
                         """,
                        input_variables=["code","feedback","sampled_data"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0, api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   HumanMessagePromptTemplate.from_template(prompt_input.template)
@@ -305,35 +390,34 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
     d. Include "tooltip" encoding for better readability
     e. Adjust axis ticks, titles, and labels for clarity
     f. Make sure no "false" and "true" is used in the Vega-Lite specification.
-    g. Make sure "yellowgreenblue" color scheme is used in the Vega-Lite specification.
+    g. Make sure "redyellowblue" color scheme is used in the Vega-Lite specification.
     [/Rules for Improvement]
 
     [/Constraints]
-    1.Mark‐specific encodings
+    1. Mark encodings
         - line, area, trail marks must have both x and y.
         - bar marks must have at least one positional (x or y) and one size/ordinal encoding.
-    2. Scale‐type <-> field‐type consistency
-        - scale.type == "log"|"pow" requires the field’s type == "quantitative".
-        - scale.type == "time"|"utc" requires type == "temporal".
+    2. Scale and type consistency
+        - scale.type == "log"|"pow" requires the field's type == "quantitative".
     3. Aggregate functions
-        - Allowed aggregates: count, sum, mean, median, min, max, stdev, stdevp, variance, variancep.
+        - Allowed aggregates: count, sum, mean, median, min, max, rank, stdev, variance,.
     4. Binning
         - bin: true (or object) only on type == "quantitative".
         - Cannot combine bin with continuous scales like "log".
-    5. Time units
-        - timeUnit only on type == "temporal".
-    6. Stacking
+    5. Stacking
         - stack: "zero"|"normalize"|"center" only on bar/area/line and requires a quantitative axis.
-    7. Color/Opacity/Size channels
+    6. Color/Opacity/Size channels
         - Field-based color/opacity/size must be quantitative or ordinal.
         - Literal encodings must use value.
-    8. Sort order
+    7. Sort order
         - sort must reference an encoded field of matching type.
-    9. Parameter binding.
+    8. Parameter binding.
         - bind on parameters must use a supported input type (legend, scales, or form controls).
-    10. Output must be a valid JSON object
-    11. ONLY return the full corrected Vega-Lite JSON specification without any additional text
+    9. Output must be a valid JSON object
+    10. ONLY return the full corrected Vega-Lite JSON specification without any additional text
     [/Constraints]
+    **Output (exact JSON)**  
+    Do not INCLUDE ```json```.Do not add other sentences after this json data.
     """
     prompt_input = PromptTemplate(
                         template="""
@@ -343,7 +427,7 @@ def agent_4_validate_spec(vlspec, sampled_data, openai_key):
                        input_variables=["vlspec"],
             )
     # interact with LLM
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0, api_key = openai_key)
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessage(content=prompt),
                                   HumanMessagePromptTemplate.from_template(prompt_input.template)
