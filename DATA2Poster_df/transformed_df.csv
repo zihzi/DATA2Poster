@@ -1,7 +1,16 @@
-Commute Distance,CommuteRank,Metric,Value
-10+ Miles,1.0,MeanIncome,74864.86486486487
-2-5 Miles,2.0,MeanIncome,60370.37037037037
-5-10 Miles,3.0,MeanIncome,59114.583333333336
-10+ Miles,1.0,MeanCars,2.4414414414414414
-2-5 Miles,2.0,MeanCars,1.2592592592592593
-5-10 Miles,3.0,MeanCars,1.875
+Studio,Type,Total_Worldwide_m,studio_rank
+BV,Comedy,1017.2,2.0
+BV,Family,11189.0,1.0
+BV,Mystery/Suspense,1081.0,2.0
+Fox,Action,8722.1,1.0
+Fox,Drama,4571.8,2.0
+Fox,Family,5519.7,3.0
+NL,Comedy,698.9000000000001,3.0
+Par.,Drama,5775.7,1.0
+Sony,Action,5856.6,3.0
+Sony,Mystery/Suspense,1244.1,1.0
+Uni.,Comedy,1331.6,1.0
+Uni.,Mystery/Suspense,470.7,3.0
+WB,Action,7227.6,2.0
+WB,Drama,3852.5,3.0
+WB,Family,6276.3,2.0

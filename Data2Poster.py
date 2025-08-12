@@ -44,21 +44,23 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["bike_buyers"] = pd.read_csv("data/bike_buyers.csv")
-    datasets["movies_record"] = pd.read_csv("data/movies_record.csv") #NO vis_corpus
-    datasets["carsales"] = pd.read_csv("data/carsales.csv") #NO vis_corpus
-    datasets["Birth_of_Japan"] = pd.read_csv("data/Birth_of_Japan.csv")
-    datasets["disasters"] = pd.read_csv("data/disasters.csv")
-    datasets["personality_dataset"] = pd.read_csv("data/personality_dataset.csv")
-    datasets["jobs"] = pd.read_csv("data/jobs.csv")
+    datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
+    datasets["bike_sharing_day"] = pd.read_csv("data/bike_sharing_day.csv")
+    datasets["crime_safety_1"] = pd.read_csv("data/crime_safety_1.csv")
+    datasets["crime_safety_2"] = pd.read_csv("data/crime_safety_2.csv")
+    datasets["fashion_products"] = pd.read_csv("data/fashion_products.csv")
     datasets["restaurant_dishes"] = pd.read_csv("data/restaurant_dishes.csv")
-    datasets["Occupation_Gender_Gap"] = pd.read_csv("data/Occupation_Gender_Gap.csv")
-    datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
-    datasets["fitness_client_progress"] = pd.read_csv("data/fitness_client_progress.csv")
-    datasets["tips"] = pd.read_csv("data/tips.csv")
-    datasets["Occupation"] = pd.read_csv("data/Occupation.csv")
-    datasets["coffee_shop_orders"] = pd.read_csv("data/coffee_shop_orders.csv")
-    
+    datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
+    datasets["starbucks"] = pd.read_csv("data/starbucks.csv")
+    datasets["Indian_Kids_Screen_Time_1"] = pd.read_csv("data/Indian_Kids_Screen_Time_1.csv")
+    datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
+    datasets["Indian_Kids_Screen_Time_3"] = pd.read_csv("data/Indian_Kids_Screen_Time_3.csv")
+    datasets["volcano"] = pd.read_csv("data/volcano.csv")
+    datasets["shopping_trends"] = pd.read_csv("data/shopping_trends.csv")
+
+
+
+
     st.session_state["datasets"] = datasets
 else:
     # Use the list already loaded
@@ -567,7 +569,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             with open ("json_schema/base_fact.json", "r") as f:
                 base_fact_json = json.load(f)
             # Randomly select 3 base facts to generate base charts
-            new_base_fact_col_com = random.sample(base_fact_col_com, 3)
+            new_base_fact_col_com = random.sample(base_fact_col_com, 2)
             for bf in new_base_fact_col_com:
                 # base_fact_json["data"]["url"] = f"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{chosen_dataset}.csv"
                 # base_fact_json["encoding"]["x"]["field"] = bf["x"]
@@ -658,25 +660,27 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     - Make them answerable with the existing dataset.
                 4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - ONLY choose rank facts from {data_facts}.
-                    - The question must refer to  **two** column from {key_columns}. 
-                    - The question should be extend from the first question and add new angle to the analysis.
+                    - The question must refer to  **two** column from {key_columns}.
+                    - In addition to the column from the first question, the second column should be a new column which "dtype" is "C" from {key_columns}.
+                    - The "num_unique_values" of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
-                    - *ALWAYS* use a new metric or dimension different from the first question for ranking.
+                    - **ALWAYS use the same metric** for ranking(i.e. y-axis) from the first question.
                     - Make them answerable with the existing dataset.
                 5. Write a title for the chart **(≤7 words each)** based on the question.
                 
-                
                 **Constraints**
                 - Never rewrite th data facts from {data_facts}.
+                - The second question should be in the form of **""What are the top N {{first column that the first question refer to}} by {{second column}} in {{the same metric as the first question}}?"**.
+                - The title for second question should be in the form of **"Top N {{first column that the first question refer to}} by {{second column}}"**.
 
                 **Example**
                 Dataset columns: [gender, racial groups, math score, reading score, writing score]
                 Follow-up questions:
                 Question 1. How do the average math scores across different races?
-                Question 2. Which five racial groups show the largest gender gap in average math scores?
+                Question 2. Which are top 5 racial groups show the largest gender gap in average math scores?
                 Rationale: 
                 The first question provide an overview of students from different races on math scores performance.
-                The second question extends the analysis by comparing the average math scores between gender(both male and female) and racial groups, which is a new angle to the analysis.
+                The second question extends the analysis by comparing the average math scores(same metric as Question 1) between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
                 **Avoid**
                 Question: What are the TOP 3 reading score by writing score for Male and Female in the top racial groups?
@@ -740,21 +744,24 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     - Make them answerable with the existing dataset.
                 3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - ONLY choose rank facts from {data_facts}.
-                    - The question must refer to **ONLY TWO** column from {key_columns}. 
-                    - The question should be extend from the first question and add new angle to the analysis.
+                    - The question must refer to  **two** column from {key_columns}.
+                    - In addition to the column from the first question, the second column should be a new column which "dtype" is "C" from {key_columns}.
+                    - The "num_unique_values" of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
-                    - *ALWAYS* use a new metric or dimension different from the first question for ranking.
+                    - **ALWAYS use the same metric** for ranking(i.e. y-axis) from the first question.
                     - Make them answerable with the existing dataset.
                 4. Write a title for the chart **(≤7 words each)** based on the question.
                 
                 **Constraints**
                 - Never rewrite th data facts from {data_facts}.
+                - The second question should be in the form of **""What are the top N {{first column that the first question refer to}} by {{second column}} in {{the same metric as the first question}}?"**.
+                - The title for second question should be in the form of **"Top N {{first column that the first question refer to}} by {{second column}}"**.
 
                 **Example**
                 Dataset columns: [gender, racial groups, math score,reading score, writing score]
                 Follow-up questions:
                 Question 1. How do the average math scores across different racial groups?
-                Question 2. Which five racial groups show the largest gender gap in average math scores?
+                Question 2. Which are top 5 racial groups show the largest gender gap in average math scores?
                 Rationale: 
                 The first question provide an overview of students from different racial groups on math scores performance.
                 The second question extends the analysis by comparing the average math scores between gender(both male and female) and racial groups, which is a new angle to the analysis.
@@ -885,11 +892,11 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                         k=1,
                                     )
                     result_json = json.loads(result[0].page_content)
-                    st.write("RAG Result:",result_json)
+                    # st.write("RAG Result:",result_json)
                     target_nl = ""
                     for key, value in result_json.items():
                         target_nl = value
-                    st.write("Target NL:",target_nl)
+                    # st.write("Target NL:",target_nl)
                     for nl in vis_nl_json.values():
                         if nl["nl"] == target_nl:
                             sample_vlspec = nl["spec"]
@@ -897,7 +904,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             break
                     
                 vlspec = agent_1_generate_code(chosen_dataset,query,eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"],chosen_data_schema,sample_data, sample_vlspec, openai_key)
-                st.write("Vega-Lite Specification:",vlspec)
+                # st.write("Vega-Lite Specification:",vlspec)
                 json_code = json.loads(vlspec)
                 with open(f"DATA2Poster_json/vlspec1_{img_num}.json", "w") as f:
                     json.dump(json_code, f, indent=2)
@@ -976,6 +983,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 Here is the data from the visualization chart:{new_df}
                 This title of chart is:{title}
                 Additional dataset columns may not represented in the chart: {key_columns}
+                The column that you **MUST** use for follow-up questions: {use_column}
 
                 **Your Task**
                 Generate **two** distinct follow-up questions that logically extend the current EDA:
@@ -1030,6 +1038,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                                                 "new_df":new_df.to_string(index=False),
                                                                 "title":eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"],
                                                                 "key_columns":list(head),
+                                                                "use_column":eda_q_for_sec2_json["follow_up_questions"][0]["column"]
                                                                
                                                                 })
                 eda_q_for_sec3_json = json.loads(eda_q_for_sec3_result.content)
@@ -1423,7 +1432,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
          
         
 
-            # ////zero shot//// Use llm to generate the base chart description              
+            # ////zero shot//// Use llm to select 6 charts at once             
             chart_check_prompt ="""
                 
 
@@ -1603,7 +1612,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
                 img_url = f'data:image/png;base64,{base64_utf8_chart}'              
                 chart_for_pdf.append(img_url)
-            st.write("Chart IDs before dedup:",chartid_for_pdf)
+            
             # chart_dedup_prompt = [
             #         SystemMessage(content="""
             #                                 You are a senior data-visualisation reviewer.

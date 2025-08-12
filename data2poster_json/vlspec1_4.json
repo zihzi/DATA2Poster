@@ -1,56 +1,59 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Income by Age for 0-Car Owners with 0-1 Mile Commute",
-    "anchor": "middle"
-  },
+  "title": "Worldwide Gross by Creative Type for R-rated Action Movies",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies.csv"
   },
   "transform": [
     {
-      "filter": "datum.Cars == 0 && datum['Commute Distance'] == '0-1 Miles'"
+      "filter": "(datum['Genre'] === 'Action') && (datum['Content Rating'] === 'R')"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Worldwide Gross",
+          "as": "Total_Worldwide_Gross"
+        }
+      ],
+      "groupby": [
+        "Creative Type"
+      ]
     }
   ],
   "mark": {
-    "type": "point"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Age",
-      "type": "quantitative",
-      "title": "Age",
+      "field": "Creative Type",
+      "type": "nominal",
+      "title": "Creative Type",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Income",
+      "field": "Total_Worldwide_Gross",
       "type": "quantitative",
-      "title": "Income",
+      "title": "Worldwide Gross",
       "axis": {
         "tickCount": 6
       }
     },
-    "color": {
-      "field": "Income",
-      "type": "quantitative",
-      "scale": {
-        "scheme": "tableau10"
-      },
-      "title": "Income"
-    },
     "tooltip": [
       {
-        "field": "Age",
-        "type": "quantitative",
-        "title": "Age"
+        "field": "Creative Type",
+        "type": "nominal",
+        "title": "Creative Type"
       },
       {
-        "field": "Income",
+        "field": "Total_Worldwide_Gross",
         "type": "quantitative",
-        "title": "Income"
+        "title": "Worldwide Gross"
       }
     ]
   },
@@ -68,8 +71,8 @@
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

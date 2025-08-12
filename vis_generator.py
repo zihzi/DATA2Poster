@@ -21,14 +21,15 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: If you use "window" operation to rank data in the "transform" property, make sure **NO "groupby" property** exists after "window" operation in the "transform" property.
     Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
+    Rule 8: **Always add "sort":"-y" **only in the "x" property** of "encoding" property.
+    Rule 9: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 10: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
+    Rule 11: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:
     [\Instructions]
     - Read the data content overview and the sample data table carefully to understand the data type and valid value for each column in the data table.
-    - You MUST first generate a brief plan for how you would solve the query e.g.  how to prepare the data, how to manipulate the data.
     - The Vega-Lite specification should be a valid JSON object.
     - ONLY return the Vega-Lite specification. DO NOT include any preamble text. Do not include explanations or prose.\n\n. 
     [\Instructions]
@@ -43,6 +44,7 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
      - The six charts should use the same color scheme.
      - The same column should use the same color across all charts.
      - The first chart and the third chart should **only use the same one color**, and do not add a redundant legend.
+     - If there is **NO "xOffset"** in the Vega-Lite specification, **do not add "color" operation**, and do not add a redundant legend.
      - Make sure the colors are harmonious.
 
     [\Visual-design contract]
@@ -51,6 +53,7 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
     - Using a grouped bar chart to compare different value if one column. For example, compare male vs. female employment across economic sectors.
     - NEVER generate multiple subplots.
     - NEVER USE stacked bar chart.
+    - If title is including "Top N", **do not modify "sort": [{{"field": "..", "order": "descending"}}]** in the "window" property from {vlspec}.
     - ALWAYS add the following properties in the output Vega-Lite specification and do not revise them:
         {{
             "config": {{
@@ -63,8 +66,8 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
             "titlePadding": 10
             }},
             "legend": {{
-            "titleFontSize": 36,
-            "labelFontSize": 30,
+            "titleFontSize": 26,
+            "labelFontSize": 26,
             "labelLimit": 0
             }}
             
@@ -129,9 +132,10 @@ def agent_1_generate_code(table_name, query,title, data_schema,sampled_data, vls
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: If you use "window" operation to rank data in the "transform" property, make sure no "groupby" operations exist after "window" operation in the "transform" property.
     Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
-
+    Rule 8: **Always add "sort" order as "descending" in the "encoding" property.
+    Rule 9: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 10: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
+    Rule 11: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:
@@ -152,14 +156,14 @@ def agent_1_generate_code(table_name, query,title, data_schema,sampled_data, vls
             "title": {{ "fontSize": 44 }},
             "axis": {{
             "titleFontSize": 44,
-            "labelFontSize": 30,
+            "labelFontSize": 28,
             "tickCount": 6,
             "labelLimit": 0,
             "titlePadding": 10
             }},
             "legend": {{
-            "titleFontSize": 36,
-            "labelFontSize": 30,
+            "titleFontSize": 26,
+            "labelFontSize": 26,
             "labelLimit": 0
             }}
             

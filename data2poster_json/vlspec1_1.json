@@ -1,87 +1,86 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Top 3 Commute Distances by Cars Owned",
-    "anchor": "middle"
-  },
+  "title": "Top 3 Studios by Type",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "count",
-          "as": "Count"
+          "op": "sum",
+          "field": "Worldwide $m",
+          "as": "TotalWorldwideM"
         }
       ],
       "groupby": [
-        "Cars",
-        "Commute Distance"
+        "Type",
+        "Studio"
       ]
     },
     {
       "window": [
         {
           "op": "rank",
-          "as": "Rank"
+          "as": "StudioRank"
         }
       ],
       "sort": [
         {
-          "field": "Count",
+          "field": "TotalWorldwideM",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.Rank <= 3"
+      "filter": "datum.StudioRank <= 3"
     }
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Cars",
-      "type": "ordinal",
-      "title": "Number of Cars Owned",
+      "field": "Studio",
+      "type": "nominal",
+      "title": "Studio",
       "axis": {
         "labelAngle": -30,
+        "titlePadding": 10,
         "tickCount": 6
+      },
+      "sort": "-y",
+      "xOffset": {
+        "field": "Type"
       }
     },
     "y": {
-      "field": "Count",
+      "field": "TotalWorldwideM",
       "type": "quantitative",
-      "title": "Number of People",
-      "axis": {
-        "tickCount": 6
-      }
+      "title": "Total Worldwide $m"
     },
     "color": {
-      "field": "Commute Distance",
+      "field": "Type",
       "type": "nominal",
-      "title": "Commute Distance",
       "scale": {
         "scheme": "tableau10"
-      }
+      },
+      "title": "Type"
     },
     "tooltip": [
       {
-        "field": "Cars",
-        "type": "ordinal",
-        "title": "Cars"
-      },
-      {
-        "field": "Commute Distance",
+        "field": "Type",
         "type": "nominal",
-        "title": "Distance"
+        "title": "Type"
       },
       {
-        "field": "Count",
+        "field": "Studio",
+        "type": "nominal",
+        "title": "Studio"
+      },
+      {
+        "field": "TotalWorldwideM",
         "type": "quantitative",
-        "title": "People"
+        "title": "Total Worldwide $m",
+        "format": ".1f"
       }
     ]
   },
@@ -99,8 +98,8 @@
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

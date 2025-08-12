@@ -1,74 +1,59 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Purchased Bike by Income for 4-Car Owners with 10+ Mile Commute",
-    "anchor": "middle"
-  },
+  "title": "Worldwide Gross by Creative Type for G-rated Comedy Movies",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies.csv"
   },
   "transform": [
     {
-      "filter": "datum.Cars == 4 && datum['Commute Distance'] == '10+ Miles'"
+      "filter": "(datum['Genre'] === 'Comedy') && (datum['Content Rating'] === 'G')"
     },
     {
       "aggregate": [
         {
-          "op": "count",
-          "field": "Income",
-          "as": "Count"
+          "op": "sum",
+          "field": "Worldwide Gross",
+          "as": "Total_Worldwide_Gross"
         }
       ],
       "groupby": [
-        "Purchased Bike",
-        "Income"
+        "Creative Type"
       ]
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Income",
-      "type": "ordinal",
-      "title": "Income",
+      "field": "Creative Type",
+      "type": "nominal",
+      "title": "Creative Type",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Count",
+      "field": "Total_Worldwide_Gross",
       "type": "quantitative",
-      "title": "Count",
+      "title": "Worldwide Gross",
       "axis": {
         "tickCount": 6
-      }
-    },
-    "color": {
-      "field": "Purchased Bike",
-      "type": "nominal",
-      "title": "Purchased Bike",
-      "scale": {
-        "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "Income",
-        "type": "ordinal",
-        "title": "Income"
-      },
-      {
-        "field": "Purchased Bike",
+        "field": "Creative Type",
         "type": "nominal",
-        "title": "Bike Purchased"
+        "title": "Creative Type"
       },
       {
-        "field": "Count",
+        "field": "Total_Worldwide_Gross",
         "type": "quantitative",
-        "title": "Count"
+        "title": "Worldwide Gross"
       }
     ]
   },
@@ -86,8 +71,8 @@
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

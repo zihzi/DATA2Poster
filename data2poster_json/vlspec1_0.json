@@ -1,58 +1,57 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Income by Number of Cars Owned",
-    "anchor": "middle"
-  },
+  "title": "Worldwide Revenue Trend by Year",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Income",
-          "as": "Average Income"
+          "field": "Worldwide $m",
+          "as": "AvgWorldwideM"
         }
       ],
       "groupby": [
-        "Cars"
+        "Year"
       ]
     }
   ],
   "mark": {
-    "type": "bar",
-    "color": "#5470c6"
+    "type": "line",
+    "point": true,
+    "color": "#4682b4",
+    "strokeWidth": 4
   },
   "encoding": {
     "x": {
-      "field": "Cars",
+      "field": "Year",
       "type": "ordinal",
-      "title": "Number of Cars Owned",
+      "title": "Year",
       "axis": {
         "labelAngle": -30,
-        "tickCount": 6
-      }
+        "tickCount": 6,
+        "titlePadding": 10
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Average Income",
+      "field": "AvgWorldwideM",
       "type": "quantitative",
-      "title": "Average Income",
-      "axis": {
-        "tickCount": 6
-      }
+      "title": "Avg Worldwide $m"
     },
     "tooltip": [
       {
-        "field": "Cars",
+        "field": "Year",
         "type": "ordinal",
-        "title": "Cars Owned"
+        "title": "Year"
       },
       {
-        "field": "Average Income",
+        "field": "AvgWorldwideM",
         "type": "quantitative",
-        "title": "Avg Income"
+        "title": "Avg Worldwide $m",
+        "format": ".1f"
       }
     ]
   },
@@ -70,8 +69,8 @@
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

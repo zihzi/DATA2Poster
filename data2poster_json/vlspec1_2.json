@@ -1,89 +1,132 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Average Cars by Age Group",
-    "anchor": "middle"
-  },
+  "title": "Top 3 Restaurants by Rating",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/restaurant_dishes.csv"
   },
   "transform": [
-    {
-      "calculate": "datum.Age < 30 ? '25-29' : datum.Age < 40 ? '30-39' : datum.Age < 50 ? '40-49' : datum.Age < 60 ? '50-59' : datum.Age < 70 ? '60-69' : '70+'",
-      "as": "Age Group"
-    },
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Cars",
-          "as": "Average Cars"
+          "field": "Rating",
+          "as": "avg_rating"
+        },
+        {
+          "op": "sum",
+          "field": "Orders",
+          "as": "total_orders"
         }
       ],
       "groupby": [
-        "Age Group"
+        "Restaurant",
+        "Rating"
       ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "mean",
+          "field": "avg_rating",
+          "as": "restaurant_avg_rating"
+        }
+      ],
+      "groupby": [
+        "Restaurant"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "restaurant_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "restaurant_avg_rating",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.restaurant_rank <= 3"
     }
   ],
   "mark": {
-    "type": "bar",
-    "color": "#5470c6"
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Age Group",
-      "type": "ordinal",
-      "title": "Age Group",
+      "field": "Restaurant",
+      "type": "nominal",
       "axis": {
+        "title": "Restaurant",
         "labelAngle": -30,
         "tickCount": 6
       },
-      "sort": [
-        "25-29",
-        "30-39",
-        "40-49",
-        "50-59",
-        "60-69",
-        "70+"
-      ]
+      "sort": {
+        "field": "restaurant_avg_rating",
+        "order": "descending"
+      }
+    },
+    "xOffset": {
+      "field": "Rating"
     },
     "y": {
-      "field": "Average Cars",
+      "field": "total_orders",
       "type": "quantitative",
-      "title": "Average Number of Cars",
+      "title": "Total Orders",
+      "aggregate": "sum",
       "axis": {
-        "tickCount": 6
+        "title": "Total Orders"
+      }
+    },
+    "color": {
+      "field": "Rating",
+      "type": "nominal",
+      "title": "Rating",
+      "scale": {
+        "scheme": "set1"
       }
     },
     "tooltip": [
       {
-        "field": "Age Group",
-        "type": "ordinal",
-        "title": "Age Group"
+        "field": "Restaurant",
+        "type": "nominal"
       },
       {
-        "field": "Average Cars",
+        "field": "Rating",
+        "type": "nominal"
+      },
+      {
+        "field": "total_orders",
         "type": "quantitative",
-        "title": "Avg Cars"
+        "title": "Total Orders"
+      },
+      {
+        "field": "restaurant_avg_rating",
+        "type": "quantitative",
+        "title": "Avg. Restaurant Rating"
       }
     ]
   },
-  "width": 400,
-  "height": 400,
+  "width": 420,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 30,
+      "labelFontSize": 28,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

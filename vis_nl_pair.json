@@ -1242,5 +1242,111 @@
             "width": 720,
             "height": 480
         }
+    },
+    "16": {
+        "nl": "Top 3 Retailers by Sales Method",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Retailer by Sales Methods",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/adidas_sale.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Total Sales",
+                            "as": "total_sales"
+                        }
+                    ],
+                    "groupby": [
+                        "Retailer",
+                        "Sales Method"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_sales",
+                            "as": "RetailerTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Retailer"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "method_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "RetailerTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.method_rank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Retailer",
+                    "type": "nominal",
+                    "axis": {
+                        "title": "Retailer",
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": {
+                        "field": "RetailerTotal",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sales Method"
+                },
+                "y": {
+                    "field": "total_sales",
+                    "type": "quantitative",
+                    "title": "Total Sales"
+                },
+                "color": {
+                    "field": "Sales Method",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "tableau10"
+                    },
+                    "title": "Sales Method"
+                },
+                "tooltip": [
+                    {
+                        "field": "Retailer",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Sales Method",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "total_sales",
+                        "type": "quantitative",
+                        "format": ",",
+                        "title": "Total Sales"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 420
+        }
     }
 }

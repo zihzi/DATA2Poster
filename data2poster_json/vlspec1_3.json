@@ -1,92 +1,94 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": {
-    "text": "Top Commute Distances by Age and Cars",
-    "anchor": "middle"
-  },
+  "title": "Top 3 Creative Types by Content Rating",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Age",
-          "as": "Average Age"
+          "op": "sum",
+          "field": "Worldwide Gross",
+          "as": "Total_Worldwide_Gross"
         }
       ],
       "groupby": [
-        "Cars",
-        "Commute Distance"
+        "Content Rating",
+        "Creative Type"
       ]
     },
     {
       "window": [
         {
           "op": "rank",
-          "as": "RankAge"
+          "as": "CreativeType_rank"
         }
       ],
       "sort": [
         {
-          "field": "Average Age",
+          "field": "Total_Worldwide_Gross",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.RankAge <= 3"
+      "filter": "datum.CreativeType_rank <= 3"
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Cars",
-      "type": "ordinal",
-      "title": "Number of Cars Owned",
+      "field": "Content Rating",
+      "type": "nominal",
+      "title": "Content Rating",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Average Age",
+      "field": "Total_Worldwide_Gross",
       "type": "quantitative",
-      "title": "Average Age",
+      "title": "Worldwide Gross",
       "axis": {
         "tickCount": 6
       }
     },
+    "xOffset": {
+      "field": "Creative Type"
+    },
     "color": {
-      "field": "Commute Distance",
+      "field": "Creative Type",
       "type": "nominal",
-      "title": "Commute Distance",
+      "title": "Creative Type",
       "scale": {
-        "scheme": "tableau10"
+        "scheme": "category10"
       }
     },
     "tooltip": [
       {
-        "field": "Cars",
-        "type": "ordinal",
-        "title": "Cars"
-      },
-      {
-        "field": "Commute Distance",
+        "field": "Creative Type",
         "type": "nominal",
-        "title": "Distance"
+        "title": "Creative Type"
       },
       {
-        "field": "Average Age",
+        "field": "Content Rating",
+        "type": "nominal",
+        "title": "Content Rating"
+      },
+      {
+        "field": "Total_Worldwide_Gross",
         "type": "quantitative",
-        "title": "Avg Age"
+        "title": "Worldwide Gross"
       }
     ]
   },
-  "width": 400,
+  "width": 420,
   "height": 400,
   "config": {
     "title": {
@@ -100,8 +102,8 @@
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

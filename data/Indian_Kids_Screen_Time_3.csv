@@ -1,0 +1,5519 @@
+,Gender,Primary_Device,Health_Impacts,Avg_Daily_Screen_Time_hr
+Poor Sleep,,,,
+,Female,Laptop,Poor Sleep,4.61
+,Female,TV,Poor Sleep,3.73
+,Female,Smartphone,Poor Sleep,4.88
+,Male,Tablet,Poor Sleep,3.53
+,Female,TV,Poor Sleep,4.94
+,Male,Smartphone,Poor Sleep,4.59
+,Male,Smartphone,Poor Sleep,6.15
+,Female,Smartphone,Poor Sleep,3.69
+,Male,Smartphone,Poor Sleep,4.22
+,Male,TV,Poor Sleep,11.68
+,Male,Smartphone,Poor Sleep,4.63
+,Male,TV,Poor Sleep,4.21
+,Male,TV,Poor Sleep,7.61
+,Female,Smartphone,Poor Sleep,6.86
+,Female,Tablet,Poor Sleep,4.61
+,Male,TV,Poor Sleep,4.31
+,Male,TV,Poor Sleep,5.12
+,Female,TV,Poor Sleep,5.82
+,Male,Smartphone,Poor Sleep,4.02
+,Female,Tablet,Poor Sleep,12.09
+,Male,Laptop,Poor Sleep,4.6
+,Male,Tablet,Poor Sleep,3.45
+,Male,Smartphone,Poor Sleep,5.8
+,Female,TV,Poor Sleep,5.31
+,Male,Smartphone,Poor Sleep,4.92
+,Male,TV,Poor Sleep,6.17
+,Male,Smartphone,Poor Sleep,5.36
+,Male,TV,Poor Sleep,5.62
+,Female,Tablet,Poor Sleep,5.41
+,Female,Smartphone,Poor Sleep,4.69
+,Female,Tablet,Poor Sleep,4.16
+,Female,Laptop,Poor Sleep,6.05
+,Male,Smartphone,Poor Sleep,6.55
+,Male,Smartphone,Poor Sleep,6.02
+,Male,Smartphone,Poor Sleep,3.65
+,Male,TV,Poor Sleep,5.63
+,Female,Smartphone,Poor Sleep,4.93
+,Female,TV,Poor Sleep,4.72
+,Female,Tablet,Poor Sleep,6.24
+,Male,Laptop,Poor Sleep,3.39
+,Male,TV,Poor Sleep,5.1
+,Male,Smartphone,Poor Sleep,3.77
+,Male,Laptop,Poor Sleep,4.82
+,Male,Smartphone,Poor Sleep,5.02
+,Female,Tablet,Poor Sleep,4.88
+,Female,Laptop,Poor Sleep,4.51
+,Female,Smartphone,Poor Sleep,5.01
+,Female,Smartphone,Poor Sleep,3.8
+,Male,Tablet,Poor Sleep,4.63
+,Female,TV,Poor Sleep,3.66
+,Female,Smartphone,Poor Sleep,7.11
+,Male,Laptop,Poor Sleep,4.5
+,Male,Tablet,Poor Sleep,4.52
+,Female,Smartphone,Poor Sleep,4.75
+,Female,Tablet,Poor Sleep,4.52
+,Male,Smartphone,Poor Sleep,4.55
+,Male,Smartphone,Poor Sleep,3.83
+,Female,Smartphone,Poor Sleep,4.9
+,Male,TV,Poor Sleep,4.46
+,Female,TV,Poor Sleep,3.94
+,Female,Smartphone,Poor Sleep,6.07
+,Female,Smartphone,Poor Sleep,3.15
+,Male,Laptop,Poor Sleep,6.02
+,Male,TV,Poor Sleep,4.82
+,Female,Smartphone,Poor Sleep,7.7
+,Male,Smartphone,Poor Sleep,7.2
+,Female,TV,Poor Sleep,4.33
+,Female,Smartphone,Poor Sleep,4.77
+,Male,Smartphone,Poor Sleep,3.04
+,Male,Smartphone,Poor Sleep,5.83
+,Female,Smartphone,Poor Sleep,3.89
+,Male,Smartphone,Poor Sleep,5.1
+,Male,Laptop,Poor Sleep,4.17
+,Male,Smartphone,Poor Sleep,5.06
+,Female,Smartphone,Poor Sleep,6.76
+,Female,TV,Poor Sleep,4.34
+,Female,Smartphone,Poor Sleep,4.65
+,Male,Smartphone,Poor Sleep,4.78
+,Female,Smartphone,Poor Sleep,3.69
+,Female,Smartphone,Poor Sleep,4.64
+,Female,TV,Poor Sleep,3.51
+,Male,Smartphone,Poor Sleep,4.42
+,Female,TV,Poor Sleep,4.85
+,Male,TV,Poor Sleep,5.6
+,Female,Laptop,Poor Sleep,3.63
+,Male,Smartphone,Poor Sleep,5.5
+,Female,Laptop,Poor Sleep,4.71
+,Male,Smartphone,Poor Sleep,4.81
+,Male,Laptop,Poor Sleep,5.26
+,Female,Laptop,Poor Sleep,3.98
+,Female,Smartphone,Poor Sleep,4.42
+,Male,Smartphone,Poor Sleep,3.08
+,Male,Smartphone,Poor Sleep,6.0
+,Male,Smartphone,Poor Sleep,4.49
+,Male,Smartphone,Poor Sleep,5.29
+,Male,TV,Poor Sleep,6.22
+,Male,Smartphone,Poor Sleep,6.18
+,Female,TV,Poor Sleep,8.27
+,Male,Smartphone,Poor Sleep,5.53
+,Female,Laptop,Poor Sleep,3.7
+,Male,Smartphone,Poor Sleep,4.45
+,Male,Smartphone,Poor Sleep,7.77
+,Male,TV,Poor Sleep,4.59
+,Female,Laptop,Poor Sleep,5.15
+,Male,Smartphone,Poor Sleep,3.35
+,Male,Smartphone,Poor Sleep,3.93
+,Male,Tablet,Poor Sleep,4.41
+,Male,Laptop,Poor Sleep,3.09
+,Female,TV,Poor Sleep,7.11
+,Male,Tablet,Poor Sleep,3.91
+,Female,Laptop,Poor Sleep,4.2
+,Male,Smartphone,Poor Sleep,3.14
+,Male,Smartphone,Poor Sleep,9.35
+,Female,Smartphone,Poor Sleep,3.24
+,Female,TV,Poor Sleep,3.18
+,Female,Smartphone,Poor Sleep,3.74
+,Male,Smartphone,Poor Sleep,4.26
+,Female,Smartphone,Poor Sleep,5.5
+,Male,Laptop,Poor Sleep,5.41
+,Male,TV,Poor Sleep,5.64
+,Male,Laptop,Poor Sleep,3.85
+,Female,TV,Poor Sleep,4.32
+,Female,Laptop,Poor Sleep,5.48
+,Female,Laptop,Poor Sleep,4.45
+,Female,TV,Poor Sleep,4.78
+,Male,Smartphone,Poor Sleep,7.02
+,Female,Smartphone,Poor Sleep,4.17
+,Female,Smartphone,Poor Sleep,5.68
+,Female,Smartphone,Poor Sleep,4.43
+,Female,Tablet,Poor Sleep,3.76
+,Female,Smartphone,Poor Sleep,4.84
+,Male,Smartphone,Poor Sleep,3.93
+,Female,Smartphone,Poor Sleep,3.92
+,Male,Smartphone,Poor Sleep,4.99
+,Female,Smartphone,Poor Sleep,3.55
+,Female,Smartphone,Poor Sleep,6.64
+,Female,TV,Poor Sleep,4.42
+,Female,Smartphone,Poor Sleep,5.58
+,Male,Smartphone,Poor Sleep,5.29
+,Male,TV,Poor Sleep,4.35
+,Male,Tablet,Poor Sleep,4.05
+,Male,TV,Poor Sleep,3.69
+,Male,Smartphone,Poor Sleep,5.53
+,Male,Smartphone,Poor Sleep,4.98
+,Male,Smartphone,Poor Sleep,6.49
+,Male,Laptop,Poor Sleep,5.97
+,Male,Smartphone,Poor Sleep,4.31
+,Male,Tablet,Poor Sleep,5.59
+,Female,Laptop,Poor Sleep,5.54
+,Female,TV,Poor Sleep,3.04
+,Female,Smartphone,Poor Sleep,3.56
+,Male,TV,Poor Sleep,4.87
+,Female,Laptop,Poor Sleep,3.64
+,Male,Laptop,Poor Sleep,3.77
+,Female,Tablet,Poor Sleep,3.59
+,Male,TV,Poor Sleep,3.03
+,Female,Smartphone,Poor Sleep,6.89
+,Male,Smartphone,Poor Sleep,4.72
+,Female,Smartphone,Poor Sleep,3.13
+,Male,Smartphone,Poor Sleep,5.3
+,Female,Smartphone,Poor Sleep,5.1
+,Male,Smartphone,Poor Sleep,4.89
+,Male,Smartphone,Poor Sleep,3.6
+,Female,TV,Poor Sleep,4.84
+,Female,Smartphone,Poor Sleep,5.35
+,Male,Smartphone,Poor Sleep,3.06
+,Female,Laptop,Poor Sleep,6.87
+,Male,Smartphone,Poor Sleep,7.04
+,Female,Tablet,Poor Sleep,5.98
+,Female,Smartphone,Poor Sleep,3.67
+,Female,Smartphone,Poor Sleep,3.11
+,Female,Smartphone,Poor Sleep,5.61
+,Male,TV,Poor Sleep,3.03
+,Female,Laptop,Poor Sleep,6.04
+,Female,Smartphone,Poor Sleep,5.49
+,Male,Smartphone,Poor Sleep,5.23
+,Male,Laptop,Poor Sleep,3.45
+,Male,TV,Poor Sleep,5.17
+,Male,Laptop,Poor Sleep,5.5
+,Male,Smartphone,Poor Sleep,3.85
+,Female,Smartphone,Poor Sleep,8.95
+,Male,Laptop,Poor Sleep,4.46
+,Male,Tablet,Poor Sleep,5.31
+,Female,Laptop,Poor Sleep,3.58
+,Female,Tablet,Poor Sleep,7.85
+,Male,Smartphone,Poor Sleep,4.28
+,Female,Smartphone,Poor Sleep,4.84
+,Male,TV,Poor Sleep,6.25
+,Male,Tablet,Poor Sleep,5.86
+,Female,Smartphone,Poor Sleep,6.94
+,Male,TV,Poor Sleep,7.05
+,Male,Smartphone,Poor Sleep,5.41
+,Female,TV,Poor Sleep,4.75
+,Male,TV,Poor Sleep,5.33
+,Male,Smartphone,Poor Sleep,5.43
+,Female,Smartphone,Poor Sleep,3.4
+,Male,Smartphone,Poor Sleep,5.85
+,Male,Smartphone,Poor Sleep,4.3
+,Male,Smartphone,Poor Sleep,3.72
+,Male,TV,Poor Sleep,3.05
+,Male,Laptop,Poor Sleep,5.01
+,Male,Smartphone,Poor Sleep,6.21
+,Female,TV,Poor Sleep,5.35
+,Male,Laptop,Poor Sleep,3.45
+,Female,Smartphone,Poor Sleep,6.14
+,Male,Smartphone,Poor Sleep,3.83
+,Male,Smartphone,Poor Sleep,5.09
+,Male,Laptop,Poor Sleep,5.51
+,Female,Smartphone,Poor Sleep,3.11
+,Male,Smartphone,Poor Sleep,4.87
+,Female,Laptop,Poor Sleep,6.32
+,Female,Laptop,Poor Sleep,6.19
+,Male,Smartphone,Poor Sleep,7.64
+,Male,TV,Poor Sleep,6.81
+,Female,TV,Poor Sleep,7.32
+,Male,Smartphone,Poor Sleep,4.17
+,Male,Tablet,Poor Sleep,8.55
+,Female,Smartphone,Poor Sleep,4.76
+,Male,Laptop,Poor Sleep,4.11
+,Female,Smartphone,Poor Sleep,4.45
+,Male,TV,Poor Sleep,8.51
+,Male,Tablet,Poor Sleep,5.7
+,Male,Smartphone,Poor Sleep,3.44
+,Male,Tablet,Poor Sleep,4.26
+,Male,Smartphone,Poor Sleep,3.39
+,Male,Laptop,Poor Sleep,3.37
+,Male,Laptop,Poor Sleep,4.71
+,Male,Smartphone,Poor Sleep,4.41
+,Male,Laptop,Poor Sleep,3.48
+,Female,Smartphone,Poor Sleep,4.11
+,Female,Smartphone,Poor Sleep,4.61
+,Male,TV,Poor Sleep,3.91
+,Male,TV,Poor Sleep,5.92
+,Female,TV,Poor Sleep,4.06
+,Male,Smartphone,Poor Sleep,4.35
+,Male,Smartphone,Poor Sleep,3.71
+,Male,Smartphone,Poor Sleep,4.8
+,Male,Laptop,Poor Sleep,7.07
+,Female,Tablet,Poor Sleep,6.49
+,Female,TV,Poor Sleep,4.0
+,Male,Smartphone,Poor Sleep,7.12
+,Male,Smartphone,Poor Sleep,5.39
+,Male,TV,Poor Sleep,7.77
+,Male,Smartphone,Poor Sleep,5.08
+,Female,Smartphone,Poor Sleep,3.14
+,Female,TV,Poor Sleep,4.6
+,Male,TV,Poor Sleep,3.64
+,Male,Smartphone,Poor Sleep,3.32
+,Female,TV,Poor Sleep,3.62
+,Female,TV,Poor Sleep,4.02
+,Male,Smartphone,Poor Sleep,7.08
+,Female,Smartphone,Poor Sleep,4.91
+,Female,Laptop,Poor Sleep,5.41
+,Female,Smartphone,Poor Sleep,5.84
+,Female,TV,Poor Sleep,4.45
+,Female,Smartphone,Poor Sleep,4.08
+,Male,Smartphone,Poor Sleep,4.21
+,Female,Smartphone,Poor Sleep,4.29
+,Male,TV,Poor Sleep,3.41
+,Male,Smartphone,Poor Sleep,4.33
+,Male,Tablet,Poor Sleep,3.25
+,Female,Smartphone,Poor Sleep,4.18
+,Female,Laptop,Poor Sleep,3.79
+,Male,Smartphone,Poor Sleep,4.27
+,Female,Laptop,Poor Sleep,5.82
+,Female,Laptop,Poor Sleep,6.12
+,Female,Smartphone,Poor Sleep,6.42
+,Male,Smartphone,Poor Sleep,5.65
+,Male,Tablet,Poor Sleep,4.56
+,Female,Laptop,Poor Sleep,5.25
+,Female,Tablet,Poor Sleep,5.88
+,Female,Tablet,Poor Sleep,3.08
+,Male,Smartphone,Poor Sleep,4.93
+,Female,Tablet,Poor Sleep,3.72
+,Male,Smartphone,Poor Sleep,3.81
+,Female,TV,Poor Sleep,4.99
+,Female,Smartphone,Poor Sleep,4.73
+,Female,TV,Poor Sleep,5.11
+,Female,Smartphone,Poor Sleep,3.7
+,Female,TV,Poor Sleep,3.27
+,Female,Smartphone,Poor Sleep,4.19
+,Female,Laptop,Poor Sleep,3.99
+,Female,Tablet,Poor Sleep,6.32
+,Female,TV,Poor Sleep,8.26
+,Male,Laptop,Poor Sleep,4.26
+,Male,Smartphone,Poor Sleep,4.51
+,Female,Smartphone,Poor Sleep,4.1
+,Female,Smartphone,Poor Sleep,5.91
+,Female,Smartphone,Poor Sleep,7.73
+,Female,Smartphone,Poor Sleep,4.17
+,Male,TV,Poor Sleep,3.82
+,Male,Smartphone,Poor Sleep,5.05
+,Male,Laptop,Poor Sleep,5.69
+,Male,TV,Poor Sleep,3.21
+,Male,Smartphone,Poor Sleep,3.96
+,Male,Smartphone,Poor Sleep,3.26
+,Male,TV,Poor Sleep,4.87
+,Male,Smartphone,Poor Sleep,4.75
+,Female,Smartphone,Poor Sleep,5.35
+,Female,TV,Poor Sleep,3.39
+,Female,Smartphone,Poor Sleep,3.77
+,Male,Smartphone,Poor Sleep,5.13
+,Female,Tablet,Poor Sleep,5.68
+,Female,Laptop,Poor Sleep,5.25
+,Female,Smartphone,Poor Sleep,3.31
+,Male,Smartphone,Poor Sleep,4.58
+,Male,Tablet,Poor Sleep,6.59
+,Female,Tablet,Poor Sleep,6.46
+,Female,Laptop,Poor Sleep,7.55
+,Female,Laptop,Poor Sleep,5.22
+,Male,Smartphone,Poor Sleep,4.97
+,Male,TV,Poor Sleep,4.19
+,Male,TV,Poor Sleep,4.75
+,Male,Smartphone,Poor Sleep,5.54
+,Female,TV,Poor Sleep,4.27
+,Female,Smartphone,Poor Sleep,6.56
+,Female,Smartphone,Poor Sleep,3.62
+,Male,Smartphone,Poor Sleep,3.94
+,Female,Smartphone,Poor Sleep,4.04
+,Female,TV,Poor Sleep,4.98
+,Male,Smartphone,Poor Sleep,4.9
+,Female,Smartphone,Poor Sleep,11.77
+,Male,TV,Poor Sleep,4.12
+,Male,Smartphone,Poor Sleep,6.64
+,Male,TV,Poor Sleep,3.18
+,Male,TV,Poor Sleep,5.13
+,Female,Smartphone,Poor Sleep,5.55
+,Female,TV,Poor Sleep,5.05
+,Female,TV,Poor Sleep,3.22
+,Female,Smartphone,Poor Sleep,4.0
+,Female,Tablet,Poor Sleep,6.9
+,Female,TV,Poor Sleep,3.05
+,Male,Smartphone,Poor Sleep,4.61
+,Female,TV,Poor Sleep,5.62
+,Male,Smartphone,Poor Sleep,5.18
+,Female,Smartphone,Poor Sleep,3.01
+,Male,Tablet,Poor Sleep,3.56
+,Male,Smartphone,Poor Sleep,5.15
+,Male,Laptop,Poor Sleep,4.15
+,Female,Laptop,Poor Sleep,4.75
+,Male,Smartphone,Poor Sleep,5.5
+,Male,Smartphone,Poor Sleep,5.15
+,Female,Smartphone,Poor Sleep,4.53
+,Female,Smartphone,Poor Sleep,3.2
+,Male,TV,Poor Sleep,5.13
+,Male,TV,Poor Sleep,6.44
+,Female,Smartphone,Poor Sleep,3.38
+,Male,Smartphone,Poor Sleep,6.84
+,Female,TV,Poor Sleep,4.57
+,Male,Smartphone,Poor Sleep,4.59
+,Female,TV,Poor Sleep,3.6
+,Female,Tablet,Poor Sleep,5.96
+,Male,TV,Poor Sleep,3.55
+,Male,TV,Poor Sleep,5.52
+,Male,TV,Poor Sleep,5.37
+,Female,Smartphone,Poor Sleep,8.08
+,Male,Smartphone,Poor Sleep,5.75
+,Female,TV,Poor Sleep,6.05
+,Female,Smartphone,Poor Sleep,6.79
+,Female,Tablet,Poor Sleep,4.64
+,Female,TV,Poor Sleep,7.0
+,Male,Laptop,Poor Sleep,5.05
+,Female,Tablet,Poor Sleep,7.23
+,Male,TV,Poor Sleep,4.38
+,Female,Laptop,Poor Sleep,5.45
+,Female,Smartphone,Poor Sleep,4.27
+,Female,Laptop,Poor Sleep,4.05
+,Male,Smartphone,Poor Sleep,5.87
+,Female,Tablet,Poor Sleep,3.68
+,Female,Laptop,Poor Sleep,4.07
+,Female,Laptop,Poor Sleep,3.21
+,Female,Smartphone,Poor Sleep,3.09
+,Male,Smartphone,Poor Sleep,4.21
+,Female,Laptop,Poor Sleep,3.27
+,Male,Smartphone,Poor Sleep,4.53
+,Female,Smartphone,Poor Sleep,4.69
+,Male,Smartphone,Poor Sleep,4.98
+,Male,TV,Poor Sleep,3.57
+,Female,Laptop,Poor Sleep,3.83
+,Male,Laptop,Poor Sleep,4.45
+,Female,Laptop,Poor Sleep,5.38
+,Male,TV,Poor Sleep,5.44
+,Male,Tablet,Poor Sleep,4.42
+,Female,TV,Poor Sleep,5.18
+,Female,Smartphone,Poor Sleep,3.64
+,Female,Laptop,Poor Sleep,5.25
+,Female,Smartphone,Poor Sleep,4.54
+,Female,Laptop,Poor Sleep,4.52
+,Male,Smartphone,Poor Sleep,5.18
+,Male,Smartphone,Poor Sleep,3.65
+,Male,Tablet,Poor Sleep,3.64
+,Male,Smartphone,Poor Sleep,4.95
+,Male,TV,Poor Sleep,4.54
+,Male,Tablet,Poor Sleep,5.75
+,Male,Smartphone,Poor Sleep,7.58
+,Male,Smartphone,Poor Sleep,4.83
+,Female,Smartphone,Poor Sleep,7.54
+,Male,TV,Poor Sleep,3.22
+,Female,TV,Poor Sleep,5.7
+,Female,Tablet,Poor Sleep,5.06
+,Female,Smartphone,Poor Sleep,5.25
+,Female,TV,Poor Sleep,7.8
+,Female,Tablet,Poor Sleep,3.36
+,Male,Smartphone,Poor Sleep,5.51
+,Male,TV,Poor Sleep,3.55
+,Male,Smartphone,Poor Sleep,4.24
+,Female,Smartphone,Poor Sleep,3.64
+,Male,TV,Poor Sleep,5.31
+,Male,Smartphone,Poor Sleep,4.21
+,Female,TV,Poor Sleep,5.4
+,Female,Smartphone,Poor Sleep,4.98
+,Female,Laptop,Poor Sleep,5.05
+,Male,Tablet,Poor Sleep,4.95
+,Male,Smartphone,Poor Sleep,3.84
+,Male,TV,Poor Sleep,5.65
+,Male,Laptop,Poor Sleep,3.8
+,Female,Smartphone,Poor Sleep,4.68
+,Female,Tablet,Poor Sleep,4.52
+,Male,Smartphone,Poor Sleep,5.9
+,Male,TV,Poor Sleep,3.93
+,Male,Laptop,Poor Sleep,4.08
+,Female,TV,Poor Sleep,4.66
+,Female,Smartphone,Poor Sleep,5.36
+,Male,Laptop,Poor Sleep,4.09
+,Female,Smartphone,Poor Sleep,5.38
+,Male,Smartphone,Poor Sleep,3.33
+,Female,TV,Poor Sleep,3.93
+,Female,Smartphone,Poor Sleep,6.84
+,Female,Smartphone,Poor Sleep,3.57
+,Female,Smartphone,Poor Sleep,5.28
+,Female,Tablet,Poor Sleep,5.3
+,Female,TV,Poor Sleep,3.76
+,Female,Tablet,Poor Sleep,5.3
+,Male,Smartphone,Poor Sleep,3.92
+,Male,TV,Poor Sleep,3.6
+,Male,Smartphone,Poor Sleep,4.66
+,Male,Smartphone,Poor Sleep,4.41
+,Male,TV,Poor Sleep,6.38
+,Female,TV,Poor Sleep,4.21
+,Male,Tablet,Poor Sleep,6.91
+,Male,Tablet,Poor Sleep,6.07
+,Male,Smartphone,Poor Sleep,4.04
+,Female,Laptop,Poor Sleep,5.7
+,Male,Smartphone,Poor Sleep,7.09
+,Male,TV,Poor Sleep,4.45
+,Female,Tablet,Poor Sleep,7.85
+,Female,TV,Poor Sleep,5.19
+,Female,Laptop,Poor Sleep,6.0
+,Female,Laptop,Poor Sleep,4.84
+,Male,TV,Poor Sleep,4.96
+,Male,Smartphone,Poor Sleep,3.93
+,Female,Smartphone,Poor Sleep,5.78
+,Male,Laptop,Poor Sleep,4.3
+,Male,TV,Poor Sleep,4.72
+,Male,Laptop,Poor Sleep,3.37
+,Female,TV,Poor Sleep,9.19
+,Female,TV,Poor Sleep,4.51
+,Female,Smartphone,Poor Sleep,5.29
+,Male,Smartphone,Poor Sleep,6.07
+,Female,Smartphone,Poor Sleep,4.84
+,Female,Laptop,Poor Sleep,5.34
+,Female,TV,Poor Sleep,6.56
+,Male,Laptop,Poor Sleep,4.63
+,Female,Tablet,Poor Sleep,8.92
+,Male,Smartphone,Poor Sleep,9.8
+,Male,Smartphone,Poor Sleep,3.17
+,Male,Tablet,Poor Sleep,7.57
+,Female,Smartphone,Poor Sleep,4.03
+,Female,Laptop,Poor Sleep,4.91
+,Male,Smartphone,Poor Sleep,4.51
+,Female,Laptop,Poor Sleep,5.66
+,Female,Smartphone,Poor Sleep,3.12
+,Female,Smartphone,Poor Sleep,4.44
+,Female,TV,Poor Sleep,4.33
+,Male,Tablet,Poor Sleep,5.91
+,Female,TV,Poor Sleep,7.3
+,Male,Smartphone,Poor Sleep,4.65
+,Male,Tablet,Poor Sleep,5.01
+,Male,Laptop,Poor Sleep,3.99
+,Male,Smartphone,Poor Sleep,3.64
+,Female,Smartphone,Poor Sleep,5.42
+,Female,TV,Poor Sleep,4.48
+,Male,TV,Poor Sleep,4.75
+,Male,TV,Poor Sleep,4.84
+,Male,Smartphone,Poor Sleep,5.44
+,Male,Laptop,Poor Sleep,4.32
+,Male,TV,Poor Sleep,4.77
+,Female,Smartphone,Poor Sleep,4.93
+,Female,TV,Poor Sleep,5.11
+,Male,TV,Poor Sleep,5.83
+,Female,TV,Poor Sleep,8.0
+,Male,Tablet,Poor Sleep,4.69
+,Male,Smartphone,Poor Sleep,3.47
+,Female,Smartphone,Poor Sleep,5.87
+,Female,Smartphone,Poor Sleep,6.77
+,Male,Smartphone,Poor Sleep,4.32
+,Female,Laptop,Poor Sleep,3.82
+,Male,Smartphone,Poor Sleep,4.46
+,Male,Laptop,Poor Sleep,5.66
+,Male,Smartphone,Poor Sleep,5.72
+,Female,Tablet,Poor Sleep,3.44
+,Male,TV,Poor Sleep,3.2
+,Female,Laptop,Poor Sleep,4.1
+,Female,TV,Poor Sleep,6.47
+,Female,Smartphone,Poor Sleep,3.73
+,Female,Laptop,Poor Sleep,3.81
+,Male,Smartphone,Poor Sleep,3.37
+,Female,Smartphone,Poor Sleep,6.16
+,Female,Tablet,Poor Sleep,5.16
+,Male,Smartphone,Poor Sleep,5.18
+,Female,Tablet,Poor Sleep,7.07
+,Female,Smartphone,Poor Sleep,5.66
+,Male,TV,Poor Sleep,4.96
+,Male,TV,Poor Sleep,6.27
+,Male,TV,Poor Sleep,3.8
+,Male,Smartphone,Poor Sleep,7.9
+,Male,TV,Poor Sleep,4.59
+,Male,Smartphone,Poor Sleep,4.19
+,Female,TV,Poor Sleep,3.39
+,Male,Laptop,Poor Sleep,5.35
+,Female,TV,Poor Sleep,4.99
+,Female,Smartphone,Poor Sleep,5.13
+,Female,TV,Poor Sleep,7.33
+,Female,Smartphone,Poor Sleep,4.41
+,Female,TV,Poor Sleep,4.75
+,Male,Tablet,Poor Sleep,4.54
+,Female,TV,Poor Sleep,5.2
+,Female,Tablet,Poor Sleep,4.97
+,Male,TV,Poor Sleep,3.04
+,Male,TV,Poor Sleep,6.04
+,Male,TV,Poor Sleep,4.99
+,Male,Laptop,Poor Sleep,5.87
+,Male,Smartphone,Poor Sleep,4.7
+,Male,TV,Poor Sleep,3.49
+,Female,Smartphone,Poor Sleep,6.34
+,Female,TV,Poor Sleep,3.57
+,Male,Smartphone,Poor Sleep,5.09
+,Male,TV,Poor Sleep,3.62
+,Male,Smartphone,Poor Sleep,6.84
+,Female,TV,Poor Sleep,3.71
+,Male,Laptop,Poor Sleep,3.42
+,Male,Smartphone,Poor Sleep,6.36
+,Female,Smartphone,Poor Sleep,4.34
+,Female,Smartphone,Poor Sleep,9.6
+,Male,Laptop,Poor Sleep,7.41
+,Female,Smartphone,Poor Sleep,5.97
+,Male,TV,Poor Sleep,4.24
+,Female,Smartphone,Poor Sleep,6.86
+,Male,Smartphone,Poor Sleep,4.85
+,Female,TV,Poor Sleep,6.9
+,Male,Smartphone,Poor Sleep,6.02
+,Female,Laptop,Poor Sleep,3.05
+,Female,Smartphone,Poor Sleep,3.44
+,Female,Tablet,Poor Sleep,4.69
+,Male,Laptop,Poor Sleep,6.4
+,Female,Smartphone,Poor Sleep,4.72
+,Male,Laptop,Poor Sleep,4.95
+,Male,Laptop,Poor Sleep,5.99
+,Female,TV,Poor Sleep,5.72
+,Female,Smartphone,Poor Sleep,4.32
+,Female,TV,Poor Sleep,3.82
+,Male,TV,Poor Sleep,7.97
+,Male,Smartphone,Poor Sleep,4.73
+,Male,Laptop,Poor Sleep,4.53
+,Female,TV,Poor Sleep,4.96
+,Female,Laptop,Poor Sleep,4.23
+,Female,TV,Poor Sleep,6.17
+,Female,Smartphone,Poor Sleep,4.97
+,Female,Smartphone,Poor Sleep,4.83
+,Female,Smartphone,Poor Sleep,6.23
+,Male,Laptop,Poor Sleep,4.4
+,Female,Smartphone,Poor Sleep,4.17
+,Male,TV,Poor Sleep,5.6
+,Male,Laptop,Poor Sleep,4.74
+,Male,Laptop,Poor Sleep,4.03
+,Female,Smartphone,Poor Sleep,4.65
+,Female,Smartphone,Poor Sleep,6.65
+,Female,Smartphone,Poor Sleep,5.35
+,Male,Laptop,Poor Sleep,3.01
+,Female,TV,Poor Sleep,4.93
+,Female,Smartphone,Poor Sleep,4.22
+,Male,Smartphone,Poor Sleep,4.18
+,Male,Smartphone,Poor Sleep,6.38
+,Female,Laptop,Poor Sleep,6.62
+,Female,Smartphone,Poor Sleep,6.25
+,Male,Tablet,Poor Sleep,5.25
+,Female,Laptop,Poor Sleep,3.16
+,Female,Smartphone,Poor Sleep,4.43
+,Male,Smartphone,Poor Sleep,4.93
+,Male,Smartphone,Poor Sleep,4.33
+,Male,Tablet,Poor Sleep,6.68
+,Male,TV,Poor Sleep,5.71
+,Male,Smartphone,Poor Sleep,5.14
+,Female,Smartphone,Poor Sleep,4.11
+,Female,Smartphone,Poor Sleep,5.56
+,Male,Laptop,Poor Sleep,4.51
+,Male,Smartphone,Poor Sleep,6.19
+,Female,Smartphone,Poor Sleep,3.16
+,Female,Tablet,Poor Sleep,5.38
+,Male,Tablet,Poor Sleep,6.31
+,Male,Smartphone,Poor Sleep,4.52
+,Female,Smartphone,Poor Sleep,5.47
+,Male,Laptop,Poor Sleep,4.43
+,Male,Smartphone,Poor Sleep,4.18
+,Male,TV,Poor Sleep,5.24
+,Male,TV,Poor Sleep,6.64
+,Male,TV,Poor Sleep,5.18
+,Female,Smartphone,Poor Sleep,6.02
+,Female,Smartphone,Poor Sleep,4.88
+,Female,Smartphone,Poor Sleep,4.25
+,Male,Smartphone,Poor Sleep,5.33
+,Male,TV,Poor Sleep,4.36
+,Female,Tablet,Poor Sleep,3.68
+,Female,Laptop,Poor Sleep,4.91
+,Male,Smartphone,Poor Sleep,4.6
+,Male,Smartphone,Poor Sleep,4.59
+,Female,Smartphone,Poor Sleep,4.22
+,Female,Smartphone,Poor Sleep,4.35
+,Male,TV,Poor Sleep,4.32
+,Male,Smartphone,Poor Sleep,4.23
+,Female,TV,Poor Sleep,5.72
+,Male,TV,Poor Sleep,6.15
+,Male,TV,Poor Sleep,4.86
+,Female,Tablet,Poor Sleep,3.23
+,Female,Laptop,Poor Sleep,4.71
+,Female,Smartphone,Poor Sleep,4.59
+,Male,TV,Poor Sleep,5.02
+,Female,Tablet,Poor Sleep,3.88
+,Male,TV,Poor Sleep,5.03
+,Male,Laptop,Poor Sleep,4.03
+,Female,Smartphone,Poor Sleep,5.31
+,Female,TV,Poor Sleep,5.3
+,Male,Smartphone,Poor Sleep,3.28
+,Male,Smartphone,Poor Sleep,3.91
+,Female,Smartphone,Poor Sleep,4.43
+,Male,TV,Poor Sleep,4.63
+,Male,TV,Poor Sleep,8.22
+,Male,Smartphone,Poor Sleep,4.84
+,Male,Smartphone,Poor Sleep,5.34
+,Female,TV,Poor Sleep,3.78
+,Female,Smartphone,Poor Sleep,4.98
+,Female,TV,Poor Sleep,4.66
+,Male,Smartphone,Poor Sleep,4.45
+,Female,Smartphone,Poor Sleep,3.68
+,Female,TV,Poor Sleep,4.53
+,Male,Smartphone,Poor Sleep,5.66
+,Female,Smartphone,Poor Sleep,4.55
+,Male,Smartphone,Poor Sleep,6.6
+,Male,Smartphone,Poor Sleep,4.86
+,Male,Smartphone,Poor Sleep,5.12
+,Female,Smartphone,Poor Sleep,4.51
+,Male,Smartphone,Poor Sleep,4.11
+,Male,Tablet,Poor Sleep,5.56
+,Female,Smartphone,Poor Sleep,3.24
+,Female,Smartphone,Poor Sleep,5.93
+,Male,Smartphone,Poor Sleep,4.18
+,Female,Smartphone,Poor Sleep,6.14
+,Male,TV,Poor Sleep,5.16
+,Female,Laptop,Poor Sleep,6.09
+,Female,Smartphone,Poor Sleep,6.97
+,Female,TV,Poor Sleep,4.76
+,Female,Laptop,Poor Sleep,3.07
+,Male,TV,Poor Sleep,4.59
+,Male,TV,Poor Sleep,3.45
+,Male,Laptop,Poor Sleep,4.6
+,Male,TV,Poor Sleep,6.2
+,Male,Smartphone,Poor Sleep,5.29
+,Female,Smartphone,Poor Sleep,4.31
+,Female,Smartphone,Poor Sleep,4.22
+,Male,Tablet,Poor Sleep,3.44
+,Male,Smartphone,Poor Sleep,4.78
+,Male,TV,Poor Sleep,3.38
+,Male,Smartphone,Poor Sleep,3.84
+,Female,Smartphone,Poor Sleep,5.18
+,Male,TV,Poor Sleep,3.34
+,Male,TV,Poor Sleep,3.65
+,Male,TV,Poor Sleep,7.1
+,Male,Smartphone,Poor Sleep,6.86
+,Female,Smartphone,Poor Sleep,4.21
+,Female,Smartphone,Poor Sleep,6.07
+,Male,Smartphone,Poor Sleep,3.44
+,Male,TV,Poor Sleep,5.84
+,Female,Smartphone,Poor Sleep,4.51
+,Male,Smartphone,Poor Sleep,3.77
+,Male,TV,Poor Sleep,3.33
+,Female,Laptop,Poor Sleep,4.22
+,Male,Smartphone,Poor Sleep,3.25
+,Female,Laptop,Poor Sleep,4.53
+,Male,Laptop,Poor Sleep,4.67
+,Female,Laptop,Poor Sleep,4.14
+,Male,Smartphone,Poor Sleep,4.66
+,Male,Laptop,Poor Sleep,5.35
+,Male,Laptop,Poor Sleep,7.06
+,Female,Laptop,Poor Sleep,6.29
+,Female,Laptop,Poor Sleep,5.04
+,Female,Laptop,Poor Sleep,6.64
+,Male,Laptop,Poor Sleep,4.29
+,Male,Smartphone,Poor Sleep,4.15
+,Female,Smartphone,Poor Sleep,3.56
+,Male,Tablet,Poor Sleep,5.5
+,Male,Laptop,Poor Sleep,3.89
+,Male,TV,Poor Sleep,3.46
+,Male,TV,Poor Sleep,4.41
+,Male,Smartphone,Poor Sleep,3.91
+,Female,Smartphone,Poor Sleep,5.58
+,Female,Laptop,Poor Sleep,6.18
+,Female,TV,Poor Sleep,3.58
+,Male,Smartphone,Poor Sleep,3.98
+,Female,TV,Poor Sleep,4.65
+,Male,Smartphone,Poor Sleep,5.27
+,Male,Tablet,Poor Sleep,4.5
+,Male,Tablet,Poor Sleep,4.79
+,Male,Tablet,Poor Sleep,5.11
+,Male,Smartphone,Poor Sleep,5.53
+,Female,Laptop,Poor Sleep,4.8
+,Male,Smartphone,Poor Sleep,6.31
+,Male,Tablet,Poor Sleep,3.81
+,Male,Laptop,Poor Sleep,5.6
+,Female,Laptop,Poor Sleep,6.44
+,Male,TV,Poor Sleep,4.17
+,Female,Tablet,Poor Sleep,8.3
+,Male,Smartphone,Poor Sleep,7.25
+,Female,TV,Poor Sleep,5.63
+,Female,Tablet,Poor Sleep,4.93
+,Female,TV,Poor Sleep,3.87
+,Male,Smartphone,Poor Sleep,3.71
+,Male,TV,Poor Sleep,4.01
+,Female,Smartphone,Poor Sleep,5.2
+,Female,TV,Poor Sleep,4.86
+,Female,Smartphone,Poor Sleep,6.26
+,Female,Smartphone,Poor Sleep,4.86
+,Male,Smartphone,Poor Sleep,3.91
+,Female,TV,Poor Sleep,3.88
+,Male,Laptop,Poor Sleep,3.58
+,Female,Laptop,Poor Sleep,3.26
+,Male,Laptop,Poor Sleep,3.7
+,Female,TV,Poor Sleep,6.64
+,Female,TV,Poor Sleep,4.83
+,Male,Smartphone,Poor Sleep,6.93
+,Male,Smartphone,Poor Sleep,4.56
+,Female,Smartphone,Poor Sleep,3.1
+,Male,TV,Poor Sleep,4.2
+,Male,Smartphone,Poor Sleep,4.14
+,Male,Smartphone,Poor Sleep,4.64
+,Female,TV,Poor Sleep,5.42
+,Male,Smartphone,Poor Sleep,3.41
+,Female,Smartphone,Poor Sleep,6.68
+,Male,Smartphone,Poor Sleep,4.71
+,Male,Smartphone,Poor Sleep,5.02
+,Male,Smartphone,Poor Sleep,4.74
+,Male,Smartphone,Poor Sleep,4.67
+,Female,Smartphone,Poor Sleep,5.59
+,Male,Laptop,Poor Sleep,3.74
+,Female,TV,Poor Sleep,3.54
+,Male,Smartphone,Poor Sleep,3.25
+,Male,TV,Poor Sleep,3.92
+,Male,Smartphone,Poor Sleep,5.25
+,Female,Tablet,Poor Sleep,8.7
+,Male,Smartphone,Poor Sleep,4.12
+,Male,TV,Poor Sleep,3.52
+,Male,Smartphone,Poor Sleep,3.28
+,Male,TV,Poor Sleep,4.18
+,Male,Smartphone,Poor Sleep,4.75
+,Male,TV,Poor Sleep,3.86
+,Female,Smartphone,Poor Sleep,4.09
+,Female,Tablet,Poor Sleep,4.22
+,Male,Smartphone,Poor Sleep,6.45
+,Male,Smartphone,Poor Sleep,3.25
+,Male,TV,Poor Sleep,5.76
+,Female,Smartphone,Poor Sleep,3.3
+,Male,Smartphone,Poor Sleep,4.18
+,Male,Smartphone,Poor Sleep,3.92
+,Male,TV,Poor Sleep,6.01
+,Male,Smartphone,Poor Sleep,4.66
+,Female,TV,Poor Sleep,5.12
+,Male,Smartphone,Poor Sleep,5.28
+,Male,Smartphone,Poor Sleep,3.58
+,Female,Smartphone,Poor Sleep,3.59
+,Male,TV,Poor Sleep,4.08
+,Male,Laptop,Poor Sleep,4.85
+,Male,Smartphone,Poor Sleep,6.68
+,Female,Smartphone,Poor Sleep,4.16
+,Male,Tablet,Poor Sleep,3.33
+,Female,TV,Poor Sleep,4.78
+,Male,Smartphone,Poor Sleep,3.97
+,Female,Smartphone,Poor Sleep,7.21
+,Female,TV,Poor Sleep,5.07
+,Female,Smartphone,Poor Sleep,4.37
+,Female,Smartphone,Poor Sleep,5.56
+,Male,Laptop,Poor Sleep,5.02
+,Male,Tablet,Poor Sleep,6.55
+,Male,TV,Poor Sleep,3.39
+,Male,Smartphone,Poor Sleep,5.73
+,Male,TV,Poor Sleep,4.71
+,Male,TV,Poor Sleep,6.48
+,Male,Tablet,Poor Sleep,4.55
+,Male,Smartphone,Poor Sleep,3.86
+,Male,Tablet,Poor Sleep,3.83
+,Female,Smartphone,Poor Sleep,5.15
+,Male,Tablet,Poor Sleep,4.09
+,Male,Smartphone,Poor Sleep,3.43
+,Male,Smartphone,Poor Sleep,4.52
+,Male,Smartphone,Poor Sleep,4.23
+,Male,Tablet,Poor Sleep,5.01
+,Female,Smartphone,Poor Sleep,4.24
+,Male,Smartphone,Poor Sleep,4.76
+,Male,TV,Poor Sleep,4.51
+,Male,Tablet,Poor Sleep,5.0
+,Male,Smartphone,Poor Sleep,8.48
+,Male,Laptop,Poor Sleep,3.97
+,Male,Smartphone,Poor Sleep,4.46
+,Female,TV,Poor Sleep,7.16
+,Female,Laptop,Poor Sleep,4.44
+,Female,Laptop,Poor Sleep,3.34
+,Female,TV,Poor Sleep,4.14
+,Female,TV,Poor Sleep,4.64
+,Female,Smartphone,Poor Sleep,5.76
+,Male,TV,Poor Sleep,3.71
+,Male,Tablet,Poor Sleep,5.66
+,Female,Smartphone,Poor Sleep,5.44
+,Male,TV,Poor Sleep,5.4
+,Female,Smartphone,Poor Sleep,5.16
+,Male,TV,Poor Sleep,3.63
+,Female,TV,Poor Sleep,6.47
+,Female,Smartphone,Poor Sleep,4.44
+,Female,Smartphone,Poor Sleep,5.34
+,Female,Smartphone,Poor Sleep,3.93
+,Male,Tablet,Poor Sleep,4.04
+,Male,Tablet,Poor Sleep,8.47
+,Male,TV,Poor Sleep,3.09
+,Male,TV,Poor Sleep,4.97
+,Male,Tablet,Poor Sleep,4.74
+,Female,Smartphone,Poor Sleep,3.54
+,Female,TV,Poor Sleep,5.27
+,Female,Smartphone,Poor Sleep,4.09
+,Female,Smartphone,Poor Sleep,4.3
+,Female,Tablet,Poor Sleep,5.25
+,Female,Smartphone,Poor Sleep,6.01
+,Female,Smartphone,Poor Sleep,5.91
+,Male,Smartphone,Poor Sleep,5.75
+,Female,TV,Poor Sleep,5.1
+,Female,Tablet,Poor Sleep,6.17
+,Female,TV,Poor Sleep,7.33
+,Male,Smartphone,Poor Sleep,3.61
+,Female,Smartphone,Poor Sleep,6.08
+,Male,Smartphone,Poor Sleep,4.93
+,Male,Smartphone,Poor Sleep,4.91
+,Male,Smartphone,Poor Sleep,4.27
+,Female,TV,Poor Sleep,4.56
+,Male,Smartphone,Poor Sleep,4.24
+,Male,Smartphone,Poor Sleep,3.79
+,Male,Laptop,Poor Sleep,5.92
+,Female,Smartphone,Poor Sleep,7.02
+,Male,TV,Poor Sleep,4.59
+,Female,TV,Poor Sleep,5.96
+,Female,TV,Poor Sleep,4.53
+,Male,Smartphone,Poor Sleep,5.92
+,Male,Smartphone,Poor Sleep,5.69
+,Female,Smartphone,Poor Sleep,4.85
+,Female,Smartphone,Poor Sleep,5.57
+,Female,TV,Poor Sleep,3.79
+,Female,Smartphone,Poor Sleep,5.71
+,Female,Smartphone,Poor Sleep,4.26
+,Male,Smartphone,Poor Sleep,5.44
+,Male,Smartphone,Poor Sleep,6.01
+,Male,TV,Poor Sleep,3.22
+,Male,Smartphone,Poor Sleep,5.39
+,Female,Laptop,Poor Sleep,3.71
+,Male,TV,Poor Sleep,9.94
+,Male,Smartphone,Poor Sleep,6.89
+,Male,TV,Poor Sleep,3.04
+,Male,TV,Poor Sleep,4.66
+,Male,Smartphone,Poor Sleep,5.2
+,Female,Smartphone,Poor Sleep,6.18
+,Male,Laptop,Poor Sleep,4.27
+,Female,TV,Poor Sleep,4.36
+,Female,Laptop,Poor Sleep,3.52
+,Male,Laptop,Poor Sleep,3.25
+,Male,Smartphone,Poor Sleep,3.58
+,Female,Smartphone,Poor Sleep,3.73
+,Female,Smartphone,Poor Sleep,9.33
+,Male,Smartphone,Poor Sleep,4.15
+,Male,Smartphone,Poor Sleep,6.98
+,Male,Laptop,Poor Sleep,5.31
+,Male,Smartphone,Poor Sleep,3.96
+,Female,Smartphone,Poor Sleep,4.6
+,Male,Smartphone,Poor Sleep,3.24
+,Male,Tablet,Poor Sleep,4.69
+,Male,TV,Poor Sleep,7.69
+,Female,Tablet,Poor Sleep,3.08
+,Female,TV,Poor Sleep,3.57
+,Male,TV,Poor Sleep,4.03
+,Female,Smartphone,Poor Sleep,6.47
+,Male,Laptop,Poor Sleep,4.49
+,Female,Tablet,Poor Sleep,6.18
+,Male,Smartphone,Poor Sleep,5.56
+,Female,Smartphone,Poor Sleep,3.69
+,Male,Smartphone,Poor Sleep,6.72
+,Female,Tablet,Poor Sleep,4.64
+,Female,Smartphone,Poor Sleep,4.68
+,Female,Laptop,Poor Sleep,5.88
+,Male,Laptop,Poor Sleep,4.8
+,Female,Smartphone,Poor Sleep,4.15
+,Male,Tablet,Poor Sleep,4.41
+,Female,TV,Poor Sleep,4.25
+,Male,Tablet,Poor Sleep,4.32
+,Male,Smartphone,Poor Sleep,6.29
+,Male,Smartphone,Poor Sleep,6.12
+,Female,Smartphone,Poor Sleep,3.43
+,Male,Tablet,Poor Sleep,6.72
+,Male,Tablet,Poor Sleep,6.71
+,Male,Smartphone,Poor Sleep,4.37
+,Male,Laptop,Poor Sleep,3.46
+,Male,Smartphone,Poor Sleep,4.7
+,Female,Tablet,Poor Sleep,5.49
+,Male,Smartphone,Poor Sleep,5.58
+,Female,TV,Poor Sleep,3.89
+,Male,TV,Poor Sleep,5.82
+,Female,Smartphone,Poor Sleep,3.21
+,Female,Smartphone,Poor Sleep,6.54
+,Male,Smartphone,Poor Sleep,5.15
+,Female,Smartphone,Poor Sleep,3.29
+,Female,Laptop,Poor Sleep,4.77
+,Male,Smartphone,Poor Sleep,6.05
+,Male,TV,Poor Sleep,3.85
+,Female,Smartphone,Poor Sleep,4.47
+,Male,Smartphone,Poor Sleep,4.69
+,Female,Smartphone,Poor Sleep,5.38
+,Male,TV,Poor Sleep,4.23
+,Male,Laptop,Poor Sleep,3.57
+,Male,Smartphone,Poor Sleep,3.6
+,Male,TV,Poor Sleep,5.6
+,Female,Smartphone,Poor Sleep,3.68
+,Female,Smartphone,Poor Sleep,3.87
+,Female,Smartphone,Poor Sleep,7.4
+,Male,TV,Poor Sleep,5.39
+,Male,Smartphone,Poor Sleep,4.86
+,Male,Laptop,Poor Sleep,5.01
+,Female,TV,Poor Sleep,3.73
+,Male,Smartphone,Poor Sleep,4.22
+,Female,TV,Poor Sleep,6.01
+,Male,Smartphone,Poor Sleep,6.05
+,Female,TV,Poor Sleep,5.84
+,Male,Smartphone,Poor Sleep,4.04
+,Male,Smartphone,Poor Sleep,4.54
+,Male,Smartphone,Poor Sleep,4.41
+,Female,TV,Poor Sleep,5.92
+,Female,Smartphone,Poor Sleep,3.2
+,Female,Tablet,Poor Sleep,5.19
+,Female,Laptop,Poor Sleep,4.55
+,Male,Laptop,Poor Sleep,3.98
+,Male,Laptop,Poor Sleep,3.54
+,Male,Tablet,Poor Sleep,3.99
+,Female,Smartphone,Poor Sleep,6.27
+,Male,Tablet,Poor Sleep,3.49
+,Female,TV,Poor Sleep,3.8
+,Male,TV,Poor Sleep,4.46
+,Female,Laptop,Poor Sleep,3.99
+,Male,Smartphone,Poor Sleep,4.72
+,Female,Smartphone,Poor Sleep,5.66
+,Female,Smartphone,Poor Sleep,4.41
+,Female,Smartphone,Poor Sleep,5.17
+,Male,TV,Poor Sleep,6.08
+,Female,Smartphone,Poor Sleep,9.05
+,Male,TV,Poor Sleep,4.09
+,Female,Smartphone,Poor Sleep,5.33
+,Female,TV,Poor Sleep,5.27
+,Female,Smartphone,Poor Sleep,7.01
+,Female,Smartphone,Poor Sleep,5.29
+,Male,Smartphone,Poor Sleep,5.83
+,Male,TV,Poor Sleep,8.19
+,Female,Tablet,Poor Sleep,4.3
+,Female,TV,Poor Sleep,4.92
+,Female,TV,Poor Sleep,5.84
+,Male,TV,Poor Sleep,4.74
+,Female,Tablet,Poor Sleep,4.75
+,Female,Smartphone,Poor Sleep,5.33
+,Male,Smartphone,Poor Sleep,3.43
+,Male,TV,Poor Sleep,3.94
+,Female,Smartphone,Poor Sleep,4.83
+,Female,Smartphone,Poor Sleep,3.71
+,Male,Smartphone,Poor Sleep,7.52
+,Female,TV,Poor Sleep,5.56
+,Female,TV,Poor Sleep,3.89
+,Female,Smartphone,Poor Sleep,4.53
+,Male,TV,Poor Sleep,3.35
+,Male,Tablet,Poor Sleep,7.26
+,Male,Smartphone,Poor Sleep,8.53
+,Female,Tablet,Poor Sleep,4.15
+,Female,Laptop,Poor Sleep,4.3
+,Female,TV,Poor Sleep,6.24
+,Female,Laptop,Poor Sleep,3.79
+,Female,Smartphone,Poor Sleep,5.3
+,Male,Smartphone,Poor Sleep,4.12
+,Male,Smartphone,Poor Sleep,3.17
+,Female,Laptop,Poor Sleep,3.75
+,Female,TV,Poor Sleep,4.7
+,Male,TV,Poor Sleep,4.33
+,Female,TV,Poor Sleep,7.37
+,Female,Tablet,Poor Sleep,4.05
+,Male,Smartphone,Poor Sleep,7.52
+,Male,TV,Poor Sleep,4.05
+,Male,Smartphone,Poor Sleep,3.71
+,Female,Smartphone,Poor Sleep,6.1
+,Female,Smartphone,Poor Sleep,5.37
+,Male,Smartphone,Poor Sleep,5.25
+,Male,Smartphone,Poor Sleep,5.6
+,Female,Tablet,Poor Sleep,6.27
+,Male,Smartphone,Poor Sleep,3.79
+,Male,Smartphone,Poor Sleep,5.88
+,Male,TV,Poor Sleep,5.27
+,Female,Smartphone,Poor Sleep,3.62
+,Female,Tablet,Poor Sleep,3.26
+,Male,Tablet,Poor Sleep,4.64
+,Male,Smartphone,Poor Sleep,4.09
+,Male,Smartphone,Poor Sleep,4.7
+,Female,TV,Poor Sleep,6.15
+,Male,Smartphone,Poor Sleep,4.36
+,Female,Smartphone,Poor Sleep,8.01
+,Female,TV,Poor Sleep,4.5
+,Male,Smartphone,Poor Sleep,4.89
+,Female,TV,Poor Sleep,4.76
+,Male,Smartphone,Poor Sleep,4.31
+,Female,Smartphone,Poor Sleep,4.44
+,Male,Smartphone,Poor Sleep,4.94
+,Male,Smartphone,Poor Sleep,8.44
+,Male,TV,Poor Sleep,7.35
+,Male,Smartphone,Poor Sleep,5.51
+,Male,Tablet,Poor Sleep,6.11
+,Female,Smartphone,Poor Sleep,5.6
+,Male,TV,Poor Sleep,4.94
+,Male,Tablet,Poor Sleep,3.67
+,Female,TV,Poor Sleep,5.75
+,Male,Tablet,Poor Sleep,6.12
+,Male,TV,Poor Sleep,6.87
+,Female,Smartphone,Poor Sleep,4.54
+,Male,Smartphone,Poor Sleep,3.54
+,Female,TV,Poor Sleep,4.38
+,Female,TV,Poor Sleep,6.63
+,Female,Laptop,Poor Sleep,5.13
+,Female,TV,Poor Sleep,4.51
+,Female,Smartphone,Poor Sleep,4.79
+,Male,Laptop,Poor Sleep,3.17
+,Male,Smartphone,Poor Sleep,4.23
+,Male,Smartphone,Poor Sleep,5.02
+,Female,TV,Poor Sleep,5.94
+,Female,TV,Poor Sleep,6.07
+,Male,Smartphone,Poor Sleep,3.53
+,Female,Smartphone,Poor Sleep,6.9
+,Male,TV,Poor Sleep,4.05
+,Female,TV,Poor Sleep,7.44
+,Female,TV,Poor Sleep,4.44
+,Female,Tablet,Poor Sleep,3.4
+,Male,Smartphone,Poor Sleep,5.45
+,Male,TV,Poor Sleep,6.3
+,Male,Smartphone,Poor Sleep,4.16
+,Male,Smartphone,Poor Sleep,3.71
+,Male,Tablet,Poor Sleep,4.69
+,Female,Tablet,Poor Sleep,3.36
+,Female,Smartphone,Poor Sleep,5.95
+,Male,TV,Poor Sleep,3.93
+,Female,Tablet,Poor Sleep,5.75
+,Male,Laptop,Poor Sleep,4.05
+,Female,Smartphone,Poor Sleep,6.01
+,Female,Tablet,Poor Sleep,3.01
+,Male,TV,Poor Sleep,3.86
+,Male,Tablet,Poor Sleep,4.4
+,Female,Smartphone,Poor Sleep,6.52
+,Female,Smartphone,Poor Sleep,4.92
+,Female,Laptop,Poor Sleep,5.43
+,Female,Smartphone,Poor Sleep,4.43
+,Female,Laptop,Poor Sleep,5.77
+,Male,Smartphone,Poor Sleep,4.73
+,Female,TV,Poor Sleep,3.88
+,Male,Smartphone,Poor Sleep,4.48
+,Female,TV,Poor Sleep,5.54
+,Female,Smartphone,Poor Sleep,9.71
+,Male,TV,Poor Sleep,4.52
+,Female,Smartphone,Poor Sleep,4.79
+,Female,Tablet,Poor Sleep,3.56
+,Male,Tablet,Poor Sleep,10.49
+,Male,Laptop,Poor Sleep,4.91
+,Male,Smartphone,Poor Sleep,4.76
+,Male,Smartphone,Poor Sleep,5.34
+,Female,Laptop,Poor Sleep,4.32
+,Male,TV,Poor Sleep,5.98
+,Male,Smartphone,Poor Sleep,3.48
+,Female,Smartphone,Poor Sleep,7.45
+,Female,Smartphone,Poor Sleep,7.53
+,Female,TV,Poor Sleep,5.54
+,Male,Smartphone,Poor Sleep,6.0
+,Female,Smartphone,Poor Sleep,4.9
+,Male,Smartphone,Poor Sleep,3.99
+,Female,Tablet,Poor Sleep,7.25
+,Female,Smartphone,Poor Sleep,4.29
+,Male,Tablet,Poor Sleep,5.34
+,Female,Laptop,Poor Sleep,3.04
+,Male,Tablet,Poor Sleep,7.38
+,Male,Smartphone,Poor Sleep,4.98
+,Female,Smartphone,Poor Sleep,3.2
+,Female,Tablet,Poor Sleep,5.06
+,Male,TV,Poor Sleep,3.58
+,Female,TV,Poor Sleep,6.41
+,Male,TV,Poor Sleep,5.7
+,Male,TV,Poor Sleep,4.0
+,Male,Smartphone,Poor Sleep,5.77
+,Female,TV,Poor Sleep,5.01
+,Male,Smartphone,Poor Sleep,4.64
+,Male,Laptop,Poor Sleep,4.56
+,Male,Laptop,Poor Sleep,4.04
+,Female,Tablet,Poor Sleep,6.62
+,Male,Smartphone,Poor Sleep,4.92
+,Male,Tablet,Poor Sleep,4.2
+,Male,TV,Poor Sleep,6.55
+,Male,Smartphone,Poor Sleep,4.85
+,Male,Smartphone,Poor Sleep,4.51
+,Male,Smartphone,Poor Sleep,4.83
+,Female,Laptop,Poor Sleep,4.67
+,Female,Laptop,Poor Sleep,4.79
+,Male,Smartphone,Poor Sleep,4.34
+,Female,Laptop,Poor Sleep,3.1
+,Male,Smartphone,Poor Sleep,3.64
+,Female,Tablet,Poor Sleep,5.52
+,Female,TV,Poor Sleep,4.94
+,Male,Smartphone,Poor Sleep,4.31
+,Male,Smartphone,Poor Sleep,4.52
+,Male,Smartphone,Poor Sleep,3.73
+,Female,Laptop,Poor Sleep,3.8
+,Female,TV,Poor Sleep,5.25
+,Male,Smartphone,Poor Sleep,4.23
+,Female,Smartphone,Poor Sleep,11.33
+,Female,Tablet,Poor Sleep,5.63
+,Male,Smartphone,Poor Sleep,4.18
+,Female,TV,Poor Sleep,3.26
+,Male,TV,Poor Sleep,8.84
+,Female,Laptop,Poor Sleep,4.6
+,Male,TV,Poor Sleep,5.59
+,Female,Laptop,Poor Sleep,5.05
+,Male,Laptop,Poor Sleep,3.44
+,Female,TV,Poor Sleep,4.67
+,Female,TV,Poor Sleep,5.16
+,Female,Smartphone,Poor Sleep,4.05
+,Female,Smartphone,Poor Sleep,5.41
+,Male,TV,Poor Sleep,4.15
+,Female,TV,Poor Sleep,4.21
+,Female,TV,Poor Sleep,5.96
+,Male,Laptop,Poor Sleep,5.4
+,Male,Tablet,Poor Sleep,5.88
+,Female,Laptop,Poor Sleep,4.56
+,Female,TV,Poor Sleep,6.03
+,Male,TV,Poor Sleep,4.9
+,Female,Smartphone,Poor Sleep,4.25
+,Female,Smartphone,Poor Sleep,5.57
+,Female,TV,Poor Sleep,4.31
+,Male,Tablet,Poor Sleep,8.2
+,Female,Laptop,Poor Sleep,4.03
+,Female,Laptop,Poor Sleep,3.84
+,Female,Laptop,Poor Sleep,4.96
+,Male,Smartphone,Poor Sleep,3.24
+,Male,TV,Poor Sleep,4.34
+,Male,Smartphone,Poor Sleep,5.15
+,Male,Smartphone,Poor Sleep,3.56
+,Female,Smartphone,Poor Sleep,6.02
+,Female,Laptop,Poor Sleep,4.86
+,Male,Smartphone,Poor Sleep,5.8
+,Female,TV,Poor Sleep,4.49
+,Male,TV,Poor Sleep,4.42
+,Male,Smartphone,Poor Sleep,3.42
+,Female,Laptop,Poor Sleep,4.54
+,Male,Laptop,Poor Sleep,5.58
+,Male,Laptop,Poor Sleep,3.06
+,Female,TV,Poor Sleep,4.97
+,Male,TV,Poor Sleep,6.95
+,Male,TV,Poor Sleep,5.73
+,Male,Laptop,Poor Sleep,5.13
+,Male,Smartphone,Poor Sleep,6.51
+,Male,Laptop,Poor Sleep,5.42
+,Male,Smartphone,Poor Sleep,4.83
+,Female,Tablet,Poor Sleep,6.35
+,Female,Tablet,Poor Sleep,4.18
+,Female,Laptop,Poor Sleep,3.73
+,Female,Smartphone,Poor Sleep,7.04
+,Male,Smartphone,Poor Sleep,4.26
+,Male,Smartphone,Poor Sleep,3.81
+,Female,TV,Poor Sleep,5.93
+,Male,Tablet,Poor Sleep,3.54
+,Female,Smartphone,Poor Sleep,5.1
+,Male,Laptop,Poor Sleep,5.41
+,Female,TV,Poor Sleep,6.18
+,Female,Smartphone,Poor Sleep,4.82
+,Male,Smartphone,Poor Sleep,5.88
+,Female,TV,Poor Sleep,6.58
+,Male,Smartphone,Poor Sleep,3.47
+,Female,Laptop,Poor Sleep,5.24
+,Male,TV,Poor Sleep,4.88
+,Female,Laptop,Poor Sleep,4.94
+,Male,Smartphone,Poor Sleep,4.9
+,Male,Laptop,Poor Sleep,4.02
+,Male,Smartphone,Poor Sleep,4.68
+,Female,Tablet,Poor Sleep,5.36
+,Female,Smartphone,Poor Sleep,4.93
+,Female,Smartphone,Poor Sleep,3.45
+,Female,Tablet,Poor Sleep,3.45
+,Female,Smartphone,Poor Sleep,4.34
+,Male,Laptop,Poor Sleep,3.63
+,Male,Smartphone,Poor Sleep,4.06
+,Male,Smartphone,Poor Sleep,3.24
+,Female,TV,Poor Sleep,4.09
+,Male,Smartphone,Poor Sleep,4.04
+,Female,Tablet,Poor Sleep,3.57
+,Female,Laptop,Poor Sleep,5.27
+,Female,TV,Poor Sleep,3.65
+,Female,Smartphone,Poor Sleep,8.18
+,Male,Smartphone,Poor Sleep,6.47
+,Male,Smartphone,Poor Sleep,4.03
+,Female,Smartphone,Poor Sleep,7.16
+,Female,TV,Poor Sleep,5.49
+,Female,Smartphone,Poor Sleep,5.87
+,Male,Smartphone,Poor Sleep,3.79
+,Female,Laptop,Poor Sleep,3.57
+,Male,TV,Poor Sleep,3.74
+,Male,TV,Poor Sleep,4.83
+,Male,TV,Poor Sleep,4.17
+,Female,Smartphone,Poor Sleep,4.53
+,Male,TV,Poor Sleep,3.06
+,Female,Smartphone,Poor Sleep,4.87
+,Female,Smartphone,Poor Sleep,3.97
+,Female,TV,Poor Sleep,9.92
+,Female,Smartphone,Poor Sleep,3.85
+,Male,Smartphone,Poor Sleep,3.88
+,Male,Laptop,Poor Sleep,3.53
+,Male,Smartphone,Poor Sleep,4.79
+,Female,Smartphone,Poor Sleep,4.16
+,Female,Smartphone,Poor Sleep,3.28
+,Female,Tablet,Poor Sleep,5.45
+,Male,Laptop,Poor Sleep,4.86
+,Female,TV,Poor Sleep,3.67
+,Female,Smartphone,Poor Sleep,6.06
+,Female,TV,Poor Sleep,3.5
+,Female,Tablet,Poor Sleep,5.97
+,Female,Smartphone,Poor Sleep,4.45
+,Male,Smartphone,Poor Sleep,4.21
+,Male,Smartphone,Poor Sleep,5.6
+,Female,Smartphone,Poor Sleep,4.31
+,Male,Laptop,Poor Sleep,3.99
+,Male,Tablet,Poor Sleep,3.21
+,Male,TV,Poor Sleep,3.5
+,Male,Smartphone,Poor Sleep,5.91
+,Female,Tablet,Poor Sleep,5.58
+,Male,Smartphone,Poor Sleep,3.19
+,Female,Tablet,Poor Sleep,8.03
+,Male,TV,Poor Sleep,4.75
+,Female,Tablet,Poor Sleep,6.41
+,Female,Laptop,Poor Sleep,3.81
+,Male,Tablet,Poor Sleep,8.92
+,Male,Smartphone,Poor Sleep,4.78
+,Female,TV,Poor Sleep,11.02
+,Female,Laptop,Poor Sleep,6.71
+,Female,Smartphone,Poor Sleep,7.97
+,Female,Smartphone,Poor Sleep,4.62
+,Male,Smartphone,Poor Sleep,5.62
+,Male,Smartphone,Poor Sleep,6.4
+,Male,Smartphone,Poor Sleep,3.17
+,Female,Smartphone,Poor Sleep,4.03
+,Male,TV,Poor Sleep,4.67
+,Male,Smartphone,Poor Sleep,4.81
+,Male,TV,Poor Sleep,11.22
+,Male,TV,Poor Sleep,5.72
+,Female,Smartphone,Poor Sleep,3.91
+,Male,TV,Poor Sleep,3.36
+,Male,Smartphone,Poor Sleep,3.12
+,Male,TV,Poor Sleep,3.39
+,Male,Laptop,Poor Sleep,4.54
+,Male,Smartphone,Poor Sleep,3.57
+,Male,Laptop,Poor Sleep,5.25
+,Female,Tablet,Poor Sleep,4.95
+,Male,Tablet,Poor Sleep,7.19
+,Female,Smartphone,Poor Sleep,6.61
+,Male,Smartphone,Poor Sleep,4.75
+,Female,Tablet,Poor Sleep,5.58
+,Male,Tablet,Poor Sleep,5.11
+,Male,Laptop,Poor Sleep,5.07
+,Female,Laptop,Poor Sleep,5.21
+,Male,Smartphone,Poor Sleep,3.21
+,Female,Smartphone,Poor Sleep,3.36
+,Male,Smartphone,Poor Sleep,5.86
+,Male,TV,Poor Sleep,4.33
+,Female,Smartphone,Poor Sleep,3.21
+,Male,Tablet,Poor Sleep,5.72
+,Male,Smartphone,Poor Sleep,3.12
+,Female,Laptop,Poor Sleep,7.29
+,Male,Smartphone,Poor Sleep,4.32
+,Female,Smartphone,Poor Sleep,4.12
+,Male,Laptop,Poor Sleep,5.23
+,Female,Tablet,Poor Sleep,6.38
+,Male,Tablet,Poor Sleep,7.46
+,Female,Smartphone,Poor Sleep,4.93
+,Male,Smartphone,Poor Sleep,4.85
+,Female,Smartphone,Poor Sleep,5.06
+,Male,Smartphone,Poor Sleep,3.35
+,Male,Smartphone,Poor Sleep,3.67
+,Male,Smartphone,Poor Sleep,4.58
+,Male,TV,Poor Sleep,3.95
+,Male,Laptop,Poor Sleep,6.38
+,Female,TV,Poor Sleep,5.02
+,Male,TV,Poor Sleep,4.39
+,Male,TV,Poor Sleep,3.4
+,Female,Smartphone,Poor Sleep,7.68
+,Male,Smartphone,Poor Sleep,3.2
+,Male,Tablet,Poor Sleep,4.33
+,Male,TV,Poor Sleep,4.41
+,Female,Laptop,Poor Sleep,4.7
+,Female,TV,Poor Sleep,4.96
+,Female,Laptop,Poor Sleep,5.85
+,Female,Tablet,Poor Sleep,4.42
+,Male,Laptop,Poor Sleep,7.21
+,Male,Laptop,Poor Sleep,3.04
+,Male,Smartphone,Poor Sleep,5.22
+,Female,Smartphone,Poor Sleep,4.63
+,Female,Laptop,Poor Sleep,5.11
+,Male,Tablet,Poor Sleep,5.48
+,Male,Smartphone,Poor Sleep,5.69
+,Female,Smartphone,Poor Sleep,4.72
+,Female,Smartphone,Poor Sleep,3.18
+,Male,Smartphone,Poor Sleep,4.54
+,Male,Smartphone,Poor Sleep,7.52
+,Female,Smartphone,Poor Sleep,3.42
+,Female,TV,Poor Sleep,4.32
+,Female,Smartphone,Poor Sleep,5.02
+,Male,TV,Poor Sleep,4.76
+,Female,Smartphone,Poor Sleep,5.99
+,Male,Smartphone,Poor Sleep,3.5
+,Female,Smartphone,Poor Sleep,4.27
+,Male,Smartphone,Poor Sleep,4.72
+,Male,Smartphone,Poor Sleep,3.41
+,Male,Laptop,Poor Sleep,3.65
+,Female,Laptop,Poor Sleep,5.52
+,Female,Smartphone,Poor Sleep,6.59
+,Male,Laptop,Poor Sleep,4.03
+,Female,Laptop,Poor Sleep,4.55
+,Male,TV,Poor Sleep,3.38
+,Female,Tablet,Poor Sleep,4.05
+,Female,Laptop,Poor Sleep,5.15
+,Female,TV,Poor Sleep,5.64
+,Male,Laptop,Poor Sleep,3.39
+,Male,TV,Poor Sleep,5.01
+,Female,Laptop,Poor Sleep,5.5
+,Female,TV,Poor Sleep,6.15
+,Female,Smartphone,Poor Sleep,6.17
+,Female,TV,Poor Sleep,4.95
+,Male,Laptop,Poor Sleep,4.49
+,Male,Smartphone,Poor Sleep,5.06
+,Female,TV,Poor Sleep,5.4
+,Male,Smartphone,Poor Sleep,8.75
+,Male,TV,Poor Sleep,6.17
+,Male,Smartphone,Poor Sleep,6.56
+,Female,TV,Poor Sleep,4.4
+,Female,TV,Poor Sleep,3.55
+,Male,TV,Poor Sleep,4.03
+,Male,Laptop,Poor Sleep,5.18
+,Male,TV,Poor Sleep,5.28
+,Male,Smartphone,Poor Sleep,3.76
+,Female,Smartphone,Poor Sleep,5.18
+,Male,Smartphone,Poor Sleep,3.91
+,Male,Smartphone,Poor Sleep,4.04
+,Female,Smartphone,Poor Sleep,4.42
+,Female,TV,Poor Sleep,4.73
+,Female,Tablet,Poor Sleep,3.21
+,Female,Laptop,Poor Sleep,4.81
+,Male,Laptop,Poor Sleep,3.7
+,Male,Laptop,Poor Sleep,5.61
+,Male,Laptop,Poor Sleep,5.39
+,Female,TV,Poor Sleep,3.7
+,Male,Smartphone,Poor Sleep,5.19
+,Female,Tablet,Poor Sleep,4.02
+,Female,Smartphone,Poor Sleep,4.28
+,Female,Smartphone,Poor Sleep,6.58
+,Male,Smartphone,Poor Sleep,4.19
+,Male,Tablet,Poor Sleep,3.27
+,Male,Smartphone,Poor Sleep,4.32
+,Female,Tablet,Poor Sleep,4.57
+,Female,TV,Poor Sleep,4.5
+,Male,Tablet,Poor Sleep,3.28
+,Female,TV,Poor Sleep,6.53
+,Female,Laptop,Poor Sleep,3.74
+,Male,Tablet,Poor Sleep,9.35
+,Male,Smartphone,Poor Sleep,5.74
+,Female,TV,Poor Sleep,7.27
+,Female,Smartphone,Poor Sleep,4.73
+,Male,Smartphone,Poor Sleep,6.45
+,Male,Smartphone,Poor Sleep,4.87
+,Male,Smartphone,Poor Sleep,4.06
+,Female,TV,Poor Sleep,10.49
+,Male,Smartphone,Poor Sleep,6.99
+,Male,Laptop,Poor Sleep,3.53
+,Female,Smartphone,Poor Sleep,6.29
+,Female,Smartphone,Poor Sleep,4.07
+,Male,Laptop,Poor Sleep,3.43
+,Male,TV,Poor Sleep,5.11
+,Male,Tablet,Poor Sleep,6.33
+,Female,Laptop,Poor Sleep,4.83
+,Male,Smartphone,Poor Sleep,4.93
+,Male,Laptop,Poor Sleep,3.79
+,Female,Smartphone,Poor Sleep,3.25
+,Male,Smartphone,Poor Sleep,4.32
+,Female,Laptop,Poor Sleep,4.21
+,Female,TV,Poor Sleep,7.24
+,Male,Smartphone,Poor Sleep,6.53
+,Male,Smartphone,Poor Sleep,6.96
+,Male,Smartphone,Poor Sleep,4.75
+,Male,Smartphone,Poor Sleep,6.57
+,Female,Tablet,Poor Sleep,3.93
+,Male,Smartphone,Poor Sleep,4.25
+,Female,Smartphone,Poor Sleep,4.44
+,Female,Tablet,Poor Sleep,3.55
+,Female,Smartphone,Poor Sleep,3.85
+,Female,Smartphone,Poor Sleep,4.92
+,Male,Tablet,Poor Sleep,6.32
+,Male,TV,Poor Sleep,4.19
+,Female,TV,Poor Sleep,3.57
+,Female,Smartphone,Poor Sleep,3.25
+,Female,Tablet,Poor Sleep,4.8
+,Female,Laptop,Poor Sleep,4.3
+,Female,Smartphone,Poor Sleep,3.45
+,Male,Smartphone,Poor Sleep,7.37
+,Female,Smartphone,Poor Sleep,4.48
+,Female,Smartphone,Poor Sleep,3.9
+,Male,Smartphone,Poor Sleep,6.05
+,Male,Tablet,Poor Sleep,4.94
+,Male,TV,Poor Sleep,6.27
+,Female,TV,Poor Sleep,3.12
+,Male,TV,Poor Sleep,5.82
+,Female,Smartphone,Poor Sleep,3.92
+,Male,Tablet,Poor Sleep,5.16
+,Male,TV,Poor Sleep,3.66
+,Female,Smartphone,Poor Sleep,4.8
+,Male,TV,Poor Sleep,6.6
+,Male,Laptop,Poor Sleep,5.29
+,Female,Smartphone,Poor Sleep,4.59
+,Female,TV,Poor Sleep,4.51
+,Female,TV,Poor Sleep,3.57
+,Female,Smartphone,Poor Sleep,6.67
+,Female,Smartphone,Poor Sleep,3.02
+,Male,Tablet,Poor Sleep,7.17
+,Male,Smartphone,Poor Sleep,3.01
+,Female,TV,Poor Sleep,3.26
+,Female,Tablet,Poor Sleep,4.18
+,Male,Smartphone,Poor Sleep,3.67
+,Female,TV,Poor Sleep,4.86
+,Female,Tablet,Poor Sleep,6.66
+,Female,TV,Poor Sleep,5.5
+,Female,Laptop,Poor Sleep,4.46
+,Male,Smartphone,Poor Sleep,4.26
+,Male,TV,Poor Sleep,6.21
+,Male,Smartphone,Poor Sleep,4.85
+,Female,TV,Poor Sleep,5.34
+,Male,TV,Poor Sleep,7.46
+,Male,Tablet,Poor Sleep,4.48
+,Male,Smartphone,Poor Sleep,5.96
+,Female,Laptop,Poor Sleep,6.79
+,Female,Smartphone,Poor Sleep,3.24
+,Male,Tablet,Poor Sleep,3.58
+,Male,Tablet,Poor Sleep,5.88
+,Female,Smartphone,Poor Sleep,3.37
+,Male,Smartphone,Poor Sleep,3.18
+,Female,TV,Poor Sleep,3.42
+,Male,TV,Poor Sleep,7.83
+,Female,Laptop,Poor Sleep,4.41
+,Male,TV,Poor Sleep,8.04
+,Female,Smartphone,Poor Sleep,4.69
+,Male,Smartphone,Poor Sleep,4.61
+,Female,Smartphone,Poor Sleep,3.17
+,Female,TV,Poor Sleep,5.74
+,Female,TV,Poor Sleep,4.95
+,Male,TV,Poor Sleep,5.07
+,Female,Laptop,Poor Sleep,4.67
+,Female,Tablet,Poor Sleep,4.41
+,Male,Laptop,Poor Sleep,5.02
+,Female,TV,Poor Sleep,5.12
+,Male,TV,Poor Sleep,3.6
+,Male,TV,Poor Sleep,6.36
+,Female,TV,Poor Sleep,7.33
+,Female,Smartphone,Poor Sleep,4.16
+,Male,Smartphone,Poor Sleep,4.32
+,Male,Laptop,Poor Sleep,3.68
+,Female,Smartphone,Poor Sleep,6.74
+,Male,Smartphone,Poor Sleep,5.76
+,Male,Smartphone,Poor Sleep,5.85
+,Male,TV,Poor Sleep,3.23
+,Male,TV,Poor Sleep,5.23
+,Female,TV,Poor Sleep,6.73
+,Female,Smartphone,Poor Sleep,5.0
+,Female,Smartphone,Poor Sleep,5.15
+,Male,TV,Poor Sleep,5.91
+,Female,Smartphone,Poor Sleep,7.92
+,Female,Laptop,Poor Sleep,6.14
+,Female,Tablet,Poor Sleep,3.13
+,Female,Smartphone,Poor Sleep,3.73
+,Male,Laptop,Poor Sleep,4.47
+,Male,TV,Poor Sleep,4.86
+,Female,Laptop,Poor Sleep,6.87
+,Female,Smartphone,Poor Sleep,6.89
+,Female,Smartphone,Poor Sleep,3.61
+,Female,Tablet,Poor Sleep,3.31
+,Female,TV,Poor Sleep,4.15
+,Male,Smartphone,Poor Sleep,5.34
+,Male,Smartphone,Poor Sleep,5.62
+,Male,Smartphone,Poor Sleep,3.75
+,Male,Smartphone,Poor Sleep,4.19
+,Male,TV,Poor Sleep,8.46
+,Female,Smartphone,Poor Sleep,4.97
+,Female,Smartphone,Poor Sleep,5.54
+,Male,Smartphone,Poor Sleep,5.22
+,Male,Tablet,Poor Sleep,4.24
+,Female,Smartphone,Poor Sleep,6.25
+,Female,Laptop,Poor Sleep,6.09
+,Male,Tablet,Poor Sleep,4.46
+,Male,Tablet,Poor Sleep,4.78
+,Female,Smartphone,Poor Sleep,4.81
+,Female,TV,Poor Sleep,6.06
+,Male,Smartphone,Poor Sleep,7.72
+,Female,TV,Poor Sleep,4.78
+,Male,Smartphone,Poor Sleep,4.08
+,Male,Tablet,Poor Sleep,3.85
+,Male,TV,Poor Sleep,3.15
+,Female,Tablet,Poor Sleep,4.2
+,Male,TV,Poor Sleep,3.91
+,Male,TV,Poor Sleep,3.38
+,Female,Tablet,Poor Sleep,3.95
+,Female,Tablet,Poor Sleep,5.72
+,Male,Smartphone,Poor Sleep,4.19
+,Male,Smartphone,Poor Sleep,3.76
+,Male,TV,Poor Sleep,3.12
+,Male,TV,Poor Sleep,5.38
+,Male,Smartphone,Poor Sleep,3.77
+,Female,Smartphone,Poor Sleep,5.75
+,Male,TV,Poor Sleep,5.78
+,Female,Smartphone,Poor Sleep,4.02
+,Male,TV,Poor Sleep,5.97
+,Male,Smartphone,Poor Sleep,4.21
+,Female,Laptop,Poor Sleep,4.61
+,Male,Smartphone,Poor Sleep,4.05
+,Female,Smartphone,Poor Sleep,3.85
+,Male,TV,Poor Sleep,3.13
+,Male,Smartphone,Poor Sleep,3.84
+,Female,TV,Poor Sleep,4.91
+,Female,TV,Poor Sleep,3.41
+,Male,TV,Poor Sleep,7.5
+,Male,Smartphone,Poor Sleep,5.96
+,Female,Smartphone,Poor Sleep,7.4
+,Male,Laptop,Poor Sleep,4.06
+,Male,Smartphone,Poor Sleep,3.13
+,Male,TV,Poor Sleep,3.48
+,Female,Tablet,Poor Sleep,3.23
+,Male,Tablet,Poor Sleep,5.16
+,Female,Smartphone,Poor Sleep,4.01
+,Female,Smartphone,Poor Sleep,5.1
+,Female,Smartphone,Poor Sleep,4.01
+,Female,TV,Poor Sleep,5.73
+,Female,TV,Poor Sleep,9.17
+,Female,Tablet,Poor Sleep,6.68
+,Female,Tablet,Poor Sleep,4.99
+,Female,Laptop,Poor Sleep,5.27
+,Male,TV,Poor Sleep,5.84
+,Female,Smartphone,Poor Sleep,5.19
+,Male,Smartphone,Poor Sleep,4.22
+,Male,Laptop,Poor Sleep,5.6
+,Female,Smartphone,Poor Sleep,4.72
+,Male,TV,Poor Sleep,3.42
+,Male,Smartphone,Poor Sleep,5.56
+,Female,TV,Poor Sleep,4.51
+,Male,TV,Poor Sleep,10.21
+,Female,Smartphone,Poor Sleep,3.01
+,Male,Smartphone,Poor Sleep,4.56
+,Male,Smartphone,Poor Sleep,4.87
+,Female,Smartphone,Poor Sleep,6.69
+,Male,Smartphone,Poor Sleep,3.4
+,Female,TV,Poor Sleep,5.63
+,Male,Tablet,Poor Sleep,3.39
+,Female,Laptop,Poor Sleep,3.91
+,Male,Smartphone,Poor Sleep,4.05
+,Female,TV,Poor Sleep,4.77
+,Male,Smartphone,Poor Sleep,5.4
+,Female,TV,Poor Sleep,4.2
+,Male,Laptop,Poor Sleep,3.94
+,Female,TV,Poor Sleep,4.79
+,Male,Laptop,Poor Sleep,3.02
+,Female,Smartphone,Poor Sleep,4.02
+,Male,Smartphone,Poor Sleep,4.23
+,Male,Smartphone,Poor Sleep,5.4
+,Male,Tablet,Poor Sleep,6.21
+,Female,Smartphone,Poor Sleep,4.73
+,Female,Smartphone,Poor Sleep,3.73
+,Female,TV,Poor Sleep,3.87
+,Female,Smartphone,Poor Sleep,3.63
+,Male,Smartphone,Poor Sleep,6.33
+,Male,Smartphone,Poor Sleep,5.03
+,Female,Smartphone,Poor Sleep,3.49
+,Male,Laptop,Poor Sleep,3.46
+,Female,Laptop,Poor Sleep,3.16
+,Female,Tablet,Poor Sleep,7.69
+,Female,Smartphone,Poor Sleep,5.95
+,Male,Smartphone,Poor Sleep,4.9
+,Female,Laptop,Poor Sleep,4.35
+,Female,Smartphone,Poor Sleep,7.32
+,Male,Smartphone,Poor Sleep,4.93
+,Female,TV,Poor Sleep,8.67
+,Female,Smartphone,Poor Sleep,5.8
+,Female,Smartphone,Poor Sleep,4.04
+,Male,Laptop,Poor Sleep,4.5
+,Male,TV,Poor Sleep,7.18
+,Male,Smartphone,Poor Sleep,7.39
+,Male,Tablet,Poor Sleep,3.11
+,Male,Laptop,Poor Sleep,6.53
+,Male,TV,Poor Sleep,3.91
+,Female,Laptop,Poor Sleep,4.53
+,Female,TV,Poor Sleep,4.55
+,Male,Tablet,Poor Sleep,4.61
+,Female,Smartphone,Poor Sleep,3.22
+,Female,Tablet,Poor Sleep,5.25
+,Female,Smartphone,Poor Sleep,3.51
+,Female,Smartphone,Poor Sleep,5.23
+,Male,TV,Poor Sleep,6.15
+,Male,Smartphone,Poor Sleep,4.06
+,Female,Laptop,Poor Sleep,4.58
+,Female,TV,Poor Sleep,5.11
+,Female,Smartphone,Poor Sleep,6.47
+,Female,TV,Poor Sleep,4.43
+,Male,Smartphone,Poor Sleep,5.82
+,Male,Laptop,Poor Sleep,6.78
+,Male,Smartphone,Poor Sleep,4.66
+,Male,Smartphone,Poor Sleep,4.64
+,Female,Tablet,Poor Sleep,4.6
+,Male,Smartphone,Poor Sleep,7.28
+,Female,Smartphone,Poor Sleep,4.92
+,Female,Smartphone,Poor Sleep,5.54
+,Male,TV,Poor Sleep,3.84
+,Female,TV,Poor Sleep,6.86
+,Male,Smartphone,Poor Sleep,6.41
+,Female,Smartphone,Poor Sleep,8.25
+,Female,Smartphone,Poor Sleep,3.76
+,Female,Smartphone,Poor Sleep,5.48
+,Female,Smartphone,Poor Sleep,3.3
+,Female,Laptop,Poor Sleep,4.3
+,Female,Laptop,Poor Sleep,4.29
+,Male,TV,Poor Sleep,6.24
+,Female,Smartphone,Poor Sleep,4.09
+,Female,TV,Poor Sleep,3.57
+,Female,Laptop,Poor Sleep,6.63
+,Male,Smartphone,Poor Sleep,5.2
+,Female,TV,Poor Sleep,8.08
+,Male,TV,Poor Sleep,5.31
+,Female,Smartphone,Poor Sleep,5.19
+,Male,Smartphone,Poor Sleep,4.59
+,Male,Tablet,Poor Sleep,6.3
+,Male,Smartphone,Poor Sleep,3.75
+,Female,Smartphone,Poor Sleep,4.96
+,Female,TV,Poor Sleep,5.27
+,Female,Smartphone,Poor Sleep,3.43
+,Female,Smartphone,Poor Sleep,4.56
+,Female,Smartphone,Poor Sleep,4.37
+,Female,Smartphone,Poor Sleep,5.53
+,Female,TV,Poor Sleep,4.49
+,Male,Smartphone,Poor Sleep,5.9
+,Male,Tablet,Poor Sleep,3.4
+,Female,TV,Poor Sleep,5.09
+,Female,Smartphone,Poor Sleep,3.56
+,Female,Tablet,Poor Sleep,3.56
+,Male,TV,Poor Sleep,5.44
+,Female,Tablet,Poor Sleep,4.54
+,Female,Laptop,Poor Sleep,4.49
+,Male,Laptop,Poor Sleep,6.49
+,Female,Laptop,Poor Sleep,5.83
+,Male,Laptop,Poor Sleep,3.71
+,Male,Laptop,Poor Sleep,5.04
+,Female,TV,Poor Sleep,5.38
+,Female,TV,Poor Sleep,3.97
+,Male,Laptop,Poor Sleep,5.04
+,Male,Laptop,Poor Sleep,4.34
+,Female,Laptop,Poor Sleep,5.56
+,Male,Smartphone,Poor Sleep,3.47
+,Female,Tablet,Poor Sleep,5.33
+,Male,Smartphone,Poor Sleep,4.14
+,Female,Tablet,Poor Sleep,3.92
+,Male,Smartphone,Poor Sleep,6.94
+,Female,Laptop,Poor Sleep,5.4
+,Male,TV,Poor Sleep,4.74
+,Male,TV,Poor Sleep,4.4
+,Female,Smartphone,Poor Sleep,3.7
+,Female,TV,Poor Sleep,6.98
+,Male,TV,Poor Sleep,3.18
+,Female,TV,Poor Sleep,4.56
+,Female,TV,Poor Sleep,8.04
+,Male,TV,Poor Sleep,4.03
+,Male,TV,Poor Sleep,5.71
+,Male,Smartphone,Poor Sleep,5.76
+,Male,TV,Poor Sleep,4.68
+,Female,Laptop,Poor Sleep,3.8
+,Female,Laptop,Poor Sleep,4.62
+,Female,Smartphone,Poor Sleep,3.86
+,Female,Tablet,Poor Sleep,4.13
+,Female,Smartphone,Poor Sleep,6.08
+,Male,Laptop,Poor Sleep,3.92
+,Female,Smartphone,Poor Sleep,4.97
+,Female,TV,Poor Sleep,4.73
+,Male,Laptop,Poor Sleep,5.19
+,Female,Laptop,Poor Sleep,5.96
+,Male,TV,Poor Sleep,4.62
+,Male,TV,Poor Sleep,5.91
+,Male,Smartphone,Poor Sleep,4.27
+,Male,Smartphone,Poor Sleep,5.05
+,Female,Laptop,Poor Sleep,7.7
+,Male,Smartphone,Poor Sleep,4.97
+,Female,TV,Poor Sleep,3.85
+,Female,TV,Poor Sleep,4.59
+,Female,Smartphone,Poor Sleep,3.62
+,Female,TV,Poor Sleep,5.89
+,Male,Tablet,Poor Sleep,3.66
+,Female,TV,Poor Sleep,3.68
+,Male,Smartphone,Poor Sleep,9.58
+,Male,Smartphone,Poor Sleep,5.05
+,Male,TV,Poor Sleep,5.61
+,Male,TV,Poor Sleep,3.04
+,Female,Smartphone,Poor Sleep,3.86
+,Male,Laptop,Poor Sleep,5.23
+,Male,Smartphone,Poor Sleep,6.12
+,Male,Smartphone,Poor Sleep,3.97
+,Female,Smartphone,Poor Sleep,3.57
+,Female,Smartphone,Poor Sleep,6.14
+,Female,Tablet,Poor Sleep,4.67
+,Male,Tablet,Poor Sleep,4.2
+,Male,TV,Poor Sleep,4.64
+,Male,Smartphone,Poor Sleep,5.87
+,Female,Smartphone,Poor Sleep,3.96
+,Male,Smartphone,Poor Sleep,4.03
+,Male,Tablet,Poor Sleep,5.78
+,Female,Smartphone,Poor Sleep,6.36
+,Female,TV,Poor Sleep,3.72
+,Female,Smartphone,Poor Sleep,3.34
+,Female,Smartphone,Poor Sleep,3.14
+,Female,Smartphone,Poor Sleep,4.15
+,Female,TV,Poor Sleep,3.49
+,Female,Laptop,Poor Sleep,4.04
+,Female,Smartphone,Poor Sleep,4.87
+,Female,Tablet,Poor Sleep,5.54
+,Male,Laptop,Poor Sleep,4.6
+,Female,Smartphone,Poor Sleep,5.86
+,Male,Smartphone,Poor Sleep,4.08
+,Female,TV,Poor Sleep,3.41
+,Male,Smartphone,Poor Sleep,6.41
+,Male,TV,Poor Sleep,6.03
+,Male,Smartphone,Poor Sleep,5.19
+,Female,Smartphone,Poor Sleep,4.43
+,Male,Smartphone,Poor Sleep,6.09
+,Male,Tablet,Poor Sleep,5.32
+,Female,TV,Poor Sleep,5.92
+,Male,Smartphone,Poor Sleep,3.68
+,Male,TV,Poor Sleep,5.75
+,Female,Laptop,Poor Sleep,5.09
+,Female,Smartphone,Poor Sleep,4.61
+,Male,Smartphone,Poor Sleep,5.65
+,Male,Laptop,Poor Sleep,3.76
+,Female,Laptop,Poor Sleep,3.62
+,Female,Smartphone,Poor Sleep,5.65
+,Male,TV,Poor Sleep,7.72
+,Male,Smartphone,Poor Sleep,4.18
+,Female,TV,Poor Sleep,4.7
+,Female,Smartphone,Poor Sleep,3.2
+,Male,Smartphone,Poor Sleep,6.94
+,Female,Smartphone,Poor Sleep,4.02
+,Male,Smartphone,Poor Sleep,3.82
+,Male,Smartphone,Poor Sleep,3.95
+,Male,TV,Poor Sleep,7.65
+,Male,Laptop,Poor Sleep,5.05
+,Male,TV,Poor Sleep,5.82
+,Male,TV,Poor Sleep,5.53
+,Female,TV,Poor Sleep,3.88
+,Male,Smartphone,Poor Sleep,5.86
+,Female,Laptop,Poor Sleep,4.91
+,Male,Smartphone,Poor Sleep,4.8
+,Female,Laptop,Poor Sleep,4.41
+,Male,Smartphone,Poor Sleep,4.63
+,Male,Laptop,Poor Sleep,6.14
+,Female,Smartphone,Poor Sleep,3.53
+,Female,Smartphone,Poor Sleep,3.44
+,Male,TV,Poor Sleep,3.81
+,Female,Laptop,Poor Sleep,5.64
+,Female,TV,Poor Sleep,4.21
+,Female,Laptop,Poor Sleep,4.63
+,Male,TV,Poor Sleep,4.57
+,Female,Smartphone,Poor Sleep,5.07
+,Male,Smartphone,Poor Sleep,5.75
+,Male,Laptop,Poor Sleep,5.11
+,Male,Smartphone,Poor Sleep,6.33
+,Male,TV,Poor Sleep,6.07
+,Female,Smartphone,Poor Sleep,5.3
+,Male,Tablet,Poor Sleep,4.89
+,Female,Smartphone,Poor Sleep,4.67
+,Female,TV,Poor Sleep,5.93
+,Male,Smartphone,Poor Sleep,7.25
+,Female,Smartphone,Poor Sleep,4.94
+,Female,Laptop,Poor Sleep,3.96
+,Female,Smartphone,Poor Sleep,3.47
+,Female,Laptop,Poor Sleep,6.92
+,Male,Smartphone,Poor Sleep,3.67
+,Female,Laptop,Poor Sleep,4.22
+,Male,Smartphone,Poor Sleep,5.01
+,Male,Smartphone,Poor Sleep,5.35
+,Female,TV,Poor Sleep,9.88
+,Male,Smartphone,Poor Sleep,4.41
+,Male,Tablet,Poor Sleep,4.71
+,Female,Smartphone,Poor Sleep,4.46
+,Female,Smartphone,Poor Sleep,3.57
+,Female,Laptop,Poor Sleep,3.23
+,Male,TV,Poor Sleep,7.26
+,Male,Smartphone,Poor Sleep,4.97
+,Female,TV,Poor Sleep,6.31
+,Female,Laptop,Poor Sleep,3.93
+,Male,Laptop,Poor Sleep,3.02
+,Female,Tablet,Poor Sleep,5.0
+,Female,Tablet,Poor Sleep,4.4
+,Female,Smartphone,Poor Sleep,3.75
+,Female,TV,Poor Sleep,5.36
+,Male,Smartphone,Poor Sleep,4.25
+,Male,Tablet,Poor Sleep,5.77
+,Female,Smartphone,Poor Sleep,4.57
+,Female,Tablet,Poor Sleep,4.85
+,Female,TV,Poor Sleep,9.73
+,Male,Smartphone,Poor Sleep,3.94
+,Female,TV,Poor Sleep,5.13
+,Female,TV,Poor Sleep,3.87
+,Female,Laptop,Poor Sleep,3.92
+,Male,Tablet,Poor Sleep,8.03
+,Male,Smartphone,Poor Sleep,3.36
+,Female,Smartphone,Poor Sleep,5.9
+,Male,Smartphone,Poor Sleep,3.3
+,Male,Tablet,Poor Sleep,3.69
+,Female,TV,Poor Sleep,8.63
+,Male,Laptop,Poor Sleep,6.32
+,Female,Smartphone,Poor Sleep,6.8
+,Female,Smartphone,Poor Sleep,5.14
+,Female,Laptop,Poor Sleep,3.61
+,Male,Smartphone,Poor Sleep,6.12
+,Male,Laptop,Poor Sleep,3.81
+,Female,Smartphone,Poor Sleep,5.52
+,Female,TV,Poor Sleep,5.97
+,Male,TV,Poor Sleep,4.65
+,Male,Smartphone,Poor Sleep,6.83
+,Male,Smartphone,Poor Sleep,10.2
+,Male,Smartphone,Poor Sleep,4.96
+,Male,Smartphone,Poor Sleep,5.98
+,Female,Smartphone,Poor Sleep,4.07
+,Female,TV,Poor Sleep,4.18
+,Female,Tablet,Poor Sleep,4.72
+,Female,TV,Poor Sleep,4.58
+,Female,Smartphone,Poor Sleep,4.45
+,Female,Laptop,Poor Sleep,5.55
+,Male,TV,Poor Sleep,3.95
+,Male,Laptop,Poor Sleep,3.58
+,Female,Smartphone,Poor Sleep,3.72
+,Female,Smartphone,Poor Sleep,4.82
+,Female,Laptop,Poor Sleep,4.43
+,Female,TV,Poor Sleep,4.92
+,Male,TV,Poor Sleep,6.76
+,Female,Tablet,Poor Sleep,3.59
+,Male,TV,Poor Sleep,4.47
+,Male,Laptop,Poor Sleep,3.91
+,Male,Smartphone,Poor Sleep,6.13
+,Female,Smartphone,Poor Sleep,6.21
+,Female,Laptop,Poor Sleep,5.8
+,Male,Smartphone,Poor Sleep,4.57
+,Female,TV,Poor Sleep,5.17
+,Female,Laptop,Poor Sleep,4.77
+,Male,Tablet,Poor Sleep,4.53
+,Female,Tablet,Poor Sleep,4.18
+,Male,Tablet,Poor Sleep,4.29
+,Male,TV,Poor Sleep,3.59
+,Male,Laptop,Poor Sleep,5.52
+,Female,Laptop,Poor Sleep,3.88
+,Female,Smartphone,Poor Sleep,4.62
+,Female,Tablet,Poor Sleep,4.93
+,Female,Smartphone,Poor Sleep,4.8
+,Female,Laptop,Poor Sleep,3.82
+,Female,Laptop,Poor Sleep,6.07
+,Male,Tablet,Poor Sleep,3.71
+,Male,TV,Poor Sleep,4.08
+,Male,Smartphone,Poor Sleep,3.77
+,Female,Laptop,Poor Sleep,4.49
+,Male,TV,Poor Sleep,3.95
+,Female,TV,Poor Sleep,7.81
+,Female,Tablet,Poor Sleep,5.64
+,Female,Tablet,Poor Sleep,9.65
+,Male,TV,Poor Sleep,4.56
+,Female,TV,Poor Sleep,3.61
+,Female,Smartphone,Poor Sleep,5.57
+,Female,Smartphone,Poor Sleep,6.51
+,Male,Tablet,Poor Sleep,5.24
+,Female,TV,Poor Sleep,9.29
+,Male,Smartphone,Poor Sleep,4.03
+,Female,Smartphone,Poor Sleep,5.69
+,Male,Laptop,Poor Sleep,4.82
+,Female,Smartphone,Poor Sleep,3.31
+,Female,Smartphone,Poor Sleep,4.81
+,Male,Smartphone,Poor Sleep,5.99
+,Female,Smartphone,Poor Sleep,3.37
+,Female,Laptop,Poor Sleep,3.87
+,Female,Laptop,Poor Sleep,4.3
+,Male,TV,Poor Sleep,3.03
+,Male,Smartphone,Poor Sleep,7.78
+,Male,Tablet,Poor Sleep,4.0
+,Male,TV,Poor Sleep,6.3
+,Male,Smartphone,Poor Sleep,4.92
+,Male,TV,Poor Sleep,4.88
+,Male,Smartphone,Poor Sleep,4.69
+,Female,Laptop,Poor Sleep,6.37
+,Female,Laptop,Poor Sleep,6.13
+,Female,TV,Poor Sleep,4.44
+,Female,Laptop,Poor Sleep,4.35
+,Female,Smartphone,Poor Sleep,6.23
+,Female,Tablet,Poor Sleep,4.95
+,Male,Laptop,Poor Sleep,3.19
+,Female,Tablet,Poor Sleep,6.34
+,Female,Smartphone,Poor Sleep,5.4
+,Female,TV,Poor Sleep,3.29
+,Female,TV,Poor Sleep,4.79
+,Male,TV,Poor Sleep,6.24
+,Male,Laptop,Poor Sleep,4.86
+,Female,Laptop,Poor Sleep,4.84
+,Male,Smartphone,Poor Sleep,5.73
+,Female,Smartphone,Poor Sleep,3.51
+,Male,Smartphone,Poor Sleep,4.85
+,Male,Laptop,Poor Sleep,5.45
+,Male,Smartphone,Poor Sleep,8.91
+,Female,TV,Poor Sleep,4.83
+,Male,Smartphone,Poor Sleep,4.48
+,Male,Laptop,Poor Sleep,3.38
+,Female,Smartphone,Poor Sleep,3.55
+,Male,Laptop,Poor Sleep,6.8
+,Male,Smartphone,Poor Sleep,4.23
+,Male,Laptop,Poor Sleep,3.36
+,Female,Smartphone,Poor Sleep,4.93
+,Female,Smartphone,Poor Sleep,4.22
+,Female,Laptop,Poor Sleep,4.06
+,Female,Laptop,Poor Sleep,4.62
+,Male,Smartphone,Poor Sleep,3.8
+,Male,Tablet,Poor Sleep,4.02
+,Female,Smartphone,Poor Sleep,4.03
+,Male,Smartphone,Poor Sleep,5.3
+,Female,Smartphone,Poor Sleep,5.8
+,Female,TV,Poor Sleep,3.83
+,Male,TV,Poor Sleep,3.75
+,Female,Smartphone,Poor Sleep,4.22
+,Female,Smartphone,Poor Sleep,5.27
+,Male,Smartphone,Poor Sleep,5.62
+,Male,Smartphone,Poor Sleep,5.22
+,Male,Tablet,Poor Sleep,5.32
+,Female,TV,Poor Sleep,5.69
+,Female,Smartphone,Poor Sleep,7.54
+,Female,Laptop,Poor Sleep,7.09
+,Male,TV,Poor Sleep,3.66
+,Male,Smartphone,Poor Sleep,6.62
+,Male,Smartphone,Poor Sleep,3.26
+,Female,Smartphone,Poor Sleep,4.43
+,Male,TV,Poor Sleep,5.6
+None,,,,
+,Female,Laptop,None,1.21
+,Male,TV,None,2.97
+,Male,TV,None,2.74
+,Female,TV,None,0.0
+,Female,Tablet,None,1.63
+,Male,Smartphone,None,4.96
+,Female,Smartphone,None,1.85
+,Male,Smartphone,None,0.31
+,Female,Smartphone,None,3.02
+,Male,Tablet,None,2.16
+,Female,Smartphone,None,1.63
+,Male,Smartphone,None,2.75
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,2.34
+,Male,Smartphone,None,2.85
+,Female,Smartphone,None,1.06
+,Male,Smartphone,None,2.83
+,Male,Smartphone,None,3.92
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,3.47
+,Male,Smartphone,None,2.3
+,Male,Laptop,None,4.5
+,Female,Laptop,None,2.65
+,Male,Laptop,None,5.34
+,Male,Tablet,None,0.9
+,Female,TV,None,3.3
+,Female,TV,None,2.69
+,Male,TV,None,4.23
+,Male,Laptop,None,3.41
+,Male,Smartphone,None,2.9
+,Female,Smartphone,None,5.43
+,Female,Smartphone,None,1.67
+,Female,Tablet,None,0.0
+,Male,TV,None,3.39
+,Female,Smartphone,None,1.36
+,Male,Smartphone,None,0.0
+,Male,TV,None,2.75
+,Female,Smartphone,None,6.4
+,Female,Smartphone,None,2.78
+,Female,Smartphone,None,0.45
+,Male,Smartphone,None,2.52
+,Male,Smartphone,None,6.04
+,Male,Smartphone,None,2.34
+,Male,Smartphone,None,4.98
+,Female,TV,None,5.02
+,Female,Smartphone,None,1.86
+,Female,Smartphone,None,6.48
+,Female,Smartphone,None,2.42
+,Male,Smartphone,None,3.75
+,Female,Smartphone,None,3.58
+,Female,TV,None,2.51
+,Female,Tablet,None,0.0
+,Male,Smartphone,None,4.08
+,Female,TV,None,4.41
+,Female,Smartphone,None,6.82
+,Female,TV,None,6.5
+,Male,Smartphone,None,2.48
+,Male,Smartphone,None,3.9
+,Female,TV,None,2.38
+,Female,Laptop,None,2.59
+,Male,TV,None,0.3
+,Male,Laptop,None,5.12
+,Male,TV,None,6.8
+,Male,Smartphone,None,1.51
+,Female,TV,None,1.13
+,Female,Smartphone,None,0.73
+,Male,Smartphone,None,2.9
+,Male,Smartphone,None,2.1
+,Female,Tablet,None,2.44
+,Female,Smartphone,None,2.14
+,Female,Smartphone,None,2.72
+,Female,Tablet,None,3.15
+,Female,Laptop,None,3.87
+,Female,Tablet,None,0.1
+,Male,Smartphone,None,4.75
+,Male,TV,None,2.32
+,Male,TV,None,2.96
+,Female,Smartphone,None,0.91
+,Male,Smartphone,None,2.94
+,Male,TV,None,2.9
+,Female,TV,None,1.92
+,Female,TV,None,6.12
+,Male,Smartphone,None,2.87
+,Female,Smartphone,None,2.61
+,Female,Tablet,None,1.19
+,Male,Laptop,None,2.54
+,Male,TV,None,4.18
+,Female,Smartphone,None,1.64
+,Male,Smartphone,None,1.97
+,Female,Smartphone,None,0.21
+,Female,Smartphone,None,4.62
+,Male,Smartphone,None,3.59
+,Male,Laptop,None,6.34
+,Male,Laptop,None,2.89
+,Male,Smartphone,None,3.57
+,Male,TV,None,2.08
+,Female,Smartphone,None,1.63
+,Male,Smartphone,None,2.2
+,Female,Tablet,None,2.73
+,Male,Smartphone,None,5.02
+,Male,Smartphone,None,4.29
+,Male,Smartphone,None,0.95
+,Female,Smartphone,None,2.0
+,Female,Smartphone,None,1.65
+,Female,TV,None,1.68
+,Female,TV,None,4.05
+,Male,TV,None,0.0
+,Male,Smartphone,None,5.54
+,Female,Tablet,None,2.02
+,Female,TV,None,1.67
+,Male,Laptop,None,4.12
+,Female,Smartphone,None,3.23
+,Male,Tablet,None,1.25
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,2.29
+,Female,TV,None,1.9
+,Male,Tablet,None,0.0
+,Female,TV,None,2.4
+,Male,Smartphone,None,3.93
+,Female,Smartphone,None,0.0
+,Male,Laptop,None,2.42
+,Female,Smartphone,None,0.66
+,Female,Smartphone,None,1.92
+,Male,Tablet,None,4.51
+,Female,Smartphone,None,2.9
+,Male,TV,None,4.1
+,Female,Laptop,None,2.9
+,Female,Smartphone,None,5.69
+,Male,Smartphone,None,1.38
+,Male,Tablet,None,7.75
+,Female,Smartphone,None,2.31
+,Male,Smartphone,None,2.02
+,Male,Tablet,None,2.91
+,Male,Smartphone,None,4.94
+,Female,Laptop,None,3.95
+,Female,Smartphone,None,1.87
+,Male,Smartphone,None,3.07
+,Male,TV,None,0.96
+,Female,TV,None,0.26
+,Female,Laptop,None,4.53
+,Male,Tablet,None,4.04
+,Female,Laptop,None,6.81
+,Male,Smartphone,None,2.79
+,Male,Tablet,None,2.76
+,Female,Smartphone,None,0.96
+,Female,Smartphone,None,4.91
+,Female,Smartphone,None,5.7
+,Female,Smartphone,None,6.58
+,Male,Tablet,None,5.04
+,Male,TV,None,2.68
+,Female,Smartphone,None,2.73
+,Male,TV,None,3.74
+,Female,Smartphone,None,8.46
+,Female,Smartphone,None,3.93
+,Male,Laptop,None,4.05
+,Female,Laptop,None,5.21
+,Female,Tablet,None,5.47
+,Female,Tablet,None,2.56
+,Female,Smartphone,None,4.78
+,Male,Smartphone,None,2.61
+,Male,TV,None,7.41
+,Male,TV,None,3.08
+,Male,Smartphone,None,4.57
+,Male,Smartphone,None,7.2
+,Male,Smartphone,None,2.48
+,Male,Smartphone,None,2.29
+,Male,Smartphone,None,7.59
+,Female,Laptop,None,2.7
+,Female,TV,None,2.28
+,Female,TV,None,0.62
+,Female,Tablet,None,2.8
+,Female,Smartphone,None,6.48
+,Male,TV,None,5.88
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,0.6
+,Male,Laptop,None,6.41
+,Female,Laptop,None,4.95
+,Male,TV,None,5.26
+,Female,Tablet,None,5.08
+,Female,Smartphone,None,0.36
+,Female,TV,None,3.84
+,Female,Tablet,None,0.02
+,Male,Smartphone,None,2.62
+,Male,Smartphone,None,2.63
+,Female,Laptop,None,2.58
+,Male,Smartphone,None,2.32
+,Male,Smartphone,None,5.01
+,Male,Smartphone,None,2.51
+,Female,Laptop,None,2.84
+,Male,Smartphone,None,3.31
+,Female,Smartphone,None,2.65
+,Male,Smartphone,None,3.11
+,Female,Tablet,None,3.38
+,Male,Smartphone,None,5.39
+,Male,Smartphone,None,5.31
+,Male,TV,None,7.07
+,Male,Laptop,None,5.14
+,Female,Smartphone,None,2.9
+,Female,Smartphone,None,3.58
+,Male,Tablet,None,1.67
+,Male,Smartphone,None,0.0
+,Female,Tablet,None,0.73
+,Male,Smartphone,None,4.25
+,Male,Smartphone,None,3.63
+,Male,TV,None,2.71
+,Female,Laptop,None,5.56
+,Male,TV,None,5.12
+,Female,Tablet,None,2.08
+,Female,Smartphone,None,3.75
+,Male,TV,None,4.44
+,Male,TV,None,4.14
+,Male,Smartphone,None,5.75
+,Female,Laptop,None,5.91
+,Female,Smartphone,None,2.9
+,Male,Smartphone,None,4.35
+,Male,Smartphone,None,5.37
+,Male,TV,None,4.67
+,Male,Smartphone,None,5.98
+,Female,Laptop,None,4.44
+,Female,Smartphone,None,1.53
+,Male,Smartphone,None,2.59
+,Male,Smartphone,None,3.2
+,Male,Smartphone,None,2.85
+,Male,Smartphone,None,5.26
+,Male,Smartphone,None,5.45
+,Male,TV,None,2.89
+,Male,Smartphone,None,2.81
+,Female,Smartphone,None,3.3
+,Male,Tablet,None,2.24
+,Female,Laptop,None,2.67
+,Male,Smartphone,None,2.96
+,Male,Tablet,None,2.87
+,Male,TV,None,5.28
+,Male,Smartphone,None,3.24
+,Female,TV,None,4.68
+,Male,TV,None,2.96
+,Female,Tablet,None,5.54
+,Male,TV,None,4.9
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,5.84
+,Male,TV,None,0.0
+,Female,TV,None,3.25
+,Female,TV,None,5.18
+,Female,Smartphone,None,4.89
+,Female,Smartphone,None,1.62
+,Male,Smartphone,None,6.88
+,Male,TV,None,6.4
+,Female,Smartphone,None,2.44
+,Male,Laptop,None,4.93
+,Male,TV,None,4.77
+,Female,TV,None,2.03
+,Male,TV,None,1.02
+,Female,Smartphone,None,0.0
+,Female,TV,None,5.15
+,Male,Smartphone,None,0.0
+,Male,TV,None,0.46
+,Female,Tablet,None,2.3
+,Male,TV,None,0.0
+,Male,Laptop,None,3.18
+,Male,TV,None,2.06
+,Male,Tablet,None,3.02
+,Male,Tablet,None,2.97
+,Female,Smartphone,None,3.2
+,Female,Tablet,None,7.87
+,Female,Smartphone,None,6.76
+,Male,TV,None,1.04
+,Female,Smartphone,None,0.0
+,Male,Laptop,None,2.7
+,Male,TV,None,1.65
+,Female,TV,None,2.71
+,Female,Tablet,None,6.79
+,Female,TV,None,6.02
+,Female,Smartphone,None,3.99
+,Male,TV,None,1.88
+,Female,Smartphone,None,2.17
+,Male,Smartphone,None,0.0
+,Male,TV,None,7.04
+,Male,TV,None,4.99
+,Female,Smartphone,None,2.43
+,Female,Smartphone,None,4.24
+,Female,Smartphone,None,5.1
+,Female,Laptop,None,4.38
+,Female,Laptop,None,4.84
+,Female,TV,None,3.0
+,Male,Smartphone,None,4.74
+,Male,Smartphone,None,3.83
+,Male,TV,None,1.75
+,Male,Smartphone,None,0.79
+,Male,Tablet,None,5.84
+,Male,Laptop,None,2.23
+,Male,Laptop,None,6.01
+,Female,Smartphone,None,2.61
+,Female,TV,None,4.13
+,Female,TV,None,7.22
+,Female,Smartphone,None,5.55
+,Female,Smartphone,None,2.23
+,Female,Smartphone,None,2.89
+,Male,Smartphone,None,2.68
+,Male,TV,None,0.0
+,Male,Smartphone,None,1.64
+,Male,Smartphone,None,3.9
+,Male,Tablet,None,2.41
+,Male,Tablet,None,1.69
+,Male,TV,None,3.09
+,Male,Smartphone,None,2.52
+,Male,Smartphone,None,4.77
+,Male,Smartphone,None,2.79
+,Female,Laptop,None,4.28
+,Male,Smartphone,None,1.85
+,Male,TV,None,2.56
+,Male,TV,None,2.14
+,Male,Laptop,None,4.77
+,Male,Smartphone,None,5.03
+,Male,Smartphone,None,2.97
+,Female,Smartphone,None,2.79
+,Male,Tablet,None,6.48
+,Female,Smartphone,None,4.86
+,Male,TV,None,5.32
+,Female,TV,None,4.51
+,Female,TV,None,2.96
+,Male,TV,None,2.55
+,Male,Smartphone,None,2.5
+,Male,Smartphone,None,5.06
+,Male,Smartphone,None,1.76
+,Female,TV,None,2.28
+,Male,Tablet,None,2.85
+,Male,Smartphone,None,4.92
+,Male,TV,None,2.64
+,Male,Smartphone,None,1.52
+,Male,Smartphone,None,4.08
+,Female,Smartphone,None,3.8
+,Female,Tablet,None,3.52
+,Male,Smartphone,None,7.87
+,Male,Tablet,None,1.15
+,Female,TV,None,3.11
+,Male,Smartphone,None,4.89
+,Female,TV,None,4.53
+,Female,TV,None,4.16
+,Female,TV,None,0.78
+,Male,TV,None,2.04
+,Female,Smartphone,None,4.31
+,Female,Laptop,None,2.39
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,5.22
+,Female,TV,None,0.81
+,Female,Tablet,None,1.53
+,Female,Smartphone,None,3.0
+,Female,Smartphone,None,2.72
+,Female,TV,None,2.26
+,Female,TV,None,0.37
+,Male,Laptop,None,5.02
+,Female,Smartphone,None,6.02
+,Male,Smartphone,None,0.66
+,Male,Laptop,None,6.66
+,Female,Smartphone,None,2.9
+,Male,TV,None,3.0
+,Female,TV,None,0.0
+,Female,Tablet,None,2.95
+,Female,Smartphone,None,6.65
+,Female,Smartphone,None,4.49
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,0.0
+,Female,Laptop,None,2.79
+,Male,Smartphone,None,1.91
+,Female,Smartphone,None,2.7
+,Male,TV,None,5.29
+,Male,Tablet,None,6.91
+,Male,TV,None,2.12
+,Female,Tablet,None,4.06
+,Female,TV,None,2.22
+,Female,TV,None,4.01
+,Male,Smartphone,None,4.49
+,Female,Smartphone,None,2.11
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,4.05
+,Male,Laptop,None,4.85
+,Male,TV,None,5.42
+,Female,Smartphone,None,5.45
+,Female,Smartphone,None,2.55
+,Male,Laptop,None,4.81
+,Female,Smartphone,None,2.81
+,Female,Smartphone,None,2.96
+,Female,Tablet,None,0.99
+,Female,TV,None,9.79
+,Male,Smartphone,None,2.52
+,Female,Tablet,None,2.16
+,Female,Smartphone,None,1.07
+,Female,TV,None,2.02
+,Male,TV,None,2.93
+,Female,TV,None,2.12
+,Female,Smartphone,None,2.78
+,Male,TV,None,2.57
+,Female,Tablet,None,2.6
+,Female,Smartphone,None,0.4
+,Female,Laptop,None,2.66
+,Female,Smartphone,None,3.64
+,Male,TV,None,3.75
+,Male,TV,None,0.0
+,Female,Smartphone,None,1.52
+,Female,Tablet,None,0.0
+,Female,Smartphone,None,0.0
+,Female,TV,None,1.52
+,Male,Tablet,None,2.82
+,Male,Smartphone,None,0.0
+,Female,TV,None,2.16
+,Male,Smartphone,None,4.73
+,Female,Smartphone,None,2.76
+,Male,Smartphone,None,5.99
+,Male,Laptop,None,3.74
+,Male,TV,None,0.0
+,Male,TV,None,8.38
+,Male,Smartphone,None,3.01
+,Male,Smartphone,None,5.97
+,Male,TV,None,5.44
+,Female,Smartphone,None,7.65
+,Male,Smartphone,None,6.25
+,Male,Smartphone,None,5.3
+,Female,TV,None,0.96
+,Male,Laptop,None,2.7
+,Male,TV,None,3.61
+,Female,Laptop,None,3.51
+,Female,Smartphone,None,3.86
+,Female,Tablet,None,2.17
+,Female,TV,None,5.43
+,Male,TV,None,1.77
+,Male,Smartphone,None,0.0
+,Male,Tablet,None,0.0
+,Male,TV,None,0.84
+,Male,TV,None,2.39
+,Female,Laptop,None,5.19
+,Female,Smartphone,None,4.57
+,Female,TV,None,0.0
+,Female,Smartphone,None,2.93
+,Male,TV,None,7.03
+,Male,Tablet,None,6.82
+,Female,TV,None,3.19
+,Female,TV,None,0.98
+,Female,Smartphone,None,2.64
+,Female,Smartphone,None,1.43
+,Male,TV,None,5.26
+,Male,TV,None,2.55
+,Male,TV,None,4.08
+,Female,Smartphone,None,4.59
+,Female,Smartphone,None,2.56
+,Female,Smartphone,None,4.63
+,Female,Smartphone,None,2.42
+,Male,Laptop,None,4.78
+,Male,TV,None,2.92
+,Male,Smartphone,None,1.82
+,Female,Smartphone,None,4.69
+,Female,Laptop,None,2.89
+,Male,Tablet,None,4.61
+,Male,Tablet,None,0.14
+,Male,Smartphone,None,5.0
+,Female,TV,None,2.81
+,Male,Smartphone,None,3.05
+,Female,Smartphone,None,1.24
+,Male,TV,None,1.63
+,Female,Laptop,None,1.7
+,Female,Smartphone,None,1.81
+,Female,Smartphone,None,3.75
+,Male,Tablet,None,1.34
+,Female,Smartphone,None,4.41
+,Male,Smartphone,None,0.77
+,Male,Smartphone,None,1.63
+,Female,Smartphone,None,4.24
+,Male,Smartphone,None,2.92
+,Female,TV,None,2.69
+,Female,Smartphone,None,2.7
+,Male,Laptop,None,2.4
+,Male,Tablet,None,4.28
+,Female,TV,None,2.74
+,Female,Smartphone,None,1.66
+,Female,Smartphone,None,2.69
+,Male,TV,None,4.37
+,Male,Smartphone,None,0.55
+,Female,Smartphone,None,2.57
+,Female,TV,None,3.85
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,3.06
+,Male,Smartphone,None,2.41
+,Male,Tablet,None,0.62
+,Male,Smartphone,None,3.14
+,Female,Smartphone,None,3.76
+,Female,Smartphone,None,5.1
+,Female,Smartphone,None,5.92
+,Female,Smartphone,None,2.65
+,Female,Smartphone,None,1.62
+,Male,Tablet,None,0.0
+,Male,Smartphone,None,4.29
+,Male,TV,None,1.15
+,Female,Tablet,None,2.24
+,Male,Laptop,None,4.65
+,Male,Smartphone,None,5.89
+,Female,Smartphone,None,1.79
+,Male,Smartphone,None,5.47
+,Male,Tablet,None,4.24
+,Male,Smartphone,None,2.99
+,Male,Smartphone,None,2.68
+,Female,Laptop,None,5.09
+,Male,Smartphone,None,1.86
+,Male,Tablet,None,1.68
+,Female,Smartphone,None,6.59
+,Female,Smartphone,None,5.16
+,Female,Smartphone,None,3.16
+,Female,TV,None,2.71
+,Male,Tablet,None,0.0
+,Male,TV,None,3.56
+,Female,Smartphone,None,7.74
+,Female,Tablet,None,2.74
+,Female,Smartphone,None,2.77
+,Female,Smartphone,None,3.35
+,Male,Smartphone,None,4.42
+,Male,Laptop,None,1.91
+,Female,Laptop,None,2.35
+,Female,Smartphone,None,0.59
+,Male,TV,None,2.93
+,Female,Tablet,None,2.66
+,Male,TV,None,0.0
+,Male,TV,None,5.06
+,Male,TV,None,5.58
+,Female,TV,None,5.03
+,Female,Laptop,None,3.84
+,Female,Tablet,None,1.21
+,Male,Laptop,None,3.97
+,Female,Smartphone,None,4.44
+,Male,Smartphone,None,0.0
+,Male,Laptop,None,5.61
+,Female,Smartphone,None,4.56
+,Female,Smartphone,None,0.08
+,Male,Smartphone,None,5.5
+,Male,Smartphone,None,4.93
+,Male,Smartphone,None,6.42
+,Female,Smartphone,None,1.94
+,Male,TV,None,1.67
+,Male,Smartphone,None,1.73
+,Female,Smartphone,None,2.77
+,Male,TV,None,0.0
+,Female,Laptop,None,5.24
+,Male,Smartphone,None,1.64
+,Female,TV,None,3.64
+,Male,Tablet,None,2.81
+,Male,Smartphone,None,4.76
+,Female,Smartphone,None,4.36
+,Male,Smartphone,None,1.75
+,Male,Smartphone,None,4.85
+,Male,Smartphone,None,5.59
+,Female,Smartphone,None,0.29
+,Male,TV,None,2.83
+,Male,Smartphone,None,5.11
+,Male,TV,None,0.0
+,Female,Smartphone,None,4.2
+,Male,Tablet,None,2.32
+,Female,TV,None,0.0
+,Male,Smartphone,None,3.19
+,Male,TV,None,3.73
+,Male,Smartphone,None,4.35
+,Female,Smartphone,None,2.96
+,Female,TV,None,2.44
+,Female,Tablet,None,3.34
+,Male,Tablet,None,0.38
+,Female,Smartphone,None,2.75
+,Female,TV,None,2.66
+,Female,Smartphone,None,3.89
+,Female,Tablet,None,1.95
+,Male,Smartphone,None,2.1
+,Female,Smartphone,None,5.88
+,Male,Smartphone,None,2.44
+,Male,Smartphone,None,5.47
+,Male,Smartphone,None,2.34
+,Male,TV,None,2.31
+,Female,TV,None,5.47
+,Female,Smartphone,None,4.29
+,Female,Tablet,None,3.88
+,Female,TV,None,2.46
+,Female,Smartphone,None,1.16
+,Female,TV,None,3.64
+,Female,Smartphone,None,5.86
+,Female,TV,None,5.72
+,Male,Tablet,None,4.33
+,Male,TV,None,0.0
+,Female,TV,None,2.93
+,Male,Tablet,None,0.61
+,Male,Smartphone,None,1.88
+,Female,Laptop,None,2.86
+,Female,Smartphone,None,0.0
+,Female,TV,None,4.82
+,Female,TV,None,1.78
+,Male,TV,None,0.0
+,Male,Smartphone,None,5.14
+,Female,Tablet,None,5.29
+,Male,Smartphone,None,2.57
+,Male,Smartphone,None,5.56
+,Female,Tablet,None,2.77
+,Male,Tablet,None,4.79
+,Female,Smartphone,None,3.89
+,Female,Smartphone,None,2.81
+,Male,Tablet,None,5.62
+,Female,Laptop,None,2.73
+,Male,TV,None,5.02
+,Female,Smartphone,None,1.34
+,Male,TV,None,1.85
+,Male,TV,None,2.88
+,Female,Smartphone,None,6.25
+,Female,Smartphone,None,4.59
+,Female,TV,None,2.67
+,Male,Tablet,None,1.56
+,Female,TV,None,4.38
+,Female,Tablet,None,0.0
+,Male,Smartphone,None,4.96
+,Male,TV,None,1.64
+,Female,TV,None,7.36
+,Female,Smartphone,None,2.79
+,Female,TV,None,5.28
+,Female,Smartphone,None,4.71
+,Female,Smartphone,None,5.72
+,Male,Tablet,None,2.91
+,Female,Smartphone,None,7.3
+,Female,TV,None,2.06
+,Male,TV,None,0.0
+,Male,Tablet,None,0.43
+,Female,Tablet,None,0.0
+,Female,Tablet,None,3.66
+,Female,Tablet,None,0.63
+,Female,Laptop,None,2.28
+,Female,Smartphone,None,4.64
+,Male,Tablet,None,0.0
+,Male,Smartphone,None,5.94
+,Male,TV,None,2.69
+,Female,Smartphone,None,2.64
+,Female,Tablet,None,5.21
+,Female,Tablet,None,0.0
+,Female,Tablet,None,0.0
+,Female,TV,None,5.44
+,Female,TV,None,4.37
+,Female,Smartphone,None,2.69
+,Female,TV,None,2.37
+,Female,Smartphone,None,3.47
+,Male,TV,None,0.0
+,Male,Smartphone,None,12.4
+,Male,Laptop,None,1.89
+,Female,Smartphone,None,4.34
+,Female,Tablet,None,1.48
+,Female,Smartphone,None,2.84
+,Female,Smartphone,None,4.68
+,Male,TV,None,2.34
+,Female,Tablet,None,4.84
+,Male,Tablet,None,7.14
+,Female,TV,None,2.88
+,Male,Smartphone,None,6.7
+,Female,Smartphone,None,0.62
+,Male,Laptop,None,4.11
+,Male,Smartphone,None,5.64
+,Female,TV,None,1.69
+,Male,Smartphone,None,1.77
+,Female,Smartphone,None,2.59
+,Female,Smartphone,None,0.25
+,Male,Smartphone,None,0.88
+,Male,Smartphone,None,3.53
+,Female,Laptop,None,6.83
+,Male,Smartphone,None,2.77
+,Female,Laptop,None,2.28
+,Male,Smartphone,None,2.96
+,Female,Laptop,None,6.53
+,Female,Tablet,None,4.9
+,Female,TV,None,2.85
+,Female,Laptop,None,4.04
+,Male,Tablet,None,2.82
+,Female,TV,None,2.62
+,Female,Smartphone,None,2.91
+,Female,Smartphone,None,5.55
+,Male,TV,None,6.73
+,Male,Smartphone,None,2.99
+,Female,TV,None,1.98
+,Female,Smartphone,None,5.46
+,Male,TV,None,0.75
+,Male,Smartphone,None,0.0
+,Female,TV,None,4.55
+,Male,TV,None,2.06
+,Female,Smartphone,None,0.5
+,Female,Smartphone,None,6.05
+,Male,Smartphone,None,3.12
+,Male,TV,None,2.61
+,Male,Tablet,None,4.05
+,Male,Smartphone,None,2.97
+,Female,Smartphone,None,7.67
+,Female,Laptop,None,5.62
+,Male,Smartphone,None,4.96
+,Male,TV,None,2.38
+,Male,Laptop,None,2.81
+,Female,TV,None,0.8
+,Female,Laptop,None,1.98
+,Female,Tablet,None,0.0
+,Female,Laptop,None,3.61
+,Male,Laptop,None,5.43
+,Female,Smartphone,None,0.96
+,Male,Smartphone,None,4.13
+,Male,TV,None,2.65
+,Female,Tablet,None,1.77
+,Male,TV,None,2.36
+,Female,Laptop,None,2.23
+,Female,Tablet,None,0.0
+,Male,Laptop,None,2.98
+,Male,Laptop,None,2.76
+,Male,Tablet,None,4.0
+,Female,Smartphone,None,0.0
+,Male,Tablet,None,4.85
+,Male,Smartphone,None,2.79
+,Female,Smartphone,None,2.72
+,Female,Smartphone,None,4.54
+,Female,Laptop,None,2.84
+,Female,Laptop,None,3.58
+,Female,TV,None,6.13
+,Female,Tablet,None,1.32
+,Male,TV,None,3.58
+,Male,Smartphone,None,2.28
+,Female,Smartphone,None,2.29
+,Female,TV,None,4.22
+,Female,Smartphone,None,5.33
+,Male,Smartphone,None,2.71
+,Male,Smartphone,None,4.04
+,Male,Laptop,None,2.7
+,Female,Smartphone,None,2.29
+,Male,TV,None,5.64
+,Female,Smartphone,None,2.36
+,Female,Tablet,None,2.0
+,Female,Laptop,None,1.99
+,Female,Smartphone,None,3.96
+,Female,Smartphone,None,5.19
+,Male,Smartphone,None,2.92
+,Female,Smartphone,None,0.52
+,Male,TV,None,0.12
+,Female,Smartphone,None,1.9
+,Male,TV,None,2.68
+,Female,Laptop,None,4.51
+,Female,Smartphone,None,6.66
+,Male,Laptop,None,4.83
+,Female,Laptop,None,1.06
+,Male,Smartphone,None,5.39
+,Female,TV,None,0.0
+,Male,TV,None,2.33
+,Female,Smartphone,None,3.07
+,Male,Smartphone,None,3.9
+,Male,Smartphone,None,1.91
+,Male,Tablet,None,2.19
+,Male,TV,None,2.58
+,Female,Tablet,None,1.03
+,Male,TV,None,3.55
+,Male,Tablet,None,0.0
+,Female,TV,None,1.7
+,Female,Smartphone,None,7.78
+,Female,Laptop,None,4.97
+,Male,Tablet,None,6.37
+,Female,Smartphone,None,2.67
+,Male,Smartphone,None,2.16
+,Male,TV,None,4.55
+,Female,TV,None,1.62
+,Female,Laptop,None,4.49
+,Male,Smartphone,None,4.46
+,Male,Smartphone,None,3.74
+,Male,TV,None,0.0
+,Female,Smartphone,None,2.28
+,Male,Tablet,None,2.59
+,Male,TV,None,5.4
+,Female,TV,None,5.81
+,Female,TV,None,1.47
+,Female,Smartphone,None,3.74
+,Female,Tablet,None,2.87
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,6.35
+,Male,Smartphone,None,2.87
+,Male,Laptop,None,6.52
+,Female,Tablet,None,0.0
+,Female,TV,None,2.81
+,Male,Laptop,None,2.41
+,Female,Tablet,None,0.0
+,Female,Smartphone,None,2.92
+,Male,TV,None,3.47
+,Female,Smartphone,None,0.0
+,Female,TV,None,0.0
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,4.94
+,Male,TV,None,7.07
+,Male,Smartphone,None,0.68
+,Female,TV,None,0.0
+,Female,Smartphone,None,5.54
+,Male,TV,None,3.78
+,Female,Laptop,None,4.84
+,Male,TV,None,0.75
+,Male,Smartphone,None,2.39
+,Female,Smartphone,None,4.14
+,Female,Tablet,None,3.25
+,Male,Smartphone,None,3.53
+,Female,Tablet,None,2.51
+,Female,Tablet,None,2.37
+,Female,TV,None,3.68
+,Female,Tablet,None,5.14
+,Female,Smartphone,None,0.52
+,Male,Smartphone,None,3.57
+,Male,Smartphone,None,4.89
+,Male,Laptop,None,5.24
+,Male,TV,None,3.14
+,Male,Smartphone,None,2.89
+,Male,Laptop,None,4.16
+,Male,TV,None,2.32
+,Female,TV,None,2.41
+,Male,TV,None,3.42
+,Male,Tablet,None,5.51
+,Male,Laptop,None,3.67
+,Male,Smartphone,None,5.85
+,Female,Laptop,None,3.39
+,Male,Smartphone,None,2.75
+,Female,Laptop,None,1.57
+,Male,Laptop,None,2.71
+,Male,Smartphone,None,3.06
+,Male,Smartphone,None,0.0
+,Female,TV,None,2.37
+,Male,Smartphone,None,7.05
+,Female,Smartphone,None,4.91
+,Male,Smartphone,None,1.76
+,Female,Smartphone,None,1.78
+,Female,Laptop,None,3.45
+,Male,Smartphone,None,2.14
+,Female,Tablet,None,1.6
+,Female,TV,None,3.6
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,4.17
+,Female,Tablet,None,2.34
+,Male,Smartphone,None,7.62
+,Male,TV,None,3.98
+,Female,Smartphone,None,0.8
+,Male,Smartphone,None,2.76
+,Female,TV,None,1.44
+,Female,TV,None,2.87
+,Male,Smartphone,None,5.22
+,Male,Tablet,None,0.04
+,Female,Smartphone,None,0.42
+,Female,Smartphone,None,5.79
+,Female,Smartphone,None,3.29
+,Female,TV,None,4.45
+,Female,Smartphone,None,1.38
+,Male,Laptop,None,3.25
+,Male,Smartphone,None,4.38
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,2.4
+,Female,Laptop,None,4.88
+,Male,Smartphone,None,0.0
+,Female,TV,None,2.64
+,Male,Smartphone,None,0.28
+,Female,TV,None,1.65
+,Male,TV,None,5.78
+,Male,TV,None,4.09
+,Male,Smartphone,None,5.8
+,Male,Smartphone,None,3.41
+,Female,Smartphone,None,2.64
+,Male,TV,None,0.0
+,Female,TV,None,2.11
+,Male,Laptop,None,5.61
+,Female,TV,None,5.16
+,Female,Smartphone,None,6.72
+,Male,Smartphone,None,7.53
+,Male,Smartphone,None,1.55
+,Female,Smartphone,None,0.36
+,Female,Smartphone,None,2.67
+,Male,TV,None,5.4
+,Female,Smartphone,None,2.14
+,Female,Smartphone,None,2.92
+,Male,Laptop,None,5.12
+,Male,Laptop,None,2.51
+,Female,Smartphone,None,4.3
+,Female,TV,None,2.1
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,2.82
+,Male,Smartphone,None,4.81
+,Female,Smartphone,None,5.11
+,Male,Smartphone,None,1.63
+,Female,Smartphone,None,0.24
+,Female,Tablet,None,5.11
+,Female,TV,None,2.27
+,Female,Smartphone,None,1.77
+,Female,TV,None,5.7
+,Female,Laptop,None,3.26
+,Male,TV,None,4.71
+,Female,Laptop,None,2.95
+,Female,Smartphone,None,4.86
+,Female,Smartphone,None,4.14
+,Male,Tablet,None,2.92
+,Male,Smartphone,None,1.98
+,Male,TV,None,2.78
+,Male,TV,None,3.96
+,Male,TV,None,4.88
+,Female,Smartphone,None,2.04
+,Male,Smartphone,None,2.75
+,Female,Laptop,None,4.19
+,Female,Smartphone,None,4.15
+,Female,TV,None,0.46
+,Male,Tablet,None,3.99
+,Male,Tablet,None,2.87
+,Female,Tablet,None,2.38
+,Male,TV,None,1.79
+,Female,Smartphone,None,0.74
+,Male,TV,None,6.41
+,Female,Smartphone,None,0.0
+,Male,Tablet,None,7.27
+,Female,Smartphone,None,2.55
+,Male,Tablet,None,2.69
+,Female,TV,None,9.98
+,Female,Smartphone,None,2.27
+,Male,TV,None,2.99
+,Female,Smartphone,None,2.9
+,Male,Smartphone,None,2.67
+,Female,Smartphone,None,4.62
+,Male,Smartphone,None,4.14
+,Male,Smartphone,None,3.54
+,Male,Laptop,None,2.94
+,Male,Smartphone,None,4.27
+,Female,Smartphone,None,3.28
+,Female,Smartphone,None,2.56
+,Female,Tablet,None,2.34
+,Male,Smartphone,None,5.81
+,Female,TV,None,0.0
+,Female,TV,None,5.16
+,Male,Smartphone,None,0.8
+,Male,Tablet,None,2.89
+,Male,Smartphone,None,2.01
+,Male,TV,None,4.1
+,Male,Tablet,None,7.15
+,Male,Laptop,None,5.67
+,Female,TV,None,1.62
+,Male,Smartphone,None,2.63
+,Male,Laptop,None,1.59
+,Male,TV,None,6.81
+,Male,Smartphone,None,3.92
+,Male,Smartphone,None,1.92
+,Male,Smartphone,None,2.97
+,Female,Smartphone,None,4.62
+,Female,Tablet,None,2.84
+,Male,Smartphone,None,6.24
+,Male,Smartphone,None,2.03
+,Female,Smartphone,None,2.77
+,Female,Smartphone,None,5.74
+,Female,TV,None,5.75
+,Female,Smartphone,None,6.5
+,Female,Smartphone,None,4.39
+,Female,Tablet,None,4.52
+,Female,TV,None,0.24
+,Male,TV,None,2.9
+,Female,Laptop,None,3.27
+,Male,Smartphone,None,0.08
+,Male,Smartphone,None,4.06
+,Female,Tablet,None,0.26
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,6.99
+,Male,Tablet,None,2.87
+,Female,TV,None,4.46
+,Male,TV,None,0.0
+,Male,Laptop,None,5.73
+,Male,Smartphone,None,2.68
+,Male,TV,None,1.07
+,Male,Laptop,None,2.0
+,Male,Smartphone,None,3.73
+,Female,Tablet,None,2.95
+,Female,Smartphone,None,3.0
+,Female,Laptop,None,3.61
+,Female,Laptop,None,2.09
+,Male,Laptop,None,3.86
+,Male,TV,None,2.81
+,Male,Laptop,None,2.91
+,Male,TV,None,1.05
+,Male,Smartphone,None,3.83
+,Male,TV,None,4.35
+,Female,Smartphone,None,0.08
+,Male,Smartphone,None,5.13
+,Male,Smartphone,None,4.86
+,Female,Smartphone,None,2.87
+,Female,Smartphone,None,8.42
+,Female,Laptop,None,5.17
+,Female,Smartphone,None,3.34
+,Female,Laptop,None,2.28
+,Male,Smartphone,None,1.98
+,Female,Smartphone,None,1.2
+,Male,Tablet,None,4.96
+,Female,TV,None,4.06
+,Male,Smartphone,None,2.87
+,Female,Tablet,None,0.42
+,Male,Smartphone,None,5.2
+,Male,Smartphone,None,4.76
+,Male,Smartphone,None,3.83
+,Female,Laptop,None,2.95
+,Female,TV,None,1.31
+,Female,Smartphone,None,1.88
+,Female,Tablet,None,0.36
+,Female,Tablet,None,6.86
+,Female,Smartphone,None,0.62
+,Female,TV,None,7.15
+,Female,Tablet,None,2.74
+,Female,TV,None,0.78
+,Female,Smartphone,None,4.92
+,Male,Smartphone,None,0.0
+,Male,TV,None,0.79
+,Female,TV,None,1.5
+,Male,Tablet,None,4.51
+,Male,TV,None,2.19
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,3.59
+,Female,Smartphone,None,2.69
+,Female,Smartphone,None,4.06
+,Female,Smartphone,None,4.15
+,Male,Smartphone,None,4.59
+,Male,Smartphone,None,4.93
+,Female,Smartphone,None,2.45
+,Female,TV,None,7.2
+,Female,Smartphone,None,3.51
+,Male,Tablet,None,2.44
+,Female,Smartphone,None,4.03
+,Female,TV,None,3.79
+,Male,Smartphone,None,2.54
+,Male,TV,None,5.64
+,Male,Tablet,None,1.51
+,Female,Smartphone,None,1.76
+,Male,Smartphone,None,2.77
+,Female,TV,None,8.14
+,Male,Tablet,None,2.54
+,Male,Tablet,None,4.84
+,Male,Smartphone,None,2.72
+,Female,Smartphone,None,2.81
+,Female,TV,None,7.64
+,Male,Smartphone,None,2.35
+,Male,Smartphone,None,3.71
+,Male,TV,None,5.59
+,Male,Smartphone,None,2.67
+,Male,Smartphone,None,4.81
+,Female,Smartphone,None,2.59
+,Male,Tablet,None,2.9
+,Female,TV,None,0.0
+,Female,Smartphone,None,3.43
+,Male,Smartphone,None,6.71
+,Female,Smartphone,None,5.15
+,Female,Smartphone,None,3.24
+,Female,Smartphone,None,5.57
+,Female,Laptop,None,4.64
+,Male,TV,None,0.06
+,Male,Smartphone,None,2.94
+,Male,Tablet,None,0.62
+,Male,TV,None,2.84
+,Female,Smartphone,None,0.0
+,Male,TV,None,2.64
+,Male,TV,None,3.94
+,Male,Laptop,None,4.28
+,Female,TV,None,2.83
+,Female,Smartphone,None,2.19
+,Male,Tablet,None,2.72
+,Female,Smartphone,None,6.62
+,Female,Smartphone,None,6.08
+,Female,Smartphone,None,0.63
+,Female,TV,None,0.0
+,Female,Smartphone,None,5.09
+,Male,Smartphone,None,5.77
+,Male,Smartphone,None,2.86
+,Male,Smartphone,None,1.77
+,Male,TV,None,0.0
+,Male,TV,None,0.14
+,Male,Tablet,None,2.94
+,Male,TV,None,0.66
+,Female,TV,None,0.02
+,Male,Smartphone,None,4.11
+,Female,Tablet,None,1.94
+,Female,TV,None,5.65
+,Male,Tablet,None,1.59
+,Female,Tablet,None,1.31
+,Female,Smartphone,None,2.02
+,Female,TV,None,6.77
+,Female,Tablet,None,1.3
+,Female,TV,None,4.62
+,Male,Tablet,None,2.1
+,Male,Smartphone,None,2.43
+,Female,Laptop,None,2.35
+,Female,TV,None,5.22
+,Male,TV,None,2.87
+,Female,Smartphone,None,2.62
+,Male,Tablet,None,1.19
+,Female,Smartphone,None,4.3
+,Female,Smartphone,None,3.89
+,Female,TV,None,2.31
+,Female,Smartphone,None,5.69
+,Male,Smartphone,None,6.34
+,Female,TV,None,3.94
+,Female,Smartphone,None,2.71
+,Male,Smartphone,None,3.47
+,Female,Smartphone,None,3.29
+,Male,Smartphone,None,0.0
+,Male,TV,None,0.48
+,Female,Tablet,None,2.45
+,Female,Smartphone,None,4.68
+,Male,Smartphone,None,2.48
+,Female,Tablet,None,4.07
+,Male,TV,None,1.09
+,Female,Smartphone,None,2.19
+,Female,Smartphone,None,0.0
+,Female,TV,None,3.11
+,Male,Smartphone,None,2.61
+,Female,Smartphone,None,2.73
+,Female,TV,None,1.69
+,Female,Laptop,None,7.15
+,Female,TV,None,3.92
+,Female,Smartphone,None,3.08
+,Male,Smartphone,None,3.52
+,Male,Smartphone,None,3.65
+,Male,TV,None,3.12
+,Female,Laptop,None,4.71
+,Female,Smartphone,None,2.09
+,Male,Smartphone,None,1.99
+,Female,Laptop,None,2.88
+,Male,TV,None,5.14
+,Male,Smartphone,None,0.62
+,Male,Smartphone,None,2.35
+,Male,Tablet,None,1.12
+,Female,Smartphone,None,6.25
+,Male,TV,None,3.73
+,Male,TV,None,1.23
+,Male,Smartphone,None,6.05
+,Female,TV,None,4.38
+,Male,TV,None,2.07
+,Male,Smartphone,None,1.87
+,Female,Laptop,None,2.95
+,Female,Smartphone,None,2.16
+,Female,Tablet,None,1.73
+,Female,TV,None,4.98
+,Female,Smartphone,None,4.81
+,Female,Smartphone,None,0.0
+,Female,Laptop,None,5.41
+,Male,Smartphone,None,0.68
+,Female,TV,None,0.0
+,Male,Laptop,None,5.07
+,Male,Laptop,None,1.5
+,Female,Laptop,None,6.34
+,Female,TV,None,1.77
+,Female,Tablet,None,6.31
+,Female,Smartphone,None,7.03
+,Female,Smartphone,None,0.0
+,Male,Tablet,None,1.85
+,Male,Tablet,None,5.48
+,Male,TV,None,2.72
+,Female,TV,None,6.61
+,Female,Smartphone,None,6.63
+,Female,Smartphone,None,3.76
+,Male,Smartphone,None,2.11
+,Male,TV,None,3.17
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,1.63
+,Male,TV,None,1.7
+,Female,Smartphone,None,5.34
+,Male,Laptop,None,2.04
+,Male,Tablet,None,2.45
+,Female,TV,None,2.03
+,Female,Smartphone,None,2.38
+,Female,Smartphone,None,2.92
+,Female,TV,None,6.28
+,Male,TV,None,1.92
+,Female,Smartphone,None,1.76
+,Male,Smartphone,None,3.0
+,Male,Smartphone,None,4.06
+,Female,TV,None,2.32
+,Male,Smartphone,None,3.98
+,Male,TV,None,7.44
+,Male,Laptop,None,3.12
+,Male,TV,None,2.47
+,Female,TV,None,2.7
+,Female,Smartphone,None,6.64
+,Male,TV,None,0.9
+,Female,TV,None,2.46
+,Female,TV,None,4.34
+,Male,TV,None,5.68
+,Male,Smartphone,None,2.34
+,Female,TV,None,4.01
+,Male,Smartphone,None,4.53
+,Female,TV,None,2.89
+,Female,Smartphone,None,1.84
+,Female,Tablet,None,5.41
+,Male,Smartphone,None,2.47
+,Female,TV,None,4.03
+,Female,Smartphone,None,1.92
+,Female,Smartphone,None,6.1
+,Male,TV,None,3.09
+,Female,Smartphone,None,9.08
+,Male,Tablet,None,1.71
+,Female,Smartphone,None,2.6
+,Female,TV,None,3.89
+,Male,Smartphone,None,4.94
+,Female,Tablet,None,2.32
+,Male,TV,None,1.14
+,Female,TV,None,2.19
+,Male,Smartphone,None,0.0
+,Male,Tablet,None,1.18
+,Male,Smartphone,None,5.91
+,Male,TV,None,3.39
+,Male,Smartphone,None,1.56
+,Female,TV,None,3.75
+,Male,Smartphone,None,4.56
+,Female,Tablet,None,5.24
+,Male,Smartphone,None,3.5
+,Female,TV,None,7.65
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,4.17
+,Female,TV,None,3.4
+,Male,Smartphone,None,1.25
+,Male,Laptop,None,6.8
+,Male,Smartphone,None,1.95
+,Female,Tablet,None,3.31
+,Female,TV,None,1.16
+,Male,Smartphone,None,2.05
+,Female,Smartphone,None,4.77
+,Female,TV,None,1.07
+,Female,Smartphone,None,2.43
+,Male,TV,None,3.97
+,Male,Tablet,None,2.19
+,Male,TV,None,0.51
+,Female,Laptop,None,4.45
+,Female,Smartphone,None,4.61
+,Female,Tablet,None,0.8
+,Female,Smartphone,None,2.39
+,Female,Smartphone,None,5.12
+,Female,Smartphone,None,2.97
+,Male,TV,None,0.71
+,Male,Laptop,None,4.47
+,Female,TV,None,2.47
+,Female,Smartphone,None,2.87
+,Female,Smartphone,None,0.29
+,Male,Smartphone,None,6.65
+,Male,Smartphone,None,1.63
+,Male,Smartphone,None,1.38
+,Male,Smartphone,None,7.36
+,Female,Smartphone,None,1.46
+,Male,TV,None,2.85
+,Female,Smartphone,None,6.34
+,Male,Smartphone,None,4.72
+,Male,Smartphone,None,2.75
+,Male,Laptop,None,2.64
+,Female,Smartphone,None,4.2
+,Female,Laptop,None,2.55
+,Male,Smartphone,None,0.36
+,Male,Smartphone,None,5.46
+,Female,TV,None,5.01
+,Male,TV,None,1.84
+,Male,Smartphone,None,3.78
+,Female,Smartphone,None,2.06
+,Female,Smartphone,None,3.81
+,Female,Tablet,None,2.99
+,Female,Smartphone,None,1.79
+,Female,TV,None,2.07
+,Male,TV,None,2.44
+,Female,Tablet,None,2.5
+,Female,Tablet,None,6.5
+,Male,Tablet,None,3.77
+,Female,Smartphone,None,2.26
+,Female,Smartphone,None,1.76
+,Female,Smartphone,None,2.7
+,Male,Laptop,None,1.93
+,Female,Smartphone,None,2.93
+,Female,Smartphone,None,2.48
+,Female,TV,None,1.35
+,Female,Smartphone,None,3.21
+,Male,TV,None,4.41
+,Female,TV,None,1.25
+,Male,Smartphone,None,2.82
+,Male,TV,None,2.37
+,Female,TV,None,0.6
+,Female,Smartphone,None,2.77
+,Male,Laptop,None,2.04
+,Male,TV,None,2.37
+,Male,Smartphone,None,5.53
+,Male,Smartphone,None,2.78
+,Female,Smartphone,None,6.68
+,Male,TV,None,2.64
+,Male,Smartphone,None,2.7
+,Male,Smartphone,None,2.34
+,Female,Laptop,None,2.43
+,Female,Smartphone,None,0.0
+,Male,Laptop,None,4.68
+,Female,Smartphone,None,2.46
+,Female,TV,None,3.31
+,Male,Tablet,None,5.32
+,Male,TV,None,3.03
+,Male,Smartphone,None,2.86
+,Male,TV,None,5.88
+,Female,Smartphone,None,2.38
+,Male,Smartphone,None,0.87
+,Female,TV,None,0.82
+,Male,TV,None,5.41
+,Male,Smartphone,None,2.91
+,Male,Laptop,None,4.99
+,Male,TV,None,0.22
+,Female,Smartphone,None,4.1
+,Male,TV,None,0.2
+,Female,Smartphone,None,2.96
+,Female,Smartphone,None,5.87
+,Male,TV,None,3.01
+,Male,Laptop,None,5.15
+,Female,Laptop,None,2.61
+,Female,Tablet,None,1.51
+,Male,TV,None,2.31
+,Male,Laptop,None,3.25
+,Female,TV,None,4.03
+,Male,Smartphone,None,0.68
+,Male,TV,None,0.0
+,Female,Tablet,None,4.54
+,Male,Laptop,None,4.01
+,Male,Laptop,None,7.14
+,Male,Tablet,None,6.51
+,Male,Smartphone,None,4.94
+,Male,Smartphone,None,4.26
+,Male,Smartphone,None,5.03
+,Male,Laptop,None,3.48
+,Female,Tablet,None,5.34
+,Male,TV,None,1.6
+,Female,Tablet,None,5.45
+,Male,Tablet,None,0.0
+,Female,TV,None,2.97
+,Female,TV,None,5.27
+,Female,Smartphone,None,1.34
+,Male,Smartphone,None,2.85
+,Male,Laptop,None,2.52
+,Female,Laptop,None,2.1
+,Female,Laptop,None,2.51
+,Female,TV,None,4.64
+,Male,Laptop,None,4.07
+,Female,TV,None,1.05
+,Female,Tablet,None,0.0
+,Male,Smartphone,None,1.82
+,Female,Smartphone,None,3.53
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,4.39
+,Male,TV,None,5.4
+,Male,Laptop,None,6.42
+,Female,Smartphone,None,2.54
+,Male,Laptop,None,4.4
+,Male,Tablet,None,4.81
+,Male,Smartphone,None,5.45
+,Male,Laptop,None,5.85
+,Female,TV,None,4.68
+,Male,TV,None,2.52
+,Female,Smartphone,None,1.17
+,Female,Smartphone,None,2.87
+,Male,Smartphone,None,5.15
+,Female,Laptop,None,3.91
+,Female,Smartphone,None,2.93
+,Female,TV,None,2.75
+,Female,Tablet,None,2.46
+,Male,TV,None,8.06
+,Male,Smartphone,None,3.3
+,Male,Tablet,None,1.48
+,Male,TV,None,2.12
+,Male,Smartphone,None,2.04
+,Male,Smartphone,None,2.31
+,Male,TV,None,0.43
+,Male,TV,None,2.39
+,Male,Tablet,None,2.28
+,Male,Smartphone,None,6.31
+,Female,Tablet,None,1.51
+,Male,Tablet,None,5.39
+,Male,Smartphone,None,1.86
+,Female,Laptop,None,2.2
+,Male,Tablet,None,0.14
+,Female,TV,None,2.59
+,Male,TV,None,1.21
+,Female,TV,None,5.06
+,Male,Smartphone,None,5.52
+,Female,Smartphone,None,4.65
+,Male,Tablet,None,7.4
+,Female,Smartphone,None,5.6
+,Female,Laptop,None,4.99
+,Female,Smartphone,None,5.44
+,Female,Laptop,None,2.79
+,Female,TV,None,2.97
+,Male,Laptop,None,5.43
+,Male,Tablet,None,9.98
+,Male,Smartphone,None,2.09
+,Male,Laptop,None,4.05
+,Male,TV,None,4.71
+,Male,Tablet,None,4.1
+,Male,TV,None,6.26
+,Male,Smartphone,None,1.59
+,Female,Smartphone,None,1.88
+,Female,Smartphone,None,9.23
+,Male,Tablet,None,1.56
+,Male,Laptop,None,4.37
+,Female,Smartphone,None,0.0
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,3.65
+,Female,TV,None,2.37
+,Female,TV,None,4.32
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,5.17
+,Male,Smartphone,None,4.27
+,Male,TV,None,0.1
+,Female,Smartphone,None,3.76
+,Female,Smartphone,None,3.36
+,Male,Smartphone,None,5.5
+,Female,TV,None,6.52
+,Male,Tablet,None,1.87
+,Female,Tablet,None,4.37
+,Male,Tablet,None,2.98
+,Male,Smartphone,None,6.28
+,Female,TV,None,2.89
+,Male,Smartphone,None,5.98
+,Male,Tablet,None,3.64
+,Female,Tablet,None,6.59
+,Female,TV,None,2.55
+,Female,Smartphone,None,1.96
+,Male,Smartphone,None,1.73
+,Female,Smartphone,None,0.16
+,Female,Smartphone,None,2.9
+,Male,Smartphone,None,4.21
+,Male,Tablet,None,0.0
+,Male,TV,None,3.37
+,Female,TV,None,0.87
+,Female,TV,None,2.32
+,Female,Tablet,None,5.1
+,Female,TV,None,1.63
+,Male,Smartphone,None,1.72
+,Male,Laptop,None,4.23
+,Female,Smartphone,None,5.49
+,Female,Tablet,None,0.27
+,Male,Laptop,None,2.78
+,Female,Tablet,None,7.07
+,Female,Smartphone,None,2.93
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,2.89
+,Female,Smartphone,None,5.53
+,Female,Smartphone,None,0.97
+,Male,Smartphone,None,3.73
+,Female,Laptop,None,2.39
+,Female,TV,None,0.0
+,Male,Smartphone,None,5.66
+,Female,TV,None,2.68
+,Male,Laptop,None,4.73
+,Male,Smartphone,None,0.94
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,4.56
+,Male,TV,None,1.66
+,Female,TV,None,2.44
+,Male,Tablet,None,6.55
+,Male,Laptop,None,2.45
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,4.89
+,Female,Smartphone,None,2.91
+,Male,Smartphone,None,2.98
+,Female,Tablet,None,2.61
+,Female,Tablet,None,3.31
+,Female,TV,None,4.03
+,Female,Smartphone,None,3.9
+,Female,Smartphone,None,1.75
+,Female,TV,None,9.15
+,Female,TV,None,7.4
+,Female,TV,None,1.8
+,Male,TV,None,1.09
+,Female,Tablet,None,2.0
+,Female,Smartphone,None,4.23
+,Female,Tablet,None,0.17
+,Female,TV,None,2.28
+,Male,Tablet,None,1.19
+,Male,Smartphone,None,4.3
+,Female,Smartphone,None,5.34
+,Male,Smartphone,None,2.61
+,Female,TV,None,4.27
+,Male,TV,None,2.68
+,Male,Tablet,None,2.22
+,Male,TV,None,7.72
+,Female,Smartphone,None,4.71
+,Male,Smartphone,None,5.96
+,Female,Smartphone,None,4.44
+,Female,Smartphone,None,6.0
+,Female,Smartphone,None,6.71
+,Female,Smartphone,None,4.25
+,Male,Laptop,None,2.94
+,Female,Smartphone,None,0.66
+,Female,Tablet,None,3.0
+,Female,Smartphone,None,4.26
+,Male,TV,None,5.63
+,Male,Tablet,None,1.76
+,Male,Smartphone,None,3.9
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,2.48
+,Male,Tablet,None,5.93
+,Male,TV,None,0.33
+,Male,Smartphone,None,3.63
+,Female,Smartphone,None,0.99
+,Female,TV,None,1.01
+,Male,Smartphone,None,0.69
+,Female,Tablet,None,9.88
+,Female,Tablet,None,2.74
+,Female,TV,None,1.57
+,Female,Smartphone,None,1.27
+,Male,Laptop,None,1.85
+,Female,Tablet,None,1.82
+,Male,TV,None,3.91
+,Female,Smartphone,None,2.51
+,Female,Smartphone,None,1.29
+,Female,Smartphone,None,1.74
+,Male,TV,None,0.0
+,Male,Smartphone,None,0.0
+,Female,TV,None,0.0
+,Female,Smartphone,None,2.67
+,Female,Smartphone,None,3.88
+,Male,Laptop,None,2.2
+,Female,Smartphone,None,2.79
+,Male,Smartphone,None,1.72
+,Female,Smartphone,None,2.1
+,Male,Smartphone,None,5.53
+,Female,Tablet,None,0.42
+,Female,Smartphone,None,2.92
+,Female,TV,None,1.0
+,Female,TV,None,0.0
+,Female,Smartphone,None,3.48
+,Female,Laptop,None,3.59
+,Female,Smartphone,None,3.25
+,Female,Tablet,None,2.44
+,Female,Smartphone,None,2.49
+,Female,TV,None,0.42
+,Male,Smartphone,None,4.47
+,Female,Tablet,None,2.23
+,Male,Laptop,None,1.95
+,Female,Smartphone,None,4.5
+,Female,Tablet,None,2.63
+,Female,Laptop,None,4.69
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,1.33
+,Male,Laptop,None,3.7
+,Male,TV,None,6.36
+,Female,Smartphone,None,4.5
+,Female,TV,None,2.75
+,Female,Laptop,None,1.25
+,Male,TV,None,2.94
+,Female,TV,None,1.45
+,Female,Smartphone,None,3.33
+,Male,Tablet,None,1.63
+,Male,Smartphone,None,5.84
+,Male,Smartphone,None,4.99
+,Male,Laptop,None,3.03
+,Female,Tablet,None,2.81
+,Female,Smartphone,None,4.57
+,Male,Smartphone,None,5.25
+,Female,Smartphone,None,0.0
+,Female,TV,None,0.0
+,Female,Smartphone,None,3.02
+,Female,TV,None,0.38
+,Female,Tablet,None,5.41
+,Male,Smartphone,None,4.53
+,Female,Smartphone,None,4.44
+,Male,Tablet,None,2.18
+,Male,TV,None,2.09
+,Male,Laptop,None,4.26
+,Male,Laptop,None,4.76
+,Female,Smartphone,None,6.13
+,Male,Laptop,None,2.78
+,Male,TV,None,5.95
+,Male,Smartphone,None,2.98
+,Female,Smartphone,None,3.78
+,Male,Tablet,None,0.0
+,Male,Smartphone,None,4.92
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,0.8
+,Male,Smartphone,None,4.92
+,Female,TV,None,0.0
+,Male,Smartphone,None,2.46
+,Male,TV,None,0.71
+,Male,Tablet,None,2.87
+,Male,Smartphone,None,2.55
+,Female,Smartphone,None,3.82
+,Female,Laptop,None,2.82
+,Female,Laptop,None,4.85
+,Male,Smartphone,None,6.58
+,Male,Smartphone,None,5.77
+,Female,TV,None,3.95
+,Female,Tablet,None,2.02
+,Female,Tablet,None,2.49
+,Male,Smartphone,None,2.44
+,Female,Smartphone,None,5.65
+,Female,Smartphone,None,1.6
+,Female,Smartphone,None,4.71
+,Female,Smartphone,None,0.22
+,Male,Tablet,None,6.41
+,Male,Tablet,None,4.71
+,Female,TV,None,3.16
+,Female,Laptop,None,2.65
+,Male,Smartphone,None,2.88
+,Female,Tablet,None,4.3
+,Male,Smartphone,None,1.43
+,Female,TV,None,4.6
+,Female,Laptop,None,2.08
+,Female,Smartphone,None,2.41
+,Male,Smartphone,None,2.94
+,Female,Laptop,None,4.93
+,Female,TV,None,0.19
+,Female,TV,None,5.78
+,Male,Smartphone,None,4.89
+,Female,Smartphone,None,4.64
+,Female,Smartphone,None,3.27
+,Male,TV,None,3.19
+,Male,Smartphone,None,5.98
+,Female,Smartphone,None,3.03
+,Male,Smartphone,None,5.15
+,Male,Laptop,None,3.99
+,Male,Laptop,None,1.87
+,Female,Smartphone,None,2.96
+,Female,TV,None,0.0
+,Male,Smartphone,None,5.97
+,Female,TV,None,2.17
+,Male,TV,None,2.73
+,Male,Laptop,None,1.55
+,Female,Laptop,None,5.41
+,Female,TV,None,0.37
+,Female,Smartphone,None,5.19
+,Male,Smartphone,None,1.7
+,Male,Laptop,None,2.58
+,Female,Smartphone,None,2.43
+,Female,Laptop,None,4.47
+,Male,Smartphone,None,5.64
+,Male,Laptop,None,5.89
+,Female,Smartphone,None,2.16
+,Female,Laptop,None,2.76
+,Female,Smartphone,None,2.86
+,Male,TV,None,2.55
+,Female,Tablet,None,0.89
+,Male,Smartphone,None,3.99
+,Female,Laptop,None,1.64
+,Male,TV,None,0.0
+,Female,Laptop,None,5.03
+,Female,Tablet,None,3.73
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,0.0
+,Female,Smartphone,None,3.88
+,Male,TV,None,0.4
+,Female,TV,None,0.0
+,Female,Tablet,None,2.93
+,Female,Smartphone,None,2.37
+,Female,Smartphone,None,2.82
+,Female,Smartphone,None,5.23
+,Female,Smartphone,None,2.73
+,Female,Smartphone,None,4.94
+,Female,Smartphone,None,0.0
+,Male,TV,None,5.49
+,Male,Tablet,None,1.71
+,Female,Smartphone,None,2.27
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,4.95
+,Male,TV,None,0.45
+,Male,Smartphone,None,5.79
+,Male,TV,None,2.44
+,Female,Smartphone,None,3.73
+,Female,TV,None,2.95
+,Male,TV,None,2.77
+,Female,Tablet,None,1.91
+,Male,Smartphone,None,4.85
+,Male,Tablet,None,2.4
+,Female,TV,None,1.87
+,Male,Laptop,None,3.38
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,3.31
+,Male,Smartphone,None,1.81
+,Female,Tablet,None,3.58
+,Male,TV,None,1.56
+,Male,Smartphone,None,3.08
+,Female,Smartphone,None,6.26
+,Male,TV,None,2.69
+,Female,Tablet,None,2.73
+,Female,Tablet,None,2.42
+,Male,Smartphone,None,4.83
+,Male,TV,None,2.67
+,Male,Smartphone,None,3.03
+,Male,Smartphone,None,2.32
+,Female,Smartphone,None,2.83
+,Male,Smartphone,None,4.48
+,Female,Smartphone,None,1.49
+,Male,Smartphone,None,1.76
+,Female,Smartphone,None,4.79
+,Female,TV,None,5.49
+,Male,Smartphone,None,0.88
+,Male,TV,None,3.51
+,Female,Smartphone,None,2.39
+,Female,Smartphone,None,5.02
+,Male,Smartphone,None,0.06
+,Male,Laptop,None,2.73
+,Female,Laptop,None,2.81
+,Male,Smartphone,None,6.4
+,Male,Laptop,None,4.45
+,Female,Smartphone,None,5.58
+,Female,TV,None,2.89
+,Male,Smartphone,None,4.91
+,Female,Smartphone,None,0.0
+,Male,TV,None,3.56
+,Female,TV,None,0.0
+,Female,TV,None,5.24
+,Female,TV,None,1.83
+,Male,Smartphone,None,3.24
+,Male,TV,None,2.78
+,Male,Smartphone,None,5.65
+,Male,Smartphone,None,4.71
+,Female,TV,None,1.35
+,Male,Smartphone,None,2.92
+,Female,TV,None,4.23
+,Female,Smartphone,None,3.46
+,Male,Smartphone,None,1.37
+,Male,Smartphone,None,2.77
+,Female,Laptop,None,2.21
+,Male,Smartphone,None,5.34
+,Female,TV,None,2.1
+,Male,Smartphone,None,2.78
+,Female,Smartphone,None,2.65
+,Female,TV,None,1.87
+,Male,Laptop,None,6.33
+,Female,TV,None,11.25
+,Male,Smartphone,None,2.88
+,Female,Laptop,None,2.67
+,Male,Tablet,None,0.0
+,Male,Smartphone,None,5.11
+,Female,TV,None,2.27
+,Female,Tablet,None,0.0
+,Male,Smartphone,None,3.21
+,Female,Laptop,None,3.7
+,Male,Smartphone,None,2.09
+,Female,Laptop,None,2.88
+,Female,TV,None,1.84
+,Female,Smartphone,None,5.14
+,Female,Smartphone,None,4.96
+,Male,TV,None,3.23
+,Female,TV,None,6.82
+,Female,TV,None,2.35
+,Female,TV,None,2.57
+,Female,Tablet,None,0.64
+,Female,Tablet,None,1.35
+,Male,Smartphone,None,4.56
+,Female,TV,None,2.38
+,Male,Smartphone,None,5.95
+,Female,Smartphone,None,6.58
+,Female,Laptop,None,4.24
+,Male,Smartphone,None,4.74
+,Male,Smartphone,None,7.69
+,Male,Smartphone,None,0.65
+,Female,Laptop,None,1.39
+,Female,Smartphone,None,3.48
+,Female,Smartphone,None,5.68
+,Male,TV,None,2.93
+,Female,Smartphone,None,6.61
+,Female,TV,None,1.56
+,Male,TV,None,4.52
+,Female,Tablet,None,1.68
+,Female,TV,None,2.93
+,Male,TV,None,1.96
+,Male,TV,None,7.39
+,Female,Smartphone,None,2.17
+,Male,Smartphone,None,2.35
+,Female,Smartphone,None,1.9
+,Male,TV,None,2.73
+,Male,Tablet,None,0.0
+,Male,Smartphone,None,4.9
+,Male,Smartphone,None,6.21
+,Male,Tablet,None,2.06
+,Female,TV,None,5.35
+,Male,Tablet,None,6.9
+,Male,Tablet,None,4.47
+,Female,Smartphone,None,0.0
+,Male,TV,None,9.16
+,Female,Laptop,None,4.42
+,Male,TV,None,4.92
+,Female,TV,None,4.93
+,Male,Tablet,None,7.89
+,Male,TV,None,6.04
+,Female,Laptop,None,4.68
+,Female,TV,None,2.19
+,Female,TV,None,2.46
+,Male,Smartphone,None,1.14
+,Male,TV,None,5.06
+,Female,TV,None,0.0
+,Female,Smartphone,None,0.0
+,Female,TV,None,3.98
+,Female,Laptop,None,3.52
+,Female,Smartphone,None,5.88
+,Male,Laptop,None,6.09
+,Female,TV,None,5.6
+,Male,Smartphone,None,4.14
+,Male,TV,None,5.17
+,Female,Smartphone,None,3.57
+,Male,Smartphone,None,4.53
+,Female,TV,None,2.24
+,Female,Tablet,None,1.95
+,Male,Smartphone,None,6.48
+,Female,Smartphone,None,2.4
+,Male,Laptop,None,2.6
+,Male,TV,None,1.06
+,Male,Tablet,None,5.06
+,Male,TV,None,4.22
+,Male,Tablet,None,4.36
+,Female,Smartphone,None,9.74
+,Female,TV,None,2.14
+,Male,Smartphone,None,7.76
+,Male,Tablet,None,2.49
+,Male,Smartphone,None,3.86
+,Female,Smartphone,None,0.91
+,Female,Tablet,None,5.05
+,Female,Laptop,None,3.44
+,Female,Laptop,None,4.72
+,Female,Smartphone,None,0.95
+,Female,TV,None,4.82
+,Male,Smartphone,None,5.77
+,Female,Tablet,None,2.36
+,Female,TV,None,2.41
+,Female,Smartphone,None,2.74
+,Female,Smartphone,None,3.62
+,Female,Smartphone,None,0.19
+,Male,Laptop,None,5.94
+,Male,Laptop,None,2.43
+,Male,Smartphone,None,1.64
+,Female,Tablet,None,2.09
+,Male,Laptop,None,2.88
+,Female,Smartphone,None,2.73
+,Male,TV,None,4.84
+,Male,Smartphone,None,2.11
+,Female,Smartphone,None,2.33
+,Male,TV,None,5.02
+,Male,TV,None,4.97
+,Female,TV,None,5.1
+,Female,TV,None,3.44
+,Female,Laptop,None,2.52
+,Female,TV,None,7.08
+,Female,Smartphone,None,3.71
+,Male,Smartphone,None,4.82
+,Female,TV,None,7.09
+,Female,Smartphone,None,2.1
+,Female,Smartphone,None,0.4
+,Female,Smartphone,None,2.67
+,Male,TV,None,0.43
+,Male,Laptop,None,4.53
+,Male,Smartphone,None,5.07
+,Male,Tablet,None,2.07
+,Female,TV,None,5.24
+,Female,Smartphone,None,4.57
+,Female,Smartphone,None,6.53
+,Female,Smartphone,None,4.47
+,Female,Smartphone,None,2.6
+,Female,Smartphone,None,3.73
+,Male,Smartphone,None,2.32
+,Female,Smartphone,None,2.62
+,Female,TV,None,7.85
+,Male,TV,None,8.66
+,Female,Laptop,None,2.2
+,Female,TV,None,2.87
+,Male,Tablet,None,2.75
+,Male,TV,None,0.0
+,Male,Tablet,None,5.01
+,Male,TV,None,2.13
+,Male,Smartphone,None,2.99
+,Female,TV,None,5.4
+,Female,Tablet,None,6.92
+,Male,TV,None,1.85
+,Male,Smartphone,None,1.89
+,Male,Smartphone,None,3.9
+,Female,TV,None,3.89
+,Male,Smartphone,None,2.93
+,Male,Tablet,None,5.15
+,Male,Smartphone,None,6.08
+,Male,TV,None,3.97
+,Female,Smartphone,None,3.3
+,Female,Smartphone,None,4.06
+,Male,Tablet,None,0.3
+,Female,TV,None,0.0
+,Female,Smartphone,None,4.97
+,Female,Smartphone,None,2.32
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,8.74
+,Female,Smartphone,None,3.79
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,3.66
+,Male,Smartphone,None,2.99
+,Female,Tablet,None,5.15
+,Female,Smartphone,None,0.16
+,Male,Tablet,None,5.0
+,Male,Smartphone,None,0.91
+,Male,Smartphone,None,3.68
+,Female,Smartphone,None,4.05
+,Male,Smartphone,None,2.39
+,Male,Smartphone,None,2.65
+,Male,Tablet,None,4.63
+,Male,Smartphone,None,7.67
+,Male,Laptop,None,2.31
+,Male,Smartphone,None,1.44
+,Female,Laptop,None,5.06
+,Female,Laptop,None,5.61
+,Female,Laptop,None,2.89
+,Male,Smartphone,None,2.9
+,Male,Laptop,None,4.03
+,Male,Tablet,None,1.32
+,Male,Smartphone,None,2.66
+,Male,Tablet,None,2.77
+,Female,TV,None,2.01
+,Female,Smartphone,None,2.31
+,Male,Smartphone,None,4.92
+,Female,Smartphone,None,2.77
+,Female,Smartphone,None,6.02
+,Male,Smartphone,None,3.74
+,Female,Smartphone,None,5.36
+,Male,TV,None,4.41
+,Male,TV,None,3.3
+,Female,Smartphone,None,2.55
+,Male,Tablet,None,1.7
+,Male,Smartphone,None,4.21
+,Male,TV,None,6.64
+,Male,Smartphone,None,4.79
+,Male,Tablet,None,6.4
+,Male,Smartphone,None,2.19
+,Female,TV,None,2.15
+,Female,Smartphone,None,6.33
+,Female,TV,None,4.49
+,Female,TV,None,5.52
+,Female,Smartphone,None,4.01
+,Male,Tablet,None,0.52
+,Female,Smartphone,None,3.99
+,Male,Smartphone,None,1.45
+,Male,TV,None,2.29
+,Female,TV,None,5.82
+,Male,Laptop,None,5.34
+,Female,TV,None,4.91
+,Male,Smartphone,None,2.81
+,Female,Tablet,None,4.66
+,Male,Tablet,None,3.02
+,Female,Laptop,None,3.91
+,Female,TV,None,0.0
+,Female,TV,None,7.32
+,Female,Smartphone,None,4.69
+,Female,Laptop,None,8.27
+,Female,TV,None,1.86
+,Female,Smartphone,None,5.67
+,Female,TV,None,4.96
+,Male,Tablet,None,4.26
+,Male,TV,None,6.19
+,Male,Smartphone,None,3.41
+,Female,TV,None,5.16
+,Male,TV,None,0.0
+,Male,Tablet,None,4.81
+,Female,TV,None,0.0
+,Female,Laptop,None,5.75
+,Male,Smartphone,None,2.16
+,Female,Laptop,None,1.82
+,Female,TV,None,2.48
+,Male,Smartphone,None,0.99
+,Male,TV,None,2.87
+,Male,Smartphone,None,4.87
+,Male,Smartphone,None,2.01
+,Female,TV,None,6.97
+,Male,Tablet,None,1.0
+,Male,Smartphone,None,1.25
+,Male,Smartphone,None,3.55
+,Male,Tablet,None,5.04
+,Female,Smartphone,None,2.96
+,Female,Smartphone,None,5.58
+,Male,Smartphone,None,3.26
+,Female,Smartphone,None,4.51
+,Female,Smartphone,None,2.69
+,Female,Laptop,None,2.79
+,Female,TV,None,2.16
+,Female,Tablet,None,4.58
+,Male,Laptop,None,1.97
+,Female,Tablet,None,3.11
+,Female,TV,None,1.0
+,Female,TV,None,2.97
+,Male,Smartphone,None,5.23
+,Male,TV,None,3.58
+,Female,Smartphone,None,6.52
+,Female,Smartphone,None,3.39
+,Female,TV,None,3.33
+,Male,TV,None,3.0
+,Female,TV,None,4.57
+,Female,TV,None,1.18
+,Male,TV,None,2.76
+,Female,Smartphone,None,1.19
+,Male,Tablet,None,4.05
+,Male,Smartphone,None,7.4
+,Male,Smartphone,None,4.2
+,Female,Laptop,None,2.42
+,Male,TV,None,4.0
+,Male,Tablet,None,1.73
+,Male,Smartphone,None,5.0
+,Female,Laptop,None,2.69
+,Male,Smartphone,None,0.0
+,Male,TV,None,4.03
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,3.78
+,Male,Tablet,None,4.93
+,Male,TV,None,7.65
+,Male,TV,None,2.64
+,Female,TV,None,2.88
+,Female,TV,None,1.91
+,Female,TV,None,2.67
+,Female,TV,None,0.0
+,Male,Smartphone,None,0.16
+,Male,TV,None,0.0
+,Male,Tablet,None,2.31
+,Male,Laptop,None,3.97
+,Male,TV,None,4.59
+,Female,Laptop,None,2.66
+,Female,Laptop,None,6.21
+,Female,Smartphone,None,4.68
+,Male,Tablet,None,1.8
+,Male,Smartphone,None,3.35
+,Male,TV,None,5.51
+,Female,Tablet,None,2.68
+,Male,Smartphone,None,2.85
+,Female,Smartphone,None,1.66
+,Female,Tablet,None,5.53
+,Male,TV,None,2.93
+,Female,Smartphone,None,3.34
+,Male,Smartphone,None,8.52
+,Male,Smartphone,None,1.14
+,Female,TV,None,1.63
+,Female,Smartphone,None,8.08
+,Male,Laptop,None,2.93
+,Female,Laptop,None,2.45
+,Male,Smartphone,None,5.77
+,Male,Tablet,None,4.93
+,Female,Tablet,None,6.66
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,2.94
+,Male,Smartphone,None,2.85
+,Male,Smartphone,None,6.1
+,Male,TV,None,1.12
+,Male,Tablet,None,1.6
+,Female,TV,None,2.78
+,Male,Smartphone,None,6.41
+,Female,Tablet,None,2.17
+,Female,Smartphone,None,4.01
+,Female,Smartphone,None,2.93
+,Female,TV,None,2.11
+,Male,TV,None,5.5
+,Male,Laptop,None,5.9
+,Female,Smartphone,None,6.11
+,Female,TV,None,4.26
+,Female,Laptop,None,3.28
+,Male,TV,None,1.15
+,Male,Smartphone,None,3.68
+,Male,TV,None,5.87
+,Female,Laptop,None,4.52
+,Female,Laptop,None,5.26
+,Male,Smartphone,None,4.46
+,Female,Smartphone,None,0.0
+,Male,Laptop,None,5.68
+,Female,TV,None,0.0
+,Male,Smartphone,None,2.58
+,Male,TV,None,4.63
+,Male,TV,None,2.9
+,Female,TV,None,5.21
+,Female,TV,None,2.77
+,Female,Tablet,None,4.9
+,Female,Smartphone,None,6.59
+,Male,TV,None,3.64
+,Male,Laptop,None,3.82
+,Female,Tablet,None,5.06
+,Female,Laptop,None,4.61
+,Female,Tablet,None,2.85
+,Male,Smartphone,None,5.32
+,Female,Smartphone,None,1.78
+,Male,Laptop,None,3.94
+,Female,TV,None,2.93
+,Female,Smartphone,None,0.0
+,Female,TV,None,1.99
+,Male,Tablet,None,0.17
+,Male,Laptop,None,2.77
+,Female,Smartphone,None,2.2
+,Female,Smartphone,None,4.7
+,Female,Smartphone,None,0.0
+,Female,Laptop,None,5.7
+,Male,TV,None,7.61
+,Female,Smartphone,None,2.65
+,Male,TV,None,1.52
+,Male,TV,None,0.0
+,Male,Tablet,None,2.49
+,Female,Tablet,None,3.0
+,Female,Laptop,None,1.43
+,Male,TV,None,5.16
+,Female,TV,None,5.24
+,Female,Smartphone,None,6.77
+,Male,TV,None,2.38
+,Male,Laptop,None,5.78
+,Male,Tablet,None,0.85
+,Male,Smartphone,None,5.52
+,Female,TV,None,2.04
+,Female,Tablet,None,5.08
+,Female,TV,None,2.16
+,Male,Laptop,None,2.3
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,4.31
+,Female,Tablet,None,1.88
+,Male,TV,None,3.43
+,Female,Laptop,None,1.62
+,Male,Tablet,None,0.0
+,Female,Tablet,None,4.17
+,Female,Tablet,None,4.97
+,Male,Smartphone,None,1.01
+,Male,Smartphone,None,3.4
+,Female,Smartphone,None,4.42
+,Female,Laptop,None,4.44
+,Male,TV,None,2.44
+,Female,TV,None,2.61
+,Male,Smartphone,None,2.03
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,2.73
+,Female,TV,None,2.86
+,Male,Smartphone,None,1.46
+,Female,Smartphone,None,2.45
+,Female,Smartphone,None,0.11
+,Male,Smartphone,None,2.5
+,Male,TV,None,0.61
+,Male,Tablet,None,2.99
+,Female,Smartphone,None,4.52
+,Male,Smartphone,None,5.23
+,Female,Laptop,None,4.03
+,Female,Smartphone,None,5.12
+,Male,TV,None,3.72
+,Male,Laptop,None,1.47
+,Male,Smartphone,None,8.39
+,Male,TV,None,3.68
+,Male,TV,None,2.86
+,Male,Smartphone,None,1.25
+,Female,Tablet,None,3.7
+,Male,Smartphone,None,4.23
+,Female,Smartphone,None,1.81
+,Male,Laptop,None,4.59
+,Male,TV,None,0.0
+,Female,Laptop,None,3.49
+,Male,Smartphone,None,5.66
+,Male,Smartphone,None,3.35
+,Female,TV,None,2.91
+,Male,Tablet,None,6.85
+,Male,Smartphone,None,2.75
+,Female,Tablet,None,3.57
+,Female,Tablet,None,4.85
+,Female,TV,None,4.88
+,Female,Smartphone,None,5.9
+,Female,TV,None,2.69
+,Male,Laptop,None,3.87
+,Male,TV,None,2.5
+,Male,Smartphone,None,2.98
+,Female,Smartphone,None,2.7
+,Female,Smartphone,None,2.5
+,Female,Laptop,None,0.99
+,Male,Smartphone,None,5.25
+,Female,Smartphone,None,1.48
+,Female,TV,None,0.0
+,Female,TV,None,3.32
+,Female,TV,None,2.25
+,Male,TV,None,7.81
+,Female,Smartphone,None,3.22
+,Female,TV,None,3.74
+,Male,Tablet,None,3.9
+,Male,Smartphone,None,2.57
+,Female,Laptop,None,4.54
+,Male,Laptop,None,0.94
+,Male,Laptop,None,2.16
+,Male,Smartphone,None,1.23
+,Male,Tablet,None,6.14
+,Male,Smartphone,None,2.69
+,Female,Tablet,None,2.35
+,Female,Smartphone,None,5.45
+,Male,Smartphone,None,5.56
+,Male,Smartphone,None,2.3
+,Male,Smartphone,None,2.71
+,Male,Smartphone,None,0.86
+,Female,TV,None,9.7
+,Male,Tablet,None,0.31
+,Female,TV,None,2.57
+,Male,Smartphone,None,1.26
+,Female,Smartphone,None,4.15
+,Female,TV,None,2.51
+,Female,Laptop,None,1.65
+,Male,Smartphone,None,3.33
+,Female,Tablet,None,3.99
+,Male,TV,None,0.0
+,Female,Smartphone,None,2.71
+,Male,Laptop,None,5.54
+,Male,Smartphone,None,4.02
+,Male,Laptop,None,5.26
+,Female,Laptop,None,3.62
+,Female,Smartphone,None,5.3
+,Male,Tablet,None,1.21
+,Male,Smartphone,None,2.37
+,Male,Smartphone,None,1.15
+,Female,TV,None,4.03
+,Female,Laptop,None,1.78
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,0.9
+,Male,Laptop,None,2.66
+,Male,TV,None,0.0
+,Male,Laptop,None,2.04
+,Male,Laptop,None,3.57
+,Female,Tablet,None,0.15
+,Female,Smartphone,None,5.49
+,Female,Smartphone,None,3.46
+,Male,Laptop,None,4.97
+,Male,Laptop,None,7.19
+,Male,Laptop,None,4.82
+,Female,TV,None,4.05
+,Male,Smartphone,None,1.99
+,Female,TV,None,1.87
+,Male,Smartphone,None,1.08
+,Female,TV,None,5.98
+,Male,TV,None,2.05
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,3.82
+,Male,Tablet,None,0.93
+,Female,Smartphone,None,3.36
+,Male,Smartphone,None,4.49
+,Female,TV,None,4.32
+,Female,Smartphone,None,2.27
+,Female,TV,None,1.7
+,Female,TV,None,3.41
+,Male,Smartphone,None,2.94
+,Female,TV,None,0.0
+,Male,TV,None,1.91
+,Female,Smartphone,None,2.77
+,Female,Smartphone,None,5.91
+,Female,Smartphone,None,2.99
+,Male,TV,None,6.02
+,Male,TV,None,2.78
+,Female,Smartphone,None,4.46
+,Female,Smartphone,None,0.0
+,Female,TV,None,0.48
+,Female,Smartphone,None,1.23
+,Female,Tablet,None,0.48
+,Female,Laptop,None,4.98
+,Male,Laptop,None,2.64
+,Male,TV,None,2.61
+,Male,Tablet,None,2.81
+,Male,Laptop,None,2.05
+,Female,Tablet,None,1.75
+,Female,Smartphone,None,4.75
+,Male,Laptop,None,2.28
+,Male,Smartphone,None,2.86
+,Male,Smartphone,None,2.38
+,Male,Tablet,None,5.78
+,Male,TV,None,2.84
+,Female,Smartphone,None,2.35
+,Female,Smartphone,None,4.97
+,Female,Smartphone,None,0.52
+,Male,TV,None,1.13
+,Male,TV,None,4.55
+,Male,Tablet,None,7.54
+,Female,Tablet,None,5.39
+,Female,Smartphone,None,4.08
+,Male,Smartphone,None,3.78
+,Male,Laptop,None,1.87
+,Male,Smartphone,None,5.17
+,Female,Tablet,None,1.51
+,Female,Smartphone,None,2.82
+,Male,Laptop,None,6.26
+,Male,TV,None,7.96
+,Female,Smartphone,None,3.86
+,Female,Smartphone,None,3.34
+,Male,Smartphone,None,2.49
+,Female,Laptop,None,4.93
+,Male,Smartphone,None,4.99
+,Female,Smartphone,None,2.51
+,Male,Smartphone,None,1.58
+,Male,Smartphone,None,5.48
+,Male,Smartphone,None,3.02
+,Male,Tablet,None,4.64
+,Male,Laptop,None,4.06
+,Male,Smartphone,None,0.0
+,Female,Tablet,None,6.72
+,Male,Smartphone,None,4.25
+,Female,Smartphone,None,2.77
+,Male,TV,None,4.42
+,Male,Smartphone,None,2.07
+,Male,Smartphone,None,6.91
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,8.97
+,Female,Smartphone,None,4.45
+,Male,Smartphone,None,4.96
+,Male,TV,None,4.17
+,Female,Smartphone,None,4.45
+,Female,TV,None,5.41
+,Female,TV,None,0.38
+,Female,TV,None,1.55
+,Male,TV,None,0.55
+,Male,Smartphone,None,2.09
+,Female,Smartphone,None,3.4
+,Male,Laptop,None,3.69
+,Male,Smartphone,None,2.25
+,Female,Smartphone,None,6.01
+,Male,Smartphone,None,2.38
+,Female,Smartphone,None,3.58
+,Male,TV,None,3.15
+,Female,TV,None,2.25
+,Male,Smartphone,None,5.02
+,Male,Smartphone,None,5.94
+,Female,TV,None,2.19
+,Male,Tablet,None,0.7
+,Female,Tablet,None,1.98
+,Male,Smartphone,None,3.91
+,Male,TV,None,0.8
+,Female,TV,None,4.62
+,Female,Laptop,None,2.29
+,Male,Tablet,None,2.14
+,Male,TV,None,1.67
+,Female,Smartphone,None,4.64
+,Male,TV,None,1.74
+,Male,TV,None,2.82
+,Male,Smartphone,None,5.32
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,4.29
+,Male,Tablet,None,2.28
+,Male,Smartphone,None,0.95
+,Female,TV,None,2.67
+,Male,Smartphone,None,3.71
+,Male,Smartphone,None,4.14
+,Male,Smartphone,None,1.17
+,Female,Laptop,None,3.19
+,Female,Tablet,None,1.39
+,Female,TV,None,1.48
+,Male,TV,None,0.47
+,Male,Laptop,None,2.14
+,Male,Tablet,None,4.64
+,Male,Laptop,None,3.71
+,Male,TV,None,2.05
+,Male,Smartphone,None,1.72
+,Female,Smartphone,None,2.65
+,Female,Tablet,None,4.74
+,Male,Smartphone,None,0.94
+,Female,TV,None,4.03
+,Female,Tablet,None,2.97
+,Male,Smartphone,None,5.15
+,Female,Smartphone,None,1.04
+,Male,Laptop,None,5.36
+,Female,Laptop,None,2.43
+,Female,Tablet,None,0.0
+,Male,Tablet,None,0.0
+,Female,TV,None,2.0
+,Female,Tablet,None,4.72
+,Female,TV,None,2.86
+,Male,Laptop,None,4.99
+,Male,Smartphone,None,2.5
+,Male,Smartphone,None,3.04
+,Male,Smartphone,None,2.62
+,Female,Laptop,None,1.63
+,Male,TV,None,5.68
+,Male,TV,None,2.16
+,Female,Laptop,None,4.09
+,Male,Smartphone,None,4.66
+,Male,Laptop,None,6.18
+,Male,TV,None,2.98
+,Male,TV,None,0.06
+,Male,Laptop,None,3.59
+,Male,TV,None,2.72
+,Male,Smartphone,None,2.88
+,Female,TV,None,0.85
+,Female,Tablet,None,0.78
+,Female,Smartphone,None,1.44
+,Female,Smartphone,None,1.78
+,Female,TV,None,3.81
+,Male,TV,None,2.09
+,Female,Smartphone,None,2.44
+,Female,TV,None,4.73
+,Female,Laptop,None,2.94
+,Male,TV,None,0.0
+,Female,TV,None,0.0
+,Male,TV,None,1.98
+,Male,Smartphone,None,4.49
+,Male,Tablet,None,3.1
+,Male,Smartphone,None,5.41
+,Male,Tablet,None,2.2
+,Male,Tablet,None,2.66
+,Male,Smartphone,None,4.45
+,Male,Smartphone,None,1.0
+,Female,Smartphone,None,2.41
+,Male,TV,None,5.95
+,Female,TV,None,3.32
+,Female,Smartphone,None,0.0
+,Female,TV,None,2.88
+,Male,Smartphone,None,2.82
+,Male,Smartphone,None,5.06
+,Female,Tablet,None,2.0
+,Male,Smartphone,None,2.5
+,Female,Smartphone,None,5.15
+,Male,Tablet,None,2.47
+,Male,TV,None,0.0
+,Male,Laptop,None,1.48
+,Female,TV,None,0.0
+,Male,Tablet,None,2.64
+,Male,TV,None,3.16
+,Male,Smartphone,None,1.71
+,Male,Smartphone,None,3.35
+,Male,Laptop,None,6.68
+,Male,TV,None,4.23
+,Female,TV,None,3.57
+,Male,Tablet,None,7.84
+,Male,Smartphone,None,2.7
+,Male,TV,None,0.0
+,Male,TV,None,2.28
+,Female,Smartphone,None,5.01
+,Female,Smartphone,None,2.52
+,Male,Smartphone,None,5.2
+,Male,TV,None,3.71
+,Female,Smartphone,None,5.36
+,Male,Smartphone,None,7.2
+,Male,Smartphone,None,3.64
+,Male,Smartphone,None,5.55
+,Female,Laptop,None,5.0
+,Male,Laptop,None,2.59
+,Female,TV,None,2.43
+,Male,Tablet,None,0.0
+,Male,Laptop,None,5.19
+,Male,TV,None,1.63
+,Male,Tablet,None,9.15
+,Female,TV,None,7.77
+,Male,Laptop,None,3.99
+,Male,Smartphone,None,2.95
+,Male,Tablet,None,1.24
+,Male,Smartphone,None,4.58
+,Female,TV,None,0.0
+,Female,TV,None,0.92
+,Female,Smartphone,None,2.19
+,Male,TV,None,0.29
+,Female,TV,None,1.62
+,Female,Smartphone,None,4.59
+,Female,Smartphone,None,2.83
+,Female,Smartphone,None,3.59
+,Male,TV,None,4.97
+,Female,Laptop,None,5.57
+,Female,TV,None,1.45
+,Female,TV,None,4.91
+,Female,Laptop,None,5.39
+,Male,Smartphone,None,2.83
+,Male,TV,None,0.0
+,Male,TV,None,1.39
+,Male,Smartphone,None,2.23
+,Male,TV,None,2.08
+,Female,TV,None,3.8
+,Male,Tablet,None,7.4
+,Female,Smartphone,None,2.48
+,Female,TV,None,5.83
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,0.96
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,2.42
+,Male,Smartphone,None,4.89
+,Male,Laptop,None,2.75
+,Female,Tablet,None,2.09
+,Male,Tablet,None,0.24
+,Female,TV,None,3.95
+,Male,Smartphone,None,4.71
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,4.56
+,Female,Smartphone,None,3.06
+,Male,Smartphone,None,2.96
+,Female,Tablet,None,2.86
+,Female,Smartphone,None,5.04
+,Female,Smartphone,None,2.59
+,Male,TV,None,11.5
+,Female,TV,None,0.4
+,Male,TV,None,4.03
+,Female,Smartphone,None,4.42
+,Female,Smartphone,None,3.85
+,Female,Tablet,None,1.86
+,Male,TV,None,1.59
+,Female,TV,None,2.51
+,Male,Smartphone,None,2.35
+,Male,Tablet,None,4.66
+,Male,TV,None,1.86
+,Male,Tablet,None,0.0
+,Male,TV,None,4.18
+,Female,Smartphone,None,2.97
+,Female,Smartphone,None,3.52
+,Female,Smartphone,None,5.57
+,Female,Tablet,None,5.17
+,Male,TV,None,5.02
+,Male,Smartphone,None,1.41
+,Male,Smartphone,None,5.56
+,Female,Smartphone,None,1.65
+,Female,Smartphone,None,2.07
+,Female,Smartphone,None,3.0
+,Male,TV,None,5.54
+,Male,TV,None,2.62
+,Male,Smartphone,None,6.46
+,Male,Smartphone,None,5.59
+,Female,TV,None,0.6
+,Female,TV,None,3.51
+,Male,Smartphone,None,5.69
+,Male,Smartphone,None,5.66
+,Female,Smartphone,None,6.24
+,Female,TV,None,5.88
+,Female,Smartphone,None,2.31
+,Female,Smartphone,None,5.83
+,Female,Smartphone,None,0.94
+,Female,Smartphone,None,3.21
+,Female,Smartphone,None,2.95
+,Female,Smartphone,None,2.42
+,Female,Smartphone,None,2.45
+,Female,Tablet,None,0.0
+,Female,TV,None,5.22
+,Female,Smartphone,None,4.94
+,Female,TV,None,2.97
+,Male,Smartphone,None,2.76
+,Male,Smartphone,None,4.49
+,Male,TV,None,0.48
+,Female,Smartphone,None,3.74
+,Female,TV,None,0.03
+,Male,TV,None,1.05
+,Female,Smartphone,None,5.22
+,Female,TV,None,4.76
+,Male,TV,None,2.35
+,Female,Tablet,None,0.0
+,Male,TV,None,0.97
+,Male,Smartphone,None,4.15
+,Male,TV,None,2.94
+,Female,Laptop,None,2.08
+,Male,TV,None,2.53
+,Male,Tablet,None,3.45
+,Female,Smartphone,None,2.92
+,Female,Laptop,None,1.25
+,Male,Smartphone,None,6.14
+,Male,Smartphone,None,8.46
+,Male,Smartphone,None,2.59
+,Male,Smartphone,None,4.97
+,Female,Smartphone,None,4.12
+,Male,Laptop,None,2.96
+,Female,Smartphone,None,2.31
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,2.74
+,Male,Laptop,None,6.26
+,Female,Tablet,None,6.49
+,Male,Tablet,None,5.19
+,Male,Smartphone,None,5.07
+,Male,Smartphone,None,3.18
+,Female,Laptop,None,4.08
+,Female,Smartphone,None,7.23
+,Male,TV,None,4.67
+,Female,TV,None,0.91
+,Male,Smartphone,None,3.78
+,Female,Laptop,None,5.35
+,Male,Laptop,None,2.41
+,Female,TV,None,0.76
+,Female,Laptop,None,2.51
+,Female,Tablet,None,5.51
+,Female,Smartphone,None,4.23
+,Female,Laptop,None,6.89
+,Female,Smartphone,None,1.59
+,Male,TV,None,6.12
+,Male,Tablet,None,2.81
+,Male,Tablet,None,4.63
+,Male,TV,None,2.32
+,Female,Smartphone,None,0.71
+,Female,Smartphone,None,2.74
+,Male,TV,None,0.89
+,Female,TV,None,2.27
+,Female,TV,None,2.94
+,Male,Tablet,None,2.71
+,Male,Smartphone,None,2.15
+,Male,Smartphone,None,0.6
+,Male,Smartphone,None,5.9
+,Female,TV,None,2.1
+,Male,Smartphone,None,2.68
+,Male,Smartphone,None,2.85
+,Male,Tablet,None,1.36
+,Male,Smartphone,None,3.88
+,Female,Smartphone,None,2.65
+,Male,Smartphone,None,2.45
+,Female,Smartphone,None,2.44
+,Female,TV,None,0.0
+,Male,TV,None,2.07
+,Female,Smartphone,None,8.36
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,4.74
+,Male,Laptop,None,2.55
+,Male,Smartphone,None,2.97
+,Female,TV,None,2.92
+,Female,TV,None,0.65
+,Male,Smartphone,None,3.51
+,Male,Smartphone,None,6.72
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,2.34
+,Male,TV,None,0.05
+,Male,TV,None,4.42
+,Female,Smartphone,None,3.46
+,Male,TV,None,4.48
+,Male,Laptop,None,5.91
+,Female,Laptop,None,5.75
+,Male,Tablet,None,6.51
+,Male,Smartphone,None,5.22
+,Male,Smartphone,None,2.86
+,Male,Smartphone,None,4.25
+,Female,Laptop,None,4.62
+,Male,Tablet,None,6.94
+,Male,Smartphone,None,6.52
+,Female,Smartphone,None,2.25
+,Male,TV,None,2.79
+,Male,TV,None,0.0
+,Female,Smartphone,None,0.99
+,Male,Tablet,None,5.9
+,Female,Smartphone,None,1.56
+,Female,Smartphone,None,2.84
+,Female,Laptop,None,3.51
+,Female,TV,None,2.31
+,Female,Smartphone,None,0.11
+,Female,Smartphone,None,2.08
+,Male,Smartphone,None,1.61
+,Female,TV,None,0.0
+,Male,Tablet,None,5.67
+,Female,Tablet,None,2.43
+,Male,TV,None,2.94
+,Male,Smartphone,None,0.0
+,Female,Tablet,None,1.46
+,Female,Smartphone,None,2.98
+,Male,Smartphone,None,3.24
+,Female,TV,None,1.67
+,Female,TV,None,0.0
+,Male,Tablet,None,2.95
+,Male,Laptop,None,2.48
+,Female,Smartphone,None,0.0
+,Female,Tablet,None,0.48
+,Male,Smartphone,None,5.12
+,Male,Tablet,None,0.92
+,Male,TV,None,4.73
+,Female,Laptop,None,3.72
+,Female,Smartphone,None,2.71
+,Male,Smartphone,None,5.57
+,Female,Tablet,None,1.2
+,Female,Smartphone,None,1.82
+,Male,Tablet,None,0.34
+,Female,TV,None,2.78
+,Male,TV,None,4.92
+,Male,Tablet,None,0.01
+,Male,Laptop,None,5.42
+,Female,Tablet,None,3.48
+,Male,Smartphone,None,2.74
+,Male,Smartphone,None,2.59
+,Female,Smartphone,None,1.07
+,Female,Smartphone,None,3.01
+,Female,Smartphone,None,3.72
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,4.95
+,Female,Laptop,None,5.31
+,Male,Tablet,None,2.6
+,Male,Laptop,None,4.25
+,Female,Tablet,None,2.77
+,Female,TV,None,0.0
+,Male,TV,None,2.31
+,Female,Smartphone,None,2.85
+,Female,TV,None,1.89
+,Male,TV,None,1.71
+,Male,Smartphone,None,4.94
+,Female,Smartphone,None,4.32
+,Male,Smartphone,None,4.94
+,Male,TV,None,1.44
+,Male,TV,None,0.0
+,Female,Tablet,None,6.96
+,Male,Smartphone,None,2.7
+,Female,TV,None,4.33
+,Male,Tablet,None,1.51
+,Female,Smartphone,None,0.51
+,Female,TV,None,4.13
+,Female,TV,None,2.91
+,Male,Smartphone,None,2.57
+,Male,Smartphone,None,2.1
+,Female,Smartphone,None,2.86
+,Male,TV,None,3.81
+,Female,Laptop,None,5.53
+,Male,TV,None,2.57
+,Male,Laptop,None,4.61
+,Female,Smartphone,None,5.66
+,Female,Smartphone,None,4.1
+,Female,Smartphone,None,0.69
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,1.6
+,Male,Smartphone,None,5.36
+,Male,Smartphone,None,0.0
+,Male,Laptop,None,3.67
+,Female,Smartphone,None,2.13
+,Male,Laptop,None,2.89
+,Male,Smartphone,None,1.78
+,Male,Smartphone,None,4.76
+,Female,Smartphone,None,2.01
+,Male,TV,None,0.03
+,Female,Smartphone,None,2.81
+,Male,Laptop,None,5.85
+,Male,Smartphone,None,2.35
+,Male,Smartphone,None,4.2
+,Male,TV,None,5.38
+,Male,TV,None,2.88
+,Male,TV,None,0.72
+,Female,TV,None,4.76
+,Male,Smartphone,None,3.0
+,Male,Tablet,None,2.24
+,Male,Smartphone,None,3.4
+,Female,Laptop,None,3.86
+,Female,Tablet,None,2.05
+,Male,Tablet,None,3.88
+,Male,Laptop,None,4.29
+,Female,Laptop,None,1.9
+,Male,TV,None,1.04
+,Female,Smartphone,None,4.92
+,Male,Smartphone,None,3.62
+,Male,TV,None,0.47
+,Female,Smartphone,None,0.68
+,Male,TV,None,1.82
+,Male,TV,None,5.46
+,Female,Smartphone,None,1.73
+,Female,Laptop,None,3.23
+,Male,TV,None,4.81
+,Female,Smartphone,None,3.01
+,Female,Laptop,None,2.79
+,Male,TV,None,2.76
+,Male,TV,None,5.42
+,Male,TV,None,6.08
+,Female,Smartphone,None,5.24
+,Female,Smartphone,None,5.5
+,Female,TV,None,3.28
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,2.63
+,Female,Tablet,None,1.51
+,Female,TV,None,5.02
+,Female,TV,None,2.16
+,Male,Tablet,None,0.05
+,Male,Tablet,None,0.0
+,Female,Tablet,None,0.98
+,Male,Smartphone,None,0.72
+,Female,TV,None,3.19
+,Male,Smartphone,None,3.35
+,Male,TV,None,2.3
+,Male,Smartphone,None,4.43
+,Female,Tablet,None,6.01
+,Male,TV,None,2.88
+,Female,Smartphone,None,0.0
+,Male,TV,None,5.07
+,Male,Smartphone,None,4.06
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,2.73
+,Male,Smartphone,None,4.16
+,Male,Tablet,None,4.26
+,Male,Smartphone,None,5.64
+,Male,Tablet,None,5.49
+,Male,Tablet,None,2.15
+,Female,Laptop,None,0.32
+,Male,Smartphone,None,2.5
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,4.66
+,Male,Smartphone,None,1.56
+,Male,Tablet,None,2.1
+,Female,Smartphone,None,6.26
+,Male,Smartphone,None,7.49
+,Female,TV,None,2.67
+,Female,Tablet,None,2.76
+,Female,Laptop,None,5.01
+,Male,TV,None,4.03
+,Female,Smartphone,None,3.38
+,Male,Smartphone,None,2.46
+,Female,Laptop,None,5.69
+,Male,Smartphone,None,2.36
+,Female,Tablet,None,6.23
+,Female,TV,None,1.54
+,Male,TV,None,0.42
+,Male,Smartphone,None,4.24
+,Male,Smartphone,None,3.22
+,Male,Smartphone,None,3.42
+,Female,TV,None,1.53
+,Male,TV,None,2.28
+,Female,Smartphone,None,2.47
+,Male,Laptop,None,2.57
+,Female,Tablet,None,0.0
+,Female,Smartphone,None,3.39
+,Male,Smartphone,None,2.52
+,Male,Smartphone,None,2.71
+,Female,Smartphone,None,4.86
+,Male,TV,None,0.57
+,Female,Smartphone,None,4.04
+,Female,Smartphone,None,5.67
+,Male,Smartphone,None,2.82
+,Male,TV,None,0.62
+,Male,Smartphone,None,2.98
+,Female,Smartphone,None,5.31
+,Female,TV,None,5.47
+,Male,TV,None,1.52
+,Female,Smartphone,None,4.01
+,Female,TV,None,2.49
+,Female,Smartphone,None,3.27
+,Female,TV,None,5.19
+,Female,Laptop,None,5.34
+,Male,Laptop,None,2.89
+,Female,Tablet,None,2.64
+,Female,Smartphone,None,0.0
+,Female,Smartphone,None,4.85
+,Male,Smartphone,None,0.0
+,Female,Smartphone,None,7.89
+,Female,Tablet,None,5.74
+,Female,TV,None,1.83
+,Male,Smartphone,None,3.88
+,Female,Laptop,None,4.87
+,Female,TV,None,3.78
+,Female,TV,None,7.02
+,Male,Smartphone,None,1.88
+,Female,Laptop,None,4.93
+,Male,Laptop,None,4.9
+,Female,Smartphone,None,7.46
+,Male,Smartphone,None,0.0
+,Male,TV,None,2.68
+,Female,TV,None,0.66
+,Female,Smartphone,None,5.23
+,Male,TV,None,2.68
+,Male,TV,None,0.04
+,Female,Smartphone,None,1.39
+,Female,Tablet,None,1.94
+,Male,Smartphone,None,1.54
+,Female,Laptop,None,2.69
+,Female,Smartphone,None,3.69
+,Male,Laptop,None,4.61
+,Female,Smartphone,None,4.6
+,Male,TV,None,4.79
+,Male,TV,None,0.04
+,Male,TV,None,2.31
+,Male,TV,None,5.88
+,Male,TV,None,6.26
+,Female,Smartphone,None,3.25
+,Male,TV,None,5.29
+,Male,Smartphone,None,1.8
+,Female,Smartphone,None,5.56
+,Female,Smartphone,None,5.59
+,Female,Smartphone,None,4.12
+,Male,Smartphone,None,0.0
+,Male,Smartphone,None,2.83
+,Female,Tablet,None,3.58
+,Male,TV,None,1.95
+,Female,Smartphone,None,2.81
+,Female,Smartphone,None,8.0
+,Male,Smartphone,None,3.99
+,Male,TV,None,0.0
+,Female,Smartphone,None,4.81
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,2.72
+,Male,TV,None,4.51
+,Female,TV,None,4.84
+,Female,Smartphone,None,7.35
+,Female,Tablet,None,1.82
+,Male,Smartphone,None,1.61
+,Male,TV,None,2.72
+,Male,Smartphone,None,0.48
+,Male,Smartphone,None,3.71
+,Female,TV,None,1.73
+,Male,Tablet,None,0.15
+,Female,Laptop,None,3.46
+,Male,TV,None,3.97
+,Male,Smartphone,None,4.02
+,Female,Laptop,None,5.25
+,Female,Smartphone,None,1.11
+,Female,TV,None,5.7
+,Female,Laptop,None,1.94
+,Female,Smartphone,None,0.72
+,Male,Smartphone,None,0.78
+,Female,Smartphone,None,3.55
+,Male,Smartphone,None,2.98
+,Male,Smartphone,None,1.63
+,Male,Smartphone,None,4.18
+,Male,TV,None,2.08
+,Female,Tablet,None,6.94
+,Male,Smartphone,None,3.74
+,Female,Smartphone,None,0.0
+,Male,TV,None,4.43
+,Female,Laptop,None,2.29
+,Male,Tablet,None,0.0
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,0.63
+,Female,TV,None,2.95
+,Male,Smartphone,None,2.26
+,Female,Laptop,None,5.95
+,Male,Tablet,None,2.09
+,Male,Smartphone,None,6.65
+,Male,Tablet,None,2.78
+,Male,TV,None,3.86
+,Female,Smartphone,None,0.0
+,Male,Smartphone,None,3.36
+,Female,TV,None,5.09
+,Male,Tablet,None,1.99
+,Male,Smartphone,None,2.59
+,Female,Laptop,None,2.83
+,Female,Smartphone,None,5.43
+,Male,Laptop,None,5.45
+,Female,Laptop,None,1.29
+,Female,Smartphone,None,3.53
+,Male,TV,None,4.44
+,Male,TV,None,5.76
+,Female,TV,None,4.75
+,Female,TV,None,2.44
+,Female,TV,None,2.66
+,Female,Smartphone,None,3.67
+,Female,Laptop,None,2.21
+,Male,Smartphone,None,4.45
+,Male,Smartphone,None,0.21
+,Female,Smartphone,None,4.24
+,Female,Smartphone,None,1.73
+,Male,Tablet,None,3.63
+,Male,TV,None,6.71
+,Female,Smartphone,None,4.78
+,Female,TV,None,7.46
+,Male,Smartphone,None,4.77
+,Female,Tablet,None,2.83
+,Male,Laptop,None,2.63
+,Female,Laptop,None,5.64
+,Male,Laptop,None,4.33
+,Male,Laptop,None,2.04
+,Female,Laptop,None,6.52
+,Female,TV,None,1.67
+,Female,Laptop,None,2.5
+,Male,Smartphone,None,4.91
+,Female,Smartphone,None,3.89
+,Male,TV,None,3.88
+,Male,Smartphone,None,3.16
+,Female,Smartphone,None,1.72
+,Female,Smartphone,None,0.42
+,Male,Smartphone,None,7.47
+,Female,TV,None,0.33
+,Male,Smartphone,None,4.94
+,Male,Laptop,None,3.67
+,Male,TV,None,0.0
+,Female,Smartphone,None,2.08
+,Female,Laptop,None,2.51
+,Male,TV,None,0.0
+,Male,TV,None,5.26
+,Male,Smartphone,None,4.73
+,Male,Laptop,None,2.84
+,Female,TV,None,0.73
+,Male,TV,None,0.0
+,Female,TV,None,0.0
+,Male,Laptop,None,4.4
+,Female,Tablet,None,0.89
+,Female,Laptop,None,5.02
+,Male,Smartphone,None,2.5
+,Female,Laptop,None,3.43
+,Male,TV,None,6.98
+,Male,Smartphone,None,0.86
+,Female,Smartphone,None,6.02
+,Male,Smartphone,None,5.85
+,Male,Tablet,None,5.58
+,Male,Smartphone,None,2.33
+,Male,Tablet,None,1.9
+,Female,TV,None,2.26
+,Female,Smartphone,None,2.69
+,Female,Smartphone,None,4.74
+,Female,TV,None,2.85
+,Male,Smartphone,None,6.08
+,Male,Smartphone,None,4.84
+Eye Strain,,,,
+,Male,TV,Eye Strain,6.08
+,Female,Smartphone,Eye Strain,4.05
+,Female,TV,Eye Strain,6.78
+,Male,Smartphone,Eye Strain,4.45
+,Male,Smartphone,Eye Strain,4.28
+,Male,Smartphone,Eye Strain,6.06
+,Male,Laptop,Eye Strain,4.37
+,Female,Laptop,Eye Strain,3.91
+,Female,Tablet,Eye Strain,3.7
+,Female,Smartphone,Eye Strain,5.18
+,Male,TV,Eye Strain,4.15
+,Male,Smartphone,Eye Strain,5.72
+,Female,Tablet,Eye Strain,3.65
+,Female,Smartphone,Eye Strain,5.84
+,Female,Smartphone,Eye Strain,3.12
+,Male,Laptop,Eye Strain,4.88
+,Female,Smartphone,Eye Strain,3.99
+,Female,Smartphone,Eye Strain,3.97
+,Male,Smartphone,Eye Strain,9.2
+,Male,Smartphone,Eye Strain,5.57
+,Male,TV,Eye Strain,6.13
+,Male,TV,Eye Strain,4.31
+,Male,Laptop,Eye Strain,4.54
+,Male,Tablet,Eye Strain,11.18
+,Female,Smartphone,Eye Strain,4.71
+,Male,TV,Eye Strain,5.32
+,Male,Smartphone,Eye Strain,5.47
+,Female,TV,Eye Strain,6.62
+,Female,Smartphone,Eye Strain,6.88
+,Male,Tablet,Eye Strain,5.41
+,Female,Tablet,Eye Strain,3.89
+,Male,TV,Eye Strain,6.81
+,Female,Smartphone,Eye Strain,3.56
+,Male,Smartphone,Eye Strain,4.96
+,Male,TV,Eye Strain,7.37
+,Male,Smartphone,Eye Strain,5.93
+,Female,TV,Eye Strain,6.46
+,Female,TV,Eye Strain,5.12
+,Male,Laptop,Eye Strain,7.59
+,Female,Laptop,Eye Strain,5.96
+,Male,Smartphone,Eye Strain,3.49
+,Male,Smartphone,Eye Strain,3.94
+,Female,Laptop,Eye Strain,4.6
+,Female,Smartphone,Eye Strain,6.51
+,Male,Smartphone,Eye Strain,3.82
+,Male,Smartphone,Eye Strain,4.16
+,Male,Smartphone,Eye Strain,4.5
+,Female,Smartphone,Eye Strain,5.35
+,Female,TV,Eye Strain,5.96
+,Female,Smartphone,Eye Strain,5.27
+,Female,Smartphone,Eye Strain,6.33
+,Male,Tablet,Eye Strain,4.63
+,Female,TV,Eye Strain,4.83
+,Male,TV,Eye Strain,6.08
+,Female,Laptop,Eye Strain,3.99
+,Male,TV,Eye Strain,4.42
+,Female,Laptop,Eye Strain,3.64
+,Male,TV,Eye Strain,4.79
+,Male,Smartphone,Eye Strain,5.58
+,Female,TV,Eye Strain,4.31
+,Male,Smartphone,Eye Strain,4.48
+,Female,TV,Eye Strain,3.45
+,Male,Tablet,Eye Strain,3.44
+,Male,Tablet,Eye Strain,6.14
+,Male,TV,Eye Strain,6.77
+,Male,TV,Eye Strain,5.02
+,Female,Laptop,Eye Strain,5.42
+,Male,TV,Eye Strain,4.44
+,Female,Tablet,Eye Strain,3.47
+,Female,Smartphone,Eye Strain,4.16
+,Female,Tablet,Eye Strain,6.34
+,Female,Smartphone,Eye Strain,4.33
+,Female,TV,Eye Strain,3.29
+,Male,Smartphone,Eye Strain,5.23
+,Male,Smartphone,Eye Strain,5.02
+,Female,Smartphone,Eye Strain,3.64
+,Male,TV,Eye Strain,4.74
+,Female,Smartphone,Eye Strain,4.0
+,Female,Smartphone,Eye Strain,4.2
+,Male,TV,Eye Strain,6.96
+,Female,Smartphone,Eye Strain,3.77
+,Female,Smartphone,Eye Strain,5.71
+,Female,Laptop,Eye Strain,3.28
+,Female,Laptop,Eye Strain,4.23
+,Male,TV,Eye Strain,4.42
+,Female,Laptop,Eye Strain,5.5
+,Male,Smartphone,Eye Strain,3.8
+,Male,TV,Eye Strain,4.32
+,Female,Laptop,Eye Strain,4.27
+,Male,Laptop,Eye Strain,3.86
+,Female,Laptop,Eye Strain,4.68
+,Male,Tablet,Eye Strain,5.78
+,Male,TV,Eye Strain,5.87
+,Male,Smartphone,Eye Strain,4.95
+,Female,Smartphone,Eye Strain,4.6
+,Male,Smartphone,Eye Strain,5.88
+,Female,Smartphone,Eye Strain,3.9
+,Male,Laptop,Eye Strain,4.46
+,Female,Smartphone,Eye Strain,3.56
+,Female,TV,Eye Strain,4.67
+,Female,Smartphone,Eye Strain,4.72
+,Male,Laptop,Eye Strain,4.9
+,Female,TV,Eye Strain,3.93
+,Female,TV,Eye Strain,3.06
+,Male,Laptop,Eye Strain,4.8
+,Male,TV,Eye Strain,5.08
+,Male,Tablet,Eye Strain,4.54
+,Male,Smartphone,Eye Strain,4.32
+,Male,Smartphone,Eye Strain,6.14
+,Female,TV,Eye Strain,3.45
+,Female,Smartphone,Eye Strain,4.24
+,Male,Smartphone,Eye Strain,5.94
+,Male,TV,Eye Strain,5.12
+,Female,Smartphone,Eye Strain,5.39
+,Female,Smartphone,Eye Strain,5.2
+,Female,Smartphone,Eye Strain,4.52
+,Male,Smartphone,Eye Strain,3.76
+,Male,TV,Eye Strain,3.43
+,Female,TV,Eye Strain,6.16
+,Female,TV,Eye Strain,4.5
+,Male,Smartphone,Eye Strain,5.84
+,Female,Smartphone,Eye Strain,8.02
+,Female,TV,Eye Strain,4.14
+,Male,Tablet,Eye Strain,3.83
+,Male,Smartphone,Eye Strain,5.17
+,Female,Laptop,Eye Strain,4.21
+,Female,Smartphone,Eye Strain,5.96
+,Female,Smartphone,Eye Strain,4.6
+,Female,Smartphone,Eye Strain,5.34
+,Female,Laptop,Eye Strain,3.94
+,Female,Laptop,Eye Strain,5.2
+,Female,Smartphone,Eye Strain,5.25
+,Female,Tablet,Eye Strain,3.35
+,Male,Laptop,Eye Strain,4.12
+,Female,Smartphone,Eye Strain,4.67
+,Male,Smartphone,Eye Strain,5.19
+,Male,Smartphone,Eye Strain,4.25
+,Female,Laptop,Eye Strain,4.78
+,Male,Laptop,Eye Strain,6.17
+,Female,Smartphone,Eye Strain,11.26
+,Male,Smartphone,Eye Strain,4.24
+,Female,TV,Eye Strain,4.78
+,Male,Tablet,Eye Strain,5.49
+,Female,TV,Eye Strain,5.37
+,Female,Smartphone,Eye Strain,5.07
+,Female,TV,Eye Strain,4.27
+,Male,Laptop,Eye Strain,4.01
+,Male,TV,Eye Strain,3.23
+,Male,Tablet,Eye Strain,4.89
+,Male,Smartphone,Eye Strain,5.32
+,Male,TV,Eye Strain,6.34
+,Male,TV,Eye Strain,4.03
+,Female,TV,Eye Strain,4.26
+,Female,Laptop,Eye Strain,5.83
+,Male,Smartphone,Eye Strain,3.3
+,Female,Smartphone,Eye Strain,3.63
+,Female,Tablet,Eye Strain,6.11
+,Male,TV,Eye Strain,3.13
+,Male,Smartphone,Eye Strain,4.81
+,Male,TV,Eye Strain,4.08
+,Male,Smartphone,Eye Strain,3.64
+,Male,TV,Eye Strain,5.0
+,Female,TV,Eye Strain,4.93
+,Female,TV,Eye Strain,5.27
+,Male,Smartphone,Eye Strain,3.82
+,Male,Smartphone,Eye Strain,4.78
+,Male,TV,Eye Strain,5.36
+,Female,TV,Eye Strain,3.71
+,Male,Smartphone,Eye Strain,3.11
+,Male,TV,Eye Strain,4.87
+,Male,Smartphone,Eye Strain,5.49
+,Male,Smartphone,Eye Strain,5.29
+,Female,TV,Eye Strain,5.22
+,Female,Laptop,Eye Strain,5.05
+,Female,TV,Eye Strain,6.23
+,Male,Smartphone,Eye Strain,4.98
+,Female,TV,Eye Strain,3.47
+,Male,Smartphone,Eye Strain,5.07
+,Female,Smartphone,Eye Strain,3.67
+,Male,Smartphone,Eye Strain,3.25
+,Female,Smartphone,Eye Strain,3.97
+,Male,TV,Eye Strain,7.55
+,Male,Laptop,Eye Strain,4.98
+,Male,Smartphone,Eye Strain,5.99
+,Male,Smartphone,Eye Strain,3.74
+,Female,Smartphone,Eye Strain,6.57
+,Male,TV,Eye Strain,6.5
+,Female,Smartphone,Eye Strain,3.25
+,Male,TV,Eye Strain,6.23
+,Male,Smartphone,Eye Strain,5.1
+,Female,Smartphone,Eye Strain,7.15
+,Male,TV,Eye Strain,4.59
+,Female,TV,Eye Strain,4.39
+,Female,Laptop,Eye Strain,3.14
+,Male,TV,Eye Strain,4.41
+,Male,Smartphone,Eye Strain,5.52
+,Female,Laptop,Eye Strain,6.11
+,Female,TV,Eye Strain,6.13
+,Male,Smartphone,Eye Strain,5.15
+,Male,Smartphone,Eye Strain,3.88
+,Female,Laptop,Eye Strain,4.24
+,Male,Smartphone,Eye Strain,3.27
+,Female,Smartphone,Eye Strain,3.62
+,Female,Laptop,Eye Strain,5.83
+,Female,Smartphone,Eye Strain,5.41
+,Female,Laptop,Eye Strain,3.45
+,Female,Smartphone,Eye Strain,4.02
+,Male,Tablet,Eye Strain,4.34
+,Female,Smartphone,Eye Strain,4.36
+,Male,Smartphone,Eye Strain,4.92
+,Female,Smartphone,Eye Strain,6.72
+,Female,Laptop,Eye Strain,4.44
+,Female,Smartphone,Eye Strain,3.89
+,Male,TV,Eye Strain,6.69
+,Male,TV,Eye Strain,5.07
+,Female,Smartphone,Eye Strain,3.48
+,Female,TV,Eye Strain,3.09
+,Male,Tablet,Eye Strain,6.44
+,Male,TV,Eye Strain,4.41
+,Female,Laptop,Eye Strain,4.98
+,Female,Smartphone,Eye Strain,7.43
+,Female,TV,Eye Strain,4.78
+,Female,Laptop,Eye Strain,5.04
+,Female,TV,Eye Strain,3.49
+,Male,Smartphone,Eye Strain,3.47
+,Female,Smartphone,Eye Strain,6.74
+,Male,Smartphone,Eye Strain,5.53
+,Female,Smartphone,Eye Strain,4.98
+,Male,Smartphone,Eye Strain,5.26
+,Female,TV,Eye Strain,4.09
+,Female,Smartphone,Eye Strain,5.31
+,Female,Smartphone,Eye Strain,7.05
+,Male,Smartphone,Eye Strain,4.35
+,Female,TV,Eye Strain,5.01
+,Male,Smartphone,Eye Strain,4.16
+,Female,Smartphone,Eye Strain,5.74
+,Female,Laptop,Eye Strain,4.71
+,Female,Smartphone,Eye Strain,3.33
+,Female,Smartphone,Eye Strain,6.26
+,Female,Smartphone,Eye Strain,3.6
+,Male,Smartphone,Eye Strain,4.11
+,Female,Smartphone,Eye Strain,6.21
+,Female,Smartphone,Eye Strain,4.01
+,Male,Smartphone,Eye Strain,5.54
+,Female,Smartphone,Eye Strain,4.06
+,Male,TV,Eye Strain,4.83
+,Female,Smartphone,Eye Strain,3.14
+,Female,Smartphone,Eye Strain,5.73
+,Female,Tablet,Eye Strain,5.64
+,Female,Smartphone,Eye Strain,3.89
+,Male,Smartphone,Eye Strain,3.69
+,Male,Smartphone,Eye Strain,4.18
+,Female,TV,Eye Strain,3.17
+,Male,Smartphone,Eye Strain,3.65
+,Female,Smartphone,Eye Strain,4.7
+,Male,Tablet,Eye Strain,3.78
+,Female,Tablet,Eye Strain,6.56
+,Female,TV,Eye Strain,3.74
+,Male,Smartphone,Eye Strain,4.61
+,Female,Smartphone,Eye Strain,3.53
+,Female,Smartphone,Eye Strain,4.24
+,Female,Tablet,Eye Strain,3.45
+,Male,Smartphone,Eye Strain,4.13
+,Female,Smartphone,Eye Strain,4.22
+,Female,Laptop,Eye Strain,5.52
+,Female,TV,Eye Strain,5.54
+,Male,Smartphone,Eye Strain,4.97
+,Female,Laptop,Eye Strain,5.62
+,Male,Smartphone,Eye Strain,3.66
+,Male,TV,Eye Strain,3.08
+,Male,Smartphone,Eye Strain,3.75
+,Male,Smartphone,Eye Strain,4.91
+,Male,TV,Eye Strain,5.58
+,Female,Smartphone,Eye Strain,4.44
+,Female,Smartphone,Eye Strain,5.08
+,Male,Laptop,Eye Strain,3.44
+,Male,Tablet,Eye Strain,4.96
+,Male,Smartphone,Eye Strain,4.87
+,Female,Laptop,Eye Strain,4.35
+,Female,TV,Eye Strain,4.1
+,Male,Tablet,Eye Strain,4.43
+,Male,Smartphone,Eye Strain,3.77
+,Male,Smartphone,Eye Strain,5.17
+,Male,Smartphone,Eye Strain,3.95
+,Female,Laptop,Eye Strain,4.16
+,Male,Tablet,Eye Strain,3.74
+,Female,Smartphone,Eye Strain,5.12
+,Female,Smartphone,Eye Strain,4.2
+,Male,Laptop,Eye Strain,5.83
+,Male,Laptop,Eye Strain,3.39
+,Female,Smartphone,Eye Strain,3.62
+,Male,TV,Eye Strain,3.11
+,Male,Laptop,Eye Strain,4.35
+,Male,Laptop,Eye Strain,5.71
+,Male,Smartphone,Eye Strain,3.28
+,Female,Smartphone,Eye Strain,7.03
+,Female,Laptop,Eye Strain,4.44
+,Male,Smartphone,Eye Strain,4.67
+,Male,Tablet,Eye Strain,4.5
+,Female,TV,Eye Strain,4.91
+,Female,TV,Eye Strain,4.58
+,Female,TV,Eye Strain,6.26
+,Male,Laptop,Eye Strain,5.67
+,Male,Laptop,Eye Strain,5.39
+,Female,TV,Eye Strain,3.65
+,Male,Smartphone,Eye Strain,5.85
+,Female,Smartphone,Eye Strain,6.17
+,Male,Smartphone,Eye Strain,3.92
+,Male,TV,Eye Strain,4.82
+,Male,Smartphone,Eye Strain,4.11
+,Male,Tablet,Eye Strain,5.74
+,Male,TV,Eye Strain,3.62
+,Male,Smartphone,Eye Strain,4.79
+,Female,Tablet,Eye Strain,6.29
+,Male,Smartphone,Eye Strain,3.32
+,Female,Tablet,Eye Strain,3.25
+,Female,Laptop,Eye Strain,5.93
+,Female,Laptop,Eye Strain,3.43
+,Male,Smartphone,Eye Strain,6.79
+,Female,TV,Eye Strain,6.13
+,Female,Smartphone,Eye Strain,5.69
+,Female,TV,Eye Strain,3.25
+,Female,Tablet,Eye Strain,3.84
+,Male,TV,Eye Strain,4.51
+,Female,Smartphone,Eye Strain,5.51
+,Male,Tablet,Eye Strain,5.78
+,Female,Smartphone,Eye Strain,5.16
+,Female,Smartphone,Eye Strain,4.54
+,Female,Laptop,Eye Strain,4.32
+,Female,TV,Eye Strain,4.5
+,Male,Tablet,Eye Strain,4.96
+,Male,Laptop,Eye Strain,5.72
+,Female,Smartphone,Eye Strain,4.52
+,Male,Smartphone,Eye Strain,4.73
+,Female,Smartphone,Eye Strain,4.46
+,Female,Smartphone,Eye Strain,5.66
+,Female,Laptop,Eye Strain,3.17
+,Female,Smartphone,Eye Strain,5.57
+,Female,TV,Eye Strain,4.23
+Obesity Risk,,,,
+,Female,Smartphone,Obesity Risk,6.98
+,Male,Smartphone,Obesity Risk,3.85
+,Male,TV,Obesity Risk,4.61
+,Male,Smartphone,Obesity Risk,5.61
+,Female,TV,Obesity Risk,4.19
+,Female,Tablet,Obesity Risk,4.75
+,Male,Smartphone,Obesity Risk,6.23
+,Female,Smartphone,Obesity Risk,4.08
+,Male,Laptop,Obesity Risk,5.6
+,Female,Smartphone,Obesity Risk,4.91
+,Male,Smartphone,Obesity Risk,4.58
+,Female,Laptop,Obesity Risk,6.59
+,Female,Smartphone,Obesity Risk,5.57
+,Male,Laptop,Obesity Risk,6.43
+,Male,Laptop,Obesity Risk,4.58
+,Male,TV,Obesity Risk,4.89
+,Female,Smartphone,Obesity Risk,3.33
+,Female,Smartphone,Obesity Risk,5.01
+,Female,Smartphone,Obesity Risk,6.44
+,Male,TV,Obesity Risk,3.52
+,Male,Smartphone,Obesity Risk,4.38
+,Male,Laptop,Obesity Risk,3.76
+,Female,TV,Obesity Risk,3.41
+,Female,TV,Obesity Risk,3.8
+,Female,Smartphone,Obesity Risk,4.57
+,Female,Smartphone,Obesity Risk,4.07
+,Male,Smartphone,Obesity Risk,4.97
+,Female,Laptop,Obesity Risk,4.54
+,Female,TV,Obesity Risk,5.67
+,Male,TV,Obesity Risk,4.18
+,Male,Smartphone,Obesity Risk,4.95
+,Female,Laptop,Obesity Risk,3.61
+,Female,TV,Obesity Risk,4.16
+,Male,Smartphone,Obesity Risk,4.4
+,Male,Smartphone,Obesity Risk,3.94
+,Male,Smartphone,Obesity Risk,3.71
+,Female,Smartphone,Obesity Risk,6.0
+,Female,TV,Obesity Risk,8.24
+,Female,Laptop,Obesity Risk,4.87
+,Male,Tablet,Obesity Risk,6.31
+,Male,Laptop,Obesity Risk,5.37
+,Female,Tablet,Obesity Risk,5.02
+,Female,Smartphone,Obesity Risk,3.82
+,Female,Laptop,Obesity Risk,5.62
+,Male,Smartphone,Obesity Risk,3.5
+,Male,Smartphone,Obesity Risk,3.49
+,Female,Smartphone,Obesity Risk,4.34
+,Female,Smartphone,Obesity Risk,6.69
+,Male,TV,Obesity Risk,5.05
+,Male,Laptop,Obesity Risk,4.91
+,Male,Tablet,Obesity Risk,4.24
+,Male,Smartphone,Obesity Risk,4.17
+,Male,Smartphone,Obesity Risk,3.46
+,Male,Smartphone,Obesity Risk,3.04
+,Female,Smartphone,Obesity Risk,8.01
+,Male,Smartphone,Obesity Risk,5.57
+,Male,Smartphone,Obesity Risk,5.75
+,Female,Smartphone,Obesity Risk,3.12
+,Female,Tablet,Obesity Risk,3.69
+,Male,Smartphone,Obesity Risk,4.62
+,Male,Smartphone,Obesity Risk,4.33
+,Male,TV,Obesity Risk,4.03
+,Male,Smartphone,Obesity Risk,7.65
+,Female,Smartphone,Obesity Risk,4.88
+,Female,TV,Obesity Risk,5.33
+,Male,Smartphone,Obesity Risk,5.49
+,Male,Smartphone,Obesity Risk,3.22
+,Male,Smartphone,Obesity Risk,5.27
+,Female,Smartphone,Obesity Risk,4.2
+,Female,Tablet,Obesity Risk,3.63
+,Male,Smartphone,Obesity Risk,10.18
+,Female,TV,Obesity Risk,3.47
+,Male,Smartphone,Obesity Risk,3.52
+,Male,Smartphone,Obesity Risk,5.11
+,Female,Smartphone,Obesity Risk,3.71
+Anxiety,,,,
+,Male,Smartphone,Anxiety,3.82
+,Male,Smartphone,Anxiety,6.06
+,Male,Smartphone,Anxiety,5.83
+,Female,TV,Anxiety,5.91
+,Male,Tablet,Anxiety,3.28
+,Female,Smartphone,Anxiety,9.35
+,Female,Smartphone,Anxiety,3.37
+,Male,TV,Anxiety,3.14
+,Male,Smartphone,Anxiety,3.11
+,Female,TV,Anxiety,5.29
+,Male,TV,Anxiety,5.88
+,Male,Tablet,Anxiety,3.75
+,Male,Smartphone,Anxiety,4.51
+,Male,Smartphone,Anxiety,8.29
+,Female,Laptop,Anxiety,6.02
+,Female,Smartphone,Anxiety,5.24
+,Male,Tablet,Anxiety,5.3
+,Male,Tablet,Anxiety,6.39
+,Female,Smartphone,Anxiety,3.3
+,Male,Laptop,Anxiety,4.41
+,Male,Smartphone,Anxiety,4.21
+,Male,Smartphone,Anxiety,4.3
+,Male,Smartphone,Anxiety,4.55
+,Female,Tablet,Anxiety,3.27
+,Male,TV,Anxiety,7.02
+,Male,TV,Anxiety,7.54
+,Male,Smartphone,Anxiety,5.61
+,Male,TV,Anxiety,4.52
+,Female,Smartphone,Anxiety,3.37
+,Female,Smartphone,Anxiety,3.95
+,Female,TV,Anxiety,5.2
+,Male,Smartphone,Anxiety,4.69
+,Female,Smartphone,Anxiety,4.02
+,Female,TV,Anxiety,6.99
+,Male,TV,Anxiety,3.72
+,Female,TV,Anxiety,4.97
+,Male,Smartphone,Anxiety,5.1
+,Female,Smartphone,Anxiety,5.56
+,Female,TV,Anxiety,4.64
+,Male,Laptop,Anxiety,4.79
+,Male,Laptop,Anxiety,6.24
+,Male,Laptop,Anxiety,7.81
+,Female,Tablet,Anxiety,3.32
+,Male,Smartphone,Anxiety,5.7
+,Male,Smartphone,Anxiety,4.49
+,Male,Smartphone,Anxiety,3.07
+,Female,TV,Anxiety,6.36
+,Female,Smartphone,Anxiety,5.34
+,Female,TV,Anxiety,6.88
+,Female,TV,Anxiety,5.3
+,Male,TV,Anxiety,5.75
+,Male,Smartphone,Anxiety,4.26
+,Male,TV,Anxiety,6.08
+,Male,Tablet,Anxiety,4.2
+,Male,Laptop,Anxiety,3.62
+,Male,Smartphone,Anxiety,3.31
+,Male,Smartphone,Anxiety,4.07
+,Male,TV,Anxiety,4.35
+,Male,Smartphone,Anxiety,5.83
+,Male,Smartphone,Anxiety,4.07
+,Male,Laptop,Anxiety,3.23
+,Female,Smartphone,Anxiety,3.53
+,Male,TV,Anxiety,5.19
+,Male,Smartphone,Anxiety,6.5
+,Female,TV,Anxiety,4.22
+,Male,Tablet,Anxiety,3.76
+,Male,Smartphone,Anxiety,4.13
+,Female,Smartphone,Anxiety,4.34
+,Male,Laptop,Anxiety,4.34
+,Female,Smartphone,Anxiety,6.79
+,Female,TV,Anxiety,5.23
+,Female,Smartphone,Anxiety,3.98
+,Female,Smartphone,Anxiety,4.7
+,Male,Smartphone,Anxiety,4.46
+,Male,Smartphone,Anxiety,5.59
+,Female,TV,Anxiety,4.18
+,Male,Smartphone,Anxiety,5.53
+,Female,Smartphone,Anxiety,4.82
+,Male,Laptop,Anxiety,4.24
+,Female,Smartphone,Anxiety,3.23
+,Male,Smartphone,Anxiety,3.59
+,Female,TV,Anxiety,5.73
+,Female,Tablet,Anxiety,3.37
+,Male,Smartphone,Anxiety,3.87
+,Male,TV,Anxiety,5.45
+,Female,Laptop,Anxiety,4.57
+,Male,Smartphone,Anxiety,4.55
+,Male,Tablet,Anxiety,3.45
+,Female,Laptop,Anxiety,4.73
+,Male,Laptop,Anxiety,3.75
+,Male,Laptop,Anxiety,5.72
+,Female,TV,Anxiety,4.95
+,Female,Smartphone,Anxiety,3.62
+,Male,TV,Anxiety,5.69
+,Female,Smartphone,Anxiety,7.34
+,Female,Smartphone,Anxiety,3.97
+,Female,Smartphone,Anxiety,3.98
+,Female,Tablet,Anxiety,3.32
+,Male,Tablet,Anxiety,4.62
+,Male,Laptop,Anxiety,5.12
+,Male,Laptop,Anxiety,4.48
+,Female,Smartphone,Anxiety,6.57
+,Male,Smartphone,Anxiety,5.77
+,Male,TV,Anxiety,5.55
+,Male,Laptop,Anxiety,3.51
+,Male,Smartphone,Anxiety,5.33
+,Male,TV,Anxiety,4.87
+,Male,TV,Anxiety,3.33
+,Male,TV,Anxiety,4.23
+,Female,Smartphone,Anxiety,3.73
+,Male,Laptop,Anxiety,3.28
+,Female,TV,Anxiety,4.5
+,Male,Tablet,Anxiety,4.62
+,Male,TV,Anxiety,3.77
+,Male,Laptop,Anxiety,3.01
+,Male,TV,Anxiety,5.08
+,Female,TV,Anxiety,3.87
+,Male,Smartphone,Anxiety,6.22
+,Male,TV,Anxiety,5.0
+,Male,Smartphone,Anxiety,4.19
+,Female,Tablet,Anxiety,6.73
+,Male,Smartphone,Anxiety,4.62
+,Male,Smartphone,Anxiety,6.59
+,Female,TV,Anxiety,5.43
+,Female,Smartphone,Anxiety,5.83
+,Male,Laptop,Anxiety,4.69
+,Female,Smartphone,Anxiety,3.49
+,Male,Laptop,Anxiety,4.77
+,Female,Tablet,Anxiety,4.19
+,Male,TV,Anxiety,4.77
+,Male,Smartphone,Anxiety,5.82
+,Female,Laptop,Anxiety,4.71
+,Female,TV,Anxiety,8.52
+,Female,Smartphone,Anxiety,4.75
+,Female,TV,Anxiety,5.77
+,Male,Smartphone,Anxiety,3.51
+,Male,Smartphone,Anxiety,3.3
+,Female,Laptop,Anxiety,4.71
+,Female,Laptop,Anxiety,3.09
+,Female,Laptop,Anxiety,4.79
+,Male,TV,Anxiety,3.65
+,Female,TV,Anxiety,3.7
+,Female,Smartphone,Anxiety,4.57
+,Female,Laptop,Anxiety,5.59
+,Female,Tablet,Anxiety,5.11
+,Male,Smartphone,Anxiety,5.23
+,Male,Smartphone,Anxiety,5.04
+,Female,Laptop,Anxiety,5.13
+,Female,TV,Anxiety,4.93
+,Male,TV,Anxiety,3.02
+,Female,Smartphone,Anxiety,4.27
+,Male,Smartphone,Anxiety,3.65
+,Female,Smartphone,Anxiety,4.0
+,Male,Smartphone,Anxiety,3.47
+,Female,Smartphone,Anxiety,4.54
+,Female,Tablet,Anxiety,4.64
+,Female,Laptop,Anxiety,5.91
+,Female,Smartphone,Anxiety,4.91
+,Female,Smartphone,Anxiety,4.36
+,Female,Laptop,Anxiety,3.66
+,Female,Laptop,Anxiety,3.12
+,Female,Smartphone,Anxiety,6.68
+,Male,Laptop,Anxiety,4.68
+,Female,Smartphone,Anxiety,5.09
+,Female,Smartphone,Anxiety,5.45
+,Female,Smartphone,Anxiety,6.01
+,Male,Smartphone,Anxiety,3.51
+,Female,Smartphone,Anxiety,4.76
+,Female,Smartphone,Anxiety,6.36
+,Female,Smartphone,Anxiety,5.75
+,Male,Tablet,Anxiety,5.6
+,Female,TV,Anxiety,7.62
+,Male,Smartphone,Anxiety,3.39
+,Female,TV,Anxiety,10.66
+,Female,TV,Anxiety,3.86
+,Male,TV,Anxiety,6.31
+,Female,Smartphone,Anxiety,3.5
+,Male,Smartphone,Anxiety,5.03
+,Female,TV,Anxiety,7.91
+,Male,TV,Anxiety,3.44
+,Female,Smartphone,Anxiety,4.63
+,Male,TV,Anxiety,5.11
+,Female,Smartphone,Anxiety,3.79
+,Male,TV,Anxiety,6.03
+,Female,Smartphone,Anxiety,3.97
+,Male,Smartphone,Anxiety,6.84
+,Female,TV,Anxiety,6.12

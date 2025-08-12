@@ -1,43 +1,42 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Commute Distances by Cars and Income",
+  "title": "Top 3 Studios by Type",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/bike_buyers.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "count",
-          "as": "NumPeople"
-        },
-        {
-          "op": "mean",
-          "field": "Income",
-          "as": "AvgIncome"
+          "op": "sum",
+          "field": "Worldwide $m",
+          "as": "Total_Worldwide_m"
         }
       ],
       "groupby": [
-        "Commute Distance",
-        "Cars"
+        "Studio",
+        "Type"
       ]
     },
     {
       "window": [
         {
-          "op": "dense_rank",
-          "as": "CommuteRank"
+          "op": "rank",
+          "as": "studio_rank"
         }
       ],
       "sort": [
         {
-          "field": "NumPeople",
+          "field": "Total_Worldwide_m",
           "order": "descending"
         }
+      ],
+      "groupby": [
+        "Type"
       ]
     },
     {
-      "filter": "datum.CommuteRank <= 3"
+      "filter": "datum.studio_rank <= 3"
     }
   ],
   "mark": {
@@ -45,71 +44,65 @@
   },
   "encoding": {
     "x": {
-      "field": "Commute Distance",
+      "field": "Type",
       "type": "nominal",
-      "axis": {
-        "title": "Commute Distance",
-        "labelAngle": -30
-      }
+      "title": "Movie Type",
+      "sort": "descending"
     },
     "xOffset": {
-      "field": "Cars",
-      "type": "ordinal",
-      "title": "Number of Cars"
+      "field": "Studio",
+      "type": "nominal",
+      "title": "Studio",
+      "sort": "descending"
     },
     "y": {
-      "field": "AvgIncome",
+      "field": "Total_Worldwide_m",
       "type": "quantitative",
-      "title": "Average Income"
+      "title": "Worldwide Revenue (million $)",
+      "sort": "descending"
     },
     "color": {
-      "field": "Cars",
-      "type": "ordinal",
-      "title": "Number of Cars",
-      "scale": {
-        "scheme": "set1"
-      }
+      "field": "Studio",
+      "type": "nominal",
+      "legend": {
+        "title": "Studio"
+      },
+      "sort": "descending"
     },
     "tooltip": [
       {
-        "field": "Commute Distance",
+        "field": "Studio",
         "type": "nominal",
-        "title": "Commute Distance"
+        "title": "Studio"
       },
       {
-        "field": "Cars",
-        "type": "ordinal",
-        "title": "Number of Cars"
+        "field": "Type",
+        "type": "nominal",
+        "title": "Movie Type"
       },
       {
-        "field": "NumPeople",
+        "field": "Total_Worldwide_m",
         "type": "quantitative",
-        "title": "People"
-      },
-      {
-        "field": "AvgIncome",
-        "type": "quantitative",
-        "title": "Avg. Income",
-        "format": ","
+        "title": "Worldwide Revenue ($m)"
       }
     ]
   },
-  "width": 720,
-  "height": 480,
+  "width": 400,
+  "height": 400,
   "config": {
     "title": {
       "fontSize": 44
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 30,
+      "labelFontSize": 28,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 30,
+      "titleFontSize": 26,
+      "labelFontSize": 26,
       "labelLimit": 0
     }
   }

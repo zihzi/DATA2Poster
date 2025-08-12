@@ -1,0 +1,134 @@
+Region,Dominant Rock Type,Type,Elevation (Meters)
+Africa and Red Sea,Foidite,Complex,1751
+Africa and Red Sea,Rhyolite,Complex,1383
+Africa and Red Sea,Rhyolite,Complex,2856
+Indonesia,Basalt,Complex,1018
+Indonesia,Trachybasalt,Complex,1949
+Indonesia,Andesite,Complex,2801
+Indonesia,Andesite,Complex,2919
+Indonesia,Andesite,Complex,2891
+Indonesia,Andesite,Complex,2249
+Indonesia,Andesite,Complex,2565
+Indonesia,Andesite,Complex,539
+Indonesia,Andesite,Complex,3088
+Indonesia,Andesite,Complex,1559
+Indonesia,Andesite,Complex,1639
+Indonesia,Andesite,Complex,1095
+Indonesia,Andesite,Complex,862
+Indonesia,Andesite,Complex,1795
+Indonesia,Andesite,Complex,1229
+Japan to Taiwan,Basalt,Complex,2038
+Japan to Taiwan,Andesite,Complex,212
+Japan to Taiwan,Andesite,Complex,1483
+Japan to Taiwan,Andesite,Complex,1438
+Japan to Taiwan,Andesite,Complex,3067
+Japan to Taiwan,Andesite,Complex,2568
+Japan to Taiwan,Andesite,Complex,1841
+South America,Andesite,Complex,4276
+South America,Andesite,Complex,5481
+South America,Andesite,Complex,5413
+South America,Dacite,Complex,5860
+West Indies,Andesite,Complex,1387
+Africa and Red Sea,Basalt,Caldera,1800
+Africa and Red Sea,Trachyte,Caldera,2614
+Africa and Red Sea,Rhyolite,Caldera,1984
+Africa and Red Sea,Rhyolite,Caldera,2075
+Africa and Red Sea,Rhyolite,Caldera,2320
+New Zealand to Fiji,Basalt,Caldera,238
+New Zealand to Fiji,Andesite,Caldera,515
+New Zealand to Fiji,Rhyolite,Caldera,592
+New Zealand to Fiji,Rhyolite,Caldera,760
+Indonesia,Andesite,Caldera,849
+Indonesia,Andesite,Caldera,813
+Indonesia,Andesite,Caldera,2244
+Indonesia,Andesite,Caldera,1717
+Indonesia,Andesite,Caldera,1202
+Indonesia,Dacite,Caldera,2157
+Indonesia,Dacite,Caldera,1881
+Indonesia,Dacite,Caldera,903
+Indonesia,Dacite,Caldera,596
+Japan to Taiwan,Trachyandesite,Caldera,169
+Japan to Taiwan,Andesite,Caldera,1117
+Japan to Taiwan,Andesite,Caldera,1592
+Japan to Taiwan,Andesite,Caldera,1011
+Japan to Taiwan,Andesite,Caldera,25
+Japan to Taiwan,Andesite,Caldera,1320
+Japan to Taiwan,Andesite,Caldera,1499
+Japan to Taiwan,Andesite,Caldera,857
+Japan to Taiwan,Rhyolite,Caldera,704
+Japan to Taiwan,Rhyolite,Caldera,470
+Japan to Taiwan,Dacite,Caldera,552
+Japan to Taiwan,Dacite,Caldera,574
+Kuril Islands,Andesite,Caldera,535
+Kuril Islands,Andesite,Caldera,742
+Kuril Islands,Andesite,Caldera,624
+Kuril Islands,Andesite,Caldera,401
+Kuril Islands,Andesite,Caldera,1018
+Alaska,Andesite,Caldera,1436
+Alaska,Andesite,Caldera,1341
+Alaska,Rhyolite,Caldera,841
+South America,Trachyandesite,Caldera,5323
+South America,Andesite,Caldera,5189
+South America,Andesite,Caldera,2162
+South America,Andesite,Caldera,2282
+South America,Rhyolite,Caldera,4643
+South America,Rhyolite,Caldera,4670
+South America,Rhyolite,Caldera,1122
+South America,Dacite,Caldera,3246
+South America,Dacite,Caldera,3356
+South America,Dacite,Caldera,3914
+South America,Dacite,Caldera,3508
+West Indies,Andesite,Caldera,777
+Antarctica,Basalt,Caldera,602
+Atlantic Ocean,Basalt,Submarine,-13
+New Zealand to Fiji,Basalt,Submarine,-860
+New Zealand to Fiji,Basalt,Submarine,-600
+New Zealand to Fiji,Basalt,Submarine,-65
+New Zealand to Fiji,Basalt,Submarine,-132
+New Zealand to Fiji,Basalt,Submarine,-385
+New Zealand to Fiji,Basalt,Submarine,-1400
+New Zealand to Fiji,Basalt,Submarine,-592
+New Zealand to Fiji,Andesite,Submarine,-400
+New Zealand to Fiji,Andesite,Submarine,-500
+New Zealand to Fiji,Andesite,Submarine,-220
+New Zealand to Fiji,Andesite,Submarine,-1200
+New Zealand to Fiji,Andesite,Submarine,47
+New Zealand to Fiji,Andesite,Submarine,-65
+New Zealand to Fiji,Andesite,Submarine,114
+New Zealand to Fiji,Andesite,Submarine,-17
+New Zealand to Fiji,Andesite,Submarine,-1174
+New Zealand to Fiji,Dacite,Submarine,-980
+New Zealand to Fiji,Dacite,Submarine,-1350
+New Zealand to Fiji,Dacite,Submarine,43
+New Zealand to Fiji,Dacite,Submarine,-10
+New Zealand to Fiji,Dacite,Submarine,-40
+New Zealand to Fiji,Dacite,Submarine,-33
+Indonesia,Andesite,Submarine,-5
+Japan to Taiwan,Basalt,Submarine,-590
+Japan to Taiwan,Basalt,Submarine,-173
+Japan to Taiwan,Basalt,Submarine,-392
+Japan to Taiwan,Basalt,Submarine,-274
+Japan to Taiwan,Basalt,Submarine,-1535
+Japan to Taiwan,Basalt,Submarine,-230
+Japan to Taiwan,Basalt,Submarine,-43
+Japan to Taiwan,Basalt,Submarine,-517
+Japan to Taiwan,Basalt,Submarine,-1230
+Japan to Taiwan,Trachyandesite,Submarine,-29
+Japan to Taiwan,Trachyandesite,Submarine,-107
+Japan to Taiwan,Andesite,Submarine,-991
+Japan to Taiwan,Andesite,Submarine,-933
+Japan to Taiwan,Andesite,Submarine,-165
+Japan to Taiwan,Andesite,Submarine,-217
+Japan to Taiwan,Andesite,Submarine,-598
+Japan to Taiwan,Andesite,Submarine,-323
+Japan to Taiwan,Andesite,Submarine,-75
+Japan to Taiwan,Andesite,Submarine,-8
+Japan to Taiwan,Rhyolite,Submarine,-200
+Japan to Taiwan,Rhyolite,Submarine,-360
+Japan to Taiwan,Dacite,Submarine,-107
+Japan to Taiwan,Dacite,Submarine,11
+Japan to Taiwan,Dacite,Submarine,136
+Japan to Taiwan,Dacite,Submarine,-127
+Alaska,Trachyandesite,Submarine,150
+West Indies,Basalt,Submarine,-185
+Antarctica,Rhyolite,Submarine,-55

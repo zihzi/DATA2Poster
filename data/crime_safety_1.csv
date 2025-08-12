@@ -1,0 +1,603 @@
+crime_type,city,state,victim_race,victim_age
+Assault,Phoenix,AZ,Black,13
+Fraud,Houston,TX,Black,28
+Homicide,New York,NY,Black,29
+Robbery,Chicago,IL,Black,38
+Burglary,San Antonio,TX,Black,40
+Vandalism,Los Angeles,CA,Black,34
+Theft,San Diego,CA,Black,34
+Homicide,New York,NY,Black,25
+Burglary,Los Angeles,CA,Black,53
+Arson,Los Angeles,CA,Black,46
+Burglary,Phoenix,AZ,Black,40
+Burglary,New York,NY,Black,69
+Arson,Houston,TX,Black,81
+Drug Offense,San Diego,CA,Black,67
+Domestic Violence,Philadelphia,PA,Black,82
+Theft,Houston,TX,Black,35
+Theft,San Antonio,TX,Black,26
+Assault,San Diego,CA,Black,27
+Assault,Los Angeles,CA,Black,62
+Homicide,San Jose,CA,Black,39
+Arson,Los Angeles,CA,Black,90
+Assault,Houston,TX,Black,54
+Vandalism,Phoenix,AZ,Black,86
+Theft,New York,NY,Black,39
+Drug Offense,San Diego,CA,Black,54
+Domestic Violence,San Jose,CA,Black,71
+Robbery,Phoenix,AZ,Black,17
+Robbery,San Jose,CA,Black,83
+Assault,Dallas,TX,Black,35
+Domestic Violence,Philadelphia,PA,Black,26
+Assault,Chicago,IL,Black,75
+Burglary,Houston,TX,Black,34
+Vandalism,New York,NY,Black,44
+Assault,San Jose,CA,Black,35
+Arson,Los Angeles,CA,Black,34
+Vandalism,San Diego,CA,Black,80
+Domestic Violence,San Diego,CA,Black,81
+Burglary,San Diego,CA,Black,88
+Burglary,Phoenix,AZ,Black,44
+Burglary,Houston,TX,Black,16
+Theft,New York,NY,Black,19
+Domestic Violence,Philadelphia,PA,Black,13
+Robbery,Dallas,TX,Black,89
+Burglary,New York,NY,Black,76
+Homicide,Los Angeles,CA,Black,18
+Theft,Dallas,TX,Black,68
+Arson,Los Angeles,CA,Black,78
+Drug Offense,Dallas,TX,Black,52
+Robbery,Chicago,IL,Black,89
+Domestic Violence,New York,NY,Black,75
+Burglary,Phoenix,AZ,Black,79
+Burglary,New York,NY,Black,73
+Drug Offense,Dallas,TX,Black,17
+Assault,Los Angeles,CA,Black,63
+Homicide,San Diego,CA,Black,18
+Assault,Los Angeles,CA,Black,84
+Robbery,Los Angeles,CA,Black,14
+Robbery,Philadelphia,PA,Black,59
+Vandalism,New York,NY,Black,22
+Arson,Dallas,TX,Black,44
+Robbery,San Diego,CA,Black,34
+Arson,Philadelphia,PA,Black,42
+Drug Offense,Chicago,IL,Black,85
+Theft,San Antonio,TX,Black,44
+Vandalism,San Antonio,TX,Black,48
+Fraud,San Antonio,TX,Black,56
+Assault,New York,NY,Black,15
+Burglary,Dallas,TX,Black,64
+Arson,San Jose,CA,Black,77
+Fraud,San Antonio,TX,Black,79
+Domestic Violence,Houston,TX,Black,26
+Arson,San Jose,CA,Black,51
+Homicide,Philadelphia,PA,Black,78
+Burglary,San Antonio,TX,Black,40
+Fraud,Phoenix,AZ,Black,32
+Domestic Violence,Chicago,IL,Black,83
+Domestic Violence,San Diego,CA,Black,53
+Drug Offense,Houston,TX,Black,21
+Fraud,New York,NY,Black,75
+Domestic Violence,Philadelphia,PA,Black,64
+Robbery,New York,NY,Black,89
+Assault,Los Angeles,CA,Black,84
+Burglary,Philadelphia,PA,Black,19
+Assault,Dallas,TX,Black,15
+Arson,Los Angeles,CA,Black,18
+Arson,Dallas,TX,Black,76
+Burglary,Los Angeles,CA,Black,70
+Vandalism,San Jose,CA,Black,46
+Burglary,San Diego,CA,Black,33
+Robbery,Phoenix,AZ,Black,14
+Domestic Violence,San Antonio,TX,Black,13
+Homicide,Los Angeles,CA,Black,73
+Homicide,Houston,TX,Black,15
+Robbery,San Diego,CA,Black,44
+Vandalism,Phoenix,AZ,Black,23
+Burglary,New York,NY,Black,52
+Drug Offense,San Antonio,TX,Black,74
+Drug Offense,San Antonio,TX,Black,67
+Vandalism,San Antonio,TX,Black,83
+Assault,Houston,TX,Black,28
+Vandalism,San Diego,CA,Black,86
+Assault,Los Angeles,CA,Black,74
+Domestic Violence,San Antonio,TX,Black,59
+Arson,San Jose,CA,Black,26
+Assault,Houston,TX,Black,81
+Fraud,Los Angeles,CA,Black,81
+Burglary,Phoenix,AZ,Black,69
+Homicide,Phoenix,AZ,Black,31
+Burglary,Houston,TX,Black,22
+Vandalism,New York,NY,Black,27
+Vandalism,San Diego,CA,Black,19
+Burglary,Dallas,TX,Black,18
+Homicide,Chicago,IL,Black,72
+Burglary,Chicago,IL,Black,76
+Homicide,Houston,TX,Black,32
+Drug Offense,Philadelphia,PA,Black,56
+Robbery,Dallas,TX,Black,18
+Domestic Violence,Los Angeles,CA,Black,74
+Vandalism,New York,NY,Black,44
+Robbery,New York,NY,Black,29
+Homicide,Phoenix,AZ,Black,48
+Drug Offense,San Jose,CA,Black,52
+Fraud,Philadelphia,PA,Black,83
+Assault,New York,NY,Black,89
+Domestic Violence,San Antonio,TX,Black,64
+Homicide,San Jose,CA,Black,33
+Assault,Houston,TX,Black,22
+Homicide,Chicago,IL,Black,54
+Assault,Houston,TX,Black,16
+Domestic Violence,San Antonio,TX,Black,15
+Domestic Violence,San Antonio,TX,Black,13
+Domestic Violence,San Diego,CA,Black,73
+Arson,Phoenix,AZ,Black,90
+Arson,Philadelphia,PA,Black,87
+Homicide,Philadelphia,PA,Black,68
+Burglary,San Jose,CA,Black,29
+Drug Offense,New York,NY,Black,33
+Robbery,Phoenix,AZ,Black,81
+Vandalism,San Antonio,TX,Black,87
+Robbery,San Jose,CA,Black,41
+Domestic Violence,Phoenix,AZ,Black,51
+Drug Offense,Chicago,IL,Black,88
+Burglary,Los Angeles,CA,Black,84
+Theft,Chicago,IL,Black,67
+Vandalism,Philadelphia,PA,Black,70
+Fraud,Houston,TX,Black,28
+Robbery,San Diego,CA,Black,66
+Robbery,Houston,TX,Black,78
+Fraud,San Diego,CA,Black,51
+Robbery,Philadelphia,PA,Black,31
+Fraud,Philadelphia,PA,Black,51
+Assault,Philadelphia,PA,Black,22
+Fraud,Chicago,IL,Black,74
+Burglary,San Diego,CA,Black,85
+Homicide,Phoenix,AZ,Black,62
+Arson,Philadelphia,PA,Black,77
+Theft,Houston,TX,Black,16
+Domestic Violence,New York,NY,Black,19
+Vandalism,Los Angeles,CA,Black,64
+Domestic Violence,San Jose,CA,Black,56
+Robbery,San Antonio,TX,Black,75
+Fraud,Philadelphia,PA,Black,29
+Domestic Violence,Los Angeles,CA,Black,33
+Domestic Violence,Houston,TX,Black,63
+Assault,Los Angeles,CA,Black,12
+Fraud,Phoenix,AZ,Black,61
+Assault,Houston,TX,Black,53
+Drug Offense,San Jose,CA,Black,87
+Fraud,San Diego,CA,Black,66
+Assault,Philadelphia,PA,Black,35
+Vandalism,Houston,TX,Black,69
+Robbery,Chicago,IL,Black,16
+Arson,Dallas,TX,Black,15
+Burglary,Houston,TX,Black,76
+Drug Offense,Los Angeles,CA,Black,33
+Drug Offense,San Jose,CA,Black,63
+Arson,Phoenix,AZ,Black,71
+Burglary,Phoenix,AZ,Black,68
+Fraud,San Antonio,TX,Black,22
+Theft,New York,NY,Black,89
+Arson,Phoenix,AZ,Black,86
+Burglary,Chicago,IL,Black,44
+Vandalism,Chicago,IL,Black,51
+Theft,Chicago,IL,Black,54
+Arson,San Diego,CA,Black,71
+Burglary,San Antonio,TX,Asian,23
+Vandalism,Philadelphia,PA,Asian,36
+Homicide,Philadelphia,PA,Asian,48
+Drug Offense,Houston,TX,Asian,47
+Vandalism,Los Angeles,CA,Asian,90
+Robbery,Philadelphia,PA,Asian,39
+Domestic Violence,Philadelphia,PA,Asian,29
+Vandalism,Phoenix,AZ,Asian,45
+Assault,San Antonio,TX,Asian,30
+Drug Offense,Chicago,IL,Asian,41
+Robbery,Houston,TX,Asian,46
+Burglary,Dallas,TX,Asian,20
+Assault,Houston,TX,Asian,64
+Arson,San Jose,CA,Asian,28
+Burglary,San Diego,CA,Asian,14
+Fraud,Dallas,TX,Asian,65
+Burglary,Los Angeles,CA,Asian,24
+Burglary,San Diego,CA,Asian,50
+Burglary,Phoenix,AZ,Asian,44
+Vandalism,Philadelphia,PA,Asian,16
+Arson,New York,NY,Asian,53
+Vandalism,Chicago,IL,Asian,81
+Arson,San Jose,CA,Asian,67
+Homicide,San Jose,CA,Asian,22
+Theft,Phoenix,AZ,Asian,84
+Robbery,Los Angeles,CA,Asian,85
+Vandalism,San Antonio,TX,Asian,70
+Homicide,New York,NY,Asian,67
+Arson,Philadelphia,PA,Asian,14
+Domestic Violence,Philadelphia,PA,Asian,78
+Vandalism,Dallas,TX,Asian,84
+Vandalism,San Antonio,TX,Asian,22
+Domestic Violence,San Diego,CA,Asian,89
+Vandalism,Phoenix,AZ,Asian,48
+Theft,Dallas,TX,Asian,67
+Domestic Violence,San Antonio,TX,Asian,62
+Assault,San Diego,CA,Asian,26
+Drug Offense,Dallas,TX,Asian,89
+Drug Offense,Chicago,IL,Asian,42
+Robbery,San Antonio,TX,Asian,30
+Vandalism,Houston,TX,Asian,47
+Robbery,New York,NY,Asian,23
+Burglary,San Jose,CA,Asian,87
+Arson,Houston,TX,Asian,43
+Vandalism,Los Angeles,CA,Asian,41
+Homicide,San Diego,CA,Asian,60
+Domestic Violence,Chicago,IL,Asian,34
+Robbery,Chicago,IL,Asian,49
+Homicide,Dallas,TX,Asian,43
+Domestic Violence,San Jose,CA,Asian,29
+Robbery,Houston,TX,Asian,50
+Fraud,San Antonio,TX,Asian,36
+Burglary,Philadelphia,PA,Asian,85
+Robbery,San Diego,CA,Asian,22
+Assault,San Diego,CA,Asian,83
+Theft,Los Angeles,CA,Asian,54
+Arson,Dallas,TX,Asian,24
+Robbery,Phoenix,AZ,Asian,85
+Arson,Philadelphia,PA,Asian,72
+Burglary,Chicago,IL,Asian,53
+Robbery,San Antonio,TX,Asian,80
+Vandalism,New York,NY,Asian,48
+Robbery,San Jose,CA,Asian,84
+Robbery,Phoenix,AZ,Asian,40
+Vandalism,Philadelphia,PA,Asian,90
+Theft,Chicago,IL,Asian,69
+Burglary,Dallas,TX,Asian,19
+Theft,Philadelphia,PA,Asian,84
+Homicide,San Jose,CA,Asian,89
+Theft,New York,NY,Asian,25
+Arson,Phoenix,AZ,Asian,54
+Vandalism,Dallas,TX,Asian,64
+Robbery,Phoenix,AZ,Asian,64
+Burglary,Houston,TX,Asian,42
+Homicide,San Jose,CA,Asian,39
+Burglary,Chicago,IL,Asian,14
+Vandalism,San Diego,CA,Asian,21
+Vandalism,Chicago,IL,Asian,34
+Domestic Violence,Chicago,IL,Asian,18
+Robbery,Houston,TX,Asian,35
+Robbery,New York,NY,Asian,46
+Vandalism,New York,NY,Asian,74
+Arson,New York,NY,Asian,70
+Vandalism,New York,NY,Asian,55
+Homicide,San Antonio,TX,Asian,55
+Vandalism,Chicago,IL,Asian,31
+Assault,Phoenix,AZ,Asian,12
+Homicide,Houston,TX,Asian,72
+Burglary,Philadelphia,PA,Asian,20
+Robbery,San Jose,CA,Asian,47
+Theft,Houston,TX,Asian,46
+Assault,San Diego,CA,Asian,89
+Domestic Violence,San Diego,CA,Asian,84
+Vandalism,Dallas,TX,Asian,51
+Burglary,Chicago,IL,Asian,14
+Robbery,Chicago,IL,Asian,75
+Vandalism,New York,NY,Asian,88
+Homicide,San Antonio,TX,Asian,49
+Assault,San Jose,CA,Asian,86
+Domestic Violence,San Diego,CA,Asian,87
+Robbery,San Jose,CA,Asian,22
+Robbery,Dallas,TX,Asian,69
+Fraud,Los Angeles,CA,Asian,82
+Domestic Violence,Los Angeles,CA,Asian,34
+Assault,Phoenix,AZ,Asian,40
+Robbery,Houston,TX,Asian,19
+Theft,Chicago,IL,Asian,50
+Theft,San Diego,CA,Asian,66
+Drug Offense,Philadelphia,PA,Asian,78
+Burglary,Houston,TX,Asian,74
+Domestic Violence,Chicago,IL,Asian,24
+Vandalism,New York,NY,Asian,28
+Robbery,San Antonio,TX,Asian,16
+Theft,San Antonio,TX,Asian,61
+Theft,New York,NY,Asian,67
+Vandalism,Houston,TX,Asian,66
+Robbery,Phoenix,AZ,Asian,72
+Robbery,San Jose,CA,Asian,69
+Robbery,Phoenix,AZ,Asian,90
+Theft,Dallas,TX,Asian,84
+Domestic Violence,New York,NY,Asian,15
+Robbery,New York,NY,Asian,61
+Assault,Los Angeles,CA,Asian,87
+Theft,San Jose,CA,Asian,68
+Assault,New York,NY,Asian,14
+Domestic Violence,New York,NY,Asian,26
+Drug Offense,Dallas,TX,Asian,81
+Burglary,Houston,TX,Asian,83
+Homicide,Houston,TX,Asian,57
+Assault,San Jose,CA,Asian,36
+Drug Offense,San Diego,CA,Asian,79
+Burglary,Houston,TX,Asian,44
+Robbery,Houston,TX,Asian,81
+Homicide,Phoenix,AZ,Asian,90
+Drug Offense,Phoenix,AZ,Asian,54
+Fraud,Philadelphia,PA,Asian,63
+Homicide,New York,NY,Asian,33
+Drug Offense,San Jose,CA,Asian,19
+Homicide,Los Angeles,CA,Asian,59
+Homicide,Houston,TX,Asian,49
+Fraud,Houston,TX,Asian,53
+Domestic Violence,New York,NY,Asian,68
+Arson,New York,NY,Asian,57
+Assault,San Diego,CA,Asian,79
+Theft,San Jose,CA,Asian,12
+Vandalism,Phoenix,AZ,Asian,72
+Assault,San Antonio,TX,Asian,40
+Arson,Los Angeles,CA,Asian,74
+Robbery,San Jose,CA,Asian,30
+Assault,Los Angeles,CA,Asian,18
+Assault,Chicago,IL,Asian,76
+Domestic Violence,Houston,TX,Asian,44
+Robbery,San Diego,CA,Asian,50
+Theft,San Antonio,TX,Asian,19
+Burglary,San Jose,CA,Asian,85
+Theft,New York,NY,Asian,40
+Theft,San Antonio,TX,Asian,49
+Fraud,Dallas,TX,Asian,58
+Drug Offense,Los Angeles,CA,Asian,21
+Homicide,Houston,TX,Asian,19
+Vandalism,Los Angeles,CA,Asian,88
+Domestic Violence,San Antonio,TX,Asian,90
+Burglary,Dallas,TX,Asian,76
+Burglary,New York,NY,Asian,81
+Homicide,Chicago,IL,Asian,77
+Drug Offense,Los Angeles,CA,Asian,55
+Drug Offense,Phoenix,AZ,Asian,74
+Burglary,San Antonio,TX,Asian,35
+Homicide,Dallas,TX,Asian,81
+Domestic Violence,San Diego,CA,Asian,30
+Drug Offense,San Antonio,TX,Asian,51
+Robbery,Houston,TX,Asian,26
+Drug Offense,Philadelphia,PA,Asian,57
+Fraud,Los Angeles,CA,Asian,61
+Arson,Houston,TX,Asian,90
+Arson,San Antonio,TX,Asian,76
+Arson,San Jose,CA,Asian,27
+Robbery,Dallas,TX,Asian,34
+Drug Offense,Houston,TX,Asian,57
+Theft,San Jose,CA,Asian,22
+Vandalism,Chicago,IL,Asian,60
+Burglary,San Diego,CA,Asian,20
+Homicide,Houston,TX,Asian,90
+Domestic Violence,Phoenix,AZ,Asian,31
+Domestic Violence,Phoenix,AZ,Asian,36
+Vandalism,Los Angeles,CA,Asian,55
+Theft,Chicago,IL,Asian,51
+Drug Offense,Dallas,TX,Asian,50
+Arson,New York,NY,Asian,35
+Homicide,Phoenix,AZ,Asian,27
+Fraud,San Antonio,TX,Asian,52
+Homicide,New York,NY,Asian,57
+Homicide,Dallas,TX,Asian,64
+Arson,San Antonio,TX,Asian,21
+Burglary,Chicago,IL,Asian,68
+Arson,Dallas,TX,Asian,87
+Assault,Dallas,TX,Asian,49
+Robbery,San Jose,CA,Asian,80
+Vandalism,Phoenix,AZ,Asian,33
+Robbery,San Diego,CA,Asian,35
+Domestic Violence,Houston,TX,Asian,14
+Domestic Violence,Dallas,TX,Asian,69
+Drug Offense,Chicago,IL,Asian,52
+Homicide,San Jose,CA,Asian,45
+Fraud,Dallas,TX,Asian,35
+Burglary,San Diego,CA,Asian,86
+Assault,San Jose,CA,Asian,84
+Domestic Violence,Chicago,IL,Asian,82
+Burglary,San Jose,CA,Asian,67
+Drug Offense,San Diego,CA,Asian,79
+Assault,New York,NY,Asian,72
+Domestic Violence,San Diego,CA,White,44
+Theft,Dallas,TX,White,53
+Theft,Philadelphia,PA,White,25
+Robbery,Los Angeles,CA,White,36
+Burglary,Dallas,TX,White,82
+Assault,Los Angeles,CA,White,74
+Homicide,San Jose,CA,White,56
+Assault,Los Angeles,CA,White,55
+Burglary,Phoenix,AZ,White,14
+Burglary,San Jose,CA,White,40
+Domestic Violence,San Antonio,TX,White,34
+Robbery,Los Angeles,CA,White,59
+Arson,Chicago,IL,White,26
+Fraud,Chicago,IL,White,82
+Arson,San Diego,CA,White,27
+Vandalism,Dallas,TX,White,35
+Vandalism,New York,NY,White,47
+Drug Offense,Phoenix,AZ,White,34
+Domestic Violence,Dallas,TX,White,14
+Fraud,Houston,TX,White,57
+Burglary,San Jose,CA,White,63
+Burglary,San Jose,CA,White,21
+Drug Offense,Houston,TX,White,67
+Fraud,New York,NY,White,56
+Domestic Violence,San Antonio,TX,White,40
+Robbery,Phoenix,AZ,White,56
+Fraud,Philadelphia,PA,White,39
+Burglary,Los Angeles,CA,White,42
+Burglary,Dallas,TX,White,40
+Burglary,Philadelphia,PA,White,70
+Domestic Violence,Los Angeles,CA,White,27
+Vandalism,Dallas,TX,White,18
+Fraud,Dallas,TX,White,35
+Assault,Chicago,IL,White,40
+Assault,San Jose,CA,White,12
+Drug Offense,Dallas,TX,White,72
+Fraud,Chicago,IL,White,28
+Burglary,Houston,TX,White,79
+Burglary,Dallas,TX,White,60
+Arson,Philadelphia,PA,White,35
+Domestic Violence,San Diego,CA,White,40
+Domestic Violence,Los Angeles,CA,White,44
+Theft,Chicago,IL,White,60
+Drug Offense,Phoenix,AZ,White,41
+Fraud,Phoenix,AZ,White,12
+Robbery,San Jose,CA,White,41
+Fraud,San Antonio,TX,White,53
+Burglary,New York,NY,White,33
+Arson,San Diego,CA,White,43
+Fraud,New York,NY,White,40
+Theft,Houston,TX,White,75
+Fraud,New York,NY,White,70
+Theft,New York,NY,White,39
+Domestic Violence,Los Angeles,CA,White,61
+Drug Offense,Philadelphia,PA,White,14
+Burglary,Chicago,IL,White,48
+Homicide,New York,NY,White,89
+Burglary,Houston,TX,White,66
+Domestic Violence,Los Angeles,CA,White,74
+Vandalism,Phoenix,AZ,White,63
+Burglary,Los Angeles,CA,White,52
+Assault,Philadelphia,PA,White,54
+Drug Offense,Philadelphia,PA,White,43
+Fraud,San Antonio,TX,White,54
+Drug Offense,Chicago,IL,White,29
+Homicide,San Antonio,TX,White,78
+Assault,Chicago,IL,White,65
+Domestic Violence,Los Angeles,CA,White,36
+Drug Offense,Los Angeles,CA,White,34
+Arson,Dallas,TX,White,30
+Domestic Violence,New York,NY,White,82
+Assault,New York,NY,White,62
+Domestic Violence,Chicago,IL,White,86
+Theft,Dallas,TX,White,23
+Theft,Philadelphia,PA,White,64
+Assault,Philadelphia,PA,White,58
+Burglary,Philadelphia,PA,White,20
+Domestic Violence,Chicago,IL,White,54
+Domestic Violence,San Jose,CA,White,58
+Arson,Phoenix,AZ,White,13
+Robbery,San Antonio,TX,White,33
+Domestic Violence,Phoenix,AZ,White,63
+Assault,Houston,TX,White,48
+Theft,Philadelphia,PA,White,49
+Domestic Violence,Dallas,TX,White,52
+Robbery,San Antonio,TX,White,19
+Domestic Violence,San Jose,CA,White,50
+Fraud,Chicago,IL,White,74
+Burglary,Philadelphia,PA,White,77
+Fraud,Phoenix,AZ,White,30
+Domestic Violence,Los Angeles,CA,White,68
+Robbery,Phoenix,AZ,White,82
+Theft,Philadelphia,PA,White,77
+Robbery,Chicago,IL,White,73
+Drug Offense,Houston,TX,White,54
+Robbery,Philadelphia,PA,White,12
+Burglary,San Diego,CA,White,38
+Domestic Violence,Houston,TX,White,52
+Burglary,San Jose,CA,White,47
+Vandalism,San Antonio,TX,White,89
+Burglary,Los Angeles,CA,White,80
+Burglary,Houston,TX,White,54
+Arson,Dallas,TX,White,25
+Vandalism,San Diego,CA,White,76
+Robbery,Chicago,IL,White,56
+Burglary,Phoenix,AZ,White,77
+Robbery,Los Angeles,CA,White,63
+Theft,Phoenix,AZ,White,21
+Burglary,Houston,TX,White,61
+Drug Offense,San Jose,CA,White,76
+Arson,San Diego,CA,White,85
+Drug Offense,San Jose,CA,White,30
+Theft,Dallas,TX,White,47
+Theft,San Antonio,TX,White,35
+Arson,Los Angeles,CA,White,43
+Vandalism,Los Angeles,CA,White,49
+Burglary,Los Angeles,CA,White,44
+Burglary,Phoenix,AZ,White,46
+Arson,Houston,TX,White,16
+Arson,New York,NY,White,70
+Theft,San Antonio,TX,White,63
+Vandalism,New York,NY,White,19
+Burglary,Los Angeles,CA,White,85
+Domestic Violence,Phoenix,AZ,White,67
+Arson,San Antonio,TX,White,34
+Assault,Houston,TX,White,77
+Burglary,Phoenix,AZ,White,18
+Fraud,Chicago,IL,White,58
+Robbery,Houston,TX,White,38
+Vandalism,San Diego,CA,White,90
+Assault,San Jose,CA,White,42
+Assault,San Diego,CA,White,67
+Drug Offense,Dallas,TX,White,16
+Vandalism,San Jose,CA,White,69
+Homicide,Chicago,IL,White,56
+Vandalism,Houston,TX,White,53
+Drug Offense,Philadelphia,PA,White,34
+Arson,Houston,TX,White,29
+Homicide,Los Angeles,CA,White,67
+Homicide,Houston,TX,White,37
+Arson,Houston,TX,White,39
+Burglary,San Jose,CA,White,63
+Fraud,New York,NY,White,75
+Drug Offense,San Antonio,TX,White,61
+Homicide,Dallas,TX,White,34
+Robbery,Houston,TX,White,90
+Robbery,San Diego,CA,White,27
+Domestic Violence,Los Angeles,CA,White,85
+Burglary,Chicago,IL,White,52
+Drug Offense,Philadelphia,PA,White,75
+Assault,San Jose,CA,White,81
+Burglary,San Jose,CA,White,50
+Robbery,San Antonio,TX,White,43
+Arson,Houston,TX,White,72
+Assault,Philadelphia,PA,White,81
+Homicide,Los Angeles,CA,White,17
+Assault,San Antonio,TX,White,31
+Assault,San Jose,CA,White,60
+Fraud,Chicago,IL,White,86
+Drug Offense,Philadelphia,PA,White,59
+Theft,San Antonio,TX,White,50
+Domestic Violence,San Jose,CA,White,36
+Theft,Los Angeles,CA,White,41
+Arson,Houston,TX,White,46
+Fraud,San Jose,CA,White,66
+Robbery,Houston,TX,White,80
+Homicide,Houston,TX,White,56
+Burglary,San Jose,CA,White,14
+Arson,San Jose,CA,White,89
+Domestic Violence,San Antonio,TX,White,52
+Theft,Phoenix,AZ,White,39
+Vandalism,Philadelphia,PA,White,23
+Homicide,Chicago,IL,White,59
+Vandalism,Philadelphia,PA,White,56
+Domestic Violence,Dallas,TX,White,86
+Fraud,Chicago,IL,White,20
+Drug Offense,Houston,TX,White,46
+Theft,New York,NY,White,60
+Vandalism,New York,NY,White,23
+Domestic Violence,New York,NY,White,73
+Arson,San Antonio,TX,White,79
+Theft,Houston,TX,White,45
+Robbery,San Antonio,TX,White,58
+Domestic Violence,Chicago,IL,White,44
+Domestic Violence,Chicago,IL,White,39
+Theft,Dallas,TX,White,87
+Burglary,Houston,TX,White,89
+Fraud,Chicago,IL,White,68
+Drug Offense,Dallas,TX,White,18
+Assault,Chicago,IL,White,78
+Vandalism,Dallas,TX,White,72
+Arson,Dallas,TX,White,47
+Theft,New York,NY,White,80
+Fraud,San Diego,CA,White,22
+Fraud,Dallas,TX,White,79
+Arson,San Diego,CA,White,24
+Theft,Philadelphia,PA,White,75
+Arson,San Diego,CA,White,44
+Arson,San Diego,CA,White,41
+Vandalism,San Diego,CA,White,67
+Robbery,Los Angeles,CA,White,76
+Fraud,San Diego,CA,White,13
+Fraud,Houston,TX,White,41
+Homicide,Phoenix,AZ,White,24
+Arson,San Antonio,TX,White,74
+Homicide,Los Angeles,CA,White,54
