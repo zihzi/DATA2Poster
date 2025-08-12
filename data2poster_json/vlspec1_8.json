@@ -1,92 +1,99 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Beverage Categories by Beverage",
+  "title": "Top 3 Product Names by Category",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "count",
-          "as": "beverage_count"
-        }
-      ],
-      "groupby": [
-        "Beverage_category",
-        "Beverage"
-      ]
-    },
-    {
-      "aggregate": [
+          "as": "product_cat_count"
+        },
         {
-          "op": "count",
-          "as": "distinct_beverages"
+          "op": "mean",
+          "field": "Rating",
+          "as": "avg_rating"
         }
       ],
       "groupby": [
-        "Beverage_category"
+        "Product Name",
+        "Category"
       ]
     },
     {
       "window": [
         {
-          "op": "rank",
-          "as": "category_rank"
+          "op": "dense_rank",
+          "as": "ProductRank"
         }
       ],
       "sort": [
         {
-          "field": "distinct_beverages",
+          "field": "product_cat_count",
           "order": "descending"
         }
+      ],
+      "groupby": [
+        "Category"
       ]
     },
     {
-      "filter": "datum.category_rank <= 3"
+      "filter": "datum.ProductRank <= 3"
     }
   ],
   "mark": {
-    "type": "bar",
-    "cornerRadius": 2
+    "type": "bar"
   },
   "encoding": {
-    "y": {
-      "field": "Beverage",
-      "type": "nominal",
-      "sort": {
-        "field": "beverage_count",
-        "order": "descending"
-      },
-      "title": "Beverage"
-    },
     "x": {
-      "field": "beverage_count",
-      "type": "quantitative",
-      "title": "Count of Beverage Entries",
-      "sort": "descending"
+      "field": "Product Name",
+      "type": "nominal",
+      "title": "Product Name",
+      "sort": "descending",
+      "axis": {
+        "labelAngle": -30
+      }
     },
     "xOffset": {
-      "field": "Beverage_category"
+      "field": "Category"
+    },
+    "y": {
+      "field": "avg_rating",
+      "type": "quantitative",
+      "title": "Average Rating",
+      "sort": "descending"
     },
     "color": {
-      "field": "Beverage_category",
+      "field": "Category",
       "type": "nominal",
-      "title": "Beverage Category"
+      "title": "Category",
+      "scale": {
+        "scheme": "tableau10"
+      }
     },
     "tooltip": [
       {
-        "field": "Beverage",
-        "type": "nominal"
+        "field": "Product Name",
+        "type": "nominal",
+        "title": "Product Name"
       },
       {
-        "field": "Beverage_category",
-        "type": "nominal"
+        "field": "Category",
+        "type": "nominal",
+        "title": "Category"
       },
       {
-        "field": "beverage_count",
+        "field": "avg_rating",
         "type": "quantitative",
-        "title": "Entries"
+        "title": "Avg Rating",
+        "format": ".2f"
+      },
+      {
+        "field": "product_cat_count",
+        "type": "quantitative",
+        "title": "Item Count"
       }
     ]
   },

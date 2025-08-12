@@ -1,0 +1,364 @@
+Occupation,Sleep Disorder,BMI Category,Sleep Duration
+Doctor,None,Normal,6.2
+Doctor,None,Normal,6.2
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.8
+Doctor,None,Normal,6.1
+Doctor,None,Normal,7.8
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,Sleep Apnea,Normal,6
+Doctor,None,Normal,7.6
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.9
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.9
+Doctor,None,Normal,7.9
+Doctor,None,Normal,7.9
+Doctor,None,Normal,6.1
+Doctor,None,Normal,7.7
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6.1
+Doctor,None,Normal,7.6
+Doctor,None,Normal,7.6
+Doctor,None,Normal,7.6
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.7
+Doctor,None,Normal,7.8
+Doctor,None,Normal,7.7
+Doctor,Sleep Apnea,Normal,7.7
+Doctor,None,Normal,6
+Doctor,None,Normal,7.6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,7.7
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,7.7
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6.2
+Doctor,None,Normal,6.2
+Doctor,None,Normal,6.2
+Doctor,None,Normal,6.2
+Doctor,Insomnia,Normal,6
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6.1
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,None,Normal,6
+Doctor,Insomnia,Overweight,7.3
+Doctor,Insomnia,Overweight,7.3
+Doctor,Sleep Apnea,Overweight,8.1
+Doctor,Sleep Apnea,Overweight,8.1
+Doctor,None,Normal,8.2
+Doctor,None,Normal,8.2
+Teacher,Insomnia,Overweight,6.3
+Teacher,None,Overweight,6.7
+Teacher,None,Overweight,6.7
+Teacher,None,Normal,7.1
+Teacher,None,Normal,7.1
+Teacher,None,Normal,7.2
+Teacher,None,Normal,7.2
+Teacher,None,Normal,7.2
+Teacher,Sleep Apnea,Overweight,6.6
+Teacher,Sleep Apnea,Normal,7.2
+Teacher,Insomnia,Overweight,6.6
+Teacher,Sleep Apnea,Overweight,6.8
+Teacher,Sleep Apnea,Overweight,6.8
+Teacher,Insomnia,Overweight,6.7
+Teacher,Insomnia,Overweight,6.7
+Teacher,Insomnia,Overweight,6.7
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.8
+Teacher,Insomnia,Overweight,6.8
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.5
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,Insomnia,Overweight,6.6
+Teacher,None,Overweight,6.6
+Teacher,None,Overweight,6.6
+Nurse,Sleep Apnea,Normal,6.5
+Nurse,Insomnia,Normal,6.5
+Nurse,Sleep Apnea,Normal,6.4
+Nurse,Insomnia,Normal,6.4
+Nurse,None,Normal,7.9
+Nurse,None,Overweight,6.1
+Nurse,None,Normal,7.5
+Nurse,Sleep Apnea,Overweight,5.9
+Nurse,None,Overweight,6.2
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.2
+Nurse,Sleep Apnea,Overweight,6.2
+Nurse,Sleep Apnea,Overweight,6.2
+Nurse,Insomnia,Overweight,6.1
+Nurse,None,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,None,Normal,7.1
+Nurse,Sleep Apnea,Overweight,6
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,6.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,None,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,None,Overweight,8
+Nurse,None,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8.2
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Nurse,Sleep Apnea,Overweight,8.1
+Engineer,None,Normal,7.5
+Engineer,None,Normal,7.5
+Engineer,None,Normal,7.2
+Engineer,None,Normal,7.2
+Engineer,None,Normal,7.3
+Engineer,None,Normal,7.3
+Engineer,None,Normal,7.3
+Engineer,None,Normal,7.3
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,Insomnia,Overweight,6.5
+Engineer,None,Normal,7.3
+Engineer,Insomnia,Normal,7.8
+Engineer,Insomnia,Normal,7.8
+Engineer,None,Normal,6.9
+Engineer,None,Overweight,7.6
+Engineer,None,Normal,7.7
+Engineer,None,Normal,7.7
+Engineer,None,Normal,7.7
+Engineer,None,Normal,7.7
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.7
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,None,Normal,7.8
+Engineer,Sleep Apnea,Normal,7.8
+Engineer,Insomnia,Overweight,6.8
+Engineer,None,Normal,8.3
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,Insomnia,Normal,8.3
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.3
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.3
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.3
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.5
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.4
+Engineer,None,Normal,8.5
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,Insomnia,Normal,7.2
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,7.1
+Accountant,None,Normal,8
+Accountant,None,Normal,8
+Accountant,None,Normal,7.2
+Accountant,None,Normal,7.2
+Accountant,Insomnia,Overweight,6.5
+Accountant,Insomnia,Overweight,6.5
+Accountant,Insomnia,Overweight,6.6
+Accountant,Insomnia,Overweight,6.6
+Accountant,Insomnia,Overweight,6.6
+Accountant,Insomnia,Overweight,6.6
+Lawyer,Sleep Apnea,Overweight,7.4
+Lawyer,None,Normal,7.4
+Lawyer,None,Normal,7.4
+Lawyer,None,Normal,7.4
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.3
+Lawyer,None,Normal,7.1
+Lawyer,None,Normal,7.1
+Lawyer,None,Normal,7.1
+Lawyer,Sleep Apnea,Normal,7.1
+Lawyer,Sleep Apnea,Overweight,7.4
+Lawyer,Insomnia,Normal,7.2
+Lawyer,None,Normal,6.9
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.2
+Lawyer,None,Normal,7.9
+Lawyer,None,Normal,7.9
+Lawyer,Insomnia,Normal,7.6
+Lawyer,None,Overweight,7.1
+Lawyer,None,Overweight,7.1
+Lawyer,None,Normal,7.7
+Lawyer,None,Normal,7.7
+Lawyer,None,Normal,7.7
+Lawyer,None,Normal,7.7
+Lawyer,None,Normal,7.7
+Lawyer,None,Normal,7.6
+Lawyer,None,Normal,7.6
+Lawyer,None,Normal,7.6
+Lawyer,None,Normal,7.8
+Lawyer,None,Normal,7.8
+Lawyer,None,Normal,7.8
+Lawyer,None,Normal,7.8
+Lawyer,None,Normal,7.8
+Lawyer,None,Normal,7.8
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.5
+Salesperson,Sleep Apnea,Overweight,6.5
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.4
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,Insomnia,Overweight,6.3
+Salesperson,None,Overweight,6.4
+Salesperson,None,Overweight,6.5

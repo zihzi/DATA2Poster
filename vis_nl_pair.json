@@ -1348,5 +1348,381 @@
             "width": 420,
             "height": 420
         }
+    },
+    "17": {
+        "nl": "Top 3 Primary_Device by Gender",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Primary_Device by Gender",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Indian_Kids_Screen_Time_2.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "Avg_Daily_Screen_hr",
+                            "as": "avg_screen_time"
+                        }
+                    ],
+                    "groupby": [
+                        "Primary_Device",
+                        "Gender"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "avg_screen_time",
+                            "as": "device_sum"
+                        }
+                    ],
+                    "groupby": [
+                        "Primary_Device"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "device_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "device_sum",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.device_rank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar",
+                "cornerRadius": 2
+            },
+            "encoding": {
+                "x": {
+                    "field": "Primary_Device",
+                    "type": "nominal",
+                    "title": "Primary Device",
+                    "axis": {
+                        "labelAngle": -30
+                    },
+                    "sort": {
+                        "field": "device_avg",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Gender"
+                },
+                "y": {
+                    "field": "avg_screen_time",
+                    "type": "quantitative",
+                    "title": "Avg Daily Screen Time (hrs)"
+                },
+                "color": {
+                    "field": "Gender",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "tableau10"
+                    },
+                    "title": "Gender"
+                },
+                "tooltip": [
+                    {
+                        "field": "Primary_Device",
+                        "type": "nominal",
+                        "title": "Device"
+                    },
+                    {
+                        "field": "Gender",
+                        "type": "nominal",
+                        "title": "Gender"
+                    },
+                    {
+                        "field": "avg_screen_time",
+                        "type": "quantitative",
+                        "title": "Avg Daily Screen (hrs)",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 400,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "18": {
+        "nl": "Top 3 Brand by Category",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Brand by Category ",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/fashion_products.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "count",
+                            "as": "brand_cat_count"
+                        },
+                        {
+                            "op": "mean",
+                            "field": "Rating",
+                            "as": "avg_rating"
+                        }
+                    ],
+                    "groupby": [
+                        "Brand",
+                        "Category"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "brand_cat_count",
+                            "as": "BrandTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Brand"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "BrandRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "BrandTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.BrandRank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Brand",
+                    "type": "nominal",
+                    "title": "Brand",
+                    "sort": {
+                        "field": "BrandTotal",
+                        "order": "descending"
+                    },
+                    "axis": {
+                        "labelAngle": -30
+                    }
+                },
+                "xOffset": {
+                    "field": "Category"
+                },
+                "y": {
+                    "field": "avg_rating",
+                    "type": "quantitative",
+                    "title": "Average Rating"
+                },
+                "color": {
+                    "field": "Category",
+                    "type": "nominal",
+                    "title": "Category",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Brand",
+                        "type": "nominal",
+                        "title": "Brand"
+                    },
+                    {
+                        "field": "Category",
+                        "type": "nominal",
+                        "title": "Category"
+                    },
+                    {
+                        "field": "avg_rating",
+                        "type": "quantitative",
+                        "title": "Avg Rating",
+                        "format": ".2f"
+                    },
+                    {
+                        "field": "brand_cat_count",
+                        "type": "quantitative",
+                        "title": "Item Count"
+                    },
+                    {
+                        "field": "BrandTotal",
+                        "type": "quantitative",
+                        "title": "Brand Total",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "19": {
+        "nl": "Top 3 Products by Sales Method",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Products by Sales Methods",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/adidas_sale.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Total Sales",
+                            "as": "total_sales"
+                        }
+                    ],
+                    "groupby": [
+                        "Product",
+                        "Sales Method"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_sales",
+                            "as": "ProductsTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Product"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "method_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "ProductsTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.method_rank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Product",
+                    "type": "nominal",
+                    "axis": {
+                        "title": "Products",
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": {
+                        "field": "ProductsTotal",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sales Method"
+                },
+                "y": {
+                    "field": "total_sales",
+                    "type": "quantitative",
+                    "title": "Total Sales"
+                },
+                "color": {
+                    "field": "Sales Method",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "tableau10"
+                    },
+                    "title": "Sales Method"
+                },
+                "tooltip": [
+                    {
+                        "field": "Retailer",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Sales Method",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "total_sales",
+                        "type": "quantitative",
+                        "format": ",",
+                        "title": "Total Sales"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 420
+        }
     }
 }

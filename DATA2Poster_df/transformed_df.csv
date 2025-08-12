@@ -1,24 +1,7 @@
-Beverage_category,Beverage,beverage_count
-Classic Espresso Drinks,Caffè Latte,11
-Classic Espresso Drinks,Caffè Mocha,11
-Classic Espresso Drinks,Cappuccino,11
-Classic Espresso Drinks,Skinny Latte,3
-Classic Espresso Drinks,Vanilla Latte,11
-Frappuccino® Blended Coffee,Caramel,9
-Frappuccino® Blended Coffee,Coffee,9
-Frappuccino® Blended Coffee,Java Chip,9
-Frappuccino® Blended Coffee,Mocha,9
-Frappuccino® Light Blended Coffee,Caramel,3
-Frappuccino® Light Blended Coffee,Coffee,3
-Frappuccino® Light Blended Coffee,Java Chip,3
-Frappuccino® Light Blended Coffee,Mocha,3
-Signature Espresso Drinks,Caramel Macchiato,11
-Signature Espresso Drinks,Hot Chocolate,11
-Signature Espresso Drinks,White Chocolate Mocha,11
-Smoothies,Banana Chocolate,3
-Smoothies,Orange Mango Banana,3
-Smoothies,Strawberry Banana,3
-Tazo® Tea Drinks,Chai Tea Latte,11
-Tazo® Tea Drinks,Full-Leaf Red Tea Latte,11
-Tazo® Tea Drinks,Full-Leaf Tea Latte,11
-Tazo® Tea Drinks,Green Tea Latte,11
+Product Name,Category,product_cat_count,avg_rating,ProductRank
+Dress,Women's Fashion,74,3.048783783783784,2.0
+Jeans,Men's Fashion,74,3.1955405405405406,1.0
+Jeans,Women's Fashion,82,3.113658536585366,1.0
+Shoes,Men's Fashion,69,2.8171014492753623,2.0
+Shoes,Women's Fashion,72,2.8633333333333333,3.0
+T-shirt,Men's Fashion,68,2.7273529411764708,3.0

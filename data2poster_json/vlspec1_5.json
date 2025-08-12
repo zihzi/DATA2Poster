@@ -1,61 +1,69 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Calorie Comparison of Beverages in Signature Espresso Drinks",
+  "title": "Average Rating and Brand Distribution for Men's Fashion T-shirts",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
   },
   "transform": [
     {
-      "filter": "datum.Beverage_category === 'Signature Espresso Drinks'"
+      "filter": "(datum['Product Name'] == 'T-shirt') && (datum['Category'] == \"Men's Fashion\")"
     },
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Calories",
-          "as": "avg_calories"
+          "field": "Rating",
+          "as": "avg_rating"
+        },
+        {
+          "op": "count",
+          "as": "count"
         }
       ],
       "groupby": [
-        "Beverage"
+        "Brand"
       ]
     }
   ],
   "mark": {
-    "type": "bar",
-    "cornerRadius": 2
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Beverage",
+      "field": "Brand",
       "type": "nominal",
-      "title": "Beverage",
+      "title": "Brand",
+      "sort": "-y",
       "axis": {
-        "labelAngle": -30,
-        "tickCount": 6
-      },
-      "sort": "-y"
+        "labelAngle": -30
+      }
     },
     "y": {
-      "field": "avg_calories",
+      "field": "avg_rating",
       "type": "quantitative",
-      "title": "Average Calories"
+      "title": "Average Rating"
     },
     "tooltip": [
       {
-        "field": "Beverage",
+        "field": "Brand",
         "type": "nominal",
-        "title": "Beverage"
+        "title": "Brand"
       },
       {
-        "field": "avg_calories",
+        "field": "avg_rating",
         "type": "quantitative",
-        "title": "Avg Calories"
+        "title": "Avg Rating",
+        "format": ".2f"
+      },
+      {
+        "field": "count",
+        "type": "quantitative",
+        "title": "Count"
       }
     ]
   },
   "width": 420,
-  "height": 420,
+  "height": 400,
   "config": {
     "title": {
       "fontSize": 44

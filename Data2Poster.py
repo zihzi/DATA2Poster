@@ -45,7 +45,7 @@ if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
     datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
-    datasets["bike_sharing_day"] = pd.read_csv("data/bike_sharing_day.csv")
+    datasets["Bicycles_Products"] = pd.read_csv("data/Bicycles_Products.csv")
     datasets["crime_safety_1"] = pd.read_csv("data/crime_safety_1.csv")
     datasets["crime_safety_2"] = pd.read_csv("data/crime_safety_2.csv")
     datasets["fashion_products"] = pd.read_csv("data/fashion_products.csv")
@@ -661,9 +661,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
                     - Make them answerable with the existing dataset.
                 4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - ONLY choose rank facts from {data_facts}.
-                    - The question must refer to  **two** column from {key_columns}.
-                    - In addition to the column from the first question, the second column should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - ONLY choose rank fact that contains the same column as mentioned in the first question from {data_facts}.
+                    - The question must refer to  **two** column, one **must be the same column as mentioned in the first question**, and the second column should be a new column which **"dtype" is "C"** from {key_columns}.
                     - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
                     - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
@@ -747,9 +746,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
                     - Make them answerable with the existing dataset.
                 3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - ONLY choose rank facts from {data_facts}.
-                    - The question must refer to  **two** column from {key_columns}.
-                    - In addition to the column from the first question, the second column should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - ONLY choose rank fact that contains the same column as mentioned in the first question from {data_facts}.
+                    - The question must refer to  **two** column, one **must be the same column as mentioned in the first question**, and the second column should be a new column which **"dtype" is "C"** from {key_columns}.
                     - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
                     - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
@@ -1461,20 +1459,35 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                             • Chart 6 — Drill-down on the LOWEST  entity from SECTION 1 Chart 2. 
                                         
                                         **EXAMPLE**
-                                        Chart 1  "Total Sales Trend 2010-2024"
-                                        Chart 2  "Top 5 Countries by Total Sales"
-                                        Chart 3  "Sales by Product Category 2010-2024"
-                                        Chart 4  "Top 5 Product Categories by Sales"
-                                        Chart 5  "Category Breakdown for USA (highest)"
-                                        Chart 6  "Category Breakdown for Iceland (lowest)"
+                                        Chart 1  "Total Sales by Country"
+                                        Chart 2  "Top 3 Country by Year"
+                                        Chart 3  "Sales by Product Category"
+                                        Chart 4  "Top 5 Product Category by Year"
+                                        Chart 5  "USA total sales by Product Category and Year"
+                                        Chart 6  "China total sales by Product Category and Year"
                                             
                                         
                                         **RULES**
                                         1. Do not repeat a chart ID.
-                                        2. Section 1 and Section 2 must use different categorical dimensions.
-                                        3. Charts in the same section are closely related and, when viewed together, communicate a single, higher-level insight.
-                                        4. Create a concise section heading that captures the shared insight of each group.
-                                        5. For each section, write a one sentence (shorter than 20 words) that captures the key insight conveyed in that section.
+                                        2. SECTION 1 and SECTION 2 must use different categorical dimensions.
+                                        3. The title of two Charts in the SECTION 1 **CAN ONLY has exactly one same column name**.
+                                        4. The title of two Charts in the SECTION 2 **CAN ONLY has exactly one same column name**.
+                                        5. The title of two Charts in the SECTION 3 **MUST drill down to reveal the pattern from the Chart 2 of SECTION 1**.
+                                        6. Create a concise section heading that captures the shared insight of each group.
+                                        7. For each section, write a one sentence (shorter than 20 words) that captures the key insight conveyed in that section.
+
+                                        **Avoid**
+                                        Example of bad chart titles:
+                                            SECTION 2
+                                                • Title of Chart 3 — "Avg Session Duration by App Category".                      
+                                                • Title of Chart 4 — "Top 3 Age Groups by Daily Active Users".   
+                                        Rationale: Chart 3 and Chart 4 have no column name in common.
+                                        How to fix:
+                                            SECTION 2
+                                                • Title of Chart 3 — "Avg Session Duration by App Category".                      
+                                                • Title of Chart 4 — "Top 3 App Category by Daily Active Users".
+                                        Rationale: Chart 3 and Chart 4 has only one same column name:"App Category".
+
                                       
                                         **Output (JSON)**
                                         Do not INCLUDE ```json```.Do not add other sentences after this json data.
