@@ -1,23 +1,23 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Worldwide Gross by Creative Type for G-rated Comedy Movies",
+  "title": "Calorie Comparison of Beverages in Signature Espresso Drinks",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
   },
   "transform": [
     {
-      "filter": "(datum['Genre'] === 'Comedy') && (datum['Content Rating'] === 'G')"
+      "filter": "datum.Beverage_category === 'Signature Espresso Drinks'"
     },
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Worldwide Gross",
-          "as": "Total_Worldwide_Gross"
+          "op": "mean",
+          "field": "Calories",
+          "as": "avg_calories"
         }
       ],
       "groupby": [
-        "Creative Type"
+        "Beverage"
       ]
     }
   ],
@@ -27,9 +27,9 @@
   },
   "encoding": {
     "x": {
-      "field": "Creative Type",
+      "field": "Beverage",
       "type": "nominal",
-      "title": "Creative Type",
+      "title": "Beverage",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
@@ -37,28 +37,25 @@
       "sort": "-y"
     },
     "y": {
-      "field": "Total_Worldwide_Gross",
+      "field": "avg_calories",
       "type": "quantitative",
-      "title": "Worldwide Gross",
-      "axis": {
-        "tickCount": 6
-      }
+      "title": "Average Calories"
     },
     "tooltip": [
       {
-        "field": "Creative Type",
+        "field": "Beverage",
         "type": "nominal",
-        "title": "Creative Type"
+        "title": "Beverage"
       },
       {
-        "field": "Total_Worldwide_Gross",
+        "field": "avg_calories",
         "type": "quantitative",
-        "title": "Worldwide Gross"
+        "title": "Avg Calories"
       }
     ]
   },
-  "width": 400,
-  "height": 400,
+  "width": 420,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

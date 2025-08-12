@@ -1,93 +1,96 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Studios by Type",
+  "title": "Top 3 Beverage Categories by Beverage",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Worldwide $m",
-          "as": "Total_Worldwide_m"
+          "op": "count",
+          "as": "beverage_count"
         }
       ],
       "groupby": [
-        "Studio",
-        "Type"
+        "Beverage_category",
+        "Beverage"
+      ]
+    },
+    {
+      "aggregate": [
+        {
+          "op": "count",
+          "as": "distinct_beverages"
+        }
+      ],
+      "groupby": [
+        "Beverage_category"
       ]
     },
     {
       "window": [
         {
           "op": "rank",
-          "as": "studio_rank"
+          "as": "category_rank"
         }
       ],
       "sort": [
         {
-          "field": "Total_Worldwide_m",
+          "field": "distinct_beverages",
           "order": "descending"
         }
-      ],
-      "groupby": [
-        "Type"
       ]
     },
     {
-      "filter": "datum.studio_rank <= 3"
+      "filter": "datum.category_rank <= 3"
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
-    "x": {
-      "field": "Type",
+    "y": {
+      "field": "Beverage",
       "type": "nominal",
-      "title": "Movie Type",
+      "sort": {
+        "field": "beverage_count",
+        "order": "descending"
+      },
+      "title": "Beverage"
+    },
+    "x": {
+      "field": "beverage_count",
+      "type": "quantitative",
+      "title": "Count of Beverage Entries",
       "sort": "descending"
     },
     "xOffset": {
-      "field": "Studio",
-      "type": "nominal",
-      "title": "Studio",
-      "sort": "descending"
-    },
-    "y": {
-      "field": "Total_Worldwide_m",
-      "type": "quantitative",
-      "title": "Worldwide Revenue (million $)",
-      "sort": "descending"
+      "field": "Beverage_category"
     },
     "color": {
-      "field": "Studio",
+      "field": "Beverage_category",
       "type": "nominal",
-      "legend": {
-        "title": "Studio"
-      },
-      "sort": "descending"
+      "title": "Beverage Category"
     },
     "tooltip": [
       {
-        "field": "Studio",
-        "type": "nominal",
-        "title": "Studio"
+        "field": "Beverage",
+        "type": "nominal"
       },
       {
-        "field": "Type",
-        "type": "nominal",
-        "title": "Movie Type"
+        "field": "Beverage_category",
+        "type": "nominal"
       },
       {
-        "field": "Total_Worldwide_m",
+        "field": "beverage_count",
         "type": "quantitative",
-        "title": "Worldwide Revenue ($m)"
+        "title": "Entries"
       }
     ]
   },
-  "width": 400,
+  "width": 420,
   "height": 400,
   "config": {
     "title": {

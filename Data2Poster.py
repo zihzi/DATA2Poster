@@ -657,14 +657,16 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 3. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - The question must refer to **ONLY** one column from {key_columns}. 
                     - The question should be high-level and only mention column from {key_columns} rather than specific value.
+                    - The **"dtype"** from {key_columns} of the mentioned column should be **"C"**.
+                    - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
                     - Make them answerable with the existing dataset.
                 4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - ONLY choose rank facts from {data_facts}.
                     - The question must refer to  **two** column from {key_columns}.
-                    - In addition to the column from the first question, the second column should be a new column which "dtype" is "C" from {key_columns}.
-                    - The "num_unique_values" of the second column should be **no more than 3**.
+                    - In addition to the column from the first question, the second column should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
-                    - **ALWAYS use the same metric** for ranking(i.e. y-axis) from the first question.
+                    - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
                     - Make them answerable with the existing dataset.
                 5. Write a title for the chart **(≤7 words each)** based on the question.
                 
@@ -741,14 +743,16 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 2. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - The question must refer to **ONLY** one column from {key_columns}. 
                     - The question should be high-level and only mention column from {key_columns} rather than specific value.
+                    - The **"dtype"** from {key_columns} of the mentioned column should be **"C"**.
+                    - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
                     - Make them answerable with the existing dataset.
                 3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
                     - ONLY choose rank facts from {data_facts}.
                     - The question must refer to  **two** column from {key_columns}.
-                    - In addition to the column from the first question, the second column should be a new column which "dtype" is "C" from {key_columns}.
-                    - The "num_unique_values" of the second column should be **no more than 3**.
+                    - In addition to the column from the first question, the second column should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
-                    - **ALWAYS use the same metric** for ranking(i.e. y-axis) from the first question.
+                    - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
                     - Make them answerable with the existing dataset.
                 4. Write a title for the chart **(≤7 words each)** based on the question.
                 

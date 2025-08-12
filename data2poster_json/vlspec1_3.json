@@ -1,39 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Creative Types by Content Rating",
+  "title": "Top 3 Beverages by Beverage_prep",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Worldwide Gross",
-          "as": "Total_Worldwide_Gross"
+          "op": "mean",
+          "field": "Calories",
+          "as": "avg_calories"
         }
       ],
       "groupby": [
-        "Content Rating",
-        "Creative Type"
+        "Beverage",
+        "Beverage_prep"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "mean",
+          "field": "avg_calories",
+          "as": "beverage_total"
+        }
+      ],
+      "groupby": [
+        "Beverage"
       ]
     },
     {
       "window": [
         {
           "op": "rank",
-          "as": "CreativeType_rank"
+          "as": "bev_rank"
         }
       ],
       "sort": [
         {
-          "field": "Total_Worldwide_Gross",
+          "field": "beverage_total",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.CreativeType_rank <= 3"
+      "filter": "datum.bev_rank <= 3"
     }
   ],
   "mark": {
@@ -42,54 +54,51 @@
   },
   "encoding": {
     "x": {
-      "field": "Content Rating",
+      "field": "Beverage",
       "type": "nominal",
-      "title": "Content Rating",
+      "title": "Beverage",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       },
       "sort": "-y"
     },
-    "y": {
-      "field": "Total_Worldwide_Gross",
-      "type": "quantitative",
-      "title": "Worldwide Gross",
-      "axis": {
-        "tickCount": 6
-      }
-    },
     "xOffset": {
-      "field": "Creative Type"
+      "field": "Beverage_prep"
+    },
+    "y": {
+      "field": "avg_calories",
+      "type": "quantitative",
+      "title": "Average Calories"
     },
     "color": {
-      "field": "Creative Type",
+      "field": "Beverage_prep",
       "type": "nominal",
-      "title": "Creative Type",
+      "title": "Beverage Prep",
       "scale": {
-        "scheme": "category10"
+        "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "Creative Type",
+        "field": "Beverage",
         "type": "nominal",
-        "title": "Creative Type"
+        "title": "Beverage"
       },
       {
-        "field": "Content Rating",
+        "field": "Beverage_prep",
         "type": "nominal",
-        "title": "Content Rating"
+        "title": "Prep Method"
       },
       {
-        "field": "Total_Worldwide_Gross",
+        "field": "avg_calories",
         "type": "quantitative",
-        "title": "Worldwide Gross"
+        "title": "Avg Calories"
       }
     ]
   },
   "width": 420,
-  "height": 400,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

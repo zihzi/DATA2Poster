@@ -1,113 +1,53 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Restaurants by Rating",
+  "title": "Average Calories by Beverage",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/restaurant_dishes.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/starbucks.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Rating",
-          "as": "avg_rating"
-        },
-        {
-          "op": "sum",
-          "field": "Orders",
-          "as": "total_orders"
+          "field": "Calories",
+          "as": "avg_calories"
         }
       ],
       "groupby": [
-        "Restaurant",
-        "Rating"
+        "Beverage"
       ]
-    },
-    {
-      "joinaggregate": [
-        {
-          "op": "mean",
-          "field": "avg_rating",
-          "as": "restaurant_avg_rating"
-        }
-      ],
-      "groupby": [
-        "Restaurant"
-      ]
-    },
-    {
-      "window": [
-        {
-          "op": "dense_rank",
-          "as": "restaurant_rank"
-        }
-      ],
-      "sort": [
-        {
-          "field": "restaurant_avg_rating",
-          "order": "descending"
-        }
-      ]
-    },
-    {
-      "filter": "datum.restaurant_rank <= 3"
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Restaurant",
+      "field": "Beverage",
       "type": "nominal",
+      "title": "Beverage",
       "axis": {
-        "title": "Restaurant",
         "labelAngle": -30,
         "tickCount": 6
       },
-      "sort": {
-        "field": "restaurant_avg_rating",
-        "order": "descending"
-      }
-    },
-    "xOffset": {
-      "field": "Rating"
+      "sort": "-y"
     },
     "y": {
-      "field": "total_orders",
+      "field": "avg_calories",
       "type": "quantitative",
-      "title": "Total Orders",
-      "aggregate": "sum",
-      "axis": {
-        "title": "Total Orders"
-      }
-    },
-    "color": {
-      "field": "Rating",
-      "type": "nominal",
-      "title": "Rating",
-      "scale": {
-        "scheme": "set1"
-      }
+      "title": "Average Calories"
     },
     "tooltip": [
       {
-        "field": "Restaurant",
-        "type": "nominal"
+        "field": "Beverage",
+        "type": "nominal",
+        "title": "Beverage"
       },
       {
-        "field": "Rating",
-        "type": "nominal"
-      },
-      {
-        "field": "total_orders",
+        "field": "avg_calories",
         "type": "quantitative",
-        "title": "Total Orders"
-      },
-      {
-        "field": "restaurant_avg_rating",
-        "type": "quantitative",
-        "title": "Avg. Restaurant Rating"
+        "title": "Avg Calories"
       }
     ]
   },
@@ -119,7 +59,7 @@
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 28,
+      "labelFontSize": 30,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10

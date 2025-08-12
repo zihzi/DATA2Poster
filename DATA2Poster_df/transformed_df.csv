@@ -1,16 +1,24 @@
-Studio,Type,Total_Worldwide_m,studio_rank
-BV,Comedy,1017.2,2.0
-BV,Family,11189.0,1.0
-BV,Mystery/Suspense,1081.0,2.0
-Fox,Action,8722.1,1.0
-Fox,Drama,4571.8,2.0
-Fox,Family,5519.7,3.0
-NL,Comedy,698.9000000000001,3.0
-Par.,Drama,5775.7,1.0
-Sony,Action,5856.6,3.0
-Sony,Mystery/Suspense,1244.1,1.0
-Uni.,Comedy,1331.6,1.0
-Uni.,Mystery/Suspense,470.7,3.0
-WB,Action,7227.6,2.0
-WB,Drama,3852.5,3.0
-WB,Family,6276.3,2.0
+Beverage_category,Beverage,beverage_count
+Classic Espresso Drinks,Caffè Latte,11
+Classic Espresso Drinks,Caffè Mocha,11
+Classic Espresso Drinks,Cappuccino,11
+Classic Espresso Drinks,Skinny Latte,3
+Classic Espresso Drinks,Vanilla Latte,11
+Frappuccino® Blended Coffee,Caramel,9
+Frappuccino® Blended Coffee,Coffee,9
+Frappuccino® Blended Coffee,Java Chip,9
+Frappuccino® Blended Coffee,Mocha,9
+Frappuccino® Light Blended Coffee,Caramel,3
+Frappuccino® Light Blended Coffee,Coffee,3
+Frappuccino® Light Blended Coffee,Java Chip,3
+Frappuccino® Light Blended Coffee,Mocha,3
+Signature Espresso Drinks,Caramel Macchiato,11
+Signature Espresso Drinks,Hot Chocolate,11
+Signature Espresso Drinks,White Chocolate Mocha,11
+Smoothies,Banana Chocolate,3
+Smoothies,Orange Mango Banana,3
+Smoothies,Strawberry Banana,3
+Tazo® Tea Drinks,Chai Tea Latte,11
+Tazo® Tea Drinks,Full-Leaf Red Tea Latte,11
+Tazo® Tea Drinks,Full-Leaf Tea Latte,11
+Tazo® Tea Drinks,Green Tea Latte,11
