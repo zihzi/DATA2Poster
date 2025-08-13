@@ -1,56 +1,56 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Rating by Brand",
+  "title": "Screen Time by Health Impacts",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Rating",
-          "as": "avg_rating"
+          "field": "Avg_Daily_Screen_hr",
+          "as": "avg_screen_time"
         }
       ],
       "groupby": [
-        "Brand"
+        "Health_Impacts"
       ]
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Brand",
+      "field": "Health_Impacts",
       "type": "nominal",
-      "title": "Brand",
-      "sort": "-y",
+      "title": "Health Impacts",
       "axis": {
         "labelAngle": -30
       }
     },
     "y": {
-      "field": "avg_rating",
+      "field": "avg_screen_time",
       "type": "quantitative",
-      "title": "Average Rating"
+      "title": "Avg Daily Screen Time (hrs)"
     },
     "tooltip": [
       {
-        "field": "Brand",
+        "field": "Health_Impacts",
         "type": "nominal",
-        "title": "Brand"
+        "title": "Health Impact"
       },
       {
-        "field": "avg_rating",
+        "field": "avg_screen_time",
         "type": "quantitative",
-        "title": "Avg Rating",
+        "title": "Avg Daily Screen (hrs)",
         "format": ".2f"
       }
     ]
   },
-  "width": 420,
+  "width": 400,
   "height": 400,
   "config": {
     "title": {

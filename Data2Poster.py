@@ -44,19 +44,13 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
-    datasets["Bicycles_Products"] = pd.read_csv("data/Bicycles_Products.csv")
-    datasets["crime_safety_1"] = pd.read_csv("data/crime_safety_1.csv")
-    datasets["crime_safety_2"] = pd.read_csv("data/crime_safety_2.csv")
-    datasets["fashion_products"] = pd.read_csv("data/fashion_products.csv")
-    datasets["restaurant_dishes"] = pd.read_csv("data/restaurant_dishes.csv")
-    datasets["Sleep_health_and_lifestyle_dataset"] = pd.read_csv("data/Sleep_health_and_lifestyle_dataset.csv")
-    datasets["starbucks"] = pd.read_csv("data/starbucks.csv")
-    datasets["Indian_Kids_Screen_Time_1"] = pd.read_csv("data/Indian_Kids_Screen_Time_1.csv")
+    # datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
+    datasets["crime_safety"] = pd.read_csv("data/crime_safety.csv")
+    datasets["Sleep_health"] = pd.read_csv("data/Sleep_health.csv")
     datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
     datasets["Indian_Kids_Screen_Time_3"] = pd.read_csv("data/Indian_Kids_Screen_Time_3.csv")
-    datasets["volcano"] = pd.read_csv("data/volcano.csv")
-    datasets["shopping_trends"] = pd.read_csv("data/shopping_trends.csv")
+    # datasets["volcano"] = pd.read_csv("data/volcano.csv")
+
 
 
 
@@ -653,27 +647,26 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
                 {data_facts}\n\n
                 1. Briefly note which fact most directly extend insights from the current chart.
-                2. Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-                3. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - The question must refer to **ONLY** one column from {key_columns}. 
+                2. Pay attention to the **"dtype"** and **"num_unique_values"** of each column in {key_columns}.
+                3. Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
+                4. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - The question must refer to **ONLY** one column(i.e. C1) from {key_columns}. 
                     - The question should be high-level and only mention column from {key_columns} rather than specific value.
-                    - The **"dtype"** from {key_columns} of the mentioned column should be **"C"**.
-                    - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
+                    - The **"dtype"** from {key_columns} of C1 should be **"C"**.
+                    - The **"num_unique_values"** from {key_columns} of C1 should be **more than 3**.
                     - Make them answerable with the existing dataset.
-                4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - ONLY choose rank fact that contains the same column as mentioned in the first question from {data_facts}.
-                    - The question must refer to  **two** column, one **must be the same column as mentioned in the first question**, and the second column should be a new column which **"dtype" is "C"** from {key_columns}.
-                    - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
+                5. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - ONLY choose rank fact that contains the same column as C1 from {data_facts}.
+                    - The question must refer to  **two** column, one **must be the same column as C1**, and the second column(i.e. C2) should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - The **"num_unique_values"** from {key_columns} of C2 should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
                     - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
                     - Make them answerable with the existing dataset.
-                5. Write a title for the chart **(≤7 words each)** based on the question.
+                6. Write a title for the chart **(≤7 words each)** based on the question.
                 
                 **Constraints**
                 - Never rewrite th data facts from {data_facts}.
-                - The second question should be in the form of **""What are the top N {{first column that the first question refer to}} by {{second column}} in {{the same metric as the first question}}?"**.
-                - The title for second question should be in the form of **"Top N {{first column that the first question refer to}} by {{second column}}"**.
-
+                
                 **Example**
                 Dataset columns: [gender, racial groups, math score, reading score, writing score]
                 Follow-up questions:
@@ -684,8 +677,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 The second question extends the analysis by comparing the average math scores(same metric as Question 1) between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
                 **Avoid**
-                Question: What are the TOP 3 reading score by writing score for Male and Female in the top racial groups?
+                Question: What are the top 3 reading score by writing score for Male and Female in the top racial groups?
                 Rationale: It contains three columns: 'writing score', 'gender (Male and Female)' and 'racial groups', which is not allowed.
+                Question: "What are the top 3 gender groups by writing score?"
+                Rationale: There is only 2 unique values in 'gender (Male and Female)', so 3 is not valid.
+                Question: "What are the top 2 gender by racial groups?"
+                Rationale: There is only 2 unique values in 'gender (Male and Female)', so top 2 is meaningless. **Make sure N is less than the number of unique values in C1.**
+                Fixed Question: "What are the top 3 racial groups by gender?"
+                Question: "What are the top 3 products by sales in the top 3 categories?"
+                Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
 
                 **Output (exact JSON)**  
                 Do not INCLUDE ```json```.Do not add other sentences after this json data.
@@ -739,26 +739,25 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 The column that you **SHOULD NEVER** use for follow-up questions: {not_use_column}
 
                 1. Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-                2. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - The question must refer to **ONLY** one column from {key_columns}. 
+                2. Pay attention to the **"dtype"** and **"num_unique_values"** of each column in {key_columns}.
+                3. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - The question must refer to **ONLY** one column(i.e. C1) from {key_columns}. 
                     - The question should be high-level and only mention column from {key_columns} rather than specific value.
-                    - The **"dtype"** from {key_columns} of the mentioned column should be **"C"**.
-                    - The **"num_unique_values"** from {key_columns} of the mentioned column should be **more than 3**.
+                    - The **"dtype"** from {key_columns} of C1 should be **"C"**.
+                    - The **"num_unique_values"** from {key_columns} of C1 should be **more than 3**.
                     - Make them answerable with the existing dataset.
-                3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-                    - ONLY choose rank fact that contains the same column as mentioned in the first question from {data_facts}.
-                    - The question must refer to  **two** column, one **must be the same column as mentioned in the first question**, and the second column should be a new column which **"dtype" is "C"** from {key_columns}.
-                    - The **"num_unique_values"** from {key_columns} of the second column should be **no more than 3**.
+                4. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
+                    - ONLY choose rank fact that contains the same column as C1 from {data_facts}.
+                    - The question must refer to  **two** column, one **must be the same column as C1**, and the second column(i.e. C2) should be a new column which **"dtype" is "C"** from {key_columns}.
+                    - The **"num_unique_values"** from {key_columns} of C2 should be **no more than 3**.
                     - Ensure you understand the number of unique values in the column and clearly specify a valid N, either 'Top N' or 'Bottom N' in your question.
                     - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
                     - Make them answerable with the existing dataset.
-                4. Write a title for the chart **(≤7 words each)** based on the question.
-                
+                5. Write a title for the chart **(≤7 words each)** based on the question.
+
                 **Constraints**
                 - Never rewrite th data facts from {data_facts}.
-                - The second question should be in the form of **""What are the top N {{first column that the first question refer to}} by {{second column}} in {{the same metric as the first question}}?"**.
-                - The title for second question should be in the form of **"Top N {{first column that the first question refer to}} by {{second column}}"**.
-
+                
                 **Example**
                 Dataset columns: [gender, racial groups, math score,reading score, writing score]
                 Follow-up questions:
@@ -769,8 +768,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 The second question extends the analysis by comparing the average math scores between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
                 **Avoid**
-                Question: What are the TOP 3 reading score by writing score for Male and Female in the top racial groups?
+                Question: What are the top 3 reading score by writing score for Male and Female in the top racial groups?
                 Rationale: It contains three columns: 'writing score', 'gender (Male and Female)' and 'racial groups', which is not allowed.
+                Question: "What are the top 3 gender groups by writing score?"
+                Rationale: There is only 2 unique values in 'gender (Male and Female)', so 3 is not valid.
+                Question: "What are the top 2 gender by racial groups?"
+                Rationale: There is only 2 unique values in 'gender (Male and Female)', so top 2 is meaningless. **Make sure N is less than the number of unique values in C1.**
+                Fixed Question: "What are the top 3 racial groups by gender?"
+                Question: "What are the top 3 products by sales in the top 3 categories?"
+                Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
 
                 **Output (exact JSON)**  
                 Do not INCLUDE ```json```.Do not add other sentences after this json data.
@@ -975,6 +981,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
                 exec(trans_code)
                 new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
+                st.write("Transformed DataFrame:",new_df)
 
                
                 
@@ -994,11 +1001,11 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 2. Only focus the top N entities in the title.
                 3. For the first question, choose the entity with highest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
                     - This question drill down to reveal the pattern within this entity.
-                    - The question must refer to **two** column from {key_columns}. 
+                    - The question must refer to **exactly two** column from {key_columns}. 
                     - Make them answerable with the existing dataset.
                 4. For the second question, choose the entity with lowest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
                     - This question drill down to reveal the pattern within this entity.
-                    - The question must refer to **two** column from {key_columns}. 
+                    - The question must refer to **exactly two** column from {key_columns}. 
                     - Make them answerable with the existing dataset.
 
                 **Example**
@@ -1009,6 +1016,9 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 Rationale: 
                 The  white people group has the highest average math scores from the top N racial groups. The first question provide an overview of students of different gender on math scores performance in this group.
                 The  black people group has the lowest average math scores from the top N racial groups. The second question provide an overview of students of different gender on math scores performance in this group.
+                **Avoid**
+                Question: How do the math scores by gender for reading score in white people group?
+                Rationale: It contains over two columns: 'math scores','reading score', 'gender', and 'racial groups'.
 
                 **Output (exact JSON)**  
                 Do not INCLUDE ```json```.Do not add other sentences after this json data.
@@ -1040,8 +1050,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                                                 "new_df":new_df.to_string(index=False),
                                                                 "title":eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"],
                                                                 "key_columns":list(head),
-                                                                "use_column":eda_q_for_sec2_json["follow_up_questions"][0]["column"]
-                                                               
+                                                                "use_column":eda_q_for_sec2_json["follow_up_questions"][0]["column"]                                                              
                                                                 })
                 eda_q_for_sec3_json = json.loads(eda_q_for_sec3_result.content)
                 st.write("Follow-up Questions sec 3:",eda_q_for_sec3_json)
@@ -1567,6 +1576,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     json.dump(spec, f, indent=2)
                 spec["height"] =600
                 spec["width"] =800
+                if spec_id < 4:
+                    spec["encoding"]["x"]["sort"] = "-y"
                 try:
                     chart_3 = alt.Chart.from_dict(spec)
                     chart_3.save(f"DATA2Poster_chart/image{spec_id}.png")

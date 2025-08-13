@@ -1,68 +1,76 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Rating and Brand Distribution for Men's Fashion T-shirts",
+  "title": "Health Impacts by Gender for TV Users",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
   },
   "transform": [
     {
-      "filter": "(datum['Product Name'] == 'T-shirt') && (datum['Category'] == \"Men's Fashion\")"
+      "filter": "datum.Primary_Device == 'TV'"
     },
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Rating",
-          "as": "avg_rating"
-        },
-        {
-          "op": "count",
-          "as": "count"
+          "field": "Avg_Daily_Screen_hr",
+          "as": "avg_screen_time"
         }
       ],
       "groupby": [
-        "Brand"
+        "Health_Impacts",
+        "Gender"
       ]
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Brand",
+      "field": "Health_Impacts",
       "type": "nominal",
-      "title": "Brand",
-      "sort": "-y",
+      "title": "Health Impact",
       "axis": {
         "labelAngle": -30
       }
     },
+    "xOffset": {
+      "field": "Gender"
+    },
     "y": {
-      "field": "avg_rating",
+      "field": "avg_screen_time",
       "type": "quantitative",
-      "title": "Average Rating"
+      "title": "Avg Daily Screen Time (hrs)"
+    },
+    "color": {
+      "field": "Gender",
+      "type": "nominal",
+      "scale": {
+        "scheme": "tableau10"
+      },
+      "title": "Gender"
     },
     "tooltip": [
       {
-        "field": "Brand",
+        "field": "Health_Impacts",
         "type": "nominal",
-        "title": "Brand"
+        "title": "Health Impact"
       },
       {
-        "field": "avg_rating",
+        "field": "Gender",
+        "type": "nominal",
+        "title": "Gender"
+      },
+      {
+        "field": "avg_screen_time",
         "type": "quantitative",
-        "title": "Avg Rating",
+        "title": "Avg Daily Screen (hrs)",
         "format": ".2f"
-      },
-      {
-        "field": "count",
-        "type": "quantitative",
-        "title": "Count"
       }
     ]
   },
-  "width": 420,
+  "width": 400,
   "height": 400,
   "config": {
     "title": {

@@ -1,7 +1,7 @@
-Product Name,Category,product_cat_count,avg_rating,ProductRank
-Dress,Women's Fashion,74,3.048783783783784,2.0
-Jeans,Men's Fashion,74,3.1955405405405406,1.0
-Jeans,Women's Fashion,82,3.113658536585366,1.0
-Shoes,Men's Fashion,69,2.8171014492753623,2.0
-Shoes,Women's Fashion,72,2.8633333333333333,3.0
-T-shirt,Men's Fashion,68,2.7273529411764708,3.0
+Primary_Device,Gender,avg_screen_time,device_sum,device_rank
+Laptop,Female,4.2737346437346435,8.54895085995086,1.0
+Laptop,Male,4.275216216216216,8.54895085995086,1.0
+Smartphone,Female,3.976020816653323,8.105695739253942,2.0
+Smartphone,Male,4.1296749226006195,8.105695739253942,2.0
+TV,Female,3.9820329670329673,7.8865772029579,3.0
+TV,Male,3.904544235924933,7.8865772029579,3.0

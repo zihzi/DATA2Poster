@@ -1,117 +1,102 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Brands by Category",
+  "title": "Top Health Impacts by Gender",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "count",
-          "as": "brand_cat_count"
-        },
-        {
           "op": "mean",
-          "field": "Rating",
-          "as": "avg_rating"
+          "field": "Avg_Daily_Screen_hr",
+          "as": "avg_screen_time"
         }
       ],
       "groupby": [
-        "Brand",
-        "Category"
+        "Health_Impacts",
+        "Gender"
       ]
     },
     {
       "joinaggregate": [
         {
           "op": "sum",
-          "field": "brand_cat_count",
-          "as": "BrandTotal"
+          "field": "avg_screen_time",
+          "as": "health_impact_sum"
         }
       ],
       "groupby": [
-        "Brand"
+        "Health_Impacts"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "BrandRank"
+          "as": "impact_rank"
         }
       ],
       "sort": [
         {
-          "field": "BrandTotal",
+          "field": "health_impact_sum",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.BrandRank <= 3"
+      "filter": "datum.impact_rank <= 2"
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Brand",
+      "field": "Health_Impacts",
       "type": "nominal",
-      "title": "Brand",
-      "sort": "-y",
+      "title": "Health Impact",
       "axis": {
         "labelAngle": -30
       }
     },
     "xOffset": {
-      "field": "Category"
+      "field": "Gender"
     },
     "y": {
-      "field": "avg_rating",
+      "field": "avg_screen_time",
       "type": "quantitative",
-      "title": "Average Rating"
+      "title": "Avg Daily Screen Time (hrs)"
     },
     "color": {
-      "field": "Category",
+      "field": "Gender",
       "type": "nominal",
-      "title": "Category",
       "scale": {
         "scheme": "tableau10"
-      }
+      },
+      "title": "Gender"
     },
     "tooltip": [
       {
-        "field": "Brand",
+        "field": "Health_Impacts",
         "type": "nominal",
-        "title": "Brand"
+        "title": "Health Impact"
       },
       {
-        "field": "Category",
+        "field": "Gender",
         "type": "nominal",
-        "title": "Category"
+        "title": "Gender"
       },
       {
-        "field": "avg_rating",
+        "field": "avg_screen_time",
         "type": "quantitative",
-        "title": "Avg Rating",
+        "title": "Avg Daily Screen (hrs)",
         "format": ".2f"
-      },
-      {
-        "field": "brand_cat_count",
-        "type": "quantitative",
-        "title": "Item Count"
-      },
-      {
-        "field": "BrandTotal",
-        "type": "quantitative",
-        "title": "Brand Total",
-        "format": ","
       }
     ]
   },
-  "width": 420,
+  "width": 400,
   "height": 400,
   "config": {
     "title": {

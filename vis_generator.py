@@ -21,10 +21,9 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
     Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
     Rule 6: If you use "window" operation to rank data in the "transform" property, make sure **NO "groupby" property** exists after "window" operation in the "transform" property.
     Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 8: **Always add "sort":"-y" **only in the "x" property** of "encoding" property.
-    Rule 9: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 10: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
-    Rule 11: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure  no "aggregate: None" is used in the Vega-Lite specification.
+    Rule 10: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:

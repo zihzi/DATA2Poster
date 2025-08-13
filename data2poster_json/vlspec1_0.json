@@ -1,56 +1,56 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Ratings by Product Name",
+  "title": "Average Screen Time by Device Type",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/fashion_products.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Rating",
-          "as": "avg_rating"
+          "field": "Avg_Daily_Screen_hr",
+          "as": "avg_screen_time"
         }
       ],
       "groupby": [
-        "Product Name"
+        "Primary_Device"
       ]
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "cornerRadius": 2
   },
   "encoding": {
     "x": {
-      "field": "Product Name",
+      "field": "Primary_Device",
       "type": "nominal",
-      "title": "Product Name",
-      "sort": "-y",
+      "title": "Primary Device",
       "axis": {
         "labelAngle": -30
       }
     },
     "y": {
-      "field": "avg_rating",
+      "field": "avg_screen_time",
       "type": "quantitative",
-      "title": "Average Rating"
+      "title": "Avg Daily Screen Time (hrs)"
     },
     "tooltip": [
       {
-        "field": "Product Name",
+        "field": "Primary_Device",
         "type": "nominal",
-        "title": "Product Name"
+        "title": "Device"
       },
       {
-        "field": "avg_rating",
+        "field": "avg_screen_time",
         "type": "quantitative",
-        "title": "Avg Rating",
+        "title": "Avg Daily Screen (hrs)",
         "format": ".2f"
       }
     ]
   },
-  "width": 420,
+  "width": 400,
   "height": 400,
   "config": {
     "title": {
