@@ -45,12 +45,9 @@ if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
     # datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
-    datasets["crime_safety"] = pd.read_csv("data/crime_safety.csv")
+    # datasets["crime_safety"] = pd.read_csv("data/crime_safety.csv")
     datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
-    datasets["Indian_Kids_Screen_Time_3"] = pd.read_csv("data/Indian_Kids_Screen_Time_3.csv")
     datasets["flower_1"] = pd.read_csv("data/flower_1.csv")
-    datasets["flower_2"] = pd.read_csv("data/flower_2.csv")
-    datasets["used_car_price"] = pd.read_csv("data/used_car_price.csv")
     # datasets["volcano"] = pd.read_csv("data/volcano.csv")
 
 
@@ -990,7 +987,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             input_variables = {"trans_json"})
         data_transform_chain = data_transform_prompt | llm
         data_transform_result = data_transform_chain.invoke(input={"trans_json":json.dumps(trans_json)})
-        trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
+        trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data_top/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
         exec(trans_code)
         new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
         st.write("Transformed DataFrame:",new_df)
@@ -1007,24 +1004,26 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         **Your Task**
         Generate **two** distinct follow-up questions that logically extend the current EDA:
-        1. Read the data carefully. Understand the significant value of the data.
-            - Identify high and low statistic.
-        2. Only focus the top N entities in the title.
-        3. For the first question, choose the entity with highest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
+        1. Read the data carefully. Focus on the column names that related to "rank".
+            - Identify the entities which rank is 1.
+            - Identify the entities which rank is 3.
+        2. The two entities **must** be different.
+        3. For the first question, choose the entity which rank is 1 and write one specific follow-up questions (≤25 words each) that:
             - This question drill down to reveal the pattern within this entity.
-            - The question must refer to these three column **ONLY**: {column_2}, {offset_column}, {num_column}. 
+            - The question must refer to **all of these** three column **ONLY**: {column_2}, {offset_column}, {num_column}. 
             - Make them answerable with the existing dataset.
-        4. For the second question, choose the entity with lowest statistic from the top N and write one specific follow-up questions (≤25 words each) that:
+        4. For the second question, choose the entity which rank is 3 and write one specific follow-up questions (≤25 words each) that:
             - This question drill down to reveal the pattern within this entity.
-            - The question must refer to these three column **ONLY**: {column_2}, {offset_column}, {num_column}. 
+            - The question must refer to **all of these** three column **ONLY**: {column_2}, {offset_column}, {num_column}. 
             - Make them answerable with the existing dataset.
 
         **Example**
         Dataset columns: [gender, class, racial groups, math score,reading score, writing score]
         Follow-up questions:
-        Question 1. How do the math scores class distribution by gender in white people group?
-        Question 2. How do the math scores class distribution by gender in black people group?
-        Rationale: 
+        Question 1. How do the 'math scores' distribution by 'gender' and 'class' in white people group?
+        Question 2. How do the 'math scores' distribution by 'gender' and 'class' in black people group?
+        Rationale:
+        The questions use 3 columns: 'math scores', 'gender', and 'class'.
         The  white people group has the highest average math scores from the top N racial groups. The first question provide an overview of class of different gender on math scores performance in this group.
         The  black people group has the lowest average math scores from the top N racial groups. The second question provide an overview of class of different gender on math scores performance in this group.
 
@@ -1585,7 +1584,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 json.dump(spec, f, indent=2)
             spec["height"] =600
             spec["width"] =800
-            if spec_id < 4:
+            if spec_id ==0 or spec_id == 2:
                 spec["encoding"]["x"]["sort"] = "-y"
             try:
                 chart_3 = alt.Chart.from_dict(spec)

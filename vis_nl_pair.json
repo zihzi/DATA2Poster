@@ -1724,5 +1724,389 @@
             "width": 420,
             "height": 420
         }
+    },
+    "19": {
+        "nl": "Top 3 Fuel Types Price by Transmission",
+        "spec": {
+            "schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Fuel Types Price by Transmission",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/used_car_price.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "price",
+                            "as": "avg_price"
+                        }
+                    ],
+                    "groupby": [
+                        "fuel_type",
+                        "transmission"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "avg_price",
+                            "as": "fuel_tot"
+                        }
+                    ],
+                    "groupby": [
+                        "fuel_type"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "fuel_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "avg_price",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.fuel_rank <= 6"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "fuel_type",
+                    "type": "nominal",
+                    "title": "Fuel Type",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": null,
+                    "scale": {
+                        "domain": [
+                            "Petrol",
+                            "Diesel",
+                            "CNG"
+                        ]
+                    }
+                },
+                "xOffset": {
+                    "field": "transmission"
+                },
+                "y": {
+                    "field": "avg_price",
+                    "type": "quantitative",
+                    "title": "Average Price (Lakhs)"
+                },
+                "color": {
+                    "field": "transmission",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "tableau10"
+                    },
+                    "title": "Transmission"
+                },
+                "tooltip": [
+                    {
+                        "field": "fuel_type",
+                        "type": "nominal",
+                        "title": "Fuel Type"
+                    },
+                    {
+                        "field": "transmission",
+                        "type": "nominal",
+                        "title": "Transmission"
+                    },
+                    {
+                        "field": "avg_price",
+                        "type": "quantitative",
+                        "title": "Average Price",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                }
+            }
+        }
+    },
+    "20": {
+        "nl": "Top 3 Fuel Type & Transmission Prices",
+        "spec": {
+            "schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Fuel Types Price by Transmission",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/used_car_price.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "price",
+                            "as": "avg_price"
+                        }
+                    ],
+                    "groupby": [
+                        "fuel_type",
+                        "transmission"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "avg_price",
+                            "as": "fuel_tot"
+                        }
+                    ],
+                    "groupby": [
+                        "fuel_type"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "fuel_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "avg_price",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.fuel_rank <= 6"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "fuel_type",
+                    "type": "nominal",
+                    "title": "Fuel Type",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": null,
+                    "scale": {
+                        "domain": [
+                            "Petrol",
+                            "Diesel",
+                            "CNG"
+                        ]
+                    }
+                },
+                "xOffset": {
+                    "field": "transmission"
+                },
+                "y": {
+                    "field": "avg_price",
+                    "type": "quantitative",
+                    "title": "Average Price (Lakhs)"
+                },
+                "color": {
+                    "field": "transmission",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "tableau10"
+                    },
+                    "title": "Transmission"
+                },
+                "tooltip": [
+                    {
+                        "field": "fuel_type",
+                        "type": "nominal",
+                        "title": "Fuel Type"
+                    },
+                    {
+                        "field": "transmission",
+                        "type": "nominal",
+                        "title": "Transmission"
+                    },
+                    {
+                        "field": "avg_price",
+                        "type": "quantitative",
+                        "title": "Average Price",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                }
+            }
+        }
+    },
+    "21": {
+        "nl": "Top 3 Colors GrowthScore by Sunlight",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Colors GrowthScore by Sunlight",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/flower_1.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "GrowthScore",
+                            "as": "avg_GrowthScore"
+                        }
+                    ],
+                    "groupby": [
+                        "Color",
+                        "Sunlight"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "mean",
+                            "field": "avg_GrowthScore",
+                            "as": "ColorMean"
+                        }
+                    ],
+                    "groupby": [
+                        "Color"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "ColorRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "ColorMean",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.ColorRank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Color",
+                    "type": "nominal",
+                    "title": "Color",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": [
+                        "Green",
+                        "Yellow",
+                        "Red"
+                    ]
+                },
+                "xOffset": {
+                    "field": "Sunlight"
+                },
+                "y": {
+                    "field": "avg_GrowthScore",
+                    "type": "quantitative",
+                    "title": "Average GrowthScore"
+                },
+                "color": {
+                    "field": "Sunlight",
+                    "type": "nominal",
+                    "title": "Sunlight",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Color",
+                        "type": "nominal",
+                        "title": "Color"
+                    },
+                    {
+                        "field": "Sunlight",
+                        "type": "nominal",
+                        "title": "Sunlight"
+                    },
+                    {
+                        "field": "avg_GrowthScore",
+                        "type": "quantitative",
+                        "title": "Average GrowthScore",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                }
+            }
+        }
     }
 }

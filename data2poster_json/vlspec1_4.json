@@ -1,76 +1,65 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Health Impacts and Screen Time for Laptop Users by Limit Status",
+  "title": "GrowthScore Distribution by Color and Sunlight for Basil",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
-      "filter": "datum.Primary_Device == 'Laptop'"
-    },
-    {
-      "aggregate": [
-        {
-          "op": "mean",
-          "field": "Avg_Daily_Screen_hr",
-          "as": "avg_screen_time"
-        }
-      ],
-      "groupby": [
-        "Health_Impacts",
-        "Exceeded_Recommended_Limit"
-      ]
+      "filter": "datum.Species == 'Basil'"
     }
   ],
   "mark": {
-    "type": "bar",
-    "cornerRadius": 2
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Health_Impacts",
+      "field": "Color",
       "type": "nominal",
-      "title": "Health Impact",
+      "title": "Color",
       "axis": {
-        "labelAngle": -30
+        "labelAngle": -30,
+        "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Exceeded_Recommended_Limit"
+      "field": "Sunlight"
     },
     "y": {
-      "field": "avg_screen_time",
+      "aggregate": "mean",
+      "field": "GrowthScore",
       "type": "quantitative",
-      "title": "Avg Daily Screen Time (hrs)"
+      "title": "Average GrowthScore"
     },
     "color": {
-      "field": "Exceeded_Recommended_Limit",
+      "field": "Sunlight",
       "type": "nominal",
+      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
-      },
-      "title": "Exceeded Limit"
+      }
     },
     "tooltip": [
       {
-        "field": "Health_Impacts",
+        "field": "Color",
         "type": "nominal",
-        "title": "Health Impact"
+        "title": "Color"
       },
       {
-        "field": "Exceeded_Recommended_Limit",
+        "field": "Sunlight",
         "type": "nominal",
-        "title": "Exceeded Limit"
+        "title": "Sunlight"
       },
       {
-        "field": "avg_screen_time",
+        "aggregate": "mean",
+        "field": "GrowthScore",
         "type": "quantitative",
-        "title": "Avg Daily Screen (hrs)",
+        "title": "Average GrowthScore",
         "format": ".2f"
       }
     ]
   },
-  "width": 400,
+  "width": 420,
   "height": 400,
   "config": {
     "title": {

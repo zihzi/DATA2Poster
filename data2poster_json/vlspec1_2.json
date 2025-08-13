@@ -1,57 +1,57 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Avg Daily Screen Hours by Health Impact",
+  "title": "GrowthScore by Color",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Avg_Daily_Screen_hr",
-          "as": "avg_screen_time"
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
         }
       ],
       "groupby": [
-        "Health_Impacts"
+        "Color"
       ]
     }
   ],
   "mark": {
     "type": "bar",
-    "cornerRadius": 2
+    "color": "#4C78A8"
   },
   "encoding": {
     "x": {
-      "field": "Health_Impacts",
+      "field": "Color",
       "type": "nominal",
-      "title": "Health Impact",
+      "title": "Color",
       "axis": {
-        "labelAngle": -30
-      },
-      "sort": "-y"
+        "labelAngle": -30,
+        "tickCount": 6
+      }
     },
     "y": {
-      "field": "avg_screen_time",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
-      "title": "Avg Daily Screen Time (hrs)"
+      "title": "Average GrowthScore"
     },
     "tooltip": [
       {
-        "field": "Health_Impacts",
+        "field": "Color",
         "type": "nominal",
-        "title": "Health Impact"
+        "title": "Color"
       },
       {
-        "field": "avg_screen_time",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
-        "title": "Avg Daily Screen (hrs)",
+        "title": "Average GrowthScore",
         "format": ".2f"
       }
     ]
   },
-  "width": 400,
+  "width": 420,
   "height": 400,
   "config": {
     "title": {
