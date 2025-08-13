@@ -1,104 +1,104 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top Devices by Gender Screen Time",
+  "title": "GrowthScore of Bottom 3 Species by Sunlight",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Avg_Daily_Screen_hr",
-          "as": "avg_screen_time"
+          "field": "GrowthScore",
+          "as": "mean_growthscore"
         }
       ],
       "groupby": [
-        "Primary_Device",
-        "Gender"
-      ]
-    },
-    {
-      "joinaggregate": [
-        {
-          "op": "sum",
-          "field": "avg_screen_time",
-          "as": "device_sum"
-        }
-      ],
-      "groupby": [
-        "Primary_Device"
+        "Species"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "device_rank"
+          "as": "SpeciesRank"
         }
       ],
       "sort": [
         {
-          "field": "device_sum",
-          "order": "descending"
+          "field": "mean_growthscore",
+          "order": "ascending"
         }
       ]
     },
     {
-      "filter": "datum.device_rank <= 3"
+      "filter": "datum.SpeciesRank <= 3"
+    },
+    {
+      "lookup": "Species",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+        },
+        "key": "Species",
+        "fields": [
+          "Sunlight",
+          "GrowthScore"
+        ]
+      }
     }
   ],
   "mark": {
-    "type": "bar",
-    "cornerRadius": 2
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Primary_Device",
+      "field": "Species",
       "type": "nominal",
-      "title": "Primary Device",
-      "axis": {
-        "labelAngle": -30
-      },
-      "sort": "descending"
+      "title": "Species",
+      "sort": {
+        "order": "descending"
+      }
     },
     "xOffset": {
-      "field": "Gender"
+      "field": "Sunlight"
     },
     "y": {
-      "field": "avg_screen_time",
+      "aggregate": "mean",
+      "field": "GrowthScore",
       "type": "quantitative",
-      "title": "Avg Daily Screen Time (hrs)",
+      "title": "Mean GrowthScore",
       "sort": "descending"
     },
     "color": {
-      "field": "Gender",
+      "field": "Sunlight",
       "type": "nominal",
+      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
-      },
-      "title": "Gender"
+      }
     },
     "tooltip": [
       {
-        "field": "Primary_Device",
+        "field": "Species",
         "type": "nominal",
-        "title": "Device"
+        "title": "Species"
       },
       {
-        "field": "Gender",
+        "field": "Sunlight",
         "type": "nominal",
-        "title": "Gender"
+        "title": "Sunlight"
       },
       {
-        "field": "avg_screen_time",
+        "field": "GrowthScore",
         "type": "quantitative",
-        "title": "Avg Daily Screen (hrs)",
+        "aggregate": "mean",
+        "title": "Mean GrowthScore",
         "format": ".2f"
       }
     ]
   },
-  "width": 400,
+  "width": 420,
   "height": 400,
   "config": {
     "title": {

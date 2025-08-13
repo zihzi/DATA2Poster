@@ -1,12 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Health Impacts by Gender for TV Users",
+  "title": "Health Impacts and Screen Time for Tablet Users by Limit Status",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
   },
   "transform": [
     {
-      "filter": "datum.Primary_Device == 'TV'"
+      "filter": "datum.Primary_Device == 'Tablet'"
     },
     {
       "aggregate": [
@@ -18,7 +18,7 @@
       ],
       "groupby": [
         "Health_Impacts",
-        "Gender"
+        "Exceeded_Recommended_Limit"
       ]
     }
   ],
@@ -36,7 +36,7 @@
       }
     },
     "xOffset": {
-      "field": "Gender"
+      "field": "Exceeded_Recommended_Limit"
     },
     "y": {
       "field": "avg_screen_time",
@@ -44,12 +44,12 @@
       "title": "Avg Daily Screen Time (hrs)"
     },
     "color": {
-      "field": "Gender",
+      "field": "Exceeded_Recommended_Limit",
       "type": "nominal",
       "scale": {
         "scheme": "tableau10"
       },
-      "title": "Gender"
+      "title": "Exceeded Limit"
     },
     "tooltip": [
       {
@@ -58,9 +58,9 @@
         "title": "Health Impact"
       },
       {
-        "field": "Gender",
+        "field": "Exceeded_Recommended_Limit",
         "type": "nominal",
-        "title": "Gender"
+        "title": "Exceeded Limit"
       },
       {
         "field": "avg_screen_time",

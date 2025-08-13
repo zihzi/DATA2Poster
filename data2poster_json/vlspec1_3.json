@@ -1,10 +1,13 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top Health Impacts by Gender",
+  "title": "Top 3 Health Impacts for Exceeded Limit",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
   },
   "transform": [
+    {
+      "filter": "datum.Exceeded_Recommended_Limit == 'Yes'"
+    },
     {
       "aggregate": [
         {
@@ -15,7 +18,7 @@
       ],
       "groupby": [
         "Health_Impacts",
-        "Gender"
+        "Exceeded_Recommended_Limit"
       ]
     },
     {
@@ -23,7 +26,7 @@
         {
           "op": "sum",
           "field": "avg_screen_time",
-          "as": "health_impact_sum"
+          "as": "impact_sum"
         }
       ],
       "groupby": [
@@ -39,13 +42,13 @@
       ],
       "sort": [
         {
-          "field": "health_impact_sum",
+          "field": "impact_sum",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.impact_rank <= 2"
+      "filter": "datum.impact_rank <= 3"
     }
   ],
   "mark": {
@@ -62,7 +65,7 @@
       }
     },
     "xOffset": {
-      "field": "Gender"
+      "field": "Exceeded_Recommended_Limit"
     },
     "y": {
       "field": "avg_screen_time",
@@ -70,12 +73,12 @@
       "title": "Avg Daily Screen Time (hrs)"
     },
     "color": {
-      "field": "Gender",
+      "field": "Exceeded_Recommended_Limit",
       "type": "nominal",
       "scale": {
         "scheme": "tableau10"
       },
-      "title": "Gender"
+      "title": "Exceeded Limit"
     },
     "tooltip": [
       {
@@ -84,9 +87,9 @@
         "title": "Health Impact"
       },
       {
-        "field": "Gender",
+        "field": "Exceeded_Recommended_Limit",
         "type": "nominal",
-        "title": "Gender"
+        "title": "Exceeded Limit"
       },
       {
         "field": "avg_screen_time",

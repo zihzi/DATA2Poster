@@ -1,8 +1,8 @@
 import pandas as pd
 
-df = pd.read_csv('data/adidas_sale.csv')
-df['Total Sales'] = df['Total Sales'].replace('[\$,]', '', regex=True).astype(int)
-df.to_csv('data/adidas_sale.csv', index=False)
+df = pd.read_csv('data/police_killings.csv')
+df['avg_povertyrate'] = df['avg_povertyrate'].astype(float)
+df.to_csv('data/police_killings.csv', index=False)
 # def trans_data(df):
 
 

@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Devices by Gender Screen Time",
+  "title": "Top 3 Devices Screen Hours by Limit",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
   },
   "transform": [
     {
@@ -15,7 +15,7 @@
       ],
       "groupby": [
         "Primary_Device",
-        "Gender"
+        "Exceeded_Recommended_Limit"
       ]
     },
     {
@@ -62,7 +62,7 @@
       }
     },
     "xOffset": {
-      "field": "Gender"
+      "field": "Exceeded_Recommended_Limit"
     },
     "y": {
       "field": "avg_screen_time",
@@ -70,12 +70,12 @@
       "title": "Avg Daily Screen Time (hrs)"
     },
     "color": {
-      "field": "Gender",
+      "field": "Exceeded_Recommended_Limit",
       "type": "nominal",
       "scale": {
         "scheme": "tableau10"
       },
-      "title": "Gender"
+      "title": "Exceeded Limit"
     },
     "tooltip": [
       {
@@ -84,9 +84,9 @@
         "title": "Device"
       },
       {
-        "field": "Gender",
+        "field": "Exceeded_Recommended_Limit",
         "type": "nominal",
-        "title": "Gender"
+        "title": "Exceeded Limit"
       },
       {
         "field": "avg_screen_time",

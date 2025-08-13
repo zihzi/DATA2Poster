@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Screen Time by Health Impacts",
+  "title": "Avg Daily Screen Hours by Health Impact",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Indian_Kids_Screen_Time_2.csv"
   },
   "transform": [
     {
@@ -26,10 +26,11 @@
     "x": {
       "field": "Health_Impacts",
       "type": "nominal",
-      "title": "Health Impacts",
+      "title": "Health Impact",
       "axis": {
         "labelAngle": -30
-      }
+      },
+      "sort": "-y"
     },
     "y": {
       "field": "avg_screen_time",
