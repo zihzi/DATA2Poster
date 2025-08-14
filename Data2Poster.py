@@ -48,7 +48,13 @@ if "datasets" not in st.session_state:
     # datasets["crime_safety"] = pd.read_csv("data/crime_safety.csv")
     datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
     datasets["flower_1"] = pd.read_csv("data/flower_1.csv")
-    # datasets["volcano"] = pd.read_csv("data/volcano.csv")
+    datasets["Flight_Price"] = pd.read_csv("data/Flight_Price.csv")
+    datasets["Coffee_Chain_1"] = pd.read_csv("data/Coffee_Chain_1.csv")
+    datasets["Coffee_Chain_2"] = pd.read_csv("data/Coffee_Chain_2.csv")
+    datasets["Coffee_Chain_3"] = pd.read_csv("data/Coffee_Chain_3.csv")
+    datasets["Coffee_Rating_1"] = pd.read_csv("data/Coffee_Rating_1.csv")
+    datasets["Coffee_Rating_2"] = pd.read_csv("data/Coffee_Rating_2.csv")
+
 
 
 
@@ -987,7 +993,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             input_variables = {"trans_json"})
         data_transform_chain = data_transform_prompt | llm
         data_transform_result = data_transform_chain.invoke(input={"trans_json":json.dumps(trans_json)})
-        trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data_top/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
+        trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result.content+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
         exec(trans_code)
         new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
         st.write("Transformed DataFrame:",new_df)

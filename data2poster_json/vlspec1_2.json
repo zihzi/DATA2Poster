@@ -1,52 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GrowthScore by Color",
+  "title": "Average Price by Source City",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "field": "price",
+          "as": "avg_price"
         }
       ],
       "groupby": [
-        "Color"
+        "source_city"
       ]
     }
   ],
   "mark": {
-    "type": "bar",
-    "color": "#4F81BD"
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Color",
+      "field": "source_city",
       "type": "nominal",
-      "title": "Color",
+      "title": "Source City",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "avg_price",
       "type": "quantitative",
-      "title": "Average GrowthScore"
+      "title": "Average Price"
     },
     "tooltip": [
       {
-        "field": "Color",
+        "field": "source_city",
         "type": "nominal",
-        "title": "Color"
+        "title": "Source City"
       },
       {
-        "field": "avg_GrowthScore",
+        "field": "avg_price",
         "type": "quantitative",
-        "title": "Average GrowthScore",
+        "title": "Average Price",
         "format": ".2f"
       }
     ]

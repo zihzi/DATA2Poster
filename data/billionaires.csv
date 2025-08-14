@@ -1,0 +1,1482 @@
+region,industry,gender,worth in billions
+North America,Technology-Computer,male,76.0
+North America,Technology-Computer,male,48.0
+North America,Technology-Computer,male,32.3
+North America,Technology-Computer,male,31.8
+North America,Technology-Computer,male,28.5
+North America,Technology-Computer,male,19.3
+East Asia,Technology-Computer,male,18.4
+North America,Technology-Computer,male,17.5
+North America,Technology-Computer,male,15.9
+South Asia,Technology-Computer,male,15.3
+North America,Technology-Computer,female,14.0
+East Asia,Technology-Computer,male,13.4
+East Asia,Technology-Computer,male,12.1
+East Asia,Technology-Computer,male,11.1
+South Asia,Technology-Computer,male,11.1
+East Asia,Technology-Computer,male,10.0
+North America,Technology-Computer,male,9.3
+Europe,Technology-Computer,male,8.8
+North America,Technology-Computer,male,8.2
+Europe,Technology-Computer,male,8.2
+North America,Technology-Computer,male,7.7
+North America,Technology-Computer,male,7.5
+Europe,Technology-Computer,male,7.5
+Europe,Technology-Computer,male,7.0
+North America,Technology-Computer,male,6.8
+North America,Technology-Computer,male,6.8
+East Asia,Technology-Computer,male,6.6
+East Asia,Technology-Computer,male,5.4
+North America,Technology-Computer,male,5.0
+East Asia,Technology-Computer,male,4.8
+North America,Technology-Computer,male,4.5
+East Asia,Technology-Computer,male,4.5
+North America,Technology-Computer,male,4.5
+Europe,Technology-Computer,male,4.2
+East Asia,Technology-Computer,male,4.2
+East Asia,Technology-Computer,male,4.1
+Latin America,Technology-Computer,male,4.1
+Europe,Technology-Computer,male,3.8
+North America,Technology-Computer,male,3.8
+East Asia,Technology-Computer,male,3.7
+North America,Technology-Computer,male,3.7
+North America,Technology-Computer,male,3.7
+North America,Technology-Computer,male,3.6
+North America,Technology-Computer,male,3.5
+North America,Technology-Computer,male,3.5
+East Asia,Technology-Computer,male,3.3
+North America,Technology-Computer,male,3.3
+East Asia,Technology-Computer,male,3.1
+North America,Technology-Computer,male,3.0
+North America,Technology-Computer,male,2.9
+North America,Technology-Computer,female,2.7
+Europe,Technology-Computer,female,2.7
+East Asia,Technology-Computer,male,2.7
+North America,Technology-Computer,male,2.7
+East Asia,Technology-Computer,male,2.6
+East Asia,Technology-Computer,male,2.6
+North America,Technology-Computer,male,2.6
+North America,Technology-Computer,male,2.5
+North America,Technology-Computer,male,2.5
+North America,Technology-Computer,male,2.5
+East Asia,Technology-Computer,male,2.3
+North America,Technology-Computer,male,2.2
+Europe,Technology-Computer,male,2.2
+East Asia,Technology-Computer,male,2.2
+North America,Technology-Computer,male,2.2
+North America,Technology-Computer,male,2.2
+North America,Technology-Computer,male,2.1
+East Asia,Technology-Computer,male,2.1
+East Asia,Technology-Computer,male,2.0
+North America,Technology-Computer,male,2.0
+North America,Technology-Computer,female,2.0
+North America,Technology-Computer,male,2.0
+North America,Technology-Computer,male,2.0
+North America,Technology-Computer,male,1.9
+East Asia,Technology-Computer,male,1.9
+Europe,Technology-Computer,male,1.9
+East Asia,Technology-Computer,male,1.9
+North America,Technology-Computer,male,1.8
+Middle East,Technology-Computer,male,1.8
+North America,Technology-Computer,male,1.8
+North America,Technology-Computer,male,1.8
+Europe,Technology-Computer,male,1.8
+Europe,Technology-Computer,male,1.7
+East Asia,Technology-Computer,male,1.7
+East Asia,Technology-Computer,male,1.7
+East Asia,Technology-Computer,male,1.7
+South Asia,Technology-Computer,male,1.7
+Europe,Technology-Computer,female,1.6
+North America,Technology-Computer,male,1.6
+North America,Technology-Computer,male,1.6
+East Asia,Technology-Computer,male,1.6
+South Asia,Technology-Computer,male,1.6
+East Asia,Technology-Computer,male,1.6
+East Asia,Technology-Computer,male,1.5
+East Asia,Technology-Computer,male,1.5
+South Asia,Technology-Computer,male,1.5
+East Asia,Technology-Computer,female,1.4
+North America,Technology-Computer,male,1.4
+Middle East,Technology-Computer,male,1.4
+South Asia,Technology-Computer,male,1.4
+North America,Technology-Computer,male,1.4
+East Asia,Technology-Computer,male,1.3
+North America,Technology-Computer,male,1.3
+East Asia,Technology-Computer,male,1.3
+North America,Technology-Computer,male,1.3
+North America,Technology-Computer,male,1.3
+East Asia,Technology-Computer,female,1.3
+North America,Technology-Computer,male,1.3
+Middle East,Technology-Computer,male,1.3
+East Asia,Technology-Computer,male,1.3
+East Asia,Technology-Computer,male,1.3
+East Asia,Technology-Computer,male,1.3
+North America,Technology-Computer,male,1.2
+North America,Technology-Computer,male,1.2
+East Asia,Technology-Computer,male,1.2
+North America,Technology-Computer,male,1.2
+East Asia,Technology-Computer,male,1.2
+East Asia,Technology-Computer,female,1.2
+East Asia,Technology-Computer,male,1.2
+East Asia,Technology-Computer,male,1.1
+East Asia,Technology-Computer,male,1.1
+North America,Technology-Computer,male,1.1
+South Asia,Technology-Computer,male,1.1
+North America,Technology-Computer,female,1.1
+East Asia,Technology-Computer,female,1.1
+East Asia,Technology-Computer,male,1.1
+East Asia,Technology-Computer,male,1.1
+Europe,Technology-Computer,male,1.0
+North America,Technology-Computer,male,1.0
+Europe,Technology-Computer,male,1.0
+Middle East,Technology-Computer,male,1.0
+Latin America,Media,male,72.0
+North America,Media,male,33.0
+North America,Media,male,22.6
+North America,Media,female,15.5
+North America,Media,male,15.0
+North America,Media,male,13.5
+East Asia,Media,male,11.3
+North America,Media,male,9.3
+Latin America,Media,male,9.1
+Latin America,Media,male,9.1
+Latin America,Media,male,9.1
+Europe,Media,male,9.0
+Europe,Media,male,9.0
+North America,Media,male,8.5
+North America,Media,female,7.7
+Europe,Media,male,7.7
+North America,Media,male,7.7
+North America,Media,male,7.5
+Europe,Media,male,6.3
+North America,Media,male,6.2
+North America,Media,male,6.1
+Europe,Media,male,6.0
+North America,Media,male,5.7
+South Asia,Media,male,5.7
+Europe,Media,male,5.0
+North America,Media,male,4.9
+Middle East,Media,male,4.7
+Sub-Saharan Africa,Media,male,4.6
+Europe,Media,female,4.2
+Europe,Media,female,4.2
+Europe,Media,male,4.0
+Latin America,Media,male,4.0
+North America,Media,male,3.9
+North America,Media,male,3.7
+Europe,Media,male,3.6
+Europe,Media,female,3.5
+Europe,Media,male,3.5
+North America,Media,male,3.4
+North America,Media,male,3.4
+North America,Media,male,3.1
+Middle East,Media,male,3.1
+Middle East,Media,male,3.1
+North America,Media,male,3.0
+North America,Media,female,2.9
+East Asia,Media,male,2.8
+Middle East,Media,male,2.8
+North America,Media,male,2.6
+Latin America,Media,male,2.6
+North America,Media,male,2.6
+East Asia,Media,male,2.6
+Europe,Media,male,2.5
+Europe,Media,male,2.5
+North America,Media,male,2.4
+Europe,Media,male,2.4
+South Asia,Media,female,2.3
+East Asia,Media,male,2.3
+North America,Media,male,2.3
+East Asia,Media,male,2.3
+Europe,Media,male,2.2
+South Asia,Media,male,2.2
+North America,Media,male,2.2
+East Asia,Media,male,1.9
+Europe,Media,male,1.9
+East Asia,Media,male,1.9
+South Asia,Media,male,1.9
+North America,Media,male,1.8
+Europe,Media,female,1.8
+North America,Media,male,1.8
+North America,Media,male,1.8
+North America,Media,male,1.8
+North America,Media,male,1.7
+Europe,Media,male,1.7
+North America,Media,male,1.7
+North America,Media,male,1.7
+East Asia,Media,male,1.6
+Middle East,Media,male,1.5
+North America,Media,male,1.4
+North America,Media,male,1.4
+Europe,Media,male,1.4
+North America,Media,male,1.4
+East Asia,Media,male,1.4
+North America,Media,male,1.4
+East Asia,Media,female,1.4
+Europe,Media,male,1.4
+North America,Media,male,1.3
+North America,Media,male,1.3
+Sub-Saharan Africa,Media,male,1.3
+East Asia,Media,male,1.3
+North America,Media,male,1.3
+North America,Media,male,1.2
+East Asia,Media,male,1.2
+Europe,Media,male,1.2
+Middle East,Media,male,1.1
+Latin America,Media,male,1.1
+Europe,Media,male,1.1
+North America,Media,male,1.1
+Latin America,Media,male,1.1
+Latin America,Media,female,1.1
+Latin America,Media,male,1.1
+Europe,Media,female,1.0
+Middle East,Media,male,1.0
+Sub-Saharan Africa,Media,male,1.0
+North America,Media,male,1.0
+Europe,Media,male,1.0
+Europe,"Retail, Restaurant",male,64.0
+North America,"Retail, Restaurant",female,36.7
+North America,"Retail, Restaurant",male,34.7
+North America,"Retail, Restaurant",female,34.3
+North America,"Retail, Restaurant",male,34.2
+North America,"Retail, Restaurant",male,32.0
+Europe,"Retail, Restaurant",male,25.0
+Europe,"Retail, Restaurant",male,21.1
+Europe,"Retail, Restaurant",male,19.3
+Europe,"Retail, Restaurant",male,18.4
+East Asia,"Retail, Restaurant",male,17.9
+Europe,"Retail, Restaurant",male,15.5
+North America,"Retail, Restaurant",male,12.8
+Europe,"Retail, Restaurant",male,10.4
+Europe,"Retail, Restaurant",male,10.3
+North America,"Retail, Restaurant",male,10.1
+East Asia,"Retail, Restaurant",male,9.3
+North America,"Retail, Restaurant",male,8.5
+North America,"Retail, Restaurant",male,8.5
+Latin America,"Retail, Restaurant",male,8.3
+North America,"Retail, Restaurant",male,7.5
+Europe,"Retail, Restaurant",male,7.2
+North America,"Retail, Restaurant",male,6.5
+North America,"Retail, Restaurant",male,6.2
+Europe,"Retail, Restaurant",male,5.5
+Europe,"Retail, Restaurant",male,5.3
+Europe,"Retail, Restaurant",male,5.2
+North America,"Retail, Restaurant",male,5.0
+South Asia,"Retail, Restaurant",male,5.0
+Europe,"Retail, Restaurant",male,5.0
+Europe,"Retail, Restaurant",male,4.9
+East Asia,"Retail, Restaurant",male,4.9
+North America,"Retail, Restaurant",female,4.8
+Europe,"Retail, Restaurant",male,4.8
+Europe,"Retail, Restaurant",male,4.8
+Latin America,"Retail, Restaurant",male,4.7
+Middle East,"Retail, Restaurant",female,4.7
+Europe,"Retail, Restaurant",male,4.6
+Latin America,"Retail, Restaurant",male,4.2
+Europe,"Retail, Restaurant",male,4.1
+North America,"Retail, Restaurant",female,4.1
+Europe,"Retail, Restaurant",male,4.0
+North America,"Retail, Restaurant",male,4.0
+Europe,"Retail, Restaurant",male,4.0
+East Asia,"Retail, Restaurant",male,4.0
+Europe,"Retail, Restaurant",male,3.9
+North America,"Retail, Restaurant",female,3.9
+North America,"Retail, Restaurant",male,3.8
+Europe,"Retail, Restaurant",male,3.8
+Europe,"Retail, Restaurant",male,3.7
+Sub-Saharan Africa,"Retail, Restaurant",male,3.7
+East Asia,"Retail, Restaurant",male,3.7
+North America,"Retail, Restaurant",male,3.6
+North America,"Retail, Restaurant",male,3.6
+North America,"Retail, Restaurant",male,3.5
+East Asia,"Retail, Restaurant",male,3.5
+East Asia,"Retail, Restaurant",male,3.4
+North America,"Retail, Restaurant",female,3.4
+North America,"Retail, Restaurant",male,3.3
+Sub-Saharan Africa,"Retail, Restaurant",male,3.2
+North America,"Retail, Restaurant",male,3.2
+Europe,"Retail, Restaurant",female,3.2
+North America,"Retail, Restaurant",male,3.1
+Europe,"Retail, Restaurant",male,3.1
+North America,"Retail, Restaurant",male,3.0
+North America,"Retail, Restaurant",male,3.0
+North America,"Retail, Restaurant",male,3.0
+East Asia,"Retail, Restaurant",male,3.0
+East Asia,"Retail, Restaurant",male,2.9
+Latin America,"Retail, Restaurant",male,2.8
+Europe,"Retail, Restaurant",male,2.8
+Europe,"Retail, Restaurant",male,2.8
+East Asia,"Retail, Restaurant",male,2.8
+Europe,"Retail, Restaurant",male,2.8
+Europe,"Retail, Restaurant",male,2.8
+Europe,"Retail, Restaurant",male,2.7
+North America,"Retail, Restaurant",male,2.7
+East Asia,"Retail, Restaurant",male,2.7
+North America,"Retail, Restaurant",male,2.7
+Europe,"Retail, Restaurant",female,2.6
+Latin America,"Retail, Restaurant",female,2.6
+Europe,"Retail, Restaurant",male,2.6
+Middle East,"Retail, Restaurant",male,2.5
+Europe,"Retail, Restaurant",male,2.5
+Europe,"Retail, Restaurant",male,2.5
+North America,"Retail, Restaurant",male,2.5
+Middle East,"Retail, Restaurant",male,2.5
+North America,"Retail, Restaurant",male,2.4
+North America,"Retail, Restaurant",male,2.4
+Europe,"Retail, Restaurant",male,2.4
+North America,"Retail, Restaurant",male,2.4
+Europe,"Retail, Restaurant",male,2.3
+North America,"Retail, Restaurant",male,2.3
+Europe,"Retail, Restaurant",male,2.2
+North America,"Retail, Restaurant",male,2.2
+Europe,"Retail, Restaurant",male,2.2
+North America,"Retail, Restaurant",male,2.1
+North America,"Retail, Restaurant",male,2.1
+East Asia,"Retail, Restaurant",male,2.1
+Europe,"Retail, Restaurant",male,2.1
+Europe,"Retail, Restaurant",male,2.0
+North America,"Retail, Restaurant",male,2.0
+Europe,"Retail, Restaurant",male,2.0
+East Asia,"Retail, Restaurant",male,2.0
+Latin America,"Retail, Restaurant",male,2.0
+East Asia,"Retail, Restaurant",male,2.0
+Latin America,"Retail, Restaurant",male,1.9
+North America,"Retail, Restaurant",male,1.9
+Europe,"Retail, Restaurant",male,1.9
+North America,"Retail, Restaurant",male,1.8
+Europe,"Retail, Restaurant",male,1.8
+South Asia,"Retail, Restaurant",male,1.8
+Europe,"Retail, Restaurant",male,1.8
+North America,"Retail, Restaurant",male,1.8
+North America,"Retail, Restaurant",female,1.8
+North America,"Retail, Restaurant",female,1.8
+North America,"Retail, Restaurant",male,1.8
+East Asia,"Retail, Restaurant",male,1.8
+North America,"Retail, Restaurant",male,1.8
+Europe,"Retail, Restaurant",male,1.7
+East Asia,"Retail, Restaurant",female,1.7
+East Asia,"Retail, Restaurant",male,1.7
+East Asia,"Retail, Restaurant",male,1.6
+North America,"Retail, Restaurant",female,1.6
+Europe,"Retail, Restaurant",male,1.6
+East Asia,"Retail, Restaurant",male,1.6
+East Asia,"Retail, Restaurant",male,1.6
+North America,"Retail, Restaurant",male,1.5
+East Asia,"Retail, Restaurant",male,1.5
+Europe,"Retail, Restaurant",male,1.5
+Europe,"Retail, Restaurant",male,1.5
+Europe,"Retail, Restaurant",male,1.4
+Europe,"Retail, Restaurant",female,1.4
+East Asia,"Retail, Restaurant",male,1.4
+Europe,"Retail, Restaurant",male,1.4
+Europe,"Retail, Restaurant",male,1.4
+East Asia,"Retail, Restaurant",male,1.4
+North America,"Retail, Restaurant",male,1.4
+North America,"Retail, Restaurant",female,1.4
+North America,"Retail, Restaurant",female,1.4
+East Asia,"Retail, Restaurant",male,1.3
+North America,"Retail, Restaurant",male,1.3
+Europe,"Retail, Restaurant",male,1.3
+North America,"Retail, Restaurant",male,1.3
+North America,"Retail, Restaurant",male,1.3
+Europe,"Retail, Restaurant",male,1.3
+East Asia,"Retail, Restaurant",male,1.3
+East Asia,"Retail, Restaurant",male,1.3
+North America,"Retail, Restaurant",female,1.2
+North America,"Retail, Restaurant",male,1.2
+North America,"Retail, Restaurant",male,1.2
+North America,"Retail, Restaurant",male,1.2
+East Asia,"Retail, Restaurant",male,1.2
+North America,"Retail, Restaurant",male,1.2
+Europe,"Retail, Restaurant",male,1.2
+Europe,"Retail, Restaurant",male,1.2
+North America,"Retail, Restaurant",male,1.1
+East Asia,"Retail, Restaurant",male,1.1
+North America,"Retail, Restaurant",male,1.1
+North America,"Retail, Restaurant",male,1.1
+North America,"Retail, Restaurant",male,1.1
+North America,"Retail, Restaurant",female,1.1
+East Asia,"Retail, Restaurant",male,1.0
+Europe,"Retail, Restaurant",male,1.0
+Europe,"Retail, Restaurant",male,1.0
+North America,"Retail, Restaurant",male,1.0
+Europe,"Retail, Restaurant",male,1.0
+North America,"Retail, Restaurant",male,1.0
+East Asia,"Retail, Restaurant",male,1.0
+East Asia,"Retail, Restaurant",female,1.0
+North America,"Retail, Restaurant",male,1.0
+Europe,"Retail, Restaurant",male,1.0
+Europe,"Retail, Restaurant",male,1.0
+East Asia,"Retail, Restaurant",male,1.0
+North America,Consumer,male,58.2
+Europe,Consumer,female,34.5
+Europe,Consumer,male,34.4
+Europe,Consumer,male,33.5
+Europe,Consumer,male,26.5
+North America,Consumer,male,20.0
+North America,Consumer,female,20.0
+North America,Consumer,male,20.0
+Latin America,Consumer,male,19.7
+Europe,Consumer,male,19.2
+North America,Consumer,male,18.4
+Europe,Consumer,female,17.4
+Europe,Consumer,male,14.9
+Europe,Consumer,female,12.8
+Europe,Consumer,male,12.0
+East Asia,Consumer,male,11.6
+East Asia,Consumer,male,11.4
+Latin America,Consumer,male,11.1
+Europe,Consumer,female,11.1
+Europe,Consumer,female,10.4
+Europe,Consumer,male,10.2
+Latin America,Consumer,male,10.2
+Europe,Consumer,male,9.9
+East Asia,Consumer,male,9.5
+Europe,Consumer,male,9.2
+Europe,Consumer,male,9.0
+East Asia,Consumer,male,9.0
+Europe,Consumer,male,9.0
+Latin America,Consumer,male,8.9
+Europe,Consumer,male,8.8
+North America,Consumer,male,8.4
+Europe,Consumer,male,8.0
+Europe,Consumer,male,7.9
+Sub-Saharan Africa,Consumer,male,7.6
+North America,Consumer,male,7.5
+East Asia,Consumer,male,7.3
+Europe,Consumer,male,7.2
+Europe,Consumer,male,7.2
+East Asia,Consumer,male,7.1
+North America,Consumer,male,7.0
+North America,Consumer,male,6.9
+East Asia,Consumer,male,6.9
+East Asia,Consumer,male,6.8
+Latin America,Consumer,female,6.4
+Europe,Consumer,female,6.1
+Europe,Consumer,male,6.0
+Europe,Consumer,male,5.7
+North America,Consumer,male,5.7
+East Asia,Consumer,male,5.5
+Middle East,Consumer,male,5.3
+Latin America,Consumer,female,5.2
+Europe,Consumer,female,5.1
+North America,Consumer,male,5.0
+Europe,Consumer,male,4.9
+Europe,Consumer,male,4.8
+Europe,Consumer,female,4.8
+Europe,Consumer,male,4.5
+Europe,Consumer,male,4.5
+Europe,Consumer,male,4.5
+Europe,Consumer,male,4.4
+East Asia,Consumer,male,4.4
+North America,Consumer,male,4.3
+East Asia,Consumer,male,4.3
+North America,Consumer,male,4.2
+Latin America,Consumer,male,4.1
+North America,Consumer,male,4.1
+East Asia,Consumer,male,4.0
+Latin America,Consumer,male,3.8
+Europe,Consumer,male,3.7
+Europe,Consumer,male,3.7
+Middle East,Consumer,male,3.7
+North America,Consumer,male,3.7
+South Asia,Consumer,male,3.5
+South Asia,Consumer,male,3.5
+East Asia,Consumer,male,3.5
+Latin America,Consumer,male,3.5
+Middle East,Consumer,male,3.5
+Europe,Consumer,female,3.5
+Europe,Consumer,male,3.4
+East Asia,Consumer,male,3.4
+Europe,Consumer,female,3.4
+North America,Consumer,male,3.4
+North America,Consumer,female,3.3
+Europe,Consumer,male,3.3
+Europe,Consumer,male,3.3
+Europe,Consumer,female,3.3
+Europe,Consumer,male,3.3
+Europe,Consumer,male,3.3
+Europe,Consumer,male,3.3
+Middle East,Consumer,male,3.2
+East Asia,Consumer,male,3.2
+East Asia,Consumer,male,3.2
+Europe,Consumer,male,3.1
+North America,Consumer,male,3.1
+North America,Consumer,male,3.1
+Europe,Consumer,male,3.1
+North America,Consumer,male,3.0
+North America,Consumer,male,3.0
+North America,Consumer,male,3.0
+North America,Consumer,female,3.0
+North America,Consumer,female,3.0
+North America,Consumer,male,3.0
+North America,Consumer,male,3.0
+Europe,Consumer,male,3.0
+North America,Consumer,male,3.0
+North America,Consumer,male,3.0
+North America,Consumer,female,3.0
+Europe,Consumer,male,2.9
+North America,Consumer,male,2.9
+Europe,Consumer,male,2.9
+Europe,Consumer,female,2.9
+North America,Consumer,male,2.9
+North America,Consumer,female,2.9
+North America,Consumer,male,2.9
+North America,Consumer,female,2.9
+Europe,Consumer,male,2.9
+Europe,Consumer,male,2.9
+Europe,Consumer,male,2.8
+North America,Consumer,male,2.8
+North America,Consumer,female,2.8
+East Asia,Consumer,male,2.8
+East Asia,Consumer,male,2.8
+Europe,Consumer,female,2.7
+Europe,Consumer,male,2.7
+Europe,Consumer,female,2.7
+Latin America,Consumer,male,2.7
+East Asia,Consumer,male,2.6
+East Asia,Consumer,male,2.6
+East Asia,Consumer,male,2.6
+Latin America,Consumer,male,2.5
+Europe,Consumer,male,2.5
+East Asia,Consumer,male,2.5
+Latin America,Consumer,male,2.5
+Latin America,Consumer,male,2.5
+Europe,Consumer,male,2.5
+East Asia,Consumer,male,2.5
+Latin America,Consumer,female,2.5
+East Asia,Consumer,male,2.5
+Europe,Consumer,male,2.5
+North America,Consumer,male,2.5
+Europe,Consumer,male,2.4
+South Asia,Consumer,male,2.4
+Latin America,Consumer,male,2.4
+Europe,Consumer,female,2.4
+Europe,Consumer,female,2.4
+North America,Consumer,male,2.4
+East Asia,Consumer,male,2.4
+East Asia,Consumer,male,2.4
+East Asia,Consumer,male,2.4
+North America,Consumer,male,2.3
+Latin America,Consumer,male,2.3
+Europe,Consumer,male,2.3
+North America,Consumer,male,2.2
+East Asia,Consumer,male,2.2
+Latin America,Consumer,male,2.1
+North America,Consumer,male,2.1
+North America,Consumer,male,2.1
+Europe,Consumer,male,2.1
+Europe,Consumer,female,2.1
+North America,Consumer,male,2.0
+North America,Consumer,male,2.0
+East Asia,Consumer,male,2.0
+North America,Consumer,male,2.0
+North America,Consumer,female,2.0
+North America,Consumer,female,2.0
+Latin America,Consumer,male,2.0
+Europe,Consumer,male,2.0
+North America,Consumer,male,2.0
+East Asia,Consumer,male,2.0
+Europe,Consumer,male,2.0
+North America,Consumer,male,2.0
+North America,Consumer,male,2.0
+Europe,Consumer,male,1.9
+Europe,Consumer,male,1.9
+East Asia,Consumer,male,1.9
+East Asia,Consumer,male,1.9
+East Asia,Consumer,male,1.9
+East Asia,Consumer,male,1.9
+East Asia,Consumer,male,1.9
+South Asia,Consumer,male,1.9
+East Asia,Consumer,female,1.8
+South Asia,Consumer,male,1.8
+North America,Consumer,male,1.8
+Europe,Consumer,male,1.8
+Europe,Consumer,male,1.8
+North America,Consumer,female,1.8
+North America,Consumer,male,1.8
+East Asia,Consumer,male,1.7
+North America,Consumer,male,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,male,1.7
+East Asia,Consumer,male,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,female,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,female,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,female,1.7
+Europe,Consumer,male,1.7
+Europe,Consumer,male,1.6
+East Asia,Consumer,male,1.6
+Europe,Consumer,male,1.6
+Middle East,Consumer,female,1.6
+Europe,Consumer,male,1.6
+Latin America,Consumer,male,1.5
+Europe,Consumer,female,1.5
+Europe,Consumer,male,1.5
+North America,Consumer,male,1.5
+South Asia,Consumer,male,1.5
+North America,Consumer,male,1.5
+Europe,Consumer,male,1.5
+Europe,Consumer,male,1.4
+North America,Consumer,male,1.4
+Middle East,Consumer,male,1.4
+Latin America,Consumer,male,1.4
+North America,Consumer,male,1.4
+Latin America,Consumer,male,1.4
+Europe,Consumer,male,1.4
+Europe,Consumer,male,1.4
+Europe,Consumer,male,1.4
+Europe,Consumer,male,1.4
+North America,Consumer,male,1.4
+Europe,Consumer,male,1.4
+Europe,Consumer,male,1.4
+North America,Consumer,male,1.4
+North America,Consumer,male,1.4
+Europe,Consumer,male,1.3
+North America,Consumer,female,1.3
+North America,Consumer,male,1.3
+Europe,Consumer,male,1.3
+East Asia,Consumer,male,1.3
+Middle East,Consumer,male,1.3
+Europe,Consumer,male,1.3
+Europe,Consumer,male,1.3
+East Asia,Consumer,male,1.3
+Europe,Consumer,male,1.3
+Europe,Consumer,male,1.3
+South Asia,Consumer,male,1.3
+Europe,Consumer,male,1.3
+Sub-Saharan Africa,Consumer,male,1.2
+Europe,Consumer,male,1.2
+Europe,Consumer,female,1.2
+East Asia,Consumer,male,1.2
+East Asia,Consumer,male,1.2
+North America,Consumer,male,1.2
+Latin America,Consumer,male,1.2
+Europe,Consumer,male,1.2
+Latin America,Consumer,male,1.2
+South Asia,Consumer,male,1.2
+East Asia,Consumer,male,1.2
+East Asia,Consumer,male,1.2
+North America,Consumer,female,1.2
+North America,Consumer,male,1.2
+North America,Consumer,female,1.1
+North America,Consumer,male,1.1
+North America,Consumer,male,1.1
+East Asia,Consumer,male,1.1
+North America,Consumer,male,1.1
+Europe,Consumer,male,1.1
+North America,Consumer,male,1.1
+Latin America,Consumer,male,1.1
+South Asia,Consumer,male,1.1
+Europe,Consumer,male,1.1
+East Asia,Consumer,male,1.1
+East Asia,Consumer,male,1.1
+Europe,Consumer,male,1.1
+North America,Consumer,male,1.1
+Europe,Consumer,male,1.1
+North America,Consumer,male,1.1
+Latin America,Consumer,male,1.1
+East Asia,Consumer,male,1.1
+East Asia,Consumer,female,1.1
+Latin America,Consumer,male,1.1
+South Asia,Consumer,male,1.1
+North America,Consumer,female,1.0
+North America,Consumer,male,1.0
+North America,Consumer,male,1.0
+East Asia,Consumer,male,1.0
+Latin America,Consumer,male,1.0
+East Asia,Consumer,male,1.0
+North America,Consumer,male,1.0
+North America,Consumer,female,1.0
+South Asia,Consumer,male,1.0
+North America,Consumer,female,1.0
+North America,Consumer,male,1.0
+East Asia,Consumer,male,1.0
+East Asia,Consumer,male,1.0
+East Asia,Consumer,male,1.0
+North America,Diversified financial,male,40.0
+North America,Diversified financial,male,40.0
+East Asia,Diversified financial,male,31.0
+North America,Diversified financial,male,24.5
+Middle East,Diversified financial,male,20.4
+East Asia,Diversified financial,male,19.6
+North America,Diversified financial,male,18.7
+East Asia,Diversified financial,male,16.2
+East Asia,Diversified financial,male,11.5
+East Asia,Diversified financial,male,11.4
+Europe,Diversified financial,male,10.9
+North America,Diversified financial,male,10.4
+Europe,Diversified financial,male,10.0
+North America,Diversified financial,female,8.8
+Europe,Diversified financial,female,8.5
+East Asia,Diversified financial,male,8.5
+Europe,Diversified financial,male,8.3
+Europe,Diversified financial,male,7.4
+North America,Diversified financial,male,7.3
+North America,Diversified financial,male,7.0
+North America,Diversified financial,male,6.9
+Europe,Diversified financial,male,6.9
+East Asia,Diversified financial,male,6.1
+North America,Diversified financial,male,6.0
+North America,Diversified financial,male,6.0
+Europe,Diversified financial,male,5.4
+Europe,Diversified financial,male,5.2
+South Asia,Diversified financial,male,5.0
+Europe,Diversified financial,male,5.0
+Europe,Diversified financial,male,4.9
+North America,Diversified financial,male,4.9
+South Asia,Diversified financial,male,4.9
+Middle East,Diversified financial,male,4.8
+North America,Diversified financial,male,4.8
+North America,Diversified financial,male,4.8
+North America,Diversified financial,male,4.8
+East Asia,Diversified financial,male,4.7
+Europe,Diversified financial,male,4.3
+East Asia,Diversified financial,male,4.3
+East Asia,Diversified financial,male,4.0
+East Asia,Diversified financial,male,3.9
+East Asia,Diversified financial,male,3.7
+Sub-Saharan Africa,Diversified financial,female,3.7
+East Asia,Diversified financial,male,3.5
+East Asia,Diversified financial,male,3.4
+East Asia,Diversified financial,male,3.3
+Europe,Diversified financial,male,3.3
+North America,Diversified financial,male,3.2
+Latin America,Diversified financial,male,3.1
+Latin America,Diversified financial,male,3.1
+Latin America,Diversified financial,female,3.1
+Middle East,Diversified financial,male,3.1
+Middle East,Diversified financial,male,3.1
+North America,Diversified financial,male,3.1
+East Asia,Diversified financial,male,3.1
+North America,Diversified financial,male,3.0
+East Asia,Diversified financial,male,3.0
+North America,Diversified financial,female,2.8
+East Asia,Diversified financial,male,2.8
+Middle East,Diversified financial,male,2.8
+North America,Diversified financial,male,2.8
+North America,Diversified financial,male,2.8
+North America,Diversified financial,male,2.5
+North America,Diversified financial,male,2.5
+Europe,Diversified financial,female,2.5
+North America,Diversified financial,male,2.5
+East Asia,Diversified financial,male,2.5
+Europe,Diversified financial,male,2.5
+Europe,Diversified financial,male,2.4
+East Asia,Diversified financial,male,2.4
+Middle East,Diversified financial,male,2.4
+Latin America,Diversified financial,male,2.4
+East Asia,Diversified financial,male,2.4
+Europe,Diversified financial,male,2.3
+North America,Diversified financial,male,2.3
+East Asia,Diversified financial,male,2.3
+North America,Diversified financial,male,2.3
+North America,Diversified financial,male,2.3
+Europe,Diversified financial,male,2.3
+Middle East,Diversified financial,male,2.3
+Middle East,Diversified financial,female,2.2
+Middle East,Diversified financial,male,2.1
+East Asia,Diversified financial,male,2.1
+Europe,Diversified financial,male,2.0
+North America,Diversified financial,male,2.0
+North America,Diversified financial,male,1.9
+Latin America,Diversified financial,male,1.9
+Middle East,Diversified financial,male,1.9
+East Asia,Diversified financial,male,1.9
+Middle East,Diversified financial,female,1.9
+East Asia,Diversified financial,male,1.9
+East Asia,Diversified financial,male,1.9
+East Asia,Diversified financial,female,1.8
+Middle East,Diversified financial,male,1.8
+North America,Diversified financial,male,1.8
+East Asia,Diversified financial,male,1.8
+East Asia,Diversified financial,male,1.7
+North America,Diversified financial,male,1.7
+Europe,Diversified financial,male,1.6
+East Asia,Diversified financial,male,1.6
+East Asia,Diversified financial,male,1.6
+East Asia,Diversified financial,male,1.6
+East Asia,Diversified financial,male,1.5
+North America,Diversified financial,male,1.5
+North America,Diversified financial,female,1.5
+Europe,Diversified financial,male,1.4
+East Asia,Diversified financial,male,1.4
+North America,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.3
+North America,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.3
+Europe,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.3
+North America,Diversified financial,male,1.3
+Middle East,Diversified financial,male,1.2
+East Asia,Diversified financial,male,1.2
+Europe,Diversified financial,male,1.2
+Europe,Diversified financial,male,1.2
+Europe,Diversified financial,male,1.2
+East Asia,Diversified financial,male,1.2
+Europe,Diversified financial,male,1.1
+South Asia,Diversified financial,male,1.1
+East Asia,Diversified financial,male,1.1
+Latin America,Diversified financial,male,1.1
+Latin America,Diversified financial,male,1.1
+Latin America,Diversified financial,female,1.1
+Europe,Diversified financial,male,1.0
+Europe,Diversified financial,male,1.0
+East Asia,Diversified financial,male,1.0
+North America,Diversified financial,male,1.0
+North America,Real Estate,male,38.0
+East Asia,Real Estate,male,22.0
+East Asia,Real Estate,male,15.1
+North America,Real Estate,male,14.4
+Europe,Real Estate,male,13.0
+East Asia,Real Estate,male,12.6
+East Asia,Real Estate,male,11.0
+East Asia,Real Estate,male,8.4
+East Asia,Real Estate,male,7.2
+Middle East,Real Estate,male,7.0
+Europe,Real Estate,male,6.9
+East Asia,Real Estate,female,6.9
+North America,Real Estate,male,6.5
+East Asia,Real Estate,female,6.4
+North America,Real Estate,male,6.1
+East Asia,Real Estate,female,6.0
+East Asia,Real Estate,male,5.7
+East Asia,Real Estate,male,5.7
+North America,Real Estate,male,5.4
+East Asia,Real Estate,male,5.2
+North America,Real Estate,male,5.0
+East Asia,Real Estate,male,5.0
+North America,Real Estate,male,4.7
+North America,Real Estate,male,4.5
+North America,Real Estate,male,4.5
+Middle East,Real Estate,male,4.5
+North America,Real Estate,female,4.4
+North America,Real Estate,female,4.4
+North America,Real Estate,male,4.3
+East Asia,Real Estate,male,4.2
+East Asia,Real Estate,male,4.2
+North America,Real Estate,male,4.2
+East Asia,Real Estate,male,4.2
+North America,Real Estate,male,4.2
+North America,Real Estate,male,3.8
+North America,Real Estate,female,3.7
+East Asia,Real Estate,female,3.7
+East Asia,Real Estate,female,3.7
+Europe,Real Estate,male,3.6
+Europe,Real Estate,male,3.6
+North America,Real Estate,male,3.6
+North America,Real Estate,male,3.6
+Europe,Real Estate,male,3.6
+North America,Real Estate,male,3.4
+Europe,Real Estate,male,3.4
+North America,Real Estate,male,3.4
+East Asia,Real Estate,male,3.4
+East Asia,Real Estate,male,3.3
+North America,Real Estate,male,3.1
+North America,Real Estate,male,3.1
+Europe,Real Estate,male,3.1
+North America,Real Estate,male,3.1
+Middle East,Real Estate,male,3.1
+South Asia,Real Estate,male,3.0
+East Asia,Real Estate,male,3.0
+East Asia,Real Estate,male,3.0
+North America,Real Estate,male,2.9
+North America,Real Estate,male,2.9
+Europe,Real Estate,female,2.8
+North America,Real Estate,male,2.8
+East Asia,Real Estate,female,2.8
+North America,Real Estate,male,2.8
+East Asia,Real Estate,male,2.8
+North America,Real Estate,female,2.7
+North America,Real Estate,male,2.7
+East Asia,Real Estate,male,2.7
+East Asia,Real Estate,male,2.7
+Latin America,Real Estate,male,2.6
+North America,Real Estate,male,2.6
+North America,Real Estate,male,2.6
+North America,Real Estate,male,2.5
+North America,Real Estate,male,2.5
+North America,Real Estate,male,2.5
+Europe,Real Estate,male,2.5
+East Asia,Real Estate,male,2.4
+North America,Real Estate,male,2.4
+East Asia,Real Estate,male,2.4
+Europe,Real Estate,male,2.4
+North America,Real Estate,male,2.4
+Europe,Real Estate,male,2.3
+Europe,Real Estate,male,2.3
+East Asia,Real Estate,male,2.3
+North America,Real Estate,female,2.3
+Europe,Real Estate,male,2.3
+North America,Real Estate,female,2.3
+North America,Real Estate,male,2.3
+Middle East,Real Estate,male,2.2
+North America,Real Estate,male,2.2
+Europe,Real Estate,male,2.2
+North America,Real Estate,male,2.2
+East Asia,Real Estate,male,2.1
+East Asia,Real Estate,male,2.1
+East Asia,Real Estate,male,2.1
+North America,Real Estate,male,2.1
+North America,Real Estate,male,2.0
+North America,Real Estate,male,2.0
+North America,Real Estate,male,2.0
+Europe,Real Estate,male,2.0
+North America,Real Estate,male,2.0
+North America,Real Estate,male,2.0
+East Asia,Real Estate,male,2.0
+East Asia,Real Estate,male,2.0
+East Asia,Real Estate,male,2.0
+South Asia,Real Estate,male,1.9
+North America,Real Estate,male,1.9
+Latin America,Real Estate,female,1.9
+Latin America,Real Estate,male,1.9
+North America,Real Estate,male,1.9
+North America,Real Estate,male,1.9
+North America,Real Estate,male,1.9
+Europe,Real Estate,male,1.8
+East Asia,Real Estate,male,1.8
+East Asia,Real Estate,male,1.8
+North America,Real Estate,female,1.8
+North America,Real Estate,female,1.8
+North America,Real Estate,male,1.8
+East Asia,Real Estate,male,1.8
+East Asia,Real Estate,male,1.7
+East Asia,Real Estate,male,1.7
+South Asia,Real Estate,male,1.6
+East Asia,Real Estate,male,1.6
+East Asia,Real Estate,male,1.5
+East Asia,Real Estate,male,1.5
+North America,Real Estate,male,1.4
+North America,Real Estate,male,1.4
+Europe,Real Estate,male,1.4
+North America,Real Estate,male,1.4
+Europe,Real Estate,male,1.4
+Europe,Real Estate,male,1.4
+East Asia,Real Estate,male,1.4
+East Asia,Real Estate,male,1.4
+East Asia,Real Estate,male,1.4
+Europe,Real Estate,male,1.3
+North America,Real Estate,male,1.3
+Latin America,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+Latin America,Real Estate,male,1.3
+North America,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+Latin America,Real Estate,male,1.3
+Latin America,Real Estate,male,1.3
+North America,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+East Asia,Real Estate,female,1.3
+Middle East,Real Estate,male,1.3
+Middle East,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+East Asia,Real Estate,male,1.3
+Europe,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+Europe,Real Estate,male,1.2
+North America,Real Estate,male,1.2
+Europe,Real Estate,male,1.2
+South Asia,Real Estate,male,1.2
+Europe,Real Estate,male,1.2
+Europe,Real Estate,male,1.2
+Europe,Real Estate,female,1.2
+East Asia,Real Estate,male,1.2
+Europe,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+East Asia,Real Estate,male,1.2
+East Asia,Real Estate,male,1.1
+North America,Real Estate,male,1.1
+East Asia,Real Estate,male,1.1
+East Asia,Real Estate,male,1.1
+North America,Real Estate,male,1.1
+Middle East,Real Estate,male,1.1
+North America,Real Estate,male,1.1
+Sub-Saharan Africa,Real Estate,male,1.1
+East Asia,Real Estate,male,1.1
+East Asia,Real Estate,male,1.1
+East Asia,Real Estate,male,1.1
+North America,Real Estate,male,1.1
+North America,Real Estate,male,1.1
+East Asia,Real Estate,male,1.0
+Europe,Real Estate,male,1.0
+Europe,Real Estate,male,1.0
+Europe,Real Estate,male,1.0
+East Asia,Real Estate,female,1.0
+South Asia,Real Estate,male,1.0
+North America,Real Estate,male,1.0
+East Asia,Real Estate,female,1.0
+North America,Real Estate,male,1.0
+East Asia,Real Estate,male,1.0
+East Asia,Real Estate,male,1.0
+Sub-Saharan Africa,Constrution,male,25.0
+Europe,Constrution,male,12.8
+Europe,Constrution,male,6.7
+Europe,Constrution,male,6.0
+North America,Constrution,male,5.8
+Europe,Constrution,male,5.5
+North America,Constrution,female,4.6
+Europe,Constrution,male,4.1
+Europe,Constrution,male,4.0
+North America,Constrution,male,3.9
+North America,Constrution,male,3.9
+Europe,Constrution,male,3.7
+Europe,Constrution,male,3.4
+East Asia,Constrution,male,3.3
+Middle East,Constrution,male,3.3
+North America,Constrution,male,2.9
+Middle East,Constrution,male,2.8
+Europe,Constrution,male,2.8
+East Asia,Constrution,male,2.7
+Europe,Constrution,male,2.5
+Middle East,Constrution,male,2.4
+Latin America,Constrution,female,2.2
+Latin America,Constrution,female,2.2
+Latin America,Constrution,female,2.2
+Europe,Constrution,female,2.1
+Latin America,Constrution,male,2.1
+Europe,Constrution,male,2.0
+North America,Constrution,male,2.0
+Europe,Constrution,male,1.9
+Europe,Constrution,male,1.9
+South Asia,Constrution,male,1.8
+East Asia,Constrution,male,1.8
+Europe,Constrution,male,1.7
+North America,Constrution,male,1.6
+Europe,Constrution,male,1.6
+Middle East,Constrution,male,1.6
+Europe,Constrution,male,1.6
+Middle East,Constrution,male,1.6
+South Asia,Constrution,male,1.6
+Latin America,Constrution,male,1.6
+Europe,Constrution,male,1.5
+East Asia,Constrution,female,1.5
+Europe,Constrution,male,1.5
+Europe,Constrution,female,1.5
+Middle East,Constrution,male,1.5
+Middle East,Constrution,male,1.5
+Latin America,Constrution,male,1.5
+Latin America,Constrution,male,1.5
+Europe,Constrution,male,1.4
+Europe,Constrution,male,1.4
+North America,Constrution,male,1.4
+East Asia,Constrution,female,1.4
+Europe,Constrution,male,1.3
+Middle East,Constrution,male,1.2
+Middle East,Constrution,male,1.2
+Europe,Constrution,male,1.2
+North America,Constrution,male,1.2
+Latin America,Constrution,female,1.2
+Latin America,Constrution,male,1.2
+East Asia,Constrution,male,1.1
+Europe,Constrution,female,1.0
+North America,Hedge funds,male,23.0
+North America,Hedge funds,male,14.4
+North America,Hedge funds,male,13.5
+North America,Hedge funds,male,12.5
+North America,Hedge funds,male,11.0
+North America,Hedge funds,male,10.0
+North America,Hedge funds,male,5.2
+North America,Hedge funds,male,4.8
+North America,Hedge funds,male,4.3
+North America,Hedge funds,male,3.9
+North America,Hedge funds,male,3.6
+Europe,Hedge funds,male,3.6
+North America,Hedge funds,male,3.5
+North America,Hedge funds,male,3.3
+North America,Hedge funds,male,3.2
+North America,Hedge funds,male,3.1
+North America,Hedge funds,male,2.9
+Europe,Hedge funds,male,2.6
+Europe,Hedge funds,male,2.2
+North America,Hedge funds,male,2.2
+North America,Hedge funds,male,2.1
+North America,Hedge funds,male,2.0
+North America,Hedge funds,male,2.0
+East Asia,Hedge funds,male,2.0
+North America,Hedge funds,male,1.8
+North America,Hedge funds,male,1.7
+Europe,Hedge funds,male,1.6
+North America,Hedge funds,male,1.6
+North America,Hedge funds,male,1.6
+North America,Hedge funds,male,1.6
+North America,Hedge funds,male,1.6
+North America,Hedge funds,male,1.5
+North America,Hedge funds,male,1.5
+North America,Hedge funds,male,1.4
+North America,Hedge funds,male,1.4
+North America,Hedge funds,male,1.4
+Europe,Hedge funds,male,1.3
+Europe,Hedge funds,male,1.1
+North America,Hedge funds,male,1.1
+Europe,Hedge funds,male,1.1
+North America,Hedge funds,male,1.0
+North America,Hedge funds,male,1.0
+North America,Hedge funds,male,1.0
+South Asia,Energy,male,18.6
+Europe,Energy,male,17.6
+Europe,Energy,male,15.6
+Europe,Energy,male,15.3
+Middle East,Energy,male,15.3
+North America,Energy,male,14.6
+Europe,Energy,male,13.6
+Europe,Energy,male,11.4
+Europe,Energy,male,11.3
+East Asia,Energy,male,10.3
+North America,Energy,male,10.0
+Europe,Energy,male,8.8
+Europe,Energy,male,6.5
+Europe,Energy,male,6.1
+Middle East,Energy,male,5.7
+North America,Energy,male,5.6
+North America,Energy,male,5.5
+Latin America,Energy,male,5.5
+North America,Energy,male,5.5
+Europe,Energy,male,5.3
+North America,Energy,female,4.5
+North America,Energy,male,4.5
+North America,Energy,male,3.8
+Europe,Energy,male,3.7
+North America,Energy,male,3.5
+North America,Energy,male,3.3
+Europe,Energy,male,3.3
+North America,Energy,male,3.3
+North America,Energy,male,3.0
+East Asia,Energy,male,3.0
+North America,Energy,male,2.9
+North America,Energy,male,2.8
+North America,Energy,male,2.8
+Europe,Energy,male,2.6
+Europe,Energy,male,2.6
+Sub-Saharan Africa,Energy,female,2.5
+North America,Energy,male,2.5
+North America,Energy,male,2.4
+Europe,Energy,male,2.3
+Europe,Energy,male,2.1
+North America,Energy,male,2.1
+North America,Energy,male,2.1
+Europe,Energy,male,2.1
+North America,Energy,male,2.1
+North America,Energy,male,2.1
+East Asia,Energy,male,2.1
+North America,Energy,male,2.0
+North America,Energy,male,2.0
+East Asia,Energy,male,2.0
+Europe,Energy,male,1.9
+Latin America,Energy,male,1.9
+North America,Energy,male,1.9
+South Asia,Energy,male,1.9
+Europe,Energy,male,1.9
+East Asia,Energy,male,1.8
+Europe,Energy,male,1.7
+Europe,Energy,male,1.6
+Europe,Energy,male,1.5
+North America,Energy,male,1.5
+North America,Energy,male,1.5
+Latin America,Energy,male,1.5
+Europe,Energy,male,1.5
+East Asia,Energy,male,1.5
+Middle East,Energy,male,1.4
+Europe,Energy,male,1.4
+Europe,Energy,male,1.4
+East Asia,Energy,male,1.4
+North America,Energy,male,1.4
+North America,Energy,male,1.3
+Europe,Energy,male,1.3
+Europe,Energy,male,1.2
+Europe,Energy,male,1.2
+Middle East,Energy,male,1.2
+East Asia,Energy,male,1.2
+North America,Energy,male,1.2
+Europe,Energy,male,1.2
+Latin America,Energy,female,1.2
+Middle East,Energy,male,1.1
+Europe,Energy,male,1.1
+Europe,Energy,male,1.1
+North America,Energy,male,1.1
+East Asia,Energy,male,1.1
+Europe,Energy,male,1.1
+North America,Energy,male,1.1
+Europe,Energy,male,1.1
+Europe,Energy,male,1.0
+North America,Energy,male,1.0
+North America,Mining and metals,female,17.7
+Europe,Mining and metals,male,17.2
+Latin America,Mining and metals,female,15.5
+Latin America,Mining and metals,male,14.7
+Europe,Mining and metals,male,12.6
+Latin America,Mining and metals,male,12.4
+Europe,Mining and metals,female,8.1
+South Asia,Mining and metals,male,7.0
+Sub-Saharan Africa,Mining and metals,male,6.7
+Europe,Mining and metals,male,6.5
+North America,Mining and metals,male,6.3
+Europe,Mining and metals,male,6.1
+North America,Mining and metals,male,5.2
+East Asia,Mining and metals,male,4.3
+East Asia,Mining and metals,male,4.2
+Middle East,Mining and metals,male,4.1
+East Asia,Mining and metals,male,3.6
+North America,Mining and metals,male,3.1
+Europe,Mining and metals,male,3.0
+South Asia,Mining and metals,male,2.9
+Europe,Mining and metals,male,2.9
+South Asia,Mining and metals,male,2.8
+Sub-Saharan Africa,Mining and metals,male,2.7
+Europe,Mining and metals,male,2.6
+Europe,Mining and metals,male,2.6
+Europe,Mining and metals,male,2.5
+Middle East,Mining and metals,male,2.5
+East Asia,Mining and metals,male,2.3
+South Asia,Mining and metals,male,2.2
+North America,Mining and metals,male,2.2
+Europe,Mining and metals,male,2.0
+Europe,Mining and metals,male,1.9
+East Asia,Mining and metals,male,1.8
+Middle East,Mining and metals,male,1.7
+South Asia,Mining and metals,male,1.7
+Europe,Mining and metals,male,1.7
+Europe,Mining and metals,male,1.7
+East Asia,Mining and metals,male,1.7
+Europe,Mining and metals,male,1.7
+South Asia,Mining and metals,male,1.7
+North America,Mining and metals,male,1.6
+Europe,Mining and metals,male,1.6
+Europe,Mining and metals,male,1.6
+Latin America,Mining and metals,male,1.6
+Latin America,Mining and metals,female,1.6
+Latin America,Mining and metals,female,1.6
+Europe,Mining and metals,male,1.5
+Europe,Mining and metals,female,1.5
+Europe,Mining and metals,female,1.5
+North America,Mining and metals,male,1.4
+Europe,Mining and metals,male,1.4
+Latin America,Mining and metals,female,1.4
+Sub-Saharan Africa,Mining and metals,male,1.3
+Middle East,Mining and metals,male,1.3
+East Asia,Mining and metals,male,1.3
+Europe,Mining and metals,male,1.2
+East Asia,Mining and metals,male,1.2
+Europe,Mining and metals,male,1.2
+East Asia,Mining and metals,male,1.2
+East Asia,Mining and metals,male,1.2
+Latin America,Mining and metals,male,1.2
+Latin America,Mining and metals,male,1.1
+North America,Mining and metals,female,1.0
+South Asia,Mining and metals,male,1.0
+East Asia,Mining and metals,male,1.0
+East Asia,Mining and metals,male,1.0
+Europe,Mining and metals,male,1.0
+Europe,Mining and metals,male,1.0
+North America,Money Management,female,17.3
+Latin America,Money Management,male,16.0
+Latin America,Money Management,male,14.2
+Europe,Money Management,male,11.5
+Europe,Money Management,male,11.0
+North America,Money Management,male,10.9
+North America,Money Management,male,9.3
+North America,Money Management,male,8.8
+East Asia,Money Management,male,7.6
+East Asia,Money Management,male,7.6
+North America,Money Management,male,7.5
+East Asia,Money Management,male,6.4
+North America,Money Management,male,6.2
+North America,Money Management,male,5.8
+East Asia,Money Management,male,5.6
+Europe,Money Management,male,5.5
+Europe,Money Management,male,5.4
+East Asia,Money Management,male,5.2
+North America,Money Management,female,5.1
+North America,Money Management,female,4.8
+North America,Money Management,female,4.8
+North America,Money Management,male,4.8
+Europe,Money Management,male,3.8
+South Asia,Money Management,male,3.8
+North America,Money Management,male,3.7
+East Asia,Money Management,male,3.7
+Latin America,Money Management,male,3.3
+North America,Money Management,male,3.2
+North America,Money Management,male,3.2
+North America,Money Management,female,3.2
+Europe,Money Management,male,3.2
+Europe,Money Management,male,3.1
+Latin America,Money Management,male,3.1
+Middle East,Money Management,male,3.0
+Latin America,Money Management,male,2.9
+Latin America,Money Management,male,2.9
+Latin America,Money Management,male,2.9
+Latin America,Money Management,male,2.9
+Latin America,Money Management,male,2.9
+Middle East,Money Management,male,2.8
+North America,Money Management,male,2.6
+Europe,Money Management,male,2.5
+North America,Money Management,male,2.5
+North America,Money Management,male,2.5
+Middle East,Money Management,male,2.4
+North America,Money Management,male,2.4
+Europe,Money Management,male,2.4
+Europe,Money Management,male,2.4
+North America,Money Management,male,2.3
+East Asia,Money Management,male,2.3
+Europe,Money Management,male,2.3
+North America,Money Management,male,2.2
+Europe,Money Management,male,2.2
+Latin America,Money Management,male,2.2
+North America,Money Management,male,2.1
+Middle East,Money Management,male,2.1
+North America,Money Management,male,2.1
+Europe,Money Management,female,2.1
+Europe,Money Management,male,2.1
+Europe,Money Management,male,2.1
+East Asia,Money Management,male,2.1
+Europe,Money Management,male,2.0
+Europe,Money Management,male,2.0
+Latin America,Money Management,male,2.0
+Europe,Money Management,male,2.0
+Europe,Money Management,male,2.0
+North America,Money Management,male,2.0
+Europe,Money Management,male,2.0
+East Asia,Money Management,male,2.0
+Latin America,Money Management,male,1.9
+North America,Money Management,male,1.9
+Middle East,Money Management,male,1.9
+Europe,Money Management,male,1.9
+Latin America,Money Management,male,1.8
+South Asia,Money Management,female,1.8
+Middle East,Money Management,female,1.8
+Europe,Money Management,male,1.8
+Europe,Money Management,male,1.8
+Latin America,Money Management,male,1.8
+North America,Money Management,female,1.8
+South Asia,Money Management,male,1.8
+East Asia,Money Management,male,1.8
+North America,Money Management,male,1.8
+Latin America,Money Management,male,1.8
+North America,Money Management,male,1.7
+Europe,Money Management,male,1.7
+Europe,Money Management,male,1.7
+North America,Money Management,male,1.6
+North America,Money Management,male,1.6
+Latin America,Money Management,male,1.6
+North America,Money Management,male,1.6
+North America,Money Management,male,1.6
+East Asia,Money Management,female,1.6
+North America,Money Management,male,1.6
+Latin America,Money Management,male,1.5
+Latin America,Money Management,male,1.5
+East Asia,Money Management,male,1.5
+North America,Money Management,male,1.4
+Latin America,Money Management,female,1.4
+Latin America,Money Management,male,1.4
+Europe,Money Management,male,1.4
+Europe,Money Management,male,1.4
+Middle East,Money Management,male,1.4
+Europe,Money Management,male,1.4
+North America,Money Management,male,1.3
+North America,Money Management,male,1.3
+Europe,Money Management,female,1.3
+Europe,Money Management,male,1.3
+Latin America,Money Management,female,1.2
+Latin America,Money Management,male,1.2
+Latin America,Money Management,female,1.1
+North America,Money Management,male,1.1
+North America,Money Management,male,1.1
+North America,Money Management,male,1.1
+East Asia,Money Management,male,1.1
+Europe,Money Management,male,1.1
+Middle East,Money Management,female,1.1
+East Asia,Money Management,male,1.1
+Middle East,Money Management,male,1.1
+Europe,Money Management,male,1.0
+Europe,Money Management,male,1.0
+North America,Money Management,male,1.0
+South Asia,Technology-Medical,male,12.8
+Europe,Technology-Medical,male,12.0
+Europe,Technology-Medical,male,10.5
+North America,Technology-Medical,male,10.0
+Europe,Technology-Medical,male,8.6
+Europe,Technology-Medical,male,7.6
+North America,Technology-Medical,male,6.1
+North America,Technology-Medical,female,5.8
+Europe,Technology-Medical,male,5.0
+South Asia,Technology-Medical,male,4.9
+Europe,Technology-Medical,male,4.0
+North America,Technology-Medical,male,4.0
+North America,Technology-Medical,male,3.9
+Europe,Technology-Medical,male,3.8
+North America,Technology-Medical,male,3.8
+Europe,Technology-Medical,male,3.7
+Europe,Technology-Medical,male,3.5
+Europe,Technology-Medical,male,3.5
+North America,Technology-Medical,female,3.4
+Europe,Technology-Medical,male,3.4
+North America,Technology-Medical,male,3.3
+South Asia,Technology-Medical,male,3.2
+North America,Technology-Medical,female,3.1
+North America,Technology-Medical,male,3.0
+Europe,Technology-Medical,male,2.8
+East Asia,Technology-Medical,male,2.7
+North America,Technology-Medical,male,2.6
+Europe,Technology-Medical,female,2.4
+South Asia,Technology-Medical,male,2.4
+East Asia,Technology-Medical,male,2.3
+East Asia,Technology-Medical,male,2.2
+South Asia,Technology-Medical,male,2.1
+North America,Technology-Medical,male,2.1
+East Asia,Technology-Medical,male,2.0
+North America,Technology-Medical,male,1.9
+North America,Technology-Medical,female,1.9
+North America,Technology-Medical,male,1.9
+North America,Technology-Medical,male,1.9
+East Asia,Technology-Medical,male,1.9
+East Asia,Technology-Medical,male,1.8
+East Asia,Technology-Medical,male,1.8
+Europe,Technology-Medical,male,1.8
+North America,Technology-Medical,male,1.8
+East Asia,Technology-Medical,male,1.8
+North America,Technology-Medical,male,1.8
+East Asia,Technology-Medical,male,1.7
+North America,Technology-Medical,male,1.7
+North America,Technology-Medical,male,1.6
+North America,Technology-Medical,male,1.6
+Middle East,Technology-Medical,male,1.5
+Middle East,Technology-Medical,male,1.5
+North America,Technology-Medical,male,1.5
+East Asia,Technology-Medical,male,1.5
+South Asia,Technology-Medical,male,1.5
+South Asia,Technology-Medical,male,1.5
+East Asia,Technology-Medical,female,1.4
+North America,Technology-Medical,male,1.3
+Sub-Saharan Africa,Technology-Medical,male,1.3
+Latin America,Technology-Medical,male,1.2
+Europe,Technology-Medical,male,1.2
+East Asia,Technology-Medical,male,1.2
+Middle East,Technology-Medical,male,1.2
+East Asia,Technology-Medical,male,1.2
+North America,Technology-Medical,male,1.1
+East Asia,Technology-Medical,male,1.1
+East Asia,Technology-Medical,male,1.1
+East Asia,Technology-Medical,male,1.1
+South Asia,Technology-Medical,male,1.1
+East Asia,Technology-Medical,male,1.1
+East Asia,Technology-Medical,male,1.0
+Europe,Technology-Medical,female,1.0
+South Asia,Technology-Medical,male,1.0
+Europe,Technology-Medical,male,1.0
+Europe,Technology-Medical,female,1.0
+North America,Technology-Medical,male,1.0
+East Asia,Technology-Medical,male,1.0
+East Asia,Technology-Medical,male,1.0
+East Asia,Technology-Medical,male,1.0

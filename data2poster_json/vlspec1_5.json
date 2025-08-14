@@ -1,24 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GrowthScore Distribution by Color and Sunlight for Mint",
+  "title": "SpiceJet Flight Prices by Stops and Source City",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
   },
   "transform": [
     {
-      "filter": "datum.Species == 'Mint'"
+      "filter": "datum.airline == 'SpiceJet'"
     },
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "field": "price",
+          "as": "avg_price"
         }
       ],
       "groupby": [
-        "Color",
-        "Sunlight"
+        "source_city",
+        "stops"
       ]
     }
   ],
@@ -27,45 +27,45 @@
   },
   "encoding": {
     "x": {
-      "field": "Color",
+      "field": "source_city",
       "type": "nominal",
-      "title": "Color",
+      "title": "Source City",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Sunlight"
+      "field": "stops"
     },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "avg_price",
       "type": "quantitative",
-      "title": "Average GrowthScore"
+      "title": "Average Price"
     },
     "color": {
-      "field": "Sunlight",
+      "field": "stops",
       "type": "nominal",
-      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
-      }
+      },
+      "title": "Stops"
     },
     "tooltip": [
       {
-        "field": "Color",
+        "field": "source_city",
         "type": "nominal",
-        "title": "Color"
+        "title": "Source City"
       },
       {
-        "field": "Sunlight",
+        "field": "stops",
         "type": "nominal",
-        "title": "Sunlight"
+        "title": "Stops"
       },
       {
-        "field": "avg_GrowthScore",
+        "field": "avg_price",
         "type": "quantitative",
-        "title": "Average GrowthScore",
+        "title": "Average Price",
         "format": ".2f"
       }
     ]

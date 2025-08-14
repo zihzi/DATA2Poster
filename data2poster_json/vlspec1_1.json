@@ -1,51 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Species GrowthScore by Sunlight",
+  "title": "Top 3 Airlines Price by Stops",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "field": "price",
+          "as": "avg_price"
         }
       ],
       "groupby": [
-        "Species",
-        "Sunlight"
+        "airline",
+        "stops"
       ]
     },
     {
       "joinaggregate": [
         {
-          "op": "mean",
-          "field": "avg_GrowthScore",
-          "as": "SpeciesMean"
+          "op": "sum",
+          "field": "avg_price",
+          "as": "airline_tot"
         }
       ],
       "groupby": [
-        "Species"
+        "airline"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "SpeciesRank"
+          "as": "airline_rank"
         }
       ],
       "sort": [
         {
-          "field": "SpeciesMean",
+          "field": "avg_price",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.SpeciesRank <= 3"
+      "filter": "datum.airline_rank <= 3"
     }
   ],
   "mark": {
@@ -53,45 +53,45 @@
   },
   "encoding": {
     "x": {
-      "field": "Species",
+      "field": "airline",
       "type": "nominal",
-      "title": "Species",
+      "title": "Airline",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Sunlight"
+      "field": "stops"
     },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "avg_price",
       "type": "quantitative",
-      "title": "Average GrowthScore"
+      "title": "Average Price"
     },
     "color": {
-      "field": "Sunlight",
+      "field": "stops",
       "type": "nominal",
-      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
-      }
+      },
+      "title": "Stops"
     },
     "tooltip": [
       {
-        "field": "Species",
+        "field": "airline",
         "type": "nominal",
-        "title": "Species"
+        "title": "Airline"
       },
       {
-        "field": "Sunlight",
+        "field": "stops",
         "type": "nominal",
-        "title": "Sunlight"
+        "title": "Stops"
       },
       {
-        "field": "avg_GrowthScore",
+        "field": "avg_price",
         "type": "quantitative",
-        "title": "Average GrowthScore",
+        "title": "Average Price",
         "format": ".2f"
       }
     ]

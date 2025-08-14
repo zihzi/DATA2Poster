@@ -1,0 +1,774 @@
+Country,Species,Year,Total Rating
+United States,Arabica,2012,86.25
+United States,Arabica,2012,85.58
+United States,Arabica,2012,85.42
+United States,Arabica,2012,84.83
+United States,Arabica,2012,84.42
+United States,Arabica,2012,84.25
+United States,Arabica,2012,84.08
+United States,Arabica,2012,83.42
+United States,Arabica,2012,83.33
+United States,Arabica,2012,83.25
+United States,Arabica,2012,83.08
+United States,Arabica,2012,83.08
+United States,Arabica,2012,82.08
+United States,Arabica,2012,81.83
+United States,Arabica,2012,79.83
+United States,Arabica,2012,78.25
+United States,Arabica,2012,73.67
+United States,Robusta,2012,79.33
+United States,Arabica,2013,83.75
+United States,Arabica,2013,83.17
+United States,Arabica,2013,83.08
+United States,Arabica,2013,82.75
+United States,Arabica,2013,82.75
+United States,Arabica,2013,82.25
+United States,Arabica,2013,80.5
+United States,Arabica,2013,78.75
+United States,Arabica,2013,77.58
+United States,Arabica,2013,77.25
+United States,Arabica,2013,76.17
+United States,Arabica,2014,85.08
+United States,Arabica,2014,83.33
+United States,Arabica,2014,81.08
+United States,Arabica,2014,80.92
+United States,Arabica,2014,80.25
+United States,Arabica,2014,79.92
+United States,Arabica,2014,78.33
+United States,Arabica,2014,78.25
+United States,Arabica,2014,78.0
+United States,Arabica,2014,76.25
+United States,Arabica,2014,74.42
+United States,Arabica,2014,72.58
+United States,Robusta,2014,77.17
+Brazil,Arabica,2012,85.0
+Brazil,Arabica,2012,83.17
+Brazil,Arabica,2012,83.17
+Brazil,Arabica,2012,82.42
+Brazil,Arabica,2012,82.33
+Brazil,Arabica,2012,82.25
+Brazil,Arabica,2012,82.0
+Brazil,Arabica,2012,81.92
+Brazil,Arabica,2012,81.17
+Brazil,Arabica,2013,88.83
+Brazil,Arabica,2013,81.75
+Brazil,Arabica,2013,81.17
+Brazil,Arabica,2014,83.0
+Brazil,Arabica,2014,82.67
+Brazil,Arabica,2014,82.17
+Brazil,Arabica,2014,81.0
+Brazil,Arabica,2016,83.92
+Brazil,Arabica,2016,83.67
+Brazil,Arabica,2016,83.0
+Brazil,Arabica,2016,83.0
+Brazil,Arabica,2016,82.67
+Brazil,Arabica,2016,82.33
+Brazil,Arabica,2016,82.33
+Brazil,Arabica,2016,82.17
+Brazil,Arabica,2016,82.08
+Brazil,Arabica,2016,82.0
+Brazil,Arabica,2016,81.83
+Brazil,Arabica,2016,81.08
+Ethiopia,Arabica,2012,84.08
+Ethiopia,Arabica,2013,87.08
+Ethiopia,Arabica,2013,84.0
+Ethiopia,Arabica,2014,89.0
+Ethiopia,Arabica,2014,88.25
+Ethiopia,Arabica,2014,88.08
+Ethiopia,Arabica,2014,87.25
+Ethiopia,Arabica,2014,86.25
+Ethiopia,Arabica,2014,85.08
+Ethiopia,Arabica,2014,84.17
+Ethiopia,Arabica,2014,83.83
+Ethiopia,Arabica,2014,83.5
+Ethiopia,Arabica,2015,85.5
+Ethiopia,Arabica,2016,85.08
+Ethiopia,Arabica,2016,81.08
+Ethiopia,Arabica,2017,85.75
+Ethiopia,Arabica,2017,84.0
+Indonesia,Arabica,2017,84.13
+Thailand,Arabica,2015,83.92
+Colombia,Arabica,2012,85.08
+Colombia,Arabica,2012,83.58
+Colombia,Arabica,2012,83.0
+Colombia,Arabica,2012,82.42
+Colombia,Arabica,2012,82.33
+Colombia,Arabica,2013,83.33
+Colombia,Arabica,2013,83.0
+Colombia,Arabica,2013,83.0
+Colombia,Arabica,2013,82.92
+Colombia,Arabica,2013,82.83
+Colombia,Arabica,2013,72.83
+Colombia,Arabica,2015,85.08
+Colombia,Arabica,2015,84.33
+Colombia,Arabica,2015,84.25
+Colombia,Arabica,2015,83.42
+Colombia,Arabica,2016,83.5
+Mexico,Arabica,2012,83.83
+Mexico,Arabica,2012,83.83
+Mexico,Arabica,2012,83.75
+Mexico,Arabica,2012,83.5
+Mexico,Arabica,2012,82.92
+Mexico,Arabica,2012,82.75
+Mexico,Arabica,2012,82.33
+Mexico,Arabica,2012,81.58
+Mexico,Arabica,2012,81.58
+Mexico,Arabica,2012,81.5
+Mexico,Arabica,2012,81.17
+Mexico,Arabica,2012,79.92
+Mexico,Arabica,2014,82.67
+Uganda,Arabica,2012,84.25
+Uganda,Arabica,2013,85.92
+Uganda,Arabica,2013,84.83
+Uganda,Arabica,2013,83.75
+Uganda,Arabica,2013,82.58
+Uganda,Arabica,2013,81.0
+Uganda,Arabica,2015,83.0
+Guatemala,Arabica,2012,84.17
+Guatemala,Arabica,2012,83.67
+Guatemala,Arabica,2012,82.58
+Guatemala,Arabica,2012,82.5
+Guatemala,Arabica,2012,82.0
+Guatemala,Arabica,2013,83.42
+Guatemala,Arabica,2014,85.33
+Guatemala,Arabica,2014,84.0
+Guatemala,Arabica,2014,82.92
+Guatemala,Arabica,2014,80.58
+Kenya,Arabica,2014,86.08
+Kenya,Arabica,2014,85.5
+Honduras,Arabica,2013,83.17
+Honduras,Arabica,2014,81.83
+Honduras,Arabica,2014,81.67
+Honduras,Arabica,2014,81.0
+Honduras,Arabica,2014,78.0
+Honduras,Arabica,2014,76.0
+Honduras,Arabica,2015,81.17
+Honduras,Arabica,2015,80.75
+Honduras,Arabica,2015,80.75
+Honduras,Arabica,2016,80.25
+Honduras,Arabica,2017,82.75
+United States,Arabica,2012,83.08
+United States,Arabica,2012,82.92
+United States,Arabica,2012,82.75
+United States,Arabica,2012,82.5
+United States,Arabica,2012,82.08
+United States,Arabica,2012,81.67
+United States,Arabica,2012,81.08
+United States,Arabica,2012,80.83
+United States,Arabica,2012,80.33
+United States,Arabica,2013,83.75
+United States,Arabica,2013,83.0
+United States,Arabica,2013,81.08
+United States,Arabica,2013,79.08
+United States,Arabica,2014,87.92
+United States,Arabica,2014,87.92
+United States,Arabica,2014,87.58
+United States,Arabica,2014,87.25
+United States,Arabica,2014,87.08
+United States,Arabica,2014,86.17
+Brazil,Arabica,2012,82.33
+Brazil,Arabica,2014,77.83
+Ethiopia,Arabica,2014,90.58
+Ethiopia,Arabica,2014,89.92
+Ethiopia,Arabica,2014,88.83
+Ethiopia,Arabica,2014,85.83
+Ethiopia,Arabica,2014,84.67
+Ethiopia,Arabica,2014,83.58
+Ethiopia,Arabica,2015,85.42
+Indonesia,Arabica,2012,83.67
+Indonesia,Arabica,2012,81.5
+Indonesia,Arabica,2016,84.67
+Indonesia,Arabica,2016,78.17
+Indonesia,Arabica,2017,82.5
+Indonesia,Arabica,2017,82.08
+Thailand,Arabica,2012,86.17
+Thailand,Arabica,2012,84.0
+Thailand,Arabica,2012,82.67
+Thailand,Arabica,2012,81.0
+Thailand,Arabica,2012,80.0
+Thailand,Arabica,2013,82.0
+Thailand,Arabica,2013,79.75
+Thailand,Arabica,2013,79.67
+Thailand,Arabica,2014,83.67
+Thailand,Arabica,2014,83.17
+Thailand,Arabica,2014,82.58
+Thailand,Arabica,2014,82.5
+Thailand,Arabica,2014,82.17
+Colombia,Arabica,2012,84.92
+Colombia,Arabica,2012,84.58
+Colombia,Arabica,2012,84.58
+Colombia,Arabica,2012,84.17
+Colombia,Arabica,2012,83.67
+Colombia,Arabica,2012,83.58
+Colombia,Arabica,2012,83.5
+Colombia,Arabica,2012,83.42
+Colombia,Arabica,2012,83.33
+Colombia,Arabica,2012,83.25
+Colombia,Arabica,2012,83.25
+Colombia,Arabica,2012,83.17
+Colombia,Arabica,2012,83.17
+Colombia,Arabica,2012,83.0
+Colombia,Arabica,2012,83.0
+Colombia,Arabica,2012,83.0
+Colombia,Arabica,2012,82.75
+Colombia,Arabica,2012,82.75
+Colombia,Arabica,2012,82.67
+Colombia,Arabica,2012,82.58
+Colombia,Arabica,2012,82.58
+Colombia,Arabica,2012,82.5
+Colombia,Arabica,2012,82.25
+Colombia,Arabica,2012,82.25
+Colombia,Arabica,2012,80.25
+Colombia,Arabica,2013,86.0
+Colombia,Arabica,2013,85.92
+Colombia,Arabica,2013,84.58
+Colombia,Arabica,2013,84.33
+Colombia,Arabica,2013,84.25
+Colombia,Arabica,2013,84.0
+Colombia,Arabica,2013,83.83
+Colombia,Arabica,2013,83.75
+Colombia,Arabica,2013,83.75
+Colombia,Arabica,2013,83.67
+Colombia,Arabica,2013,83.67
+Colombia,Arabica,2013,83.5
+Colombia,Arabica,2013,83.5
+Colombia,Arabica,2013,83.25
+Colombia,Arabica,2013,83.0
+Colombia,Arabica,2013,83.0
+Colombia,Arabica,2013,82.92
+Colombia,Arabica,2013,82.92
+Colombia,Arabica,2013,82.83
+Colombia,Arabica,2013,82.75
+Colombia,Arabica,2013,82.58
+Colombia,Arabica,2013,82.58
+Colombia,Arabica,2013,82.5
+Colombia,Arabica,2013,82.42
+Colombia,Arabica,2013,82.33
+Colombia,Arabica,2013,82.33
+Colombia,Arabica,2013,82.17
+Colombia,Arabica,2013,82.08
+Colombia,Arabica,2013,82.0
+Colombia,Arabica,2013,81.83
+Colombia,Arabica,2013,79.5
+Colombia,Arabica,2013,79.33
+Colombia,Arabica,2014,84.42
+Colombia,Arabica,2014,84.08
+Colombia,Arabica,2014,84.0
+Colombia,Arabica,2014,84.0
+Colombia,Arabica,2014,83.92
+Colombia,Arabica,2014,83.92
+Colombia,Arabica,2014,83.75
+Colombia,Arabica,2014,83.75
+Colombia,Arabica,2014,83.5
+Colombia,Arabica,2014,83.5
+Colombia,Arabica,2014,83.17
+Colombia,Arabica,2014,83.17
+Colombia,Arabica,2014,82.83
+Colombia,Arabica,2014,82.75
+Colombia,Arabica,2014,82.75
+Colombia,Arabica,2015,85.25
+Colombia,Arabica,2015,84.92
+Colombia,Arabica,2015,84.25
+Colombia,Arabica,2015,84.25
+Colombia,Arabica,2015,84.17
+Colombia,Arabica,2015,83.92
+Colombia,Arabica,2015,83.58
+Colombia,Arabica,2015,83.5
+Colombia,Arabica,2015,83.33
+Colombia,Arabica,2015,82.67
+Colombia,Arabica,2015,79.92
+Colombia,Arabica,2016,85.0
+Colombia,Arabica,2016,84.92
+Colombia,Arabica,2016,84.58
+Colombia,Arabica,2016,84.58
+Colombia,Arabica,2016,84.17
+Colombia,Arabica,2016,83.75
+Colombia,Arabica,2016,83.58
+Colombia,Arabica,2016,83.5
+Colombia,Arabica,2016,83.42
+Colombia,Arabica,2016,83.33
+Colombia,Arabica,2016,83.33
+Colombia,Arabica,2016,83.33
+Colombia,Arabica,2016,83.08
+Colombia,Arabica,2016,83.08
+Colombia,Arabica,2016,82.42
+Colombia,Arabica,2016,81.33
+Colombia,Arabica,2016,81.0
+Colombia,Arabica,2017,83.75
+Colombia,Arabica,2017,82.92
+Mexico,Arabica,2012,87.17
+Mexico,Arabica,2012,84.67
+Mexico,Arabica,2012,84.5
+Mexico,Arabica,2012,84.5
+Mexico,Arabica,2012,84.42
+Mexico,Arabica,2012,84.33
+Mexico,Arabica,2012,84.25
+Mexico,Arabica,2012,84.25
+Mexico,Arabica,2012,84.08
+Mexico,Arabica,2012,83.92
+Mexico,Arabica,2012,83.92
+Mexico,Arabica,2012,83.92
+Mexico,Arabica,2012,83.67
+Mexico,Arabica,2012,83.58
+Mexico,Arabica,2012,83.5
+Mexico,Arabica,2012,83.25
+Mexico,Arabica,2012,83.17
+Mexico,Arabica,2012,83.17
+Mexico,Arabica,2012,83.17
+Mexico,Arabica,2012,83.17
+Mexico,Arabica,2012,83.08
+Mexico,Arabica,2012,83.0
+Mexico,Arabica,2012,83.0
+Mexico,Arabica,2012,82.92
+Mexico,Arabica,2012,82.83
+Mexico,Arabica,2012,82.83
+Mexico,Arabica,2012,82.83
+Mexico,Arabica,2012,82.75
+Mexico,Arabica,2012,82.67
+Mexico,Arabica,2012,82.67
+Mexico,Arabica,2012,82.58
+Mexico,Arabica,2012,82.58
+Mexico,Arabica,2012,82.5
+Mexico,Arabica,2012,82.5
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.42
+Mexico,Arabica,2012,82.33
+Mexico,Arabica,2012,82.33
+Mexico,Arabica,2012,82.25
+Mexico,Arabica,2012,82.25
+Mexico,Arabica,2012,82.25
+Mexico,Arabica,2012,82.25
+Mexico,Arabica,2012,82.25
+Mexico,Arabica,2012,82.17
+Mexico,Arabica,2012,82.17
+Mexico,Arabica,2012,82.17
+Mexico,Arabica,2012,82.08
+Mexico,Arabica,2012,82.08
+Mexico,Arabica,2012,82.08
+Mexico,Arabica,2012,82.0
+Mexico,Arabica,2012,81.92
+Mexico,Arabica,2012,81.92
+Mexico,Arabica,2012,81.83
+Mexico,Arabica,2012,81.75
+Mexico,Arabica,2012,81.75
+Mexico,Arabica,2012,81.75
+Mexico,Arabica,2012,81.75
+Mexico,Arabica,2012,81.75
+Mexico,Arabica,2012,81.67
+Mexico,Arabica,2012,81.67
+Mexico,Arabica,2012,81.67
+Mexico,Arabica,2012,81.67
+Mexico,Arabica,2012,81.5
+Mexico,Arabica,2012,81.5
+Mexico,Arabica,2012,81.5
+Mexico,Arabica,2012,81.42
+Mexico,Arabica,2012,81.42
+Mexico,Arabica,2012,81.33
+Mexico,Arabica,2012,81.33
+Mexico,Arabica,2012,81.25
+Mexico,Arabica,2012,81.08
+Mexico,Arabica,2012,81.08
+Mexico,Arabica,2012,81.08
+Mexico,Arabica,2012,81.08
+Mexico,Arabica,2012,81.0
+Mexico,Arabica,2012,81.0
+Mexico,Arabica,2012,80.92
+Mexico,Arabica,2012,80.83
+Mexico,Arabica,2012,80.75
+Mexico,Arabica,2012,80.5
+Mexico,Arabica,2012,80.42
+Mexico,Arabica,2012,80.42
+Mexico,Arabica,2012,80.25
+Mexico,Arabica,2012,80.17
+Mexico,Arabica,2012,80.17
+Mexico,Arabica,2012,80.08
+Mexico,Arabica,2012,80.08
+Mexico,Arabica,2012,80.0
+Mexico,Arabica,2012,80.0
+Mexico,Arabica,2012,79.92
+Mexico,Arabica,2012,79.92
+Mexico,Arabica,2012,79.92
+Mexico,Arabica,2012,79.83
+Mexico,Arabica,2012,79.75
+Mexico,Arabica,2012,79.75
+Mexico,Arabica,2012,79.75
+Mexico,Arabica,2012,79.67
+Mexico,Arabica,2012,79.67
+Mexico,Arabica,2012,79.58
+Mexico,Arabica,2012,79.58
+Mexico,Arabica,2012,79.5
+Mexico,Arabica,2012,79.5
+Mexico,Arabica,2012,79.33
+Mexico,Arabica,2012,79.33
+Mexico,Arabica,2012,79.25
+Mexico,Arabica,2012,79.17
+Mexico,Arabica,2012,79.17
+Mexico,Arabica,2012,79.08
+Mexico,Arabica,2012,79.08
+Mexico,Arabica,2012,78.92
+Mexico,Arabica,2012,78.75
+Mexico,Arabica,2012,78.75
+Mexico,Arabica,2012,78.67
+Mexico,Arabica,2012,78.58
+Mexico,Arabica,2012,78.58
+Mexico,Arabica,2012,78.5
+Mexico,Arabica,2012,78.42
+Mexico,Arabica,2012,78.08
+Mexico,Arabica,2012,78.0
+Mexico,Arabica,2012,77.92
+Mexico,Arabica,2012,77.5
+Mexico,Arabica,2012,77.33
+Mexico,Arabica,2012,77.17
+Mexico,Arabica,2012,76.42
+Mexico,Arabica,2012,76.17
+Mexico,Arabica,2012,75.17
+Mexico,Arabica,2012,75.17
+Mexico,Arabica,2012,75.17
+Mexico,Arabica,2012,75.0
+Mexico,Arabica,2012,74.92
+Mexico,Arabica,2012,74.83
+Mexico,Arabica,2012,74.33
+Mexico,Arabica,2012,74.0
+Mexico,Arabica,2012,73.83
+Mexico,Arabica,2012,71.08
+Mexico,Arabica,2012,71.0
+Mexico,Arabica,2012,68.33
+Mexico,Arabica,2013,83.25
+Mexico,Arabica,2013,83.17
+Mexico,Arabica,2013,82.75
+Mexico,Arabica,2013,82.5
+Mexico,Arabica,2013,82.42
+Mexico,Arabica,2013,82.42
+Mexico,Arabica,2013,82.33
+Mexico,Arabica,2013,82.25
+Mexico,Arabica,2013,82.17
+Mexico,Arabica,2013,81.92
+Mexico,Arabica,2013,81.67
+Mexico,Arabica,2013,81.58
+Mexico,Arabica,2013,81.5
+Mexico,Arabica,2013,79.92
+Mexico,Arabica,2013,79.75
+Mexico,Arabica,2013,79.75
+Mexico,Arabica,2013,79.75
+Mexico,Arabica,2013,79.67
+Mexico,Arabica,2013,78.92
+Mexico,Arabica,2013,74.67
+Mexico,Arabica,2014,82.58
+Mexico,Arabica,2014,82.42
+Mexico,Arabica,2014,82.33
+Mexico,Arabica,2014,81.83
+Mexico,Arabica,2014,81.67
+Mexico,Arabica,2014,81.42
+Mexico,Arabica,2014,80.67
+Mexico,Arabica,2014,80.0
+Mexico,Arabica,2014,72.92
+Mexico,Arabica,2014,70.75
+Mexico,Arabica,2015,82.92
+Mexico,Arabica,2015,81.83
+Mexico,Arabica,2016,80.25
+Mexico,Arabica,2017,83.92
+Mexico,Arabica,2017,83.25
+Mexico,Arabica,2017,81.42
+Mexico,Arabica,2017,80.92
+Uganda,Arabica,2012,86.0
+Uganda,Arabica,2012,84.67
+Uganda,Arabica,2012,84.17
+Uganda,Arabica,2012,84.0
+Uganda,Arabica,2013,86.83
+Uganda,Arabica,2013,85.5
+Uganda,Arabica,2013,85.42
+Uganda,Arabica,2013,83.58
+Uganda,Arabica,2013,83.0
+Uganda,Arabica,2013,82.92
+Uganda,Arabica,2013,82.92
+Uganda,Arabica,2013,82.67
+Uganda,Arabica,2014,83.17
+Uganda,Arabica,2015,83.42
+Uganda,Arabica,2015,83.25
+Uganda,Arabica,2015,83.0
+Uganda,Arabica,2016,85.0
+Uganda,Arabica,2016,84.5
+Guatemala,Arabica,2012,85.83
+Guatemala,Arabica,2012,85.83
+Guatemala,Arabica,2012,85.17
+Guatemala,Arabica,2012,84.67
+Guatemala,Arabica,2012,84.67
+Guatemala,Arabica,2012,84.5
+Guatemala,Arabica,2012,83.75
+Guatemala,Arabica,2012,83.67
+Guatemala,Arabica,2012,83.67
+Guatemala,Arabica,2012,83.5
+Guatemala,Arabica,2012,83.5
+Guatemala,Arabica,2012,83.25
+Guatemala,Arabica,2012,83.17
+Guatemala,Arabica,2012,83.0
+Guatemala,Arabica,2012,82.92
+Guatemala,Arabica,2012,82.83
+Guatemala,Arabica,2012,82.67
+Guatemala,Arabica,2012,82.33
+Guatemala,Arabica,2012,82.33
+Guatemala,Arabica,2012,82.17
+Guatemala,Arabica,2012,82.0
+Guatemala,Arabica,2012,81.67
+Guatemala,Arabica,2012,81.5
+Guatemala,Arabica,2012,81.17
+Guatemala,Arabica,2012,80.67
+Guatemala,Arabica,2012,80.67
+Guatemala,Arabica,2012,80.25
+Guatemala,Arabica,2012,80.17
+Guatemala,Arabica,2012,79.75
+Guatemala,Arabica,2012,79.33
+Guatemala,Arabica,2012,78.33
+Guatemala,Arabica,2012,78.33
+Guatemala,Arabica,2012,77.92
+Guatemala,Arabica,2012,76.33
+Guatemala,Arabica,2012,75.58
+Guatemala,Arabica,2012,75.58
+Guatemala,Arabica,2012,74.75
+Guatemala,Arabica,2012,74.75
+Guatemala,Arabica,2012,59.83
+Guatemala,Arabica,2013,85.5
+Guatemala,Arabica,2013,84.5
+Guatemala,Arabica,2013,84.17
+Guatemala,Arabica,2013,84.17
+Guatemala,Arabica,2013,83.83
+Guatemala,Arabica,2013,83.67
+Guatemala,Arabica,2013,83.67
+Guatemala,Arabica,2013,83.5
+Guatemala,Arabica,2013,83.42
+Guatemala,Arabica,2013,83.33
+Guatemala,Arabica,2013,83.17
+Guatemala,Arabica,2013,82.92
+Guatemala,Arabica,2013,82.5
+Guatemala,Arabica,2013,82.5
+Guatemala,Arabica,2013,82.42
+Guatemala,Arabica,2013,82.33
+Guatemala,Arabica,2013,81.83
+Guatemala,Arabica,2013,81.58
+Guatemala,Arabica,2013,81.42
+Guatemala,Arabica,2013,81.25
+Guatemala,Arabica,2013,80.83
+Guatemala,Arabica,2013,80.67
+Guatemala,Arabica,2013,80.5
+Guatemala,Arabica,2013,80.33
+Guatemala,Arabica,2013,80.17
+Guatemala,Arabica,2013,79.67
+Guatemala,Arabica,2013,79.42
+Guatemala,Arabica,2013,78.75
+Guatemala,Arabica,2013,78.0
+Guatemala,Arabica,2013,77.83
+Guatemala,Arabica,2013,77.42
+Guatemala,Arabica,2013,74.33
+Guatemala,Arabica,2014,84.58
+Guatemala,Arabica,2014,84.58
+Guatemala,Arabica,2014,84.08
+Guatemala,Arabica,2014,83.83
+Guatemala,Arabica,2014,83.67
+Guatemala,Arabica,2014,83.42
+Guatemala,Arabica,2014,83.25
+Guatemala,Arabica,2014,83.17
+Guatemala,Arabica,2014,83.0
+Guatemala,Arabica,2014,82.92
+Guatemala,Arabica,2014,82.83
+Guatemala,Arabica,2014,82.75
+Guatemala,Arabica,2014,82.33
+Guatemala,Arabica,2014,82.17
+Guatemala,Arabica,2014,81.5
+Guatemala,Arabica,2014,81.42
+Guatemala,Arabica,2014,81.25
+Guatemala,Arabica,2014,80.92
+Guatemala,Arabica,2014,80.5
+Guatemala,Arabica,2014,79.42
+Guatemala,Arabica,2014,79.0
+Guatemala,Arabica,2014,78.58
+Guatemala,Arabica,2014,78.33
+Guatemala,Arabica,2014,78.0
+Guatemala,Arabica,2014,77.33
+Guatemala,Arabica,2015,84.67
+Guatemala,Arabica,2015,84.25
+Guatemala,Arabica,2015,84.0
+Guatemala,Arabica,2015,83.17
+Guatemala,Arabica,2015,83.17
+Guatemala,Arabica,2015,83.0
+Guatemala,Arabica,2015,83.0
+Guatemala,Arabica,2015,83.0
+Guatemala,Arabica,2015,82.83
+Guatemala,Arabica,2015,82.33
+Guatemala,Arabica,2015,81.83
+Guatemala,Arabica,2015,81.0
+Guatemala,Arabica,2015,80.75
+Guatemala,Arabica,2015,79.17
+Guatemala,Arabica,2016,85.92
+Guatemala,Arabica,2016,84.25
+Guatemala,Arabica,2016,84.17
+Guatemala,Arabica,2016,84.17
+Guatemala,Arabica,2016,84.17
+Guatemala,Arabica,2016,84.08
+Guatemala,Arabica,2016,83.83
+Guatemala,Arabica,2016,83.58
+Guatemala,Arabica,2016,83.5
+Guatemala,Arabica,2016,83.25
+Guatemala,Arabica,2016,83.17
+Guatemala,Arabica,2016,82.5
+Guatemala,Arabica,2016,82.42
+Guatemala,Arabica,2016,82.25
+Guatemala,Arabica,2016,81.42
+Guatemala,Arabica,2016,81.0
+Guatemala,Arabica,2016,79.75
+Guatemala,Arabica,2016,79.67
+Guatemala,Arabica,2016,79.17
+Guatemala,Arabica,2017,84.17
+Guatemala,Arabica,2017,83.42
+Guatemala,Arabica,2017,83.17
+Guatemala,Arabica,2017,82.83
+Guatemala,Arabica,2017,82.75
+Guatemala,Arabica,2017,82.75
+Guatemala,Arabica,2017,82.75
+Guatemala,Arabica,2017,82.75
+Guatemala,Arabica,2017,82.75
+Guatemala,Arabica,2017,82.58
+Guatemala,Arabica,2017,82.42
+Guatemala,Arabica,2017,82.42
+Guatemala,Arabica,2017,81.92
+Guatemala,Arabica,2017,81.92
+Guatemala,Arabica,2017,81.83
+Guatemala,Arabica,2017,81.75
+Guatemala,Arabica,2017,81.67
+Guatemala,Arabica,2017,81.67
+Guatemala,Arabica,2017,81.58
+Guatemala,Arabica,2017,81.5
+Guatemala,Arabica,2017,80.92
+Guatemala,Arabica,2017,80.5
+Guatemala,Arabica,2017,79.83
+Guatemala,Arabica,2017,79.17
+Guatemala,Arabica,2017,79.08
+Kenya,Arabica,2012,85.33
+Kenya,Arabica,2012,85.33
+Kenya,Arabica,2012,85.0
+Kenya,Arabica,2012,84.67
+Kenya,Arabica,2012,84.5
+Kenya,Arabica,2012,84.0
+Kenya,Arabica,2012,84.0
+Kenya,Arabica,2013,86.25
+Kenya,Arabica,2013,86.0
+Kenya,Arabica,2013,84.58
+Kenya,Arabica,2013,84.58
+Kenya,Arabica,2013,84.17
+Kenya,Arabica,2014,84.75
+Kenya,Arabica,2014,83.17
+Kenya,Arabica,2015,85.0
+Kenya,Arabica,2017,83.67
+Kenya,Arabica,2017,82.83
+Kenya,Arabica,2017,80.92
+Kenya,Arabica,2017,79.83
+Costa Rica,Arabica,2012,84.67
+Costa Rica,Arabica,2012,79.17
+Costa Rica,Arabica,2013,83.83
+Costa Rica,Arabica,2013,83.33
+Costa Rica,Arabica,2013,83.0
+Costa Rica,Arabica,2013,82.58
+Costa Rica,Arabica,2013,82.08
+Costa Rica,Arabica,2013,82.0
+Costa Rica,Arabica,2013,81.67
+Costa Rica,Arabica,2013,79.75
+Costa Rica,Arabica,2014,87.17
+Costa Rica,Arabica,2014,85.33
+Costa Rica,Arabica,2014,85.33
+Costa Rica,Arabica,2014,84.67
+Costa Rica,Arabica,2014,84.17
+Costa Rica,Arabica,2014,83.33
+Costa Rica,Arabica,2014,83.08
+Costa Rica,Arabica,2014,81.5
+Costa Rica,Arabica,2014,81.17
+Costa Rica,Arabica,2014,81.08
+Costa Rica,Arabica,2014,80.75
+Costa Rica,Arabica,2014,77.92
+Costa Rica,Arabica,2014,71.75
+Costa Rica,Arabica,2015,84.67
+Costa Rica,Arabica,2015,83.83
+Costa Rica,Arabica,2015,83.5
+Costa Rica,Arabica,2015,83.25
+Costa Rica,Arabica,2015,82.33
+Costa Rica,Arabica,2015,82.33
+Costa Rica,Arabica,2015,82.08
+Costa Rica,Arabica,2015,81.83
+Costa Rica,Arabica,2015,81.58
+Costa Rica,Arabica,2015,81.17
+Costa Rica,Arabica,2015,80.67
+Costa Rica,Arabica,2016,85.0
+Costa Rica,Arabica,2016,84.17
+Costa Rica,Arabica,2016,83.42
+Costa Rica,Arabica,2016,82.75
+Costa Rica,Arabica,2017,84.0
+Honduras,Arabica,2012,82.42
+Honduras,Arabica,2012,81.92
+Honduras,Arabica,2014,84.75
+Honduras,Arabica,2014,82.0
+Honduras,Arabica,2014,81.33
+Honduras,Arabica,2014,80.58
+Honduras,Arabica,2014,79.0
+Honduras,Arabica,2014,73.42
+Honduras,Arabica,2014,69.33
+Honduras,Arabica,2014,69.17
+Honduras,Arabica,2014,69.17
+Honduras,Arabica,2015,82.25
+Honduras,Arabica,2015,82.17
+Honduras,Arabica,2015,82.17
+Honduras,Arabica,2015,81.83
+Honduras,Arabica,2015,81.42
+Honduras,Arabica,2015,81.33
+Honduras,Arabica,2015,81.25
+Honduras,Arabica,2015,80.75
+Honduras,Arabica,2015,80.17
+Honduras,Arabica,2016,84.33
+Honduras,Arabica,2016,83.67
+Honduras,Arabica,2016,83.17
+Honduras,Arabica,2016,81.67
+Honduras,Arabica,2017,84.0
+Honduras,Arabica,2017,82.5
+Honduras,Arabica,2017,82.42
+Honduras,Arabica,2017,82.33
+Honduras,Arabica,2017,81.92
+Honduras,Arabica,2017,81.5
+Honduras,Arabica,2017,80.5
+Honduras,Arabica,2017,79.17
+United States,Arabica,2014,82.83
+Indonesia,Arabica,2014,81.83
+Indonesia,Arabica,2015,81.83
+Indonesia,Arabica,2017,84.42
+Indonesia,Arabica,2017,82.75
+Guatemala,Arabica,2014,84.25
+Guatemala,Arabica,2014,84.0
+Costa Rica,Arabica,2014,84.67
+Brazil,Arabica,2012,83.58
+Brazil,Arabica,2012,83.25
+Brazil,Arabica,2012,82.42
+Brazil,Arabica,2012,82.0
+Brazil,Arabica,2012,82.0
+Brazil,Arabica,2014,83.42
+Indonesia,Arabica,2012,85.17
+Indonesia,Arabica,2013,81.67
+Indonesia,Arabica,2015,83.5
+Indonesia,Arabica,2015,82.58
+Indonesia,Arabica,2015,80.67
+Mexico,Arabica,2012,84.92
+Mexico,Arabica,2012,83.0
+Mexico,Arabica,2012,82.5
+Mexico,Arabica,2012,81.92
+Mexico,Arabica,2012,81.83
+Mexico,Arabica,2012,81.5
+Mexico,Arabica,2012,80.83
+Mexico,Arabica,2012,79.0
+Mexico,Arabica,2012,78.75
+Uganda,Arabica,2014,86.0
+Costa Rica,Arabica,2012,84.58
+Brazil,Arabica,2015,83.08
+Brazil,Arabica,2015,82.83
+Brazil,Arabica,2015,82.75
+Brazil,Arabica,2016,82.58
+Costa Rica,Arabica,2016,83.25
+Costa Rica,Arabica,2016,81.83
