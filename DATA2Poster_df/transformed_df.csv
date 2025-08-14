@@ -1,4 +1,7 @@
-Product,Market Size,total_profit,ProductTotal,product_rank
-Colombian,Major Market,26190,29089,1.0
-Lemon,Small Market,11137,25311,2.0
-Earl Grey,Major Market,10656,24372,3.0
+Species,Sunlight,avg_GrowthScore,SpeciesRank
+Basil,High,44.24714285714286,3
+Basil,Low,25.80263157894737,3
+Lavender,High,41.86944444444444,2
+Lavender,Low,26.223684210526315,2
+Rose,High,41.06928571428572,1
+Rose,Low,26.361,1

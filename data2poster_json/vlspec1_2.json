@@ -1,103 +1,52 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Products by Market Size Profit",
+  "title": "Average GrowthScore by Color",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Profit",
-          "as": "total_profit"
+          "op": "mean",
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
         }
       ],
       "groupby": [
-        "Product",
-        "Market Size"
+        "Color"
       ]
-    },
-    {
-      "joinaggregate": [
-        {
-          "op": "sum",
-          "field": "total_profit",
-          "as": "ProductTotal"
-        }
-      ],
-      "groupby": [
-        "Product"
-      ]
-    },
-    {
-      "window": [
-        {
-          "op": "dense_rank",
-          "as": "product_rank"
-        }
-      ],
-      "sort": [
-        {
-          "field": "ProductTotal",
-          "order": "descending"
-        }
-      ]
-    },
-    {
-      "filter": "datum.product_rank <= 3"
     }
   ],
   "mark": {
-    "type": "bar"
+    "type": "bar",
+    "color": "#4E79A7"
   },
   "encoding": {
     "x": {
-      "field": "Product",
+      "field": "Color",
       "type": "nominal",
-      "title": "Product",
       "axis": {
         "labelAngle": -30,
+        "title": "Color",
         "tickCount": 6
-      },
-      "sort": {
-        "field": "ProductTotal",
-        "order": "descending"
       }
-    },
-    "xOffset": {
-      "field": "Market Size"
     },
     "y": {
-      "field": "total_profit",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
-      "title": "Total Profit",
-      "axis": {
-        "tickCount": 6
-      }
-    },
-    "color": {
-      "field": "Market Size",
-      "type": "nominal",
-      "title": "Market Size",
-      "scale": {
-        "scheme": "tableau10"
-      }
+      "title": "Average GrowthScore"
     },
     "tooltip": [
       {
-        "field": "Product",
+        "field": "Color",
         "type": "nominal"
       },
       {
-        "field": "Market Size",
-        "type": "nominal"
-      },
-      {
-        "field": "total_profit",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
-        "title": "Total Profit",
-        "format": ","
+        "title": "Average GrowthScore",
+        "format": ".2f"
       }
     ]
   },
@@ -109,7 +58,7 @@
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 28,
+      "labelFontSize": 30,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10

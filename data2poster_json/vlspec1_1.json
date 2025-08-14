@@ -1,51 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Products by Profit per Market Size",
+  "title": "Bottom 3 Species GrowthScore by Sunlight",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "Profit",
-          "as": "avg_profit"
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
         }
       ],
       "groupby": [
-        "Product",
-        "Market Size"
+        "Species",
+        "Sunlight"
       ]
     },
     {
       "joinaggregate": [
         {
           "op": "mean",
-          "field": "avg_profit",
-          "as": "ProductTotal"
+          "field": "avg_GrowthScore",
+          "as": "SpeciesMean"
         }
       ],
       "groupby": [
-        "Product"
+        "Species"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "product_rank"
+          "as": "SpeciesRank"
         }
       ],
       "sort": [
         {
-          "field": "ProductTotal",
-          "order": "descending"
+          "field": "SpeciesMean",
+          "order": "ascending"
         }
       ]
     },
     {
-      "filter": "datum.product_rank <= 3"
+      "filter": "datum.SpeciesRank <= 3"
     }
   ],
   "mark": {
@@ -53,48 +53,48 @@
   },
   "encoding": {
     "x": {
-      "field": "Product",
+      "field": "Species",
       "type": "nominal",
-      "title": "Product",
       "axis": {
         "labelAngle": -30,
+        "title": "Species",
         "tickCount": 6
       },
       "sort": {
-        "field": "ProductTotal",
+        "field": "avg_GrowthScore",
         "order": "descending"
       }
     },
     "xOffset": {
-      "field": "Market Size"
+      "field": "Sunlight"
     },
     "y": {
-      "field": "avg_profit",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
-      "title": "Average Profit"
+      "title": "Average GrowthScore"
     },
     "color": {
-      "field": "Market Size",
+      "field": "Sunlight",
       "type": "nominal",
-      "title": "Market Size",
+      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "Product",
+        "field": "Species",
         "type": "nominal"
       },
       {
-        "field": "Market Size",
+        "field": "Sunlight",
         "type": "nominal"
       },
       {
-        "field": "avg_profit",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
-        "title": "Average Profit",
-        "format": ".1f"
+        "title": "Average GrowthScore",
+        "format": ".2f"
       }
     ]
   },

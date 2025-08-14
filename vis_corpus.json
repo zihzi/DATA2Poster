@@ -67,5 +67,14 @@
     },
     {
         "23": "Gender Difference in Top 3 Industries"
+    },
+    {
+        "24": "Bottom 3 States by Market Size Profit"
+    },
+    {
+        "25": "Top 3 Species GrowthScore by Sunlight"
+    },
+    {
+        "26": "Top 3 Colors by GrowthScore and Sunlight"
     }
 ]

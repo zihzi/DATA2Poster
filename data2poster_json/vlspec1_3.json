@@ -1,51 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Bottom 3 States by Profit per Market Size",
+  "title": "Top 3 Colors by GrowthScore and Sunlight",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Profit",
-          "as": "total_profit"
+          "op": "mean",
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
         }
       ],
       "groupby": [
-        "State",
-        "Market Size"
+        "Color",
+        "Sunlight"
       ]
     },
     {
       "joinaggregate": [
         {
-          "op": "sum",
-          "field": "total_profit",
-          "as": "StateTotal"
+          "op": "mean",
+          "field": "avg_GrowthScore",
+          "as": "ColorMean"
         }
       ],
       "groupby": [
-        "State"
+        "Color"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "state_rank"
+          "as": "ColorRank"
         }
       ],
       "sort": [
         {
-          "field": "StateTotal",
-          "order": "ascending"
+          "field": "ColorMean",
+          "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.state_rank <= 3"
+      "filter": "datum.ColorRank <= 3"
     }
   ],
   "mark": {
@@ -53,47 +53,46 @@
   },
   "encoding": {
     "x": {
-      "field": "State",
+      "field": "Color",
       "type": "nominal",
-      "title": "State",
+      "title": "Color",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      },
-      "sort": {
-        "field": "StateTotal",
-        "order": "ascending"
       }
     },
     "xOffset": {
-      "field": "Market Size"
+      "field": "Sunlight"
     },
     "y": {
-      "field": "total_profit",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
-      "title": "Total Profit"
+      "title": "Average GrowthScore"
     },
     "color": {
-      "field": "Market Size",
+      "field": "Sunlight",
       "type": "nominal",
-      "title": "Market Size",
+      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "State",
-        "type": "nominal"
+        "field": "Color",
+        "type": "nominal",
+        "title": "Color"
       },
       {
-        "field": "Market Size",
-        "type": "nominal"
+        "field": "Sunlight",
+        "type": "nominal",
+        "title": "Sunlight"
       },
       {
-        "field": "total_profit",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
-        "title": "Total Profit"
+        "title": "Average GrowthScore",
+        "format": ".2f"
       }
     ]
   },

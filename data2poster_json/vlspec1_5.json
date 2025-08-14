@@ -1,24 +1,27 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Market Size and Profit by State for Earl Grey Product",
+  "title": "GrowthScore by Sunlight and Color for Basil Species",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
-      "filter": "datum.Product == 'Earl Grey'"
+      "filter": {
+        "field": "Species",
+        "equal": "Basil"
+      }
     },
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Profit",
-          "as": "total_profit"
+          "op": "mean",
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
         }
       ],
       "groupby": [
-        "State",
-        "Market Size"
+        "Color",
+        "Sunlight"
       ]
     }
   ],
@@ -27,43 +30,46 @@
   },
   "encoding": {
     "x": {
-      "field": "State",
+      "field": "Color",
       "type": "nominal",
-      "title": "State",
+      "title": "Color",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Market Size"
+      "field": "Sunlight"
     },
     "y": {
-      "field": "total_profit",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
-      "title": "Total Profit"
+      "title": "Average GrowthScore"
     },
     "color": {
-      "field": "Market Size",
+      "field": "Sunlight",
       "type": "nominal",
-      "title": "Market Size",
+      "title": "Sunlight",
       "scale": {
         "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "State",
-        "type": "nominal"
+        "field": "Color",
+        "type": "nominal",
+        "title": "Color"
       },
       {
-        "field": "Market Size",
-        "type": "nominal"
+        "field": "Sunlight",
+        "type": "nominal",
+        "title": "Sunlight"
       },
       {
-        "field": "total_profit",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
-        "title": "Total Profit"
+        "title": "Average GrowthScore",
+        "format": ".2f"
       }
     ]
   },

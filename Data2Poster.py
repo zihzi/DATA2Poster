@@ -45,14 +45,13 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    # datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
-    # datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
-    # datasets["volcano"] = pd.read_csv("data/volcano.csv")
-    # datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
-    # datasets["billionaires"] = pd.read_csv("data/billionaires.csv")
-    datasets["flower_1"] = pd.read_csv("data/flower_1.csv")
-    datasets["Coffee_Chain_3"] = pd.read_csv("data/Coffee_Chain_3.csv")
-    datasets["Fight_Price"] = pd.read_csv("data/Fight_Price.csv")
+    datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
+    datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
+    datasets["volcano"] = pd.read_csv("data/volcano.csv")
+    datasets["Indian_Kids_Screen_Time"] = pd.read_csv("data/Indian_Kids_Screen_Time.csv")
+    datasets["billionaires"] = pd.read_csv("data/billionaires.csv")
+    datasets["flower"] = pd.read_csv("data/flower.csv")
+    datasets["Coffee_Chain"] = pd.read_csv("data/Coffee_Chain.csv")
     
     
 

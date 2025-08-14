@@ -1993,6 +1993,16 @@
             },
             "transform": [
                 {
+                    "filter": {
+                        "field": "Color",
+                        "oneOf": [
+                            "Green",
+                            "Yellow",
+                            "Red"
+                        ]
+                    }
+                },
+                {
                     "aggregate": [
                         {
                             "op": "mean",
@@ -2371,6 +2381,379 @@
             },
             "width": 540,
             "height": 540,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "24": {
+        "nl": "Bottom 3 States by Market Size Profit",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Bottom 3 States by Market Size Profit",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Profit",
+                            "as": "total_profit"
+                        }
+                    ],
+                    "groupby": [
+                        "State",
+                        "Market Size"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_profit",
+                            "as": "StateTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "State"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "state_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "StateTotal",
+                            "order": "ascending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.state_rank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "State",
+                    "type": "nominal",
+                    "title": "State",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": {
+                        "field": "StateTotal",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Market Size"
+                },
+                "y": {
+                    "field": "total_profit",
+                    "type": "quantitative",
+                    "title": "Total Profit"
+                },
+                "color": {
+                    "field": "Market Size",
+                    "type": "nominal",
+                    "title": "Market Size",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "State",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Market Size",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "total_profit",
+                        "type": "quantitative",
+                        "format": ",",
+                        "title": "Total Profit"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "25": {
+        "nl": "Top 3 Species GrowthScore by Sunlight",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Species GrowthScore by Sunlight",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/flower_1.csv"
+            },
+            "transform": [
+                {
+                    "filter": {
+                        "field": "Species",
+                        "oneOf": [
+                            "Mint",
+                            "Daisy",
+                            "Lavender"
+                        ]
+                    }
+                },
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "GrowthScore",
+                            "as": "avg_GrowthScore"
+                        }
+                    ],
+                    "groupby": [
+                        "Species",
+                        "Sunlight"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "SpeciesRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "SpeciesMean",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.SpeciesRank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Species",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": -30,
+                        "title": "Species"
+                    },
+                    "sort": {
+                        "field": "avg_GrowthScore",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sunlight"
+                },
+                "y": {
+                    "field": "avg_GrowthScore",
+                    "type": "quantitative",
+                    "title": "Average GrowthScore"
+                },
+                "color": {
+                    "field": "Sunlight",
+                    "type": "nominal",
+                    "title": "Sunlight",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Species",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Sunlight",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "avg_GrowthScore",
+                        "type": "quantitative",
+                        "title": "Average GrowthScore",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "26": {
+        "nl": "Top 3 Colors by GrowthScore and Sunlight",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Colors by GrowthScore and Sunlight",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/flower_1.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "mean",
+                            "field": "GrowthScore",
+                            "as": "avg_GrowthScore"
+                        }
+                    ],
+                    "groupby": [
+                        "Color",
+                        "Sunlight"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "mean",
+                            "field": "avg_GrowthScore",
+                            "as": "ColorMean"
+                        }
+                    ],
+                    "groupby": [
+                        "Color"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "ColorRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "ColorMean",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.ColorRank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Color",
+                    "type": "nominal",
+                    "title": "Color",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    }
+                },
+                "xOffset": {
+                    "field": "Sunlight"
+                },
+                "y": {
+                    "field": "avg_GrowthScore",
+                    "type": "quantitative",
+                    "title": "Average GrowthScore"
+                },
+                "color": {
+                    "field": "Sunlight",
+                    "type": "nominal",
+                    "title": "Sunlight",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Color",
+                        "type": "nominal",
+                        "title": "Color"
+                    },
+                    {
+                        "field": "Sunlight",
+                        "type": "nominal",
+                        "title": "Sunlight"
+                    },
+                    {
+                        "field": "avg_GrowthScore",
+                        "type": "quantitative",
+                        "title": "Average GrowthScore",
+                        "format": ".2f"
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
             "config": {
                 "title": {
                     "fontSize": 44
