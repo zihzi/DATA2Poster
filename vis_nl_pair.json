@@ -2108,5 +2108,289 @@
                 }
             }
         }
+    },
+    "22": {
+        "nl": "Top 3 Products Profit by Market",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Products Profit by Market",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Coffee_Chain_1.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Profit",
+                            "as": "total_profit"
+                        }
+                    ],
+                    "groupby": [
+                        "Product",
+                        "Market"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "total_profit",
+                            "as": "ProductTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Product"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "product_rank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "ProductTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.product_rank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Product",
+                    "type": "nominal",
+                    "title": "Product",
+                    "axis": {
+                        "labelAngle": -30,
+                        "tickCount": 6
+                    },
+                    "sort": {
+                        "field": "ProductTotal",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Market"
+                },
+                "y": {
+                    "field": "total_profit",
+                    "type": "quantitative",
+                    "title": "Total Profit"
+                },
+                "color": {
+                    "field": "Market",
+                    "type": "nominal",
+                    "title": "Market",
+                    "scale": {
+                        "scheme": "tableau10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Product",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "Market",
+                        "type": "nominal"
+                    },
+                    {
+                        "field": "total_profit",
+                        "type": "quantitative",
+                        "title": "Total Profit",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 420,
+            "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "23": {
+        "nl": "Gender Difference in Top 3 Industries",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Gender Difference in Top 3 Industries",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/billionaires.csv",
+                "format": {
+                    "type": "csv"
+                }
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "worth in billions",
+                            "as": "TotalWorth"
+                        }
+                    ],
+                    "groupby": [
+                        "industry",
+                        "gender"
+                    ]
+                },
+                {
+                    "pivot": "gender",
+                    "value": "TotalWorth",
+                    "groupby": [
+                        "industry"
+                    ]
+                },
+                {
+                    "calculate": "datum.Male != null ? datum.Male : datum.male",
+                    "as": "MaleVal"
+                },
+                {
+                    "calculate": "datum.Female != null ? datum.Female : datum.female",
+                    "as": "FemaleVal"
+                },
+                {
+                    "calculate": "abs(datum.MaleVal - datum.FemaleVal)",
+                    "as": "GenderWorthDiff"
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "IndustryDiffRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "GenderWorthDiff",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.IndustryDiffRank <= 3"
+                },
+                {
+                    "fold": [
+                        "male",
+                        "female",
+                        "Male",
+                        "Female"
+                    ],
+                    "as": [
+                        "gender",
+                        "TotalWorth"
+                    ]
+                },
+                {
+                    "filter": "datum.TotalWorth != null"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "industry",
+                    "type": "nominal",
+                    "axis": {
+                        "labelAngle": -30,
+                        "title": "Industry"
+                    },
+                    "sort": {
+                        "field": "TotalWorth",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "gender"
+                },
+                "y": {
+                    "field": "TotalWorth",
+                    "type": "quantitative",
+                    "title": "Total Worth (Billions)"
+                },
+                "color": {
+                    "field": "gender",
+                    "type": "nominal",
+                    "title": "Gender",
+                    "scale": {
+                        "scheme": "set1"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "industry",
+                        "type": "nominal",
+                        "title": "Industry"
+                    },
+                    {
+                        "field": "gender",
+                        "type": "nominal",
+                        "title": "Gender"
+                    },
+                    {
+                        "field": "TotalWorth",
+                        "type": "quantitative",
+                        "title": "Worth (B)",
+                        "format": ",.1f"
+                    },
+                    {
+                        "field": "GenderWorthDiff",
+                        "type": "quantitative",
+                        "title": "Gender Worth Diff (B)",
+                        "format": ",.1f"
+                    }
+                ]
+            },
+            "width": 540,
+            "height": 540,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
     }
 }

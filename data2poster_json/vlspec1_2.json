@@ -1,21 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Price by Source City",
+  "title": "Top 3 Products by Market Size Profit",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "price",
-          "as": "avg_price"
+          "op": "sum",
+          "field": "Profit",
+          "as": "total_profit"
         }
       ],
       "groupby": [
-        "source_city"
+        "Product",
+        "Market Size"
       ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "total_profit",
+          "as": "ProductTotal"
+        }
+      ],
+      "groupby": [
+        "Product"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "dense_rank",
+          "as": "product_rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "ProductTotal",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.product_rank <= 3"
     }
   ],
   "mark": {
@@ -23,30 +53,51 @@
   },
   "encoding": {
     "x": {
-      "field": "source_city",
+      "field": "Product",
       "type": "nominal",
-      "title": "Source City",
+      "title": "Product",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
+      },
+      "sort": {
+        "field": "ProductTotal",
+        "order": "descending"
       }
     },
+    "xOffset": {
+      "field": "Market Size"
+    },
     "y": {
-      "field": "avg_price",
+      "field": "total_profit",
       "type": "quantitative",
-      "title": "Average Price"
+      "title": "Total Profit",
+      "axis": {
+        "tickCount": 6
+      }
+    },
+    "color": {
+      "field": "Market Size",
+      "type": "nominal",
+      "title": "Market Size",
+      "scale": {
+        "scheme": "tableau10"
+      }
     },
     "tooltip": [
       {
-        "field": "source_city",
-        "type": "nominal",
-        "title": "Source City"
+        "field": "Product",
+        "type": "nominal"
       },
       {
-        "field": "avg_price",
+        "field": "Market Size",
+        "type": "nominal"
+      },
+      {
+        "field": "total_profit",
         "type": "quantitative",
-        "title": "Average Price",
-        "format": ".2f"
+        "title": "Total Profit",
+        "format": ","
       }
     ]
   },
@@ -58,7 +109,7 @@
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 30,
+      "labelFontSize": 28,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10

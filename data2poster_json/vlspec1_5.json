@@ -1,24 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "SpiceJet Flight Prices by Stops and Source City",
+  "title": "Market Size and Profit by State for Earl Grey Product",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
   },
   "transform": [
     {
-      "filter": "datum.airline == 'SpiceJet'"
+      "filter": "datum.Product == 'Earl Grey'"
     },
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "price",
-          "as": "avg_price"
+          "op": "sum",
+          "field": "Profit",
+          "as": "total_profit"
         }
       ],
       "groupby": [
-        "source_city",
-        "stops"
+        "State",
+        "Market Size"
       ]
     }
   ],
@@ -27,46 +27,43 @@
   },
   "encoding": {
     "x": {
-      "field": "source_city",
+      "field": "State",
       "type": "nominal",
-      "title": "Source City",
+      "title": "State",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "stops"
+      "field": "Market Size"
     },
     "y": {
-      "field": "avg_price",
+      "field": "total_profit",
       "type": "quantitative",
-      "title": "Average Price"
+      "title": "Total Profit"
     },
     "color": {
-      "field": "stops",
+      "field": "Market Size",
       "type": "nominal",
+      "title": "Market Size",
       "scale": {
         "scheme": "tableau10"
-      },
-      "title": "Stops"
+      }
     },
     "tooltip": [
       {
-        "field": "source_city",
-        "type": "nominal",
-        "title": "Source City"
+        "field": "State",
+        "type": "nominal"
       },
       {
-        "field": "stops",
-        "type": "nominal",
-        "title": "Stops"
+        "field": "Market Size",
+        "type": "nominal"
       },
       {
-        "field": "avg_price",
+        "field": "total_profit",
         "type": "quantitative",
-        "title": "Average Price",
-        "format": ".2f"
+        "title": "Total Profit"
       }
     ]
   },

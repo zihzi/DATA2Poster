@@ -1,20 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average Price by Airline",
+  "title": "Average Profit by Product",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "price",
-          "as": "avg_price"
+          "field": "Profit",
+          "as": "avg_profit"
         }
       ],
       "groupby": [
-        "airline"
+        "Product"
       ]
     }
   ],
@@ -23,30 +23,30 @@
   },
   "encoding": {
     "x": {
-      "field": "airline",
+      "field": "Product",
       "type": "nominal",
-      "title": "Airline",
+      "title": "Product",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "avg_price",
+      "field": "avg_profit",
       "type": "quantitative",
-      "title": "Average Price"
+      "title": "Average Profit"
     },
     "tooltip": [
       {
-        "field": "airline",
-        "type": "nominal",
-        "title": "Airline"
+        "field": "Product",
+        "type": "nominal"
       },
       {
-        "field": "avg_price",
+        "field": "avg_profit",
         "type": "quantitative",
-        "title": "Average Price",
-        "format": ".2f"
+        "title": "Average Profit",
+        "format": ".1f"
       }
     ]
   },

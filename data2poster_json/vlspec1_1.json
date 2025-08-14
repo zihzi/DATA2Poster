@@ -1,51 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Airlines Price by Stops",
+  "title": "Top 3 Products by Profit per Market Size",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "mean",
-          "field": "price",
-          "as": "avg_price"
+          "field": "Profit",
+          "as": "avg_profit"
         }
       ],
       "groupby": [
-        "airline",
-        "stops"
+        "Product",
+        "Market Size"
       ]
     },
     {
       "joinaggregate": [
         {
-          "op": "sum",
-          "field": "avg_price",
-          "as": "airline_tot"
+          "op": "mean",
+          "field": "avg_profit",
+          "as": "ProductTotal"
         }
       ],
       "groupby": [
-        "airline"
+        "Product"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "airline_rank"
+          "as": "product_rank"
         }
       ],
       "sort": [
         {
-          "field": "avg_price",
+          "field": "ProductTotal",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.airline_rank <= 3"
+      "filter": "datum.product_rank <= 3"
     }
   ],
   "mark": {
@@ -53,46 +53,48 @@
   },
   "encoding": {
     "x": {
-      "field": "airline",
+      "field": "Product",
       "type": "nominal",
-      "title": "Airline",
+      "title": "Product",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
+      },
+      "sort": {
+        "field": "ProductTotal",
+        "order": "descending"
       }
     },
     "xOffset": {
-      "field": "stops"
+      "field": "Market Size"
     },
     "y": {
-      "field": "avg_price",
+      "field": "avg_profit",
       "type": "quantitative",
-      "title": "Average Price"
+      "title": "Average Profit"
     },
     "color": {
-      "field": "stops",
+      "field": "Market Size",
       "type": "nominal",
+      "title": "Market Size",
       "scale": {
         "scheme": "tableau10"
-      },
-      "title": "Stops"
+      }
     },
     "tooltip": [
       {
-        "field": "airline",
-        "type": "nominal",
-        "title": "Airline"
+        "field": "Product",
+        "type": "nominal"
       },
       {
-        "field": "stops",
-        "type": "nominal",
-        "title": "Stops"
+        "field": "Market Size",
+        "type": "nominal"
       },
       {
-        "field": "avg_price",
+        "field": "avg_profit",
         "type": "quantitative",
-        "title": "Average Price",
-        "format": ".2f"
+        "title": "Average Profit",
+        "format": ".1f"
       }
     ]
   },

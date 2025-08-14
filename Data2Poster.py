@@ -19,6 +19,7 @@ from vis_generator import agent_improve_vis, agent_2_improve_code, agent_1_gener
 import vl_convert as vlc
 from pathlib import Path
 from poster_generator_test import create_pdf
+from json_sanitizer import parse_jsonish, normalize_jsonish
 
 # Import langchain modules
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
@@ -44,17 +45,16 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
+    # datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
     # datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
-    # datasets["crime_safety"] = pd.read_csv("data/crime_safety.csv")
-    datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
+    # datasets["volcano"] = pd.read_csv("data/volcano.csv")
+    # datasets["Indian_Kids_Screen_Time_2"] = pd.read_csv("data/Indian_Kids_Screen_Time_2.csv")
+    # datasets["billionaires"] = pd.read_csv("data/billionaires.csv")
     datasets["flower_1"] = pd.read_csv("data/flower_1.csv")
-    datasets["Flight_Price"] = pd.read_csv("data/Flight_Price.csv")
-    datasets["Coffee_Chain_1"] = pd.read_csv("data/Coffee_Chain_1.csv")
-    datasets["Coffee_Chain_2"] = pd.read_csv("data/Coffee_Chain_2.csv")
     datasets["Coffee_Chain_3"] = pd.read_csv("data/Coffee_Chain_3.csv")
-    datasets["Coffee_Rating_1"] = pd.read_csv("data/Coffee_Rating_1.csv")
-    datasets["Coffee_Rating_2"] = pd.read_csv("data/Coffee_Rating_2.csv")
-
+    datasets["Fight_Price"] = pd.read_csv("data/Fight_Price.csv")
+    
+    
 
 
 
@@ -684,14 +684,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
         3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
             - ONLY choose rank fact that contains {column_1} from {data_facts}.
             - The question must refer to these two column **ONLY**: {column_1} and {offset_column}.
-            - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in your question.
+            - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in the question.
+            - DO NOT mention both 'Top 3' and 'Bottom 3' at the same time in the  question.
             - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
         
         **Constraints**
         - Never rewrite th data facts from {data_facts}.
-        
+        - ALWAYS clarify the metric used in the first question, like total sales, average sales, etc. And use it in the second question.
+        - If the column use for the metic (i.e. y-axis) is "Profit", always use "Total Profit" as the metric in all the questions.
+
         **Example**
         Dataset columns: [gender, racial groups, math score, reading score, writing score]
         Follow-up questions:
@@ -702,8 +705,14 @@ if try_true or (st.session_state["bt_try"] == "T"):
         The second question extends the analysis by comparing the average math scores(same metric as Question 1) between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
         **Avoid**
-        Question: "What are the top 3 products by sales in the top 3 categories?"
-        Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
+        1. Question: "What are the top 3 products by sales in the top 3 categories?"
+           Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
+        2. Question 1: "How does 'average sales' vary across different Countries?"
+           Question 2: "What are the top 3 Countries with the highest 'total sales'?"
+           Rationale: The first question use 'average sales' as metric and the second question use 'total sales' as metric. Since you should always use the same metric for comparison, this is not allowed.
+        3. Question 1: "What is the average sales across different States?"
+           Question 2: "Which are the bottom 3 States by sales within each product category?"
+           Rationale: The first question use 'average sales' as metric and the second question use 'sales' as metric. Since you should always use the same metric for comparison, this is not allowed.
 
         **Output (exact JSON)**  
         Do not INCLUDE ```json```.Do not add other sentences after this json data.
@@ -770,14 +779,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
         3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
             - ONLY choose rank fact that contains {column_2} from {data_facts}.
             - The question must refer to these two column **ONLY**: {column_2} and {offset_column}.
-            - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in your question.
+            - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in the question.
+            - DO NOT mention both 'Top 3' and 'Bottom 3' at the same time in the  question.
             - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
         
         **Constraints**
         - Never rewrite th data facts from {data_facts}.
-        
+        - ALWAYS clarify the metric used in the first question, like total sales, average sales, etc. And use it in the second question.
+        - If the column use for the metic (i.e. y-axis) is "Profit", always use "Total Profit" as the metric in all the questions.
+
         **Example**
         Dataset columns: [gender, racial groups, math score, reading score, writing score]
         Follow-up questions:
@@ -788,10 +800,16 @@ if try_true or (st.session_state["bt_try"] == "T"):
         The second question extends the analysis by comparing the average math scores(same metric as Question 1) between gender(both male and female) and racial groups, which is a new angle to the analysis.
 
         **Avoid**
-        Question: "What are the top 3 products by sales in the top 3 categories?"
-        Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
-
-        **Output (exact JSON)**  
+        1. Question: "What are the top 3 products by sales in the top 3 categories?"
+           Rationale: It contains "top" twice: 'top 3 products', 'top 3 categories', which is not allowed.
+        2. Question 1: "How does 'average sales' vary across different Countries?"
+           Question 2: "What are the top 3 Countries with the highest 'total sales'?"
+           Rationale: The first question use 'average sales' as metric and the second question use 'total sales' as metric. Since you should always use the same metric for comparison, this is not allowed.
+        3. Question 1: "What is the average sales across different States?"
+           Question 2: "Which are the bottom 3 States by sales within each product category?"
+           Rationale: The first question use 'average sales' as metric and the second question use 'sales' as metric. Since you should always use the same metric for comparison, this is not allowed.
+        
+        **Output (exact JSON)**
         Do not INCLUDE ```json```.Do not add other sentences after this json data.
         {{
         "follow_up_questions": [
@@ -1583,9 +1601,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         vlspec = agent_consistent(chosen_dataset,chart_query,chart_title,chosen_data_schema,sample_data, rag_spec, openai_key)
         st.write("Vega-Lite Specification:",vlspec)
-        json_vlspec = json.loads(vlspec)
+        cor_vlspec = parse_jsonish(vlspec)  # -> dict/list or raises clear ValueError
+        # json_vlspec = json.loads(cor_vlspec)
         spec_id = 0
-        for spec in json_vlspec["visualizations"]:
+        for spec in cor_vlspec["visualizations"]:
             with open(f"DATA2Poster_json/vlspec1_{spec_id}.json", "w") as f:
                 json.dump(spec, f, indent=2)
             spec["height"] =600

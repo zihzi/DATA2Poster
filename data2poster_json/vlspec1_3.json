@@ -1,39 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Source City and Stops by Price",
+  "title": "Bottom 3 States by Profit per Market Size",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Flight_Price.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Coffee_Chain_3.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "price",
-          "as": "avg_price"
+          "op": "sum",
+          "field": "Profit",
+          "as": "total_profit"
         }
       ],
       "groupby": [
-        "source_city",
-        "stops"
+        "State",
+        "Market Size"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "total_profit",
+          "as": "StateTotal"
+        }
+      ],
+      "groupby": [
+        "State"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "citystop_rank"
+          "as": "state_rank"
         }
       ],
       "sort": [
         {
-          "field": "avg_price",
-          "order": "descending"
+          "field": "StateTotal",
+          "order": "ascending"
         }
       ]
     },
     {
-      "filter": "datum.citystop_rank <= 3"
+      "filter": "datum.state_rank <= 3"
     }
   ],
   "mark": {
@@ -41,46 +53,47 @@
   },
   "encoding": {
     "x": {
-      "field": "source_city",
+      "field": "State",
       "type": "nominal",
-      "title": "Source City",
+      "title": "State",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
+      },
+      "sort": {
+        "field": "StateTotal",
+        "order": "ascending"
       }
     },
     "xOffset": {
-      "field": "stops"
+      "field": "Market Size"
     },
     "y": {
-      "field": "avg_price",
+      "field": "total_profit",
       "type": "quantitative",
-      "title": "Average Price"
+      "title": "Total Profit"
     },
     "color": {
-      "field": "stops",
+      "field": "Market Size",
       "type": "nominal",
+      "title": "Market Size",
       "scale": {
         "scheme": "tableau10"
-      },
-      "title": "Stops"
+      }
     },
     "tooltip": [
       {
-        "field": "source_city",
-        "type": "nominal",
-        "title": "Source City"
+        "field": "State",
+        "type": "nominal"
       },
       {
-        "field": "stops",
-        "type": "nominal",
-        "title": "Stops"
+        "field": "Market Size",
+        "type": "nominal"
       },
       {
-        "field": "avg_price",
+        "field": "total_profit",
         "type": "quantitative",
-        "title": "Average Price",
-        "format": ".2f"
+        "title": "Total Profit"
       }
     ]
   },
