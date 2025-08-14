@@ -2,7 +2,7 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Top 3 Species GrowthScore by Sunlight",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {

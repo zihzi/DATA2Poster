@@ -16,15 +16,14 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
     [\Rules]
     Rule 1: The "$schema" property should be: "https://vega.github.io/schema/vega-lite/v5.json".
     Rule 2: The "transform" property should be put ahead of the "encoding" property.
-    Rule 3: For Chart2 and Chart4, ALWAYS include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/{table_name}.csv"}}.
-    Rule 4: For Chart1, Chart3, Chart5, Chart6, ALWAYS include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
-    Rule 5: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
-    Rule 6: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
-    Rule 7: If you use "window" operation to rank data in the "transform" property, make sure **NO "groupby" property** exists after "window" operation in the "transform" property.
-    Rule 8: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
-    Rule 9: Make sure no "false" and "true" is used in the Vega-Lite specification.
-    Rule 10: Make sure no "aggregate: None" is used in the Vega-Lite specification.
-    Rule 11: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
+    Rule 3: ALWAYS include "data" attribute as following in the Vega-Lite output:{{url:"https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/{table_name}.csv"}}.
+    Rule 4: Pay attention to the query description to determine whether you should use "filter" transformation in the "transform" property.
+    Rule 5: If you use "aggregate" operation in the "transform" property, the "groupby" property of "aggregate" should be correctly specified.
+    Rule 6: If you use "window" operation to rank data in the "transform" property, make sure **NO "groupby" property** exists after "window" operation in the "transform" property.
+    Rule 7: Make sure no "sort" operations exist in the "transform" property, you should define the order of axes only in the "encoding" property.
+    Rule 8: Make sure no "false" and "true" is used in the Vega-Lite specification.
+    Rule 9: Make sure no "aggregate: None" is used in the Vega-Lite specification.
+    Rule 10: If title is including "Top N", make sure to **add "xOffset" operation in the encoding property**.
     [\Rules]
 
     Instructions for generating the Vega-Lite specification:

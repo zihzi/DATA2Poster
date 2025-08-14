@@ -1,8 +1,8 @@
 import pandas as pd
 
-df = pd.read_csv('data/police_killings.csv')
-df['avg_povertyrate'] = df['avg_povertyrate'].astype(float)
-df.to_csv('data/police_killings.csv', index=False)
+df = pd.read_csv('data/Flight_Price.csv')
+df = df.sample(n=483, random_state=42).reset_index(drop=True)
+df.to_csv('data/Flight_Price.csv', index=False)
 # def trans_data(df):
 
 

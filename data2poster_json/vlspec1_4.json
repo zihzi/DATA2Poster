@@ -1,12 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GrowthScore Distribution by Color and Sunlight for Basil",
+  "title": "GrowthScore Distribution by Color and Sunlight for Sunflower",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
   },
   "transform": [
     {
-      "filter": "datum.Species == 'Basil'"
+      "filter": "datum.Species == 'Sunflower'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "GrowthScore",
+          "as": "avg_GrowthScore"
+        }
+      ],
+      "groupby": [
+        "Color",
+        "Sunlight"
+      ]
     }
   ],
   "mark": {
@@ -26,8 +39,7 @@
       "field": "Sunlight"
     },
     "y": {
-      "aggregate": "mean",
-      "field": "GrowthScore",
+      "field": "avg_GrowthScore",
       "type": "quantitative",
       "title": "Average GrowthScore"
     },
@@ -51,8 +63,7 @@
         "title": "Sunlight"
       },
       {
-        "aggregate": "mean",
-        "field": "GrowthScore",
+        "field": "avg_GrowthScore",
         "type": "quantitative",
         "title": "Average GrowthScore",
         "format": ".2f"
