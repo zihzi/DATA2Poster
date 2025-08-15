@@ -685,7 +685,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             - The question must refer to these two column **ONLY**: {column_1} and {offset_column}.
             - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in the question.
             - DO NOT mention both 'Top 3' and 'Bottom 3' at the same time in the  question.
-            - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
+            - **ALWAYS use the same metric(i.e. for y-axis) as used in the first question** for ranking.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
         
@@ -780,7 +780,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             - The question must refer to these two column **ONLY**: {column_2} and {offset_column}.
             - Ensure the question clearly mention 'Top 3' or 'Bottom 3' in the question.
             - DO NOT mention both 'Top 3' and 'Bottom 3' at the same time in the  question.
-            - **ALWAYS use the same metric as used in the first question** for ranking(i.e. y-axis).
+            - **ALWAYS use the same metric(i.e. for y-axis) as used in the first question** for ranking.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
         
@@ -1483,9 +1483,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                     
                                     ** Your Tasks(Think step by step)**
                                     1. Read and evaluate each chart title for subject matter, variables, and implied insight.
-                                    2. Identify which charts title are identical or nearly identical.
-                                    3. Select **exactly six chart titles** that are distinct to each other and no duplication.
-                                    4. Group the selected chart titles into three sections with the following roles and order:
+                                    2. Group these chart titles into three sections with the following roles and order:
                                     SECTION 1
                                         • Chart 1 — Overall trend / distribution.          
                                         • Chart 2 — Top-3 ranking that extends Chart 1.    
@@ -1638,29 +1636,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
             spec_id += 1
         
-        # for i in range(0,6):          
-        # # Evaluate the generated first-level chart
-        #     binary_fl       = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()
-        #     base64_utf8_fl = base64.b64encode(binary_fl).decode('utf-8')
-        #     fl_url = f'data:image/png;base64,{base64_utf8_fl}'
-        #     feedback = agent_2_improve_code(chart_query[i], fl_url, openai_key)
-        #     st.write(feedback)
-
-        #     # Improve the first-level chart based on feedback
-        #     improved_code = agent_improve_vis(json_vlspec["visualizations"][i], feedback, sample_data, openai_key)
-        #     st.write("Improved Vega-Lite Specification:",improved_code)
-        #     improved_json = json.loads(improved_code)
-        #     with open(f"DATA2Poster_json/vlspec2_{id}.json", "w") as f:
-        #         json.dump(improved_json, f, indent=2)
-        #     st.write("Improved Vega-Lite JSON:",improved_json)
-        #     improved_json["height"] =600
-        #     improved_json["width"] =800
-        #     try:
-        #         chart_ = alt.Chart.from_dict(improved_json)
-        #         chart_.save(f"DATA2Poster_chart/image{id}.png")
-        #         st.image(f"DATA2Poster_chart/image{id}.png", caption="Improved Chart "+str(id))
-        #     except Exception as e:
-        #         st.error("The code is failed to execute.")
             
 
         chartid_for_pdf = []
@@ -1673,105 +1648,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
             img_url = f'data:image/png;base64,{base64_utf8_chart}'              
             chart_for_pdf.append(img_url)
         
-        # chart_dedup_prompt = [
-        #         SystemMessage(content="""
-        #                                 You are a senior data-visualisation reviewer.
-        #                                 You will receive **three groups**, each containing two chart link to Vega-Lite specifications.  
-        #                                 For every group:
-
-        #                                 1. **Check visual consistency** between the two charts in that group only.  
-        #                                 Consider at least these aspects:  
-        #                                 - colour palette / category ordering  
-        #                                 - font family & font sizes (title, axis, legend)  
-        #                                 - axis & gridline style (position, tick count, rotation, grid visibility)  
-        #                                 - legend placement & formatting  
-        #                                 - mark style (strokeWidth, cornerRadius, opacity)  
-        #                                 2. **Rate** the pair on a 5-point scale where 5 = perfectly consistent, 1 = very inconsistent.  
-        #                                 3. **List every inconsistency** you find (bullet points).  
-        #                                 4. **Recommend precise changes** (bullet points) to make the two charts visually consistent, using the smaller change principle.
-
-        #                                 Output format (strict markdown):
-        #                                 Group A (score: X/5)
-        #                                 Inconsistencies
-        #                                 ...
-
-
-        #                                 Recommendations
-
-        #                                 ...
-
-        #                                 Group B (score: X/5)
-
-        #                                 ...
-
-        #                                 Group C (score: X/5)
-        #                                 ..."""),
-        # # You are a data-visualization expert. You will receive three groups, each with two chart IDs. 
-        # #                       For each pair, if the chart is blank, replace the id of duplicate one with "99".
-        # #                       Additionally, if the charts are identical, keep one id and replace the id of duplicate one with "99". 
-        # #                       Return exactly six chart IDs, preserving their original order. Replace any duplicate with 99. 
-        # #                       Output only the JSON object in this form:{ "chart": [id1, id2, id3, id4, id5, id6] }. 
-        # #                       Do not INCLUDE ```json```. No additional text after this json."""),
-        #         HumanMessage(content=[
-        #             {
-        #                 "type": "text", 
-        #                 "text": f"Group 1.\n\n"
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[0]
-        #                     },
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[1]
-        #                     },
-        #             },
-                    
-        #             {
-        #                 "type": "text", 
-        #                 "text": f"Group 2.\n\n"
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[2]
-        #                     },
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[3]
-        #                     },
-        #             },
-        #              {
-        #                 "type": "text", 
-        #                 "text": f"Group 3.\n\n"
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[4]
-        #                     },
-        #             },
-        #             {
-        #                     "type": "image_url",
-        #                     "image_url": {
-        #                         "url": chart_for_pdf[5]
-        #                     },
-        #             },
-        #         ])
-        #     ] 
-            
-        # chart_dedup =  llm.invoke(chart_dedup_prompt)
-        # # chart_dedup_json = json.loads(chart_dedup.content)
-        # # chartid_for_pdf = chart_dedup_json["chart"]
-        # st.write("Chart improve consistency feedback:",chart_dedup.content)
     
         # Reset session state
         st.session_state["bt_try"] = ""  
+        st.session_state["base_fact"] = []
         st.session_state["sub_fact"] = []
         st.session_state["questions_for_poster"] = []
         # Create pdf and download
