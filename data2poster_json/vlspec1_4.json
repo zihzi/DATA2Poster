@@ -1,28 +1,32 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "GrowthScore by Sunlight and Color for Rose Species",
+  "title": "BV Studio Worldwide Revenue Over Years at Rank 1",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
-      "filter": {
-        "field": "Species",
-        "equal": "Rose"
-      }
+      "filter": "datum.Studio == 'BV'"
     },
     {
-      "aggregate": [
+      "window": [
         {
-          "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "op": "rank",
+          "as": "StudioRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Worldwide $m",
+          "order": "descending"
         }
       ],
       "groupby": [
-        "Color",
-        "Sunlight"
+        "Year"
       ]
+    },
+    {
+      "filter": "datum.StudioRank == 1"
     }
   ],
   "mark": {
@@ -30,46 +34,29 @@
   },
   "encoding": {
     "x": {
-      "field": "Color",
-      "type": "nominal",
-      "title": "Color",
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
-    "xOffset": {
-      "field": "Sunlight"
-    },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "Worldwide $m",
       "type": "quantitative",
-      "title": "Average GrowthScore"
-    },
-    "color": {
-      "field": "Sunlight",
-      "type": "nominal",
-      "title": "Sunlight",
-      "scale": {
-        "scheme": "tableau10"
-      }
+      "title": "Worldwide Revenue (million $)"
     },
     "tooltip": [
       {
-        "field": "Color",
-        "type": "nominal",
-        "title": "Color"
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
       },
       {
-        "field": "Sunlight",
-        "type": "nominal",
-        "title": "Sunlight"
-      },
-      {
-        "field": "avg_GrowthScore",
+        "field": "Worldwide $m",
         "type": "quantitative",
-        "title": "Average GrowthScore",
-        "format": ".2f"
+        "title": "Worldwide $m"
       }
     ]
   },

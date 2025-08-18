@@ -1,52 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Average GrowthScore by Species",
+  "title": "Total Worldwide $m by Studio",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "op": "sum",
+          "field": "Worldwide $m",
+          "as": "Total_Worldwide_m"
         }
       ],
       "groupby": [
-        "Species"
+        "Studio"
       ]
     }
   ],
   "mark": {
-    "type": "bar",
-    "color": "#4E79A7"
+    "type": "bar"
   },
   "encoding": {
     "x": {
-      "field": "Species",
+      "field": "Studio",
       "type": "nominal",
+      "title": "Studio",
       "axis": {
         "labelAngle": -30,
-        "title": "Species",
         "tickCount": 6
       }
     },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "Total_Worldwide_m",
       "type": "quantitative",
-      "title": "Average GrowthScore"
+      "title": "Total Worldwide Revenue (million $)"
     },
     "tooltip": [
       {
-        "field": "Species",
-        "type": "nominal"
+        "field": "Studio",
+        "type": "nominal",
+        "title": "Studio"
       },
       {
-        "field": "avg_GrowthScore",
+        "field": "Total_Worldwide_m",
         "type": "quantitative",
-        "title": "Average GrowthScore",
-        "format": ".2f"
+        "title": "Total Worldwide $m"
       }
     ]
   },

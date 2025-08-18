@@ -1,8 +1,74 @@
+from typing import Dict, List, Tuple
+import json
 import pandas as pd
+import altair as alt
+import vl_convert as vlc
+from vegafusion.runtime import VegaFusionRuntime
 
-df = pd.read_csv('data/Flight_Price.csv')
-df = df.sample(n=483, random_state=42).reset_index(drop=True)
-df.to_csv('data/Flight_Price.csv', index=False)
+
+
+# chart = alt.Chart.from_dict(vlspec)
+# df = chart.transformed_data()
+# print(df)
+
+def transformed_datasets(vl_spec: dict, dataset_names: List[str] | None = None) -> Tuple[Dict[str, pd.DataFrame], list]:
+    """Evaluate transforms and return requested datasets as DataFrames.
+
+    Parameters
+    ----------
+    vl_spec : dict
+        Vega-Lite v5 spec.
+    dataset_names : list[str] | None
+        Names of datasets in the compiled Vega spec to extract. If None, all
+        top-level datasets are extracted.
+
+    Returns
+    -------
+    (dfs, warnings)
+        dfs: mapping of dataset name -> pandas.DataFrame
+        warnings: list of VegaFusion warnings (e.g., row limits)
+    """
+    # 1) Compile Vega-Lite -> Vega (VegaFusion operates on Vega specs)
+    vega_spec = vlc.vegalite_to_vega(json.dumps(vl_spec))
+    # vega_spec = json.loads(vega_json)
+
+    # 2) Pick datasets. If none provided, grab all top-level data names
+    if dataset_names is None:
+        dataset_names = [d.get("name") for d in vega_spec.get("data", []) if isinstance(d, dict) and "name" in d]
+
+    # 3) Evaluate transforms for these datasets
+    rt = VegaFusionRuntime()
+    tables, warnings = rt.pre_transform_datasets(
+        vega_spec,
+        datasets=dataset_names,
+        dataset_format="pandas",  # return DataFrames directly
+    )
+
+    # 4) Assemble mapping name -> DataFrame
+    frames: Dict[str, pd.DataFrame] = {name: df for name, df in zip(dataset_names, tables)}
+    return frames, warnings
+
+
+# ──────────────────────────────────────────────────────────────────────────────
+# Example usage
+# ──────────────────────────────────────────────────────────────────────────────
+if __name__ == "__main__":
+    # Minimal demo spec using your pattern (replace with your real spec)
+    df = pd.read_csv('data/Occupation_by_gender.csv')
+    with open('data2poster_json/vlspec1_8.json', 'r') as f:
+        spec = json.load(f)
+    spec["data"].pop("url", None)
+    spec["data"]["values"] = df.to_dict(orient="records")
+    print(spec)
+
+
+    print("\n— VegaFusion datasets —")
+    dfs, warns = transformed_datasets(spec)  # or pass specific dataset names
+    for name, frame in dfs.items():
+        print(f"dataset: {name} → shape={frame.shape}")
+        print(frame.head())
+    if warns:
+        print("warnings:", warns)
 # def trans_data(df):
 
 

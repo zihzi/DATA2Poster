@@ -1,51 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Top 3 Colors by GrowthScore and Sunlight",
+  "title": "Top 3 Years Worldwide $m by Type",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/flower_1.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "GrowthScore",
-          "as": "avg_GrowthScore"
+          "op": "sum",
+          "field": "Worldwide $m",
+          "as": "Total_Worldwide_m"
         }
       ],
       "groupby": [
-        "Color",
-        "Sunlight"
+        "Year",
+        "Type"
       ]
     },
     {
       "joinaggregate": [
         {
-          "op": "mean",
-          "field": "avg_GrowthScore",
-          "as": "ColorMean"
+          "op": "sum",
+          "field": "Total_Worldwide_m",
+          "as": "YearTotal"
         }
       ],
       "groupby": [
-        "Color"
+        "Year"
       ]
     },
     {
       "window": [
         {
           "op": "dense_rank",
-          "as": "ColorRank"
+          "as": "YearRank"
         }
       ],
       "sort": [
         {
-          "field": "ColorMean",
+          "field": "YearTotal",
           "order": "descending"
         }
       ]
     },
     {
-      "filter": "datum.ColorRank <= 3"
+      "filter": "datum.YearRank <= 3"
     }
   ],
   "mark": {
@@ -53,46 +53,45 @@
   },
   "encoding": {
     "x": {
-      "field": "Color",
+      "field": "Type",
       "type": "nominal",
-      "title": "Color",
+      "title": "Type",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Sunlight"
+      "field": "Year"
     },
     "y": {
-      "field": "avg_GrowthScore",
+      "field": "Total_Worldwide_m",
       "type": "quantitative",
-      "title": "Average GrowthScore"
+      "title": "Total Worldwide Revenue (million $)"
     },
     "color": {
-      "field": "Sunlight",
-      "type": "nominal",
-      "title": "Sunlight",
+      "field": "Year",
+      "type": "ordinal",
+      "title": "Year",
       "scale": {
         "scheme": "tableau10"
       }
     },
     "tooltip": [
       {
-        "field": "Color",
-        "type": "nominal",
-        "title": "Color"
+        "field": "Year",
+        "type": "ordinal",
+        "title": "Year"
       },
       {
-        "field": "Sunlight",
+        "field": "Type",
         "type": "nominal",
-        "title": "Sunlight"
+        "title": "Type"
       },
       {
-        "field": "avg_GrowthScore",
+        "field": "Total_Worldwide_m",
         "type": "quantitative",
-        "title": "Average GrowthScore",
-        "format": ".2f"
+        "title": "Total Worldwide $m"
       }
     ]
   },
