@@ -12,8 +12,8 @@ from text_generator import introduction, conclusion, improve_title
 
 
 
-def create_pdf(data_name,insight_list,chart_id_list,chart_url_list,openai_key):
-    
+def create_pdf(data_name,insight_list,section_insight_list,chart_id_list,chart_url_list, column_1, column_2, entity_1,entity_2,section_header_list,openai_key):
+
     filename = f"{data_name}_summary.pdf"
     filedir = "pdf"
     filepath = os.path.join(filedir, filename)
@@ -24,13 +24,13 @@ def create_pdf(data_name,insight_list,chart_id_list,chart_url_list,openai_key):
     c.drawImage(background_image, 0, 0, width=width, height=height)
 
     # Generate introduction
-    text_introduction = introduction(chart_url_list , openai_key)
+    text_introduction = introduction(chart_url_list , section_header_list,openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(insight_list ,text_introduction, openai_key)
+    text_conclusion = conclusion(insight_list ,text_introduction, column_1, column_2, entity_1, entity_2, openai_key)
 
     # Generate Title from conclusion
-    title = improve_title(text_conclusion, openai_key)
+    title = improve_title(text_introduction, text_conclusion, openai_key)
     
     # # Title
     p_title = Paragraph(title, ParagraphStyle(name='title', fontSize=30, fontName='Helvetica-Bold',leading=22, textColor="#2c2a32"))
@@ -41,23 +41,23 @@ def create_pdf(data_name,insight_list,chart_id_list,chart_url_list,openai_key):
     # p_introduction = Paragraph("Introduction", ParagraphStyle(name='introduction', fontSize=26, fontName='Helvetica-Bold', textColor=text_color))
     # p_introduction.wrapOn(c, width/2,200)
     # p_introduction.drawOn(c, 30, height-115)
-    p_in = Paragraph(text_introduction, ParagraphStyle(name="introdcution", fontSize=14, fontName='Helvetica', leading=14, alignment=4, textColor="#2c2a32"))
+    p_in = Paragraph(text_introduction, ParagraphStyle(name="introduction", fontSize=14, fontName='Helvetica', leading=14, alignment=4, textColor="#2c2a32"))
     p_in.wrapOn(c, width-600, 20)
-    p_in.drawOn(c, 30, height-160)
+    p_in.drawOn(c, 30, height-180)
     
      
     # Add section 1 descriptions
 
-    p_desc = Paragraph(insight_list[0], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=14, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(section_insight_list[0], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
     p_desc.drawOn(c, 50, height-230)
 
     # Add section 2 descriptions 
-    p_desc = Paragraph(insight_list[1], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=14, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(section_insight_list[1], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
     p_desc.drawOn(c, 50, height-550)
     # Add section 3 descriptions 
-    p_desc = Paragraph(insight_list[2], ParagraphStyle(name="insight", fontSize=14, fontName='Helvetica',leading=14, alignment=4, textColor="#2c2a32"))
+    p_desc = Paragraph(section_insight_list[2], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 500, 20)
     p_desc.drawOn(c, 685, height-90)
     # Add section 1 images
@@ -77,7 +77,7 @@ def create_pdf(data_name,insight_list,chart_id_list,chart_url_list,openai_key):
     # p_conclusion.wrapOn(c, width/2, 200)
     # p_conclusion.drawOn(c, 30, height-725)
     p_con = Paragraph(text_conclusion, ParagraphStyle(name="conclusion", fontSize=14, fontName='Helvetica', leading=14, alignment=4, textColor="#2c2a32"))
-    p_con.wrapOn(c, 450, 120)
-    p_con.drawOn(c, 680, height-795)
+    p_con.wrapOn(c, 525, 200)
+    p_con.drawOn(c, 650, height-820)
 
     c.save()

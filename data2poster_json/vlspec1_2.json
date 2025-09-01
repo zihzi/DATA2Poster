@@ -1,56 +1,43 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Worldwide $m by Type",
+  "title": "Employed Persons by Sector",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "sum",
-          "field": "Worldwide $m",
-          "as": "Total_Worldwide_m"
+          "field": "Number of employed persons",
+          "as": "TotalEmployed"
         }
       ],
       "groupby": [
-        "Type"
+        "Economic sector"
       ]
     }
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Type",
+      "field": "Economic sector",
       "type": "nominal",
-      "title": "Type",
+      "title": "Economic Sector",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Total_Worldwide_m",
+      "field": "TotalEmployed",
       "type": "quantitative",
-      "title": "Total Worldwide Revenue (million $)"
-    },
-    "tooltip": [
-      {
-        "field": "Type",
-        "type": "nominal",
-        "title": "Type"
-      },
-      {
-        "field": "Total_Worldwide_m",
-        "type": "quantitative",
-        "title": "Total Worldwide $m"
-      }
-    ]
+      "title": "Number of Employed Persons"
+    }
   },
-  "width": 420,
-  "height": 400,
+  "width": 700,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

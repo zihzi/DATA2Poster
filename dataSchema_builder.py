@@ -49,6 +49,9 @@ def get_column_properties(df: pd.DataFrame, n_samples: int = 3) -> list[dict]:
                     elif len(df[column]) < 8 and df[column].nunique() / len(df[column]) > 0.5:
                         properties["dtype"] = dtype
                         properties["dtype"] = "C"
+                    elif len(df[column]) < 30:
+                        properties["dtype"] = dtype
+                        properties["dtype"] = "C"
                     else:
                         properties["dtype"] = "string"
             elif pd.api.types.is_categorical_dtype(df[column]):

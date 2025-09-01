@@ -1725,137 +1725,8 @@
             "height": 420
         }
     },
-    "19": {
-        "nl": "Top 3 Fuel Types Price by Transmission",
-        "spec": {
-            "schema": "https://vega.github.io/schema/vega-lite/v5.json",
-            "title": "Top 3 Fuel Types Price by Transmission",
-            "data": {
-                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data_top/used_car_price.csv"
-            },
-            "transform": [
-                {
-                    "aggregate": [
-                        {
-                            "op": "mean",
-                            "field": "price",
-                            "as": "avg_price"
-                        }
-                    ],
-                    "groupby": [
-                        "fuel_type",
-                        "transmission"
-                    ]
-                },
-                {
-                    "joinaggregate": [
-                        {
-                            "op": "sum",
-                            "field": "avg_price",
-                            "as": "fuel_tot"
-                        }
-                    ],
-                    "groupby": [
-                        "fuel_type"
-                    ]
-                },
-                {
-                    "window": [
-                        {
-                            "op": "dense_rank",
-                            "as": "fuel_rank"
-                        }
-                    ],
-                    "sort": [
-                        {
-                            "field": "avg_price",
-                            "order": "descending"
-                        }
-                    ]
-                },
-                {
-                    "filter": "datum.fuel_rank <= 6"
-                }
-            ],
-            "mark": {
-                "type": "bar"
-            },
-            "encoding": {
-                "x": {
-                    "field": "fuel_type",
-                    "type": "nominal",
-                    "title": "Fuel Type",
-                    "axis": {
-                        "labelAngle": -30,
-                        "tickCount": 6
-                    },
-                    "sort": null,
-                    "scale": {
-                        "domain": [
-                            "Petrol",
-                            "Diesel",
-                            "CNG"
-                        ]
-                    }
-                },
-                "xOffset": {
-                    "field": "transmission"
-                },
-                "y": {
-                    "field": "avg_price",
-                    "type": "quantitative",
-                    "title": "Average Price (Lakhs)"
-                },
-                "color": {
-                    "field": "transmission",
-                    "type": "nominal",
-                    "scale": {
-                        "scheme": "tableau10"
-                    },
-                    "title": "Transmission"
-                },
-                "tooltip": [
-                    {
-                        "field": "fuel_type",
-                        "type": "nominal",
-                        "title": "Fuel Type"
-                    },
-                    {
-                        "field": "transmission",
-                        "type": "nominal",
-                        "title": "Transmission"
-                    },
-                    {
-                        "field": "avg_price",
-                        "type": "quantitative",
-                        "title": "Average Price",
-                        "format": ".2f"
-                    }
-                ]
-            },
-            "width": 420,
-            "height": 400,
-            "config": {
-                "title": {
-                    "fontSize": 44
-                },
-                "axis": {
-                    "titleFontSize": 44,
-                    "labelFontSize": 30,
-                    "tickCount": 6,
-                    "labelLimit": 0,
-                    "titlePadding": 10
-                },
-                "legend": {
-                    "titleFontSize": 26,
-                    "labelFontSize": 26,
-                    "labelLimit": 0
-                }
-            }
-        }
-    },
     "20": {
-        "nl": "Top 3 Fuel Type & Transmission Prices",
+        "nl": "Top 3 Fuel Type Price by Transmission",
         "spec": {
             "schema": "https://vega.github.io/schema/vega-lite/v5.json",
             "title": "Top 3 Fuel Types Price by Transmission",
@@ -2754,6 +2625,133 @@
             },
             "width": 420,
             "height": 400,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                },
+                "mark": {
+                    "invalid": null
+                }
+            }
+        }
+    },
+    "27": {
+        "nl": "Top 3 Countries Employment by Sex",
+        "spec": {
+            "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Top 3 Countries Employment by Sex",
+            "data": {
+                "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/main/data/Occupation_by_gender.csv"
+            },
+            "transform": [
+                {
+                    "aggregate": [
+                        {
+                            "op": "sum",
+                            "field": "Number of employed persons",
+                            "as": "TotalEmployed"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries",
+                        "Sex"
+                    ]
+                },
+                {
+                    "joinaggregate": [
+                        {
+                            "op": "sum",
+                            "field": "TotalEmployed",
+                            "as": "CountryTotal"
+                        }
+                    ],
+                    "groupby": [
+                        "Pacific Island Countries"
+                    ]
+                },
+                {
+                    "window": [
+                        {
+                            "op": "dense_rank",
+                            "as": "CountryRank"
+                        }
+                    ],
+                    "sort": [
+                        {
+                            "field": "CountryTotal",
+                            "order": "descending"
+                        }
+                    ]
+                },
+                {
+                    "filter": "datum.CountryRank <= 3"
+                }
+            ],
+            "mark": {
+                "type": "bar"
+            },
+            "encoding": {
+                "x": {
+                    "field": "Pacific Island Countries",
+                    "type": "nominal",
+                    "title": "Pacific Island Country",
+                    "axis": {
+                        "labelAngle": -30
+                    },
+                    "sort": {
+                        "field": "CountryTotal",
+                        "order": "descending"
+                    }
+                },
+                "xOffset": {
+                    "field": "Sex"
+                },
+                "y": {
+                    "field": "TotalEmployed",
+                    "type": "quantitative",
+                    "title": "Number of Employed Persons"
+                },
+                "color": {
+                    "field": "Sex",
+                    "type": "nominal",
+                    "title": "Sex",
+                    "scale": {
+                        "scheme": "category10"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "Pacific Island Countries",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Sex",
+                        "type": "nominal",
+                        "title": "Sex"
+                    },
+                    {
+                        "field": "TotalEmployed",
+                        "type": "quantitative",
+                        "title": "Employed Persons",
+                        "format": ","
+                    }
+                ]
+            },
+            "width": 480,
+            "height": 480,
             "config": {
                 "title": {
                     "fontSize": 44

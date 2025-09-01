@@ -1,6 +1,7 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import PromptTemplate,ChatPromptTemplate,SystemMessagePromptTemplate, HumanMessagePromptTemplate
 from langchain_core.messages import SystemMessage, HumanMessage
+from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 
@@ -52,7 +53,6 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
     - Using a grouped bar chart to compare different value if one column. For example, compare male vs. female employment across economic sectors.
     - NEVER generate multiple subplots.
     - NEVER USE stacked bar chart.
-    - If title is including "Top N", **do not modify "sort": [{{"field": "..", "order": "descending"}}]** in the "window" property from {vlspec}.
     - ALWAYS add the following properties in the output Vega-Lite specification and do not revise them:
         {{
             "config": {{
@@ -104,6 +104,7 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
             )
     # interact with LLM
     llm = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openai_key)
+    
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessagePromptTemplate.from_template(prompt_input.template)
                         ]

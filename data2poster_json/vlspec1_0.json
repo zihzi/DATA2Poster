@@ -1,56 +1,43 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Total Worldwide $m by Studio",
+  "title": "Employed Persons by Pacific Island Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "sum",
-          "field": "Worldwide $m",
-          "as": "Total_Worldwide_m"
+          "field": "Number of employed persons",
+          "as": "TotalEmployed"
         }
       ],
       "groupby": [
-        "Studio"
+        "Pacific Island Countries"
       ]
     }
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Studio",
+      "field": "Pacific Island Countries",
       "type": "nominal",
-      "title": "Studio",
+      "title": "Pacific Island Country",
       "axis": {
         "labelAngle": -30,
         "tickCount": 6
-      }
+      },
+      "sort": "-y"
     },
     "y": {
-      "field": "Total_Worldwide_m",
+      "field": "TotalEmployed",
       "type": "quantitative",
-      "title": "Total Worldwide Revenue (million $)"
-    },
-    "tooltip": [
-      {
-        "field": "Studio",
-        "type": "nominal",
-        "title": "Studio"
-      },
-      {
-        "field": "Total_Worldwide_m",
-        "type": "quantitative",
-        "title": "Total Worldwide $m"
-      }
-    ]
+      "title": "Number of Employed Persons"
+    }
   },
-  "width": 420,
-  "height": 400,
+  "width": 700,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44
