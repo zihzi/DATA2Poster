@@ -1,67 +1,66 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Male-to-Female Employment Ratio by Sector",
+  "title": "Employed Persons by Sex in Solomon Islands",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
   },
   "transform": [
+    {
+      "filter": "datum['Pacific Island Countries'] == 'Solomon Islands'"
+    },
     {
       "aggregate": [
         {
           "op": "sum",
           "field": "Number of employed persons",
-          "as": "EmployedTotal"
+          "as": "TotalEmployed"
         }
       ],
       "groupby": [
-        "Economic sector",
         "Sex"
       ]
-    },
-    {
-      "pivot": "Sex",
-      "value": "EmployedTotal",
-      "groupby": [
-        "Economic sector"
-      ]
-    },
-    {
-      "calculate": "datum.Male / datum.Female",
-      "as": "MaleFemaleRatio"
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "field": "Economic sector",
+      "field": "Sex",
       "type": "nominal",
-      "title": "Economic Sector",
       "axis": {
         "labelAngle": -30,
-        "tickCount": 6
-      },
-      "sort": "-y"
+        "title": "Sex"
+      }
     },
     "y": {
-      "field": "MaleFemaleRatio",
+      "field": "TotalEmployed",
       "type": "quantitative",
-      "title": "Male-to-Female Employment Ratio"
+      "title": "Number of Employed Persons"
+    },
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "title": "Sex",
+      "scale": {
+        "scheme": "category10"
+      }
     },
     "tooltip": [
       {
-        "field": "Economic sector",
+        "field": "Sex",
         "type": "nominal",
-        "title": "Sector"
+        "title": "Sex"
       },
       {
-        "field": "MaleFemaleRatio",
+        "field": "TotalEmployed",
         "type": "quantitative",
-        "title": "Male-to-Female Ratio",
-        "format": ".2f"
+        "title": "Employed Persons",
+        "format": ","
       }
     ]
   },
-  "width": 700,
+  "width": 400,
   "height": 480,
   "config": {
     "title": {

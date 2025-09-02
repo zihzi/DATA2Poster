@@ -1,8 +1,8 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employed Persons by Pacific Island Country",
+  "title": "Total Employment by Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
   },
   "transform": [
     {
@@ -10,7 +10,7 @@
         {
           "op": "sum",
           "field": "Number of employed persons",
-          "as": "TotalEmployed"
+          "as": "CountryEmployed"
         }
       ],
       "groupby": [
@@ -18,25 +18,25 @@
       ]
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
       "field": "Pacific Island Countries",
       "type": "nominal",
-      "title": "Pacific Island Country",
       "axis": {
         "labelAngle": -30,
-        "tickCount": 6
-      },
-      "sort": "-y"
+        "title": "Pacific Island Country"
+      }
     },
     "y": {
-      "field": "TotalEmployed",
+      "field": "CountryEmployed",
       "type": "quantitative",
       "title": "Number of Employed Persons"
     }
   },
-  "width": 700,
+  "width": 720,
   "height": 480,
   "config": {
     "title": {

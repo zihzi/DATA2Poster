@@ -104,7 +104,6 @@ def agent_consistent(table_name, query,title, data_schema,sampled_data, vlspec, 
             )
     # interact with LLM
     llm = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openai_key)
-    
     prompt_for_chain = ChatPromptTemplate.from_messages(
                         messages=[SystemMessagePromptTemplate.from_template(prompt_input.template)
                         ]

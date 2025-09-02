@@ -1,11 +1,3 @@
-Economic sector,Female,Male,MaleFemaleRatio
-Accommodation and Food,7429,6339,0.8532776955175663
-Agriculture and Fishing,27460,61584,2.242680262199563
-Construction,256,15931,62.23046875
-Education,17671,14541,0.8228736347688302
-Electricity and Gas,19,2302,121.15789473684211
-Financial and Insurance,2981,2810,0.9426366990942636
-Social Work and Health ,5794,3727,0.6432516396272006
-Support Service,5839,11487,1.9672889193355028
-Transportation and Storage,1848,13511,7.311147186147186
-Wholesale and Retail,26883,24172,0.8991556001934308
+Sex,TotalEmployed
+Female,31369
+Male,63655

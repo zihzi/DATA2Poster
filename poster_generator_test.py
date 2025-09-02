@@ -50,12 +50,12 @@ def create_pdf(data_name,insight_list,section_insight_list,chart_id_list,chart_u
 
     p_desc = Paragraph(section_insight_list[0], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-230)
+    p_desc.drawOn(c, 50, height-225)
 
     # Add section 2 descriptions 
     p_desc = Paragraph(section_insight_list[1], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-550)
+    p_desc.drawOn(c, 50, height-545)
     # Add section 3 descriptions 
     p_desc = Paragraph(section_insight_list[2], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 500, 20)

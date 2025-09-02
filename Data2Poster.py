@@ -27,8 +27,13 @@ from langchain_core.prompts import PromptTemplate, ChatPromptTemplate, HumanMess
 from langchain_core.messages import HumanMessage, SystemMessage
 from langchain_community.vectorstores.faiss import FAISS
 from langchain_core.documents import Document
-from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 import random
+import os
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "triple-voyage-402515-6e6f321d5d4e.json"
+
+
+
 
 
 
@@ -46,7 +51,7 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
+    datasets["Occupation_gender_gap"] = pd.read_csv("data/Occupation_gender_gap.csv")
     datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
     datasets["volcano"] = pd.read_csv("data/volcano.csv")
     datasets["Indian_Kids_Screen_Time"] = pd.read_csv("data/Indian_Kids_Screen_Time.csv")
@@ -72,7 +77,10 @@ with st.sidebar:
         """)
     # Set area for OpenAI key
     openai_key = st.text_input(label = "🔑 OpenAI Key:", help="Required for models.",type="password")
-         
+
+    # Set area for OpenAPI key
+    openapi_key = st.text_input(label = "🔑 OpenAPI Key:", help="Required for models.",type="password")
+
     # First we want to choose the dataset, but we will fill it with choices once we've loaded one
     dataset_container = st.empty()
 
@@ -193,15 +201,6 @@ def organize_by_dtype_combinations(data, desired_combinations):
     
     return results
 
-# Remove duplicates data facts
-# def remove_duplicates(strings: list) -> list:
-#     seen = set()
-#     unique = []
-#     for s in strings:
-#         if s not in seen:
-#             seen.add(s)
-#             unique.append(s)
-#     return unique
 # load a prompt from a file
 def load_prompt_from_file(filepath):
     with open(filepath, "r", encoding="utf-8") as file:
@@ -326,10 +325,9 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
     st.session_state["bt_try"] = "T"
     
-    
     if api_keys_entered:
         # use GPT as llm
-        # llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openai_key)
+        # llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openapi_key)
         llm = ChatGoogleGenerativeAI(
             model="gemini-2.5-flash",
             temperature=0,
@@ -338,16 +336,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
             # other params...
         )
         # use OpenAIEmbeddings as embedding model
-        embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = "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")
+        embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openapi_key)
+        # embeddings_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", api_key = openai_key)
         # Create a vector store
                
-
-
         data_list = load_json('vis_corpus.json')
         docs = [Document(page_content=json.dumps(item)) for item in data_list]
         vectorstore = FAISS.from_documents(
         docs,
-        OpenAIEmbeddings(model="text-embedding-3-small", api_key = "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"),
+        embeddings_model
         )
         
       
@@ -382,8 +379,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
             {{
             "column": "<column name 2>",
             "properties": {{
-                "dtype": "T",
-                "num_unique_values": 9
+                "dtype": "N",
+                "num_unique_values": 32
             }}
             }},
             {{
@@ -407,7 +404,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         )
         col_select_chain = col_select_prompt | llm
         col_select_result = col_select_chain.invoke(input = {"schema": chosen_data_schema})
-        col_select_json = json.loads(col_select_result.content)
+        col_select_json = parse_jsonish(col_select_result.content)
         st.write("Selected Columns:",col_select_json)
         # Extract column names by dtype from col_select_json
         dtype_columns_dict = {}
@@ -765,10 +762,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
         insight_from_fact=[]
         for i in range(0,2):   
             if i == 0:
-                insight_from_s1c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], f"{col_select_json['key_columns'][3]['column']} by {col_select_json['key_columns'][3]['column']}", col_select_json["key_columns"][i]["column"], st.session_state["s1c1_fact"], )
+                insight_from_s1c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s1c1_fact"], )
                 insight_from_fact.append(insight_from_s1c1)
             elif i == 1:
-                insight_from_s2c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], f"{col_select_json['key_columns'][3]['column']} by {col_select_json['key_columns'][3]['column']}", col_select_json["key_columns"][i]["column"], st.session_state["s2c1_fact"], )
+                insight_from_s2c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s2c1_fact"], )
                 insight_from_fact.append(insight_from_s2c1)
         st.write("Insights from Facts:",insight_from_fact)
           
@@ -929,7 +926,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             - Make them answerable with the existing dataset.
         3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
             - The question must refer to these two column **ONLY**: the column used in the first question and the other different column.
-            - Avoid using this combination of columns: {column_from_s1q2}.
+            - Avoid using the same combination of columns as following: {column_from_s1q2}.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
         
@@ -968,13 +965,13 @@ if try_true or (st.session_state["bt_try"] == "T"):
         eda_q_for_sec2_result = eda_q_for_sec2_chain.invoke(input = {
                                                         "data_facts":str(st.session_state["s2c1_fact"]),
                                                         "key_columns":chosen_data_schema,
-                                                        "column_from_s1q1":eda_q_for_sec1_result.content,
-                                                        "column_from_s1q2":eda_q_for_sec1_result.content,
+                                                        "column_from_s1q1":eda_q_for_sec1_json["follow_up_questions"][0]["column"],
+                                                        "column_from_s1q2":eda_q_for_sec1_json["follow_up_questions"][1]["column"],
                                                         "s2c1_insight":insight_from_fact[1]
                                                         })
         eda_q_for_sec2_json = parse_jsonish(eda_q_for_sec2_result.content)
         # st.write(eda_q_for_sec2_json)
-        # eda_q_for_sec2_json = json.loads(eda_q_for_sec2_result.content)
+        # eda_q_for_sec2_json = `json.load`s(eda_q_for_sec2_result.content)
         st.write("Follow-up Questions sec 2:",eda_q_for_sec2_json)
         chart_query.append(eda_q_for_sec2_json["follow_up_questions"][0]["question"])
         chart_query.append(eda_q_for_sec2_json["follow_up_questions"][1]["question"])
@@ -1044,7 +1041,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         # st.write("Transformed DataFrame:",new_df)
        
 
-    #     # ////one shot//// Use llm to read the base chart description to generate section 3 follow-up questions
+        # ////zero shot//// Use llm to read the section 1 chart 2 data table to generate section 3 follow-up questions
             
         eda_q_for_sec3_template="""
         You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
@@ -1058,11 +1055,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
         2. Identify two entities that worth to explore.
         3. Write specific follow-up questions (≤25 words each) for these two entities that:
             - This question drill down to reveal the pattern within this entity.
+            - The question must refer to these two column **ONLY**.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(≤7 words each)** based on the question.
 
         **Constraints**
-        - Never raise the same or similar question as following:  {question}.
+        - Never raise the same or similar questions as following:  
+          1.{question_1}
+          2.{question_2}
+          3.{question_3}
+          4.{question_4}
+
 
 
         **Output (exact JSON)**  
@@ -1090,14 +1093,18 @@ if try_true or (st.session_state["bt_try"] == "T"):
         }}"""
         eda_q_for_sec3_prompt = PromptTemplate(
             template=eda_q_for_sec3_template,
-            input_variables=["key_columns","s1c1_insight","question"]
+            input_variables=["key_columns","s1c1_insight","question_1","question_2","question_3","question_4"]
         )
         eda_q_for_sec3_chain = eda_q_for_sec3_prompt | llm
         eda_q_for_sec3_result = eda_q_for_sec3_chain.invoke(input = {
 
                                                         "key_columns":chosen_data_schema,
-                                                        "s1c1_insight":insight_from_fact,
-                                                        "question": chart_query
+                                                        "s1c1_insight":st.session_state["s1c1_fact"],
+                                                        "question_1": chart_query[0],
+                                                        "question_2": chart_query[1],
+                                                        "question_3": chart_query[2],
+                                                        "question_4": chart_query[3],
+
                                                         })
         eda_q_for_sec3_json = parse_jsonish(eda_q_for_sec3_result.content)
         # st.write(eda_q_for_sec3_result.content)
@@ -1169,7 +1176,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
             img_to_llm_list.append({"chart_id": i, "title": chart_title[i]})
            
 
-        # ////zero shot//// Use llm to select 6 charts at once             
+        # ////zero shot//// Use llm to write section header and section insight based on the chart titles           
         chart_check_prompt ="""
             
 
@@ -1180,7 +1187,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                                     ** Your Tasks(Think step by step)**
                                     1. Read and evaluate each chart title for subject matter, variables, and implied insight.  
                                     2. Create a concise section heading that captures the shared insight of each group.
-                                    3. For each section, write a one sentence (shorter than 20 words) that captures the key insight conveyed in that section.
+                                    3. For each section, write a one sentence (shorter than 25 words) that captures the key insight conveyed in that section.
 
                                     **Output (JSON)**
                                     Do not INCLUDE ```json```.Do not add other sentences after this json data.
@@ -1253,7 +1260,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                         rag_spec.append(sample_vlspec)
                         break
         
-        openapi_key = "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"                
+                       
         llm_1 = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openapi_key)
         vlspec = agent_consistent(chosen_dataset,chart_query,chart_title,chosen_data_schema,sample_data, rag_spec, openapi_key)
         st.write("Vega-Lite Specification:",vlspec)
@@ -1284,11 +1291,11 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     input_variables=["error_code", "error"],
                 )    
 
-                error_chain = error_prompt | llm 
+                error_chain = error_prompt | llm_1 
                 
                 # Invoke the chain to fix the code
                 corrected_vlspec = error_chain.invoke(input={"error_code": spec, "error": error})
-                json_corrected_vlspec = json.loads(corrected_vlspec.content)
+                json_corrected_vlspec = parse_jsonish(corrected_vlspec.content)
                 json_corrected_vlspec["height"] =600
                 json_corrected_vlspec["width"] =800
                 final_chart = alt.Chart.from_dict(json_corrected_vlspec)
@@ -1395,10 +1402,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.write("Clean Facts:",clean_facts)
                 st.write("chart_title:",title)
                 if i == 1:
-                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][0]["column"], col_select_json["key_columns"][2]["column"], title, clean_facts)
+                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][0]["column"], clean_facts)
                     insight_from_fact.append(insight_from_sc)
                 else:
-                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][1]["column"], col_select_json["key_columns"][2]["column"], title, clean_facts)
+                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][1]["column"], clean_facts)
                     insight_from_fact.append(insight_from_sc)
         st.write("Insight from all charts:",insight_from_fact)
             

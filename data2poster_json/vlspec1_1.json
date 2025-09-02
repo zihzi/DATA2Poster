@@ -1,43 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employment by Sex and Country",
+  "title": "Sex Share by Sector and Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "sum",
-          "field": "Number of employed persons",
-          "as": "EmployedTotal"
+          "field": "Sex share",
+          "as": "TotalSexShare"
         }
       ],
       "groupby": [
         "Pacific Island Countries",
+        "Economic sector",
         "Sex"
       ]
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "field": "Pacific Island Countries",
+      "field": "Economic sector",
       "type": "nominal",
-      "title": "Pacific Island Country",
       "axis": {
         "labelAngle": -30,
-        "tickCount": 6
-      },
-      "sort": "-y"
+        "title": "Economic Sector"
+      }
+    },
+    "y": {
+      "field": "TotalSexShare",
+      "type": "quantitative",
+      "title": "Total Sex Share"
     },
     "xOffset": {
       "field": "Sex"
-    },
-    "y": {
-      "field": "EmployedTotal",
-      "type": "quantitative",
-      "title": "Number of Employed Persons"
     },
     "color": {
       "field": "Sex",
@@ -54,20 +55,33 @@
         "title": "Country"
       },
       {
+        "field": "Economic sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
         "field": "Sex",
         "type": "nominal",
         "title": "Sex"
       },
       {
-        "field": "EmployedTotal",
+        "field": "TotalSexShare",
         "type": "quantitative",
-        "title": "Employed Persons",
-        "format": ","
+        "title": "Sex Share",
+        "format": ".2f"
       }
-    ]
+    ],
+    "facet": {
+      "field": "Pacific Island Countries",
+      "type": "nominal",
+      "header": {
+        "labelFontSize": 20,
+        "title": "Country"
+      }
+    }
   },
-  "width": 700,
-  "height": 480,
+  "width": 180,
+  "height": 400,
   "config": {
     "title": {
       "fontSize": 44

@@ -1,43 +1,30 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employed Persons by Sector",
+  "title": "Sex Share Distribution",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
   },
-  "transform": [
-    {
-      "aggregate": [
-        {
-          "op": "sum",
-          "field": "Number of employed persons",
-          "as": "TotalEmployed"
-        }
-      ],
-      "groupby": [
-        "Economic sector"
-      ]
-    }
-  ],
   "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Economic sector",
-      "type": "nominal",
-      "title": "Economic Sector",
+      "bin": {
+        "maxbins": 20
+      },
+      "field": "Sex share",
+      "type": "quantitative",
       "axis": {
         "labelAngle": -30,
-        "tickCount": 6
-      },
-      "sort": "-y"
+        "title": "Sex Share (Proportion Female)"
+      }
     },
     "y": {
-      "field": "TotalEmployed",
+      "aggregate": "count",
       "type": "quantitative",
-      "title": "Number of Employed Persons"
+      "title": "Record Count"
     }
   },
-  "width": 700,
-  "height": 480,
+  "width": 600,
+  "height": 400,
   "config": {
     "title": {
       "fontSize": 44
