@@ -1,22 +1,24 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Sex Share by Sector and Country",
+  "title": "Female Proportion by Economic Sector and Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
+      "filter": "datum.Sex === 'Female'"
+    },
+    {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Sex share",
-          "as": "TotalSexShare"
+          "op": "mean",
+          "field": "Female Proportion",
+          "as": "AvgFemaleProportion"
         }
       ],
       "groupby": [
         "Pacific Island Countries",
-        "Economic sector",
-        "Sex"
+        "Economic Sector"
       ]
     }
   ],
@@ -25,25 +27,29 @@
   },
   "encoding": {
     "x": {
-      "field": "Economic sector",
+      "field": "Pacific Island Countries",
       "type": "nominal",
       "axis": {
         "labelAngle": -30,
-        "title": "Economic Sector"
+        "title": "Pacific Island Country",
+        "tickCount": 6
       }
     },
-    "y": {
-      "field": "TotalSexShare",
-      "type": "quantitative",
-      "title": "Total Sex Share"
-    },
     "xOffset": {
-      "field": "Sex"
+      "field": "Economic Sector"
+    },
+    "y": {
+      "field": "AvgFemaleProportion",
+      "type": "quantitative",
+      "axis": {
+        "title": "Female Proportion",
+        "tickCount": 6
+      }
     },
     "color": {
-      "field": "Sex",
+      "field": "Economic Sector",
       "type": "nominal",
-      "title": "Sex",
+      "title": "Economic Sector",
       "scale": {
         "scheme": "category10"
       }
@@ -55,33 +61,20 @@
         "title": "Country"
       },
       {
-        "field": "Economic sector",
+        "field": "Economic Sector",
         "type": "nominal",
-        "title": "Sector"
+        "title": "Economic Sector"
       },
       {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex"
-      },
-      {
-        "field": "TotalSexShare",
+        "field": "AvgFemaleProportion",
         "type": "quantitative",
-        "title": "Sex Share",
+        "title": "Female Proportion",
         "format": ".2f"
       }
-    ],
-    "facet": {
-      "field": "Pacific Island Countries",
-      "type": "nominal",
-      "header": {
-        "labelFontSize": 20,
-        "title": "Country"
-      }
-    }
+    ]
   },
-  "width": 180,
-  "height": 400,
+  "width": 750,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

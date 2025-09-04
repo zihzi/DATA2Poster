@@ -1,21 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Sex Share by Economic Sector",
+  "title": "Number of Employed Persons by Economic Sector and Country",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Sex share",
-          "as": "MeanSexShare"
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "TotalEmployed"
         }
       ],
       "groupby": [
-        "Economic sector",
-        "Sex"
+        "Pacific Island Countries",
+        "Economic Sector"
       ]
     }
   ],
@@ -24,49 +24,53 @@
   },
   "encoding": {
     "x": {
-      "field": "Economic sector",
+      "field": "Pacific Island Countries",
       "type": "nominal",
       "axis": {
         "labelAngle": -30,
-        "title": "Economic Sector"
+        "title": "Pacific Island Country",
+        "tickCount": 6
       }
     },
-    "y": {
-      "field": "MeanSexShare",
-      "type": "quantitative",
-      "title": "Average Sex Share"
-    },
     "xOffset": {
-      "field": "Sex"
+      "field": "Economic Sector"
+    },
+    "y": {
+      "field": "TotalEmployed",
+      "type": "quantitative",
+      "axis": {
+        "title": "Number of Employed Persons",
+        "tickCount": 6
+      }
     },
     "color": {
-      "field": "Sex",
+      "field": "Economic Sector",
       "type": "nominal",
-      "title": "Sex",
+      "title": "Economic Sector",
       "scale": {
         "scheme": "category10"
       }
     },
     "tooltip": [
       {
-        "field": "Economic sector",
+        "field": "Pacific Island Countries",
         "type": "nominal",
-        "title": "Sector"
+        "title": "Country"
       },
       {
-        "field": "Sex",
+        "field": "Economic Sector",
         "type": "nominal",
-        "title": "Sex"
+        "title": "Economic Sector"
       },
       {
-        "field": "MeanSexShare",
+        "field": "TotalEmployed",
         "type": "quantitative",
-        "title": "Mean Sex Share",
-        "format": ".2f"
+        "title": "Employed",
+        "format": ","
       }
     ]
   },
-  "width": 720,
+  "width": 780,
   "height": 480,
   "config": {
     "title": {

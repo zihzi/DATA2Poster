@@ -1,24 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employed Persons by Sex in Solomon Islands",
+  "title": "Male Proportion by Economic Sector in Tokelau",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
-      "filter": "datum['Pacific Island Countries'] == 'Solomon Islands'"
-    },
-    {
-      "aggregate": [
-        {
-          "op": "sum",
-          "field": "Number of employed persons",
-          "as": "TotalEmployed"
-        }
-      ],
-      "groupby": [
-        "Sex"
-      ]
+      "filter": "datum['Pacific Island Countries'] === 'Tokelau' && datum.Sex === 'Male'"
     }
   ],
   "mark": {
@@ -26,42 +14,25 @@
   },
   "encoding": {
     "x": {
-      "field": "Sex",
+      "field": "Economic Sector",
       "type": "nominal",
       "axis": {
         "labelAngle": -30,
-        "title": "Sex"
+        "title": "Economic Sector",
+        "tickCount": 6
       }
     },
     "y": {
-      "field": "TotalEmployed",
+      "field": "Male Proportion",
       "type": "quantitative",
-      "title": "Number of Employed Persons"
-    },
-    "color": {
-      "field": "Sex",
-      "type": "nominal",
-      "title": "Sex",
-      "scale": {
-        "scheme": "category10"
+      "axis": {
+        "title": "Male Proportion",
+        "tickCount": 6
       }
-    },
-    "tooltip": [
-      {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex"
-      },
-      {
-        "field": "TotalEmployed",
-        "type": "quantitative",
-        "title": "Employed Persons",
-        "format": ","
-      }
-    ]
+    }
   },
-  "width": 400,
-  "height": 480,
+  "width": 500,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

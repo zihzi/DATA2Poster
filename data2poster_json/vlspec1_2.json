@@ -1,30 +1,51 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Sex Share Distribution",
+  "title": "Female Proportion Distribution Across Pacific Island Countries",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
-  "mark": "bar",
+  "transform": [
+    {
+      "filter": "datum.Sex === 'Female'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Female Proportion",
+          "as": "AvgFemaleProportion"
+        }
+      ],
+      "groupby": [
+        "Pacific Island Countries"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "bin": {
-        "maxbins": 20
-      },
-      "field": "Sex share",
-      "type": "quantitative",
+      "field": "Pacific Island Countries",
+      "type": "nominal",
       "axis": {
         "labelAngle": -30,
-        "title": "Sex Share (Proportion Female)"
-      }
+        "title": "Pacific Island Country",
+        "tickCount": 6
+      },
+      "sort": "-y"
     },
     "y": {
-      "aggregate": "count",
+      "field": "AvgFemaleProportion",
       "type": "quantitative",
-      "title": "Record Count"
+      "axis": {
+        "title": "Female Proportion",
+        "tickCount": 6
+      }
     }
   },
-  "width": 600,
-  "height": 400,
+  "width": 620,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

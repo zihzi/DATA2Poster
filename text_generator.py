@@ -140,13 +140,13 @@ def introduction(vis, header, openai_key):
    
 
 
-def conclusion(insight, intro, column_1, column_2, entity_1, entity_2, openai_key):
+def conclusion(chart_pattern, insight, intro, column_1, column_2, entity_1, entity_2, openai_key):
 
     prompt = PromptTemplate(
             template="""
-            You are an assistant that helps people to summarize given visualization charts from a poster.
+            You are an assistant that helps people to summarize visualization charts from a poster.
             Here's the introduction of this poster {intro}.
-            The following is the insights of six visualization charts:
+            The following is the insights of each chart:
             Insights from chart 1.{insight_1}\n\n
             Insights from chart 2.{insight_2}\n\n
             Insights from chart 3.{insight_3}\n\n
@@ -154,30 +154,31 @@ def conclusion(insight, intro, column_1, column_2, entity_1, entity_2, openai_ke
             Insights from chart 5.{insight_5}\n\n
             Insights from chart 6.{insight_6}\n\n
             The insights from each chart is summarized in 5 bullet points.
+
+            The following is the description of each chart:
+            Description of chart 1: {chart_pattern1}\n\n
+            Description of chart 2: {chart_pattern2}\n\n
+            Description of chart 3: {chart_pattern3}\n\n
+            Description of chart 4: {chart_pattern4}\n\n
+            Description of chart 5: {chart_pattern5}\n\n
+            Description of chart 6: {chart_pattern6}\n\n
+            The description of each chart is a concise summary of what the chart is about in 3-5 sentences.
+
             **Your task:**
             Select **one** the most important bullet point from the insights for each charts and write a concise conclusion for the poster.
             **Instruction (think step by step)**
             1. Refer to the introduction and understand the analysis purpose of this poster.
             2. Read and understand the given insights carefully.
-            3. Select **one** the most important bullet point from the insights for each chart.
-            4. Use the sentense from the selected bullet points to write a concise conclusion for the poster.
-            5. Do not restate or reference all the sentences directly. Instead, quote numbers only when they are essential to strengthen the insight, but avoid overwhelming the audience with raw figures.
-            6. Write the conclusion in clear, plain language that is easy for the audience to understand.
-            7. EACH SENTENCE SHOULD BE SHORT AND CLEAR in **10-15** words.
-            8. DO NOT use special symbols such as *, `
+            3. Read and understand the given chart descriptions carefully.
+            4. Use the sentense from the insights or chart descriptions to write a concise conclusion for the poster.The conclusion should include:
+               - neutral explanations (objective and descriptive).
+               - speculative opinions (possible reason, implication, or why it matters).  
+            5. The conclusion SHOULD **NO MORE THAN 70 words**.
+            6. DO NOT use special symbols such as *, `
 
-            **Attention**
-            1. The insight from chart 1 are facts about the column name {column_1} and the insight from chart 3 are facts about {column_2}. Ensure you add the word of {column_1} and {column_2} in your conclusion.
-            2. The insight from chart 5 are facts about {entity_1} and the insight from chart 6 are facts about {entity_2}.
-            3. Insight from chart 5 and chart 6 are about the same topic, so you should compare these insights.
-            4. After comparing the insights from chart 5 and chart 6, you highlight the key differences and similarities in your conclusion.
-            5. Ensure you add the word of {entity_1} and {entity_2} in your conclusion.
-               - Example: If entity_1 is "China" and entity_2 is "Japan", you might say: "China has the highest sales in electronics, while Japan has the highest sales in automobiles."
 
             **Constraints**
-            1. Write the conclusion for each charts **in order**.
-            2. Make sure insight from each chart is clearly expressed without confuse with insights of other charts.
-            3. Use appropriate conjunctions and transitional phrases to ensure the narrative flows smoothly. Connect insights logically so that each sentence leads naturally to the next, creating a coherent and easy-to-follow conclusion.
+            1. Use appropriate conjunctions and transitional phrases to ensure the narrative flows smoothly. Connect sentences logically so that each sentence leads naturally to the next, creating a coherent and easy-to-follow conclusion.
 
             **Avoid**
             The following is example of conclusion you should NOT write:
@@ -186,7 +187,7 @@ def conclusion(insight, intro, column_1, column_2, entity_1, entity_2, openai_ke
             2."Employment levels differ significantly among Pacific Island countries and between genders. Key economic sectors show concentrated employment with clear gender disparities. Solomon Islands and Tonga exhibit unique employment patterns by sex and sector. Understanding these differences aids targeted employment policies in the region."
             Rationale: This conclusion is too vague, lacks specific insights, and does not directly address the key findings from the charts. It also does not provide a clear summary of the main insights.
             """,
-            input_variables=["intro","insight_1","insight_2","insight_3","insight_4","insight_5","insight_6"],
+            input_variables=["intro","insight_1","insight_2","insight_3","insight_4","insight_5","insight_6","chart_pattern1","chart_pattern2","chart_pattern3","chart_pattern4","chart_pattern5","chart_pattern6","column_1", "column_2", "entity_1","entity_2"],
         )
         
     # llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
@@ -198,7 +199,7 @@ def conclusion(insight, intro, column_1, column_2, entity_1, entity_2, openai_ke
             # other params...
         )
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'intro':intro, 'insight_1':insight[0], 'insight_2':insight[2], 'insight_3':insight[1],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'column_1':column_1, 'column_2':column_2, 'entity_1':entity_1,'entity_2':entity_2} )
+    response = conclusion_chain.invoke(input= {'intro':intro, 'insight_1':insight[0], 'insight_2':insight[2], 'insight_3':insight[1],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'chart_pattern1':chart_pattern[0],'chart_pattern2':chart_pattern[1],'chart_pattern3':chart_pattern[2],'chart_pattern4':chart_pattern[3],'chart_pattern5':chart_pattern[4],'chart_pattern6':chart_pattern[5],'column_1':column_1, 'column_2':column_2, 'entity_1':entity_1,'entity_2':entity_2} )
     return response["content"]
 
 def improve_title(intro,conclusion,openai_key):
@@ -220,28 +221,25 @@ def improve_title(intro,conclusion,openai_key):
                     Carefully read the provided conclusion and identify:
                     - The main finding or pattern
                     - The variables or relationships being described
-                    - Any contextual information about magnitude, trends, or comparisons
-                    - The implications of the finding
+                   
 
             Step 3: Extract the Core Insight.
                     Distill the conclusion into a single, clear insight statement that captures:
                     - The most important and interesting relationship or pattern
-                    - Specific metrics or comparisons when relevant
-                    - The significance of the finding
 
             Step 4: Formulate a Question-Based Title.
                     Create a title in question form that:
                     - Is concise and attention-grabbing in **10-15** words.
-                    - Reflects both the main topic (from the introduction) and the key insight (from the conclusion).
+                    - Reflects the key insight (from the conclusion).
                     - Uses simple, clear language that is accessible to a general audience.
-                    - Highlights curiosity or surprise to engage the audience.   
+                    
 
             Step 5: Double-check.
                     Before finalizing, review your title to ensure that it:
                     - Falls within the 10-15 word limit.
-                    - Clearly combines the dataset's topic and the key insight.
                     - Flows smoothly and reads like a natural question.
-                    - Is engaging and sparks curiosity for a general audience.
+                    - Can be answered by the key insight from the conclusion.
+                  
      
             """,
             input_variables=["intro","conclusion"],

@@ -1,25 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Sex Share by Sector in Cook Islands",
+  "title": "Female Proportion by Economic Sector in Tokelau",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
-      "filter": "datum['Pacific Island Countries'] == 'Cook Islands'"
-    },
-    {
-      "aggregate": [
-        {
-          "op": "mean",
-          "field": "Sex share",
-          "as": "MeanSexShare"
-        }
-      ],
-      "groupby": [
-        "Economic sector",
-        "Sex"
-      ]
+      "filter": "datum['Pacific Island Countries'] === 'Tokelau' && datum.Sex === 'Female'"
     }
   ],
   "mark": {
@@ -27,50 +14,25 @@
   },
   "encoding": {
     "x": {
-      "field": "Economic sector",
+      "field": "Economic Sector",
       "type": "nominal",
       "axis": {
         "labelAngle": -30,
-        "title": "Economic Sector"
+        "title": "Economic Sector",
+        "tickCount": 6
       }
     },
     "y": {
-      "field": "MeanSexShare",
+      "field": "Female Proportion",
       "type": "quantitative",
-      "title": "Average Sex Share"
-    },
-    "xOffset": {
-      "field": "Sex"
-    },
-    "color": {
-      "field": "Sex",
-      "type": "nominal",
-      "title": "Sex",
-      "scale": {
-        "scheme": "category10"
+      "axis": {
+        "title": "Female Proportion",
+        "tickCount": 6
       }
-    },
-    "tooltip": [
-      {
-        "field": "Economic sector",
-        "type": "nominal",
-        "title": "Sector"
-      },
-      {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex"
-      },
-      {
-        "field": "MeanSexShare",
-        "type": "quantitative",
-        "title": "Mean Sex Share",
-        "format": ".2f"
-      }
-    ]
+    }
   },
-  "width": 600,
-  "height": 480,
+  "width": 500,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

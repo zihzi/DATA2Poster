@@ -30,7 +30,7 @@ from langchain_core.documents import Document
 from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
 import random
 import os
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "triple-voyage-402515-6e6f321d5d4e.json"
+
 
 
 
@@ -51,7 +51,7 @@ with col2:
 if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
-    datasets["Occupation_gender_gap"] = pd.read_csv("data/Occupation_gender_gap.csv")
+    datasets["Occupation_gender_gap2"] = pd.read_csv("data/Occupation_gender_gap2.csv")
     datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
     datasets["volcano"] = pd.read_csv("data/volcano.csv")
     datasets["Indian_Kids_Screen_Time"] = pd.read_csv("data/Indian_Kids_Screen_Time.csv")
@@ -75,7 +75,7 @@ with st.sidebar:
             1. Input your OpenAI Key.
             2. Select dataset from the list below then you can start.
         """)
-    # Set area for OpenAI key
+    # Set area for OpenAI key //Gemeini key
     openai_key = st.text_input(label = "🔑 OpenAI Key:", help="Required for models.",type="password")
 
     # Set area for OpenAPI key
@@ -290,7 +290,7 @@ def preprocess_json_2(code: str, count: str) -> str:
 #                 - Key Elements: Identify the main data components mentioned
 #                 - Implicit Requirements: Note any unstated but implied needs
 #                 Step 2. Data Requirements
-#                 - Data Types: Specify categorical, numerical, temporal, geographical, etc.
+#                 - Data Types: Specify categorical, numerical, temporal, etc.
 #                 - Data Preprocessing: Any transformations, aggregations, or calculations needed
 #                 Step 3. Visualization Specification
 #                 - Chart Type: Recommend **one** that is the most appropriate visualization type 
@@ -365,6 +365,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
             - Comparing across groups (categories).
             - Drilling down into deeper insights (interactions between columns).
 
+        **Constraints**
+        - The first column must be categorical or temporal.
+        - The second column must be categorical or temporal.
+
         **Output your answer in JSON format as follows**
         NEVER INCLUDE ```json```.Do not add other sentences after this json data.
         {{
@@ -379,14 +383,14 @@ if try_true or (st.session_state["bt_try"] == "T"):
             {{
             "column": "<column name 2>",
             "properties": {{
-                "dtype": "N",
+                "dtype": "C",
                 "num_unique_values": 32
             }}
             }},
             {{
             "column": "<column name 3>",
             "properties": {{
-                "dtype": "C",
+                "dtype": "N",
                 "num_unique_values": 12
             }},
             {{
@@ -418,7 +422,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 dtype_columns_dict["measure"].append(col["column"])
         st.write("Columns grouped by dtype:", dtype_columns_dict)
 
-        # Generate facts from S1C1, S2C1
+        
         facts_list = []
         # USE ALL COLUMNS TO GENERATE FACTS#####################################################################
         desired_combinations = ['CNC', 'TNC', 'CNN', 'TNN']
@@ -476,7 +480,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 breakdown_T = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "T"]
                 breakdown_C = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "C"]
                 measure = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "N"]
-                st.write(breakdown, measure)
                 facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown_T[0],
@@ -524,7 +527,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
             elif item["combinations"] == "CNN":
                 breakdown = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "C"]
                 measure = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "N"]
-                st.write(breakdown, measure)
                 facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown[0],
@@ -562,7 +564,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
             elif item["combinations"] == "TNN":
                 breakdown = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "T"]
                 measure = [col for col, dtype in item["columns_dtype_mapping"].items() if dtype == "N"]
-                st.write(breakdown, measure)
                 facts_1 = generate_facts(
                                 dataset=Path(f"data/{chosen_dataset}.csv"),
                                 breakdown=breakdown[0],
@@ -597,143 +598,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             )
                 for fact in facts_3:
                     facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-        # st.write("**Generated Data Facts:**",facts_list)
-        # for i in range(0,2):
-        #     extracted_df = datasets[chosen_dataset][[col_select_json["key_columns"][i]["column"], col_select_json["key_columns"][3]["column"]]]
-        #     extracted_df = extracted_df.groupby(col_select_json["key_columns"][i]["column"], as_index=False)[col_select_json["key_columns"][3]["column"]].sum()
-        #     extracted_df.to_csv(f"DATA2Poster_df/extracted_df.csv", index=False)
-        #     extracted_df_schema = get_column_properties(extracted_df)
-        #     if extracted_df_schema[0]["properties"]["dtype"] == "C":
-        #         facts_1 = generate_facts(
-        #                         dataset=Path(f"DATA2Poster_df/extracted_df.csv"),
-        #                         breakdown=col_select_json["key_columns"][i]["column"],
-        #                         measure=col_select_json["key_columns"][3]["column"],
-        #                         series=None,
-        #                         breakdown_type="C",
-        #                         measure_type="N",
-        #                         with_vis=False,
-        #                     )
-        #         for fact in facts_1:
-        #             facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-        #     elif extracted_df_schema[0]["properties"]["dtype"] == "T":
-        #         facts_1 = generate_facts(
-        #                         dataset=Path(f"DATA2Poster_df/extracted_df.csv"),
-        #                         breakdown=col_select_json["key_columns"][i]["column"],
-        #                         measure=col_select_json["key_columns"][3]["column"],
-        #                         series=None,
-        #                         breakdown_type="T",
-        #                         measure_type="N",
-        #                         with_vis=False,
-        #                     )
-        #         for fact in facts_1:
-        #             facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-            
-                # facts_2 = generate_facts(
-                #                 dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #                 breakdown="Pacific Island Countries",
-                #                 measure="Number of employed persons",
-                #                 series=None,
-                #                 breakdown_type="C",
-                #                 measure_type="N",
-                #                 with_vis=False,
-                #             )
-                # for fact in facts_2:
-                #     facts_list.append({"content":fact["content"], "score":fact["score_C"]})                                    
-                # elif item["columns_dtype_mapping"][breakdown[0]] == "T":
-                #     facts_1 = generate_facts(
-                #                     dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #                     breakdown=breakdown[0],
-                #                     measure=measure[0],
-                #                     series=breakdown[1],
-                #                     breakdown_type="T",
-                #                     measure_type="N",
-                #                     with_vis=False,
-                #                 )
-                #     for fact in facts_1:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                #     facts_2 = generate_facts(
-                #                     dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #                     breakdown=breakdown[0],
-                #                     measure=measure[0],
-                #                     series=None,
-                #                     breakdown_type="T",
-                #                     measure_type="N",
-                #                     with_vis=False,
-                #                 )
-                #     for fact in facts_2:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                                        
-                # if len(measure) == 2:
-                # if item["columns_dtype_mapping"][breakdown[0]] == "C":
-                #     facts_1 = generate_facts(
-                #         dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #         breakdown=breakdown[0],
-                #         measure=measure[0],
-                #         measure2=measure[1],
-                #         series=None,
-                #         breakdown_type="C",
-                #         measure_type="NxN",
-                #         with_vis=False,
-                #     )
-                #     for fact in facts_1:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                #     facts_2 = generate_facts(
-                #             dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #             breakdown=breakdown[0],
-                #             measure=measure[0],
-                #             series=None,
-                #             breakdown_type="C",
-                #             measure_type="N",
-                #             with_vis=False,
-                #         )
-                #     for fact in facts_2:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                #     facts_3 = generate_facts(
-                #             dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #             breakdown=breakdown[0],
-                #             measure=measure[1],
-                #             series=None,
-                #             breakdown_type="C",
-                #             measure_type="N",
-                #             with_vis=False,
-                #         )
-                #     for fact in facts_3:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                # elif item["columns_dtype_mapping"][breakdown[0]] == "T": 
-                #     facts_1 = generate_facts(
-                #             dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #             breakdown=breakdown[0],
-                #             measure=measure[0],
-                #             measure2=measure[1],
-                #             series=None,
-                #             breakdown_type="T",
-                #             measure_type="NxN",
-                #             with_vis=False,
-                #         )
-                #     for fact in facts_1:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})  
-                #     facts_2 = generate_facts(
-                #             dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #             breakdown=breakdown[0],
-                #             measure=measure[0],
-                #             series=None,
-                #             breakdown_type="T",
-                #             measure_type="N",
-                #             with_vis=False,
-                #         )
-                #     for fact in facts_2:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
-                #     facts_3 = generate_facts(
-                #             dataset=Path(f"DATA2Poster_df/transformed_df.csv"),
-                #             breakdown=breakdown[0],
-                #             measure=measure[1],
-                #             series=None,
-                #             breakdown_type="T",
-                #             measure_type="N",
-                #             with_vis=False,
-                #         )
-                #     for fact in facts_3:
-                #         facts_list.append({"content":fact["content"], "score":fact["score_C"]})
+        
         # Preprocess the facts into insight fact list and send it to llm afterwards
         if "s1c1_fact" not in st.session_state:
             st.session_state["s1c1_fact"] = []
@@ -742,7 +607,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         
         # Ranking facts by score
         facts_list = sorted(facts_list, key=itemgetter('score'), reverse=True) 
-        facts_list = [fact for fact in facts_list if fact["score"] > 0.5]
+        facts_list = [fact for fact in facts_list if fact["score"] > 1]
         st.write("Filtered and Ranked Facts:",facts_list)
         seen = set()
         seen_1 = set()
@@ -759,98 +624,42 @@ if try_true or (st.session_state["bt_try"] == "T"):
         st.write("s1c1 Facts:",st.session_state["s1c1_fact"])
         st.write("s2c1 Facts:",st.session_state["s2c1_fact"])
 
-        insight_from_fact=[]
+        insight_from_fact_to_llm=[]
         for i in range(0,2):   
             if i == 0:
                 insight_from_s1c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s1c1_fact"], )
-                insight_from_fact.append(insight_from_s1c1)
+                insight_from_fact_to_llm.append(insight_from_s1c1)
             elif i == 1:
                 insight_from_s2c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s2c1_fact"], )
-                insight_from_fact.append(insight_from_s2c1)
-        st.write("Insights from Facts:",insight_from_fact)
+                insight_from_fact_to_llm.append(insight_from_s2c1)
+        st.write("Insights from Facts:",insight_from_fact_to_llm)
+
+        # //// Random sample 100 facts for passing to LLM ////
+        st.session_state["s1c1_fact"] = random.sample(st.session_state["s1c1_fact"], min(100, len(st.session_state["s1c1_fact"])))
+        st.session_state["s2c1_fact"] = random.sample(st.session_state["s2c1_fact"], min(100, len(st.session_state["s2c1_fact"])))
           
 
         chart_title = []
         chart_query = []
-        # with open ("json_schema/base_fact.json", "r") as f:
-        #     base_fact_json = json.load(f)
-        # # Randomly select 1 base facts to generate base charts
-        # new_base_fact_col_com = random.sample(base_fact_col_com, 1)
-        # for bf in new_base_fact_col_com:
-            
-        #     agg = datasets[chosen_dataset].groupby(bf["x"])[bf["y"]].sum().reset_index()
-            
-        
-        # # To iterate through the base facts and generate first-level follow-up questions
-        # # for i in range(1,b_idx):
-        #     # binary_base_chart     = open(f"DATA2Poster_img/base/base_img_{i}.png", 'rb').read()  
-        #     # base64_utf8_base_chart = base64.b64encode(binary_base_chart).decode('utf-8')
-        #     # base_img_url = f'data:image/png;base64,{base64_utf8_base_chart}' 
-
-        #     # Use llm to generate the base chart description 
-        #     bc_des_prompt = """
-        #                         You are a data visualization expert.
-
-        #                         Below is the raw data that will populate a **bar chart**:
-
-        #                         {data_table}\n\n
-                                
-        #                         Read the numbers carefully, pretending you are *seeing* the chart bars and their exact heights.
-
-        #                         **Your task**
-
-        #                         Write a concise narrative that to describe the chart, focusing on the most important insights.
-
-        #                         **Instructions**
-
-        #                         1. Think step-by-step:
-        #                         - Identify high, low, and median bars.  
-        #                         - Note any obvious clusters, gaps.  
-        #                         - Calculate at least one simple statistic if useful (e.g., top vs bottom difference).
-
-        #                         2. Write a concise narrative that:
-        #                         - Starts with a strong headline insight.  
-        #                         - Highlights 2-3 secondary observations (comparisons, rank order, surprising values).  
-        #                         - Uses actual numbers or percentages from the data where appropriate.  
-        #                         - Uses plain language suited to the audience.
-
-        #                         **Output**
-
-        #                         Return **only** plain text in this structure:
-
-        #                         <Headline insight>
-        #                         • <Bullet 1>
-        #                         • <Bullet 2>
-        #                         • ...
-        #                     """
-            
-        #     bc_prompt = PromptTemplate(
-        #         template=bc_des_prompt,
-        #         input_variables=["data_table"]
-        #     )
-        #     bc_chain = bc_prompt | llm
-        #     bc_result = bc_chain.invoke(input = {"data_table": agg.to_string(index=False)})
-        #     st.write("base chart description:",bc_result.content)
-            
 
         # ////zero shot//// Use llm to read the base chart description to generate section 1 follow-up questions(and provide with the base facts)
         eda_q_for_sec1_template="""
         You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
         Additional dataset columns information: {key_columns}
-        Read the information from the current EDA carefully: {s1c1_insight}
+        Read the information founded from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
 
         **Your Task**
         Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
         {data_facts}\n\n
         1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-        2. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-            - The question must refer to this one column **ONLY**: {column_1}. 
-            - The question should be high-level and only mention column name rather than specific value.
+        2. For the first question, choose a fact and write one specific follow-up questions that:
+            - In addition to the numerical column, the question must refer to this one column **ONLY**: {column_1}. 
+            - The question should be high-level and **ONLY** mention column name rather than specific value.
             - Make them answerable with the existing dataset.
-        3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-            - The question must refer to these two column **ONLY**: {column_1} and the other different column.
+        3. For the second question, choose a fact and write one specific follow-up questions that:
+            - In addition to the numerical column, the question must refer to these two column **ONLY**: {column_1} and the other different column.
             - Make them answerable with the existing dataset.
-        4. Write a title for the chart **(≤7 words each)** based on the question.
+        4. Write a title for the chart **(no more than 12 words each)** based on the questions.
         
         **Constraints**
         - Never rewrite th data facts from {data_facts}.
@@ -860,10 +669,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
         Dataset columns: [gender, racial groups, math score, reading score, writing score]
         Follow-up questions:
         Question 1. How do the average math scores across different races?
-        Question 2. Which are top 5 racial groups show the largest gender gap in average math scores?
         Rationale: 
-        The first question provide an overview of students from different races on math scores performance.
-        The second question extends the analysis by comparing the average math scores(same metric as Question 1) between gender(both male and female) and racial groups, which is a new angle to the analysis.
+        Follows rule #2: 
+        - Focuses on one numerical column (math score) and one categorical column (gender).
+        - High-level (doesn't mention specific values like “female” or “male”).
+        Helps reveal broad performance gaps between genders.
+        Question 2. How does the reading score differ across gender and racial groups?  
+        Rationale:
+        Follows rule #3: 
+        - Uses one numerical column (reading score), the required gender, and one other categorical column (racial groups).
+        - Adds a second dimension for deeper drill-down.
+        - Avoids redundancy by choosing a different numerical column (reading score) than the first question.
 
         **Output (exact JSON)**  
         NEVER INCLUDE ```json```.Do not add other sentences after this json data.
@@ -890,14 +706,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
         }}"""
         eda_q_for_sec1_prompt = PromptTemplate(
             template=eda_q_for_sec1_template,
-            input_variables=["key_columns","data_facts","column_1","s1c1_insight"]
+            input_variables=["key_columns","s1c1_insight","data_facts","column_1"]
         )
         eda_q_for_sec1_chain = eda_q_for_sec1_prompt | llm
         eda_q_for_sec1_result = eda_q_for_sec1_chain.invoke(input = {
-                                                        "key_columns":chosen_data_schema,
+                                                        "key_columns":col_select_json["key_columns"],
+                                                        "s1c1_insight":insight_from_fact_to_llm[0],
                                                         "data_facts":str(st.session_state["s1c1_fact"]),
-                                                        "column_1":dtype_columns_dict["breakdown"][0],
-                                                        "s1c1_insight":insight_from_fact[0]})
+                                                        "column_1":col_select_json["key_columns"][0]["column"],
+                                                        })
         eda_q_for_sec1_json = parse_jsonish(eda_q_for_sec1_result.content)
         # st.write(eda_q_for_sec1_result.content)
         # eda_q_for_sec1_json = json.loads(eda_q_for_sec1_result.content)
@@ -913,26 +730,40 @@ if try_true or (st.session_state["bt_try"] == "T"):
         eda_q_for_sec2_template="""
         You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
         Additional dataset columns information: {key_columns}
-        Read the information from the current EDA carefully: {s2c1_insight}
+        Read the information founded from the current exploratory data analysis(EDA) carefully: {s2c1_insight}
 
         **Your Task**
         Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
         {data_facts}\n\n
         1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-        2. For the first question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-            - The question must refer to one column **ONLY**.
-            - Avoid using the column: {column_from_s1q1}.
-            - The question should be high-level and only mention column name rather than specific value.
+        2. For the first question, choose a fact and write one specific follow-up questions that:
+            - In addition to the numerical column, the question must refer to one column **ONLY**:
+            - The question should be high-level and **ONLY** mention column name rather than specific value.
             - Make them answerable with the existing dataset.
-        3. For the second question, choose a fact and write **one** specific follow-up questions (≤25 words each) that:
-            - The question must refer to these two column **ONLY**: the column used in the first question and the other different column.
+        3. For the second question, choose a fact and write one specific follow-up questions that:
+            - In addition to the numerical column, the question must refer to these two column **ONLY**: the column used in the first question and the other different column.
             - Avoid using the same combination of columns as following: {column_from_s1q2}.
             - Make them answerable with the existing dataset.
-        4. Write a title for the chart **(≤7 words each)** based on the question.
+        4. Write a title for the chart **(no more than 12 words each)** based on the questions.
         
         **Constraints**
         - Never rewrite th data facts from {data_facts}.
-        
+     
+        **Example**
+        Dataset columns: [gender, racial groups, math score, reading score, writing score]
+        Follow-up questions:
+        Question 1. How do the average math scores across different races?
+        Rationale: 
+        Follows rule #2: 
+        - Focuses on one numerical column (math score) and one categorical column (gender).
+        - High-level (doesn't mention specific values like “female” or “male”).
+        Helps reveal broad performance gaps between genders.
+        Question 2. How does the reading score differ across gender and racial groups?  
+        Rationale:
+        Follows rule #3: 
+        - Uses one numerical column (reading score), the required gender, and one other categorical column (racial groups).
+        - Adds a second dimension for deeper drill-down.
+        - Avoids redundancy by choosing a different numerical column (reading score) than the first question.
         
         **Output (exact JSON)**
         NEVER INCLUDE ```json```.Do not add other sentences after this json data.
@@ -959,15 +790,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
         }}"""
         eda_q_for_sec2_prompt = PromptTemplate(
             template=eda_q_for_sec2_template,
-            input_variables=["data_facts","key_columns","column_from_s1q1","column_from_s1q2","s2c1_insight"]
+            input_variables=["key_columns","s2c1_insight","data_facts","column_from_s1q2"]
         )
         eda_q_for_sec2_chain = eda_q_for_sec2_prompt | llm
         eda_q_for_sec2_result = eda_q_for_sec2_chain.invoke(input = {
+                                                        
+                                                        "key_columns":col_select_json["key_columns"],
+                                                        "s2c1_insight":insight_from_fact_to_llm[1],
                                                         "data_facts":str(st.session_state["s2c1_fact"]),
-                                                        "key_columns":chosen_data_schema,
-                                                        "column_from_s1q1":eda_q_for_sec1_json["follow_up_questions"][0]["column"],
-                                                        "column_from_s1q2":eda_q_for_sec1_json["follow_up_questions"][1]["column"],
-                                                        "s2c1_insight":insight_from_fact[1]
+                                                        "column_from_s1q2":eda_q_for_sec1_json["follow_up_questions"][1]["column"]
                                                         })
         eda_q_for_sec2_json = parse_jsonish(eda_q_for_sec2_result.content)
         # st.write(eda_q_for_sec2_json)
@@ -1041,23 +872,24 @@ if try_true or (st.session_state["bt_try"] == "T"):
         # st.write("Transformed DataFrame:",new_df)
        
 
-        # ////zero shot//// Use llm to read the section 1 chart 2 data table to generate section 3 follow-up questions
+        # ////zero shot//// Use llm to read the insights from s1c1 facts to generate section 3 follow-up questions
             
         eda_q_for_sec3_template="""
         You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
         Additional dataset columns information: {key_columns}
-        Read the information from the current EDA carefully: {s1c1_insight}
+        Read the information founded from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
 
 
         **Your Task**
         Generate **two** distinct follow-up questions that logically extend the current EDA:
         1. Understand the given information from the current EDA.
         2. Identify two entities that worth to explore.
-        3. Write specific follow-up questions (≤25 words each) for these two entities that:
-            - This question drill down to reveal the pattern within this entity.
-            - The question must refer to these two column **ONLY**.
+        3. Write specific follow-up questions **(no more than 15 words each)** for these two entities that:
+            - The question drill down to reveal the pattern within this entity.
+            - In addition to the numerical column, the question must refer to two column **ONLY**.
+            - Ensure the two questions are use **the same** combination of columns.
             - Make them answerable with the existing dataset.
-        4. Write a title for the chart **(≤7 words each)** based on the question.
+        4. Write a title for the chart **(no more than 12 words each)** based on the questions.
 
         **Constraints**
         - Never raise the same or similar questions as following:  
@@ -1099,7 +931,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         eda_q_for_sec3_result = eda_q_for_sec3_chain.invoke(input = {
 
                                                         "key_columns":chosen_data_schema,
-                                                        "s1c1_insight":st.session_state["s1c1_fact"],
+                                                        "s1c1_insight":insight_from_fact_to_llm[0],
                                                         "question_1": chart_query[0],
                                                         "question_2": chart_query[1],
                                                         "question_3": chart_query[2],
@@ -1115,62 +947,38 @@ if try_true or (st.session_state["bt_try"] == "T"):
         chart_title.append(eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"])
         chart_title.append(eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"])
 
-    
+        # Use llm to describe the charts based on the chart image
+        chart_pattern = []
+        for i in range(0,6):            
+            binary_chart     = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()  # fc aka file_content
+            base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
+            img_url = f'data:image/png;base64,{base64_utf8_chart}' 
+            chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+            chart_des_prompt = [
+                SystemMessage(content=chart_prompt_template),
+                HumanMessage(content=[
+                    {
+                        "type": "text", 
+                        "text": f"This chart is ploted  based on this question:\n\n {chart_query[i]}.\n\n"
+                    },
+                    {
+                            "type": "text", 
+                            "text": "Here is the chart to describe:"
+                    },
+                    {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": img_url
+                            },
+                    },
+                ])
+            ]
+            chart_des =  llm.invoke(chart_des_prompt)
+            chart_pattern.append(chart_des.content)
 
-  
-                    
-                    
-    #     #     # binary_chart     = open(f"DATA2Poster_img/image_{idx}.png", 'rb').read()  # fc aka file_content
-    #     #     # base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
-    #     #     # img_url = f'data:image/png;base64,{base64_utf8_chart}' 
-    #     #     # chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-    #     #     # chart_des_prompt = [
-    #     #     #     SystemMessage(content=chart_prompt_template),
-    #     #     #     HumanMessage(content=[
-    #     #     #         {
-    #     #     #             "type": "text", 
-    #     #     #             "text": f"This chart is ploted  based on this question:\n\n {query}.\n\n"
-    #     #     #         },
-    #     #     #         {
-    #     #     #                 "type": "text", 
-    #     #     #                 "text": "Here is the chart to describe:"
-    #     #     #         },
-    #     #     #         {
-    #     #     #                 "type": "image_url",
-    #     #     #                 "image_url": {
-    #     #     #                     "url": img_url
-    #     #     #                 },
-    #     #     #         },
-    #     #     #     ])
-    #     #     # ] 
-            
-    #     #     # chart_des =  llm.invoke(chart_des_prompt)
 
-            
-    #     #     # st.write(f'**Chart Description:**', f'**{chart_des.content}**')
-    #     #     # # st.write(f'**Supported Data Fact:**', f'**{supported_fact}**')
-    #     #     # # st.write(f'**Data Fact after RAG:**', f'**{retrieved_fact}**')
-            
-    #     #     # # call GPT to generate insight description
-    #     #     # insight_prompt_template = load_prompt_from_file("prompt_templates/insight_prompt.txt")
-    #     #     # insight_prompt_input_template = load_prompt_from_file("prompt_templates/insight_prompt_input.txt")
-    #     #     # insight_prompt_input = PromptTemplate(
-    #     #     #             template=insight_prompt_input_template,
-    #     #     #             input_variables=["query", "chart_des"],
-                                                
-    #     #     # ) 
-    #     #     # insight_prompt = ChatPromptTemplate.from_messages(
-    #     #     #         messages=[
-    #     #     #             SystemMessage(content = insight_prompt_template),
-    #     #     #             HumanMessagePromptTemplate.from_template(insight_prompt_input.template)
-    #     #     #         ]
-    #     #     #     )
-            
-    #     #     # insight_chain = insight_prompt | llm
-    #     #     # insight = insight_chain.invoke(input= {"query":query, "chart_des":chart_des})
-    #     #     # insight_list.append(insight.content)
-    #     #     # st.write(f'**Insight Description:**', f'**{insight.content}**')
-    #     #     # chart_des_list.append(chart_des.content)
+        st.write(f'**Chart Description:**', f'**{chart_pattern}**')
+
         img_to_llm_list = []
         for i in range(0,6):
             img_to_llm_list.append({"chart_id": i, "title": chart_title[i]})
@@ -1178,8 +986,6 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         # ////zero shot//// Use llm to write section header and section insight based on the chart titles           
         chart_check_prompt ="""
-            
-
                                     You are an expert at capture interesting insight from visualization charts.
                                     You are building a 3-section poster.
                                     You are given only the chart titles and its id listed below:{img_to_llm_list}
@@ -1302,15 +1108,19 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 final_chart.save(f"DATA2Poster_chart/image{spec_id}.png")
                 st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
             spec_id += 1
-        # Generate data facts from s1c2, s2c2, s3c1, s3c2 charts
-        facts_1_1 = []
-        facts_2_1 = []
+       
+        
+        # Generate data facts from s1c2, s2c2, s3c1, s3c2 charts 
+        insight_from_fact = []
 
-        for i in range(1,6):
-            title = chart_title[i]
-            if i == 2:
-                continue
-            else:
+        for i in range(0,6):
+                facts_1_1 = []
+                facts_2_1 = []
+                title = chart_title[i]
+                st.write("chart_title:",title)
+            # if i == 2:
+            #     continue
+            # else:
                 with open(f"DATA2Poster_json/vlspec1_{i}.json", "r") as f:
                     spec_json = json.load(f)
       
@@ -1391,7 +1201,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 
                 clean_facts = []
                 for item in raw_facts:
-                    if i ==1:
+                    if i==0 or i ==1:
                         if item["content"] != "No fact." and col_select_json["key_columns"][0]["column"] in item["content"] and item["content"] not in seen:
                             seen.add(item["content"])
                             clean_facts.append(item["content"])
@@ -1400,8 +1210,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
                             seen.add(item["content"])
                             clean_facts.append(item["content"])
                 st.write("Clean Facts:",clean_facts)
-                st.write("chart_title:",title)
-                if i == 1:
+                
+                if i ==0 or i == 1:
                     insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][0]["column"], clean_facts)
                     insight_from_fact.append(insight_from_sc)
                 else:
@@ -1430,7 +1240,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         
         # Create pdf and download
         pdf_title = f"{chosen_dataset} Poster"
-        create_pdf(chosen_dataset, insight_from_fact,section_insight_list, chartid_for_pdf,chart_for_pdf,col_select_json["key_columns"][0]["column"], col_select_json["key_columns"][1]["column"], eda_q_for_sec3_json["follow_up_questions"][0]["entity"],eda_q_for_sec3_json["follow_up_questions"][1]["entity"], section_header_list,openai_key)
+        create_pdf(chosen_dataset, chart_pattern,insight_from_fact,section_insight_list, chartid_for_pdf,chart_for_pdf,col_select_json["key_columns"][0]["column"], col_select_json["key_columns"][1]["column"], eda_q_for_sec3_json["follow_up_questions"][0]["entity"],eda_q_for_sec3_json["follow_up_questions"][1]["entity"], section_header_list,openai_key)
         st.success("Poster has been created successfully!🎉")
         with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
             st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")

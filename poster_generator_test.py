@@ -12,7 +12,7 @@ from text_generator import introduction, conclusion, improve_title
 
 
 
-def create_pdf(data_name,insight_list,section_insight_list,chart_id_list,chart_url_list, column_1, column_2, entity_1,entity_2,section_header_list,openai_key):
+def create_pdf(data_name, chart_pattern, insight_list, section_insight_list, chart_id_list, chart_url_list, column_1, column_2, entity_1, entity_2, section_header_list, openai_key):
 
     filename = f"{data_name}_summary.pdf"
     filedir = "pdf"
@@ -27,7 +27,7 @@ def create_pdf(data_name,insight_list,section_insight_list,chart_id_list,chart_u
     text_introduction = introduction(chart_url_list , section_header_list,openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(insight_list ,text_introduction, column_1, column_2, entity_1, entity_2, openai_key)
+    text_conclusion = conclusion(chart_pattern, insight_list ,text_introduction, column_1, column_2, entity_1, entity_2, openai_key)
 
     # Generate Title from conclusion
     title = improve_title(text_introduction, text_conclusion, openai_key)
@@ -50,16 +50,16 @@ def create_pdf(data_name,insight_list,section_insight_list,chart_id_list,chart_u
 
     p_desc = Paragraph(section_insight_list[0], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-225)
+    p_desc.drawOn(c, 50, height-229)
 
     # Add section 2 descriptions 
     p_desc = Paragraph(section_insight_list[1], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-545)
+    p_desc.drawOn(c, 50, height-549)
     # Add section 3 descriptions 
     p_desc = Paragraph(section_insight_list[2], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 500, 20)
-    p_desc.drawOn(c, 685, height-90)
+    p_desc.drawOn(c, 685, height-92)
     # Add section 1 images
     c.drawImage(f"data2poster_chart/image{chart_id_list[0]}.png", 20, height-518, width=280, height=280)
     c.drawImage(f"data2poster_chart/image{chart_id_list[1]}.png", 330, height-518, width=290, height=280)
