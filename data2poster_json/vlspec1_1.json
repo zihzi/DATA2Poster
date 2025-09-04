@@ -1,24 +1,21 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion by Economic Sector and Country",
+  "title": "Number of Employed Persons by Country and Sex",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
-      "filter": "datum.Sex === 'Female'"
-    },
-    {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Female Proportion",
-          "as": "AvgFemaleProportion"
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "Total_Employed"
         }
       ],
       "groupby": [
         "Pacific Island Countries",
-        "Economic Sector"
+        "Sex"
       ]
     }
   ],
@@ -29,27 +26,24 @@
     "x": {
       "field": "Pacific Island Countries",
       "type": "nominal",
+      "title": "Pacific Island Country",
       "axis": {
         "labelAngle": -30,
-        "title": "Pacific Island Country",
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Economic Sector"
+      "field": "Sex"
     },
     "y": {
-      "field": "AvgFemaleProportion",
+      "field": "Total_Employed",
       "type": "quantitative",
-      "axis": {
-        "title": "Female Proportion",
-        "tickCount": 6
-      }
+      "title": "Number of Employed Persons"
     },
     "color": {
-      "field": "Economic Sector",
+      "field": "Sex",
       "type": "nominal",
-      "title": "Economic Sector",
+      "title": "Sex",
       "scale": {
         "scheme": "category10"
       }
@@ -61,20 +55,17 @@
         "title": "Country"
       },
       {
-        "field": "Economic Sector",
-        "type": "nominal",
-        "title": "Economic Sector"
+        "field": "Sex",
+        "type": "nominal"
       },
       {
-        "field": "AvgFemaleProportion",
+        "field": "Total_Employed",
         "type": "quantitative",
-        "title": "Female Proportion",
-        "format": ".2f"
+        "title": "Number Employed",
+        "format": ","
       }
     ]
   },
-  "width": 750,
-  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

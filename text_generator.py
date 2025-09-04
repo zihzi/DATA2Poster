@@ -32,17 +32,17 @@ conclusion_schema ={
 
 def introduction(vis, header, openai_key):
     
-    # llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
-    llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            max_tokens=None,
-            api_key = openai_key
-            # other params...
-        )
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
+    # llm = ChatGoogleGenerativeAI(
+    #         model="gemini-2.5-flash",
+    #         temperature=0,
+    #         max_tokens=None,
+    #         api_key = openai_key
+    #         # other params...
+    #     )
     intro_prompt = [
                 SystemMessage(content="""
-                                        You are an excellent data scientist. 
+                                        You are an excellent data analyst.
                                         You are writing an introduction for a 3-section poster to present the data analysis results.
                                         You will be given 3 section headers and their visualization charts.
                                         Each section contains two charts.
@@ -140,46 +140,54 @@ def introduction(vis, header, openai_key):
    
 
 
-def conclusion(chart_pattern, insight, intro, column_1, column_2, entity_1, entity_2, openai_key):
+def conclusion(chart_pattern, insight, header, entity_1, entity_2, openai_key):
 
     prompt = PromptTemplate(
             template="""
-            You are an assistant that helps people to summarize visualization charts from a poster.
-            Here's the introduction of this poster {intro}.
-            The following is the insights of each chart:
-            Insights from chart 1.{insight_1}\n\n
-            Insights from chart 2.{insight_2}\n\n
-            Insights from chart 3.{insight_3}\n\n
-            Insights from chart 4.{insight_4}\n\n
-            Insights from chart 5.{insight_5}\n\n
-            Insights from chart 6.{insight_6}\n\n
-            The insights from each chart is summarized in 5 bullet points.
+            You are an excellent data analyst.
+            You are summarizing visualization charts from a 3-section poster.
+            You will be given 3 section headers and each section is represented by two charts.
+            Here's the header of this poster "{header1}", "{header2}", "{header3}".
 
-            The following is the description of each chart:
-            Description of chart 1: {chart_pattern1}\n\n
-            Description of chart 2: {chart_pattern2}\n\n
-            Description of chart 3: {chart_pattern3}\n\n
-            Description of chart 4: {chart_pattern4}\n\n
-            Description of chart 5: {chart_pattern5}\n\n
-            Description of chart 6: {chart_pattern6}\n\n
+            The insights is supportive evidence for writing conclusions.
             The description of each chart is a concise summary of what the chart is about in 3-5 sentences.
 
+            The following is the insights and the description of each chart:
+            Section 1:\n\n
+            Insights from chart 1.{insight_1}\n\n Description of chart 1: {chart_pattern1}\n\n
+            Insights from chart 2.{insight_2}\n\n Description of chart 2: {chart_pattern2}\n\n
+            Section 2:\n\n
+            Insights from chart 3.{insight_3}\n\n Description of chart 3: {chart_pattern3}\n\n
+            Insights from chart 4.{insight_4}\n\n Description of chart 4: {chart_pattern4}\n\n
+            Section 3:\n\n
+            Insights from chart 5.{insight_5}\n\n Description of chart 5: {chart_pattern5}\n\n
+            Insights from chart 6.{insight_6}\n\n Description of chart 6: {chart_pattern6}\n\n
+
             **Your task:**
-            Select **one** the most important bullet point from the insights for each charts and write a concise conclusion for the poster.
+            Write a concise and insightful conclusion for the poster.
+
             **Instruction (think step by step)**
-            1. Refer to the introduction and understand the analysis purpose of this poster.
+            1. Refer to the section header and understand the analysis purpose of each section.
             2. Read and understand the given insights carefully.
             3. Read and understand the given chart descriptions carefully.
-            4. Use the sentense from the insights or chart descriptions to write a concise conclusion for the poster.The conclusion should include:
-               - neutral explanations (objective and descriptive).
-               - speculative opinions (possible reason, implication, or why it matters).  
-            5. The conclusion SHOULD **NO MORE THAN 70 words**.
-            6. DO NOT use special symbols such as *, `
+            4. Write a revealing conclusion for the poster.
+            5. The conclusion should include:
+               - neutral explanations (objective and descriptive, you may quote the statistical number).
+               - speculative opinions (possible reason, implication, or why it matters).
+            6. Keep the tone insightful, not descriptive only.
+            7. The conclusion should not be conservative or vague. Instead, apply your knowledge to produce insights that give the reader real takeaways. The conclusion should synthesize the patterns revealed by the analysis, highlight meaningful disparities or anomalies, and connect them to broader implications or future actions. Aim for clarity, depth, and value, so the reader gains new understanding rather than just a summary.
+            8. The conclusion SHOULD **NO MORE THAN 85 words**.
+            9. DO NOT use special symbols such as *, `
 
 
             **Constraints**
-            1. Use appropriate conjunctions and transitional phrases to ensure the narrative flows smoothly. Connect sentences logically so that each sentence leads naturally to the next, creating a coherent and easy-to-follow conclusion.
+            1. Use appropriate conjunctions and transitional phrases to ensure the narrative for connecting each section flows smoothly. Connect sentences logically so that each sentence leads naturally to the next, creating a coherent and easy-to-follow conclusion.
+            2. The chart descriptions may not be correct, so use the sentences from chart descriptions **only when you found it CAN BE SUPPORTED by the insights**
+            3. The description for chart 5 MUST mention the entities: {entity_1} and the description for chart 6 MUST mention the entities: {entity_2}.
 
+
+            **Example of Good Conclusion**
+            Employment patterns across Pacific Island countries reveal a heavy reliance on agriculture and fishing, coupled with persistent gender imbalances in several sectors. These findings highlight the structural dependence on primary industries and the need for targeted strategies to address unequal opportunities across genders and sectors.
             **Avoid**
             The following is example of conclusion you should NOT write:
             1."Solomon Islands leads Pacific Island countries with nearly 100,000 employed persons. Male employment is consistently higher than female across all countries. Agriculture and Fishing is the largest employment sector with 35.25%% share. Female employment exceeds male by 3130 in the Education sector. Male employment in Solomon Islands is up to 315.94 times that of female. Male employment in Samoa is 1.6 to over 11 times higher than female across sectors."
@@ -187,25 +195,25 @@ def conclusion(chart_pattern, insight, intro, column_1, column_2, entity_1, enti
             2."Employment levels differ significantly among Pacific Island countries and between genders. Key economic sectors show concentrated employment with clear gender disparities. Solomon Islands and Tonga exhibit unique employment patterns by sex and sector. Understanding these differences aids targeted employment policies in the region."
             Rationale: This conclusion is too vague, lacks specific insights, and does not directly address the key findings from the charts. It also does not provide a clear summary of the main insights.
             """,
-            input_variables=["intro","insight_1","insight_2","insight_3","insight_4","insight_5","insight_6","chart_pattern1","chart_pattern2","chart_pattern3","chart_pattern4","chart_pattern5","chart_pattern6","column_1", "column_2", "entity_1","entity_2"],
+            input_variables=["header1","header2","header3","insight_1","insight_2","insight_3","insight_4","insight_5","insight_6","chart_pattern1","chart_pattern2","chart_pattern3","chart_pattern4","chart_pattern5","chart_pattern6","entity_1","entity_2"],
         )
         
-    # llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
-    llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            max_tokens=None,
-            api_key = openai_key
-            # other params...
-        )
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
+    # llm = ChatGoogleGenerativeAI(
+    #         model="gemini-2.5-flash",
+    #         temperature=0,
+    #         max_tokens=None,
+    #         api_key = openai_key
+    #         # other params...
+    #     )
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'intro':intro, 'insight_1':insight[0], 'insight_2':insight[2], 'insight_3':insight[1],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'chart_pattern1':chart_pattern[0],'chart_pattern2':chart_pattern[1],'chart_pattern3':chart_pattern[2],'chart_pattern4':chart_pattern[3],'chart_pattern5':chart_pattern[4],'chart_pattern6':chart_pattern[5],'column_1':column_1, 'column_2':column_2, 'entity_1':entity_1,'entity_2':entity_2} )
+    response = conclusion_chain.invoke(input= {'header1':header[0], 'header2':header[1],'header3':header[2], 'insight_1':insight[0], 'insight_2':insight[2], 'insight_3':insight[1],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'chart_pattern1':chart_pattern[0],'chart_pattern2':chart_pattern[1],'chart_pattern3':chart_pattern[2],'chart_pattern4':chart_pattern[3],'chart_pattern5':chart_pattern[4],'chart_pattern6':chart_pattern[5],'entity_1':entity_1,'entity_2':entity_2} )
     return response["content"]
 
 def improve_title(intro,conclusion,openai_key):
     prompt = PromptTemplate(
             template="""
-            You are an excellent data scientist writing a data visualization poster title in a question.
+            You are an excellent data analyst writing a data visualization poster title in a question.
             Here is the introduction of this poster:\n\n{intro}\n\n
             Here is the conclusion drawn from data visualization charts:\n\n{conclusion}\n\n
             **Task**
@@ -245,14 +253,14 @@ def improve_title(intro,conclusion,openai_key):
             input_variables=["intro","conclusion"],
         )
         
-    # llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
-    llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            max_tokens=None,
-            api_key = openai_key
-            # other params...
-        )
+    llm = ChatOpenAI(model_name='gpt-4.1-mini-2025-04-14', temperature=0, api_key = openai_key)
+    # llm = ChatGoogleGenerativeAI(
+    #         model="gemini-2.5-flash",
+    #         temperature=0,
+    #         max_tokens=None,
+    #         api_key = openai_key
+    #         # other params...
+    #     )
     title_chain = prompt | llm.with_structured_output(conclusion_schema)
     response = title_chain.invoke(input= {'intro':intro, 'conclusion':conclusion} )
     return response["content"]

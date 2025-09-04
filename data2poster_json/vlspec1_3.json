@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Employed Persons by Economic Sector and Country",
+  "title": "Male Proportion by Economic Sector and Pacific Island Countries",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
@@ -8,14 +8,14 @@
     {
       "aggregate": [
         {
-          "op": "sum",
-          "field": "Number of employed persons",
-          "as": "TotalEmployed"
+          "op": "mean",
+          "field": "Male Proportion",
+          "as": "Avg_Male_Proportion"
         }
       ],
       "groupby": [
-        "Pacific Island Countries",
-        "Economic Sector"
+        "Economic Sector",
+        "Pacific Island Countries"
       ]
     }
   ],
@@ -24,54 +24,49 @@
   },
   "encoding": {
     "x": {
-      "field": "Pacific Island Countries",
+      "field": "Economic Sector",
       "type": "nominal",
+      "title": "Economic Sector",
       "axis": {
         "labelAngle": -30,
-        "title": "Pacific Island Country",
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Economic Sector"
+      "field": "Pacific Island Countries"
     },
     "y": {
-      "field": "TotalEmployed",
+      "field": "Avg_Male_Proportion",
       "type": "quantitative",
-      "axis": {
-        "title": "Number of Employed Persons",
-        "tickCount": 6
-      }
+      "title": "Average Male Proportion"
     },
     "color": {
-      "field": "Economic Sector",
+      "field": "Pacific Island Countries",
       "type": "nominal",
-      "title": "Economic Sector",
+      "title": "Pacific Island Country",
       "scale": {
         "scheme": "category10"
       }
     },
     "tooltip": [
       {
+        "field": "Economic Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
         "field": "Pacific Island Countries",
         "type": "nominal",
         "title": "Country"
       },
       {
-        "field": "Economic Sector",
-        "type": "nominal",
-        "title": "Economic Sector"
-      },
-      {
-        "field": "TotalEmployed",
+        "field": "Avg_Male_Proportion",
         "type": "quantitative",
-        "title": "Employed",
-        "format": ","
+        "title": "Male Proportion",
+        "format": ".2f"
       }
     ]
   },
-  "width": 780,
-  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

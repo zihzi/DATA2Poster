@@ -27,7 +27,7 @@ def create_pdf(data_name, chart_pattern, insight_list, section_insight_list, cha
     text_introduction = introduction(chart_url_list , section_header_list,openai_key)
 
     # Generate conclusion 
-    text_conclusion = conclusion(chart_pattern, insight_list ,text_introduction, column_1, column_2, entity_1, entity_2, openai_key)
+    text_conclusion = conclusion(chart_pattern, insight_list , section_header_list,  entity_1, entity_2, openai_key)
 
     # Generate Title from conclusion
     title = improve_title(text_introduction, text_conclusion, openai_key)
@@ -50,12 +50,12 @@ def create_pdf(data_name, chart_pattern, insight_list, section_insight_list, cha
 
     p_desc = Paragraph(section_insight_list[0], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-229)
+    p_desc.drawOn(c, 50, height-231)
 
     # Add section 2 descriptions 
     p_desc = Paragraph(section_insight_list[1], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 550, 20)
-    p_desc.drawOn(c, 50, height-549)
+    p_desc.drawOn(c, 50, height-550)
     # Add section 3 descriptions 
     p_desc = Paragraph(section_insight_list[2], ParagraphStyle(name="insight", fontSize=16, fontName='Helvetica-Bold',leading=14, alignment=4, textColor="#2c2a32"))
     p_desc.wrapOn(c, 500, 20)
@@ -77,7 +77,7 @@ def create_pdf(data_name, chart_pattern, insight_list, section_insight_list, cha
     # p_conclusion.wrapOn(c, width/2, 200)
     # p_conclusion.drawOn(c, 30, height-725)
     p_con = Paragraph(text_conclusion, ParagraphStyle(name="conclusion", fontSize=14, fontName='Helvetica', leading=14, alignment=4, textColor="#2c2a32"))
-    p_con.wrapOn(c, 525, 200)
-    p_con.drawOn(c, 650, height-820)
+    p_con.wrapOn(c, 540, 200)
+    p_con.drawOn(c, 646, height-820)
 
     c.save()

@@ -52,6 +52,7 @@ if "datasets" not in st.session_state:
     datasets = {}
     # Preload datasets
     datasets["Occupation_gender_gap2"] = pd.read_csv("data/Occupation_gender_gap2.csv")
+    datasets["Occupation_by_gender"] = pd.read_csv("data/Occupation_by_gender.csv")
     datasets["adidas_sale"] = pd.read_csv("data/adidas_sale.csv")
     datasets["volcano"] = pd.read_csv("data/volcano.csv")
     datasets["Indian_Kids_Screen_Time"] = pd.read_csv("data/Indian_Kids_Screen_Time.csv")
@@ -653,11 +654,11 @@ if try_true or (st.session_state["bt_try"] == "T"):
         {data_facts}\n\n
         1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
         2. For the first question, choose a fact and write one specific follow-up questions that:
-            - In addition to the numerical column, the question must refer to this one column **ONLY**: {column_1}. 
+            - In addition to the numerical column(for Y-axis), the question must refer to this one column(for X-axis) **ONLY**: {column_1}. 
             - The question should be high-level and **ONLY** mention column name rather than specific value.
             - Make them answerable with the existing dataset.
         3. For the second question, choose a fact and write one specific follow-up questions that:
-            - In addition to the numerical column, the question must refer to these two column **ONLY**: {column_1} and the other different column.
+            - In addition to the numerical column(for Y-axis), the question must refer to these two column(for X-axis) **ONLY**: {column_1} and the other different column.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(no more than 12 words each)** based on the questions.
         
@@ -732,16 +733,17 @@ if try_true or (st.session_state["bt_try"] == "T"):
         Additional dataset columns information: {key_columns}
         Read the information founded from the current exploratory data analysis(EDA) carefully: {s2c1_insight}
 
+
         **Your Task**
-        Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
+        Generate **two** distinct follow-up questions that can make a comparison with this two questions "{s1q1}" and "{s1q2}" based on the following data facts (observations already discovered):
         {data_facts}\n\n
         1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
         2. For the first question, choose a fact and write one specific follow-up questions that:
-            - In addition to the numerical column, the question must refer to one column **ONLY**:
+            - In addition to the numerical column(for Y-axis), the question must refer to one column(for X-axis) **ONLY**:
             - The question should be high-level and **ONLY** mention column name rather than specific value.
             - Make them answerable with the existing dataset.
         3. For the second question, choose a fact and write one specific follow-up questions that:
-            - In addition to the numerical column, the question must refer to these two column **ONLY**: the column used in the first question and the other different column.
+            - In addition to the numerical column(for Y-axis), the question must refer to these two column(for X-axis) **ONLY**: the column used in the first question and the other different column.
             - Avoid using the same combination of columns as following: {column_from_s1q2}.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(no more than 12 words each)** based on the questions.
@@ -790,13 +792,15 @@ if try_true or (st.session_state["bt_try"] == "T"):
         }}"""
         eda_q_for_sec2_prompt = PromptTemplate(
             template=eda_q_for_sec2_template,
-            input_variables=["key_columns","s2c1_insight","data_facts","column_from_s1q2"]
+            input_variables=["key_columns","s2c1_insight","s1q1","s1q2","data_facts","column_from_s1q2"]
         )
         eda_q_for_sec2_chain = eda_q_for_sec2_prompt | llm
         eda_q_for_sec2_result = eda_q_for_sec2_chain.invoke(input = {
                                                         
                                                         "key_columns":col_select_json["key_columns"],
                                                         "s2c1_insight":insight_from_fact_to_llm[1],
+                                                        "s1q1": eda_q_for_sec1_json["follow_up_questions"][0]["question"],
+                                                        "s1q2": eda_q_for_sec1_json["follow_up_questions"][1]["question"],
                                                         "data_facts":str(st.session_state["s2c1_fact"]),
                                                         "column_from_s1q2":eda_q_for_sec1_json["follow_up_questions"][1]["column"]
                                                         })
@@ -886,7 +890,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         2. Identify two entities that worth to explore.
         3. Write specific follow-up questions **(no more than 15 words each)** for these two entities that:
             - The question drill down to reveal the pattern within this entity.
-            - In addition to the numerical column, the question must refer to two column **ONLY**.
+            - In addition to the numerical column(for Y-axis), the question must refer to two column(for X-axis) **ONLY**.
             - Ensure the two questions are use **the same** combination of columns.
             - Make them answerable with the existing dataset.
         4. Write a title for the chart **(no more than 12 words each)** based on the questions.
@@ -947,6 +951,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
         chart_title.append(eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"])
         chart_title.append(eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"])
 
+        
+        llm_1 = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openapi_key)
         # Use llm to describe the charts based on the chart image
         chart_pattern = []
         for i in range(0,6):            
@@ -973,17 +979,18 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     },
                 ])
             ]
-            chart_des =  llm.invoke(chart_des_prompt)
+            chart_des =  llm_1.invoke(chart_des_prompt)
+            st.write(f'**Description for Chart {i}:**', f'**{chart_des.content}**')
             chart_pattern.append(chart_des.content)
 
 
-        st.write(f'**Chart Description:**', f'**{chart_pattern}**')
+        
 
         img_to_llm_list = []
         for i in range(0,6):
             img_to_llm_list.append({"chart_id": i, "title": chart_title[i]})
            
-
+        
         # ////zero shot//// Use llm to write section header and section insight based on the chart titles           
         chart_check_prompt ="""
                                     You are an expert at capture interesting insight from visualization charts.
@@ -1067,7 +1074,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                         break
         
                        
-        llm_1 = ChatOpenAI(model_name="gpt-4.1-2025-04-14", api_key = openapi_key)
+     
         vlspec = agent_consistent(chosen_dataset,chart_query,chart_title,chosen_data_schema,sample_data, rag_spec, openapi_key)
         st.write("Vega-Lite Specification:",vlspec)
         cor_vlspec = parse_jsonish(vlspec)  # -> dict/list or raises clear ValueError
@@ -1240,7 +1247,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         
         # Create pdf and download
         pdf_title = f"{chosen_dataset} Poster"
-        create_pdf(chosen_dataset, chart_pattern,insight_from_fact,section_insight_list, chartid_for_pdf,chart_for_pdf,col_select_json["key_columns"][0]["column"], col_select_json["key_columns"][1]["column"], eda_q_for_sec3_json["follow_up_questions"][0]["entity"],eda_q_for_sec3_json["follow_up_questions"][1]["entity"], section_header_list,openai_key)
+        create_pdf(chosen_dataset, chart_pattern,insight_from_fact,section_insight_list, chartid_for_pdf,chart_for_pdf,col_select_json["key_columns"][0]["column"], col_select_json["key_columns"][1]["column"], eda_q_for_sec3_json["follow_up_questions"][0]["entity"],eda_q_for_sec3_json["follow_up_questions"][1]["entity"], section_header_list,openapi_key)
         st.success("Poster has been created successfully!🎉")
         with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
             st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")

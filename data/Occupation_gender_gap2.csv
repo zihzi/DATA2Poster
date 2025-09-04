@@ -5,7 +5,7 @@ Nauru,Female,Support Service,185,0.32,0
 Nauru,Male,Support Service,401,0,0.68
 Nauru,Female,Agriculture and Fishing,22,0.27,0
 Nauru,Male,Agriculture and Fishing,61,0,0.73
-Nauru,Male,Construction,122,1.00,0
+Nauru,Male,Construction,122,0,1.00
 Nauru,Female,Education,226,0.80,0
 Nauru,Male,Education,56,0,0.20
 Nauru,Male,Electricity and Gas,78,0,1.00
@@ -121,7 +121,7 @@ Niue,Female,Support Service,65,0.73,0
 Niue,Male,Support Service,24,0,0.27
 Niue,Female,Agriculture and Fishing,17,0.29,0
 Niue,Male,Agriculture and Fishing,42,0,0.71
-Niue,Male,Construction,53,1.00,0
+Niue,Male,Construction,53,0,1.00
 Niue,Female,Education,47,0,0.71
 Niue,Male,Education,19,0.29,0
 Niue,Male,Electricity and Gas,22,0,1.00

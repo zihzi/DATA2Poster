@@ -1,12 +1,25 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Male Proportion by Economic Sector in Tokelau",
+  "title": "Female Proportion by Sector: Nauru vs. Cook Islands",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
-      "filter": "datum['Pacific Island Countries'] === 'Tokelau' && datum.Sex === 'Male'"
+      "filter": "datum['Pacific Island Countries'] == 'Nauru' || datum['Pacific Island Countries'] == 'Cook Islands'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "mean",
+          "field": "Female Proportion",
+          "as": "Avg_Female_Proportion"
+        }
+      ],
+      "groupby": [
+        "Economic Sector",
+        "Pacific Island Countries"
+      ]
     }
   ],
   "mark": {
@@ -16,23 +29,47 @@
     "x": {
       "field": "Economic Sector",
       "type": "nominal",
+      "title": "Economic Sector",
       "axis": {
         "labelAngle": -30,
-        "title": "Economic Sector",
         "tickCount": 6
       }
     },
+    "xOffset": {
+      "field": "Pacific Island Countries"
+    },
     "y": {
-      "field": "Male Proportion",
+      "field": "Avg_Female_Proportion",
       "type": "quantitative",
-      "axis": {
-        "title": "Male Proportion",
-        "tickCount": 6
+      "title": "Average Female Proportion"
+    },
+    "color": {
+      "field": "Pacific Island Countries",
+      "type": "nominal",
+      "title": "Pacific Island Country",
+      "scale": {
+        "scheme": "category10"
       }
-    }
+    },
+    "tooltip": [
+      {
+        "field": "Economic Sector",
+        "type": "nominal",
+        "title": "Sector"
+      },
+      {
+        "field": "Pacific Island Countries",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "Avg_Female_Proportion",
+        "type": "quantitative",
+        "title": "Female Proportion",
+        "format": ".2f"
+      }
+    ]
   },
-  "width": 500,
-  "height": 420,
   "config": {
     "title": {
       "fontSize": 44
