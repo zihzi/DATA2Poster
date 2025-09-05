@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Number of Employed Persons by Country and Sex",
+  "title": "Employment by Sector Across Pacific Island Countries",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
@@ -10,24 +10,23 @@
         {
           "op": "sum",
           "field": "Number of employed persons",
-          "as": "Total_Employed"
+          "as": "EmployedTotal"
         }
       ],
       "groupby": [
         "Pacific Island Countries",
+        "Economic Sector",
         "Sex"
       ]
     }
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
       "field": "Pacific Island Countries",
       "type": "nominal",
-      "title": "Pacific Island Country",
       "axis": {
+        "title": "Pacific Island Country",
         "labelAngle": -30,
         "tickCount": 6
       }
@@ -36,17 +35,17 @@
       "field": "Sex"
     },
     "y": {
-      "field": "Total_Employed",
+      "field": "EmployedTotal",
       "type": "quantitative",
       "title": "Number of Employed Persons"
     },
     "color": {
       "field": "Sex",
       "type": "nominal",
-      "title": "Sex",
       "scale": {
         "scheme": "category10"
-      }
+      },
+      "title": "Sex"
     },
     "tooltip": [
       {
@@ -55,17 +54,24 @@
         "title": "Country"
       },
       {
-        "field": "Sex",
-        "type": "nominal"
+        "field": "Economic Sector",
+        "type": "nominal",
+        "title": "Sector"
       },
       {
-        "field": "Total_Employed",
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex"
+      },
+      {
+        "field": "EmployedTotal",
         "type": "quantitative",
-        "title": "Number Employed",
-        "format": ","
+        "title": "Number Employed"
       }
     ]
   },
+  "width": 720,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

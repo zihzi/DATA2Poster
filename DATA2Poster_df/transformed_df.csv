@@ -1,21 +1,18 @@
-Economic Sector,Pacific Island Countries,Avg_Female_Proportion
-Accommodation and Food,Cook Islands,0.265
-Accommodation and Food,Nauru,0.23
-Agriculture and Fishing,Cook Islands,0.0
-Agriculture and Fishing,Nauru,0.135
-Construction,Cook Islands,0.0
-Construction,Nauru,1.0
-Education,Cook Islands,0.35
-Education,Nauru,0.4
-Electricity and Gas,Cook Islands,0.0
-Electricity and Gas,Nauru,0.0
-Financial and Insurance,Cook Islands,0.405
-Financial and Insurance,Nauru,0.125
-Social Work and Health ,Cook Islands,0.425
-Social Work and Health ,Nauru,0.28
-Support Service,Cook Islands,0.29
-Support Service,Nauru,0.16
-Transportation and Storage,Cook Islands,0.08
-Transportation and Storage,Nauru,0.0
-Wholesale and Retail,Cook Islands,0.28
-Wholesale and Retail,Nauru,0.22
+Economic Sector,Sex,AvgFemaleProp
+Accommodation and Food,Female,0.53
+Accommodation and Food,Male,0.0
+Agriculture and Fishing,Male,0.0
+Construction,Male,0.0
+Education,Female,0.7
+Education,Male,0.0
+Electricity and Gas,Male,0.0
+Financial and Insurance,Female,0.81
+Financial and Insurance,Male,0.0
+Social Work and Health ,Female,0.85
+Social Work and Health ,Male,0.0
+Support Service,Female,0.58
+Support Service,Male,0.0
+Transportation and Storage,Female,0.16
+Transportation and Storage,Male,0.0
+Wholesale and Retail,Female,0.56
+Wholesale and Retail,Male,0.0

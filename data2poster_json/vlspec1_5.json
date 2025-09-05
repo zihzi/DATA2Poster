@@ -1,55 +1,53 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion by Sector: Nauru vs. Cook Islands",
+  "title": "Female Proportion by Sector and Sex in Cook Islands",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
   "transform": [
     {
-      "filter": "datum['Pacific Island Countries'] == 'Nauru' || datum['Pacific Island Countries'] == 'Cook Islands'"
+      "filter": "datum['Pacific Island Countries'] == 'Cook Islands'"
     },
     {
       "aggregate": [
         {
           "op": "mean",
           "field": "Female Proportion",
-          "as": "Avg_Female_Proportion"
+          "as": "AvgFemaleProp"
         }
       ],
       "groupby": [
         "Economic Sector",
-        "Pacific Island Countries"
+        "Sex"
       ]
     }
   ],
-  "mark": {
-    "type": "bar"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
       "field": "Economic Sector",
       "type": "nominal",
-      "title": "Economic Sector",
       "axis": {
+        "title": "Economic Sector",
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Pacific Island Countries"
+      "field": "Sex"
     },
     "y": {
-      "field": "Avg_Female_Proportion",
+      "field": "AvgFemaleProp",
       "type": "quantitative",
-      "title": "Average Female Proportion"
+      "title": "Avg Female Proportion"
     },
     "color": {
-      "field": "Pacific Island Countries",
+      "field": "Sex",
       "type": "nominal",
-      "title": "Pacific Island Country",
       "scale": {
         "scheme": "category10"
-      }
+      },
+      "title": "Sex"
     },
     "tooltip": [
       {
@@ -58,18 +56,20 @@
         "title": "Sector"
       },
       {
-        "field": "Pacific Island Countries",
+        "field": "Sex",
         "type": "nominal",
-        "title": "Country"
+        "title": "Sex"
       },
       {
-        "field": "Avg_Female_Proportion",
+        "field": "AvgFemaleProp",
         "type": "quantitative",
-        "title": "Female Proportion",
+        "title": "Avg Female Proportion",
         "format": ".2f"
       }
     ]
   },
+  "width": 720,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

@@ -328,14 +328,14 @@ if try_true or (st.session_state["bt_try"] == "T"):
     
     if api_keys_entered:
         # use GPT as llm
-        # llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openapi_key)
-        llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            max_tokens=None,
-            api_key = openai_key
-            # other params...
-        )
+        llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openapi_key)
+        # llm = ChatGoogleGenerativeAI(
+        #     model="gemini-2.5-flash",
+        #     temperature=0,
+        #     max_tokens=None,
+        #     api_key = openai_key
+        #     # other params...
+        # )
         # use OpenAIEmbeddings as embedding model
         embeddings_model = OpenAIEmbeddings(model="text-embedding-3-small", api_key = openapi_key)
         # embeddings_model = GoogleGenerativeAIEmbeddings(model="models/gemini-embedding-001", api_key = openai_key)
@@ -628,10 +628,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
         insight_from_fact_to_llm=[]
         for i in range(0,2):   
             if i == 0:
-                insight_from_s1c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s1c1_fact"], )
+                insight_from_s1c1 = self_augmented_knowledge(openapi_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s1c1_fact"], )
                 insight_from_fact_to_llm.append(insight_from_s1c1)
             elif i == 1:
-                insight_from_s2c1 = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s2c1_fact"], )
+                insight_from_s2c1 = self_augmented_knowledge(openapi_key, chosen_dataset, col_select_json["key_columns"][i]["column"], st.session_state["s2c1_fact"], )
                 insight_from_fact_to_llm.append(insight_from_s2c1)
         st.write("Insights from Facts:",insight_from_fact_to_llm)
 
@@ -739,7 +739,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         {data_facts}\n\n
         1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
         2. For the first question, choose a fact and write one specific follow-up questions that:
-            - In addition to the numerical column(for Y-axis), the question must refer to one column(for X-axis) **ONLY**:
+            - In addition to the numerical column(for Y-axis), the question must refer to one column(for X-axis) **ONLY**
             - The question should be high-level and **ONLY** mention column name rather than specific value.
             - Make them answerable with the existing dataset.
         3. For the second question, choose a fact and write one specific follow-up questions that:
@@ -953,35 +953,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         
         llm_1 = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openapi_key)
-        # Use llm to describe the charts based on the chart image
-        chart_pattern = []
-        for i in range(0,6):            
-            binary_chart     = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()  # fc aka file_content
-            base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
-            img_url = f'data:image/png;base64,{base64_utf8_chart}' 
-            chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
-            chart_des_prompt = [
-                SystemMessage(content=chart_prompt_template),
-                HumanMessage(content=[
-                    {
-                        "type": "text", 
-                        "text": f"This chart is ploted  based on this question:\n\n {chart_query[i]}.\n\n"
-                    },
-                    {
-                            "type": "text", 
-                            "text": "Here is the chart to describe:"
-                    },
-                    {
-                            "type": "image_url",
-                            "image_url": {
-                                "url": img_url
-                            },
-                    },
-                ])
-            ]
-            chart_des =  llm_1.invoke(chart_des_prompt)
-            st.write(f'**Description for Chart {i}:**', f'**{chart_des.content}**')
-            chart_pattern.append(chart_des.content)
+       
 
 
         
@@ -1115,6 +1087,35 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 final_chart.save(f"DATA2Poster_chart/image{spec_id}.png")
                 st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
             spec_id += 1
+        # Use llm to describe the charts based on the chart image
+        chart_pattern = []
+        for i in range(0,6):            
+            binary_chart     = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()  # fc aka file_content
+            base64_utf8_chart = base64.b64encode(binary_chart ).decode('utf-8')
+            img_url = f'data:image/png;base64,{base64_utf8_chart}' 
+            chart_prompt_template = load_prompt_from_file("prompt_templates/chart_prompt.txt")
+            chart_des_prompt = [
+                SystemMessage(content=chart_prompt_template),
+                HumanMessage(content=[
+                    {
+                        "type": "text", 
+                        "text": f"This chart is ploted  based on this question:\n\n {chart_query[i]}.\n\n"
+                    },
+                    {
+                            "type": "text", 
+                            "text": "Here is the chart to describe:"
+                    },
+                    {
+                            "type": "image_url",
+                            "image_url": {
+                                "url": img_url
+                            },
+                    },
+                ])
+            ]
+            chart_des =  llm_1.invoke(chart_des_prompt)
+            st.write(f'**Description for Chart {i}:**', f'**{chart_des.content}**')
+            chart_pattern.append(chart_des.content)
        
         
         # Generate data facts from s1c2, s2c2, s3c1, s3c2 charts 
@@ -1219,10 +1220,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 st.write("Clean Facts:",clean_facts)
                 
                 if i ==0 or i == 1:
-                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][0]["column"], clean_facts)
+                    insight_from_sc = self_augmented_knowledge(openapi_key, chosen_dataset, col_select_json["key_columns"][0]["column"], clean_facts)
                     insight_from_fact.append(insight_from_sc)
                 else:
-                    insight_from_sc = self_augmented_knowledge(openai_key, chosen_dataset, col_select_json["key_columns"][1]["column"], clean_facts)
+                    insight_from_sc = self_augmented_knowledge(openapi_key, chosen_dataset, col_select_json["key_columns"][1]["column"], clean_facts)
                     insight_from_fact.append(insight_from_sc)
         st.write("Insight from all charts:",insight_from_fact)
             
@@ -1244,6 +1245,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         st.session_state["bt_try"] = ""  
         st.session_state["s1c1_fact"] = []
         st.session_state["s2c1_fact"] = []
+
         
         # Create pdf and download
         pdf_title = f"{chosen_dataset} Poster"
@@ -1251,6 +1253,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
         st.success("Poster has been created successfully!🎉")
         with open(f"pdf/{chosen_dataset}_summary.pdf", "rb") as f:
             st.download_button("Download Poster as PDF", f, f"""{chosen_dataset}_summary.pdf""")
+        chart_pattern = []
+        insight_from_fact = []
 
 # Display chosen datasets 
 if chosen_dataset :

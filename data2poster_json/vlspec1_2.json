@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion Distribution Across Economic Sectors",
+  "title": "Female Proportion Across Pacific Island Countries",
   "data": {
     "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
   },
@@ -10,47 +10,46 @@
         {
           "op": "mean",
           "field": "Female Proportion",
-          "as": "Avg_Female_Proportion"
+          "as": "AvgFemaleProp"
         }
       ],
       "groupby": [
-        "Economic Sector"
+        "Pacific Island Countries"
       ]
     }
   ],
-  "mark": {
-    "type": "bar",
-    "color": "#F58518"
-  },
+  "mark": "bar",
   "encoding": {
     "x": {
-      "field": "Economic Sector",
+      "field": "Pacific Island Countries",
       "type": "nominal",
-      "title": "Economic Sector",
       "axis": {
+        "title": "Pacific Island Country",
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "y": {
-      "field": "Avg_Female_Proportion",
+      "field": "AvgFemaleProp",
       "type": "quantitative",
       "title": "Average Female Proportion"
     },
     "tooltip": [
       {
-        "field": "Economic Sector",
+        "field": "Pacific Island Countries",
         "type": "nominal",
-        "title": "Sector"
+        "title": "Country"
       },
       {
-        "field": "Avg_Female_Proportion",
+        "field": "AvgFemaleProp",
         "type": "quantitative",
-        "title": "Female Proportion",
+        "title": "Avg Female Proportion",
         "format": ".2f"
       }
     ]
   },
+  "width": 720,
+  "height": 480,
   "config": {
     "title": {
       "fontSize": 44

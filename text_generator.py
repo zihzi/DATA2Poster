@@ -207,7 +207,7 @@ def conclusion(chart_pattern, insight, header, entity_1, entity_2, openai_key):
     #         # other params...
     #     )
     conclusion_chain = prompt | llm.with_structured_output(conclusion_schema)
-    response = conclusion_chain.invoke(input= {'header1':header[0], 'header2':header[1],'header3':header[2], 'insight_1':insight[0], 'insight_2':insight[2], 'insight_3':insight[1],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'chart_pattern1':chart_pattern[0],'chart_pattern2':chart_pattern[1],'chart_pattern3':chart_pattern[2],'chart_pattern4':chart_pattern[3],'chart_pattern5':chart_pattern[4],'chart_pattern6':chart_pattern[5],'entity_1':entity_1,'entity_2':entity_2} )
+    response = conclusion_chain.invoke(input= {'header1':header[0], 'header2':header[1],'header3':header[2], 'insight_1':insight[0], 'insight_2':insight[1], 'insight_3':insight[2],'insight_4':insight[3],'insight_5':insight[4],'insight_6':insight[5],'chart_pattern1':chart_pattern[0],'chart_pattern2':chart_pattern[1],'chart_pattern3':chart_pattern[2],'chart_pattern4':chart_pattern[3],'chart_pattern5':chart_pattern[4],'chart_pattern6':chart_pattern[5],'entity_1':entity_1,'entity_2':entity_2} )
     return response["content"]
 
 def improve_title(intro,conclusion,openai_key):

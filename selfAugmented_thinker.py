@@ -6,14 +6,14 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 
 
 def self_augmented_knowledge(openai_key, data_name, main_column, base_facts):
-    # llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
-    llm = ChatGoogleGenerativeAI(
-            model="gemini-2.5-flash",
-            temperature=0,
-            max_tokens=None,
-            api_key = openai_key
-            # other params...
-        )
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
+    # llm = ChatGoogleGenerativeAI(
+    #         model="gemini-2.5-flash",
+    #         temperature=0,
+    #         max_tokens=None,
+    #         api_key = openai_key
+    #         # other params...
+    #     )
     intermediate_prompt_template = """
     You are a senior data analyst. You are examining a dataset named **{data_name}** with this column: **{main_column}**.
     Here are key facts extracted from this dataset:{base_facts}
