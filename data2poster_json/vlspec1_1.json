@@ -1,77 +1,147 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Employment by Sector Across Pacific Island Countries",
+  "title": "Total Sales Comparison Across Retailers",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/adidas_sale.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "sum",
-          "field": "Number of employed persons",
-          "as": "EmployedTotal"
+          "field": "Total Sales",
+          "as": "TotalSales"
         }
       ],
       "groupby": [
-        "Pacific Island Countries",
-        "Economic Sector",
-        "Sex"
+        "Retailer"
       ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "RetailerRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "TotalSales",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.RetailerRank <= 4 ? datum.Retailer : 'Others'",
+      "as": "RetailerGroup"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "TotalSales",
+          "as": "SalesSum"
+        }
+      ],
+      "groupby": [
+        "RetailerGroup"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "SalesSum",
+          "as": "GrandTotal"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.SalesSum / datum.GrandTotal",
+      "as": "Share"
     }
   ],
-  "mark": "bar",
-  "encoding": {
-    "x": {
-      "field": "Pacific Island Countries",
-      "type": "nominal",
-      "axis": {
-        "title": "Pacific Island Country",
-        "labelAngle": -30,
-        "tickCount": 6
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 180
+      },
+      "encoding": {
+        "theta": {
+          "field": "SalesSum",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "order": {
+          "field": "SalesSum",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "color": {
+          "field": "RetailerGroup",
+          "type": "nominal",
+          "legend": {
+            "title": "Retailer"
+          },
+          "scale": {
+            "scheme": "tableau10"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "RetailerGroup",
+            "type": "nominal",
+            "title": "Retailer"
+          },
+          {
+            "field": "SalesSum",
+            "type": "quantitative",
+            "title": "Total Sales",
+            "format": ","
+          },
+          {
+            "field": "Share",
+            "type": "quantitative",
+            "title": "Share (%)",
+            "format": ".2%"
+          }
+        ]
       }
     },
-    "xOffset": {
-      "field": "Sex"
-    },
-    "y": {
-      "field": "EmployedTotal",
-      "type": "quantitative",
-      "title": "Number of Employed Persons"
-    },
-    "color": {
-      "field": "Sex",
-      "type": "nominal",
-      "scale": {
-        "scheme": "category10"
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 16,
+        "fontWeight": "bold"
       },
-      "title": "Sex"
-    },
-    "tooltip": [
-      {
-        "field": "Pacific Island Countries",
-        "type": "nominal",
-        "title": "Country"
-      },
-      {
-        "field": "Economic Sector",
-        "type": "nominal",
-        "title": "Sector"
-      },
-      {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex"
-      },
-      {
-        "field": "EmployedTotal",
-        "type": "quantitative",
-        "title": "Number Employed"
+      "encoding": {
+        "theta": {
+          "field": "SalesSum",
+          "type": "quantitative",
+          "stack": "normalize"
+        },
+        "order": {
+          "field": "SalesSum",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "radius": {
+          "value": 120
+        },
+        "text": {
+          "field": "Share",
+          "type": "quantitative",
+          "format": ".1%"
+        },
+        "color": {
+          "value": "black"
+        }
       }
-    ]
-  },
-  "width": 720,
-  "height": 480,
+    }
+  ],
+  "width": 470,
+  "height": 470,
   "config": {
     "title": {
       "fontSize": 44

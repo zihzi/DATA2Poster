@@ -1,4 +1,0 @@
-You are an domain expert of given dataset and you are excel in analyzing and understanding data relationships in structured datasets. 
-Based on the dataset name {chosen_dataset}, and data summary {chosen_data_schema} provided, identify ONE column that you want to explore deeper.
-YOUR RESPONSE SHOULD be only column name.
-Please do not add any extra prose to your response.

@@ -1,55 +1,75 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion Across Pacific Island Countries",
+  "title": "Sales Method Impact on Foot Locker and Kohl's",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/adidas_sale.csv"
   },
   "transform": [
     {
+      "filter": "(datum.Retailer === 'Foot Locker' || datum.Retailer === \"Kohl's\")"
+    },
+    {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Female Proportion",
-          "as": "AvgFemaleProp"
+          "op": "sum",
+          "field": "Total Sales",
+          "as": "TotalSales"
         }
       ],
       "groupby": [
-        "Pacific Island Countries"
+        "Retailer",
+        "Sales Method"
       ]
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "field": "Pacific Island Countries",
+      "field": "Retailer",
       "type": "nominal",
       "axis": {
-        "title": "Pacific Island Country",
+        "title": "Retailer",
         "labelAngle": -30,
         "tickCount": 6
       }
     },
+    "xOffset": {
+      "field": "Sales Method"
+    },
     "y": {
-      "field": "AvgFemaleProp",
+      "field": "TotalSales",
       "type": "quantitative",
-      "title": "Average Female Proportion"
+      "title": "Total Sales"
+    },
+    "color": {
+      "field": "Sales Method",
+      "type": "nominal",
+      "scale": {
+        "scheme": "tableau10"
+      },
+      "title": "Sales Method"
     },
     "tooltip": [
       {
-        "field": "Pacific Island Countries",
-        "type": "nominal",
-        "title": "Country"
+        "field": "Retailer",
+        "type": "nominal"
       },
       {
-        "field": "AvgFemaleProp",
+        "field": "Sales Method",
+        "type": "nominal"
+      },
+      {
+        "field": "TotalSales",
         "type": "quantitative",
-        "title": "Avg Female Proportion",
-        "format": ".2f"
+        "format": ",",
+        "title": "Total Sales"
       }
     ]
   },
-  "width": 720,
-  "height": 480,
+  "width": 420,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

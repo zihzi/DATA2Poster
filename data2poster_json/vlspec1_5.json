@@ -1,75 +1,75 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion by Sector and Sex in Cook Islands",
+  "title": "Walmart Sales by Product and Sales Method",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/adidas_sale.csv"
   },
   "transform": [
     {
-      "filter": "datum['Pacific Island Countries'] == 'Cook Islands'"
+      "filter": "datum.Retailer === 'Walmart'"
     },
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Female Proportion",
-          "as": "AvgFemaleProp"
+          "op": "sum",
+          "field": "Total Sales",
+          "as": "TotalSales"
         }
       ],
       "groupby": [
-        "Economic Sector",
-        "Sex"
+        "Product",
+        "Sales Method"
       ]
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "field": "Economic Sector",
+      "field": "Product",
       "type": "nominal",
       "axis": {
-        "title": "Economic Sector",
+        "title": "Product",
         "labelAngle": -30,
         "tickCount": 6
       }
     },
     "xOffset": {
-      "field": "Sex"
+      "field": "Sales Method"
     },
     "y": {
-      "field": "AvgFemaleProp",
+      "field": "TotalSales",
       "type": "quantitative",
-      "title": "Avg Female Proportion"
+      "title": "Total Sales"
     },
     "color": {
-      "field": "Sex",
+      "field": "Sales Method",
       "type": "nominal",
       "scale": {
-        "scheme": "category10"
+        "scheme": "tableau10"
       },
-      "title": "Sex"
+      "title": "Sales Method"
     },
     "tooltip": [
       {
-        "field": "Economic Sector",
-        "type": "nominal",
-        "title": "Sector"
+        "field": "Product",
+        "type": "nominal"
       },
       {
-        "field": "Sex",
-        "type": "nominal",
-        "title": "Sex"
+        "field": "Sales Method",
+        "type": "nominal"
       },
       {
-        "field": "AvgFemaleProp",
+        "field": "TotalSales",
         "type": "quantitative",
-        "title": "Avg Female Proportion",
-        "format": ".2f"
+        "format": ",",
+        "title": "Total Sales"
       }
     ]
   },
-  "width": 720,
-  "height": 480,
+  "width": 420,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

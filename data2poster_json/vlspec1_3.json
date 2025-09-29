@@ -1,72 +1,44 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Female Proportion by Economic Sector and Country",
+  "title": "Total Sales Comparison Across Sales Methods",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_gender_gap2.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/adidas_sale.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
-          "op": "mean",
-          "field": "Female Proportion",
-          "as": "AvgFemaleProp"
+          "op": "sum",
+          "field": "Total Sales",
+          "as": "TotalSales"
         }
       ],
       "groupby": [
-        "Pacific Island Countries",
-        "Economic Sector"
+        "Sales Method"
       ]
     }
   ],
-  "mark": "bar",
+  "mark": {
+    "type": "bar"
+  },
   "encoding": {
     "x": {
-      "field": "Pacific Island Countries",
+      "field": "Sales Method",
       "type": "nominal",
       "axis": {
-        "title": "Pacific Island Country",
+        "title": "Sales Method",
         "labelAngle": -30,
         "tickCount": 6
       }
     },
-    "xOffset": {
-      "field": "Economic Sector"
-    },
     "y": {
-      "field": "AvgFemaleProp",
+      "field": "TotalSales",
       "type": "quantitative",
-      "title": "Avg Female Proportion"
-    },
-    "color": {
-      "field": "Economic Sector",
-      "type": "nominal",
-      "scale": {
-        "scheme": "category10"
-      },
-      "title": "Economic Sector"
-    },
-    "tooltip": [
-      {
-        "field": "Pacific Island Countries",
-        "type": "nominal",
-        "title": "Country"
-      },
-      {
-        "field": "Economic Sector",
-        "type": "nominal",
-        "title": "Sector"
-      },
-      {
-        "field": "AvgFemaleProp",
-        "type": "quantitative",
-        "title": "Avg Female Proportion",
-        "format": ".2f"
-      }
-    ]
+      "title": "Total Sales"
+    }
   },
-  "width": 720,
-  "height": 480,
+  "width": 420,
+  "height": 420,
   "config": {
     "title": {
       "fontSize": 44

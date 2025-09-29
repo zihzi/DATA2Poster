@@ -1,0 +1,1289 @@
+Case_Year,Case Number,Incident_DateTime,Borough,Battalion,Community_District,Precinct,Incident_Classification,Cause_Fire_Description,Fire_Code_Category
+2024,77013,11/26/2023 07:57:00 PM,Bronx,3,9,43,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,77052,12/14/2023 04:46:00 AM,Queens,,9,102,Outside Rubbish,Incendiary,Incendiary
+2024,70012,12/16/2023 08:38:00 PM,Manhattan,2,2,6,Outside Rubbish,Incendiary,Incendiary
+2024,41204,12/31/2023 11:46:00 PM,Queens,,2,108,MD Residential Structure,Electrical Wiring,Electrical
+2024,30000,01/01/2024 12:04:00 AM,Brooklyn,43,13,62,PD Residential Structure,Electrical Wiring,Electrical
+2024,20000,01/01/2024 12:05:00 AM,Bronx,,12,47,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,20001,01/01/2024 12:15:00 AM,Bronx,,5,46,Vehicle,Incendiary,Incendiary
+2024,40000,01/01/2024 01:02:00 AM,Queens,,3,115,MD Residential Structure,Incense,Hot Objects
+2024,10000,01/01/2024 01:37:00 AM,Manhattan,,1,14,No Fire,Preliminary Investigation Only,Other
+2024,77000,01/01/2024 01:37:00 AM,Manhattan,7,4,14,Vehicle,Preliminary Investigation Only,Other
+2024,20002,01/01/2024 02:12:00 AM,Bronx,,12,47,Vehicle,Incendiary,Incendiary
+2024,77004,01/01/2024 02:30:00 AM,Bronx,14,1,40,MD Residential Structure,Incendiary - Attempted Arson,Incendiary
+2024,77001,01/01/2024 03:07:00 AM,Manhattan,,Out of NYC,25,Vehicle,Other Motor,Motors
+2024,20003,01/01/2024 03:13:00 AM,Bronx,,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,40001,01/01/2024 06:24:00 AM,Queens,,3,110,Vehicle,Preliminary Investigation Only,Other
+2024,20004,01/01/2024 07:30:00 AM,Bronx,,8,50,MD Residential Structure,Incendiary,Incendiary
+2024,77002,01/01/2024 07:39:00 AM,Manhattan,16,9,30,MFA,MFA,No Fire
+2024,40002,01/01/2024 09:27:00 AM,Queens,,6,112,PD Residential Structure,Chimney/Flues,Hot Objects
+2024,30001,01/01/2024 09:30:00 AM,Brooklyn,43,13,60,Vehicle,Preliminary Investigation Only,Other
+2024,30002,01/01/2024 09:33:00 AM,Brooklyn,43,13,60,Vehicle,Incendiary,Incendiary
+2024,40003,01/01/2024 12:37:00 PM,Queens,47,14,101,Vehicle,Preliminary Investigation Only,Other
+2024,30003,01/01/2024 12:47:00 PM,Brooklyn,,14,70,MD Residential Structure,Incendiary - Fireworks,Incendiary
+2024,20005,01/01/2024 01:18:00 PM,Bronx,14,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,50000,01/01/2024 05:38:00 PM,Staten Island,22,1,120,PD Residential Structure,Electrical Wiring,Electrical
+2024,10002,01/01/2024 05:41:00 PM,Manhattan,,2,6,Vehicle,Preliminary Investigation Only,Other
+2024,10003,01/01/2024 06:45:00 PM,Manhattan,,11,23,MD Residential Structure,Candle,Open Flame
+2024,20006,01/01/2024 07:37:00 PM,Bronx,,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,77003,01/01/2024 07:37:00 PM,Brooklyn,40,7,72,Vehicle,Lithium Ion Battery,Electrical
+2024,40004,01/01/2024 09:22:00 PM,Queens,50,12,113,Vehicle,Incendiary - Combustible Material,Incendiary
+2024,30004,01/01/2024 10:54:00 PM,Brooklyn,,6,78,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30005,01/02/2024 12:30:00 AM,Brooklyn,,3,81,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40005,01/02/2024 06:16:00 AM,Queens,46,4,110,Outside Rubbish,Incendiary - Combustible Material,Incendiary
+2024,40006,01/02/2024 06:27:00 AM,Queens,,4,110,Outside Rubbish,Incendiary - Combustible Material,Incendiary
+2024,40007,01/02/2024 08:23:00 AM,Queens,52,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,30006,01/02/2024 08:25:00 AM,Brooklyn,58,16,73,Vehicle,Preliminary Investigation Only,Other
+2024,20007,01/02/2024 08:57:00 AM,Bronx,,12,50,Vehicle,Preliminary Investigation Only,Other
+2024,10004,01/02/2024 11:24:00 AM,Manhattan,,10,32,Brush,Smoking (Cigarette/Cigar),Smoking
+2024,20008,01/02/2024 03:35:00 PM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,40009,01/02/2024 04:19:00 PM,Queens,,10,106,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,20009,01/02/2024 04:22:00 PM,Bronx,17,4,44,MD Residential Structure,Electrical Wiring,Electrical
+2024,40008,01/02/2024 04:24:00 PM,Queens,50,12,103,,Preliminary Investigation Only,Other
+2024,40010,01/02/2024 05:03:00 PM,Queens,50,12,103,PD Residential Structure,Power Strip,Electrical
+2024,20010,01/02/2024 07:03:00 PM,Bronx,17,4,44,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,20011,01/03/2024 04:57:00 AM,Bronx,3,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,40011,01/03/2024 06:29:00 AM,Queens,51,5,104,MD Residential Structure,Holiday Lighting,Electrical
+2024,50001,01/03/2024 06:43:00 AM,Staten Island,22,1,121,PD Residential Structure,Candle,Open Flame
+2024,10005,01/03/2024 09:54:00 AM,Manhattan,,10,32,MD Residential Structure,Other Appliance,Appliances
+2024,20012,01/03/2024 02:37:00 PM,Bronx,,8,50,MD Residential Structure,Other - Open Flame,Open Flame
+2024,40012,01/03/2024 04:59:00 PM,Queens,,12,103,PD Residential Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,30007,01/03/2024 05:04:00 PM,Brooklyn,,5,75,MD Residential Structure,Other - Electrical,Electrical
+2024,20013,01/03/2024 05:20:00 PM,Bronx,,12,47,PD Residential Structure,Child Playing w/Matches/Lighter,Open Flame
+2024,30008,01/03/2024 07:07:00 PM,Brooklyn,,6,76,Commercial Structure,Rangehood Fire - Ductwork,Cooking
+2024,20014,01/03/2024 08:36:00 PM,Bronx,,11,49,PD Residential Structure,Electrical Wiring,Electrical
+2024,20015,01/04/2024 12:01:00 AM,Bronx,,9,41,Outside Rubbish,Incendiary - Combustible Material,Incendiary
+2024,10006,01/04/2024 01:32:00 AM,Manhattan,,7,24,PD Residential Structure,Electrical Wiring,Electrical
+2024,40013,01/04/2024 03:38:00 AM,Queens,,5,104,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20016,01/04/2024 11:44:00 AM,Bronx,,11,49,School,Incendiary,Incendiary
+2024,30009,01/04/2024 01:06:00 PM,Brooklyn,,16,73,Commercial Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,77011,01/04/2024 02:43:00 PM,Queens,51,10,106,PD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30010,01/04/2024 02:50:00 PM,Brooklyn,,11,62,Vehicle,Incendiary,Incendiary
+2024,10007,01/04/2024 03:01:00 PM,Manhattan,,7,24,Transit,Other - No Fire,No Fire
+2024,30011,01/04/2024 04:19:00 PM,Brooklyn,,14,70,Religious Structure,Electrical Wiring,Electrical
+2024,20018,01/04/2024 06:12:00 PM,Bronx,,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,20019,01/04/2024 08:26:00 PM,Bronx,,11,49,MD Residential Structure,Extension Cord,Electrical
+2024,20020,01/04/2024 08:33:00 PM,Bronx,,12,47,MD Residential Structure,Preliminary Investigation Only,Other
+2024,40014,01/04/2024 11:23:00 PM,Queens,,9,102,Vehicle,Electrical Wiring,Electrical
+2024,40015,01/05/2024 12:02:00 AM,Queens,,1,114,Vehicle,Electrical Wiring,Electrical
+2024,40016,01/05/2024 03:14:00 AM,Queens,,3,115,Vehicle,Incendiary,Incendiary
+2024,30012,01/05/2024 03:54:00 AM,Brooklyn,57,3,79,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40017,01/05/2024 05:29:00 AM,Queens,51,9,102,Brush,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,77005,01/05/2024 07:33:00 AM,Brooklyn,37,3,81,Vehicle,Lithium Ion Battery,Electrical
+2024,10008,01/05/2024 08:36:00 AM,Manhattan,,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,20022,01/05/2024 08:42:00 AM,Bronx,,11,49,MD Residential Structure,Heat from an Iron,Hot Objects
+2024,20021,01/05/2024 08:57:00 AM,Bronx,,6,48,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30013,01/05/2024 09:05:00 AM,Brooklyn,42,11,62,MD Residential Structure,Power Strip,Electrical
+2024,40018,01/05/2024 09:35:00 AM,Queens,,6,112,Religious Structure,Arc Welding,Electrical
+2024,40019,01/05/2024 11:23:00 AM,Queens,54,12,113,Garage/Shed,Electrical Wiring,Electrical
+2024,77008,01/05/2024 11:31:00 AM,Manhattan,2,2,1,Outside Rubbish,Incendiary,Incendiary
+2024,30014,01/05/2024 12:13:00 PM,Brooklyn,,17,67,PD Residential Structure,Electrical Wiring,Electrical
+2024,20023,01/05/2024 01:02:00 PM,Bronx,,3,42,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30015,01/05/2024 04:17:00 PM,Brooklyn,44,16,73,MD Residential Structure,Incendiary,Incendiary
+2024,77006,01/05/2024 06:18:00 PM,Queens,51,10,106,Hotel,Lithium Ion Battery,Electrical
+2024,20024,01/05/2024 08:12:00 PM,Bronx,,9,43,MD Residential Structure,Juvenile Firesetter Intervention,Other
+2024,40020,01/05/2024 08:45:00 PM,Queens,49,1,114,Outside Rubbish,Incendiary,Incendiary
+2024,30016,01/06/2024 01:37:00 AM,Brooklyn,,3,79,PD Residential Structure,Preliminary Investigation Only,Other
+2024,77007,01/06/2024 08:55:00 AM,Manhattan,9,7,20,MFA,MFA,No Fire
+2024,40021,01/06/2024 12:30:00 PM,Queens,51,9,102,PD Residential Structure,Electrical Wiring,Electrical
+2024,40022,01/06/2024 01:26:00 PM,Queens,50,12,103,PD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30017,01/06/2024 01:33:00 PM,Brooklyn,44,16,73,PD Residential Structure,Barbecue - Wood/Charcoal,Cooking
+2024,40023,01/06/2024 05:11:00 PM,Queens,,1,110,Vehicle,Preliminary Investigation Only,Other
+2024,10009,01/06/2024 08:21:00 PM,Manhattan,8,6,13,Public Hallway,Incendiary - Combustible Material,Incendiary
+2024,40024,01/06/2024 09:34:00 PM,Queens,54,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,40025,01/06/2024 09:43:00 PM,Queens,50,10,106,Commercial Structure,Lithium Ion Battery,Electrical
+2024,30018,01/06/2024 11:42:00 PM,Brooklyn,58,17,67,Possible Single Room Occupancy,Incendiary,Incendiary
+2024,20025,01/07/2024 01:06:00 AM,Bronx,27,7,52,,Preliminary Investigation Only,Other
+2024,10010,01/07/2024 08:10:00 AM,Manhattan,,11,25,MD Residential Structure,Candle,Open Flame
+2024,20026,01/07/2024 08:17:00 AM,Bronx,27,7,52,Vehicle,Preliminary Investigation Only,Other
+2024,77010,01/07/2024 10:44:00 AM,Bronx,17,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,30019,01/07/2024 10:53:00 AM,Brooklyn,,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,10011,01/07/2024 02:14:00 PM,Manhattan,,11,23,MD Residential Structure,Child Playing w/Matches/Lighter,Open Flame
+2024,40026,01/07/2024 04:37:00 PM,Queens,,12,113,Vehicle,Preliminary Investigation Only,Other
+2024,30020,01/07/2024 06:11:00 PM,Brooklyn,38,9,71,MD Residential Structure,Child Playing w/Matches/Lighter,Open Flame
+2024,20027,01/07/2024 07:52:00 PM,Bronx,19,5,46,Vehicle,Preliminary Investigation Only,Other
+2024,77012,01/07/2024 08:50:00 PM,Manhattan,13,12,34,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,20028,01/08/2024 06:40:00 AM,Bronx,,9,43,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30021,01/08/2024 08:28:00 AM,Brooklyn,,8,77,School,Incendiary,Incendiary
+2024,50002,01/08/2024 09:23:00 AM,Staten Island,,1,120,Vehicle,Preliminary Investigation Only,Other
+2024,40027,01/08/2024 11:20:00 AM,Queens,,1,110,Vehicle,Preliminary Investigation Only,Other
+2024,50003,01/08/2024 11:45:00 AM,Staten Island,,2,121,Vehicle,Preliminary Investigation Only,Other
+2024,20029,01/08/2024 12:36:00 PM,Bronx,,11,49,MD Residential Structure,Incendiary,Incendiary
+2024,40028,01/08/2024 12:56:00 PM,Queens,,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,30022,01/08/2024 01:10:00 PM,Brooklyn,,2,84,Vehicle,Vehicle Wiring,Electrical
+2024,30023,01/08/2024 03:40:00 PM,Brooklyn,,13,60,MD Residential Structure,Incendiary,Incendiary
+2024,30024,01/08/2024 04:15:00 PM,Brooklyn,,17,67,Vehicle,Preliminary Investigation Only,Other
+2024,30025,01/08/2024 05:14:00 PM,Brooklyn,,3,79,MD Residential Structure,Hard Wire Outlet,Electrical
+2024,40029,01/08/2024 06:02:00 PM,Queens,,12,103,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40030,01/08/2024 09:00:00 PM,Queens,,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,10012,01/08/2024 09:24:00 PM,Manhattan,,11,23,MD Residential Structure,Electrical Wiring,Electrical
+2024,30026,01/08/2024 09:41:00 PM,Brooklyn,40,7,72,Commercial Structure,Lithium Ion Battery,Electrical
+2024,10013,01/08/2024 09:48:00 PM,Manhattan,,3,7,MD Residential Structure,Permanent Heater - Electric,Heaters
+2024,30027,01/08/2024 10:00:00 PM,Brooklyn,,4,83,Vehicle,Preliminary Investigation Only,Other
+2024,10014,01/09/2024 12:51:00 AM,Manhattan,,8,19,MD Residential Structure,Ignitable Liquid-Polyurethane/Varnish/PaintThinner,Ignitable
+2024,10015,01/09/2024 02:00:00 AM,Manhattan,,3,9,MD Residential Structure,Chimney/Flues,Hot Objects
+2024,30028,01/09/2024 02:06:00 AM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,30029,01/09/2024 03:33:00 AM,Brooklyn,,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,10016,01/09/2024 03:58:00 AM,Manhattan,,7,20,MD Residential Structure,Stove/Cooking - Other,Cooking
+2024,30030,01/09/2024 07:28:00 AM,Brooklyn,,3,79,MD Residential Structure,Electrical Wiring,Electrical
+2024,40031,01/09/2024 10:01:00 AM,Queens,,1,114,Commercial Structure,Preliminary Investigation Only,Other
+2024,10017,01/09/2024 10:02:00 AM,Manhattan,,9,30,MD Residential Structure,Extension Cord,Electrical
+2024,50004,01/09/2024 10:29:00 AM,Staten Island,,1,120,PD Residential Structure,Incense,Hot Objects
+2024,10018,01/09/2024 12:09:00 PM,Manhattan,10,11,23,Vehicle,Ignitable Liquids/Gases - Gasoline,Ignitable
+2024,20030,01/09/2024 12:29:00 PM,Bronx,,6,48,School,Incendiary - Combustible Material,Incendiary
+2024,10019,01/09/2024 02:26:00 PM,Manhattan,,12,34,Other,Preliminary Investigation Only,Other
+2024,77014,01/09/2024 04:33:00 PM,Manhattan,16,9,30,MFA,Other - No Fire,No Fire
+2024,50005,01/09/2024 04:54:00 PM,Staten Island,23,3,123,PD Residential Structure,Electrical Wiring,Electrical
+2024,30031,01/09/2024 05:24:00 PM,Manhattan,32,4,76,Vehicle,Vehicle Wiring,Electrical
+2024,20031,01/09/2024 07:08:00 PM,Bronx,,5,46,MD Residential Structure,Extension Cord,Electrical
+2024,40032,01/09/2024 10:56:00 PM,Queens,,12,103,PD Residential Structure,Electrical Wiring,Electrical
+2024,20032,01/10/2024 03:31:00 AM,Bronx,,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,40033,01/10/2024 03:55:00 AM,Queens,,14,101,Vehicle,Incendiary,Incendiary
+2024,30032,01/10/2024 06:47:00 AM,Brooklyn,,17,67,Commercial Structure,Electrical Wiring,Electrical
+2024,20033,01/10/2024 06:53:00 AM,Bronx,,5,46,No Fire,Other - No Fire,No Fire
+2024,10020,01/10/2024 07:29:00 AM,Manhattan,,11,25,Vehicle,Preliminary Investigation Only,Other
+2024,40034,01/10/2024 08:42:00 AM,Queens,46,2,108,Vehicle,Preliminary Investigation Only,Other
+2024,40035,01/10/2024 08:43:00 AM,Queens,49,3,115,,Preliminary Investigation Only,Other
+2024,10021,01/10/2024 12:26:00 PM,Manhattan,,12,34,Vehicle,Preliminary Investigation Only,Other
+2024,77015,01/10/2024 03:03:00 PM,Manhattan,2,2,5,No Fire,Other - No Fire,No Fire
+2024,20034,01/10/2024 09:44:00 PM,Bronx,18,6,48,MD Residential Structure,Incendiary - Attempted Arson,Incendiary
+2024,30033,01/11/2024 12:43:00 AM,Brooklyn,57,8,78,Vehicle,Incendiary,Incendiary
+2024,30034,01/11/2024 12:59:00 AM,Brooklyn,31,2,88,Outside Rubbish,Incendiary,Incendiary
+2024,20035,01/11/2024 03:13:00 AM,Bronx,26,3,42,MD Residential Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,20036,01/11/2024 04:38:00 AM,Bronx,3,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,30035,01/11/2024 09:14:00 AM,Brooklyn,44,16,73,Vehicle,Preliminary Investigation Only,Other
+2024,40036,01/11/2024 11:52:00 AM,Queens,52,7,109,MD Residential Structure,Electrical Wiring,Electrical
+2024,50006,01/11/2024 01:22:00 PM,Staten Island,,3,123,Vehicle,Preliminary Investigation Only,Other
+2024,40037,01/11/2024 02:00:00 PM,Queens,,11,111,PD Residential Structure,Lighting Fixture,Electrical
+2024,30036,01/11/2024 02:03:00 PM,Brooklyn,,17,67,MD Residential Structure,Electrical Wiring,Electrical
+2024,20037,01/11/2024 06:15:00 PM,Bronx,18,9,43,MD Residential Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,30037,01/11/2024 08:22:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,77016,01/11/2024 09:33:00 PM,Bronx,20,9,43,Sidewalk,Other,Other
+2024,30038,01/11/2024 10:56:00 PM,Brooklyn,,1,94,Vehicle,Preliminary Investigation Only,Other
+2024,20038,01/12/2024 12:49:00 AM,Bronx,,12,47,,Preliminary Investigation Only,Other
+2024,40038,01/12/2024 02:17:00 AM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,20039,01/12/2024 02:57:00 AM,Bronx,,Out of NYC,50,Vehicle,Preliminary Investigation Only,Other
+2024,50007,01/12/2024 06:18:00 AM,Staten Island,22,1,120,Garage/Shed,Electrical Wiring,Electrical
+2024,77017,01/12/2024 09:34:00 AM,Brooklyn,44,16,73,Other,Lithium Ion Battery,Electrical
+2024,10023,01/12/2024 09:49:00 AM,Manhattan,,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,20040,01/12/2024 10:22:00 AM,Bronx,3,9,43,Commercial Structure,Preliminary Investigation Only,Other
+2024,30039,01/12/2024 11:39:00 AM,Brooklyn,,5,75,MD Residential Structure,Electrical Wiring,Electrical
+2024,20041,01/12/2024 02:58:00 PM,Bronx,,2,41,MD Residential Structure,Clothes Dryer,Appliances
+2024,30040,01/12/2024 04:00:00 PM,Brooklyn,39,5,75,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10024,01/12/2024 04:20:00 PM,Manhattan,,5,13,MD Residential Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,40039,01/12/2024 05:39:00 PM,Queens,,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,10025,01/12/2024 06:41:00 PM,Manhattan,16,11,25,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,40040,01/12/2024 10:41:00 PM,Queens,39,9,102,Commercial Structure,Electrical Wiring,Electrical
+2024,30041,01/12/2024 11:25:00 PM,Brooklyn,,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,20042,01/12/2024 11:47:00 PM,Bronx,,12,47,Vehicle,Incendiary,Incendiary
+2024,10027,01/13/2024 12:03:00 AM,Manhattan,,10,28,MD Residential Structure,Extension Cord,Electrical
+2024,40041,01/13/2024 01:17:00 AM,Queens,,14,100,Vehicle,Incendiary,Incendiary
+2024,30042,01/13/2024 01:24:00 AM,Brooklyn,,6,78,Vehicle,Vehicle Wiring,Electrical
+2024,40042,01/13/2024 02:17:00 AM,Queens,,8,107,PD Residential Structure,Electrical Wiring,Electrical
+2024,10028,01/13/2024 02:24:00 AM,Manhattan,13,12,34,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,20043,01/13/2024 03:51:00 AM,Bronx,,7,52,MD Residential Structure,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,20044,01/13/2024 05:59:00 AM,Bronx,,1,40,MD Residential Structure,Electrical Wiring,Electrical
+2024,10029,01/13/2024 07:29:00 AM,Manhattan,9,4,14,MFA,Other - No Fire,No Fire
+2024,20045,01/13/2024 10:00:00 AM,Bronx,18,6,46,Public Structure,Other - No Fire,No Fire
+2024,10030,01/13/2024 10:44:00 AM,Manhattan,,4,10,MD Residential Structure,Stove/Cooking - Other,Cooking
+2024,30043,01/13/2024 02:07:00 PM,Brooklyn,,10,61,Vehicle,Preliminary Investigation Only,Other
+2024,40043,01/13/2024 02:09:00 PM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,20046,01/13/2024 03:17:00 PM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,30044,01/13/2024 08:19:00 PM,Brooklyn,58,16,73,Vehicle,Preliminary Investigation Only,Other
+2024,40044,01/13/2024 08:26:00 PM,Queens,,,103,Vehicle,Preliminary Investigation Only,Other
+2024,30045,01/13/2024 11:42:00 PM,Brooklyn,,14,70,Vehicle,Vehicle Wiring,Electrical
+2024,30046,01/14/2024 01:10:00 AM,Brooklyn,,15,61,MD Residential Structure,Incendiary - Fireworks,Incendiary
+2024,30047,01/14/2024 02:04:00 AM,Brooklyn,48,7,72,Commercial Structure,Spontaneous Combustion,Natural Sources
+2024,40045,01/14/2024 03:14:00 AM,Queens,,2,108,MD Residential Structure,Other Appliance,Appliances
+2024,40046,01/14/2024 03:19:00 PM,Queens,,7,108,Vehicle,Preliminary Investigation Only,Other
+2024,20047,01/14/2024 03:34:00 PM,Bronx,,7,52,Vehicle,Preliminary Investigation Only,Other
+2024,40047,01/14/2024 06:02:00 PM,Queens,52,7,109,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30048,01/14/2024 08:15:00 PM,Brooklyn,40,7,72,Vehicle,Preliminary Investigation Only,Other
+2024,40048,01/15/2024 12:14:00 AM,Queens,,,113,Vehicle,Preliminary Investigation Only,Other
+2024,20048,01/15/2024 04:47:00 AM,Bronx,18,6,48,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,50008,01/15/2024 09:54:00 AM,Staten Island,,1,121,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20049,01/15/2024 12:55:00 PM,Bronx,18,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,77018,01/15/2024 02:34:00 PM,Queens,51,9,102,Threat to Burn,Threat to Burn,No Fire
+2024,40049,01/15/2024 02:36:00 PM,Queens,,7,109,,Preliminary Investigation Only,Other
+2024,30049,01/15/2024 03:39:00 PM,Brooklyn,44,16,73,Commercial Structure,Incendiary,Incendiary
+2024,20050,01/15/2024 04:25:00 PM,Bronx,,5,46,,Preliminary Investigation Only,Other
+2024,77020,01/15/2024 05:15:00 PM,Bronx,15,12,47,Vehicle,Other - No Fire,No Fire
+2024,10031,01/15/2024 06:11:00 PM,Manhattan,,10,32,MD Residential Structure,Incense,Hot Objects
+2024,40050,01/15/2024 07:33:00 PM,Queens,,1,114,Vehicle,Preliminary Investigation Only,Other
+2024,40052,01/15/2024 08:10:00 PM,Queens,54,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,77019,01/15/2024 08:10:00 PM,Queens,53,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,30050,01/15/2024 09:51:00 PM,Brooklyn,,16,73,MD Residential Structure,Candle,Open Flame
+2024,30051,01/16/2024 12:46:00 AM,Brooklyn,,3,79,Vehicle,Preliminary Investigation Only,Other
+2024,30052,01/16/2024 12:53:00 AM,Brooklyn,,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,20051,01/16/2024 02:35:00 AM,Bronx,,12,47,MD Residential Structure,Incendiary,Incendiary
+2024,20052,01/16/2024 03:57:00 AM,Bronx,27,7,52,MD Residential Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,10032,01/16/2024 05:15:00 AM,Manhattan,,12,34,MD Residential Structure,Incendiary,Incendiary
+2024,77021,01/16/2024 08:57:00 AM,Manhattan,7,4,10,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,10033,01/16/2024 10:02:00 AM,Manhattan,,9,30,Vehicle,Preliminary Investigation Only,Other
+2024,30053,01/16/2024 10:35:00 AM,Brooklyn,,17,67,Vehicle,Preliminary Investigation Only,Other
+2024,40051,01/16/2024 10:52:00 AM,Queens,,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,10034,01/16/2024 11:28:00 AM,Manhattan,,7,20,MD Residential Structure,Preliminary Investigation Only,Other
+2024,20053,01/16/2024 11:29:00 AM,Bronx,,5,46,Vehicle,Preliminary Investigation Only,Other
+2024,77022,01/16/2024 11:30:00 AM,Queens,46,3,115,Commercial Structure,Fireworks Related,No Fire
+2024,40053,01/16/2024 12:00:00 PM,Queens,,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,30054,01/16/2024 12:17:00 PM,Brooklyn,,15,61,MD Residential Structure,Electrical Wiring,Electrical
+2024,20054,01/16/2024 12:56:00 PM,Bronx,,5,46,MD Residential Structure,Candle,Open Flame
+2024,20055,01/16/2024 02:27:00 PM,Bronx,,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,30055,01/16/2024 05:13:00 PM,Brooklyn,33,12,66,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,30056,01/16/2024 05:52:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,20056,01/16/2024 09:38:00 PM,Bronx,,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,77023,01/17/2024 12:59:00 AM,Brooklyn,,1,84,Transit,Incendiary,Incendiary
+2024,30057,01/17/2024 04:23:00 AM,Brooklyn,48,12,66,MD Residential Structure,Electrical Wiring,Electrical
+2024,20058,01/17/2024 05:34:00 AM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,20057,01/17/2024 06:04:00 AM,Bronx,,6,48,MD Residential Structure,Electrical Wiring,Electrical
+2024,20059,01/17/2024 09:31:00 AM,Bronx,,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,50009,01/17/2024 01:46:00 PM,Staten Island,,2,122,Hospital,Incendiary,Incendiary
+2024,10035,01/17/2024 04:30:00 PM,Manhattan,2,2,6,Vehicle,Preliminary Investigation Only,Other
+2024,20060,01/17/2024 05:10:00 PM,Bronx,15,10,45,Vehicle,Vehicle Wiring,Electrical
+2024,20061,01/17/2024 05:17:00 PM,Bronx,,5,46,Vehicle,Lithium Ion Battery,Electrical
+2024,20062,01/17/2024 05:42:00 PM,Bronx,,5,44,Vehicle,Preliminary Investigation Only,Other
+2024,30058,01/17/2024 07:17:00 PM,Brooklyn,,2,88,MD Residential Structure,Portable Heater - Electric,Heaters
+2024,30059,01/17/2024 07:45:00 PM,Brooklyn,,12,66,MD Residential Structure,Candle,Open Flame
+2024,30060,01/17/2024 08:41:00 PM,Brooklyn,,7,72,MD Residential Structure,Food on the Stove,Cooking
+2024,20063,01/17/2024 09:46:00 PM,Bronx,,11,49,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,40054,01/17/2024 10:03:00 PM,Queens,51,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,10036,01/18/2024 12:30:00 AM,Manhattan,7,5,13,Commercial Structure,Incendiary,Incendiary
+2024,77024,01/18/2024 12:37:00 AM,Manhattan,7,5,13,MFA,MFA,No Fire
+2024,30061,01/18/2024 01:48:00 AM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40055,01/18/2024 02:29:00 AM,Queens,,11,111,Vehicle,Preliminary Investigation Only,Other
+2024,30062,01/18/2024 05:12:00 AM,Brooklyn,,1,94,Vehicle,Preliminary Investigation Only,Other
+2024,30063,01/18/2024 05:56:00 AM,Brooklyn,43,13,60,MD Residential Structure,Incendiary,Incendiary
+2024,20065,01/18/2024 12:31:00 PM,Bronx,,12,47,MD Residential Structure,Power Strip,Electrical
+2024,10037,01/18/2024 12:39:00 PM,Manhattan,,8,19,Vehicle,Preliminary Investigation Only,Other
+2024,30064,01/18/2024 03:46:00 PM,Brooklyn,44,16,73,MD Residential Structure,Candle,Open Flame
+2024,40056,01/18/2024 04:47:00 PM,Queens,,8,107,PD Residential Structure,Electrical Wiring,Electrical
+2024,30065,01/18/2024 06:05:00 PM,Brooklyn,,3,81,,Preliminary Investigation Only,Other
+2024,10038,01/18/2024 06:12:00 PM,Manhattan,6,5,13,Vehicle,Preliminary Investigation Only,Other
+2024,40057,01/18/2024 06:17:00 PM,Queens,46,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,40058,01/18/2024 07:24:00 PM,Queens,,11,111,PD Residential Structure,Hot Embers,Hot Objects
+2024,77025,01/19/2024 06:03:00 AM,Brooklyn,41,14,70,MD Residential Structure,Other - No Fire,No Fire
+2024,40059,01/19/2024 11:03:00 AM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,20066,01/19/2024 11:25:00 AM,Bronx,27,7,52,MD Residential Structure,Portable Heater - Electric,Heaters
+2024,30066,01/19/2024 12:20:00 PM,Brooklyn,33,14,70,Vehicle,Preliminary Investigation Only,Other
+2024,30067,01/19/2024 04:15:00 PM,Brooklyn,44,16,73,MD Residential Structure,Incense,Hot Objects
+2024,40060,01/19/2024 04:23:00 PM,Queens,54,12,113,PD Residential Structure,Incendiary - Attempted Suicide,Incendiary
+2024,20067,01/19/2024 05:03:00 PM,Bronx,18,6,48,MD Residential Structure,Electrical Wiring,Electrical
+2024,30068,01/19/2024 07:44:00 PM,Brooklyn,57,8,78,,Preliminary Investigation Only,Other
+2024,30069,01/19/2024 07:52:00 PM,Brooklyn,57,3,79,Manhole,Preliminary Investigation Only,Other
+2024,30070,01/19/2024 08:59:00 PM,Brooklyn,38,17,67,MD Residential Structure,Stove/Cooking - Electric,Cooking
+2024,10039,01/19/2024 11:43:00 PM,Manhattan,,5,5,Vehicle,Preliminary Investigation Only,Other
+2024,30071,01/20/2024 12:49:00 AM,Brooklyn,44,16,73,MD Residential Structure,Appliance Cord,Electrical
+2024,30072,01/20/2024 01:34:00 AM,Brooklyn,31,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,40061,01/20/2024 01:51:00 AM,Queens,53,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,20068,01/20/2024 08:08:00 AM,Bronx,,8,50,MD Residential Structure,Preliminary Investigation Only,Other
+2024,50010,01/20/2024 10:20:00 AM,Staten Island,,1,121,Vehicle,Preliminary Investigation Only,Other
+2024,10040,01/20/2024 11:34:00 AM,Manhattan,,9,26,MD Residential Structure,Incendiary,Incendiary
+2024,30073,01/20/2024 01:07:00 PM,Brooklyn,,16,73,PD Residential Structure,Electrical Wiring,Electrical
+2024,30074,01/20/2024 01:19:00 PM,Brooklyn,,13,60,MD Residential Structure,Stove/Cooking - Other,Cooking
+2024,30075,01/20/2024 02:31:00 PM,Brooklyn,,10,62,Vehicle,Preliminary Investigation Only,Other
+2024,50011,01/20/2024 04:43:00 PM,Staten Island,23,3,123,PD Residential Structure,Matches/Lighter,Open Flame
+2024,50012,01/20/2024 05:10:00 PM,Staten Island,,2,122,Vehicle,Vehicle Wiring,Electrical
+2024,10041,01/20/2024 05:54:00 PM,Manhattan,,6,13,MD Residential Structure,Food on the Stove,Cooking
+2024,10042,01/20/2024 06:19:00 PM,Manhattan,,12,34,Garage/Shed,Portable Heater,Heaters
+2024,30076,01/20/2024 11:27:00 PM,Brooklyn,,4,83,MD Residential Structure,Service,Electrical
+2024,20069,01/21/2024 01:14:00 AM,Bronx,,10,45,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,40062,01/21/2024 01:42:00 AM,Queens,53,13,105,PD Residential Structure,Electrical Wiring,Electrical
+2024,20070,01/21/2024 04:38:00 AM,Bronx,,1,40,MD Residential Structure,Matches/Lighter,Open Flame
+2024,40063,01/21/2024 11:24:00 AM,Queens,,1,114,Vehicle,Preliminary Investigation Only,Other
+2024,30077,01/21/2024 11:31:00 AM,Brooklyn,,14,70,MD Residential Structure,Clothes Dryer,Appliances
+2024,40064,01/21/2024 12:39:00 PM,Queens,,12,113,Commercial Structure,Electrical Wiring,Electrical
+2024,10043,01/21/2024 01:22:00 PM,Manhattan,4,3,7,Vehicle,Preliminary Investigation Only,Other
+2024,50013,01/21/2024 01:52:00 PM,Staten Island,,2,121,Vehicle,Preliminary Investigation Only,Other
+2024,40065,01/21/2024 03:17:00 PM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,30078,01/21/2024 06:22:00 PM,Brooklyn,38,8,77,MD Residential Structure,Electrical Wiring,Electrical
+2024,30079,01/21/2024 07:03:00 PM,Brooklyn,,16,73,MD Residential Structure,Incendiary,Incendiary
+2024,10044,01/21/2024 07:25:00 PM,Manhattan,,9,30,MD Residential Structure,Food on the Stove,Cooking
+2024,30080,01/21/2024 07:32:00 PM,Brooklyn,51,5,75,MD Residential Structure,Chimney/Flues,Hot Objects
+2024,30081,01/21/2024 10:37:00 PM,Brooklyn,,15,61,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20071,01/21/2024 10:43:00 PM,Bronx,18,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20072,01/21/2024 10:57:00 PM,Bronx,,2,41,Vehicle,Preliminary Investigation Only,Other
+2024,20073,01/22/2024 12:50:00 AM,Bronx,,5,46,Vehicle,Other - No Fire,No Fire
+2024,40066,01/22/2024 02:38:00 AM,Queens,,14,100,MD Residential Structure,Heaters - Other,Heaters
+2024,77026,01/22/2024 04:21:00 AM,Brooklyn,32,2,84,Group Home,Incendiary,Incendiary
+2024,40067,01/22/2024 07:37:00 AM,Queens,50,12,113,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20074,01/22/2024 08:16:00 AM,Bronx,15,7,52,Vehicle,Incendiary,Incendiary
+2024,20079,01/22/2024 08:35:00 AM,Bronx,,5,44,Vehicle,Preliminary Investigation Only,Other
+2024,40068,01/22/2024 12:37:00 PM,Queens,,13,113,Vehicle,Preliminary Investigation Only,Other
+2024,40069,01/22/2024 01:11:00 PM,Queens,50,9,102,PD Residential Structure,Electrical Wiring,Electrical
+2024,10045,01/22/2024 02:00:00 PM,Manhattan,4,3,7,Other,Electrical Wiring,Electrical
+2024,40070,01/22/2024 03:45:00 PM,Queens,46,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,40071,01/22/2024 04:42:00 PM,Queens,45,5,104,PD Residential Structure,Electrical Wiring,Electrical
+2024,30082,01/22/2024 04:53:00 PM,Brooklyn,28,4,83,MD Residential Structure,Hot Embers,Hot Objects
+2024,40072,01/22/2024 05:11:00 PM,Queens,50,12,103,Commercial Structure,Incendiary,Incendiary
+2024,30083,01/22/2024 05:31:00 PM,Brooklyn,42,11,62,MD Residential Structure,Incendiary,Incendiary
+2024,30084,01/22/2024 06:38:00 PM,Brooklyn,40,10,68,Other,Smoking (Cigarette/Cigar),Smoking
+2024,40073,01/22/2024 08:05:00 PM,Queens,50,12,113,PD Residential Structure,Permanent Heater - Gas,Heaters
+2024,30085,01/22/2024 09:35:00 PM,Brooklyn,28,1,94,Vehicle,Incendiary,Incendiary
+2024,10046,01/22/2024 09:38:00 PM,Manhattan,16,10,32,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20075,01/22/2024 09:59:00 PM,Bronx,3,9,43,MD Residential Structure,Extension Cord,Electrical
+2024,40074,01/22/2024 10:01:00 PM,Queens,45,1,114,Vehicle,Other - No Fire,No Fire
+2024,40075,01/22/2024 10:25:00 PM,Queens,50,12,103,MD Residential Structure,Electrical Wiring,Electrical
+2024,30086,01/22/2024 10:28:00 PM,Brooklyn,44,16,73,MD Residential Structure,Electrical Wiring,Electrical
+2024,10047,01/23/2024 01:43:00 AM,Manhattan,9,5,18,Outside Rubbish,Incendiary,Incendiary
+2024,20077,01/23/2024 08:25:00 AM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,30087,01/23/2024 08:34:00 AM,Brooklyn,,16,73,MD Residential Structure,Electrical Wiring,Electrical
+2024,20078,01/23/2024 09:33:00 AM,Bronx,14,1,40,Vehicle,Lithium Ion Battery,Electrical
+2024,40076,01/23/2024 09:53:00 AM,Queens,,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,30088,01/23/2024 10:52:00 AM,Brooklyn,38,17,67,MD Residential Structure,Electrical Wiring,Electrical
+2024,77027,01/23/2024 12:22:00 PM,Manhattan,9,5,18,Sidewalk,Lithium Ion Battery,Electrical
+2024,30089,01/23/2024 12:54:00 PM,Brooklyn,,17,67,Garage/Shed,Portable Heater - Propane,Heaters
+2024,30090,01/23/2024 02:20:00 PM,Brooklyn,31,2,84,Vehicle,Preliminary Investigation Only,Other
+2024,40077,01/23/2024 02:21:00 PM,Queens,,6,112,MD Residential Structure,Incendiary,Incendiary
+2024,40078,01/23/2024 03:46:00 PM,Queens,51,10,106,PD Residential Structure,Hot Embers,Hot Objects
+2024,50014,01/23/2024 05:16:00 PM,Staten Island,21,1,120,MD Residential Structure,Preliminary Investigation Only,Other
+2024,20080,01/23/2024 05:17:00 PM,Bronx,,11,49,MD Residential Structure,Other - Open Flame,Open Flame
+2024,40079,01/23/2024 05:41:00 PM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,10048,01/23/2024 07:18:00 PM,Manhattan,11,7,24,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,30093,01/23/2024 09:08:00 PM,Brooklyn,,10,62,Vehicle,Preliminary Investigation Only,Other
+2024,30091,01/23/2024 09:13:00 PM,Brooklyn,,18,63,MD Residential Structure,Incense,Hot Objects
+2024,30092,01/23/2024 09:53:00 PM,Brooklyn,43,13,60,Vehicle,Incendiary,Incendiary
+2024,40080,01/24/2024 07:44:00 AM,Queens,,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,40081,01/24/2024 08:33:00 AM,Queens,,10,106,Vehicle,Incendiary,Incendiary
+2024,50015,01/24/2024 09:35:00 AM,Staten Island,22,1,121,MD Residential Structure,Electrical Wiring,Electrical
+2024,40082,01/24/2024 10:29:00 AM,Queens,,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,30095,01/24/2024 11:24:00 AM,Brooklyn,,6,76,No Fire,Preliminary Investigation Only,Other
+2024,30094,01/24/2024 11:24:00 AM,Brooklyn,,6,76,No Fire,Preliminary Investigation Only,Other
+2024,20081,01/24/2024 12:41:00 PM,Bronx,,9,43,MD Residential Structure,Incense,Hot Objects
+2024,40083,01/24/2024 01:06:00 PM,Queens,,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,20082,01/24/2024 02:39:00 PM,Bronx,27,8,50,Public Structure,Incendiary,Incendiary
+2024,40084,01/24/2024 04:43:00 PM,Queens,,1,114,Commercial Structure,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,40085,01/24/2024 06:37:00 PM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,20083,01/24/2024 07:54:00 PM,Bronx,,5,46,Commercial Structure,Fuse/Circuit Breaker Panel,Electrical
+2024,30096,01/24/2024 11:24:00 PM,Brooklyn,,1,90,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30097,01/25/2024 07:01:00 AM,Brooklyn,,8,77,Vehicle,Preliminary Investigation Only,Other
+2024,70003,01/25/2024 08:00:00 AM,Brooklyn,31,2,84,Other,SIU Investigation,Other
+2024,40086,01/25/2024 10:26:00 AM,Queens,53,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,77028,01/25/2024 02:00:00 PM,Bronx,15,12,47,Other,Other - No Fire,No Fire
+2024,30098,01/25/2024 03:33:00 PM,Brooklyn,,6,72,Vehicle,Preliminary Investigation Only,Other
+2024,40087,01/25/2024 03:38:00 PM,Queens,,1,115,Vehicle,Preliminary Investigation Only,Other
+2024,40088,01/25/2024 05:16:00 PM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,30099,01/25/2024 05:51:00 PM,Brooklyn,43,13,60,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,10049,01/25/2024 06:49:00 PM,Manhattan,12,11,25,,Preliminary Investigation Only,Other
+2024,30100,01/25/2024 07:04:00 PM,Brooklyn,35,1,90,MD Residential Structure,Incendiary,Incendiary
+2024,10050,01/25/2024 07:06:00 PM,Manhattan,10,8,19,Vehicle,Preliminary Investigation Only,Other
+2024,40089,01/25/2024 07:50:00 PM,Queens,47,14,101,Vehicle,Preliminary Investigation Only,Other
+2024,20084,01/25/2024 08:14:00 PM,Bronx,15,12,47,PD Residential Structure,Lithium Ion Battery,Electrical
+2024,30101,01/25/2024 08:20:00 PM,Brooklyn,57,3,79,MFA,MFA,No Fire
+2024,50016,01/25/2024 08:58:00 PM,Staten Island,22,1,120,PD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,40090,01/25/2024 09:08:00 PM,Queens,52,7,109,,Preliminary Investigation Only,Other
+2024,50017,01/25/2024 09:19:00 PM,Staten Island,21,2,122,Vehicle,Preliminary Investigation Only,Other
+2024,10051,01/25/2024 10:38:00 PM,Manhattan,1,1,1,MD Residential Structure,Other - Electrical,Electrical
+2024,40091,01/26/2024 12:04:00 AM,Queens,,7,109,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,30102,01/26/2024 01:09:00 AM,Brooklyn,58,17,67,Vehicle,Electrical Wiring,Electrical
+2024,30103,01/26/2024 01:19:00 AM,Brooklyn,44,16,73,MFA,MFA,No Fire
+2024,10052,01/26/2024 08:55:00 AM,Manhattan,,11,25,MD Residential Structure,Appliance Cord,Electrical
+2024,10053,01/26/2024 10:26:00 AM,Manhattan,,10,32,Religious Structure,Motors - Fossil Fuel Powered,Motors
+2024,40092,01/26/2024 10:37:00 AM,Queens,,14,101,MD Residential Structure,Electrical Wiring,Electrical
+2024,10054,01/26/2024 11:08:00 AM,Manhattan,,5,18,Commercial Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40093,01/26/2024 01:05:00 PM,Queens,,7,109,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30104,01/26/2024 03:55:00 PM,Brooklyn,,2,84,Vehicle,Lithium Ion Battery,Electrical
+2024,20085,01/26/2024 04:57:00 PM,Bronx,,10,45,MD Residential Structure,Clothes Dryer,Appliances
+2024,10055,01/26/2024 05:37:00 PM,Manhattan,,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,30105,01/26/2024 06:05:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40094,01/26/2024 07:43:00 PM,Queens,,7,109,Vehicle,Motors - Electric,Motors
+2024,20086,01/26/2024 10:10:00 PM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,30106,01/27/2024 12:15:00 AM,Brooklyn,,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,30107,01/27/2024 12:36:00 AM,Brooklyn,,16,73,MFA,MFA,No Fire
+2024,40095,01/27/2024 03:24:00 AM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,50018,01/27/2024 04:06:00 AM,Staten Island,,2,122,PD Residential Structure,Incendiary - Fireworks,Incendiary
+2024,77029,01/27/2024 04:33:00 AM,Manhattan,10,8,19,Outside Rubbish,Incendiary,Incendiary
+2024,30108,01/27/2024 09:42:00 AM,Brooklyn,,10,68,Other,Incendiary - Attempted Arson,Incendiary
+2024,20087,01/27/2024 11:53:00 AM,Bronx,,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,20088,01/27/2024 12:34:00 PM,Bronx,,8,50,Public Structure,Incendiary,Incendiary
+2024,20089,01/27/2024 02:15:00 PM,Bronx,,3,42,Vehicle,Preliminary Investigation Only,Other
+2024,20090,01/27/2024 02:20:00 PM,Bronx,,4,44,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,30109,01/27/2024 06:12:00 PM,Brooklyn,,8,78,Vehicle,Preliminary Investigation Only,Other
+2024,40097,01/27/2024 06:17:00 PM,Queens,,12,113,Vehicle,Other - Hot Objects,Hot Objects
+2024,10056,01/27/2024 06:41:00 PM,Manhattan,,1,1,School,Clothes Dryer - Natural Gas,Appliances
+2024,50019,01/27/2024 06:42:00 PM,Staten Island,,3,122,PD Residential Structure,Electrical Wiring,Electrical
+2024,40098,01/27/2024 07:27:00 PM,Queens,,12,103,PD Residential Structure,Portable Heater - Electric,Heaters
+2024,30110,01/27/2024 08:13:00 PM,Brooklyn,,1,90,Vehicle,Incendiary,Incendiary
+2024,30111,01/27/2024 08:33:00 PM,Brooklyn,57,3,79,MFA,MFA,No Fire
+2024,77030,01/27/2024 08:56:00 PM,Bronx,3,2,41,Commercial Structure,Incendiary,Incendiary
+2024,10057,01/27/2024 11:16:00 PM,Manhattan,,8,19,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,40099,01/28/2024 02:54:00 AM,Queens,,2,108,Vehicle,Preliminary Investigation Only,Other
+2024,10058,01/28/2024 03:13:00 AM,Manhattan,,12,34,MD Residential Structure,Incendiary,Incendiary
+2024,10059,01/28/2024 03:27:00 AM,Manhattan,,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,20091,01/28/2024 03:33:00 AM,Bronx,,10,45,Outside Rubbish,Incendiary,Incendiary
+2024,50020,01/28/2024 07:11:00 AM,Staten Island,21,2,122,MD Residential Structure,Child Playing w/ Other Open Flame,Open Flame
+2024,77031,01/28/2024 08:51:00 AM,Queens,51,10,106,PD Residential Structure,Lithium Ion Battery,Electrical
+2024,40100,01/28/2024 10:03:00 AM,Queens,,3,115,Commercial Structure,Transformer,Electrical
+2024,40101,01/28/2024 11:45:00 AM,Queens,47,14,101,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,40102,01/28/2024 03:47:00 PM,Queens,,12,113,PD Residential Structure,Incendiary,Incendiary
+2024,30114,01/28/2024 03:58:00 PM,Brooklyn,57,3,79,MFA,MFA,No Fire
+2024,40103,01/28/2024 04:00:00 PM,Queens,,5,104,Commercial Structure,Electrical Wiring,Electrical
+2024,10060,01/28/2024 06:53:00 PM,Manhattan,,3,7,MD Residential Structure,Electrical Wiring,Electrical
+2024,30112,01/28/2024 07:22:00 PM,Brooklyn,,12,66,MD Residential Structure,Other - Ignitable Liquid/Gas,Ignitable
+2024,30113,01/28/2024 07:30:00 PM,Brooklyn,,15,61,Vehicle,Preliminary Investigation Only,Other
+2024,30115,01/28/2024 08:12:00 PM,Brooklyn,,12,66,Vehicle,Preliminary Investigation Only,Other
+2024,30121,01/29/2024 12:57:00 AM,Brooklyn,44,16,73,MFA,MFA,No Fire
+2024,30116,01/29/2024 05:25:00 AM,Brooklyn,,17,67,Vehicle,Preliminary Investigation Only,Other
+2024,30117,01/29/2024 07:07:00 AM,Brooklyn,,14,70,MD Residential Structure,Portable Heater - Electric,Heaters
+2024,20092,01/29/2024 08:35:00 AM,Bronx,,12,45,Vehicle,Preliminary Investigation Only,Other
+2024,20093,01/29/2024 12:33:00 PM,Bronx,,7,46,Vehicle,Preliminary Investigation Only,Other
+2024,40104,01/29/2024 05:01:00 PM,Queens,,1,114,Vehicle,Preliminary Investigation Only,Other
+2024,10061,01/29/2024 05:04:00 PM,Manhattan,,10,32,MD Residential Structure,Incendiary,Incendiary
+2024,40105,01/29/2024 06:29:00 PM,Queens,51,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,40106,01/29/2024 09:52:00 PM,Queens,,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,40108,01/29/2024 11:05:00 PM,Queens,45,2,108,Commercial Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,40107,01/29/2024 11:16:00 PM,Queens,,12,103,MD Residential Structure,Incendiary,Incendiary
+2024,30118,01/30/2024 02:03:00 AM,Brooklyn,,13,60,Vehicle,Incendiary,Incendiary
+2024,30119,01/30/2024 08:00:00 AM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40111,01/30/2024 09:46:00 AM,Queens,53,7,109,Vehicle,Other - Open Flame,Open Flame
+2024,10062,01/30/2024 09:52:00 AM,Manhattan,7,4,10,MD Residential Structure,Electrical Wiring,Electrical
+2024,40110,01/30/2024 10:12:00 AM,Queens,52,8,107,Commercial Structure,Clothes Dryer - Natural Gas,Appliances
+2024,40112,01/30/2024 04:13:00 PM,Queens,50,8,107,MFA,MFA,No Fire
+2024,30120,01/30/2024 07:43:00 PM,Brooklyn,38,9,71,Vehicle,Preliminary Investigation Only,Other
+2024,10063,01/30/2024 09:36:00 PM,Manhattan,4,3,7,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40113,01/30/2024 10:49:00 PM,Queens,50,6,112,PD Residential Structure,Hot Embers,Hot Objects
+2024,10064,01/30/2024 10:55:00 PM,Manhattan,,10,32,Vehicle,Preliminary Investigation Only,Other
+2024,20094,01/31/2024 01:22:00 AM,Bronx,3,9,43,Outside Rubbish,Incendiary,Incendiary
+2024,77034,01/31/2024 02:55:00 AM,Brooklyn,41,17,67,Vehicle,Incendiary - Attempted Arson,Incendiary
+2024,20095,01/31/2024 03:12:00 AM,Bronx,26,2,41,Vehicle,Preliminary Investigation Only,Other
+2024,20096,01/31/2024 06:35:00 AM,Bronx,27,12,47,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,40114,01/31/2024 06:51:00 AM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,40115,01/31/2024 08:07:00 AM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,10065,01/31/2024 10:05:00 AM,Manhattan,,7,24,Vehicle,Preliminary Investigation Only,Other
+2024,20098,01/31/2024 06:20:00 PM,Bronx,,6,48,PD Residential Structure,Torch - Legal Use of,Open Flame
+2024,30122,01/31/2024 07:22:00 PM,Brooklyn,,16,73,MD Residential Structure,Candle,Open Flame
+2024,77033,01/31/2024 07:33:00 PM,Brooklyn,38,9,77,Vehicle,Incendiary - Explosives,Incendiary
+2024,20099,01/31/2024 08:15:00 PM,Bronx,,1,40,MD Residential Structure,Incendiary,Incendiary
+2024,40116,01/31/2024 09:08:00 PM,Queens,,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,20100,02/01/2024 03:05:00 AM,Bronx,,4,44,MD Residential Structure,Candle,Open Flame
+2024,20101,02/01/2024 05:16:00 AM,Bronx,,7,52,MD Residential Structure,Ignitable Liquid-Polyurethane/Varnish/PaintThinner,Ignitable
+2024,20102,02/01/2024 05:58:00 AM,Bronx,,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,30123,02/01/2024 09:56:00 AM,Brooklyn,,7,72,PD Residential Structure,Electrical Wiring,Electrical
+2024,40117,02/01/2024 02:27:00 PM,Queens,,9,102,PD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,77035,02/01/2024 10:45:00 PM,Manhattan,2,2,1,MD Residential Structure,Clothes Dryer - Natural Gas,Appliances
+2024,20103,02/02/2024 12:36:00 AM,Bronx,,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,20104,02/02/2024 01:12:00 AM,Bronx,,3,42,Vehicle,Lithium Ion Battery,Electrical
+2024,40118,02/02/2024 02:50:00 AM,Queens,,12,113,PD Residential Structure,Permanent Heater - Electric,Heaters
+2024,30125,02/02/2024 03:09:00 AM,Brooklyn,,18,63,Vehicle,Vehicle Wiring,Electrical
+2024,20105,02/02/2024 05:13:00 AM,Bronx,26,3,42,Vehicle,Rekindle,Other
+2024,30126,02/02/2024 09:31:00 AM,Brooklyn,,2,88,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,20106,02/02/2024 09:37:00 AM,Bronx,,4,44,MD Residential Structure,Other - Electrical,Electrical
+2024,50021,02/02/2024 09:59:00 AM,Staten Island,,1,120,Garage/Shed,Incendiary,Incendiary
+2024,50022,02/02/2024 10:14:00 AM,Staten Island,23,3,123,Vehicle,Preliminary Investigation Only,Other
+2024,40119,02/02/2024 11:22:00 AM,Queens,,2,114,Vehicle,Other - Ignitable Liquid/Gas,Ignitable
+2024,40120,02/02/2024 12:04:00 PM,Queens,,4,110,MD Residential Structure,Hard Wire Outlet,Electrical
+2024,30127,02/02/2024 12:09:00 PM,Brooklyn,,12,66,No Fire,Other - No Fire,No Fire
+2024,30128,02/02/2024 02:36:00 PM,Brooklyn,,18,69,PD Residential Structure,Electrical Wiring,Electrical
+2024,30129,02/02/2024 07:42:00 PM,Brooklyn,,1,90,MD Residential Structure,Torch - Legal Use of,Open Flame
+2024,10067,02/02/2024 10:53:00 PM,Manhattan,,12,34,MD Residential Structure,Candle,Open Flame
+2024,10068,02/03/2024 01:43:00 AM,Manhattan,,3,9,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,30130,02/03/2024 03:55:00 AM,Brooklyn,,16,73,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,40121,02/03/2024 07:14:00 AM,Queens,52,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,30131,02/03/2024 07:50:00 AM,Brooklyn,35,1,94,Commercial Structure,Other - Liquid,Ignitable
+2024,40122,02/03/2024 07:56:00 AM,Queens,47,14,101,Vehicle,Preliminary Investigation Only,Other
+2024,10069,02/03/2024 10:12:00 AM,Manhattan,,12,34,Vehicle,Preliminary Investigation Only,Other
+2024,40123,02/03/2024 11:11:00 AM,Queens,54,12,113,Garage/Shed,Barbecue - Propane,Cooking
+2024,10070,02/03/2024 11:54:00 AM,Manhattan,16,9,30,Commercial Structure,Stove/Cooking - Fryer,Cooking
+2024,10071,02/03/2024 06:03:00 PM,Manhattan,11,10,32,MD Residential Structure,Incendiary,Incendiary
+2024,30132,02/03/2024 09:14:00 PM,Brooklyn,39,5,75,MD Residential Structure,Matches/Lighter,Open Flame
+2024,50023,02/04/2024 12:52:00 AM,Staten Island,23,3,123,PD Residential Structure,Incendiary,Incendiary
+2024,30133,02/04/2024 01:34:00 AM,Brooklyn,43,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,40125,02/04/2024 04:55:00 AM,Queens,49,3,115,MD Residential Structure,Incendiary,Incendiary
+2024,40126,02/04/2024 08:30:00 AM,Queens,,5,104,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30134,02/04/2024 09:20:00 AM,Brooklyn,37,3,81,MD Residential Structure,Incendiary,Incendiary
+2024,40127,02/04/2024 09:41:00 AM,Queens,,9,102,Garage/Shed,Electrical Wiring,Electrical
+2024,40128,02/04/2024 10:06:00 AM,Queens,51,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,40130,02/04/2024 02:00:00 PM,Queens,,11,105,MD Residential Structure,Incendiary,Incendiary
+2024,20107,02/04/2024 02:40:00 PM,Bronx,,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,30135,02/04/2024 03:24:00 PM,Brooklyn,58,17,67,Vehicle,Preliminary Investigation Only,Other
+2024,30136,02/04/2024 04:02:00 PM,Brooklyn,32,6,76,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40131,02/04/2024 04:12:00 PM,Queens,,8,107,PD Residential Structure,Lithium Ion Battery,Electrical
+2024,20108,02/04/2024 06:33:00 PM,Bronx,,6,48,Commercial Structure,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,40132,02/04/2024 07:05:00 PM,Queens,,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,10072,02/04/2024 07:06:00 PM,Manhattan,,8,19,MD Residential Structure,Stove  - Natural Gas,Appliances
+2024,30137,02/04/2024 07:31:00 PM,Brooklyn,44,4,83,Commercial Structure,Incendiary,Incendiary
+2024,40133,02/04/2024 08:07:00 PM,Queens,,14,101,MD Residential Structure,Candle,Open Flame
+2024,30138,02/04/2024 09:04:00 PM,Brooklyn,44,16,73,Other,Incendiary,Incendiary
+2024,30139,02/04/2024 09:28:00 PM,Brooklyn,58,17,67,Commercial Structure,Electrical Wiring,Electrical
+2024,10073,02/05/2024 02:47:00 AM,Manhattan,,12,33,Vehicle,Preliminary Investigation Only,Other
+2024,30140,02/05/2024 03:59:00 AM,Brooklyn,43,15,61,Commercial Structure,Electrical Wiring,Electrical
+2024,30141,02/05/2024 11:14:00 AM,Brooklyn,58,18,69,PD Residential Structure,Electrical Wiring,Electrical
+2024,40134,02/05/2024 12:39:00 PM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,30142,02/05/2024 01:15:00 PM,Brooklyn,,3,79,MD Residential Structure,Clothes Dryer,Appliances
+2024,10074,02/05/2024 02:11:00 PM,Manhattan,,3,5,Commercial Structure,Stove/Cooking - Stove,Cooking
+2024,20109,02/05/2024 04:05:00 PM,Bronx,,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,20110,02/05/2024 04:10:00 PM,Bronx,,6,48,MD Residential Structure,Child Playing w/Matches/Lighter,Open Flame
+2024,20111,02/05/2024 05:40:00 PM,Bronx,,2,41,Vehicle,Preliminary Investigation Only,Other
+2024,40135,02/05/2024 10:25:00 PM,Queens,,11,111,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10075,02/05/2024 10:37:00 PM,Manhattan,,4,10,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20112,02/05/2024 11:41:00 PM,Bronx,,12,47,Garage/Shed,Heat or Sparks from Friction,Hot Objects
+2024,40136,02/06/2024 12:11:00 AM,Queens,,5,104,MD Residential Structure,Under Investigation,Other
+2024,20113,02/06/2024 01:01:00 AM,Bronx,,7,52,Vehicle,Preliminary Investigation Only,Other
+2024,10076,02/06/2024 09:33:00 AM,Manhattan,,9,26,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,10077,02/06/2024 10:51:00 AM,Manhattan,,10,32,Vehicle,Preliminary Investigation Only,Other
+2024,30143,02/06/2024 02:30:00 PM,Brooklyn,,18,69,Vehicle,Incendiary,Incendiary
+2024,40137,02/06/2024 02:53:00 PM,Queens,54,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,40138,02/06/2024 04:14:00 PM,Queens,54,12,113,PD Residential Structure,Torch - Legal Use of,Open Flame
+2024,30144,02/06/2024 04:59:00 PM,Brooklyn,,5,75,Commercial Structure,Electrical Wiring,Electrical
+2024,20114,02/06/2024 06:17:00 PM,Bronx,,3,42,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30145,02/06/2024 06:43:00 PM,Brooklyn,35,1,90,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20115,02/06/2024 08:44:00 PM,Bronx,,4,44,MD Residential Structure,Microwave,Appliances
+2024,30146,02/07/2024 04:15:00 AM,Brooklyn,41,14,70,Vehicle,Preliminary Investigation Only,Other
+2024,40140,02/07/2024 05:10:00 AM,Queens,47,14,100,Vehicle,Electrical Wiring,Electrical
+2024,50024,02/07/2024 06:57:00 AM,Staten Island,22,2,121,PD Residential Structure,Incendiary,Incendiary
+2024,10078,02/07/2024 09:08:00 AM,Manhattan,,1,14,Vehicle,Other - Electrical,Electrical
+2024,30147,02/07/2024 11:46:00 AM,Brooklyn,40,7,68,Vehicle,Heat or Sparks from Friction,Hot Objects
+2024,10079,02/07/2024 12:49:00 PM,Manhattan,10,11,23,MD Residential Structure,Heat or Sparks from Friction,Hot Objects
+2024,40141,02/07/2024 01:32:00 PM,Queens,,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,30148,02/07/2024 01:45:00 PM,Brooklyn,,1,90,MD Residential Structure,Preliminary Investigation Only,Other
+2024,20116,02/07/2024 04:04:00 PM,Bronx,17,4,44,PD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30149,02/07/2024 10:41:00 PM,Brooklyn,,11,62,Outside Rubbish,Incendiary,Incendiary
+2024,30150,02/07/2024 11:23:00 PM,Brooklyn,,11,62,Outside Rubbish,Incendiary,Incendiary
+2024,30151,02/07/2024 11:38:00 PM,Brooklyn,,1,90,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20117,02/08/2024 12:01:00 AM,Bronx,,6,48,MD Residential Structure,Incendiary,Incendiary
+2024,20118,02/08/2024 02:03:00 AM,Bronx,,8,50,Vehicle,Preliminary Investigation Only,Other
+2024,30152,02/08/2024 03:26:00 AM,Brooklyn,40,7,72,PD Residential Structure,Lithium Ion Battery,Electrical
+2024,20119,02/08/2024 05:49:00 AM,Bronx,,4,44,MD Residential Structure,Incendiary,Incendiary
+2024,20120,02/08/2024 08:27:00 AM,Bronx,,10,45,PD Residential Structure,Extension Cord,Electrical
+2024,77037,02/08/2024 09:04:00 AM,Bronx,,9,43,MD Residential Structure,Other - Electrical,Electrical
+2024,40143,02/08/2024 10:43:00 AM,Queens,,8,107,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40144,02/08/2024 10:48:00 AM,Queens,51,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,20121,02/08/2024 02:00:00 PM,Bronx,,12,47,PD Residential Structure,Electrical Wiring,Electrical
+2024,40145,02/08/2024 05:47:00 PM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,20122,02/08/2024 06:18:00 PM,Bronx,,7,52,MD Residential Structure,Electrical Wiring,Electrical
+2024,50025,02/08/2024 09:20:00 PM,Staten Island,22,2,122,Vehicle,Preliminary Investigation Only,Other
+2024,40146,02/08/2024 09:28:00 PM,Queens,,10,106,PD Residential Structure,Stove  - Natural Gas,Appliances
+2024,50026,02/08/2024 11:10:00 PM,Staten Island,,2,121,MD Residential Structure,Incendiary,Incendiary
+2024,20123,02/09/2024 12:14:00 AM,Bronx,,6,48,MD Residential Structure,Incendiary,Incendiary
+2024,40147,02/09/2024 12:56:00 AM,Queens,,11,111,PD Residential Structure,Electrical Wiring,Electrical
+2024,77038,02/09/2024 07:00:00 AM,Manhattan,,4,18,Commercial Structure,Incendiary,Incendiary
+2024,40148,02/09/2024 10:00:00 AM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,10080,02/09/2024 02:17:00 PM,Manhattan,,11,23,MD Residential Structure,Electrical Wiring,Electrical
+2024,30153,02/09/2024 02:42:00 PM,Brooklyn,37,4,83,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10081,02/09/2024 04:00:00 PM,Manhattan,3,3,7,MD Residential Structure,Incense,Hot Objects
+2024,40150,02/09/2024 04:12:00 PM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,30154,02/09/2024 05:40:00 PM,Brooklyn,,8,71,Vehicle,Preliminary Investigation Only,Other
+2024,50027,02/09/2024 06:08:00 PM,Staten Island,,1,120,Vehicle,Preliminary Investigation Only,Other
+2024,30157,02/09/2024 07:37:00 PM,Brooklyn,,18,69,Vehicle,Incendiary,Incendiary
+2024,30155,02/09/2024 07:54:00 PM,Brooklyn,,10,68,Vehicle,Other - No Fire,No Fire
+2024,30156,02/09/2024 09:25:00 PM,Brooklyn,,12,66,Commercial Structure,Electrical Wiring,Electrical
+2024,20124,02/10/2024 12:58:00 AM,Bronx,,10,45,PD Residential Structure,Incense,Hot Objects
+2024,30158,02/10/2024 01:56:00 AM,Brooklyn,,9,71,PD Residential Structure,Electrical Wiring,Electrical
+2024,30159,02/10/2024 02:25:00 AM,Brooklyn,,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,20125,02/10/2024 07:37:00 AM,Bronx,,2,41,MD Residential Structure,Incendiary,Incendiary
+2024,70017,02/10/2024 07:37:00 AM,Bronx,,2,41,MD Residential Structure,Incendiary,Incendiary
+2024,77039,02/10/2024 08:46:00 AM,Queens,,9,102,Outside Rubbish,Incendiary,Incendiary
+2024,40152,02/10/2024 09:43:00 AM,Queens,,14,101,Vehicle,Preliminary Investigation Only,Other
+2024,77040,02/10/2024 10:00:00 AM,Manhattan,,1,9,Other,Fraudulent Placard Investigation,No Fire
+2024,77041,02/10/2024 12:37:00 PM,Brooklyn,,14,70,MFA,MFA,No Fire
+2024,30160,02/10/2024 01:20:00 PM,Brooklyn,,1,94,PD Residential Structure,Stove/Cooking - Other,Cooking
+2024,10082,02/10/2024 02:37:00 PM,Manhattan,,4,18,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10083,02/10/2024 03:53:00 PM,Manhattan,,11,23,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30161,02/10/2024 04:30:00 PM,Brooklyn,33,18,63,PD Residential Structure,Other - Open Flame,Open Flame
+2024,40153,02/10/2024 04:58:00 PM,Queens,,13,105,PD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30162,02/10/2024 06:19:00 PM,Brooklyn,,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,10085,02/10/2024 11:57:00 PM,Manhattan,,5,14,Vehicle,Preliminary Investigation Only,Other
+2024,50028,02/11/2024 02:17:00 AM,Staten Island,,2,121,Outside Rubbish,Incendiary,Incendiary
+2024,30163,02/11/2024 03:58:00 AM,Brooklyn,,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,10086,02/11/2024 12:33:00 PM,Manhattan,9,4,10,MD Residential Structure,Food on the Stove,Cooking
+2024,20126,02/11/2024 03:48:00 PM,Bronx,,4,44,MD Residential Structure,Electrical Wiring,Electrical
+2024,30165,02/11/2024 04:15:00 PM,Brooklyn,,6,78,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,20127,02/11/2024 06:12:00 PM,Bronx,,1,42,Vehicle,Preliminary Investigation Only,Other
+2024,40154,02/11/2024 07:44:00 PM,Queens,,13,105,PD Residential Structure,Candle,Open Flame
+2024,20128,02/12/2024 02:06:00 AM,Bronx,,6,48,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,30167,02/12/2024 07:12:00 AM,Brooklyn,,12,66,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40155,02/12/2024 08:14:00 AM,Queens,,13,105,PD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,30168,02/12/2024 08:44:00 AM,Brooklyn,,13,61,Vehicle,Vehicle Wiring,Electrical
+2024,30169,02/12/2024 09:04:00 AM,Brooklyn,,17,67,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,77045,02/12/2024 09:45:00 AM,Staten Island,,2,121,Outside Rubbish,Incendiary,Incendiary
+2024,40156,02/12/2024 10:56:00 AM,Queens,,13,105,PD Residential Structure,Preliminary Investigation Only,Other
+2024,30170,02/12/2024 01:58:00 PM,Brooklyn,,12,66,MD Residential Structure,Other - Electrical,Electrical
+2024,50029,02/12/2024 02:25:00 PM,Staten Island,23,3,122,PD Residential Structure,Power Strip,Electrical
+2024,30171,02/12/2024 07:25:00 PM,Brooklyn,,5,75,Vehicle,Vehicle Wiring,Electrical
+2024,50030,02/12/2024 08:03:00 PM,Staten Island,,1,121,MD Residential Structure,Incendiary,Incendiary
+2024,10087,02/12/2024 10:10:00 PM,Manhattan,,9,26,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30172,02/12/2024 11:03:00 PM,Brooklyn,,16,73,MFA,MFA,No Fire
+2024,40158,02/12/2024 11:52:00 PM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,40159,02/13/2024 04:04:00 AM,Queens,,3,115,Vehicle,Incendiary,Incendiary
+2024,30173,02/13/2024 05:30:00 AM,Brooklyn,,3,79,Vehicle,Preliminary Investigation Only,Other
+2024,77044,02/13/2024 06:24:00 AM,Bronx,,4,44,MD Residential Structure,Incendiary,Incendiary
+2024,77043,02/13/2024 07:52:00 AM,Brooklyn,,15,61,MD Residential Structure,Incendiary - Attempted Arson,Incendiary
+2024,30174,02/13/2024 08:38:00 AM,Brooklyn,,14,70,MD Residential Structure,Hard Wire Outlet,Electrical
+2024,40160,02/13/2024 10:01:00 AM,Queens,,7,109,MD Residential Structure,Incendiary,Incendiary
+2024,40161,02/13/2024 12:46:00 PM,Queens,,16,114,Vehicle,Preliminary Investigation Only,Other
+2024,30175,02/13/2024 02:22:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,30176,02/13/2024 02:45:00 PM,Brooklyn,,4,83,Vehicle,Lithium Ion Battery,Electrical
+2024,20129,02/13/2024 07:54:00 PM,Bronx,,1,40,MD Residential Structure,Preliminary Investigation Only,Other
+2024,10088,02/13/2024 11:42:00 PM,Manhattan,,3,7,Vehicle,Preliminary Investigation Only,Other
+2024,20130,02/14/2024 02:23:00 AM,Bronx,,7,52,Vehicle,Preliminary Investigation Only,Other
+2024,20131,02/14/2024 07:11:00 AM,Bronx,,3,42,Outside Rubbish,Incendiary,Incendiary
+2024,30177,02/14/2024 09:50:00 AM,Brooklyn,,16,73,MD Residential Structure,Electrical Wiring,Electrical
+2024,30178,02/14/2024 10:12:00 AM,Brooklyn,,11,62,Vehicle,Other - Hot Objects,Hot Objects
+2024,40162,02/14/2024 11:21:00 AM,Queens,,14,100,,Preliminary Investigation Only,Other
+2024,40163,02/14/2024 11:32:00 AM,Queens,,7,110,Vehicle,Preliminary Investigation Only,Other
+2024,40164,02/14/2024 03:39:00 PM,Queens,50,8,107,School,Permanent Heater - Oil,Heaters
+2024,30179,02/14/2024 07:11:00 PM,Brooklyn,,12,66,Outside Rubbish,Incendiary - Fireworks,Incendiary
+2024,40166,02/14/2024 08:59:00 PM,Queens,54,13,105,No Fire,Carbon Monoxide Incident,No Fire
+2024,40165,02/14/2024 09:23:00 PM,Queens,,1,111,Vehicle,Preliminary Investigation Only,Other
+2024,40167,02/14/2024 10:16:00 PM,Queens,,8,107,PD Residential Structure,Preliminary Investigation Only,Other
+2024,30180,02/14/2024 11:26:00 PM,Brooklyn,,6,76,MD Residential Structure,Refrigeration Compressor,Appliances
+2024,30181,02/15/2024 12:28:00 AM,Brooklyn,,12,66,MD Residential Structure,Food on the Stove,Cooking
+2024,10089,02/15/2024 04:26:00 AM,Manhattan,9,4,18,Vehicle,Incendiary,Incendiary
+2024,40168,02/15/2024 05:17:00 AM,Queens,50,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,20132,02/15/2024 06:10:00 AM,Bronx,,5,42,PD Residential Structure,Electrical Wiring,Electrical
+2024,40169,02/15/2024 08:02:00 AM,Queens,53,11,111,Vehicle,Preliminary Investigation Only,Other
+2024,10090,02/15/2024 09:07:00 AM,Manhattan,,11,23,MD Residential Structure,Electrical Wiring,Electrical
+2024,10091,02/15/2024 09:27:00 AM,Manhattan,9,7,20,MD Residential Structure,Other - Hot Objects,Hot Objects
+2024,30182,02/15/2024 09:42:00 AM,Brooklyn,43,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,30183,02/15/2024 04:33:00 PM,Brooklyn,28,4,83,MD Residential Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,20133,02/15/2024 04:39:00 PM,Bronx,,6,48,Vehicle,Other,Other
+2024,30184,02/15/2024 06:22:00 PM,Brooklyn,35,1,94,Commercial Structure,Spontaneous Combustion,Natural Sources
+2024,40170,02/15/2024 06:37:00 PM,Queens,,13,105,,Preliminary Investigation Only,Other
+2024,10092,02/15/2024 08:14:00 PM,Manhattan,,11,25,MD Residential Structure,Electrical Wiring,Electrical
+2024,77046,02/16/2024 01:43:00 AM,Queens,,1,114,Outside Rubbish,Incendiary,Incendiary
+2024,40171,02/16/2024 02:11:00 AM,Queens,,9,102,Vehicle,Incendiary,Incendiary
+2024,40172,02/16/2024 04:55:00 AM,Queens,,12,103,PD Residential Structure,Electrical Wiring,Electrical
+2024,50031,02/16/2024 09:13:00 AM,Staten Island,22,1,120,PD Residential Structure,Electrical Wiring,Electrical
+2024,77047,02/16/2024 02:05:00 PM,Bronx,,9,43,Vehicle,Lithium Ion Battery,Electrical
+2024,40173,02/16/2024 03:40:00 PM,Queens,,14,101,Vehicle,Preliminary Investigation Only,Other
+2024,20135,02/16/2024 05:24:00 PM,Bronx,,6,48,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30185,02/16/2024 05:56:00 PM,Brooklyn,,8,77,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40174,02/16/2024 09:32:00 PM,Queens,,1,114,MD Residential Structure,Electrical Wiring,Electrical
+2024,40175,02/17/2024 01:28:00 AM,Queens,,3,115,Vehicle,Incendiary,Incendiary
+2024,30186,02/17/2024 03:20:00 AM,Brooklyn,,3,79,Manhole,Transformer,Electrical
+2024,40176,02/17/2024 03:43:00 AM,Queens,49,3,115,Vehicle,Incendiary,Incendiary
+2024,40178,02/17/2024 03:56:00 AM,Queens,51,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,40177,02/17/2024 04:10:00 AM,Queens,49,3,115,Vehicle,Incendiary,Incendiary
+2024,20136,02/17/2024 08:30:00 AM,Bronx,,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,40179,02/17/2024 02:40:00 PM,Queens,,2,108,Vehicle,Preliminary Investigation Only,Other
+2024,40180,02/17/2024 07:13:00 PM,Queens,,12,103,Commercial Structure,Preliminary Investigation Only,Other
+2024,20138,02/17/2024 07:47:00 PM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,20139,02/17/2024 08:32:00 PM,Bronx,,6,48,Commercial Structure,Other - Electrical,Electrical
+2024,30187,02/17/2024 08:37:00 PM,Brooklyn,37,4,83,MD Residential Structure,Incendiary,Incendiary
+2024,40181,02/17/2024 11:02:00 PM,Queens,,3,115,MD Residential Structure,Electrical Wiring,Electrical
+2024,10093,02/18/2024 12:02:00 AM,Manhattan,,11,25,Vehicle,Preliminary Investigation Only,Other
+2024,40182,02/18/2024 05:26:00 AM,Queens,,3,115,Garage/Shed,Smoking (Cigarette/Cigar),Smoking
+2024,30188,02/18/2024 06:59:00 AM,Brooklyn,,8,77,Vehicle,Other - Hot Objects,Hot Objects
+2024,30189,02/18/2024 11:06:00 AM,Brooklyn,,16,73,MD Residential Structure,Candle,Open Flame
+2024,50032,02/18/2024 11:07:00 AM,Staten Island,22,1,120,Vehicle,Preliminary Investigation Only,Other
+2024,50033,02/18/2024 11:12:00 AM,Staten Island,,1,120,PD Residential Structure,Preliminary Investigation Only,Other
+2024,20140,02/18/2024 03:25:00 PM,Bronx,,3,42,MD Residential Structure,Electrical Wiring,Electrical
+2024,40183,02/18/2024 04:17:00 PM,Queens,,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,20141,02/18/2024 09:47:00 PM,Bronx,27,8,50,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,20142,02/18/2024 11:00:00 PM,Bronx,,10,45,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30190,02/18/2024 11:49:00 PM,Brooklyn,,3,81,MD Residential Structure,Electrical Wiring,Electrical
+2024,30191,02/19/2024 03:28:00 AM,Brooklyn,,5,75,Vehicle,Electrical Wiring,Electrical
+2024,10094,02/19/2024 10:00:00 AM,Manhattan,,4,13,Commercial Structure,Preliminary Investigation Only,Other
+2024,30192,02/19/2024 11:31:00 AM,Brooklyn,,3,79,MD Residential Structure,Incendiary,Incendiary
+2024,40184,02/19/2024 11:52:00 AM,Queens,,5,104,PD Residential Structure,Electrical Wiring,Electrical
+2024,30193,02/19/2024 12:31:00 PM,Brooklyn,58,18,69,Vehicle,Preliminary Investigation Only,Other
+2024,77051,02/19/2024 04:30:00 PM,Queens,,12,103,MD Residential Structure,Incendiary - Attempted Arson,Incendiary
+2024,20144,02/19/2024 11:53:00 PM,Bronx,,6,48,MD Residential Structure,Extension Cord,Electrical
+2024,20145,02/20/2024 03:58:00 AM,Bronx,,2,41,Vehicle,Preliminary Investigation Only,Other
+2024,30194,02/20/2024 08:19:00 AM,Brooklyn,,15,61,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40185,02/20/2024 08:24:00 AM,Queens,,14,100,MD Residential Structure,Preliminary Investigation Only,Other
+2024,40186,02/20/2024 09:18:00 AM,Queens,,1,114,MD Residential Structure,Preliminary Investigation Only,Other
+2024,40187,02/20/2024 10:54:00 AM,Queens,,10,106,PD Residential Structure,Electrical Wiring,Electrical
+2024,30195,02/20/2024 03:03:00 PM,Brooklyn,,9,71,MD Residential Structure,Child Playing w/Matches/Lighter,Open Flame
+2024,30196,02/20/2024 04:16:00 PM,Brooklyn,,3,79,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,50034,02/20/2024 05:55:00 PM,Staten Island,22,1,121,MD Residential Structure,Candle,Open Flame
+2024,10095,02/20/2024 06:51:00 PM,Manhattan,,1,1,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40188,02/20/2024 08:14:00 PM,Queens,,12,103,Commercial Structure,Chimney/Flues,Hot Objects
+2024,40189,02/20/2024 10:08:00 PM,Queens,,13,105,PD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,10096,02/20/2024 10:18:00 PM,Manhattan,,11,23,MD Residential Structure,Incendiary,Incendiary
+2024,40190,02/20/2024 11:19:00 PM,Queens,,11,111,Vehicle,Preliminary Investigation Only,Other
+2024,30197,02/20/2024 11:52:00 PM,Brooklyn,,18,63,Outside Rubbish,Incendiary,Incendiary
+2024,30198,02/21/2024 02:24:00 AM,Brooklyn,,8,77,MD Residential Structure,Matches/Lighter,Open Flame
+2024,40191,02/21/2024 02:34:00 AM,Queens,,6,112,PD Residential Structure,Electrical Wiring,Electrical
+2024,20146,02/21/2024 03:20:00 AM,Bronx,,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,10097,02/21/2024 05:00:00 AM,Manhattan,9,4,18,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20147,02/21/2024 06:04:00 AM,Bronx,,5,46,MD Residential Structure,Candle,Open Flame
+2024,40192,02/21/2024 10:35:00 AM,Queens,,1,114,Commercial Structure,Clothes Dryer,Appliances
+2024,20148,02/21/2024 11:18:00 AM,Bronx,,5,46,PD Residential Structure,Electrical Wiring,Electrical
+2024,40193,02/21/2024 01:46:00 PM,Queens,,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,30199,02/21/2024 02:28:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,30200,02/21/2024 03:47:00 PM,Brooklyn,44,16,73,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,40194,02/21/2024 08:00:00 PM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,40195,02/21/2024 08:31:00 PM,Queens,,1,114,Vehicle,Other - Hot Objects,Hot Objects
+2024,20150,02/21/2024 09:14:00 PM,Bronx,,6,48,MD Residential Structure,Incendiary,Incendiary
+2024,40196,02/21/2024 09:36:00 PM,Queens,,2,108,Vehicle,Preliminary Investigation Only,Other
+2024,20151,02/21/2024 11:20:00 PM,Bronx,,11,49,MFA,Other - No Fire,No Fire
+2024,20152,02/22/2024 06:37:00 AM,Bronx,,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,10098,02/22/2024 08:50:00 AM,Manhattan,6,6,13,MD Residential Structure,Candle,Open Flame
+2024,30201,02/22/2024 02:53:00 PM,Brooklyn,,17,67,MFA,MFA,No Fire
+2024,30202,02/22/2024 04:29:00 PM,Brooklyn,32,2,84,Vehicle,Preliminary Investigation Only,Other
+2024,30203,02/22/2024 05:38:00 PM,Brooklyn,,2,88,Commercial Structure,Torch - Legal Use of,Open Flame
+2024,77049,02/22/2024 06:30:00 PM,Manhattan,,12,34,Outside Rubbish,Lithium Ion Battery,Electrical
+2024,40199,02/23/2024 04:45:00 AM,Queens,,1,114,PD Residential Structure,Preliminary Investigation Only,Other
+2024,30204,02/23/2024 04:57:00 AM,Brooklyn,,1,94,Manhole,Preliminary Investigation Only,Other
+2024,20153,02/23/2024 10:26:00 AM,Bronx,,11,47,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,30205,02/23/2024 11:31:00 AM,Brooklyn,40,7,72,Commercial Structure,Lithium Ion Battery,Electrical
+2024,77053,02/23/2024 12:34:00 PM,Queens,,12,103,MD Residential Structure,Incendiary,Incendiary
+2024,10099,02/23/2024 02:36:00 PM,Manhattan,,12,33,MD Residential Structure,Lighting Fixture,Electrical
+2024,40200,02/23/2024 05:57:00 PM,Queens,54,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,30206,02/23/2024 07:10:00 PM,Brooklyn,,17,67,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30207,02/23/2024 08:54:00 PM,Brooklyn,43,13,60,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,20154,02/23/2024 09:12:00 PM,Bronx,,1,40,Group Home,Incendiary,Incendiary
+2024,40201,02/24/2024 01:37:00 AM,Queens,,13,113,Vehicle,Preliminary Investigation Only,Other
+2024,30208,02/24/2024 01:54:00 AM,Brooklyn,,8,77,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,10101,02/24/2024 06:51:00 AM,Manhattan,,5,14,Vehicle,Other Motor,Motors
+2024,20155,02/24/2024 07:14:00 AM,Bronx,,8,50,Vehicle,Preliminary Investigation Only,Other
+2024,40202,02/24/2024 11:57:00 AM,Queens,,12,103,PD Residential Structure,Fuse/Circuit Breaker Panel,Electrical
+2024,20156,02/24/2024 01:01:00 PM,Bronx,,1,40,MD Residential Structure,Incendiary,Incendiary
+2024,30209,02/24/2024 01:33:00 PM,Brooklyn,58,16,73,MD Residential Structure,Incendiary,Incendiary
+2024,40203,02/24/2024 01:36:00 PM,Queens,,4,110,PD Residential Structure,Preliminary Investigation Only,Other
+2024,50036,02/24/2024 04:25:00 PM,Staten Island,,2,121,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30210,02/24/2024 07:01:00 PM,Brooklyn,,17,67,Vehicle,Preliminary Investigation Only,Other
+2024,40204,02/24/2024 07:45:00 PM,Queens,,7,110,Vehicle,Preliminary Investigation Only,Other
+2024,30211,02/25/2024 01:18:00 AM,Brooklyn,42,10,68,Vehicle,Incendiary,Incendiary
+2024,20157,02/25/2024 01:35:00 AM,Bronx,,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,10102,02/25/2024 03:40:00 AM,Manhattan,7,4,13,Commercial Structure,Electrical Wiring,Electrical
+2024,40205,02/25/2024 04:52:00 AM,Queens,50,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,77050,02/25/2024 06:29:00 AM,Queens,,4,110,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,20158,02/25/2024 07:17:00 AM,Bronx,,1,40,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,77056,02/25/2024 08:00:00 AM,Queens,,2,110,MD Residential Structure,Incendiary,Incendiary
+2024,30212,02/25/2024 08:38:00 AM,Brooklyn,,1,94,Commercial Structure,Motors - Fossil Fuel Powered,Motors
+2024,20159,02/25/2024 10:23:00 AM,Bronx,,4,44,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20160,02/25/2024 12:14:00 PM,Bronx,,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,40206,02/25/2024 02:54:00 PM,Queens,,8,107,PD Residential Structure,Preliminary Investigation Only,Other
+2024,30213,02/25/2024 05:01:00 PM,Brooklyn,33,15,61,PD Residential Structure,Incendiary - Fireworks,Incendiary
+2024,20161,02/25/2024 08:49:00 PM,Bronx,,10,45,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,40209,02/25/2024 09:47:00 PM,Queens,,8,107,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,70019,02/25/2024 09:53:00 PM,Queens,,8,107,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,40210,02/25/2024 10:05:00 PM,Queens,,8,107,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,10103,02/25/2024 11:33:00 PM,Manhattan,,3,9,Vehicle,Preliminary Investigation Only,Other
+2024,30214,02/26/2024 02:53:00 AM,Brooklyn,,13,60,MD Residential Structure,Candle,Open Flame
+2024,30215,02/26/2024 04:52:00 AM,Brooklyn,,2,88,Vehicle,Preliminary Investigation Only,Other
+2024,40211,02/26/2024 08:21:00 AM,Queens,,13,105,Vehicle,Preliminary Investigation Only,Other
+2024,10104,02/26/2024 10:50:00 AM,Manhattan,,9,26,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20162,02/26/2024 06:49:00 PM,Bronx,17,4,44,Vehicle,Other - Hot Objects,Hot Objects
+2024,30216,02/26/2024 07:50:00 PM,Brooklyn,,3,81,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,20163,02/26/2024 08:42:00 PM,Bronx,,6,48,Commercial Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20164,02/27/2024 12:27:00 PM,Bronx,,11,49,School,Incendiary,Incendiary
+2024,10105,02/27/2024 02:16:00 PM,Manhattan,,5,13,Commercial Structure,Clothes Dryer - Electric,Appliances
+2024,30217,02/27/2024 02:47:00 PM,Brooklyn,,2,84,Commercial Structure,Heat or Sparks from Friction,Hot Objects
+2024,40213,02/27/2024 06:17:00 PM,Queens,,11,111,PD Residential Structure,Lighting Fixture,Electrical
+2024,30218,02/27/2024 07:06:00 PM,Brooklyn,40,7,68,Vehicle,Preliminary Investigation Only,Other
+2024,20165,02/27/2024 08:07:00 PM,Bronx,,12,47,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,40214,02/27/2024 08:09:00 PM,Queens,,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,40215,02/27/2024 08:18:00 PM,Queens,,12,113,Vehicle,Incendiary,Incendiary
+2024,20166,02/27/2024 08:41:00 PM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,40216,02/27/2024 09:45:00 PM,Queens,,2,108,Vehicle,Incendiary,Incendiary
+2024,20167,02/27/2024 09:53:00 PM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,30219,02/28/2024 02:27:00 AM,Brooklyn,,3,79,MD Residential Structure,Electrical Wiring,Electrical
+2024,40217,02/28/2024 04:00:00 AM,Queens,,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,20168,02/28/2024 06:28:00 AM,Bronx,,11,49,MD Residential Structure,Portable Heater,Heaters
+2024,10106,02/28/2024 06:42:00 AM,Manhattan,6,6,13,Vehicle,Preliminary Investigation Only,Other
+2024,30220,02/28/2024 10:46:00 AM,Brooklyn,,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,30221,02/28/2024 11:08:00 AM,Brooklyn,,4,83,MD Residential Structure,Electrical Wiring,Electrical
+2024,30222,02/28/2024 12:23:00 PM,Brooklyn,40,1,68,MD Residential Structure,Incendiary,Incendiary
+2024,30223,02/28/2024 01:21:00 PM,Brooklyn,,3,79,PD Residential Structure,Food on the Stove,Cooking
+2024,20169,02/28/2024 03:01:00 PM,Bronx,,1,40,Government Structure,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,10107,02/28/2024 03:31:00 PM,Manhattan,,12,34,MD Residential Structure,Portable Heater - Electric,Heaters
+2024,40218,02/28/2024 07:22:00 PM,Queens,,8,107,Commercial Structure,Electrical Wiring,Electrical
+2024,40219,02/28/2024 09:02:00 PM,Queens,,13,105,Vehicle,Other Motor,Motors
+2024,20170,02/29/2024 01:36:00 AM,Bronx,,3,42,MD Residential Structure,Stove  - Natural Gas,Appliances
+2024,30224,02/29/2024 07:33:00 AM,Brooklyn,57,2,88,Vehicle,Preliminary Investigation Only,Other
+2024,10108,02/29/2024 01:37:00 PM,Manhattan,,12,34,MD Residential Structure,Incendiary - Fireworks,Incendiary
+2024,77055,02/29/2024 01:40:00 PM,Queens,,1,114,No Fire,Other - No Fire,No Fire
+2024,30225,02/29/2024 04:42:00 PM,Brooklyn,57,3,79,Commercial Structure,Clothes Dryer,Appliances
+2024,77111,02/29/2024 07:24:00 PM,Brooklyn,57,4,81,Sidewalk,Lithium Ion Battery,Electrical
+2024,20171,02/29/2024 08:26:00 PM,Bronx,,7,52,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30226,02/29/2024 10:19:00 PM,Brooklyn,,18,63,Vehicle,Incendiary,Incendiary
+2024,30227,02/29/2024 10:38:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40220,03/01/2024 01:03:00 AM,Queens,,4,110,Vehicle,Motors - Fossil Fuel Powered,Motors
+2024,40221,03/01/2024 03:42:00 AM,Queens,,14,101,PD Residential Structure,Preliminary Investigation Only,Other
+2024,10109,03/01/2024 04:44:00 AM,Manhattan,,10,28,Commercial Structure,Electrical Wiring,Electrical
+2024,40222,03/01/2024 06:31:00 AM,Queens,,9,102,Commercial Structure,Lithium Ion Battery,Electrical
+2024,10110,03/01/2024 06:46:00 AM,Manhattan,,12,33,Vehicle,Preliminary Investigation Only,Other
+2024,20172,03/01/2024 09:00:00 AM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,10111,03/01/2024 03:46:00 PM,Manhattan,,3,9,MD Residential Structure,Candle,Open Flame
+2024,30228,03/01/2024 05:14:00 PM,Brooklyn,,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,30229,03/01/2024 05:34:00 PM,Brooklyn,,15,61,Commercial Structure,Electrical Wiring,Electrical
+2024,30230,03/01/2024 05:46:00 PM,Brooklyn,,5,75,Commercial Structure,Rangehood Fire - Ductwork,Cooking
+2024,77057,03/01/2024 05:48:00 PM,Bronx,,3,42,PD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,77060,03/01/2024 06:32:00 PM,Queens,,2,115,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30231,03/01/2024 08:19:00 PM,Brooklyn,,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40224,03/02/2024 11:43:00 AM,Queens,,5,104,,Preliminary Investigation Only,Other
+2024,30232,03/02/2024 01:33:00 PM,Brooklyn,40,10,68,Commercial Structure,Clothes Dryer - Natural Gas,Appliances
+2024,30233,03/02/2024 02:02:00 PM,Brooklyn,,3,81,MD Residential Structure,Candle,Open Flame
+2024,30234,03/02/2024 05:24:00 PM,Brooklyn,44,5,75,PD Residential Structure,Electrical Wiring,Electrical
+2024,77058,03/02/2024 06:45:00 PM,Brooklyn,,5,75,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,20174,03/02/2024 06:47:00 PM,Bronx,,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20175,03/02/2024 08:49:00 PM,Bronx,,5,44,Vehicle,Preliminary Investigation Only,Other
+2024,50038,03/02/2024 09:33:00 PM,Staten Island,,1,120,Commercial Structure,Electrical Wiring,Electrical
+2024,30235,03/02/2024 11:29:00 PM,Brooklyn,,17,67,PD Residential Structure,Electrical Wiring,Electrical
+2024,77059,03/03/2024 01:12:00 AM,Bronx,,3,42,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30236,03/03/2024 04:25:00 AM,Brooklyn,35,3,81,Hospital,Electrical Wiring,Electrical
+2024,20177,03/03/2024 08:42:00 AM,Bronx,,1,40,MD Residential Structure,Incendiary,Incendiary
+2024,20178,03/03/2024 12:17:00 PM,Bronx,,9,43,MD Residential Structure,Computer Component(s),Electrical Devices
+2024,40226,03/03/2024 02:22:00 PM,Queens,,6,112,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30238,03/03/2024 04:58:00 PM,Brooklyn,42,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,30239,03/03/2024 05:01:00 PM,Brooklyn,42,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,30237,03/03/2024 05:03:00 PM,Brooklyn,,2,88,Religious Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30240,03/03/2024 05:50:00 PM,Brooklyn,,16,73,MD Residential Structure,Electrical Wiring,Electrical
+2024,20179,03/03/2024 09:39:00 PM,Bronx,,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,20180,03/03/2024 10:36:00 PM,Bronx,18,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,20181,03/04/2024 02:14:00 AM,Bronx,,7,52,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30241,03/04/2024 08:42:00 AM,Brooklyn,,8,77,Vehicle,Preliminary Investigation Only,Other
+2024,30242,03/04/2024 11:31:00 AM,Brooklyn,,5,75,MD Residential Structure,Heat or Sparks from Friction,Hot Objects
+2024,30243,03/04/2024 12:01:00 PM,Brooklyn,,1,90,No Fire,Preliminary Investigation Only,Other
+2024,40229,03/04/2024 01:43:00 PM,Queens,,2,108,Vehicle,Preliminary Investigation Only,Other
+2024,30244,03/04/2024 02:14:00 PM,Brooklyn,35,1,90,MD Residential Structure,Incendiary,Incendiary
+2024,20182,03/04/2024 02:14:00 PM,Bronx,,11,49,School,Incendiary,Incendiary
+2024,30245,03/04/2024 02:41:00 PM,Brooklyn,35,3,79,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,20183,03/04/2024 04:00:00 PM,Bronx,,7,52,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,20184,03/04/2024 04:18:00 PM,Bronx,,11,49,MD Residential Structure,Incense,Hot Objects
+2024,20185,03/04/2024 06:15:00 PM,Bronx,,8,50,Vehicle,Preliminary Investigation Only,Other
+2024,40230,03/04/2024 08:25:00 PM,Queens,,8,107,Vehicle,Preliminary Investigation Only,Other
+2024,30246,03/05/2024 01:03:00 AM,Brooklyn,,9,71,PD Residential Structure,Portable Heater - Electric,Heaters
+2024,40231,03/05/2024 03:27:00 AM,Queens,,7,109,Vehicle,Incendiary - Ignitable Liquid,Incendiary
+2024,20186,03/05/2024 04:20:00 AM,Bronx,,11,49,PD Residential Structure,Incendiary,Incendiary
+2024,40233,03/05/2024 06:52:00 AM,Queens,,8,107,MD Residential Structure,Hard Wire Outlet,Electrical
+2024,30247,03/05/2024 09:55:00 AM,Brooklyn,44,16,73,Commercial Structure,Smoking (Cigarette/Cigar),Smoking
+2024,77061,03/05/2024 11:55:00 AM,Bronx,,9,43,MFA,Other - No Fire,No Fire
+2024,40235,03/05/2024 01:27:00 PM,Queens,52,7,109,Vehicle,Preliminary Investigation Only,Other
+2024,50039,03/05/2024 03:42:00 PM,Staten Island,,1,120,MD Residential Structure,Electrical Wiring,Electrical
+2024,20187,03/05/2024 03:45:00 PM,Bronx,18,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,20188,03/05/2024 04:45:00 PM,Bronx,,11,49,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,40236,03/05/2024 06:00:00 PM,Queens,,4,110,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,77062,03/05/2024 10:06:00 PM,Queens,,2,108,Vehicle,Lithium Ion Battery,Electrical
+2024,20189,03/06/2024 06:23:00 AM,Bronx,,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,30248,03/06/2024 07:27:00 AM,Brooklyn,,18,69,PD Residential Structure,Electrical Wiring,Electrical
+2024,77063,03/06/2024 11:05:00 AM,Bronx,15,11,49,MFA,MFA,No Fire
+2024,10112,03/06/2024 03:43:00 PM,Manhattan,11,7,20,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20191,03/06/2024 04:55:00 PM,Bronx,27,11,49,MD Residential Structure,Other - No Fire,No Fire
+2024,30249,03/06/2024 05:30:00 PM,Brooklyn,57,4,81,Vehicle,Preliminary Investigation Only,Other
+2024,20192,03/06/2024 06:29:00 PM,Bronx,20,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,30250,03/07/2024 12:18:00 AM,Brooklyn,31,6,78,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,20195,03/07/2024 11:39:00 AM,Bronx,14,1,42,School,Incendiary,Incendiary
+2024,50041,03/07/2024 12:57:00 PM,Staten Island,21,2,122,Vehicle,Preliminary Investigation Only,Other
+2024,20196,03/07/2024 04:02:00 PM,Bronx,14,1,40,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30251,03/07/2024 04:32:00 PM,Brooklyn,43,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,20197,03/07/2024 06:35:00 PM,Bronx,15,12,47,Vehicle,Electrical Wiring,Electrical
+2024,40239,03/07/2024 08:51:00 PM,Queens,46,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,30252,03/07/2024 09:52:00 PM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,20198,03/08/2024 12:02:00 AM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,77064,03/08/2024 04:12:00 AM,Manhattan,4,3,9,MD Residential Structure,Incendiary,Incendiary
+2024,40240,03/08/2024 08:42:00 AM,Queens,47,14,101,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,40241,03/08/2024 10:06:00 AM,Queens,50,12,103,Vehicle,Other - Hot Objects,Hot Objects
+2024,10113,03/08/2024 10:18:00 AM,Manhattan,12,10,28,Possible Single Room Occupancy,Smoking (Cigarette/Cigar),Smoking
+2024,40242,03/08/2024 02:29:00 PM,Queens,53,,105,,Preliminary Investigation Only,Other
+2024,40243,03/08/2024 03:51:00 PM,Queens,53,13,105,Garage/Shed,Electrical Wiring,Electrical
+2024,77065,03/08/2024 04:20:00 PM,Bronx,27,7,52,Commercial Structure,Other - No Fire,No Fire
+2024,20199,03/08/2024 07:49:00 PM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,20200,03/08/2024 09:10:00 PM,Bronx,19,8,50,MD Residential Structure,Candle,Open Flame
+2024,10114,03/08/2024 11:39:00 PM,Manhattan,12,10,28,Commercial Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,77066,03/09/2024 01:17:00 AM,Brooklyn,57,3,90,Vehicle,Lithium Ion Battery,Electrical
+2024,20201,03/09/2024 09:21:00 AM,Bronx,15,7,52,MD Residential Structure,Incense,Hot Objects
+2024,10116,03/09/2024 09:39:00 AM,Manhattan,9,4,18,Other,Lithium Ion Battery,Electrical
+2024,10115,03/09/2024 09:40:00 AM,Manhattan,4,3,9,MD Residential Structure,Electrical Wiring,Electrical
+2024,10117,03/09/2024 10:22:00 AM,Manhattan,7,4,10,MD Residential Structure,Incendiary,Incendiary
+2024,30253,03/09/2024 02:29:00 PM,Brooklyn,57,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,20202,03/09/2024 06:15:00 PM,Bronx,18,9,43,MD Residential Structure,Aerosol Can,Open Flame
+2024,50042,03/09/2024 06:46:00 PM,Staten Island,23,3,123,Boat,Rekindle,Other
+2024,30254,03/09/2024 09:19:00 PM,Brooklyn,41,14,71,MD Residential Structure,Electrical Wiring,Electrical
+2024,20203,03/10/2024 11:28:00 AM,Bronx,27,11,52,Vehicle,Preliminary Investigation Only,Other
+2024,20204,03/10/2024 02:15:00 PM,Bronx,17,4,44,MD Residential Structure,Incendiary,Incendiary
+2024,40246,03/10/2024 05:40:00 PM,Queens,49,3,115,PD Residential Structure,Electrical Wiring,Electrical
+2024,40247,03/10/2024 06:21:00 PM,Queens,47,14,101,MD Residential Structure,Electrical Wiring,Electrical
+2024,40248,03/10/2024 08:06:00 PM,Queens,51,9,102,PD Residential Structure,Extension Cord,Electrical
+2024,40249,03/10/2024 08:18:00 PM,Queens,45,5,104,PD Residential Structure,Electrical Wiring,Electrical
+2024,30255,03/11/2024 12:31:00 AM,Brooklyn,44,16,73,Vehicle,Preliminary Investigation Only,Other
+2024,10118,03/11/2024 03:58:00 AM,Manhattan,16,10,32,MD Residential Structure,Candle,Open Flame
+2024,10119,03/11/2024 04:08:00 AM,Manhattan,16,11,25,Vehicle,Preliminary Investigation Only,Other
+2024,30256,03/11/2024 10:26:00 AM,Brooklyn,39,5,75,PD Residential Structure,Electrical Wiring,Electrical
+2024,20205,03/11/2024 12:22:00 PM,Bronx,26,2,41,Commercial Structure,Electrical Wiring,Electrical
+2024,30257,03/11/2024 01:45:00 PM,Brooklyn,41,18,63,Vehicle,Preliminary Investigation Only,Other
+2024,20206,03/11/2024 02:19:00 PM,Bronx,19,8,50,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,30258,03/11/2024 05:24:00 PM,Brooklyn,40,7,68,MD Residential Structure,Candle,Open Flame
+2024,30259,03/11/2024 05:41:00 PM,Brooklyn,31,1,90,MD Residential Structure,Incendiary,Incendiary
+2024,30260,03/11/2024 06:14:00 PM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,30261,03/11/2024 06:37:00 PM,Brooklyn,44,5,75,Garage/Shed,Hard Wire Outlet,Electrical
+2024,20207,03/11/2024 10:45:00 PM,Bronx,3,9,43,Vehicle,Incendiary - Combustible Material,Incendiary
+2024,20208,03/12/2024 12:58:00 AM,Bronx,20,Out of NYC,45,Vehicle,Preliminary Investigation Only,Other
+2024,30262,03/12/2024 01:23:00 AM,Brooklyn,57,3,79,MD Residential Structure,Candle,Open Flame
+2024,40252,03/12/2024 01:43:00 AM,Queens,51,9,102,PD Residential Structure,Electrical Wiring,Electrical
+2024,30263,03/12/2024 04:17:00 AM,Brooklyn,42,11,62,MD Residential Structure,Electrical Wiring,Electrical
+2024,30264,03/12/2024 06:09:00 AM,Brooklyn,58,18,69,PD Residential Structure,Electrical Wiring,Electrical
+2024,30265,03/12/2024 06:21:00 AM,Brooklyn,33,18,63,Vehicle,Vehicle Wiring,Electrical
+2024,20211,03/12/2024 07:06:00 AM,Bronx,27,11,49,MD Residential Structure,Hard Wire Outlet,Electrical
+2024,40254,03/12/2024 07:34:00 AM,Queens,47,14,101,PD Residential Structure,Electrical Wiring,Electrical
+2024,30266,03/12/2024 08:36:00 AM,Brooklyn,40,7,68,Outside Rubbish,Incendiary,Incendiary
+2024,20212,03/12/2024 08:45:00 AM,Bronx,3,9,43,PD Residential Structure,Power Strip,Electrical
+2024,40255,03/12/2024 09:46:00 AM,Queens,54,13,113,Vehicle,Preliminary Investigation Only,Other
+2024,30267,03/12/2024 11:28:00 AM,Brooklyn,31,1,90,MD Residential Structure,Incendiary,Incendiary
+2024,50043,03/12/2024 12:58:00 PM,Staten Island,22,1,120,Vehicle,Preliminary Investigation Only,Other
+2024,40256,03/12/2024 03:45:00 PM,Queens,50,6,112,PD Residential Structure,Extension Cord,Electrical
+2024,77067,03/12/2024 06:00:00 PM,Bronx,,12,47,PD Residential Structure,Incendiary,Incendiary
+2024,40258,03/12/2024 08:17:00 PM,Queens,54,13,113,Vehicle,Preliminary Investigation Only,Other
+2024,20213,03/12/2024 08:47:00 PM,Bronx,19,5,44,Vehicle,Preliminary Investigation Only,Other
+2024,40259,03/12/2024 08:57:00 PM,Queens,52,12,109,Vehicle,Preliminary Investigation Only,Other
+2024,20214,03/13/2024 01:05:00 AM,Bronx,17,4,44,School,Torch - Legal Use of,Open Flame
+2024,10120,03/13/2024 02:53:00 AM,Manhattan,6,2,6,School,Smoking (Cigarette/Cigar),Smoking
+2024,20215,03/13/2024 03:41:00 AM,Bronx,20,10,45,Vehicle,Incendiary,Incendiary
+2024,10121,03/13/2024 09:35:00 AM,Manhattan,13,12,34,MD Residential Structure,Extension Cord,Electrical
+2024,40260,03/13/2024 01:16:00 PM,Queens,54,12,113,Commercial Structure,Electrical Wiring,Electrical
+2024,30268,03/13/2024 01:53:00 PM,Brooklyn,37,3,81,PD Residential Structure,Electrical Wiring,Electrical
+2024,30269,03/13/2024 02:55:00 PM,Brooklyn,39,5,75,PD Residential Structure,Electrical Wiring,Electrical
+2024,10122,03/13/2024 05:25:00 PM,Manhattan,16,7,30,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,50044,03/13/2024 06:20:00 PM,Staten Island,22,1,120,PD Residential Structure,Heat or Sparks from Friction,Hot Objects
+2024,77068,03/13/2024 09:14:00 PM,Bronx,,,50,MD Residential Structure,Preliminary Investigation Only,Other
+2024,20216,03/13/2024 09:17:00 PM,Bronx,19,8,50,MD Residential Structure,Incendiary,Incendiary
+2024,10123,03/13/2024 09:23:00 PM,Manhattan,9,4,18,Hotel,Child Playing w/Matches/Lighter,Open Flame
+2024,40261,03/13/2024 10:53:00 PM,Queens,54,12,103,Commercial Structure,Extension Cord,Electrical
+2024,10124,03/13/2024 11:42:00 PM,Manhattan,11,9,26,Vehicle,Preliminary Investigation Only,Other
+2024,20217,03/14/2024 06:12:00 AM,Bronx,3,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,30270,03/14/2024 07:55:00 AM,Brooklyn,44,16,81,PD Residential Structure,Electrical Wiring,Electrical
+2024,30271,03/14/2024 10:47:00 AM,Brooklyn,58,17,71,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,10125,03/14/2024 03:35:00 PM,Manhattan,4,3,5,Commercial Structure,Incendiary,Incendiary
+2024,30272,03/14/2024 06:39:00 PM,Brooklyn,48,7,72,Vehicle,Preliminary Investigation Only,Other
+2024,10126,03/14/2024 07:11:00 PM,Manhattan,9,4,14,Other,Preliminary Investigation Only,Other
+2024,30274,03/14/2024 07:57:00 PM,Brooklyn,32,2,84,Vehicle,Motors - Fossil Fuel Powered,Motors
+2024,40263,03/14/2024 08:20:00 PM,Queens,52,7,109,Commercial Structure,Electrical Wiring,Electrical
+2024,50045,03/14/2024 08:35:00 PM,Staten Island,22,1,120,PD Residential Structure,Electrical Wiring,Electrical
+2024,20219,03/14/2024 10:45:00 PM,Bronx,19,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,10127,03/15/2024 08:32:00 AM,Manhattan,6,2,6,Vehicle,Preliminary Investigation Only,Other
+2024,20220,03/15/2024 09:27:00 AM,Bronx,15,12,47,Outside Rubbish,Incendiary,Incendiary
+2024,10128,03/15/2024 09:51:00 AM,Manhattan,7,5,14,Vehicle,Other - Hot Objects,Hot Objects
+2024,10129,03/15/2024 11:57:00 AM,Manhattan,16,9,30,MD Residential Structure,Heat from Light Bulb,Hot Objects
+2024,77070,03/15/2024 03:23:00 PM,Manhattan,7,5,14,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,40264,03/15/2024 03:25:00 PM,Queens,50,6,112,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,40265,03/15/2024 05:36:00 PM,Queens,50,12,103,PD Residential Structure,Extension Cord,Electrical
+2024,20221,03/15/2024 10:21:00 PM,Bronx,3,10,43,MD Residential Structure,Lighting Fixture,Electrical
+2024,20222,03/16/2024 02:19:00 AM,Bronx,17,3,42,MFA,Other - No Fire,No Fire
+2024,20223,03/16/2024 01:38:00 PM,Bronx,17,4,44,MD Residential Structure,Incendiary,Incendiary
+2024,40269,03/16/2024 02:32:00 PM,Queens,54,12,105,Brush,Preliminary Investigation Only,Other
+2024,20224,03/16/2024 03:08:00 PM,Bronx,20,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,30276,03/16/2024 03:48:00 PM,Brooklyn,38,9,71,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20225,03/16/2024 04:16:00 PM,Bronx,14,1,40,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10131,03/16/2024 06:57:00 PM,Manhattan,8,5,14,Vehicle,Preliminary Investigation Only,Other
+2024,30279,03/16/2024 07:26:00 PM,Brooklyn,58,18,69,Vehicle,Preliminary Investigation Only,Other
+2024,20226,03/16/2024 10:27:00 PM,Bronx,14,1,40,MD Residential Structure,Incendiary,Incendiary
+2024,20227,03/16/2024 11:37:00 PM,Bronx,15,10,47,Vehicle,Preliminary Investigation Only,Other
+2024,20228,03/17/2024 03:36:00 AM,Bronx,19,5,44,MD Residential Structure,Electrical Wiring,Electrical
+2024,30280,03/17/2024 04:23:00 AM,Brooklyn,38,9,71,Vehicle,Other - Hot Objects,Hot Objects
+2024,40271,03/17/2024 05:34:00 AM,Queens,50,10,106,PD Residential Structure,Electrical Wiring,Electrical
+2024,30281,03/17/2024 12:09:00 PM,Brooklyn,35,1,90,Commercial Structure,Hot Embers,Hot Objects
+2024,40273,03/17/2024 02:38:00 PM,Queens,50,6,112,Vehicle,Preliminary Investigation Only,Other
+2024,30283,03/17/2024 06:13:00 PM,Brooklyn,35,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,30284,03/17/2024 06:46:00 PM,Brooklyn,42,11,62,MD Residential Structure,Incendiary,Incendiary
+2024,10132,03/17/2024 07:34:00 PM,Manhattan,7,6,13,Transit,Incendiary,Incendiary
+2024,50046,03/17/2024 09:52:00 PM,Staten Island,23,3,122,Vehicle,Preliminary Investigation Only,Other
+2024,30285,03/17/2024 11:02:00 PM,Brooklyn,38,8,77,MD Residential Structure,Motors - Fossil Fuel Powered,Motors
+2024,40275,03/18/2024 01:11:00 AM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,40276,03/18/2024 02:03:00 AM,Queens,53,13,105,Public Hallway,Lithium Ion Battery,Electrical
+2024,10133,03/18/2024 05:07:00 AM,Manhattan,16,10,32,Vehicle,Preliminary Investigation Only,Other
+2024,20231,03/18/2024 08:32:00 AM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20232,03/18/2024 11:29:00 AM,Bronx,14,1,40,MD Residential Structure,Incendiary,Incendiary
+2024,40278,03/18/2024 11:58:00 AM,Queens,46,4,110,Vehicle,Electrical Wiring,Electrical
+2024,30288,03/18/2024 12:01:00 PM,Brooklyn,43,10,2,Vehicle,Preliminary Investigation Only,Other
+2024,20233,03/18/2024 05:28:00 PM,Bronx,26,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,30287,03/18/2024 10:28:00 PM,Brooklyn,41,14,70,PD Residential Structure,Electrical Wiring,Electrical
+2024,20234,03/19/2024 12:06:00 AM,Bronx,17,4,48,MD Residential Structure,Other - Electrical,Electrical
+2024,30289,03/19/2024 01:31:00 AM,Brooklyn,32,6,76,Vehicle,Preliminary Investigation Only,Other
+2024,30290,03/19/2024 11:12:00 AM,Brooklyn,39,5,75,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,20236,03/19/2024 11:25:00 AM,Bronx,15,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20237,03/19/2024 11:38:00 AM,Bronx,19,7,52,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40281,03/19/2024 03:58:00 PM,Queens,50,12,113,Garage/Shed,Smoking (Cigarette/Cigar),Smoking
+2024,20238,03/19/2024 04:16:00 PM,Bronx,15,11,47,,Preliminary Investigation Only,Other
+2024,30291,03/19/2024 06:57:00 PM,Brooklyn,57,1,94,Street,Lithium Ion Battery,Electrical
+2024,40282,03/19/2024 08:04:00 PM,Queens,50,12,103,Vehicle,Preliminary Investigation Only,Other
+2024,10135,03/19/2024 10:34:00 PM,Manhattan,13,12,34,MD Residential Structure,Appliance Cord,Electrical
+2024,10136,03/20/2024 09:21:00 AM,Manhattan,1,1,1,MD Residential Structure,Heat or Sparks from Friction,Hot Objects
+2024,30292,03/20/2024 12:43:00 PM,Brooklyn,42,1,68,Transit,Permanent Heater - Electric,Heaters
+2024,10137,03/20/2024 04:23:00 PM,Manhattan,9,4,14,Commercial Structure,Incendiary,Incendiary
+2024,40286,03/20/2024 10:34:00 PM,Queens,46,5,104,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20239,03/21/2024 01:46:00 AM,Bronx,19,7,46,Vehicle,Lithium Ion Battery,Electrical
+2024,40290,03/21/2024 02:17:00 AM,Queens,54,13,105,PD Residential Structure,Electrical Wiring,Electrical
+2024,10139,03/21/2024 03:50:00 AM,Manhattan,12,11,25,MD Residential Structure,Incendiary - Ignitable Liquid,Incendiary
+2024,30293,03/21/2024 04:07:00 AM,Brooklyn,28,1,88,Vehicle,Preliminary Investigation Only,Other
+2024,30294,03/21/2024 06:57:00 AM,Brooklyn,35,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,20240,03/21/2024 07:41:00 AM,Bronx,3,2,41,Vehicle,Preliminary Investigation Only,Other
+2024,20241,03/21/2024 12:26:00 PM,Bronx,18,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,10140,03/21/2024 03:39:00 PM,Manhattan,8,5,13,Commercial Structure,Chimney/Flues,Hot Objects
+2024,20242,03/21/2024 03:47:00 PM,Bronx,20,9,43,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30298,03/21/2024 09:34:00 PM,Brooklyn,37,3,79,MD Residential Structure,Candle,Open Flame
+2024,20244,03/22/2024 12:18:00 AM,Bronx,20,10,45,MD Residential Structure,Electrical Wiring,Electrical
+2024,40289,03/22/2024 04:54:00 AM,Queens,49,1,114,Vehicle,Incendiary,Incendiary
+2024,30299,03/22/2024 06:13:00 AM,Brooklyn,44,5,75,PD Residential Structure,Hot Embers,Hot Objects
+2024,20246,03/22/2024 10:38:00 AM,Bronx,15,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,30300,03/22/2024 12:07:00 PM,Brooklyn,57,3,79,MD Residential Structure,Incendiary - Reckless Use of Open Flame,Incendiary
+2024,77075,03/22/2024 02:29:00 PM,Bronx,14,1,40,Commercial Structure,Preliminary Investigation Only,Other
+2024,77073,03/22/2024 02:29:00 PM,Bronx,14,1,40,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,30301,03/22/2024 02:46:00 PM,Brooklyn,42,10,66,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,10141,03/22/2024 03:11:00 PM,Manhattan,8,5,14,Commercial Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20247,03/22/2024 07:51:00 PM,Bronx,14,4,42,Vehicle,Preliminary Investigation Only,Other
+2024,40294,03/23/2024 02:53:00 AM,Queens,54,12,113,PD Residential Structure,Electrical Wiring,Electrical
+2024,30303,03/23/2024 07:45:00 AM,Brooklyn,37,3,81,PD Residential Structure,Electrical Wiring,Electrical
+2024,77074,03/23/2024 07:45:00 AM,Brooklyn,28,1,94,Commercial Structure,Lithium Ion Battery,Electrical
+2024,30304,03/23/2024 10:45:00 AM,Brooklyn,39,5,75,MD Residential Structure,Incendiary,Incendiary
+2024,30305,03/23/2024 11:10:00 AM,Brooklyn,58,18,63,Vehicle,Preliminary Investigation Only,Other
+2024,10142,03/23/2024 03:40:00 PM,Manhattan,16,10,32,Vehicle,Preliminary Investigation Only,Other
+2024,40295,03/23/2024 05:16:00 PM,Queens,49,3,115,MFA,Other - No Fire,No Fire
+2024,40296,03/23/2024 05:30:00 PM,Queens,50,8,103,Commercial Structure,Stove/Cooking - Fryer,Cooking
+2024,20248,03/23/2024 08:59:00 PM,Bronx,3,9,43,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,10143,03/23/2024 10:58:00 PM,Manhattan,2,2,6,MD Residential Structure,Preliminary Investigation Only,Other
+2024,20249,03/23/2024 11:43:00 PM,Bronx,26,1,42,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,30306,03/24/2024 09:24:00 AM,Brooklyn,40,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,30307,03/24/2024 11:39:00 AM,Brooklyn,57,3,79,Commercial Structure,Preliminary Investigation Only,Other
+2024,10144,03/24/2024 12:10:00 PM,Manhattan,4,3,5,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,30308,03/24/2024 01:26:00 PM,Brooklyn,58,17,67,PD Residential Structure,Electrical Wiring,Electrical
+2024,10145,03/24/2024 01:52:00 PM,Manhattan,1,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,40301,03/24/2024 06:32:00 PM,Queens,53,11,111,Vehicle,Incendiary,Incendiary
+2024,20250,03/24/2024 06:40:00 PM,Bronx,17,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,10147,03/24/2024 07:23:00 PM,Manhattan,6,2,6,MD Residential Structure,Extension Cord,Electrical
+2024,50048,03/24/2024 10:13:00 PM,Staten Island,21,2,122,MD Residential Structure,Incendiary,Incendiary
+2024,40306,03/25/2024 12:01:00 AM,Queens,54,Out of NYC,0,Vehicle,Preliminary Investigation Only,Other
+2024,40310,03/25/2024 06:20:00 AM,Queens,53,7,111,Vehicle,Preliminary Investigation Only,Other
+2024,20251,03/25/2024 09:55:00 AM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20252,03/25/2024 10:31:00 AM,Bronx,3,9,43,MD Residential Structure,Electrical Wiring,Electrical
+2024,20253,03/25/2024 11:54:00 AM,Bronx,17,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,77076,03/25/2024 01:06:00 PM,Queens,50,8,107,MD Residential Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,30310,03/25/2024 03:28:00 PM,Brooklyn,39,5,75,Commercial Structure,Incendiary,Incendiary
+2024,40307,03/25/2024 11:52:00 PM,Queens,46,5,104,Vehicle,Preliminary Investigation Only,Other
+2024,20256,03/25/2024 11:55:00 PM,Bronx,3,9,43,Outside Rubbish,Incendiary - Combustible Material,Incendiary
+2024,40308,03/26/2024 12:39:00 AM,Queens,50,9,102,Vehicle,Preliminary Investigation Only,Other
+2024,20258,03/26/2024 09:54:00 AM,Bronx,27,7,50,Vehicle,Preliminary Investigation Only,Other
+2024,30313,03/26/2024 11:19:00 AM,Brooklyn,40,12,66,Manhole,Preliminary Investigation Only,Other
+2024,77081,03/26/2024 01:18:00 PM,Staten Island,22,1,120,Outside Rubbish,Incendiary,Incendiary
+2024,30312,03/26/2024 01:22:00 PM,Brooklyn,58,18,69,PD Residential Structure,Electrical Wiring,Electrical
+2024,30314,03/26/2024 05:07:00 PM,Brooklyn,44,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,20260,03/26/2024 07:10:00 PM,Bronx,19,8,50,PD Residential Structure,Other - Hot Objects,Hot Objects
+2024,20261,03/27/2024 10:55:00 AM,Bronx,14,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,77078,03/27/2024 01:32:00 PM,Staten Island,21,1,120,MFA,MFA,No Fire
+2024,30316,03/27/2024 06:22:00 PM,Brooklyn,41,14,70,Vehicle,Preliminary Investigation Only,Other
+2024,10149,03/27/2024 06:27:00 PM,Manhattan,4,3,7,Vehicle,Preliminary Investigation Only,Other
+2024,30317,03/27/2024 09:09:00 PM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,20262,03/27/2024 09:22:00 PM,Bronx,17,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,30318,03/27/2024 11:34:00 PM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,40313,03/28/2024 04:16:00 AM,Queens,54,12,113,PD Residential Structure,Electrical Wiring,Electrical
+2024,77077,03/28/2024 07:18:00 AM,Queens,52,7,109,Garage/Shed,Lithium Ion Battery,Electrical
+2024,40314,03/28/2024 07:47:00 AM,Queens,53,11,111,Vehicle,Preliminary Investigation Only,Other
+2024,30319,03/28/2024 10:45:00 AM,Brooklyn,42,11,62,MD Residential Structure,Computer Component(s),Electrical Devices
+2024,40315,03/28/2024 01:27:00 PM,Queens,45,1,114,Commercial Structure,Electrical Wiring,Electrical
+2024,20263,03/28/2024 03:37:00 PM,Bronx,15,11,49,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20264,03/28/2024 06:37:00 PM,Bronx,20,11,49,MD Residential Structure,Incendiary,Incendiary
+2024,40316,03/28/2024 06:37:00 PM,Queens,47,14,101,Hospital,Electrical Wiring,Electrical
+2024,10150,03/29/2024 01:06:00 AM,Manhattan,8,5,14,Vehicle,Preliminary Investigation Only,Other
+2024,30320,03/29/2024 06:19:00 AM,Brooklyn,40,12,66,MD Residential Structure,Food on the Stove,Cooking
+2024,10152,03/29/2024 09:00:00 AM,Manhattan,9,7,20,Commercial Structure,Incendiary,Incendiary
+2024,20265,03/29/2024 11:16:00 AM,Bronx,19,5,44,Commercial Structure,Heat or Sparks from Friction,Hot Objects
+2024,10153,03/29/2024 11:46:00 AM,Manhattan,10,8,19,Vehicle,Preliminary Investigation Only,Other
+2024,30321,03/29/2024 11:51:00 AM,Brooklyn,37,3,79,Vehicle,Smoking (Cigarette/Cigar),Smoking
+2024,30322,03/29/2024 03:37:00 PM,Brooklyn,43,11,62,Vehicle,Preliminary Investigation Only,Other
+2024,20266,03/29/2024 04:53:00 PM,Bronx,20,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,10154,03/29/2024 07:31:00 PM,Manhattan,4,3,5,MD Residential Structure,Electrical Wiring,Electrical
+2024,30323,03/29/2024 08:22:00 PM,Brooklyn,44,16,73,Religious Structure,Electrical Wiring,Electrical
+2024,30324,03/29/2024 08:24:00 PM,Brooklyn,28,1,94,Vehicle,Preliminary Investigation Only,Other
+2024,40317,03/29/2024 09:12:00 PM,Queens,50,12,103,Group Home,Smoking (Cigarette/Cigar),Smoking
+2024,30325,03/29/2024 10:12:00 PM,Brooklyn,58,18,69,Vehicle,Preliminary Investigation Only,Other
+2024,30326,03/29/2024 10:34:00 PM,Brooklyn,58,17,67,MD Residential Structure,Electrical Wiring,Electrical
+2024,10155,03/30/2024 03:33:00 AM,Manhattan,4,3,7,Vehicle,Lithium Ion Battery,Electrical
+2024,10156,03/30/2024 04:25:00 AM,Manhattan,16,11,32,Vehicle,Preliminary Investigation Only,Other
+2024,40319,03/30/2024 08:39:00 AM,Queens,47,14,100,MD Residential Structure,Cooking Fire Extending to Clothing or Combustibles,Cooking
+2024,10157,03/30/2024 09:56:00 AM,Manhattan,13,12,34,MD Residential Structure,Electrical Wiring,Electrical
+2024,10158,03/30/2024 01:00:00 PM,Manhattan,2,2,6,Outside Rubbish,Incendiary,Incendiary
+2024,10159,03/30/2024 02:14:00 PM,Manhattan,9,4,18,Outside Rubbish,Incendiary,Incendiary
+2024,10160,03/30/2024 04:17:00 PM,Manhattan,6,2,9,Commercial Structure,Torch - Legal Use of,Open Flame
+2024,40320,03/30/2024 05:48:00 PM,Queens,50,12,103,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,50051,03/30/2024 06:09:00 PM,Staten Island,21,1,120,Vehicle,Preliminary Investigation Only,Other
+2024,30329,03/30/2024 07:30:00 PM,Brooklyn,43,13,60,MD Residential Structure,Food on the Stove,Cooking
+2024,50052,03/30/2024 08:53:00 PM,Staten Island,22,1,120,PD Residential Structure,Food on the Stove,Cooking
+2024,10161,03/30/2024 11:59:00 PM,Manhattan,13,12,34,Vehicle,Preliminary Investigation Only,Other
+2024,30330,03/31/2024 12:27:00 AM,Brooklyn,37,4,81,Vehicle,Preliminary Investigation Only,Other
+2024,40321,03/31/2024 12:34:00 AM,Queens,51,10,106,Vehicle,Preliminary Investigation Only,Other
+2024,30331,03/31/2024 12:37:00 AM,Brooklyn,41,14,67,Vehicle,Preliminary Investigation Only,Other
+2024,30332,03/31/2024 09:28:00 AM,Brooklyn,37,3,81,MD Residential Structure,Other - Hot Objects,Hot Objects
+2024,30333,03/31/2024 11:27:00 AM,Brooklyn,41,17,67,MD Residential Structure,Incendiary,Incendiary
+2024,20269,03/31/2024 12:22:00 PM,Bronx,18,6,46,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,70026,03/31/2024 02:00:00 PM,Bronx,,5,46,Other,SIU Investigation,Other
+2024,20270,03/31/2024 03:22:00 PM,Bronx,3,9,43,Other,Smoking (Cigarette/Cigar),Smoking
+2024,40323,03/31/2024 06:03:00 PM,Queens,49,3,115,PD Residential Structure,Portable Heater - Electric,Heaters
+2024,20272,04/01/2024 12:01:00 AM,Bronx,19,5,46,Vehicle,Incendiary,Incendiary
+2024,20273,04/01/2024 01:32:00 AM,Bronx,15,10,47,Vehicle,Preliminary Investigation Only,Other
+2024,10163,04/01/2024 01:42:00 AM,Manhattan,12,11,25,Vehicle,Preliminary Investigation Only,Other
+2024,20274,04/01/2024 04:35:00 AM,Bronx,15,10,47,Vehicle,Preliminary Investigation Only,Other
+2024,30336,04/01/2024 06:27:00 AM,Brooklyn,48,3,66,Vehicle,Incendiary,Incendiary
+2024,10165,04/01/2024 12:48:00 PM,Manhattan,9,4,10,Hotel,Incense,Hot Objects
+2024,40326,04/01/2024 02:17:00 PM,Queens,50,6,112,MD Residential Structure,Other - Electrical,Electrical
+2024,30337,04/01/2024 03:35:00 PM,Brooklyn,57,3,79,MD Residential Structure,Preliminary Investigation Only,Other
+2024,10166,04/01/2024 08:44:00 PM,Manhattan,13,12,34,MD Residential Structure,Electrical Wiring,Electrical
+2024,30338,04/02/2024 01:05:00 AM,Brooklyn,31,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,20275,04/02/2024 01:18:00 AM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,50053,04/02/2024 05:39:00 AM,Staten Island,22,2,122,MFA,Other - No Fire,No Fire
+2024,77080,04/02/2024 08:00:00 AM,Queens,45,2,108,Vehicle,Service,Electrical
+2024,30340,04/02/2024 09:19:00 AM,Brooklyn,28,1,83,Vehicle,Preliminary Investigation Only,Other
+2024,30341,04/02/2024 10:18:00 AM,Brooklyn,43,13,60,MD Residential Structure,Electrical Wiring,Electrical
+2024,30342,04/02/2024 11:12:00 AM,Brooklyn,57,3,79,MD Residential Structure,Electrical Wiring,Electrical
+2024,20276,04/02/2024 01:14:00 PM,Bronx,26,2,47,Vehicle,Preliminary Investigation Only,Other
+2024,20277,04/02/2024 05:50:00 PM,Bronx,14,3,42,MD Residential Structure,Incendiary,Incendiary
+2024,20278,04/03/2024 02:54:00 AM,Bronx,15,11,49,PD Residential Structure,Extension Cord,Electrical
+2024,30343,04/03/2024 07:33:00 AM,Brooklyn,40,12,66,PD Residential Structure,Electrical Wiring,Electrical
+2024,40329,04/03/2024 03:52:00 PM,Queens,46,4,110,Commercial Structure,Incendiary,Incendiary
+2024,10168,04/03/2024 07:27:00 PM,Manhattan,13,12,34,,Preliminary Investigation Only,Other
+2024,30344,04/03/2024 08:03:00 PM,Brooklyn,44,4,81,Vehicle,Incendiary,Incendiary
+2024,30345,04/03/2024 08:03:00 PM,Brooklyn,28,1,88,Commercial Structure,Preliminary Investigation Only,Other
+2024,20279,04/04/2024 12:04:00 AM,Bronx,20,11,49,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,30346,04/04/2024 06:27:00 AM,Brooklyn,44,3,81,Vehicle,Preliminary Investigation Only,Other
+2024,50054,04/04/2024 08:03:00 AM,Staten Island,22,1,120,PD Residential Structure,Microwave,Appliances
+2024,30347,04/04/2024 09:30:00 AM,Brooklyn,48,12,66,PD Residential Structure,Preliminary Investigation Only,Other
+2024,40331,04/04/2024 03:49:00 PM,Queens,49,3,115,PD Residential Structure,Electrical Wiring,Electrical
+2024,10169,04/04/2024 07:16:00 PM,Manhattan,6,6,13,Vehicle,Preliminary Investigation Only,Other
+2024,30348,04/05/2024 06:08:00 AM,Brooklyn,40,10,68,Vehicle,Preliminary Investigation Only,Other
+2024,40333,04/05/2024 10:38:00 AM,Queens,54,13,113,Vehicle,Lithium Ion Battery,Electrical
+2024,40334,04/05/2024 12:08:00 PM,Queens,51,10,106,PD Residential Structure,Stove  - Natural Gas,Appliances
+2024,30350,04/05/2024 12:13:00 PM,Brooklyn,28,1,94,Vehicle,Preliminary Investigation Only,Other
+2024,40336,04/05/2024 03:25:00 PM,Queens,46,6,104,MD Residential Structure,Candle,Open Flame
+2024,40337,04/05/2024 07:35:00 PM,Queens,53,11,111,Brush,Incendiary,Incendiary
+2024,20280,04/05/2024 10:53:00 PM,Bronx,3,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,20282,04/06/2024 01:00:00 AM,Bronx,18,6,48,MD Residential Structure,Incendiary,Incendiary
+2024,50056,04/06/2024 01:03:00 AM,Staten Island,21,1,120,MD Residential Structure,Electrical Wiring,Electrical
+2024,30351,04/06/2024 01:15:00 AM,Brooklyn,32,2,84,Vehicle,Preliminary Investigation Only,Other
+2024,10171,04/06/2024 11:54:00 AM,Manhattan,10,8,19,Commercial Structure,Hard Wire Outlet,Electrical
+2024,40340,04/06/2024 03:42:00 PM,Queens,47,14,101,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,30352,04/06/2024 05:52:00 PM,Brooklyn,42,11,62,Commercial Structure,Rangehood Fire - Ductwork,Cooking
+2024,10172,04/07/2024 05:33:00 AM,Manhattan,11,7,24,MD Residential Structure,Portable Heater - Electric,Heaters
+2024,30353,04/07/2024 09:51:00 AM,Brooklyn,43,11,62,PD Residential Structure,Electrical Wiring,Electrical
+2024,40341,04/07/2024 10:18:00 AM,Queens,50,8,107,Commercial Structure,Hard Wire Outlet,Electrical
+2024,30354,04/07/2024 12:56:00 PM,Brooklyn,32,2,84,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,30355,04/07/2024 01:25:00 PM,Brooklyn,38,17,71,MD Residential Structure,Motors - Elevator,Motors
+2024,20285,04/07/2024 07:35:00 PM,Bronx,27,11,49,MD Residential Structure,Stove/Cooking - Other,Cooking
+2024,30356,04/07/2024 11:05:00 PM,Brooklyn,41,17,67,MD Residential Structure,Preliminary Investigation Only,Other
+2024,77085,04/08/2024 07:05:00 AM,Bronx,26,3,42,No Fire,Other,Other
+2024,20287,04/08/2024 07:39:00 AM,Bronx,19,5,46,PD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20288,04/08/2024 08:02:00 AM,Bronx,14,1,40,,Preliminary Investigation Only,Other
+2024,30357,04/08/2024 10:45:00 AM,Brooklyn,,15,60,PD Residential Structure,Incendiary,Incendiary
+2024,40343,04/08/2024 11:55:00 AM,Queens,49,3,115,Other,Other - No Fire,No Fire
+2024,20289,04/08/2024 12:34:00 PM,Bronx,14,1,42,School,Incendiary - Combustible Material,Incendiary
+2024,30358,04/08/2024 12:56:00 PM,Brooklyn,58,16,73,MD Residential Structure,Incendiary,Incendiary
+2024,30359,04/08/2024 02:24:00 PM,Brooklyn,38,17,71,PD Residential Structure,Electrical Wiring,Electrical
+2024,77088,04/08/2024 03:07:00 PM,Queens,46,4,110,Other,Other,Other
+2024,20290,04/08/2024 04:08:00 PM,Bronx,26,2,42,MD Residential Structure,Matches/Lighter,Open Flame
+2024,20291,04/08/2024 07:59:00 PM,Bronx,26,3,41,Vehicle,Preliminary Investigation Only,Other
+2024,20292,04/08/2024 09:08:00 PM,Bronx,15,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,77086,04/09/2024 12:26:00 AM,Brooklyn,28,1,94,Vehicle,Lithium Ion Battery,Electrical
+2024,20294,04/09/2024 03:57:00 AM,Bronx,14,1,40,Vehicle,Incendiary,Incendiary
+2024,77087,04/09/2024 06:56:00 AM,Queens,46,4,110,PD Residential Structure,Lithium Ion Battery,Electrical
+2024,20295,04/09/2024 08:52:00 AM,Bronx,19,5,46,Commercial Structure,Electrical Wiring,Electrical
+2024,30360,04/09/2024 11:29:00 AM,Brooklyn,38,8,77,MD Residential Structure,Incendiary,Incendiary
+2024,40344,04/09/2024 12:36:00 PM,Queens,46,4,0,PD Residential Structure,Hard Wire Outlet,Electrical
+2024,30361,04/09/2024 04:01:00 PM,Brooklyn,48,6,78,Vehicle,Preliminary Investigation Only,Other
+2024,10173,04/09/2024 06:38:00 PM,Manhattan,1,1,1,MD Residential Structure,Other Motor,Motors
+2024,10174,04/09/2024 07:31:00 PM,Manhattan,16,9,30,MD Residential Structure,Power Strip,Electrical
+2024,40345,04/10/2024 02:14:00 AM,Queens,46,4,110,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,77090,04/10/2024 09:30:00 AM,Queens,,7,110,Outside Rubbish,Child Playing w/Matches/Lighter,Open Flame
+2024,20297,04/10/2024 11:31:00 AM,Bronx,17,4,48,Vehicle,Preliminary Investigation Only,Other
+2024,40347,04/10/2024 02:41:00 PM,Queens,49,1,115,Garage/Shed,Incendiary,Incendiary
+2024,77091,04/10/2024 05:54:00 PM,Manhattan,13,12,34,Vehicle,Lithium Ion Battery,Electrical
+2024,30363,04/10/2024 06:19:00 PM,Brooklyn,39,5,75,MD Residential Structure,Torch - Legal Use of,Open Flame
+2024,10175,04/10/2024 07:12:00 PM,Manhattan,1,1,1,MD Residential Structure,Clothes Dryer - Natural Gas,Appliances
+2024,20298,04/10/2024 07:16:00 PM,Bronx,15,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,10176,04/11/2024 01:19:00 AM,Manhattan,9,4,18,MD Residential Structure,Other - Electrical,Electrical
+2024,20299,04/11/2024 06:09:00 AM,Bronx,20,9,45,Vehicle,Preliminary Investigation Only,Other
+2024,30364,04/11/2024 06:21:00 AM,Brooklyn,37,4,81,Vehicle,Preliminary Investigation Only,Other
+2024,30365,04/11/2024 11:49:00 AM,Brooklyn,42,10,68,MD Residential Structure,Electrical Wiring,Electrical
+2024,40351,04/11/2024 01:09:00 PM,Queens,54,Out of NYC,113,Aircraft,Preliminary Investigation Only,Other
+2024,40352,04/11/2024 04:25:00 PM,Queens,54,10,113,Aircraft,Preliminary Investigation Only,Other
+2024,10177,04/11/2024 04:56:00 PM,Manhattan,4,3,5,MD Residential Structure,Electrical Wiring,Electrical
+2024,30366,04/11/2024 09:39:00 PM,Brooklyn,40,7,68,Vehicle,Electrical Wiring,Electrical
+2024,40353,04/12/2024 11:18:00 AM,Queens,51,10,106,PD Residential Structure,Electrical Wiring,Electrical
+2024,77092,04/12/2024 12:30:00 PM,Brooklyn,,14,70,No Fire,Other,Other
+2024,20300,04/12/2024 02:41:00 PM,Bronx,14,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,10180,04/12/2024 03:19:00 PM,Manhattan,11,7,20,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,30367,04/12/2024 03:48:00 PM,Brooklyn,39,5,75,Vehicle,Preliminary Investigation Only,Other
+2024,30368,04/12/2024 07:15:00 PM,Brooklyn,31,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,20301,04/12/2024 07:44:00 PM,Bronx,3,2,41,,Preliminary Investigation Only,Other
+2024,10182,04/12/2024 10:01:00 PM,Manhattan,16,10,32,MD Residential Structure,Lithium Ion Battery,Electrical
+2024,30369,04/12/2024 11:11:00 PM,Brooklyn,35,1,90,Vehicle,Preliminary Investigation Only,Other
+2024,77095,04/13/2024 04:11:00 AM,Brooklyn,43,15,61,Other,Lithium Ion Battery,Electrical
+2024,20302,04/13/2024 04:42:00 AM,Bronx,14,1,40,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10183,04/13/2024 03:16:00 PM,Manhattan,16,9,30,Commercial Structure,Incendiary - Torch - Illegal Use of,Incendiary
+2024,20305,04/13/2024 08:23:00 PM,Bronx,18,6,46,MD Residential Structure,Preliminary Investigation Only,Other
+2024,70037,04/13/2024 10:05:00 PM,Manhattan,,10,32,No Fire,SIU Investigation,Other
+2024,40354,04/14/2024 01:10:00 AM,Queens,52,7,110,Vehicle,Motors - Fossil Fuel Powered,Motors
+2024,40356,04/14/2024 06:22:00 AM,Queens,51,10,106,Commercial Structure,Lithium Ion Battery,Electrical
+2024,20306,04/14/2024 06:58:00 AM,Bronx,14,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,30373,04/14/2024 12:28:00 PM,Brooklyn,44,5,75,PD Residential Structure,Electrical Wiring,Electrical
+2024,40357,04/14/2024 03:28:00 PM,Queens,52,7,109,MD Residential Structure,Electrical Wiring,Electrical
+2024,10185,04/14/2024 11:59:00 PM,Manhattan,13,12,34,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,20307,04/15/2024 05:39:00 AM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,30376,04/15/2024 06:10:00 AM,Brooklyn,35,1,90,Vehicle,Incendiary,Incendiary
+2024,70045,04/15/2024 06:13:00 AM,Brooklyn,35,1,90,Vehicle,SIU Investigation,Other
+2024,10187,04/15/2024 09:53:00 AM,Manhattan,12,10,28,MD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,40358,04/15/2024 04:28:00 PM,Queens,53,13,105,PD Residential Structure,Power Strip,Electrical
+2024,10188,04/15/2024 05:13:00 PM,Manhattan,11,7,24,MD Residential Structure,Extension Cord,Electrical
+2024,30378,04/15/2024 08:28:00 PM,Brooklyn,39,5,75,MD Residential Structure,Incense,Hot Objects
+2024,20308,04/15/2024 10:34:00 PM,Bronx,20,11,43,Vehicle,Preliminary Investigation Only,Other
+2024,20309,04/16/2024 04:50:00 AM,Bronx,19,7,46,MD Residential Structure,Refrigeration Compressor,Appliances
+2024,77103,04/16/2024 07:30:00 AM,Brooklyn,,5,75,Street,Other - No Fire,No Fire
+2024,40360,04/16/2024 09:42:00 AM,Queens,54,13,105,,Preliminary Investigation Only,Other
+2024,50065,04/16/2024 02:00:00 PM,Staten Island,21,2,122,,Preliminary Investigation Only,Other
+2024,77100,04/16/2024 02:08:00 PM,Brooklyn,,2,77,Vehicle,Lithium Ion Battery,Electrical
+2024,20310,04/16/2024 05:38:00 PM,Bronx,3,9,43,MD Residential Structure,Other - No Fire,No Fire
+2024,40369,04/16/2024 09:52:00 PM,Queens,54,12,105,PD Residential Structure,Preliminary Investigation Only,Other
+2024,40364,04/17/2024 12:15:00 AM,Queens,46,4,110,Commercial Structure,Electrical Wiring,Electrical
+2024,20313,04/17/2024 11:24:00 AM,Bronx,27,7,52,Vehicle,Preliminary Investigation Only,Other
+2024,10194,04/17/2024 12:43:00 PM,Manhattan,12,10,28,MD Residential Structure,Preliminary Investigation Only,Other
+2024,30383,04/17/2024 01:49:00 PM,Brooklyn,33,14,70,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,30384,04/17/2024 01:55:00 PM,Brooklyn,48,12,66,PD Residential Structure,Preliminary Investigation Only,Other
+2024,10195,04/17/2024 08:56:00 PM,Manhattan,10,8,19,Outside Rubbish,Smoking (Cigarette/Cigar),Smoking
+2024,10196,04/18/2024 03:31:00 AM,Manhattan,16,9,26,MD Residential Structure,Electrical Wiring,Electrical
+2024,40371,04/18/2024 12:14:00 PM,Queens,50,12,113,Commercial Structure,Other - Hot Objects,Hot Objects
+2024,10198,04/18/2024 01:10:00 PM,Manhattan,16,10,32,No Fire,Preliminary Investigation Only,Other
+2024,40372,04/18/2024 07:11:00 PM,Queens,51,9,102,Commercial Structure,Chimney/Flues,Hot Objects
+2024,40374,04/18/2024 07:38:00 PM,Queens,47,14,100,MD Residential Structure,Incendiary,Incendiary
+2024,40375,04/18/2024 08:16:00 PM,Queens,53,13,105,PD Residential Structure,Ignitable Liquids/Gases - Lighter Fluid,Ignitable
+2024,10199,04/18/2024 09:54:00 PM,Manhattan,12,10,23,MD Residential Structure,Incendiary,Incendiary
+2024,30387,04/19/2024 12:46:00 AM,Brooklyn,40,7,66,MD Residential Structure,Stove/Cooking - Stove,Cooking
+2024,20316,04/19/2024 03:09:00 AM,Bronx,14,1,40,Vehicle,Preliminary Investigation Only,Other
+2024,10201,04/19/2024 08:14:00 AM,Manhattan,13,12,34,Vehicle,Preliminary Investigation Only,Other
+2024,20319,04/19/2024 07:14:00 PM,Bronx,15,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,30392,04/19/2024 10:33:00 PM,Brooklyn,57,2,77,MD Residential Structure,Candle,Open Flame
+2024,77106,04/20/2024 01:00:00 AM,Queens,,9,102,PD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,77108,04/20/2024 01:00:00 AM,Queens,,9,102,PD Residential Structure,Incendiary - Combustible Material,Incendiary
+2024,10204,04/20/2024 02:41:00 PM,Manhattan,6,5,13,Vehicle,Preliminary Investigation Only,Other
+2024,20320,04/21/2024 06:49:00 AM,Bronx,3,9,43,Vehicle,Preliminary Investigation Only,Other
+2024,20321,04/21/2024 10:20:00 AM,Bronx,20,11,49,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20322,04/21/2024 04:49:00 PM,Bronx,20,10,45,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,40382,04/21/2024 07:56:00 PM,Queens,45,2,108,Other,Smoking (Cigarette/Cigar),Smoking
+2024,40383,04/22/2024 03:06:00 AM,Queens,46,2,108,MD Residential Structure,Electrical Wiring,Electrical
+2024,20323,04/22/2024 08:36:00 AM,Bronx,15,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,20324,04/22/2024 09:56:00 AM,Bronx,15,11,49,Vehicle,Preliminary Investigation Only,Other
+2024,20325,04/22/2024 10:14:00 AM,Bronx,14,1,40,Vehicle,Other - Hot Objects,Hot Objects
+2024,30402,04/22/2024 04:13:00 PM,Brooklyn,33,14,61,Vehicle,Electrical Wiring,Electrical
+2024,50069,04/22/2024 04:36:00 PM,Staten Island,22,2,122,MFA,Preliminary Investigation Only,Other
+2024,10209,04/23/2024 09:17:00 AM,Manhattan,1,1,1,Vehicle,Preliminary Investigation Only,Other
+2024,20328,04/23/2024 11:44:00 AM,Bronx,17,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,20329,04/23/2024 12:42:00 PM,Bronx,20,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,30404,04/23/2024 01:07:00 PM,Brooklyn,42,11,62,PD Residential Structure,Electrical Wiring,Electrical
+2024,20330,04/23/2024 02:02:00 PM,Bronx,18,6,48,Vehicle,Preliminary Investigation Only,Other
+2024,30407,04/23/2024 04:24:00 PM,Brooklyn,38,9,71,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,10210,04/24/2024 05:12:00 AM,Manhattan,4,3,9,Commercial Structure,Lithium Ion Battery,Electrical
+2024,20332,04/24/2024 09:08:00 AM,Bronx,,10,45,Vehicle,Preliminary Investigation Only,Other
+2024,20333,04/24/2024 09:49:00 PM,Bronx,3,9,43,MD Residential Structure,Incendiary,Incendiary
+2024,40390,04/25/2024 03:00:00 AM,Queens,46,4,110,MD Residential Structure,Ignitable Liquids/Gases - Propane,Ignitable
+2024,30413,04/25/2024 06:06:00 AM,Brooklyn,33,15,61,Outside Rubbish,Incendiary,Incendiary
+2024,77110,04/25/2024 04:30:00 PM,Brooklyn,33,15,61,No Fire,Other - No Fire,No Fire
+2024,20337,04/25/2024 07:17:00 PM,Bronx,27,8,50,MD Residential Structure,Spontaneous Combustion,Natural Sources
+2024,20339,04/26/2024 09:37:00 AM,Bronx,15,12,47,Vehicle,Preliminary Investigation Only,Other
+2024,10213,04/26/2024 09:40:00 AM,Manhattan,11,7,24,Vehicle,Preliminary Investigation Only,Other
+2024,10214,04/26/2024 02:17:00 PM,Manhattan,16,9,30,MD Residential Structure,Torch - Legal Use of,Open Flame
+2024,10215,04/26/2024 03:19:00 PM,Manhattan,4,3,7,Vehicle,Preliminary Investigation Only,Other
+2024,10216,04/26/2024 10:19:00 PM,Manhattan,6,5,13,Commercial Structure,Electrical Wiring,Electrical
+2024,20342,04/27/2024 08:21:00 AM,Bronx,19,5,44,Vehicle,Preliminary Investigation Only,Other
+2024,40393,04/27/2024 02:59:00 PM,Queens,45,1,114,,Preliminary Investigation Only,Other
+2024,20344,04/27/2024 04:38:00 PM,Bronx,20,11,49,Construction Trailer,Electrical Wiring,Electrical
+2024,20345,04/28/2024 06:30:00 AM,Bronx,17,4,44,Vehicle,Preliminary Investigation Only,Other
+2024,40396,04/28/2024 07:36:00 AM,Queens,47,14,101,MD Residential Structure,Smoking (Cigarette/Cigar),Smoking
+2024,20346,04/28/2024 04:23:00 PM,Bronx,14,1,42,Vehicle,Preliminary Investigation Only,Other
+2024,20347,04/28/2024 05:06:00 PM,Bronx,,4,48,Vehicle,Preliminary Investigation Only,Other
+2024,30424,04/29/2024 10:34:00 AM,Brooklyn,43,15,60,Transformer,Preliminary Investigation Only,Other
+2024,10222,04/29/2024 12:54:00 PM,Manhattan,4,3,9,Vehicle,Preliminary Investigation Only,Other
+2024,40399,04/30/2024 02:08:00 AM,Queens,46,4,110,Vehicle,Preliminary Investigation Only,Other
+2024,10224,04/30/2024 01:38:00 PM,Manhattan,8,6,17,MD Residential Structure,Heat or Sparks from Friction,Hot Objects
+2024,20356,05/02/2024 12:38:00 AM,Bronx,17,4,42,Vehicle,Preliminary Investigation Only,Other
+2024,20357,05/02/2024 06:21:00 AM,Bronx,27,12,47,,Preliminary Investigation Only,Other
+2024,20358,05/02/2024 06:48:00 AM,Bronx,19,7,50,,Preliminary Investigation Only,Other
+2024,10229,05/03/2024 11:37:00 AM,Manhattan,10,8,19,Commercial Structure,Preliminary Investigation Only,Other
+2024,30440,05/03/2024 03:14:00 PM,Brooklyn,33,14,63,MD Residential Structure,Preliminary Investigation Only,Other
+2024,40405,05/03/2024 05:07:00 PM,Queens,52,8,107,Street,Preliminary Investigation Only,Other

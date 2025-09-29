@@ -1,74 +1,151 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Worldwide Revenue Share by Film Genre Type",
   "data": {
-    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/movies_record.csv"
   },
   "transform": [
     {
       "aggregate": [
         {
           "op": "sum",
-          "field": "Number of employed persons",
-          "as": "Total Employed"
+          "field": "Worldwide $m",
+          "as": "Total_Worldwide_m"
         }
       ],
       "groupby": [
-        "Pacific Island Countries",
-        "Sex"
+        "Type"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "field": "Total_Worldwide_m",
+          "as": "Type_Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Total_Worldwide_m",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Total_Worldwide_m",
+          "as": "Grand_Total_Worldwide_m"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.Total_Worldwide_m / datum.Grand_Total_Worldwide_m",
+      "as": "Type_Share"
+    },
+    {
+      "calculate": "datum.Type_Rank <= 4 ? datum.Type : 'Others'",
+      "as": "Display_Type"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Total_Worldwide_m",
+          "as": "Sum_Worldwide_m"
+        },
+        {
+          "op": "sum",
+          "field": "Type_Share",
+          "as": "Sum_Type_Share"
+        }
+      ],
+      "groupby": [
+        "Display_Type"
       ]
     }
   ],
-  "width": 900,
-  "mark": "bar",
+  "mark": {
+    "type": "arc",
+    "outerRadius": 160
+  },
   "encoding": {
-    "x": {
-      "field": "Pacific Island Countries",
-      "type": "nominal",
-      "axis": {
-        "title": "Pacific Island Countries",
-        "titleFontSize": 30,
-        "labelAngle": 45,
-        "labelFontSize": 34,
-        "labelLimit": 0
-      }
-    },
-    "y": {
-      "field": "Total Employed",
+    "theta": {
+      "field": "Sum_Type_Share",
       "type": "quantitative",
-      "title": "Number of Employed Persons"
+      "stack": true
     },
     "color": {
-      "field": "Sex",
+      "field": "Display_Type",
       "type": "nominal",
-      "title": "Sex"
+      "legend": {
+        "title": "Genre Type"
+      },
+      "scale": {
+        "scheme": "category10"
+      }
     },
-    "xOffset": {
-      "field": "Sex"
+    "tooltip": [
+      {
+        "field": "Display_Type",
+        "type": "nominal",
+        "title": "Genre"
+      },
+      {
+        "field": "Sum_Worldwide_m",
+        "type": "quantitative",
+        "title": "Total Worldwide ($m)",
+        "format": ",.1f"
+      },
+      {
+        "field": "Sum_Type_Share",
+        "type": "quantitative",
+        "title": "Share (%)",
+        "format": ".1%"
+      }
+    ]
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "outerRadius": 160
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 190,
+        "fontSize": 22,
+        "color": "#474747"
+      },
+      "encoding": {
+        "text": {
+          "field": "Sum_Type_Share",
+          "type": "quantitative",
+          "format": ".0%",
+          "title": "Percentage"
+        }
+      }
     }
-  },
-  "title": {
-    "text": "Employment by Sex across Pacific Island Countries",
-    "fontSize": 44,
-    "anchor": "start"
-  },
+  ],
   "config": {
     "title": {
       "fontSize": 44
     },
     "axis": {
       "titleFontSize": 44,
-      "labelFontSize": 34,
+      "labelFontSize": 30,
       "tickCount": 6,
       "labelLimit": 0,
       "titlePadding": 10
     },
     "legend": {
-      "titleFontSize": 36,
-      "labelFontSize": 34,
-      "labelLimit": 0,
-      "orient": "top",
-      "offset": 10,
-      "anchor": "start"
+      "titleFontSize": 26,
+      "labelFontSize": 26,
+      "labelLimit": 0
     }
   }
 }
