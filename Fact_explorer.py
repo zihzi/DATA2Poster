@@ -7,7 +7,7 @@ from langchain_core.messages import HumanMessage, SystemMessage
 
 
 def agent1_column_selector(schema, openai_key):
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0,api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14",api_key = openai_key)
     col_select_template="""
     You are a data scientist tasked with selecting 4 columns from a given dataset to perform an effective exploratory data analysis (EDA).
     Here is the data schema: {schema}
@@ -17,8 +17,8 @@ def agent1_column_selector(schema, openai_key):
     1. Carefully review the dataset schema provided. Each column includes metadata such as column name, data type (Categorical, Numerical, Temporal), and number of unique values.
     2. Select exactly 4 columns that together enable diverse and meaningful analysis. Follow these principles:
         - Include at least 1 numerical column (for quantitative analysis).
-        - Include at least 2 categorical columns (for comparisons, grouping, or segmentation).
-        - Optionally, include a temporal column if available (to analyze trends over time).
+        - Include at least 2 columns which are **NOT numerical**, they should be either **categorical**(for comparisons, grouping, or segmentation) or **temporal**(to analyze trends over time).
+        - The remaining column can be of any type (categorical, numerical, or temporal) based on what best complements the other selected columns.
     3. Make sure the chosen set of 4 columns allows:
         - Identifying overall trends or distributions.
         - Comparing across groups (categories).
@@ -43,7 +43,7 @@ def agent1_column_selector(schema, openai_key):
         "column": "<column name 2>",
         "properties": {{
             "dtype": "C",
-            "num_unique_values": 32
+            "num_unique_values": 3
         }}
         }},
         {{
@@ -71,7 +71,7 @@ def agent1_column_selector(schema, openai_key):
 
 def agent2_fact_summarizer(data_name, main_column, facts,title, openai_key):
 
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0.5, api_key=openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
     summarize_facts_prompt_template = """
     You are a senior data analyst. You are examining a dataset named **{data_name}** with this column: **{main_column}**.
     Here are key facts extracted from this dataset:{facts}
@@ -90,7 +90,6 @@ def agent2_fact_summarizer(data_name, main_column, facts,title, openai_key):
     - **Analyze** how **{main_column}** changes across values of one other column.  
     - **Highlight** any trends, group commonality, or group differences.  
 
-
     3. **Chain-of-Thought**  
     - Build your reasoning in 2-3 short bullet steps per insight.  
     - If chart title provided, think about what the chart emphasizes.
@@ -107,24 +106,26 @@ def agent2_fact_summarizer(data_name, main_column, facts,title, openai_key):
     - If chart title provided, align insights with the chart's focus.
     - Drop the invalid facts by following the rules below:
         1. No self-comparison: reject if a fact compares a category to itself.
-           e.g., "The TotalEmployed of Sex Female is 400.60 times more than that of Female when Sex is Female.".
-           e.g., "The TotalEmployed of Sex Female is 7285 when Sex is Female.".
-           e.g., "The Sex Female accounts for 9.67% of the TotalEmployed when Sex is Female.".
-           e.g., "The TotalEmployed of Pacific Island Countries Tuvalu is 5.09 times more than that of Tuvalu when Pacific Island Countries is Tuvalu.".
+           e.g., "The TotalEmployed of **Sex Female** is 400.60 times more than that of Female **when Sex is Female**.".
+           e.g., "The TotalEmployed of **Sex Female** is 7285 when **Sex is Female**.".
+           e.g., "The **Sex Female** accounts for 9.67%% of the TotalEmployed **when Sex is Female**.".
+           e.g., "The TotalEmployed of **Pacific Island Countries Tuvalu** is 5.09 times more than that of Tuvalu **when Pacific Island Countries is Tuvalu**.".
         2. Don't compare/rank on a column that is fixed by a filter 
-           e.g., "In the TotalEmployed ranking of different Sex(s), the top three Sex(s) are Female, Female, Female  when Sex is Female.".
+           e.g., "In the TotalEmployed ranking of different **Sex(s)**, the top three Sex(s) are Female, Female, Female  **when Sex is Female**.".
 
-    **Output requirements (ONLY return this; no reasoning or extra text):**  
-    - A five-point list of one-sentence insights. 
+    **Output (exact JSON)**  
+    NEVER INCLUDE ```json```.Do not add other sentences after this json data.
+    - A JSON included a list of 5 one-sentence insights and a list of all the chosen supporting facts.
     - No explanations, no bullet steps, no metadata.
-
-
-    **Example output:**  
-    1. Japan has the highest Sales when **OtherColumn** is "X".  
-    2. The Sales in China are significantly lower than in the US.
-    3. Sales in Germany are higher than in France when **OtherColumn** is "Y".  
-    4. Sales in the UK show a unique trend compared to other countries.
-    5. Sales in Canada are consistently higher than in the US across all categories.
+    {{
+    "insight_list": [
+        {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
+        "insight": ["Japan has the highest Sales when **OtherColumn** is "X".","The Sales in China are significantly lower than in the US.", "<insight 3>", "<insight 4>", "<insight 5>"],
+        }}
+    
+    ]
+    }}
 
     """
     prompt = PromptTemplate(
@@ -140,24 +141,23 @@ def agent3_s1q_generator(s1c1_insight, data_facts, column_1, key_columns, openai
     llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
     eda_q_for_sec1_template="""
     You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
-    Read the information founded from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
+    Read the following observations already discovered from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
 
     **Your Task**
-    Generate **two** distinct follow-up questions that logically extend the current EDA based on the following data facts (observations already discovered):
-    {data_facts}\n\n
-    1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-    2. For the first question, choose a fact and write one specific follow-up questions that:
+    Generate **two** distinct follow-up questions that logically extend the current EDA:
+    1. Total Pick **exactly two** insights to rasie two questions that add new angles, and avoid redundancy with each other.
+    2. For the first question, write one specific follow-up question based on the chosen insight that:
         - In addition to the numerical column, the question must refer to this one column **ONLY**: {column_1}. 
         - The question should be high-level and **ONLY** mention column name rather than specific value.
         - Make them answerable with the existing dataset.
-    3. For the second question, choose a fact and write one specific follow-up questions that:
+    3. For the second question, write one specific follow-up question based on the chosen insight that:
         - Drills down into significance one revealed from {s1c1_insight}.
         - In addition to the numerical column, the question must mention this column: {column_1}.
         - Make them answerable with the existing dataset.
     4. Write a title for the chart **(no more than 12 words each)** based on the questions.
     
     **Constraints**
-    - Never rewrite the data facts from {data_facts}.
+    - Never rewrite the anything from {s1c1_insight}.
     - Only use the columns from {key_columns}.
 
     **Unvalid Examples**:
@@ -182,13 +182,13 @@ def agent3_s1q_generator(s1c1_insight, data_facts, column_1, key_columns, openai
     - Adds a second dimension for deeper drill-down.
     - Avoids redundancy by choosing a different numerical column (reading score) than the first question.
 
-
     **Output (exact JSON)**  
     NEVER INCLUDE ```json```.Do not add other sentences after this json data.
     {{
     "follow_up_questions": [
         {{
-        "selected_facts": "<fact 1>",
+        "selected_insight": "<insight 1>",
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 1>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
@@ -196,24 +196,25 @@ def agent3_s1q_generator(s1c1_insight, data_facts, column_1, key_columns, openai
         "rationale": "<Why this deepens the analysis>"
         }},
         {{
-        "selected_facts": "<fact 2>",
+        "selected_insight": "<insight 2>",
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 2>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
         "column": "<column name that the question is related to>",
-        "rationale": "<Rationale>"
+        "rationale": "<Why this deepens the analysis>"
         }}
         
     ]
     }}"""
     eda_q_for_sec1_prompt = PromptTemplate(
         template=eda_q_for_sec1_template,
-        input_variables=["s1c1_insight","data_facts","column_1","key_columns"]
+        input_variables=["s1c1_insight","column_1","key_columns"]
     )
     eda_q_for_sec1_chain = eda_q_for_sec1_prompt | llm
     eda_q_for_sec1_result = eda_q_for_sec1_chain.invoke(input = {
                                                     "s1c1_insight":s1c1_insight,
-                                                    "data_facts":data_facts,
+                                                    
                                                     "column_1": column_1,
                                                     "key_columns": key_columns                                        
                                                     })
@@ -224,24 +225,23 @@ def agent4_s2q_generator(s2c1_insight, s1q1, s1q2, data_facts, column_2, key_col
     llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
     eda_q_for_sec2_template="""
     You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
-    Read the information founded from the current exploratory data analysis(EDA) carefully: {s2c1_insight}
+    Read the following observations already discovered from the current exploratory data analysis(EDA) carefully: {s2c1_insight}
 
     **Your Task**
-    Generate **two** distinct follow-up questions that can make a comparison with this two questions "{s1q1}" and "{s1q2}" based on the following data facts (observations already discovered):
-    {data_facts}\n\n
-    1. Total Pick **exactly two** facts that add new angles, and avoid redundancy with each other.
-    2. For the first question, choose a fact and write one specific follow-up questions that:
+    Generate **two** distinct follow-up questions that can make a comparison with this two questions "{s1q1}" and "{s1q2}":
+    1. Total Pick **exactly two** insights to rasie two questions that add new angles, and avoid redundancy with each other.
+    2. For the first question, write one specific follow-up question based on the chosen insight that:
         - In addition to the numerical column, the question must refer to this one column **ONLY**: {column_2}. 
         - The question should be high-level and **ONLY** mention column name rather than specific value.
         - Make them answerable with the existing dataset.
-    3. For the second question, choose a fact and write one specific follow-up questions that:
+    3. For the second question, write one specific follow-up question based on the chosen insight that:
         - Drills down into significance one revealed from {s2c1_insight}.
         - In addition to the numerical column, the question must mention this column: {column_2}.
         - Make them answerable with the existing dataset.
     4. Write a title for the chart **(no more than 12 words each)** based on the questions.
     
     **Constraints**
-    - Never rewrite th data facts from {data_facts}.
+    - Never rewrite anything from {s2c1_insight}.
     - Only use the columns from {key_columns}.
 
     **Unvalid Examples**:
@@ -271,7 +271,8 @@ def agent4_s2q_generator(s2c1_insight, s1q1, s1q2, data_facts, column_2, key_col
     {{
     "follow_up_questions": [
         {{
-        "selected_facts": "<fact 1>",
+        "selected_insight": "<insight 1>",
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 1>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
@@ -279,12 +280,13 @@ def agent4_s2q_generator(s2c1_insight, s1q1, s1q2, data_facts, column_2, key_col
         "rationale": "<Why this deepens the analysis>"
         }},
         {{
-        "selected_facts": "<fact 2>",
+        "selected_insight": "<insight 1>",
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 2>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
         "column": "<column name that the question is related to>",
-        "rationale": "<Rationale>"
+        "rationale": "<Why this deepens the analysis>"
         }}
         
     ]
@@ -308,19 +310,19 @@ def agent5_s3q_generator(s1c1_insight, question_1, question_2, question_3, quest
     llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key=openai_key)
     eda_q_for_sec3_template="""
     You are a data-analysis assistant that drafts *exploratory questions* destined for visualization generation.
-    Read the information founded from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
-
+    Read the following observations already discovered from the current exploratory data analysis(EDA) carefully: {s1c1_insight}
 
     **Your Task**
     Generate **two** distinct follow-up questions that logically extend the current EDA:
     1. Understand the given information from the current EDA.
     2. Identify two entities that worth to explore.
-    3. Write specific follow-up questions **(no more than 15 words each)** for these two entities that:
+    3. Choose about 5 data facts from {s1c1_insight} that can explain why this entity is important.
+    4. Write specific follow-up questions for these two entities that:
         - The question drill down to reveal the pattern within this entity.
         - In addition to the numerical column, the question must refer to two column **ONLY**.
         - Ensure the two questions are use **the same** combination of columns.
         - Make them answerable with the existing dataset.
-    4. Write a title for the chart **(no more than 12 words each)** based on the questions.
+    5. Write a title for the chart **(no more than 12 words each)** based on the questions.
 
 
     **Constraints**
@@ -329,8 +331,8 @@ def agent5_s3q_generator(s1c1_insight, question_1, question_2, question_3, quest
         2.{question_2}
         3.{question_3}
         4.{question_4}
+    - Never rewrite anything from {s1c1_insight}.
     - Only use the columns from {key_columns}.
-
 
 
     **Output (exact JSON)**  
@@ -338,20 +340,22 @@ def agent5_s3q_generator(s1c1_insight, question_1, question_2, question_3, quest
     {{
     "follow_up_questions": [
         {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 1>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
         "column": "<column name that the question is related to>",
         "entity": "<entity name that is used in the question 1>",
-        "rationale": "<Why this deepens the analysis>"
+        "rationale": "<Why this entity worth to explore? And why this deepens the analysis>"
         }},
         {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
         "question": "<Question 2>",
         "suggested_viz_title": "title for the chart",
         "suggested_viz_type": "<bar|line|pie|scatter|...>",
         "column": "<column name that the question is related to>",
         "entity": "<entity name that is used in the question 2>",
-        "rationale": "<Rationale>"
+        "rationale": "<Why this entity worth to explore? And why this deepens the analysis>"
         }}
         
     ]

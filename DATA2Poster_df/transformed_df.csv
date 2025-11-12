@@ -1,19 +1,6 @@
-Product,Sales Method,TotalSales
-Men's Apparel,In-store,2146375
-Men's Apparel,Online,578302
-Men's Apparel,Outlet,565975
-Men's Athletic Footwear,In-store,2696250
-Men's Athletic Footwear,Online,724459
-Men's Athletic Footwear,Outlet,859888
-Men's Street Footwear,In-store,3584075
-Men's Street Footwear,Online,849878
-Men's Street Footwear,Outlet,882598
-Women's Apparel,In-store,3041625
-Women's Apparel,Online,824857
-Women's Apparel,Outlet,806276
-Women's Athletic Footwear,In-store,1893500
-Women's Athletic Footwear,Online,495305
-Women's Athletic Footwear,Outlet,616715
-Women's Street Footwear,In-store,2310825
-Women's Street Footwear,Online,580461
-Women's Street Footwear,Outlet,747376
+region,industry,gender,total_worth,industry_rank
+Europe,Consumer,male,394.3,2.0
+Europe,"Retail, Restaurant",male,320.6,3.0
+North America,Consumer,male,270.7,4.0
+North America,"Retail, Restaurant",male,257.0,5.0
+North America,Technology-Computer,male,412.3,1.0

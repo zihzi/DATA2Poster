@@ -81,6 +81,7 @@
         "nl": "Employment distribution by Sex",
         "spec": {
             "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+            "title": "Employment Distribution by Sex",
             "data": {
                 "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
             },
@@ -90,7 +91,7 @@
                         {
                             "op": "sum",
                             "field": "Number of employed persons",
-                            "as": "total_employed"
+                            "as": "sex_sum"
                         }
                     ],
                     "groupby": [
@@ -101,63 +102,70 @@
                     "joinaggregate": [
                         {
                             "op": "sum",
-                            "field": "total_employed",
-                            "as": "grand_total"
+                            "field": "sex_sum",
+                            "as": "total"
                         }
                     ]
                 },
                 {
-                    "calculate": "datum.total_employed / datum.grand_total",
+                    "calculate": "datum.sex_sum / datum.total",
                     "as": "proportion"
                 }
             ],
-            "mark": {
-                "type": "arc",
-                "tooltip": true
-            },
-            "encoding": {
-                "theta": {
-                    "field": "proportion",
-                    "type": "quantitative"
-                },
-                "color": {
-                    "field": "Sex",
-                    "type": "nominal"
-                },
-                "tooltip": [
-                    {
-                        "field": "Sex",
-                        "type": "nominal",
-                        "title": "Sex"
-                    },
-                    {
-                        "field": "proportion",
-                        "type": "quantitative",
-                        "format": ".1%",
-                        "title": "Proportion"
-                    },
-                    {
-                        "field": "total_employed",
-                        "type": "quantitative",
-                        "title": "Number of Employed Persons"
-                    }
-                ]
-            },
             "layer": [
                 {
                     "mark": {
                         "type": "arc",
-                        "outerRadius": 120
+                        "outerRadius": 200,
+                        "innerRadius": 0
+                    },
+                    "encoding": {
+                        "theta": {
+                            "field": "proportion",
+                            "type": "quantitative"
+                        },
+                        "color": {
+                            "field": "Sex",
+                            "type": "nominal",
+                            "legend": {
+                                "title": "Sex"
+                            },
+                            "scale": {
+                                "scheme": "category10"
+                            }
+                        },
+                        "tooltip": [
+                            {
+                                "field": "Sex",
+                                "type": "nominal",
+                                "title": "Sex"
+                            },
+                            {
+                                "field": "proportion",
+                                "type": "quantitative",
+                                "title": "Proportion",
+                                "format": ".1%"
+                            },
+                            {
+                                "field": "sex_sum",
+                                "type": "quantitative",
+                                "title": "Number of Employed Persons"
+                            }
+                        ]
                     }
                 },
                 {
                     "mark": {
                         "type": "text",
-                        "outerRadius": 120,
-                        "radiusOffset": 20,
+                        "radius": 120,
                         "fontWeight": "bold"
                     },
                     "encoding": {
+                        "theta": {
+                            "field": "proportion",
+                            "type": "quantitative",
+                            "stack": true
+                        },
                         "text": {
                             "field": "proportion",
                             "type": "quantitative",
@@ -169,8 +177,25 @@
                     }
                 }
             ],
-            "height": 400,
-            "width": 600
+            "width": 800,
+            "height": 600,
+            "config": {
+                "title": {
+                    "fontSize": 44
+                },
+                "axis": {
+                    "titleFontSize": 44,
+                    "labelFontSize": 30,
+                    "tickCount": 6,
+                    "labelLimit": 0,
+                    "titlePadding": 10
+                },
+                "legend": {
+                    "titleFontSize": 26,
+                    "labelFontSize": 26,
+                    "labelLimit": 0
+                }
+            }
         }
     },
     "3": {

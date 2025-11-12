@@ -6,7 +6,7 @@ from langchain_core.prompts import PromptTemplate
 
 
 def agent11_vis_recommender(conclusion, title_1, title_2, insight, column, openai_key):
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14",temperature=0.7, api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_template = """
     You are an Chart-Text Consistency Reviewer.
     Here is conclusion and the titles of two charts:
@@ -14,10 +14,12 @@ def agent11_vis_recommender(conclusion, title_1, title_2, insight, column, opena
     Title 1: "{title_1}"\n\n
     Title 2: "{title_2}"\n\n
     Here is insight derived from the two charts:\n\n{insight}\n\n
+
     **Task**
     Given the conclusion, the titles of two charts,and insight derived from the two charts, judge whether the conclusion is supported from the two charts. 
     Classify as supported/partially_supported/unsupported using the rubric provided.
     If not fully supported, pick which chart should be replaced and output a concrete replacement recommendation for a better visualization.
+    
     **Instructions**
     (A) The following compares the consistency between the conclusion and the chart titles.
         Detect which kind of claim types are in the conclusion, then check if at least one title implies a chart that could evidence it:
@@ -100,6 +102,7 @@ def agent11_vis_recommender(conclusion, title_1, title_2, insight, column, opena
     **Constraints**
     - Recommend a chart that can strengthen the main claim and is not the same claim type as the kept chart.
     - The query should only contain the following columns: {column}.
+
     **Example**
     Conclusion:
     "CineHub clearly dominates total viewing hours across platforms, with 4.8 billion hours leading well above StreamNow and BingeBox, 
@@ -128,6 +131,7 @@ def agent11_vis_recommender(conclusion, title_1, title_2, insight, column, opena
     }}
     ]
     }}
+
     **Output (JSON)**
     Do not INCLUDE ```json```.Do not add other sentences after this json data.
     Return **only** the final JSON in this structure:
@@ -157,7 +161,7 @@ def agent11_vis_recommender(conclusion, title_1, title_2, insight, column, opena
     return response.content
 
 def agent12_final_checker(conclusion, titles, insight, openai_key):
-    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", temperature=0.7, api_key = openai_key)
+    llm = ChatOpenAI(model_name="gpt-4.1-mini-2025-04-14", api_key = openai_key)
     prompt_template = """
     You are an Chart-Text Consistency Reviewer.
     Here is conclusion and the titles of six charts:
@@ -169,9 +173,11 @@ def agent12_final_checker(conclusion, titles, insight, openai_key):
     Title 5: "{titles_5}"\n\n
     Title 6: "{titles_6}"\n\n
     Here is insight derived from the six charts:\n\n{insight}\n\n
+
     **Task**
     Given the conclusion, the titles of six charts, and insight derived from the six charts, judge whether the conclusion is supported from those charts. 
     Score 0-100 on how well the conclusion is supported by the charts.
+
     **Instructions**
     (A) The following compares the consistency between the conclusion and the chart titles.
         Detect which kind of claim types are in the conclusion, then check if at least one title implies a chart that could evidence it:

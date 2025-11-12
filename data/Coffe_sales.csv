@@ -1,0 +1,3548 @@
+hour_of_day,money,coffee_name,Time_of_Day,Weekday,Month_name
+10,38.7,Latte,Morning,Fri,Mar
+12,38.7,Hot Chocolate,Afternoon,Fri,Mar
+12,38.7,Hot Chocolate,Afternoon,Fri,Mar
+13,28.9,Americano,Afternoon,Fri,Mar
+13,38.7,Latte,Afternoon,Fri,Mar
+15,33.8,Americano with Milk,Afternoon,Fri,Mar
+16,38.7,Hot Chocolate,Afternoon,Fri,Mar
+18,33.8,Americano with Milk,Night,Fri,Mar
+19,38.7,Cocoa,Night,Fri,Mar
+19,33.8,Americano with Milk,Night,Fri,Mar
+19,33.8,Americano with Milk,Night,Fri,Mar
+10,28.9,Americano,Morning,Sat,Mar
+10,33.8,Americano with Milk,Morning,Sat,Mar
+11,33.8,Americano with Milk,Morning,Sat,Mar
+14,28.9,Americano,Afternoon,Sat,Mar
+16,33.8,Americano with Milk,Afternoon,Sat,Mar
+17,28.9,Americano,Night,Sat,Mar
+10,38.7,Latte,Morning,Sun,Mar
+11,28.9,Cortado,Morning,Sun,Mar
+12,28.9,Americano,Afternoon,Sun,Mar
+13,38.7,Hot Chocolate,Afternoon,Sun,Mar
+17,38.7,Cocoa,Night,Sun,Mar
+17,28.9,Cortado,Night,Sun,Mar
+18,33.8,Americano with Milk,Night,Sun,Mar
+18,33.8,Americano with Milk,Night,Sun,Mar
+18,38.7,Hot Chocolate,Night,Sun,Mar
+10,38.7,Latte,Morning,Mon,Mar
+10,38.7,Latte,Morning,Mon,Mar
+11,33.8,Americano with Milk,Morning,Mon,Mar
+14,24.0,Espresso,Afternoon,Mon,Mar
+9,38.7,Latte,Morning,Tue,Mar
+14,38.7,Latte,Afternoon,Tue,Mar
+17,38.7,Latte,Night,Tue,Mar
+17,38.7,Hot Chocolate,Night,Tue,Mar
+17,38.7,Cocoa,Night,Tue,Mar
+17,38.7,Hot Chocolate,Night,Tue,Mar
+17,38.7,Hot Chocolate,Night,Tue,Mar
+17,28.9,Cortado,Night,Tue,Mar
+18,38.7,Hot Chocolate,Night,Tue,Mar
+13,28.9,Americano,Afternoon,Wed,Mar
+13,28.9,Cortado,Afternoon,Wed,Mar
+14,38.7,Cappuccino,Afternoon,Wed,Mar
+14,38.7,Cappuccino,Afternoon,Wed,Mar
+10,38.7,Hot Chocolate,Morning,Thu,Mar
+11,38.7,Latte,Morning,Thu,Mar
+15,28.9,Americano,Afternoon,Thu,Mar
+15,33.8,Americano with Milk,Afternoon,Thu,Mar
+10,28.9,Cortado,Morning,Fri,Mar
+12,38.7,Cappuccino,Afternoon,Fri,Mar
+13,28.9,Americano,Afternoon,Fri,Mar
+14,28.9,Americano,Afternoon,Fri,Mar
+14,28.9,Americano,Afternoon,Fri,Mar
+14,33.8,Americano with Milk,Afternoon,Fri,Mar
+18,38.7,Latte,Night,Fri,Mar
+18,38.7,Latte,Night,Fri,Mar
+12,24.0,Espresso,Afternoon,Sat,Mar
+12,28.9,Americano,Afternoon,Sat,Mar
+12,38.7,Cappuccino,Afternoon,Sat,Mar
+12,28.9,Americano,Afternoon,Sat,Mar
+12,28.9,Americano,Afternoon,Sat,Mar
+13,38.7,Latte,Afternoon,Sat,Mar
+13,33.8,Americano with Milk,Afternoon,Sat,Mar
+13,28.9,Cortado,Afternoon,Sat,Mar
+13,38.7,Cappuccino,Afternoon,Sat,Mar
+14,33.8,Americano with Milk,Afternoon,Sat,Mar
+14,38.7,Hot Chocolate,Afternoon,Sat,Mar
+19,38.7,Cappuccino,Night,Sat,Mar
+19,38.7,Hot Chocolate,Night,Sat,Mar
+11,24.0,Espresso,Morning,Sun,Mar
+19,38.7,Latte,Night,Sun,Mar
+19,28.9,Cortado,Night,Sun,Mar
+11,38.7,Cappuccino,Morning,Mon,Mar
+16,28.9,Americano,Afternoon,Mon,Mar
+16,38.7,Latte,Afternoon,Mon,Mar
+16,28.9,Cortado,Afternoon,Mon,Mar
+10,28.9,Americano,Morning,Tue,Mar
+10,28.9,Cortado,Morning,Tue,Mar
+11,38.7,Hot Chocolate,Morning,Tue,Mar
+12,33.8,Americano with Milk,Afternoon,Tue,Mar
+12,28.9,Americano,Afternoon,Tue,Mar
+16,28.9,Americano,Afternoon,Tue,Mar
+11,38.7,Hot Chocolate,Morning,Wed,Mar
+11,28.9,Americano,Morning,Wed,Mar
+12,28.9,Americano,Afternoon,Wed,Mar
+12,28.9,Americano,Afternoon,Wed,Mar
+14,33.8,Americano with Milk,Afternoon,Wed,Mar
+15,24.0,Espresso,Afternoon,Wed,Mar
+15,24.0,Espresso,Afternoon,Wed,Mar
+16,24.0,Espresso,Afternoon,Wed,Mar
+10,38.7,Latte,Morning,Thu,Mar
+10,38.7,Hot Chocolate,Morning,Thu,Mar
+13,28.9,Cortado,Afternoon,Thu,Mar
+13,28.9,Americano,Afternoon,Thu,Mar
+13,33.8,Americano with Milk,Afternoon,Thu,Mar
+13,24.0,Espresso,Afternoon,Thu,Mar
+15,38.7,Latte,Afternoon,Thu,Mar
+16,33.8,Americano with Milk,Afternoon,Thu,Mar
+16,24.0,Espresso,Afternoon,Thu,Mar
+18,38.7,Hot Chocolate,Night,Thu,Mar
+19,28.9,Cortado,Night,Thu,Mar
+10,38.7,Hot Chocolate,Morning,Fri,Mar
+18,28.9,Americano,Night,Fri,Mar
+12,33.8,Americano with Milk,Afternoon,Sat,Mar
+12,28.9,Americano,Afternoon,Sat,Mar
+15,28.9,Cortado,Afternoon,Sat,Mar
+16,28.9,Cortado,Afternoon,Sat,Mar
+16,28.9,Cortado,Afternoon,Sat,Mar
+17,33.8,Americano with Milk,Night,Sat,Mar
+12,28.9,Cortado,Afternoon,Sun,Mar
+11,28.9,Cortado,Morning,Mon,Mar
+15,28.9,Americano,Afternoon,Mon,Mar
+15,28.9,Americano,Afternoon,Mon,Mar
+15,28.9,Americano,Afternoon,Mon,Mar
+14,38.7,Latte,Afternoon,Tue,Mar
+14,38.7,Latte,Afternoon,Tue,Mar
+15,38.7,Hot Chocolate,Afternoon,Tue,Mar
+16,33.8,Americano with Milk,Afternoon,Tue,Mar
+11,28.9,Cortado,Morning,Wed,Mar
+12,28.9,Cortado,Afternoon,Wed,Mar
+13,38.7,Cappuccino,Afternoon,Wed,Mar
+16,38.7,Cocoa,Afternoon,Wed,Mar
+17,38.7,Latte,Night,Wed,Mar
+12,28.9,Cortado,Afternoon,Thu,Mar
+12,38.7,Cappuccino,Afternoon,Thu,Mar
+17,28.9,Cortado,Night,Thu,Mar
+19,38.7,Latte,Night,Thu,Mar
+10,33.8,Americano with Milk,Morning,Fri,Mar
+13,33.8,Americano with Milk,Afternoon,Fri,Mar
+17,28.9,Americano,Night,Fri,Mar
+17,24.0,Espresso,Night,Fri,Mar
+17,28.9,Americano,Night,Fri,Mar
+10,38.7,Latte,Morning,Sat,Mar
+10,33.8,Americano with Milk,Morning,Sat,Mar
+13,38.7,Cappuccino,Afternoon,Sat,Mar
+13,38.7,Cocoa,Afternoon,Sat,Mar
+14,33.8,Americano with Milk,Afternoon,Sat,Mar
+15,38.7,Latte,Afternoon,Sat,Mar
+15,33.8,Americano with Milk,Afternoon,Sat,Mar
+16,28.9,Cortado,Afternoon,Sat,Mar
+18,38.7,Latte,Night,Sun,Mar
+10,38.7,Latte,Morning,Mon,Mar
+14,38.7,Latte,Afternoon,Mon,Mar
+14,38.7,Latte,Afternoon,Mon,Mar
+18,33.8,Americano with Milk,Night,Mon,Mar
+19,38.7,Cappuccino,Night,Mon,Mar
+10,38.7,Cocoa,Morning,Tue,Mar
+10,38.7,Latte,Morning,Tue,Mar
+10,38.7,Latte,Morning,Tue,Mar
+11,28.9,Cortado,Morning,Tue,Mar
+13,28.9,Americano,Afternoon,Tue,Mar
+13,28.9,Cortado,Afternoon,Tue,Mar
+13,28.9,Cortado,Afternoon,Tue,Mar
+13,28.9,Americano,Afternoon,Tue,Mar
+15,38.7,Latte,Afternoon,Tue,Mar
+18,38.7,Latte,Night,Tue,Mar
+18,38.7,Hot Chocolate,Night,Tue,Mar
+11,28.9,Cortado,Morning,Wed,Mar
+11,33.8,Americano with Milk,Morning,Wed,Mar
+12,33.8,Americano with Milk,Afternoon,Wed,Mar
+13,38.7,Hot Chocolate,Afternoon,Wed,Mar
+14,38.7,Cappuccino,Afternoon,Wed,Mar
+14,28.9,Americano,Afternoon,Wed,Mar
+18,28.9,Cortado,Night,Wed,Mar
+14,28.9,Cortado,Afternoon,Thu,Mar
+17,28.9,Cortado,Night,Thu,Mar
+17,28.9,Americano,Night,Thu,Mar
+17,38.7,Latte,Night,Thu,Mar
+10,38.7,Latte,Morning,Fri,Mar
+12,38.7,Cappuccino,Afternoon,Fri,Mar
+12,38.7,Cappuccino,Afternoon,Fri,Mar
+11,38.7,Latte,Morning,Sat,Mar
+16,38.7,Latte,Afternoon,Sat,Mar
+16,38.7,Latte,Afternoon,Sat,Mar
+16,33.8,Americano with Milk,Afternoon,Sat,Mar
+10,38.7,Cappuccino,Morning,Sun,Mar
+10,28.9,Americano,Morning,Mon,Apr
+10,33.8,Americano with Milk,Morning,Mon,Apr
+10,33.8,Americano with Milk,Morning,Mon,Apr
+11,33.8,Americano with Milk,Morning,Mon,Apr
+18,33.8,Americano with Milk,Night,Mon,Apr
+18,38.7,Hot Chocolate,Night,Mon,Apr
+10,38.7,Latte,Morning,Tue,Apr
+16,28.9,Americano,Afternoon,Tue,Apr
+16,28.9,Cortado,Afternoon,Tue,Apr
+10,28.9,Cortado,Morning,Wed,Apr
+10,28.9,Americano,Morning,Wed,Apr
+13,38.7,Cappuccino,Afternoon,Wed,Apr
+10,38.7,Latte,Morning,Thu,Apr
+11,38.7,Latte,Morning,Thu,Apr
+11,38.7,Cappuccino,Morning,Thu,Apr
+12,28.9,Cortado,Afternoon,Thu,Apr
+10,28.9,Americano,Morning,Fri,Apr
+10,28.9,Americano,Morning,Fri,Apr
+11,28.9,Cortado,Morning,Fri,Apr
+12,33.8,Americano with Milk,Afternoon,Fri,Apr
+14,38.7,Latte,Afternoon,Fri,Apr
+14,28.9,Cortado,Afternoon,Fri,Apr
+16,24.0,Espresso,Afternoon,Fri,Apr
+12,33.8,Americano with Milk,Afternoon,Sat,Apr
+14,38.7,Cappuccino,Afternoon,Sat,Apr
+14,28.9,Americano,Afternoon,Sat,Apr
+14,38.7,Latte,Afternoon,Sat,Apr
+10,38.7,Latte,Morning,Sun,Apr
+12,38.7,Cappuccino,Afternoon,Sun,Apr
+12,38.7,Cappuccino,Afternoon,Sun,Apr
+14,28.9,Cortado,Afternoon,Sun,Apr
+14,24.0,Espresso,Afternoon,Sun,Apr
+18,38.7,Hot Chocolate,Night,Sun,Apr
+18,33.8,Americano with Milk,Night,Sun,Apr
+10,33.8,Americano with Milk,Morning,Mon,Apr
+10,38.7,Cappuccino,Morning,Mon,Apr
+11,28.9,Americano,Morning,Mon,Apr
+11,38.7,Cappuccino,Morning,Mon,Apr
+16,38.7,Latte,Afternoon,Mon,Apr
+18,28.9,Americano,Night,Mon,Apr
+19,33.8,Americano with Milk,Night,Mon,Apr
+19,38.7,Cappuccino,Night,Mon,Apr
+11,38.7,Latte,Morning,Tue,Apr
+15,38.7,Hot Chocolate,Afternoon,Tue,Apr
+17,38.7,Hot Chocolate,Night,Tue,Apr
+17,24.0,Espresso,Night,Wed,Apr
+18,38.7,Cappuccino,Night,Wed,Apr
+20,38.7,Latte,Night,Wed,Apr
+10,28.9,Americano,Morning,Thu,Apr
+10,28.9,Americano,Morning,Thu,Apr
+16,38.7,Latte,Afternoon,Thu,Apr
+19,38.7,Cappuccino,Night,Thu,Apr
+19,33.8,Americano with Milk,Night,Thu,Apr
+19,38.7,Hot Chocolate,Night,Fri,Apr
+19,28.9,Cortado,Night,Fri,Apr
+12,38.7,Latte,Afternoon,Sat,Apr
+12,28.9,Americano,Afternoon,Sat,Apr
+16,38.7,Cappuccino,Afternoon,Sat,Apr
+16,38.7,Latte,Afternoon,Sat,Apr
+17,38.7,Cappuccino,Night,Sat,Apr
+17,38.7,Cappuccino,Night,Sat,Apr
+12,38.7,Cappuccino,Afternoon,Sun,Apr
+13,28.9,Cortado,Afternoon,Sun,Apr
+14,28.9,Americano,Afternoon,Sun,Apr
+14,28.9,Americano,Afternoon,Sun,Apr
+14,28.9,Americano,Afternoon,Sun,Apr
+15,38.7,Cappuccino,Afternoon,Sun,Apr
+16,28.9,Cortado,Afternoon,Sun,Apr
+17,38.7,Latte,Night,Sun,Apr
+18,38.7,Cappuccino,Night,Sun,Apr
+11,28.9,Americano,Morning,Mon,Apr
+17,28.9,Americano,Night,Mon,Apr
+17,33.8,Americano with Milk,Night,Mon,Apr
+19,33.8,Americano with Milk,Night,Mon,Apr
+10,33.8,Americano with Milk,Morning,Tue,Apr
+12,38.7,Cocoa,Afternoon,Tue,Apr
+12,28.9,Cortado,Afternoon,Tue,Apr
+15,28.9,Americano,Afternoon,Tue,Apr
+17,33.8,Americano with Milk,Night,Tue,Apr
+17,38.7,Cappuccino,Night,Tue,Apr
+18,38.7,Cocoa,Night,Tue,Apr
+13,28.9,Americano,Afternoon,Wed,Apr
+13,24.0,Espresso,Afternoon,Wed,Apr
+17,38.7,Cappuccino,Night,Wed,Apr
+17,38.7,Cappuccino,Night,Wed,Apr
+18,28.9,Cortado,Night,Wed,Apr
+11,28.9,Americano,Morning,Thu,Apr
+11,28.9,Americano,Morning,Thu,Apr
+13,33.8,Americano with Milk,Afternoon,Thu,Apr
+13,28.9,Cortado,Afternoon,Thu,Apr
+14,38.7,Cappuccino,Afternoon,Thu,Apr
+14,38.7,Latte,Afternoon,Thu,Apr
+17,38.7,Latte,Night,Thu,Apr
+18,38.7,Cappuccino,Night,Thu,Apr
+19,38.7,Hot Chocolate,Night,Thu,Apr
+19,38.7,Hot Chocolate,Night,Thu,Apr
+10,38.7,Latte,Morning,Fri,Apr
+13,33.8,Americano with Milk,Afternoon,Fri,Apr
+13,38.7,Cappuccino,Afternoon,Fri,Apr
+13,38.7,Hot Chocolate,Afternoon,Fri,Apr
+13,38.7,Cappuccino,Afternoon,Fri,Apr
+18,38.7,Cocoa,Night,Fri,Apr
+18,33.8,Americano with Milk,Night,Fri,Apr
+12,33.8,Americano with Milk,Afternoon,Sat,Apr
+12,33.8,Americano with Milk,Afternoon,Sat,Apr
+13,28.9,Americano,Afternoon,Sat,Apr
+13,33.8,Americano with Milk,Afternoon,Sat,Apr
+13,38.7,Hot Chocolate,Afternoon,Sat,Apr
+14,38.7,Cappuccino,Afternoon,Sat,Apr
+15,33.8,Americano with Milk,Afternoon,Sat,Apr
+15,32.82,Americano with Milk,Afternoon,Sat,Apr
+15,32.82,Americano with Milk,Afternoon,Sat,Apr
+18,37.72,Cappuccino,Night,Sat,Apr
+18,37.72,Cappuccino,Night,Sat,Apr
+19,37.72,Latte,Night,Sat,Apr
+11,37.72,Latte,Morning,Sun,Apr
+14,27.92,Americano,Afternoon,Sun,Apr
+11,27.92,Americano,Morning,Mon,Apr
+11,32.82,Americano with Milk,Morning,Mon,Apr
+19,37.72,Latte,Night,Mon,Apr
+14,37.72,Cappuccino,Afternoon,Tue,Apr
+14,32.82,Americano with Milk,Afternoon,Tue,Apr
+14,37.72,Cappuccino,Afternoon,Tue,Apr
+19,32.82,Americano with Milk,Night,Tue,Apr
+19,32.82,Americano with Milk,Night,Tue,Apr
+10,37.72,Latte,Morning,Wed,Apr
+10,32.82,Americano with Milk,Morning,Wed,Apr
+11,32.82,Americano with Milk,Morning,Wed,Apr
+11,32.82,Americano with Milk,Morning,Wed,Apr
+12,32.82,Americano with Milk,Afternoon,Wed,Apr
+16,32.82,Americano with Milk,Afternoon,Wed,Apr
+19,32.82,Americano with Milk,Night,Wed,Apr
+19,37.72,Cappuccino,Night,Wed,Apr
+10,27.92,Americano,Morning,Thu,Apr
+15,37.72,Latte,Afternoon,Thu,Apr
+17,27.92,Americano,Night,Thu,Apr
+17,27.92,Americano,Night,Thu,Apr
+10,37.72,Latte,Morning,Fri,Apr
+12,37.72,Latte,Afternoon,Fri,Apr
+13,37.72,Cappuccino,Afternoon,Fri,Apr
+15,27.92,Americano,Afternoon,Fri,Apr
+15,27.92,Americano,Afternoon,Fri,Apr
+16,27.92,Cortado,Afternoon,Fri,Apr
+16,27.92,Americano,Afternoon,Fri,Apr
+19,37.72,Hot Chocolate,Night,Fri,Apr
+19,37.72,Cocoa,Night,Fri,Apr
+15,37.72,Cappuccino,Afternoon,Sat,Apr
+10,37.72,Latte,Morning,Sun,Apr
+12,37.72,Cappuccino,Afternoon,Sun,Apr
+18,27.92,Americano,Night,Sun,Apr
+18,27.92,Americano,Night,Sun,Apr
+18,37.72,Latte,Night,Sun,Apr
+11,27.92,Cortado,Morning,Mon,Apr
+13,27.92,Americano,Afternoon,Mon,Apr
+13,27.92,Cortado,Afternoon,Mon,Apr
+13,27.92,Cortado,Afternoon,Mon,Apr
+13,32.82,Americano with Milk,Afternoon,Mon,Apr
+18,37.72,Cappuccino,Night,Mon,Apr
+19,37.72,Cappuccino,Night,Mon,Apr
+19,37.72,Cappuccino,Night,Mon,Apr
+10,37.72,Latte,Morning,Tue,Apr
+10,32.82,Americano with Milk,Morning,Tue,Apr
+10,32.82,Americano with Milk,Morning,Tue,Apr
+13,27.92,Americano,Afternoon,Tue,Apr
+13,32.82,Americano with Milk,Afternoon,Tue,Apr
+19,37.72,Cappuccino,Night,Tue,Apr
+19,32.82,Americano with Milk,Night,Tue,Apr
+19,37.72,Latte,Night,Tue,Apr
+10,27.92,Americano,Morning,Thu,May
+13,32.82,Americano with Milk,Afternoon,Thu,May
+18,37.72,Cappuccino,Night,Thu,May
+18,32.82,Americano with Milk,Night,Thu,May
+19,37.72,Latte,Night,Thu,May
+19,37.72,Cappuccino,Night,Thu,May
+14,37.72,Latte,Afternoon,Fri,May
+17,37.72,Latte,Night,Fri,May
+10,27.92,Americano,Morning,Mon,May
+10,37.72,Cappuccino,Morning,Mon,May
+10,32.82,Americano with Milk,Morning,Mon,May
+10,27.92,Americano,Morning,Mon,May
+10,27.92,Cortado,Morning,Mon,May
+13,27.92,Cortado,Afternoon,Mon,May
+13,27.92,Americano,Afternoon,Mon,May
+19,37.72,Cappuccino,Night,Mon,May
+19,37.72,Cappuccino,Night,Mon,May
+10,37.72,Cocoa,Morning,Tue,May
+11,27.92,Cortado,Morning,Tue,May
+13,27.92,Cortado,Afternoon,Tue,May
+16,37.72,Cocoa,Afternoon,Tue,May
+16,27.92,Americano,Afternoon,Tue,May
+17,37.72,Cappuccino,Night,Tue,May
+17,37.72,Latte,Night,Tue,May
+19,37.72,Cappuccino,Night,Tue,May
+19,37.72,Cappuccino,Night,Tue,May
+10,37.72,Latte,Morning,Wed,May
+12,37.72,Cappuccino,Afternoon,Thu,May
+13,27.92,Americano,Afternoon,Thu,May
+13,37.72,Latte,Afternoon,Thu,May
+13,37.72,Latte,Afternoon,Thu,May
+13,37.72,Latte,Afternoon,Thu,May
+16,27.92,Americano,Afternoon,Thu,May
+16,27.92,Americano,Afternoon,Thu,May
+18,27.92,Americano,Night,Thu,May
+18,32.82,Americano with Milk,Night,Thu,May
+15,37.72,Latte,Afternoon,Fri,May
+15,37.72,Latte,Afternoon,Fri,May
+11,37.72,Latte,Morning,Sat,May
+17,32.82,Americano with Milk,Night,Sat,May
+17,37.72,Cocoa,Night,Sat,May
+17,37.72,Cappuccino,Night,Sat,May
+17,32.82,Americano with Milk,Night,Sat,May
+18,37.72,Cappuccino,Night,Sat,May
+19,37.72,Latte,Night,Sat,May
+10,37.72,Latte,Morning,Sun,May
+13,37.72,Latte,Afternoon,Sun,May
+13,27.92,Americano,Afternoon,Sun,May
+15,37.72,Latte,Afternoon,Sun,May
+15,32.82,Americano with Milk,Afternoon,Sun,May
+15,32.82,Americano with Milk,Afternoon,Sun,May
+16,32.82,Americano with Milk,Afternoon,Sun,May
+19,32.82,Americano with Milk,Night,Sun,May
+11,32.82,Americano with Milk,Morning,Mon,May
+8,27.92,Americano,Morning,Tue,May
+8,27.92,Americano,Morning,Tue,May
+8,27.92,Americano,Morning,Tue,May
+10,37.72,Cappuccino,Morning,Tue,May
+11,37.72,Latte,Morning,Tue,May
+11,37.72,Cappuccino,Morning,Tue,May
+14,37.72,Cappuccino,Afternoon,Tue,May
+14,32.82,Americano with Milk,Afternoon,Tue,May
+15,27.92,Americano,Afternoon,Tue,May
+16,32.82,Americano with Milk,Afternoon,Tue,May
+16,37.72,Cappuccino,Afternoon,Tue,May
+22,37.72,Hot Chocolate,Night,Tue,May
+8,37.72,Latte,Morning,Wed,May
+11,23.02,Espresso,Morning,Wed,May
+11,27.92,Americano,Morning,Wed,May
+13,27.92,Americano,Afternoon,Wed,May
+13,27.92,Americano,Afternoon,Wed,May
+13,27.92,Americano,Afternoon,Wed,May
+13,32.82,Americano with Milk,Afternoon,Wed,May
+14,27.92,Cortado,Afternoon,Wed,May
+14,27.92,Cortado,Afternoon,Wed,May
+17,23.02,Espresso,Night,Wed,May
+20,37.72,Cappuccino,Night,Wed,May
+10,32.82,Americano with Milk,Morning,Thu,May
+10,32.82,Americano with Milk,Morning,Thu,May
+12,32.82,Americano with Milk,Afternoon,Thu,May
+15,37.72,Hot Chocolate,Afternoon,Thu,May
+17,37.72,Latte,Night,Thu,May
+18,37.72,Hot Chocolate,Night,Thu,May
+18,37.72,Latte,Night,Thu,May
+9,27.92,Americano,Morning,Fri,May
+11,32.82,Americano with Milk,Morning,Fri,May
+19,32.82,Americano with Milk,Night,Fri,May
+19,37.72,Cappuccino,Night,Fri,May
+20,37.72,Cappuccino,Night,Fri,May
+22,27.92,Americano,Night,Fri,May
+22,37.72,Latte,Night,Fri,May
+22,37.72,Latte,Night,Fri,May
+8,37.72,Cappuccino,Morning,Sat,May
+8,37.72,Cappuccino,Morning,Sat,May
+11,32.82,Americano with Milk,Morning,Sat,May
+16,32.82,Americano with Milk,Afternoon,Sat,May
+16,32.82,Americano with Milk,Afternoon,Sat,May
+19,32.82,Americano with Milk,Night,Sat,May
+20,37.72,Latte,Night,Sat,May
+7,27.92,Americano,Morning,Sun,May
+7,27.92,Americano,Morning,Sun,May
+8,37.72,Cappuccino,Morning,Sun,May
+12,32.82,Americano with Milk,Afternoon,Sun,May
+14,27.92,Americano,Afternoon,Sun,May
+15,32.82,Americano with Milk,Afternoon,Sun,May
+18,32.82,Americano with Milk,Night,Sun,May
+18,23.02,Espresso,Night,Sun,May
+18,37.72,Hot Chocolate,Night,Sun,May
+19,37.72,Cappuccino,Night,Sun,May
+21,37.72,Cappuccino,Night,Sun,May
+21,37.72,Cappuccino,Night,Sun,May
+10,32.82,Americano with Milk,Morning,Mon,May
+10,37.72,Latte,Morning,Mon,May
+10,37.72,Latte,Morning,Mon,May
+11,27.92,Americano,Morning,Mon,May
+11,27.92,Americano,Morning,Mon,May
+13,27.92,Americano,Afternoon,Mon,May
+13,27.92,Americano,Afternoon,Mon,May
+14,32.82,Americano with Milk,Afternoon,Mon,May
+14,37.72,Cappuccino,Afternoon,Mon,May
+17,37.72,Latte,Night,Mon,May
+17,37.72,Latte,Night,Mon,May
+20,32.82,Americano with Milk,Night,Mon,May
+20,37.72,Cocoa,Night,Mon,May
+20,27.92,Cortado,Night,Mon,May
+21,32.82,Americano with Milk,Night,Mon,May
+21,32.82,Americano with Milk,Night,Mon,May
+8,37.72,Latte,Morning,Tue,May
+16,37.72,Latte,Afternoon,Tue,May
+18,23.02,Espresso,Night,Tue,May
+19,37.72,Cappuccino,Night,Tue,May
+20,37.72,Cappuccino,Night,Tue,May
+9,37.72,Cappuccino,Morning,Wed,May
+10,32.82,Americano with Milk,Morning,Wed,May
+11,27.92,Cortado,Morning,Wed,May
+11,32.82,Americano with Milk,Morning,Wed,May
+12,27.92,Americano,Afternoon,Wed,May
+12,27.92,Americano,Afternoon,Wed,May
+14,32.82,Americano with Milk,Afternoon,Wed,May
+19,37.72,Cappuccino,Night,Wed,May
+19,37.72,Cappuccino,Night,Wed,May
+21,37.72,Hot Chocolate,Night,Wed,May
+21,37.72,Cappuccino,Night,Wed,May
+10,37.72,Cappuccino,Morning,Thu,May
+12,23.02,Espresso,Afternoon,Thu,May
+15,37.72,Cappuccino,Afternoon,Thu,May
+15,37.72,Cappuccino,Afternoon,Thu,May
+16,37.72,Cappuccino,Afternoon,Thu,May
+16,37.72,Latte,Afternoon,Thu,May
+17,37.72,Cappuccino,Night,Thu,May
+17,37.72,Latte,Night,Thu,May
+19,27.92,Cortado,Night,Thu,May
+19,37.72,Cappuccino,Night,Thu,May
+19,37.72,Cappuccino,Night,Thu,May
+19,37.72,Cappuccino,Night,Thu,May
+20,37.72,Cappuccino,Night,Thu,May
+20,37.72,Latte,Night,Thu,May
+22,32.82,Americano with Milk,Night,Thu,May
+11,27.92,Cortado,Morning,Fri,May
+11,27.92,Americano,Morning,Fri,May
+11,27.92,Americano,Morning,Fri,May
+16,37.72,Hot Chocolate,Afternoon,Fri,May
+18,27.92,Cortado,Night,Fri,May
+18,27.92,Cortado,Night,Fri,May
+22,32.82,Americano with Milk,Night,Fri,May
+12,37.72,Latte,Afternoon,Sat,May
+12,32.82,Americano with Milk,Afternoon,Sat,May
+12,32.82,Americano with Milk,Afternoon,Sat,May
+12,32.82,Americano with Milk,Afternoon,Sat,May
+16,32.82,Americano with Milk,Afternoon,Sat,May
+16,27.92,Americano,Afternoon,Sat,May
+10,37.72,Latte,Morning,Sun,May
+14,32.82,Americano with Milk,Afternoon,Sun,May
+14,27.92,Cortado,Afternoon,Sun,May
+14,32.82,Americano with Milk,Afternoon,Sun,May
+17,37.72,Cappuccino,Night,Sun,May
+18,37.72,Hot Chocolate,Night,Sun,May
+18,37.72,Hot Chocolate,Night,Sun,May
+18,27.92,Americano,Night,Sun,May
+18,37.72,Latte,Night,Sun,May
+20,37.72,Hot Chocolate,Night,Sun,May
+21,37.72,Cappuccino,Night,Sun,May
+21,27.92,Cortado,Night,Sun,May
+21,37.72,Cappuccino,Night,Sun,May
+21,37.72,Latte,Night,Sun,May
+21,37.72,Cappuccino,Night,Sun,May
+11,27.92,Americano,Morning,Mon,May
+14,32.82,Americano with Milk,Afternoon,Mon,May
+14,37.72,Cocoa,Afternoon,Mon,May
+15,27.92,Americano,Afternoon,Mon,May
+15,27.92,Americano,Afternoon,Mon,May
+17,37.72,Latte,Night,Mon,May
+18,27.92,Americano,Night,Mon,May
+19,37.72,Latte,Night,Mon,May
+19,37.72,Latte,Night,Mon,May
+21,32.82,Americano with Milk,Night,Mon,May
+21,37.72,Cappuccino,Night,Mon,May
+8,32.82,Americano with Milk,Morning,Tue,May
+9,32.82,Americano with Milk,Morning,Tue,May
+11,37.72,Cappuccino,Morning,Tue,May
+13,37.72,Cappuccino,Afternoon,Tue,May
+14,37.72,Cocoa,Afternoon,Tue,May
+16,27.92,Cortado,Afternoon,Tue,May
+19,27.92,Americano,Night,Tue,May
+19,37.72,Latte,Night,Tue,May
+20,32.82,Americano with Milk,Night,Tue,May
+20,27.92,Americano,Night,Tue,May
+9,37.72,Latte,Morning,Wed,May
+11,37.72,Hot Chocolate,Morning,Wed,May
+15,27.92,Americano,Afternoon,Wed,May
+15,37.72,Latte,Afternoon,Wed,May
+15,37.72,Cappuccino,Afternoon,Wed,May
+16,37.72,Latte,Afternoon,Wed,May
+18,27.92,Cortado,Night,Wed,May
+18,37.72,Latte,Night,Wed,May
+20,37.72,Hot Chocolate,Night,Wed,May
+20,37.72,Cocoa,Night,Wed,May
+8,37.72,Cappuccino,Morning,Thu,May
+8,37.72,Latte,Morning,Thu,May
+8,32.82,Americano with Milk,Morning,Thu,May
+9,37.72,Latte,Morning,Thu,May
+14,32.82,Americano with Milk,Afternoon,Thu,May
+15,23.02,Espresso,Afternoon,Thu,May
+15,23.02,Espresso,Afternoon,Thu,May
+19,37.72,Cappuccino,Night,Thu,May
+20,37.72,Latte,Night,Thu,May
+20,37.72,Hot Chocolate,Night,Thu,May
+20,32.82,Americano with Milk,Night,Thu,May
+7,32.82,Americano with Milk,Morning,Fri,May
+9,37.72,Latte,Morning,Fri,May
+10,37.72,Hot Chocolate,Morning,Fri,May
+10,37.72,Cocoa,Morning,Fri,May
+14,32.82,Americano with Milk,Afternoon,Fri,May
+18,37.72,Latte,Night,Fri,May
+18,37.72,Latte,Night,Fri,May
+20,37.72,Cappuccino,Night,Fri,May
+20,32.82,Americano with Milk,Night,Fri,May
+20,37.72,Latte,Night,Fri,May
+22,37.72,Cappuccino,Night,Fri,May
+22,32.82,Americano with Milk,Night,Fri,May
+22,27.92,Cortado,Night,Fri,May
+8,27.92,Cortado,Morning,Sat,Jun
+9,37.72,Latte,Morning,Sat,Jun
+11,37.72,Latte,Morning,Sat,Jun
+14,32.82,Americano with Milk,Afternoon,Sat,Jun
+18,32.82,Americano with Milk,Night,Sat,Jun
+18,32.82,Americano with Milk,Night,Sat,Jun
+20,37.72,Cappuccino,Night,Sat,Jun
+20,37.72,Cappuccino,Night,Sat,Jun
+20,37.72,Cocoa,Night,Sat,Jun
+21,32.82,Americano with Milk,Night,Sat,Jun
+20,37.72,Latte,Night,Sun,Jun
+20,32.82,Americano with Milk,Night,Sun,Jun
+20,37.72,Cappuccino,Night,Sun,Jun
+21,32.82,Americano with Milk,Night,Sun,Jun
+21,37.72,Latte,Night,Sun,Jun
+10,37.72,Latte,Morning,Mon,Jun
+10,37.72,Latte,Morning,Mon,Jun
+14,37.72,Cappuccino,Afternoon,Mon,Jun
+14,32.82,Americano with Milk,Afternoon,Mon,Jun
+14,37.72,Latte,Afternoon,Mon,Jun
+9,27.92,Cortado,Morning,Tue,Jun
+10,32.82,Americano with Milk,Morning,Tue,Jun
+12,37.72,Latte,Afternoon,Tue,Jun
+12,37.72,Hot Chocolate,Afternoon,Tue,Jun
+15,37.72,Latte,Afternoon,Tue,Jun
+17,27.92,Cortado,Night,Tue,Jun
+17,37.72,Cappuccino,Night,Tue,Jun
+20,37.72,Hot Chocolate,Night,Tue,Jun
+20,37.72,Cappuccino,Night,Tue,Jun
+21,27.92,Cortado,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+8,37.72,Cappuccino,Morning,Wed,Jun
+8,37.72,Cappuccino,Morning,Wed,Jun
+9,27.92,Americano,Morning,Wed,Jun
+10,37.72,Latte,Morning,Wed,Jun
+10,32.82,Americano with Milk,Morning,Wed,Jun
+19,32.82,Americano with Milk,Night,Wed,Jun
+19,37.72,Latte,Night,Wed,Jun
+20,37.72,Cocoa,Night,Wed,Jun
+20,27.92,Cortado,Night,Wed,Jun
+8,32.82,Americano with Milk,Morning,Thu,Jun
+8,32.82,Americano with Milk,Morning,Thu,Jun
+10,37.72,Latte,Morning,Thu,Jun
+12,27.92,Americano,Afternoon,Thu,Jun
+15,32.82,Americano with Milk,Afternoon,Thu,Jun
+15,37.72,Cappuccino,Afternoon,Thu,Jun
+21,37.72,Latte,Night,Thu,Jun
+21,37.72,Latte,Night,Thu,Jun
+21,37.72,Cappuccino,Night,Thu,Jun
+21,32.82,Americano with Milk,Night,Thu,Jun
+21,37.72,Latte,Night,Thu,Jun
+8,37.72,Cappuccino,Morning,Fri,Jun
+10,23.02,Espresso,Morning,Fri,Jun
+13,32.82,Americano with Milk,Afternoon,Fri,Jun
+16,27.92,Cortado,Afternoon,Fri,Jun
+16,27.92,Cortado,Afternoon,Fri,Jun
+9,27.92,Cortado,Morning,Sat,Jun
+9,32.82,Americano with Milk,Morning,Sat,Jun
+20,37.72,Cappuccino,Night,Sat,Jun
+20,37.72,Cappuccino,Night,Sat,Jun
+8,37.72,Latte,Morning,Sun,Jun
+10,37.72,Latte,Morning,Sun,Jun
+10,37.72,Cappuccino,Morning,Sun,Jun
+11,27.92,Cortado,Morning,Sun,Jun
+11,23.02,Espresso,Morning,Sun,Jun
+11,37.72,Cappuccino,Morning,Sun,Jun
+12,32.82,Americano with Milk,Afternoon,Sun,Jun
+12,37.72,Latte,Afternoon,Sun,Jun
+12,37.72,Latte,Afternoon,Sun,Jun
+15,27.92,Cortado,Afternoon,Sun,Jun
+16,37.72,Cappuccino,Afternoon,Sun,Jun
+19,32.82,Americano with Milk,Night,Sun,Jun
+21,27.92,Americano,Night,Sun,Jun
+12,37.72,Cappuccino,Afternoon,Mon,Jun
+12,37.72,Latte,Afternoon,Mon,Jun
+19,37.72,Hot Chocolate,Night,Mon,Jun
+19,37.72,Hot Chocolate,Night,Mon,Jun
+19,37.72,Latte,Night,Mon,Jun
+19,37.72,Latte,Night,Mon,Jun
+10,32.82,Americano with Milk,Morning,Tue,Jun
+18,37.72,Latte,Night,Tue,Jun
+18,37.72,Latte,Night,Tue,Jun
+21,37.72,Hot Chocolate,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+10,37.72,Hot Chocolate,Morning,Wed,Jun
+11,37.72,Cappuccino,Morning,Wed,Jun
+17,37.72,Latte,Night,Wed,Jun
+17,37.72,Latte,Night,Wed,Jun
+20,37.72,Hot Chocolate,Night,Wed,Jun
+20,32.82,Americano with Milk,Night,Wed,Jun
+8,27.92,Americano,Morning,Thu,Jun
+8,37.72,Latte,Morning,Thu,Jun
+9,32.82,Americano with Milk,Morning,Thu,Jun
+9,27.92,Cortado,Morning,Thu,Jun
+17,32.82,Americano with Milk,Night,Thu,Jun
+17,37.72,Hot Chocolate,Night,Thu,Jun
+19,37.72,Latte,Night,Thu,Jun
+20,32.82,Americano with Milk,Night,Thu,Jun
+20,23.02,Espresso,Night,Thu,Jun
+20,23.02,Espresso,Night,Thu,Jun
+20,32.82,Americano with Milk,Night,Thu,Jun
+21,32.82,Americano with Milk,Night,Thu,Jun
+7,27.92,Cortado,Morning,Fri,Jun
+10,27.92,Americano,Morning,Fri,Jun
+12,37.72,Latte,Afternoon,Fri,Jun
+18,32.82,Americano with Milk,Night,Fri,Jun
+11,37.72,Cappuccino,Morning,Sat,Jun
+12,37.72,Latte,Afternoon,Sat,Jun
+12,32.82,Americano with Milk,Afternoon,Sat,Jun
+12,23.02,Espresso,Afternoon,Sat,Jun
+12,37.72,Cocoa,Afternoon,Sat,Jun
+12,32.82,Americano with Milk,Afternoon,Sat,Jun
+16,32.82,Americano with Milk,Afternoon,Sat,Jun
+18,27.92,Americano,Night,Sat,Jun
+10,32.82,Americano with Milk,Morning,Sun,Jun
+10,37.72,Latte,Morning,Sun,Jun
+11,37.72,Hot Chocolate,Morning,Sun,Jun
+11,37.72,Hot Chocolate,Morning,Sun,Jun
+12,32.82,Americano with Milk,Afternoon,Sun,Jun
+14,23.02,Espresso,Afternoon,Sun,Jun
+15,32.82,Americano with Milk,Afternoon,Sun,Jun
+15,32.82,Americano with Milk,Afternoon,Sun,Jun
+15,37.72,Hot Chocolate,Afternoon,Sun,Jun
+16,37.72,Hot Chocolate,Afternoon,Sun,Jun
+17,32.82,Americano with Milk,Night,Sun,Jun
+17,32.82,Americano with Milk,Night,Sun,Jun
+8,27.92,Americano,Morning,Mon,Jun
+10,27.92,Cortado,Morning,Mon,Jun
+10,27.92,Cortado,Morning,Mon,Jun
+10,37.72,Cappuccino,Morning,Mon,Jun
+14,37.72,Cappuccino,Afternoon,Mon,Jun
+16,37.72,Cappuccino,Afternoon,Mon,Jun
+16,37.72,Cappuccino,Afternoon,Mon,Jun
+16,27.92,Americano,Afternoon,Mon,Jun
+18,27.92,Americano,Night,Mon,Jun
+21,32.82,Americano with Milk,Night,Mon,Jun
+14,27.92,Americano,Afternoon,Tue,Jun
+14,37.72,Cappuccino,Afternoon,Tue,Jun
+19,37.72,Cappuccino,Night,Tue,Jun
+19,37.72,Cappuccino,Night,Tue,Jun
+20,27.92,Cortado,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+21,32.82,Americano with Milk,Night,Tue,Jun
+7,37.72,Latte,Morning,Wed,Jun
+8,27.92,Cortado,Morning,Wed,Jun
+10,27.92,Americano,Morning,Wed,Jun
+11,37.72,Latte,Morning,Wed,Jun
+11,37.72,Cocoa,Morning,Wed,Jun
+14,32.82,Americano with Milk,Afternoon,Wed,Jun
+18,37.72,Cappuccino,Night,Wed,Jun
+18,37.72,Latte,Night,Wed,Jun
+19,32.82,Americano with Milk,Night,Wed,Jun
+21,37.72,Cappuccino,Night,Wed,Jun
+21,32.82,Americano with Milk,Night,Wed,Jun
+10,37.72,Latte,Morning,Thu,Jun
+18,37.72,Latte,Night,Thu,Jun
+19,37.72,Latte,Night,Thu,Jun
+21,37.72,Latte,Night,Thu,Jun
+21,37.72,Latte,Night,Thu,Jun
+21,32.82,Americano with Milk,Night,Thu,Jun
+9,37.72,Latte,Morning,Fri,Jun
+10,27.92,Americano,Morning,Fri,Jun
+13,32.82,Americano with Milk,Afternoon,Fri,Jun
+13,32.82,Americano with Milk,Afternoon,Fri,Jun
+18,23.02,Espresso,Night,Fri,Jun
+19,37.72,Latte,Night,Fri,Jun
+19,37.72,Cappuccino,Night,Fri,Jun
+19,37.72,Cappuccino,Night,Fri,Jun
+19,37.72,Cappuccino,Night,Fri,Jun
+19,37.72,Cappuccino,Night,Fri,Jun
+19,27.92,Americano,Night,Fri,Jun
+19,32.82,Americano with Milk,Night,Fri,Jun
+8,27.92,Cortado,Morning,Sat,Jun
+9,32.82,Americano with Milk,Morning,Sat,Jun
+12,32.82,Americano with Milk,Afternoon,Sat,Jun
+15,37.72,Latte,Afternoon,Sat,Jun
+22,37.72,Cappuccino,Night,Sat,Jun
+18,32.82,Americano with Milk,Night,Sun,Jun
+18,32.82,Americano with Milk,Night,Sun,Jun
+21,37.72,Cappuccino,Night,Sun,Jun
+21,37.72,Latte,Night,Sun,Jun
+21,37.72,Cappuccino,Night,Sun,Jun
+11,32.82,Americano with Milk,Morning,Mon,Jun
+11,37.72,Cappuccino,Morning,Mon,Jun
+11,37.72,Cappuccino,Morning,Mon,Jun
+15,37.72,Latte,Afternoon,Mon,Jun
+16,37.72,Cappuccino,Afternoon,Mon,Jun
+16,37.72,Cappuccino,Afternoon,Mon,Jun
+8,37.72,Latte,Morning,Tue,Jun
+10,32.82,Americano with Milk,Morning,Tue,Jun
+10,32.82,Americano with Milk,Morning,Tue,Jun
+11,37.72,Cappuccino,Morning,Tue,Jun
+9,37.72,Latte,Morning,Wed,Jun
+16,23.02,Espresso,Afternoon,Wed,Jun
+16,27.92,Americano,Afternoon,Wed,Jun
+21,37.72,Latte,Night,Wed,Jun
+21,37.72,Cappuccino,Night,Wed,Jun
+21,32.82,Americano with Milk,Night,Wed,Jun
+9,32.82,Americano with Milk,Morning,Thu,Jun
+16,27.92,Cortado,Afternoon,Thu,Jun
+21,32.82,Americano with Milk,Night,Thu,Jun
+21,37.72,Cappuccino,Night,Thu,Jun
+8,27.92,Cortado,Morning,Fri,Jun
+17,23.02,Espresso,Night,Fri,Jun
+21,32.82,Americano with Milk,Night,Fri,Jun
+21,37.72,Latte,Night,Fri,Jun
+22,37.72,Cappuccino,Night,Fri,Jun
+9,32.82,Americano with Milk,Morning,Sat,Jun
+11,32.82,Americano with Milk,Morning,Sat,Jun
+11,32.82,Americano with Milk,Morning,Sat,Jun
+12,37.72,Cappuccino,Afternoon,Sat,Jun
+12,37.72,Cappuccino,Afternoon,Sat,Jun
+17,37.72,Cappuccino,Night,Sat,Jun
+17,37.72,Hot Chocolate,Night,Sat,Jun
+21,37.72,Latte,Night,Sat,Jun
+10,37.72,Latte,Morning,Sun,Jun
+13,23.02,Espresso,Afternoon,Sun,Jun
+16,37.72,Hot Chocolate,Afternoon,Sun,Jun
+21,32.82,Americano with Milk,Night,Sun,Jun
+18,23.02,Espresso,Night,Mon,Jul
+18,37.72,Cappuccino,Night,Mon,Jul
+18,37.72,Cappuccino,Night,Mon,Jul
+10,32.82,Americano with Milk,Morning,Tue,Jul
+10,27.92,Americano,Morning,Tue,Jul
+12,37.72,Latte,Afternoon,Tue,Jul
+14,27.92,Americano,Afternoon,Tue,Jul
+16,32.82,Americano with Milk,Afternoon,Tue,Jul
+22,32.82,Americano with Milk,Night,Tue,Jul
+13,32.82,Americano with Milk,Afternoon,Wed,Jul
+16,37.72,Cappuccino,Afternoon,Wed,Jul
+16,37.72,Cappuccino,Afternoon,Wed,Jul
+16,32.82,Americano with Milk,Afternoon,Wed,Jul
+16,32.82,Americano with Milk,Afternoon,Wed,Jul
+16,37.72,Latte,Afternoon,Wed,Jul
+16,23.02,Espresso,Afternoon,Wed,Jul
+17,37.72,Cappuccino,Night,Wed,Jul
+19,37.72,Latte,Night,Wed,Jul
+10,32.82,Americano with Milk,Morning,Thu,Jul
+10,27.92,Americano,Morning,Thu,Jul
+12,37.72,Cocoa,Afternoon,Fri,Jul
+13,32.82,Americano with Milk,Afternoon,Fri,Jul
+13,32.82,Americano with Milk,Afternoon,Fri,Jul
+18,23.02,Espresso,Night,Fri,Jul
+19,27.92,Americano,Night,Fri,Jul
+22,23.02,Espresso,Night,Fri,Jul
+22,27.92,Americano,Night,Fri,Jul
+22,27.92,Americano,Night,Fri,Jul
+22,37.72,Cappuccino,Night,Fri,Jul
+22,32.82,Americano with Milk,Night,Fri,Jul
+10,37.72,Latte,Morning,Sat,Jul
+17,32.82,Latte,Night,Sat,Jul
+17,32.82,Latte,Night,Sat,Jul
+19,32.82,Latte,Night,Sat,Jul
+19,27.92,Americano with Milk,Night,Sat,Jul
+9,32.82,Cappuccino,Morning,Sun,Jul
+9,27.92,Americano with Milk,Morning,Sun,Jul
+9,27.92,Americano with Milk,Morning,Sun,Jul
+9,32.82,Cappuccino,Morning,Sun,Jul
+9,32.82,Cappuccino,Morning,Sun,Jul
+14,32.82,Hot Chocolate,Afternoon,Sun,Jul
+14,32.82,Cocoa,Afternoon,Sun,Jul
+17,32.82,Latte,Night,Sun,Jul
+19,32.82,Cappuccino,Night,Sun,Jul
+20,32.82,Hot Chocolate,Night,Sun,Jul
+22,27.92,Americano with Milk,Night,Sun,Jul
+7,32.82,Latte,Morning,Mon,Jul
+12,23.02,Americano,Afternoon,Mon,Jul
+14,23.02,Americano,Afternoon,Mon,Jul
+19,27.92,Americano with Milk,Night,Mon,Jul
+22,32.82,Latte,Night,Mon,Jul
+10,27.92,Americano with Milk,Morning,Tue,Jul
+10,27.92,Americano with Milk,Morning,Tue,Jul
+11,27.92,Americano with Milk,Morning,Tue,Jul
+11,32.82,Cappuccino,Morning,Tue,Jul
+16,27.92,Americano with Milk,Afternoon,Tue,Jul
+11,23.02,Americano,Morning,Wed,Jul
+12,27.92,Americano with Milk,Afternoon,Wed,Jul
+22,32.82,Latte,Night,Wed,Jul
+11,32.82,Hot Chocolate,Morning,Thu,Jul
+16,27.92,Americano with Milk,Afternoon,Thu,Jul
+22,32.82,Latte,Night,Thu,Jul
+22,23.02,Americano,Night,Thu,Jul
+8,23.02,Cortado,Morning,Fri,Jul
+11,32.82,Hot Chocolate,Morning,Fri,Jul
+22,32.82,Hot Chocolate,Night,Fri,Jul
+22,32.82,Hot Chocolate,Night,Fri,Jul
+22,32.82,Hot Chocolate,Night,Fri,Jul
+10,32.82,Latte,Morning,Sat,Jul
+11,32.82,Latte,Morning,Sat,Jul
+10,23.02,Americano,Morning,Sun,Jul
+10,27.92,Americano with Milk,Morning,Sun,Jul
+10,32.82,Cappuccino,Morning,Sun,Jul
+10,32.82,Latte,Morning,Sun,Jul
+11,23.02,Americano,Morning,Sun,Jul
+22,32.82,Latte,Night,Sun,Jul
+7,32.82,Cappuccino,Morning,Mon,Jul
+12,27.92,Americano with Milk,Afternoon,Tue,Jul
+19,32.82,Hot Chocolate,Night,Tue,Jul
+13,27.92,Americano with Milk,Afternoon,Wed,Jul
+11,27.92,Americano with Milk,Morning,Thu,Jul
+11,18.12,Espresso,Morning,Thu,Jul
+11,23.02,Americano,Morning,Thu,Jul
+11,23.02,Americano,Morning,Thu,Jul
+11,23.02,Cortado,Morning,Thu,Jul
+13,32.82,Latte,Afternoon,Thu,Jul
+18,32.82,Cappuccino,Night,Thu,Jul
+19,32.82,Latte,Night,Thu,Jul
+21,32.82,Hot Chocolate,Night,Thu,Jul
+21,32.82,Latte,Night,Thu,Jul
+21,32.82,Latte,Night,Thu,Jul
+11,23.02,Americano,Morning,Fri,Jul
+11,27.92,Americano with Milk,Morning,Fri,Jul
+12,32.82,Latte,Afternoon,Fri,Jul
+12,27.92,Americano with Milk,Afternoon,Fri,Jul
+14,32.82,Latte,Afternoon,Fri,Jul
+14,32.82,Cocoa,Afternoon,Fri,Jul
+16,32.82,Latte,Afternoon,Fri,Jul
+16,32.82,Latte,Afternoon,Fri,Jul
+8,23.02,Americano,Morning,Sat,Jul
+8,32.82,Latte,Morning,Sat,Jul
+8,23.02,Americano,Morning,Sat,Jul
+9,32.82,Latte,Morning,Sat,Jul
+9,32.82,Latte,Morning,Sat,Jul
+10,23.02,Americano,Morning,Sat,Jul
+15,32.82,Latte,Afternoon,Sat,Jul
+10,32.82,Cocoa,Morning,Sun,Jul
+11,32.82,Cappuccino,Morning,Sun,Jul
+13,23.02,Cortado,Afternoon,Sun,Jul
+13,32.82,Latte,Afternoon,Sun,Jul
+8,23.02,Americano,Morning,Mon,Jul
+8,23.02,Americano,Morning,Mon,Jul
+10,27.92,Americano with Milk,Morning,Mon,Jul
+16,32.82,Latte,Afternoon,Mon,Jul
+8,32.82,Latte,Morning,Tue,Jul
+8,23.02,Americano,Morning,Tue,Jul
+8,27.92,Americano with Milk,Morning,Tue,Jul
+8,32.82,Cocoa,Morning,Tue,Jul
+8,32.82,Latte,Morning,Tue,Jul
+9,23.02,Americano,Morning,Tue,Jul
+10,27.92,Americano with Milk,Morning,Tue,Jul
+15,27.92,Americano with Milk,Afternoon,Tue,Jul
+15,32.82,Latte,Afternoon,Tue,Jul
+21,32.82,Latte,Night,Tue,Jul
+21,23.02,Americano,Night,Tue,Jul
+21,23.02,Americano,Night,Tue,Jul
+9,27.92,Americano with Milk,Morning,Wed,Jul
+9,27.92,Americano with Milk,Morning,Wed,Jul
+9,18.12,Espresso,Morning,Wed,Jul
+11,32.82,Cappuccino,Morning,Wed,Jul
+13,32.82,Latte,Afternoon,Wed,Jul
+14,18.12,Espresso,Afternoon,Wed,Jul
+15,32.82,Latte,Afternoon,Wed,Jul
+19,32.82,Cappuccino,Night,Wed,Jul
+19,32.82,Cappuccino,Night,Wed,Jul
+21,27.92,Americano with Milk,Night,Wed,Jul
+21,23.02,Americano,Night,Wed,Jul
+21,23.02,Americano,Night,Wed,Jul
+7,23.02,Americano,Morning,Thu,Jul
+8,32.82,Latte,Morning,Thu,Jul
+10,27.92,Americano with Milk,Morning,Thu,Jul
+11,23.02,Americano,Morning,Thu,Jul
+15,32.82,Cappuccino,Afternoon,Thu,Jul
+19,32.82,Cappuccino,Night,Thu,Jul
+21,23.02,Cortado,Night,Thu,Jul
+21,18.12,Espresso,Night,Thu,Jul
+22,23.02,Cortado,Night,Thu,Jul
+22,32.82,Cocoa,Night,Thu,Jul
+8,32.82,Latte,Morning,Fri,Jul
+9,27.92,Americano with Milk,Morning,Fri,Jul
+9,18.12,Espresso,Morning,Fri,Jul
+9,23.02,Cortado,Morning,Fri,Jul
+9,23.02,Cortado,Morning,Fri,Jul
+9,32.82,Latte,Morning,Fri,Jul
+10,32.82,Latte,Morning,Fri,Jul
+11,27.92,Americano with Milk,Morning,Fri,Jul
+12,27.92,Americano with Milk,Afternoon,Fri,Jul
+12,32.82,Cappuccino,Afternoon,Fri,Jul
+12,32.82,Cappuccino,Afternoon,Fri,Jul
+13,32.82,Latte,Afternoon,Fri,Jul
+17,23.02,Americano,Night,Fri,Jul
+17,32.82,Cappuccino,Night,Fri,Jul
+21,32.82,Latte,Night,Fri,Jul
+22,27.92,Americano with Milk,Night,Fri,Jul
+9,32.82,Cappuccino,Morning,Sat,Jul
+11,27.92,Americano with Milk,Morning,Sat,Jul
+12,27.92,Americano with Milk,Afternoon,Sat,Jul
+12,18.12,Espresso,Afternoon,Sat,Jul
+12,27.92,Americano with Milk,Afternoon,Sat,Jul
+14,18.12,Espresso,Afternoon,Sat,Jul
+14,32.82,Latte,Afternoon,Sat,Jul
+17,32.82,Cappuccino,Night,Sat,Jul
+17,32.82,Cappuccino,Night,Sat,Jul
+17,27.92,Americano with Milk,Night,Sat,Jul
+17,27.92,Americano with Milk,Night,Sat,Jul
+20,32.82,Latte,Night,Sat,Jul
+22,32.82,Cappuccino,Night,Sat,Jul
+11,18.12,Espresso,Morning,Sun,Jul
+14,27.92,Americano with Milk,Afternoon,Sun,Jul
+14,32.82,Latte,Afternoon,Sun,Jul
+8,32.82,Latte,Morning,Mon,Jul
+9,23.02,Americano,Morning,Mon,Jul
+9,27.92,Americano with Milk,Morning,Mon,Jul
+9,23.02,Americano,Morning,Mon,Jul
+9,27.92,Americano with Milk,Morning,Mon,Jul
+9,32.82,Cappuccino,Morning,Mon,Jul
+10,32.82,Hot Chocolate,Morning,Mon,Jul
+10,32.82,Hot Chocolate,Morning,Mon,Jul
+19,32.82,Cappuccino,Night,Mon,Jul
+19,23.02,Americano,Night,Mon,Jul
+21,32.82,Cocoa,Night,Mon,Jul
+7,27.92,Americano with Milk,Morning,Tue,Jul
+8,23.02,Cortado,Morning,Tue,Jul
+8,32.82,Cappuccino,Morning,Tue,Jul
+9,27.92,Americano with Milk,Morning,Tue,Jul
+10,23.02,Cortado,Morning,Tue,Jul
+10,27.92,Americano with Milk,Morning,Tue,Jul
+10,32.82,Latte,Morning,Tue,Jul
+11,23.02,Americano,Morning,Tue,Jul
+11,18.12,Espresso,Morning,Tue,Jul
+11,27.92,Americano with Milk,Morning,Tue,Jul
+11,27.92,Americano with Milk,Morning,Tue,Jul
+11,27.92,Americano with Milk,Morning,Tue,Jul
+11,27.92,Americano with Milk,Morning,Tue,Jul
+12,32.82,Latte,Afternoon,Tue,Jul
+15,27.92,Americano with Milk,Afternoon,Tue,Jul
+16,23.02,Cortado,Afternoon,Tue,Jul
+16,27.92,Americano with Milk,Afternoon,Tue,Jul
+20,18.12,Espresso,Night,Tue,Jul
+20,27.92,Americano with Milk,Night,Tue,Jul
+20,27.92,Americano with Milk,Night,Tue,Jul
+20,27.92,Americano with Milk,Night,Tue,Jul
+21,32.82,Latte,Night,Tue,Jul
+22,23.02,Americano,Night,Tue,Jul
+22,32.82,Cappuccino,Night,Tue,Jul
+7,27.92,Americano with Milk,Morning,Wed,Jul
+8,27.92,Americano with Milk,Morning,Wed,Jul
+8,27.92,Americano with Milk,Morning,Wed,Jul
+9,23.02,Americano,Morning,Wed,Jul
+9,23.02,Americano,Morning,Wed,Jul
+9,27.92,Americano with Milk,Morning,Wed,Jul
+13,32.82,Cocoa,Afternoon,Wed,Jul
+13,32.82,Latte,Afternoon,Wed,Jul
+13,27.92,Americano with Milk,Afternoon,Wed,Jul
+17,23.02,Cortado,Night,Wed,Jul
+18,32.82,Latte,Night,Wed,Jul
+19,23.02,Cortado,Night,Wed,Jul
+19,32.82,Latte,Night,Wed,Jul
+20,32.82,Cocoa,Night,Wed,Jul
+20,23.02,Cortado,Night,Wed,Jul
+20,32.82,Latte,Night,Wed,Jul
+20,32.82,Cappuccino,Night,Wed,Jul
+20,23.02,Cortado,Night,Wed,Jul
+20,27.92,Americano with Milk,Night,Wed,Jul
+21,32.82,Latte,Night,Wed,Jul
+21,32.82,Latte,Night,Wed,Jul
+21,32.82,Latte,Night,Wed,Jul
+7,27.92,Americano with Milk,Morning,Thu,Aug
+9,27.92,Americano with Milk,Morning,Thu,Aug
+11,27.92,Americano with Milk,Morning,Thu,Aug
+11,27.92,Americano with Milk,Morning,Thu,Aug
+13,23.02,Cortado,Afternoon,Thu,Aug
+13,32.82,Cappuccino,Afternoon,Thu,Aug
+13,32.82,Cappuccino,Afternoon,Thu,Aug
+15,27.92,Americano with Milk,Afternoon,Thu,Aug
+16,27.92,Americano with Milk,Afternoon,Thu,Aug
+16,23.02,Americano,Afternoon,Thu,Aug
+17,23.02,Americano,Night,Thu,Aug
+20,32.82,Cappuccino,Night,Thu,Aug
+9,27.92,Americano with Milk,Morning,Fri,Aug
+9,27.92,Americano with Milk,Morning,Fri,Aug
+11,23.02,Cortado,Morning,Fri,Aug
+18,27.92,Americano with Milk,Night,Fri,Aug
+21,32.82,Latte,Night,Fri,Aug
+8,27.92,Americano with Milk,Morning,Sat,Aug
+9,27.92,Americano with Milk,Morning,Sat,Aug
+9,27.92,Americano with Milk,Morning,Sat,Aug
+10,27.92,Americano with Milk,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+11,18.12,Espresso,Morning,Sat,Aug
+11,27.92,Americano with Milk,Morning,Sat,Aug
+12,27.92,Americano with Milk,Afternoon,Sat,Aug
+16,27.92,Americano with Milk,Afternoon,Sat,Aug
+18,32.82,Cappuccino,Night,Sat,Aug
+21,32.82,Latte,Night,Sat,Aug
+21,32.82,Latte,Night,Sat,Aug
+8,32.82,Cappuccino,Morning,Sun,Aug
+10,27.92,Americano with Milk,Morning,Sun,Aug
+11,32.82,Cappuccino,Morning,Sun,Aug
+11,27.92,Americano with Milk,Morning,Sun,Aug
+15,32.82,Cappuccino,Afternoon,Sun,Aug
+15,32.82,Cappuccino,Afternoon,Sun,Aug
+8,23.02,Cortado,Morning,Mon,Aug
+9,27.92,Americano with Milk,Morning,Mon,Aug
+11,23.02,Cortado,Morning,Mon,Aug
+13,32.82,Cappuccino,Afternoon,Mon,Aug
+16,32.82,Latte,Afternoon,Mon,Aug
+16,32.82,Latte,Afternoon,Mon,Aug
+17,32.82,Latte,Night,Mon,Aug
+17,27.92,Americano with Milk,Night,Mon,Aug
+19,32.82,Latte,Night,Mon,Aug
+19,32.82,Latte,Night,Mon,Aug
+20,32.82,Cocoa,Night,Mon,Aug
+20,32.82,Cocoa,Night,Mon,Aug
+22,27.92,Americano with Milk,Night,Mon,Aug
+10,23.02,Cortado,Morning,Tue,Aug
+10,32.82,Hot Chocolate,Morning,Tue,Aug
+17,32.82,Cappuccino,Night,Tue,Aug
+17,32.82,Latte,Night,Tue,Aug
+17,32.82,Cocoa,Night,Tue,Aug
+19,32.82,Latte,Night,Tue,Aug
+19,27.92,Americano with Milk,Night,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+8,27.92,Americano with Milk,Morning,Wed,Aug
+12,23.02,Americano,Afternoon,Wed,Aug
+12,23.02,Americano,Afternoon,Wed,Aug
+13,18.12,Espresso,Afternoon,Wed,Aug
+16,23.02,Americano,Afternoon,Wed,Aug
+19,32.82,Latte,Night,Wed,Aug
+20,32.82,Cocoa,Night,Wed,Aug
+21,32.82,Cappuccino,Night,Wed,Aug
+22,32.82,Latte,Night,Wed,Aug
+22,32.82,Latte,Night,Wed,Aug
+8,18.12,Espresso,Morning,Thu,Aug
+8,23.02,Cortado,Morning,Thu,Aug
+12,27.92,Americano with Milk,Afternoon,Thu,Aug
+12,23.02,Cortado,Afternoon,Thu,Aug
+12,23.02,Cortado,Afternoon,Thu,Aug
+16,32.82,Cappuccino,Afternoon,Thu,Aug
+17,32.82,Cappuccino,Night,Thu,Aug
+21,27.92,Americano with Milk,Night,Thu,Aug
+7,32.82,Latte,Morning,Fri,Aug
+9,23.02,Americano,Morning,Fri,Aug
+10,23.02,Cortado,Morning,Fri,Aug
+10,27.92,Americano with Milk,Morning,Fri,Aug
+11,32.82,Latte,Morning,Fri,Aug
+11,23.02,Americano,Morning,Fri,Aug
+18,23.02,Americano,Night,Fri,Aug
+19,32.82,Hot Chocolate,Night,Fri,Aug
+8,32.82,Cappuccino,Morning,Sat,Aug
+8,27.92,Americano with Milk,Morning,Sat,Aug
+8,23.02,Cortado,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+11,23.02,Americano,Morning,Sat,Aug
+12,32.82,Latte,Afternoon,Sat,Aug
+12,27.92,Americano with Milk,Afternoon,Sat,Aug
+16,32.82,Latte,Afternoon,Sat,Aug
+21,32.82,Cocoa,Night,Sat,Aug
+21,32.82,Cocoa,Night,Sat,Aug
+21,32.82,Cocoa,Night,Sat,Aug
+9,32.82,Latte,Morning,Sun,Aug
+9,32.82,Latte,Morning,Sun,Aug
+10,27.92,Americano with Milk,Morning,Sun,Aug
+11,32.82,Cappuccino,Morning,Sun,Aug
+11,27.92,Americano with Milk,Morning,Sun,Aug
+12,23.02,Cortado,Afternoon,Sun,Aug
+15,32.82,Latte,Afternoon,Sun,Aug
+15,27.92,Americano with Milk,Afternoon,Sun,Aug
+15,32.82,Cocoa,Afternoon,Sun,Aug
+16,32.82,Cappuccino,Afternoon,Sun,Aug
+16,18.12,Espresso,Afternoon,Sun,Aug
+21,23.02,Cortado,Night,Sun,Aug
+21,32.82,Latte,Night,Sun,Aug
+21,32.82,Latte,Night,Sun,Aug
+22,32.82,Cappuccino,Night,Sun,Aug
+8,32.82,Hot Chocolate,Morning,Mon,Aug
+11,27.92,Americano with Milk,Morning,Mon,Aug
+11,23.02,Americano,Morning,Mon,Aug
+11,32.82,Latte,Morning,Mon,Aug
+11,32.82,Latte,Morning,Mon,Aug
+14,18.12,Espresso,Afternoon,Mon,Aug
+14,27.92,Americano with Milk,Afternoon,Mon,Aug
+15,27.92,Americano with Milk,Afternoon,Mon,Aug
+18,27.92,Americano with Milk,Night,Mon,Aug
+21,27.92,Americano with Milk,Night,Mon,Aug
+21,32.82,Latte,Night,Mon,Aug
+22,32.82,Cappuccino,Night,Mon,Aug
+22,32.82,Cappuccino,Night,Mon,Aug
+8,27.92,Americano with Milk,Morning,Tue,Aug
+9,27.92,Americano with Milk,Morning,Tue,Aug
+9,27.92,Americano with Milk,Morning,Tue,Aug
+10,23.02,Cortado,Morning,Tue,Aug
+11,32.82,Latte,Morning,Tue,Aug
+13,27.92,Americano with Milk,Afternoon,Tue,Aug
+14,32.82,Latte,Afternoon,Tue,Aug
+15,32.82,Cappuccino,Afternoon,Tue,Aug
+15,27.92,Americano with Milk,Afternoon,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+20,32.82,Cocoa,Night,Tue,Aug
+20,32.82,Cappuccino,Night,Tue,Aug
+21,23.02,Cortado,Night,Tue,Aug
+7,32.82,Latte,Morning,Wed,Aug
+7,32.82,Cappuccino,Morning,Wed,Aug
+10,23.02,Cortado,Morning,Wed,Aug
+11,18.12,Espresso,Morning,Wed,Aug
+12,23.02,Americano,Afternoon,Wed,Aug
+12,23.02,Americano,Afternoon,Wed,Aug
+15,32.82,Latte,Afternoon,Wed,Aug
+17,23.02,Americano,Night,Wed,Aug
+18,23.02,Cortado,Night,Wed,Aug
+18,27.92,Americano with Milk,Night,Wed,Aug
+19,32.82,Latte,Night,Wed,Aug
+19,23.02,Cortado,Night,Wed,Aug
+21,32.82,Latte,Night,Wed,Aug
+9,23.02,Cortado,Morning,Thu,Aug
+9,32.82,Cappuccino,Morning,Thu,Aug
+9,32.82,Hot Chocolate,Morning,Thu,Aug
+9,32.82,Latte,Morning,Thu,Aug
+12,32.82,Latte,Afternoon,Thu,Aug
+13,32.82,Latte,Afternoon,Thu,Aug
+14,23.02,Americano,Afternoon,Thu,Aug
+14,18.12,Espresso,Afternoon,Thu,Aug
+17,27.92,Americano with Milk,Night,Thu,Aug
+19,32.82,Hot Chocolate,Night,Thu,Aug
+19,27.92,Americano with Milk,Night,Thu,Aug
+19,27.92,Americano with Milk,Night,Thu,Aug
+19,23.02,Americano,Night,Thu,Aug
+20,32.82,Cappuccino,Night,Thu,Aug
+21,18.12,Espresso,Night,Thu,Aug
+21,27.92,Americano with Milk,Night,Thu,Aug
+12,32.82,Latte,Afternoon,Fri,Aug
+12,23.02,Americano,Afternoon,Fri,Aug
+13,27.92,Americano with Milk,Afternoon,Fri,Aug
+15,18.12,Espresso,Afternoon,Fri,Aug
+15,18.12,Espresso,Afternoon,Fri,Aug
+9,27.92,Americano with Milk,Morning,Sat,Aug
+9,32.82,Cappuccino,Morning,Sat,Aug
+10,27.92,Americano with Milk,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+13,27.92,Americano with Milk,Afternoon,Sat,Aug
+16,23.02,Cortado,Afternoon,Sat,Aug
+16,32.82,Latte,Afternoon,Sat,Aug
+18,32.82,Cappuccino,Night,Sat,Aug
+21,27.92,Americano with Milk,Night,Sat,Aug
+22,32.82,Latte,Night,Sat,Aug
+8,32.82,Cappuccino,Morning,Sun,Aug
+8,32.82,Cappuccino,Morning,Sun,Aug
+8,23.02,Cortado,Morning,Sun,Aug
+8,27.92,Americano with Milk,Morning,Sun,Aug
+12,32.82,Cappuccino,Afternoon,Sun,Aug
+14,27.92,Americano with Milk,Afternoon,Sun,Aug
+18,27.92,Americano with Milk,Night,Sun,Aug
+18,27.92,Americano with Milk,Night,Sun,Aug
+18,23.02,Americano,Night,Sun,Aug
+18,23.02,Americano,Night,Sun,Aug
+15,27.92,Americano with Milk,Afternoon,Mon,Aug
+15,27.92,Americano with Milk,Afternoon,Mon,Aug
+21,32.82,Latte,Night,Mon,Aug
+21,32.82,Cocoa,Night,Mon,Aug
+8,23.02,Cortado,Morning,Tue,Aug
+8,32.82,Latte,Morning,Tue,Aug
+8,18.12,Espresso,Morning,Tue,Aug
+8,23.02,Cortado,Morning,Tue,Aug
+9,27.92,Americano with Milk,Morning,Tue,Aug
+11,23.02,Americano,Morning,Tue,Aug
+11,23.02,Americano,Morning,Tue,Aug
+11,23.02,Americano,Morning,Tue,Aug
+11,32.82,Latte,Morning,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+20,32.82,Latte,Night,Tue,Aug
+7,27.92,Americano with Milk,Morning,Wed,Aug
+8,23.02,Cortado,Morning,Wed,Aug
+10,23.02,Americano,Morning,Wed,Aug
+10,27.92,Americano with Milk,Morning,Wed,Aug
+11,23.02,Cortado,Morning,Wed,Aug
+13,32.82,Latte,Afternoon,Wed,Aug
+19,32.82,Latte,Night,Wed,Aug
+9,23.02,Cortado,Morning,Thu,Aug
+10,27.92,Americano with Milk,Morning,Thu,Aug
+10,27.92,Americano with Milk,Morning,Thu,Aug
+14,32.82,Latte,Afternoon,Thu,Aug
+14,32.82,Latte,Afternoon,Thu,Aug
+15,32.82,Cappuccino,Afternoon,Thu,Aug
+15,23.02,Americano,Afternoon,Thu,Aug
+7,32.82,Latte,Morning,Fri,Aug
+8,23.02,Cortado,Morning,Fri,Aug
+8,32.82,Latte,Morning,Fri,Aug
+8,23.02,Americano,Morning,Fri,Aug
+8,23.02,Americano,Morning,Fri,Aug
+9,27.92,Americano with Milk,Morning,Fri,Aug
+10,32.82,Cocoa,Morning,Fri,Aug
+10,23.02,Americano,Morning,Fri,Aug
+10,23.02,Cortado,Morning,Fri,Aug
+11,32.82,Hot Chocolate,Morning,Fri,Aug
+13,23.02,Americano,Afternoon,Fri,Aug
+15,23.02,Americano,Afternoon,Fri,Aug
+19,32.82,Latte,Night,Fri,Aug
+8,23.02,Cortado,Morning,Sat,Aug
+8,23.02,Cortado,Morning,Sat,Aug
+8,23.02,Cortado,Morning,Sat,Aug
+10,18.12,Espresso,Morning,Sat,Aug
+10,18.12,Espresso,Morning,Sat,Aug
+10,23.02,Americano,Morning,Sat,Aug
+8,23.02,Cortado,Morning,Sun,Aug
+8,23.02,Americano,Morning,Sun,Aug
+8,23.02,Americano,Morning,Sun,Aug
+9,32.82,Cappuccino,Morning,Sun,Aug
+12,32.82,Cappuccino,Afternoon,Sun,Aug
+14,32.82,Latte,Afternoon,Sun,Aug
+8,23.02,Cortado,Morning,Mon,Aug
+8,23.02,Americano,Morning,Mon,Aug
+8,23.02,Americano,Morning,Mon,Aug
+9,27.92,Americano with Milk,Morning,Mon,Aug
+10,32.82,Latte,Morning,Mon,Aug
+10,32.82,Cappuccino,Morning,Mon,Aug
+12,23.02,Americano,Afternoon,Mon,Aug
+12,23.02,Americano,Afternoon,Mon,Aug
+18,27.92,Americano with Milk,Night,Mon,Aug
+18,32.82,Latte,Night,Mon,Aug
+22,27.92,Americano with Milk,Night,Mon,Aug
+10,32.82,Latte,Morning,Tue,Aug
+12,27.92,Americano with Milk,Afternoon,Wed,Aug
+12,32.82,Cappuccino,Afternoon,Wed,Aug
+12,23.02,Americano,Afternoon,Wed,Aug
+13,27.92,Americano with Milk,Afternoon,Wed,Aug
+7,23.02,Americano,Morning,Thu,Aug
+17,32.82,Latte,Night,Fri,Aug
+17,27.92,Americano with Milk,Night,Fri,Aug
+17,27.92,Americano with Milk,Night,Fri,Aug
+9,23.02,Cortado,Morning,Sat,Aug
+10,27.92,Americano with Milk,Morning,Sat,Aug
+10,18.12,Espresso,Morning,Sat,Aug
+11,27.92,Americano with Milk,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+11,23.02,Cortado,Morning,Sat,Aug
+9,23.02,Cortado,Morning,Sun,Sep
+12,32.82,Cappuccino,Afternoon,Sun,Sep
+12,27.92,Americano with Milk,Afternoon,Sun,Sep
+12,23.02,Americano,Afternoon,Sun,Sep
+12,27.92,Americano with Milk,Afternoon,Sun,Sep
+13,32.82,Latte,Afternoon,Sun,Sep
+14,27.92,Americano with Milk,Afternoon,Sun,Sep
+17,32.82,Latte,Night,Sun,Sep
+17,32.82,Latte,Night,Sun,Sep
+17,32.82,Latte,Night,Sun,Sep
+8,32.82,Latte,Morning,Mon,Sep
+8,27.92,Americano with Milk,Morning,Mon,Sep
+8,32.82,Latte,Morning,Mon,Sep
+14,27.92,Americano with Milk,Afternoon,Mon,Sep
+20,32.82,Cappuccino,Night,Mon,Sep
+20,32.82,Cocoa,Night,Mon,Sep
+20,23.02,Americano,Night,Mon,Sep
+20,23.02,Americano,Night,Mon,Sep
+8,32.82,Cocoa,Morning,Tue,Sep
+8,32.82,Cappuccino,Morning,Tue,Sep
+8,32.82,Latte,Morning,Tue,Sep
+9,27.92,Americano with Milk,Morning,Tue,Sep
+9,32.82,Cappuccino,Morning,Tue,Sep
+9,32.82,Cocoa,Morning,Tue,Sep
+9,32.82,Cocoa,Morning,Tue,Sep
+9,27.92,Americano with Milk,Morning,Tue,Sep
+9,27.92,Americano with Milk,Morning,Tue,Sep
+9,32.82,Latte,Morning,Tue,Sep
+9,32.82,Cocoa,Morning,Tue,Sep
+12,23.02,Cortado,Afternoon,Tue,Sep
+14,27.92,Americano with Milk,Afternoon,Tue,Sep
+14,27.92,Americano with Milk,Afternoon,Tue,Sep
+18,27.92,Americano with Milk,Night,Tue,Sep
+19,32.82,Latte,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+11,27.92,Americano with Milk,Morning,Wed,Sep
+11,32.82,Latte,Morning,Wed,Sep
+11,23.02,Americano,Morning,Wed,Sep
+11,27.92,Americano with Milk,Morning,Wed,Sep
+12,32.82,Latte,Afternoon,Wed,Sep
+13,32.82,Latte,Afternoon,Wed,Sep
+13,27.92,Americano with Milk,Afternoon,Wed,Sep
+18,32.82,Cappuccino,Night,Wed,Sep
+19,27.92,Americano with Milk,Night,Wed,Sep
+21,32.82,Latte,Night,Wed,Sep
+9,27.92,Americano with Milk,Morning,Thu,Sep
+10,27.92,Americano with Milk,Morning,Thu,Sep
+11,23.02,Americano,Morning,Thu,Sep
+14,32.82,Latte,Afternoon,Thu,Sep
+15,32.82,Latte,Afternoon,Thu,Sep
+16,23.02,Americano,Afternoon,Thu,Sep
+16,27.92,Americano with Milk,Afternoon,Thu,Sep
+17,32.82,Cappuccino,Night,Thu,Sep
+17,32.82,Cappuccino,Night,Thu,Sep
+20,32.82,Cappuccino,Night,Thu,Sep
+20,23.02,Americano,Night,Thu,Sep
+20,32.82,Cappuccino,Night,Thu,Sep
+21,27.92,Americano with Milk,Night,Thu,Sep
+21,27.92,Americano with Milk,Night,Thu,Sep
+8,32.82,Cappuccino,Morning,Fri,Sep
+8,32.82,Latte,Morning,Fri,Sep
+8,23.02,Americano,Morning,Fri,Sep
+9,18.12,Espresso,Morning,Fri,Sep
+9,32.82,Latte,Morning,Fri,Sep
+10,32.82,Hot Chocolate,Morning,Fri,Sep
+11,18.12,Espresso,Morning,Fri,Sep
+11,18.12,Espresso,Morning,Fri,Sep
+20,32.82,Latte,Night,Fri,Sep
+21,32.82,Latte,Night,Fri,Sep
+8,32.82,Latte,Morning,Sat,Sep
+9,23.02,Cortado,Morning,Sat,Sep
+9,23.02,Cortado,Morning,Sat,Sep
+9,23.02,Cortado,Morning,Sat,Sep
+9,27.92,Americano with Milk,Morning,Sat,Sep
+9,27.92,Americano with Milk,Morning,Sat,Sep
+10,23.02,Cortado,Morning,Sat,Sep
+10,23.02,Americano,Morning,Sat,Sep
+10,18.12,Espresso,Morning,Sat,Sep
+10,18.12,Espresso,Morning,Sat,Sep
+10,32.82,Latte,Morning,Sat,Sep
+11,27.92,Americano with Milk,Morning,Sat,Sep
+11,23.02,Americano,Morning,Sat,Sep
+11,18.12,Espresso,Morning,Sat,Sep
+15,32.82,Latte,Afternoon,Sat,Sep
+16,23.02,Americano,Afternoon,Sat,Sep
+16,18.12,Espresso,Afternoon,Sat,Sep
+19,32.82,Cocoa,Night,Sat,Sep
+19,32.82,Latte,Night,Sat,Sep
+19,32.82,Latte,Night,Sat,Sep
+20,32.82,Latte,Night,Sat,Sep
+20,32.82,Latte,Night,Sat,Sep
+8,23.02,Cortado,Morning,Sun,Sep
+9,23.02,Cortado,Morning,Sun,Sep
+9,23.02,Cortado,Morning,Sun,Sep
+10,23.02,Cortado,Morning,Sun,Sep
+12,23.02,Cortado,Afternoon,Sun,Sep
+20,23.02,Americano,Night,Sun,Sep
+7,32.82,Latte,Morning,Mon,Sep
+7,32.82,Cappuccino,Morning,Mon,Sep
+7,27.92,Americano with Milk,Morning,Mon,Sep
+7,32.82,Latte,Morning,Mon,Sep
+9,32.82,Latte,Morning,Mon,Sep
+9,32.82,Hot Chocolate,Morning,Mon,Sep
+9,32.82,Latte,Morning,Mon,Sep
+11,27.92,Americano with Milk,Morning,Mon,Sep
+11,27.92,Americano with Milk,Morning,Mon,Sep
+11,32.82,Latte,Morning,Mon,Sep
+12,18.12,Espresso,Afternoon,Mon,Sep
+15,32.82,Latte,Afternoon,Mon,Sep
+15,23.02,Americano,Afternoon,Mon,Sep
+17,32.82,Latte,Night,Mon,Sep
+18,32.82,Latte,Night,Mon,Sep
+20,32.82,Cappuccino,Night,Mon,Sep
+20,32.82,Latte,Night,Mon,Sep
+8,32.82,Hot Chocolate,Morning,Tue,Sep
+9,32.82,Cappuccino,Morning,Tue,Sep
+15,23.02,Cortado,Afternoon,Tue,Sep
+15,23.02,Cortado,Afternoon,Tue,Sep
+18,32.82,Cappuccino,Night,Tue,Sep
+18,27.92,Americano with Milk,Night,Tue,Sep
+19,32.82,Latte,Night,Tue,Sep
+19,32.82,Latte,Night,Tue,Sep
+21,27.92,Americano with Milk,Night,Tue,Sep
+21,23.02,Americano,Night,Tue,Sep
+8,32.82,Latte,Morning,Wed,Sep
+9,27.92,Americano with Milk,Morning,Wed,Sep
+10,32.82,Latte,Morning,Wed,Sep
+19,32.82,Cappuccino,Night,Wed,Sep
+20,27.92,Americano with Milk,Night,Wed,Sep
+20,32.82,Latte,Night,Wed,Sep
+20,32.82,Latte,Night,Wed,Sep
+21,23.02,Cortado,Night,Wed,Sep
+10,18.12,Espresso,Morning,Thu,Sep
+10,27.92,Americano with Milk,Morning,Thu,Sep
+11,27.92,Americano with Milk,Morning,Thu,Sep
+12,32.82,Cappuccino,Afternoon,Thu,Sep
+12,23.02,Cortado,Afternoon,Thu,Sep
+12,23.02,Cortado,Afternoon,Thu,Sep
+12,23.02,Cortado,Afternoon,Thu,Sep
+12,23.02,Cortado,Afternoon,Thu,Sep
+17,32.82,Latte,Night,Thu,Sep
+21,23.02,Americano,Night,Thu,Sep
+21,32.82,Cappuccino,Night,Thu,Sep
+21,23.02,Cortado,Night,Thu,Sep
+7,32.82,Latte,Morning,Fri,Sep
+8,32.82,Latte,Morning,Fri,Sep
+8,32.82,Latte,Morning,Fri,Sep
+9,32.82,Latte,Morning,Fri,Sep
+15,27.92,Americano with Milk,Afternoon,Fri,Sep
+15,27.92,Americano with Milk,Afternoon,Fri,Sep
+16,32.82,Cappuccino,Afternoon,Sat,Sep
+16,32.82,Cappuccino,Afternoon,Sat,Sep
+8,18.12,Espresso,Morning,Sun,Sep
+9,27.92,Americano with Milk,Morning,Sun,Sep
+13,23.02,Americano,Afternoon,Sun,Sep
+14,23.02,Cortado,Afternoon,Sun,Sep
+14,23.02,Cortado,Afternoon,Sun,Sep
+14,32.82,Cappuccino,Afternoon,Sun,Sep
+13,32.82,Latte,Afternoon,Mon,Sep
+13,27.92,Americano with Milk,Afternoon,Mon,Sep
+15,32.82,Latte,Afternoon,Mon,Sep
+17,27.92,Americano with Milk,Night,Mon,Sep
+17,32.82,Latte,Night,Mon,Sep
+18,32.82,Latte,Night,Mon,Sep
+18,32.82,Latte,Night,Mon,Sep
+21,27.92,Americano with Milk,Night,Mon,Sep
+21,32.82,Latte,Night,Mon,Sep
+21,27.92,Americano with Milk,Night,Mon,Sep
+21,27.92,Americano with Milk,Night,Mon,Sep
+7,23.02,Cortado,Morning,Tue,Sep
+8,32.82,Latte,Morning,Tue,Sep
+8,27.92,Americano with Milk,Morning,Tue,Sep
+8,23.02,Cortado,Morning,Tue,Sep
+9,32.82,Cappuccino,Morning,Tue,Sep
+9,27.92,Americano with Milk,Morning,Tue,Sep
+9,27.92,Americano with Milk,Morning,Tue,Sep
+12,18.12,Espresso,Afternoon,Tue,Sep
+12,27.92,Americano with Milk,Afternoon,Tue,Sep
+12,32.82,Latte,Afternoon,Tue,Sep
+13,27.92,Americano with Milk,Afternoon,Tue,Sep
+13,23.02,Cortado,Afternoon,Tue,Sep
+16,32.82,Cappuccino,Afternoon,Tue,Sep
+16,32.82,Latte,Afternoon,Tue,Sep
+18,32.82,Hot Chocolate,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+19,32.82,Latte,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+19,27.92,Americano with Milk,Night,Tue,Sep
+22,32.82,Hot Chocolate,Night,Tue,Sep
+22,32.82,Hot Chocolate,Night,Tue,Sep
+14,32.82,Latte,Afternoon,Wed,Sep
+17,32.82,Latte,Night,Wed,Sep
+21,27.92,Americano with Milk,Night,Wed,Sep
+21,27.92,Americano with Milk,Night,Wed,Sep
+8,27.92,Americano with Milk,Morning,Thu,Sep
+8,23.02,Cortado,Morning,Thu,Sep
+10,32.82,Latte,Morning,Thu,Sep
+12,23.02,Americano,Afternoon,Thu,Sep
+13,27.92,Americano with Milk,Afternoon,Thu,Sep
+13,23.02,Cortado,Afternoon,Thu,Sep
+8,27.92,Americano with Milk,Morning,Fri,Sep
+9,27.92,Americano with Milk,Morning,Fri,Sep
+13,27.92,Americano with Milk,Afternoon,Fri,Sep
+16,32.82,Latte,Afternoon,Fri,Sep
+20,23.02,Americano,Night,Fri,Sep
+21,27.92,Americano with Milk,Night,Fri,Sep
+21,27.92,Americano with Milk,Night,Fri,Sep
+11,32.82,Latte,Morning,Sat,Sep
+11,32.82,Cocoa,Morning,Sat,Sep
+11,23.02,Cortado,Morning,Sat,Sep
+11,23.02,Cortado,Morning,Sat,Sep
+15,32.82,Cappuccino,Afternoon,Sat,Sep
+15,32.82,Latte,Afternoon,Sat,Sep
+18,32.82,Latte,Night,Sat,Sep
+18,32.82,Latte,Night,Sat,Sep
+20,23.02,Americano,Night,Sat,Sep
+20,23.02,Americano,Night,Sat,Sep
+20,32.82,Latte,Night,Sat,Sep
+20,32.82,Latte,Night,Sat,Sep
+22,27.92,Americano with Milk,Night,Sat,Sep
+22,23.02,Americano,Night,Sat,Sep
+22,23.02,Americano,Night,Sat,Sep
+8,23.02,Americano,Morning,Sun,Sep
+10,27.92,Americano with Milk,Morning,Sun,Sep
+10,32.82,Latte,Morning,Sun,Sep
+11,23.02,Cortado,Morning,Sun,Sep
+11,23.02,Cortado,Morning,Sun,Sep
+11,27.92,Americano with Milk,Morning,Sun,Sep
+11,23.02,Americano,Morning,Sun,Sep
+12,27.92,Americano with Milk,Afternoon,Sun,Sep
+13,27.92,Americano with Milk,Afternoon,Sun,Sep
+13,27.92,Americano with Milk,Afternoon,Sun,Sep
+13,27.92,Americano with Milk,Afternoon,Sun,Sep
+15,32.82,Latte,Afternoon,Sun,Sep
+15,27.92,Americano with Milk,Afternoon,Sun,Sep
+16,32.82,Cocoa,Afternoon,Sun,Sep
+20,32.82,Latte,Night,Sun,Sep
+20,32.82,Cappuccino,Night,Sun,Sep
+20,27.92,Americano with Milk,Night,Sun,Sep
+20,27.92,Americano with Milk,Night,Sun,Sep
+21,27.92,Americano with Milk,Night,Sun,Sep
+21,27.92,Americano with Milk,Night,Sun,Sep
+21,32.82,Hot Chocolate,Night,Sun,Sep
+21,32.82,Hot Chocolate,Night,Sun,Sep
+22,23.02,Americano,Night,Sun,Sep
+22,27.92,Americano with Milk,Night,Sun,Sep
+9,27.92,Americano with Milk,Morning,Mon,Sep
+10,23.02,Cortado,Morning,Mon,Sep
+12,23.02,Americano,Afternoon,Mon,Sep
+14,27.92,Americano with Milk,Afternoon,Mon,Sep
+17,32.82,Cappuccino,Night,Mon,Sep
+18,23.02,Americano,Night,Mon,Sep
+19,32.82,Latte,Night,Mon,Sep
+20,32.82,Cappuccino,Night,Mon,Sep
+22,27.92,Americano with Milk,Night,Mon,Sep
+22,27.92,Americano with Milk,Night,Mon,Sep
+8,27.92,Americano with Milk,Morning,Tue,Sep
+12,32.82,Latte,Afternoon,Tue,Sep
+12,32.82,Latte,Afternoon,Tue,Sep
+12,32.82,Latte,Afternoon,Tue,Sep
+12,32.82,Latte,Afternoon,Tue,Sep
+14,32.82,Latte,Afternoon,Tue,Sep
+14,23.02,Cortado,Afternoon,Tue,Sep
+15,32.82,Cappuccino,Afternoon,Tue,Sep
+16,32.82,Latte,Afternoon,Tue,Sep
+18,23.02,Americano,Night,Tue,Sep
+18,23.02,Americano,Night,Tue,Sep
+20,32.82,Hot Chocolate,Night,Tue,Sep
+21,32.82,Latte,Night,Tue,Sep
+21,27.92,Americano with Milk,Night,Tue,Sep
+21,27.92,Americano with Milk,Night,Tue,Sep
+7,32.82,Cappuccino,Morning,Wed,Sep
+11,23.02,Cortado,Morning,Wed,Sep
+11,27.92,Americano with Milk,Morning,Wed,Sep
+11,32.82,Latte,Morning,Wed,Sep
+13,27.92,Americano with Milk,Afternoon,Wed,Sep
+13,27.92,Americano with Milk,Afternoon,Wed,Sep
+17,27.92,Americano with Milk,Night,Wed,Sep
+17,27.92,Americano with Milk,Night,Wed,Sep
+21,23.02,Americano,Night,Wed,Sep
+22,27.92,Americano with Milk,Night,Wed,Sep
+8,32.82,Latte,Morning,Thu,Sep
+10,27.92,Americano with Milk,Morning,Thu,Sep
+10,18.12,Espresso,Morning,Thu,Sep
+11,32.82,Cappuccino,Morning,Thu,Sep
+12,32.82,Latte,Afternoon,Thu,Sep
+18,32.82,Latte,Night,Thu,Sep
+22,32.82,Latte,Night,Thu,Sep
+22,23.02,Cortado,Night,Thu,Sep
+22,27.92,Americano with Milk,Night,Thu,Sep
+9,27.92,Americano with Milk,Morning,Fri,Sep
+9,23.02,Cortado,Morning,Fri,Sep
+9,32.82,Cappuccino,Morning,Fri,Sep
+10,27.92,Americano with Milk,Morning,Fri,Sep
+11,27.92,Americano with Milk,Morning,Fri,Sep
+13,32.82,Cappuccino,Afternoon,Fri,Sep
+13,32.82,Cappuccino,Afternoon,Fri,Sep
+13,23.02,Americano,Afternoon,Fri,Sep
+13,27.92,Americano with Milk,Afternoon,Fri,Sep
+18,32.82,Latte,Night,Fri,Sep
+18,32.82,Latte,Night,Fri,Sep
+18,32.82,Cappuccino,Night,Fri,Sep
+18,32.82,Cappuccino,Night,Fri,Sep
+20,32.82,Cappuccino,Night,Fri,Sep
+20,32.82,Cappuccino,Night,Fri,Sep
+20,27.92,Americano with Milk,Night,Fri,Sep
+8,27.92,Americano with Milk,Morning,Sat,Sep
+9,27.92,Americano with Milk,Morning,Sat,Sep
+14,35.76,Latte,Afternoon,Sat,Sep
+16,35.76,Latte,Afternoon,Sat,Sep
+17,30.86,Americano with Milk,Night,Sat,Sep
+20,35.76,Latte,Night,Sat,Sep
+20,35.76,Latte,Night,Sat,Sep
+22,35.76,Cappuccino,Night,Sat,Sep
+22,35.76,Cocoa,Night,Sat,Sep
+22,25.96,Cortado,Night,Sat,Sep
+22,35.76,Hot Chocolate,Night,Sat,Sep
+10,25.96,Americano,Morning,Sun,Sep
+10,35.76,Cappuccino,Morning,Sun,Sep
+10,35.76,Cappuccino,Morning,Sun,Sep
+10,35.76,Cappuccino,Morning,Sun,Sep
+10,30.86,Americano with Milk,Morning,Sun,Sep
+12,35.76,Latte,Afternoon,Sun,Sep
+12,25.96,Cortado,Afternoon,Sun,Sep
+12,35.76,Latte,Afternoon,Sun,Sep
+12,35.76,Latte,Afternoon,Sun,Sep
+18,35.76,Cappuccino,Night,Sun,Sep
+22,35.76,Latte,Night,Sun,Sep
+8,25.96,Cortado,Morning,Mon,Sep
+8,25.96,Cortado,Morning,Mon,Sep
+9,35.76,Hot Chocolate,Morning,Mon,Sep
+10,30.86,Americano with Milk,Morning,Mon,Sep
+10,25.96,Cortado,Morning,Mon,Sep
+11,30.86,Americano with Milk,Morning,Mon,Sep
+16,30.86,Americano with Milk,Afternoon,Mon,Sep
+19,35.76,Latte,Night,Mon,Sep
+19,30.86,Americano with Milk,Night,Mon,Sep
+19,25.96,Cortado,Night,Mon,Sep
+19,35.76,Latte,Night,Mon,Sep
+20,30.86,Americano with Milk,Night,Mon,Sep
+20,30.86,Americano with Milk,Night,Mon,Sep
+21,30.86,Americano with Milk,Night,Mon,Sep
+7,35.76,Latte,Morning,Tue,Oct
+9,30.86,Americano with Milk,Morning,Tue,Oct
+10,30.86,Americano with Milk,Morning,Tue,Oct
+10,30.86,Americano with Milk,Morning,Tue,Oct
+11,30.86,Americano with Milk,Morning,Tue,Oct
+12,30.86,Americano with Milk,Afternoon,Tue,Oct
+12,30.86,Americano with Milk,Afternoon,Tue,Oct
+14,25.96,Americano,Afternoon,Tue,Oct
+14,30.86,Americano with Milk,Afternoon,Tue,Oct
+16,35.76,Hot Chocolate,Afternoon,Tue,Oct
+16,25.96,Americano,Afternoon,Tue,Oct
+18,35.76,Latte,Night,Tue,Oct
+18,35.76,Latte,Night,Tue,Oct
+18,35.76,Hot Chocolate,Night,Tue,Oct
+20,35.76,Hot Chocolate,Night,Tue,Oct
+7,35.76,Latte,Morning,Wed,Oct
+8,25.96,Cortado,Morning,Wed,Oct
+9,30.86,Americano with Milk,Morning,Wed,Oct
+10,35.76,Latte,Morning,Wed,Oct
+10,30.86,Americano with Milk,Morning,Wed,Oct
+11,35.76,Cappuccino,Morning,Wed,Oct
+15,35.76,Cappuccino,Afternoon,Wed,Oct
+18,35.76,Hot Chocolate,Night,Wed,Oct
+22,35.76,Hot Chocolate,Night,Wed,Oct
+22,35.76,Hot Chocolate,Night,Wed,Oct
+22,35.76,Hot Chocolate,Night,Wed,Oct
+13,35.76,Cocoa,Afternoon,Thu,Oct
+15,30.86,Americano with Milk,Afternoon,Thu,Oct
+20,25.96,Cortado,Night,Thu,Oct
+20,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Cappuccino,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+8,25.96,Americano,Morning,Fri,Oct
+8,25.96,Americano,Morning,Fri,Oct
+9,30.86,Americano with Milk,Morning,Fri,Oct
+9,25.96,Americano,Morning,Fri,Oct
+9,25.96,Cortado,Morning,Fri,Oct
+9,25.96,Cortado,Morning,Fri,Oct
+17,35.76,Latte,Night,Fri,Oct
+17,35.76,Hot Chocolate,Night,Fri,Oct
+17,35.76,Cocoa,Night,Fri,Oct
+9,25.96,Cortado,Morning,Sat,Oct
+9,25.96,Cortado,Morning,Sat,Oct
+9,35.76,Cocoa,Morning,Sat,Oct
+13,35.76,Cappuccino,Afternoon,Sat,Oct
+20,25.96,Americano,Night,Sat,Oct
+20,25.96,Americano,Night,Sat,Oct
+8,25.96,Cortado,Morning,Sun,Oct
+10,35.76,Cappuccino,Morning,Sun,Oct
+10,25.96,Cortado,Morning,Sun,Oct
+11,35.76,Latte,Morning,Sun,Oct
+12,35.76,Latte,Afternoon,Sun,Oct
+12,35.76,Cappuccino,Afternoon,Sun,Oct
+12,30.86,Americano with Milk,Afternoon,Sun,Oct
+13,25.96,Americano,Afternoon,Sun,Oct
+13,35.76,Cappuccino,Afternoon,Sun,Oct
+13,30.86,Americano with Milk,Afternoon,Sun,Oct
+13,35.76,Latte,Afternoon,Sun,Oct
+13,35.76,Cappuccino,Afternoon,Sun,Oct
+16,35.76,Cappuccino,Afternoon,Sun,Oct
+16,21.06,Espresso,Afternoon,Sun,Oct
+18,30.86,Americano with Milk,Night,Sun,Oct
+18,35.76,Hot Chocolate,Night,Sun,Oct
+21,35.76,Hot Chocolate,Night,Sun,Oct
+21,35.76,Hot Chocolate,Night,Sun,Oct
+21,35.76,Hot Chocolate,Night,Sun,Oct
+21,35.76,Latte,Night,Sun,Oct
+8,35.76,Latte,Morning,Mon,Oct
+8,35.76,Latte,Morning,Mon,Oct
+8,30.86,Americano with Milk,Morning,Mon,Oct
+9,35.76,Cocoa,Morning,Mon,Oct
+9,35.76,Latte,Morning,Mon,Oct
+12,30.86,Americano with Milk,Afternoon,Mon,Oct
+14,25.96,Americano,Afternoon,Mon,Oct
+14,25.96,Americano,Afternoon,Mon,Oct
+17,35.76,Latte,Night,Mon,Oct
+21,35.76,Hot Chocolate,Night,Mon,Oct
+21,35.76,Hot Chocolate,Night,Mon,Oct
+21,35.76,Latte,Night,Mon,Oct
+8,35.76,Latte,Morning,Tue,Oct
+9,30.86,Americano with Milk,Morning,Tue,Oct
+10,25.96,Americano,Morning,Tue,Oct
+10,35.76,Latte,Morning,Tue,Oct
+11,35.76,Latte,Morning,Tue,Oct
+12,25.96,Americano,Afternoon,Tue,Oct
+12,25.96,Americano,Afternoon,Tue,Oct
+13,35.76,Latte,Afternoon,Tue,Oct
+13,35.76,Latte,Afternoon,Tue,Oct
+14,35.76,Latte,Afternoon,Tue,Oct
+15,35.76,Latte,Afternoon,Tue,Oct
+15,25.96,Americano,Afternoon,Tue,Oct
+15,30.86,Americano with Milk,Afternoon,Tue,Oct
+20,35.76,Hot Chocolate,Night,Tue,Oct
+20,35.76,Cappuccino,Night,Tue,Oct
+20,35.76,Latte,Night,Tue,Oct
+21,30.86,Americano with Milk,Night,Tue,Oct
+21,30.86,Americano with Milk,Night,Tue,Oct
+7,35.76,Latte,Morning,Wed,Oct
+8,30.86,Americano with Milk,Morning,Wed,Oct
+9,30.86,Americano with Milk,Morning,Wed,Oct
+9,35.76,Latte,Morning,Wed,Oct
+10,21.06,Espresso,Morning,Wed,Oct
+11,25.96,Americano,Morning,Wed,Oct
+13,35.76,Latte,Afternoon,Wed,Oct
+13,30.86,Americano with Milk,Afternoon,Wed,Oct
+17,35.76,Cappuccino,Night,Wed,Oct
+17,25.96,Americano,Night,Wed,Oct
+17,21.06,Espresso,Night,Wed,Oct
+20,35.76,Cappuccino,Night,Wed,Oct
+8,25.96,Americano,Morning,Thu,Oct
+9,30.86,Americano with Milk,Morning,Thu,Oct
+9,35.76,Hot Chocolate,Morning,Thu,Oct
+10,35.76,Latte,Morning,Thu,Oct
+10,25.96,Cortado,Morning,Thu,Oct
+10,25.96,Cortado,Morning,Thu,Oct
+10,35.76,Latte,Morning,Thu,Oct
+11,35.76,Latte,Morning,Thu,Oct
+15,35.76,Cappuccino,Afternoon,Thu,Oct
+17,35.76,Latte,Night,Thu,Oct
+18,25.96,Americano,Night,Thu,Oct
+18,30.86,Americano with Milk,Night,Thu,Oct
+18,35.76,Latte,Night,Thu,Oct
+22,35.76,Hot Chocolate,Night,Thu,Oct
+22,35.76,Hot Chocolate,Night,Thu,Oct
+7,30.86,Americano with Milk,Morning,Fri,Oct
+8,35.76,Latte,Morning,Fri,Oct
+8,25.96,Cortado,Morning,Fri,Oct
+8,35.76,Latte,Morning,Fri,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+8,30.86,Americano with Milk,Morning,Fri,Oct
+8,35.76,Hot Chocolate,Morning,Fri,Oct
+9,30.86,Americano with Milk,Morning,Fri,Oct
+9,25.96,Cortado,Morning,Fri,Oct
+10,25.96,Americano,Morning,Fri,Oct
+10,25.96,Americano,Morning,Fri,Oct
+10,30.86,Americano with Milk,Morning,Fri,Oct
+13,35.76,Latte,Afternoon,Fri,Oct
+13,25.96,Americano,Afternoon,Fri,Oct
+13,25.96,Americano,Afternoon,Fri,Oct
+14,35.76,Cocoa,Afternoon,Fri,Oct
+14,25.96,Americano,Afternoon,Fri,Oct
+14,35.76,Cappuccino,Afternoon,Fri,Oct
+17,35.76,Latte,Night,Fri,Oct
+17,35.76,Hot Chocolate,Night,Fri,Oct
+17,35.76,Hot Chocolate,Night,Fri,Oct
+21,35.76,Latte,Night,Fri,Oct
+21,30.86,Americano with Milk,Night,Fri,Oct
+22,35.76,Hot Chocolate,Night,Fri,Oct
+22,35.76,Hot Chocolate,Night,Fri,Oct
+8,25.96,Cortado,Morning,Sat,Oct
+10,25.96,Cortado,Morning,Sat,Oct
+10,25.96,Cortado,Morning,Sat,Oct
+11,35.76,Latte,Morning,Sat,Oct
+11,30.86,Americano with Milk,Morning,Sat,Oct
+13,35.76,Cappuccino,Afternoon,Sat,Oct
+20,35.76,Latte,Night,Sat,Oct
+9,25.96,Cortado,Morning,Sun,Oct
+12,30.86,Americano with Milk,Afternoon,Sun,Oct
+13,25.96,Cortado,Afternoon,Sun,Oct
+13,21.06,Espresso,Afternoon,Sun,Oct
+13,25.96,Cortado,Afternoon,Sun,Oct
+17,35.76,Latte,Night,Sun,Oct
+17,35.76,Latte,Night,Sun,Oct
+18,35.76,Cappuccino,Night,Sun,Oct
+20,35.76,Cappuccino,Night,Sun,Oct
+8,30.86,Americano with Milk,Morning,Mon,Oct
+9,35.76,Cocoa,Morning,Mon,Oct
+10,25.96,Cortado,Morning,Mon,Oct
+10,35.76,Latte,Morning,Mon,Oct
+10,35.76,Latte,Morning,Mon,Oct
+11,35.76,Cappuccino,Morning,Mon,Oct
+11,25.96,Americano,Morning,Mon,Oct
+11,25.96,Americano,Morning,Mon,Oct
+14,35.76,Latte,Afternoon,Mon,Oct
+14,35.76,Latte,Afternoon,Mon,Oct
+16,25.96,Americano,Afternoon,Mon,Oct
+18,35.76,Latte,Night,Mon,Oct
+18,35.76,Cappuccino,Night,Mon,Oct
+22,35.76,Latte,Night,Mon,Oct
+22,35.76,Latte,Night,Mon,Oct
+22,35.76,Latte,Night,Mon,Oct
+8,25.96,Cortado,Morning,Tue,Oct
+8,21.06,Espresso,Morning,Tue,Oct
+11,35.76,Hot Chocolate,Morning,Tue,Oct
+11,35.76,Latte,Morning,Tue,Oct
+11,35.76,Hot Chocolate,Morning,Tue,Oct
+13,35.76,Latte,Afternoon,Tue,Oct
+13,30.86,Americano with Milk,Afternoon,Tue,Oct
+15,35.76,Latte,Afternoon,Tue,Oct
+15,25.96,Americano,Afternoon,Tue,Oct
+15,21.06,Espresso,Afternoon,Tue,Oct
+17,35.76,Hot Chocolate,Night,Tue,Oct
+19,25.96,Americano,Night,Tue,Oct
+19,35.76,Cocoa,Night,Tue,Oct
+20,35.76,Latte,Night,Tue,Oct
+20,35.76,Latte,Night,Tue,Oct
+21,35.76,Hot Chocolate,Night,Tue,Oct
+21,35.76,Hot Chocolate,Night,Tue,Oct
+22,35.76,Latte,Night,Tue,Oct
+8,30.86,Americano with Milk,Morning,Wed,Oct
+8,35.76,Hot Chocolate,Morning,Wed,Oct
+9,35.76,Latte,Morning,Wed,Oct
+10,30.86,Americano with Milk,Morning,Wed,Oct
+10,30.86,Americano with Milk,Morning,Wed,Oct
+10,30.86,Americano with Milk,Morning,Wed,Oct
+11,25.96,Americano,Morning,Wed,Oct
+12,30.86,Americano with Milk,Afternoon,Wed,Oct
+13,25.96,Americano,Afternoon,Wed,Oct
+16,35.76,Latte,Afternoon,Wed,Oct
+17,30.86,Americano with Milk,Night,Wed,Oct
+19,30.86,Americano with Milk,Night,Wed,Oct
+19,30.86,Americano with Milk,Night,Wed,Oct
+21,35.76,Hot Chocolate,Night,Wed,Oct
+7,35.76,Latte,Morning,Thu,Oct
+7,35.76,Latte,Morning,Thu,Oct
+9,30.86,Americano with Milk,Morning,Thu,Oct
+10,35.76,Latte,Morning,Thu,Oct
+10,35.76,Hot Chocolate,Morning,Thu,Oct
+11,30.86,Americano with Milk,Morning,Thu,Oct
+13,35.76,Latte,Afternoon,Thu,Oct
+14,25.96,Americano,Afternoon,Thu,Oct
+16,35.76,Hot Chocolate,Afternoon,Thu,Oct
+16,35.76,Hot Chocolate,Afternoon,Thu,Oct
+16,35.76,Latte,Afternoon,Thu,Oct
+16,35.76,Hot Chocolate,Afternoon,Thu,Oct
+16,35.76,Hot Chocolate,Afternoon,Thu,Oct
+17,35.76,Cappuccino,Night,Thu,Oct
+17,35.76,Hot Chocolate,Night,Thu,Oct
+19,35.76,Latte,Night,Thu,Oct
+20,30.86,Americano with Milk,Night,Thu,Oct
+21,35.76,Latte,Night,Thu,Oct
+21,35.76,Latte,Night,Thu,Oct
+21,35.76,Latte,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+9,35.76,Cocoa,Morning,Fri,Oct
+9,35.76,Cocoa,Morning,Fri,Oct
+9,35.76,Cappuccino,Morning,Fri,Oct
+11,35.76,Cappuccino,Morning,Fri,Oct
+14,35.76,Latte,Afternoon,Fri,Oct
+14,35.76,Cappuccino,Afternoon,Fri,Oct
+15,25.96,Americano,Afternoon,Fri,Oct
+16,35.76,Latte,Afternoon,Fri,Oct
+17,35.76,Hot Chocolate,Night,Fri,Oct
+21,35.76,Cocoa,Night,Fri,Oct
+21,35.76,Cocoa,Night,Fri,Oct
+21,30.86,Americano with Milk,Night,Fri,Oct
+22,35.76,Latte,Night,Fri,Oct
+8,30.86,Americano with Milk,Morning,Sat,Oct
+13,35.76,Latte,Afternoon,Sat,Oct
+14,35.76,Cappuccino,Afternoon,Sat,Oct
+15,35.76,Hot Chocolate,Afternoon,Sat,Oct
+15,35.76,Latte,Afternoon,Sat,Oct
+16,35.76,Latte,Afternoon,Sat,Oct
+16,35.76,Latte,Afternoon,Sat,Oct
+21,35.76,Cocoa,Night,Sat,Oct
+22,35.76,Cappuccino,Night,Sat,Oct
+8,35.76,Latte,Morning,Sun,Oct
+8,35.76,Cocoa,Morning,Sun,Oct
+11,35.76,Latte,Morning,Sun,Oct
+14,35.76,Hot Chocolate,Afternoon,Sun,Oct
+14,25.96,Cortado,Afternoon,Sun,Oct
+15,30.86,Americano with Milk,Afternoon,Sun,Oct
+16,35.76,Latte,Afternoon,Sun,Oct
+16,35.76,Latte,Afternoon,Sun,Oct
+17,35.76,Latte,Night,Sun,Oct
+18,35.76,Cocoa,Night,Sun,Oct
+18,35.76,Cocoa,Night,Sun,Oct
+21,35.76,Hot Chocolate,Night,Sun,Oct
+21,25.96,Cortado,Night,Sun,Oct
+21,35.76,Cocoa,Night,Sun,Oct
+21,35.76,Latte,Night,Sun,Oct
+22,35.76,Cappuccino,Night,Sun,Oct
+7,35.76,Latte,Morning,Mon,Oct
+8,35.76,Latte,Morning,Mon,Oct
+9,30.86,Americano with Milk,Morning,Mon,Oct
+9,35.76,Latte,Morning,Mon,Oct
+10,25.96,Americano,Morning,Mon,Oct
+10,25.96,Cortado,Morning,Mon,Oct
+10,25.96,Cortado,Morning,Mon,Oct
+11,21.06,Espresso,Morning,Mon,Oct
+12,35.76,Cappuccino,Afternoon,Mon,Oct
+14,35.76,Latte,Afternoon,Mon,Oct
+14,35.76,Latte,Afternoon,Mon,Oct
+15,30.86,Americano with Milk,Afternoon,Mon,Oct
+15,25.96,Cortado,Afternoon,Mon,Oct
+16,35.76,Cocoa,Afternoon,Mon,Oct
+16,35.76,Latte,Afternoon,Mon,Oct
+19,35.76,Hot Chocolate,Night,Mon,Oct
+21,35.76,Latte,Night,Mon,Oct
+22,35.76,Cocoa,Night,Mon,Oct
+22,35.76,Hot Chocolate,Night,Mon,Oct
+7,35.76,Latte,Morning,Tue,Oct
+7,35.76,Cappuccino,Morning,Tue,Oct
+8,30.86,Americano with Milk,Morning,Tue,Oct
+9,25.96,Cortado,Morning,Tue,Oct
+10,21.06,Espresso,Morning,Tue,Oct
+10,25.96,Cortado,Morning,Tue,Oct
+18,25.96,Americano,Night,Tue,Oct
+19,35.76,Hot Chocolate,Night,Tue,Oct
+19,35.76,Latte,Night,Tue,Oct
+7,35.76,Latte,Morning,Wed,Oct
+8,30.86,Americano with Milk,Morning,Wed,Oct
+10,25.96,Cortado,Morning,Wed,Oct
+12,30.86,Americano with Milk,Afternoon,Wed,Oct
+16,30.86,Americano with Milk,Afternoon,Wed,Oct
+16,30.86,Americano with Milk,Afternoon,Wed,Oct
+16,35.76,Cappuccino,Afternoon,Wed,Oct
+17,21.06,Espresso,Night,Wed,Oct
+18,35.76,Cocoa,Night,Wed,Oct
+19,35.76,Cappuccino,Night,Wed,Oct
+21,30.86,Americano with Milk,Night,Wed,Oct
+21,35.76,Hot Chocolate,Night,Wed,Oct
+22,35.76,Latte,Night,Wed,Oct
+12,25.96,Americano,Afternoon,Thu,Oct
+13,35.76,Cappuccino,Afternoon,Thu,Oct
+14,35.76,Cappuccino,Afternoon,Thu,Oct
+14,35.76,Hot Chocolate,Afternoon,Thu,Oct
+14,35.76,Latte,Afternoon,Thu,Oct
+15,35.76,Latte,Afternoon,Thu,Oct
+15,35.76,Latte,Afternoon,Thu,Oct
+18,25.96,Americano,Night,Thu,Oct
+18,25.96,Americano,Night,Thu,Oct
+19,35.76,Latte,Night,Thu,Oct
+20,25.96,Americano,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Hot Chocolate,Night,Thu,Oct
+21,35.76,Cappuccino,Night,Thu,Oct
+7,35.76,Cappuccino,Morning,Fri,Oct
+7,21.06,Espresso,Morning,Fri,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+8,35.76,Latte,Morning,Fri,Oct
+8,35.76,Cocoa,Morning,Fri,Oct
+10,25.96,Americano,Morning,Fri,Oct
+10,25.96,Americano,Morning,Fri,Oct
+10,30.86,Americano with Milk,Morning,Fri,Oct
+11,35.76,Cocoa,Morning,Fri,Oct
+11,35.76,Cocoa,Morning,Fri,Oct
+12,25.96,Cortado,Afternoon,Fri,Oct
+12,35.76,Latte,Afternoon,Fri,Oct
+14,35.76,Cappuccino,Afternoon,Fri,Oct
+22,35.76,Hot Chocolate,Night,Fri,Oct
+22,21.06,Espresso,Night,Fri,Oct
+7,35.76,Cappuccino,Morning,Sat,Oct
+8,25.96,Cortado,Morning,Sat,Oct
+8,35.76,Cappuccino,Morning,Sat,Oct
+10,25.96,Americano,Morning,Sat,Oct
+12,35.76,Cocoa,Afternoon,Sat,Oct
+13,35.76,Latte,Afternoon,Sat,Oct
+14,35.76,Latte,Afternoon,Sat,Oct
+14,30.86,Americano with Milk,Afternoon,Sat,Oct
+15,25.96,Cortado,Afternoon,Sat,Oct
+15,25.96,Cortado,Afternoon,Sat,Oct
+15,35.76,Latte,Afternoon,Sat,Oct
+15,35.76,Latte,Afternoon,Sat,Oct
+15,30.86,Americano with Milk,Afternoon,Sat,Oct
+15,30.86,Americano with Milk,Afternoon,Sat,Oct
+19,35.76,Cappuccino,Night,Sat,Oct
+20,30.86,Americano with Milk,Night,Sat,Oct
+11,30.86,Americano with Milk,Morning,Sun,Oct
+12,35.76,Latte,Afternoon,Sun,Oct
+12,30.86,Americano with Milk,Afternoon,Sun,Oct
+13,35.76,Cappuccino,Afternoon,Sun,Oct
+16,35.76,Latte,Afternoon,Sun,Oct
+7,35.76,Cappuccino,Morning,Mon,Oct
+8,25.96,Americano,Morning,Mon,Oct
+8,35.76,Latte,Morning,Mon,Oct
+9,30.86,Americano with Milk,Morning,Mon,Oct
+11,35.76,Latte,Morning,Mon,Oct
+11,35.76,Latte,Morning,Mon,Oct
+12,35.76,Hot Chocolate,Afternoon,Mon,Oct
+12,30.86,Americano with Milk,Afternoon,Mon,Oct
+12,35.76,Cappuccino,Afternoon,Mon,Oct
+14,30.86,Americano with Milk,Afternoon,Mon,Oct
+14,30.86,Americano with Milk,Afternoon,Mon,Oct
+14,30.86,Americano with Milk,Afternoon,Mon,Oct
+16,35.76,Latte,Afternoon,Mon,Oct
+17,35.76,Cocoa,Night,Mon,Oct
+17,35.76,Cocoa,Night,Mon,Oct
+19,35.76,Cappuccino,Night,Mon,Oct
+21,30.86,Americano with Milk,Night,Mon,Oct
+22,30.86,Americano with Milk,Night,Mon,Oct
+8,35.76,Latte,Morning,Tue,Oct
+8,35.76,Latte,Morning,Tue,Oct
+9,35.76,Latte,Morning,Tue,Oct
+11,30.86,Americano with Milk,Morning,Tue,Oct
+12,21.06,Espresso,Afternoon,Tue,Oct
+14,25.96,Cortado,Afternoon,Tue,Oct
+14,25.96,Cortado,Afternoon,Tue,Oct
+14,35.76,Cappuccino,Afternoon,Tue,Oct
+16,35.76,Hot Chocolate,Afternoon,Tue,Oct
+16,35.76,Cocoa,Afternoon,Tue,Oct
+16,35.76,Cocoa,Afternoon,Tue,Oct
+18,30.86,Americano with Milk,Night,Tue,Oct
+18,30.86,Americano with Milk,Night,Tue,Oct
+19,30.86,Americano with Milk,Night,Tue,Oct
+19,35.76,Cappuccino,Night,Tue,Oct
+19,35.76,Hot Chocolate,Night,Tue,Oct
+19,35.76,Latte,Night,Tue,Oct
+20,35.76,Latte,Night,Tue,Oct
+7,35.76,Latte,Morning,Wed,Oct
+8,30.86,Americano with Milk,Morning,Wed,Oct
+8,30.86,Americano with Milk,Morning,Wed,Oct
+9,35.76,Latte,Morning,Wed,Oct
+10,35.76,Latte,Morning,Wed,Oct
+10,35.76,Latte,Morning,Wed,Oct
+12,35.76,Latte,Afternoon,Wed,Oct
+12,25.96,Americano,Afternoon,Wed,Oct
+12,30.86,Americano with Milk,Afternoon,Wed,Oct
+12,25.96,Americano,Afternoon,Wed,Oct
+15,35.76,Latte,Afternoon,Wed,Oct
+15,35.76,Latte,Afternoon,Wed,Oct
+16,30.86,Americano with Milk,Afternoon,Wed,Oct
+18,35.76,Hot Chocolate,Night,Wed,Oct
+19,30.86,Americano with Milk,Night,Wed,Oct
+19,30.86,Americano with Milk,Night,Wed,Oct
+7,35.76,Latte,Morning,Thu,Oct
+8,35.76,Latte,Morning,Thu,Oct
+9,30.86,Americano with Milk,Morning,Thu,Oct
+15,35.76,Latte,Afternoon,Thu,Oct
+16,30.86,Americano with Milk,Afternoon,Thu,Oct
+8,35.76,Cocoa,Morning,Fri,Nov
+8,25.96,Americano,Morning,Fri,Nov
+10,35.76,Latte,Morning,Fri,Nov
+12,35.76,Cocoa,Afternoon,Fri,Nov
+12,35.76,Cocoa,Afternoon,Fri,Nov
+15,25.96,Cortado,Afternoon,Fri,Nov
+22,30.86,Americano with Milk,Night,Fri,Nov
+8,25.96,Cortado,Morning,Sat,Nov
+10,35.76,Cocoa,Morning,Sat,Nov
+10,30.86,Americano with Milk,Morning,Sat,Nov
+14,30.86,Americano with Milk,Afternoon,Sat,Nov
+16,35.76,Hot Chocolate,Afternoon,Sat,Nov
+16,35.76,Latte,Afternoon,Sat,Nov
+16,35.76,Latte,Afternoon,Sat,Nov
+18,30.86,Americano with Milk,Night,Sat,Nov
+18,25.96,Americano,Night,Sat,Nov
+8,25.96,Cortado,Morning,Sun,Nov
+9,30.86,Americano with Milk,Morning,Sun,Nov
+9,30.86,Americano with Milk,Morning,Sun,Nov
+13,35.76,Latte,Afternoon,Sun,Nov
+13,30.86,Americano with Milk,Afternoon,Sun,Nov
+13,35.76,Cocoa,Afternoon,Sun,Nov
+13,25.96,Americano,Afternoon,Sun,Nov
+13,30.86,Americano with Milk,Afternoon,Sun,Nov
+16,35.76,Hot Chocolate,Afternoon,Sun,Nov
+16,35.76,Hot Chocolate,Afternoon,Sun,Nov
+16,25.96,Americano,Afternoon,Sun,Nov
+16,25.96,Americano,Afternoon,Sun,Nov
+20,35.76,Cocoa,Night,Sun,Nov
+7,35.76,Latte,Morning,Mon,Nov
+8,35.76,Latte,Morning,Mon,Nov
+8,30.86,Americano with Milk,Morning,Mon,Nov
+12,25.96,Americano,Afternoon,Mon,Nov
+12,30.86,Americano with Milk,Afternoon,Mon,Nov
+14,35.76,Cocoa,Afternoon,Mon,Nov
+14,35.76,Cocoa,Afternoon,Mon,Nov
+7,35.76,Cocoa,Morning,Tue,Nov
+9,30.86,Americano with Milk,Morning,Tue,Nov
+9,35.76,Cappuccino,Morning,Tue,Nov
+9,30.86,Americano with Milk,Morning,Tue,Nov
+10,30.86,Americano with Milk,Morning,Tue,Nov
+11,35.76,Cocoa,Morning,Tue,Nov
+11,35.76,Latte,Morning,Tue,Nov
+14,35.76,Latte,Afternoon,Tue,Nov
+14,35.76,Latte,Afternoon,Tue,Nov
+18,35.76,Cappuccino,Night,Tue,Nov
+18,35.76,Cappuccino,Night,Tue,Nov
+18,35.76,Cappuccino,Night,Tue,Nov
+21,35.76,Cocoa,Night,Tue,Nov
+21,35.76,Cocoa,Night,Tue,Nov
+21,35.76,Hot Chocolate,Night,Tue,Nov
+22,35.76,Hot Chocolate,Night,Tue,Nov
+22,30.86,Americano with Milk,Night,Tue,Nov
+8,35.76,Latte,Morning,Wed,Nov
+11,21.06,Espresso,Morning,Wed,Nov
+13,25.96,Americano,Afternoon,Wed,Nov
+15,35.76,Cappuccino,Afternoon,Wed,Nov
+16,35.76,Latte,Afternoon,Wed,Nov
+16,35.76,Cappuccino,Afternoon,Wed,Nov
+18,35.76,Hot Chocolate,Night,Wed,Nov
+18,35.76,Hot Chocolate,Night,Wed,Nov
+12,35.76,Latte,Afternoon,Thu,Nov
+15,25.96,Americano,Afternoon,Thu,Nov
+16,25.96,Americano,Afternoon,Thu,Nov
+18,35.76,Cocoa,Night,Thu,Nov
+19,35.76,Hot Chocolate,Night,Thu,Nov
+19,35.76,Latte,Night,Thu,Nov
+20,35.76,Latte,Night,Thu,Nov
+9,30.86,Americano with Milk,Morning,Fri,Nov
+9,25.96,Americano,Morning,Fri,Nov
+9,25.96,Americano,Morning,Fri,Nov
+11,35.76,Cappuccino,Morning,Fri,Nov
+13,35.76,Latte,Afternoon,Fri,Nov
+13,35.76,Latte,Afternoon,Fri,Nov
+16,30.86,Americano with Milk,Afternoon,Fri,Nov
+16,30.86,Americano with Milk,Afternoon,Fri,Nov
+20,35.76,Hot Chocolate,Night,Fri,Nov
+20,35.76,Hot Chocolate,Night,Fri,Nov
+20,35.76,Hot Chocolate,Night,Fri,Nov
+22,35.76,Latte,Night,Fri,Nov
+10,30.86,Americano with Milk,Morning,Sat,Nov
+11,25.96,Cortado,Morning,Sat,Nov
+11,25.96,Cortado,Morning,Sat,Nov
+11,35.76,Latte,Morning,Sat,Nov
+13,35.76,Hot Chocolate,Afternoon,Sat,Nov
+13,35.76,Hot Chocolate,Afternoon,Sat,Nov
+14,35.76,Hot Chocolate,Afternoon,Sat,Nov
+14,35.76,Hot Chocolate,Afternoon,Sat,Nov
+14,25.96,Americano,Afternoon,Sat,Nov
+15,30.86,Americano with Milk,Afternoon,Sat,Nov
+16,35.76,Latte,Afternoon,Sat,Nov
+16,35.76,Cocoa,Afternoon,Sat,Nov
+20,25.96,Americano,Night,Sat,Nov
+20,35.76,Latte,Night,Sat,Nov
+22,35.76,Cocoa,Night,Sat,Nov
+22,25.96,Americano,Night,Sat,Nov
+22,25.96,Americano,Night,Sat,Nov
+9,25.96,Americano,Morning,Sun,Nov
+17,35.76,Cocoa,Night,Sun,Nov
+18,35.76,Hot Chocolate,Night,Sun,Nov
+18,35.76,Hot Chocolate,Night,Sun,Nov
+20,35.76,Cappuccino,Night,Sun,Nov
+20,35.76,Cappuccino,Night,Sun,Nov
+7,35.76,Cappuccino,Morning,Mon,Nov
+9,30.86,Americano with Milk,Morning,Mon,Nov
+10,25.96,Cortado,Morning,Mon,Nov
+16,35.76,Cappuccino,Afternoon,Mon,Nov
+16,35.76,Hot Chocolate,Afternoon,Mon,Nov
+17,35.76,Cappuccino,Night,Mon,Nov
+19,35.76,Latte,Night,Mon,Nov
+19,35.76,Hot Chocolate,Night,Mon,Nov
+21,35.76,Latte,Night,Mon,Nov
+21,35.76,Latte,Night,Mon,Nov
+10,35.76,Latte,Morning,Tue,Nov
+13,35.76,Latte,Afternoon,Tue,Nov
+14,35.76,Latte,Afternoon,Tue,Nov
+16,35.76,Hot Chocolate,Afternoon,Tue,Nov
+16,35.76,Hot Chocolate,Afternoon,Tue,Nov
+16,35.76,Cocoa,Afternoon,Tue,Nov
+18,35.76,Cappuccino,Night,Tue,Nov
+20,35.76,Latte,Night,Tue,Nov
+20,35.76,Cocoa,Night,Tue,Nov
+8,30.86,Americano with Milk,Morning,Wed,Nov
+10,35.76,Latte,Morning,Wed,Nov
+13,30.86,Americano with Milk,Afternoon,Wed,Nov
+13,30.86,Americano with Milk,Afternoon,Wed,Nov
+14,30.86,Americano with Milk,Afternoon,Wed,Nov
+14,35.76,Latte,Afternoon,Wed,Nov
+9,35.76,Latte,Morning,Thu,Nov
+10,25.96,Americano,Morning,Thu,Nov
+12,21.06,Espresso,Afternoon,Thu,Nov
+15,35.76,Cappuccino,Afternoon,Thu,Nov
+15,35.76,Latte,Afternoon,Thu,Nov
+15,35.76,Cappuccino,Afternoon,Thu,Nov
+16,30.86,Americano with Milk,Afternoon,Thu,Nov
+16,35.76,Cappuccino,Afternoon,Thu,Nov
+19,35.76,Hot Chocolate,Night,Thu,Nov
+19,35.76,Hot Chocolate,Night,Thu,Nov
+20,35.76,Cocoa,Night,Thu,Nov
+20,35.76,Hot Chocolate,Night,Thu,Nov
+21,35.76,Latte,Night,Thu,Nov
+22,35.76,Latte,Night,Thu,Nov
+8,30.86,Americano with Milk,Morning,Fri,Nov
+11,30.86,Americano with Milk,Morning,Fri,Nov
+12,35.76,Cocoa,Afternoon,Fri,Nov
+12,35.76,Cocoa,Afternoon,Fri,Nov
+13,35.76,Latte,Afternoon,Fri,Nov
+15,25.96,Americano,Afternoon,Fri,Nov
+17,30.86,Americano with Milk,Night,Fri,Nov
+17,35.76,Latte,Night,Fri,Nov
+18,35.76,Hot Chocolate,Night,Fri,Nov
+18,30.86,Americano with Milk,Night,Fri,Nov
+18,30.86,Americano with Milk,Night,Fri,Nov
+10,25.96,Cortado,Morning,Sat,Nov
+10,25.96,Cortado,Morning,Sat,Nov
+11,35.76,Hot Chocolate,Morning,Sat,Nov
+11,35.76,Latte,Morning,Sat,Nov
+11,25.96,Americano,Morning,Sat,Nov
+12,35.76,Cappuccino,Afternoon,Sat,Nov
+12,30.86,Americano with Milk,Afternoon,Sat,Nov
+12,35.76,Latte,Afternoon,Sat,Nov
+12,35.76,Latte,Afternoon,Sat,Nov
+13,30.86,Americano with Milk,Afternoon,Sat,Nov
+13,35.76,Latte,Afternoon,Sat,Nov
+13,35.76,Latte,Afternoon,Sat,Nov
+14,30.86,Americano with Milk,Afternoon,Sat,Nov
+10,30.86,Americano with Milk,Morning,Sun,Nov
+13,30.86,Americano with Milk,Afternoon,Sun,Nov
+14,25.96,Americano,Afternoon,Sun,Nov
+14,30.86,Americano with Milk,Afternoon,Sun,Nov
+16,35.76,Latte,Afternoon,Sun,Nov
+16,35.76,Latte,Afternoon,Sun,Nov
+18,35.76,Hot Chocolate,Night,Sun,Nov
+19,35.76,Hot Chocolate,Night,Sun,Nov
+19,35.76,Hot Chocolate,Night,Sun,Nov
+7,30.86,Americano with Milk,Morning,Mon,Nov
+7,30.86,Americano with Milk,Morning,Mon,Nov
+7,35.76,Latte,Morning,Mon,Nov
+16,35.76,Latte,Afternoon,Mon,Nov
+16,35.76,Latte,Afternoon,Mon,Nov
+18,35.76,Latte,Night,Mon,Nov
+7,35.76,Cocoa,Morning,Tue,Nov
+7,30.86,Americano with Milk,Morning,Tue,Nov
+7,35.76,Latte,Morning,Tue,Nov
+7,21.06,Espresso,Morning,Tue,Nov
+7,35.76,Latte,Morning,Tue,Nov
+10,30.86,Americano with Milk,Morning,Tue,Nov
+11,35.76,Latte,Morning,Tue,Nov
+16,35.76,Cocoa,Afternoon,Tue,Nov
+16,35.76,Cocoa,Afternoon,Tue,Nov
+16,35.76,Cappuccino,Afternoon,Tue,Nov
+16,35.76,Cappuccino,Afternoon,Tue,Nov
+13,30.86,Americano with Milk,Afternoon,Wed,Nov
+16,35.76,Latte,Afternoon,Wed,Nov
+17,35.76,Cappuccino,Night,Wed,Nov
+17,35.76,Hot Chocolate,Night,Wed,Nov
+11,25.96,Cortado,Morning,Thu,Nov
+12,35.76,Latte,Afternoon,Thu,Nov
+12,35.76,Cocoa,Afternoon,Thu,Nov
+13,35.76,Cocoa,Afternoon,Thu,Nov
+16,35.76,Latte,Afternoon,Thu,Nov
+17,30.86,Americano with Milk,Night,Thu,Nov
+17,25.96,Cortado,Night,Thu,Nov
+19,35.76,Hot Chocolate,Night,Thu,Nov
+7,35.76,Latte,Morning,Fri,Nov
+10,35.76,Cappuccino,Morning,Fri,Nov
+11,35.76,Latte,Morning,Fri,Nov
+11,35.76,Cocoa,Morning,Fri,Nov
+16,35.76,Hot Chocolate,Afternoon,Fri,Nov
+16,35.76,Latte,Afternoon,Fri,Nov
+9,25.96,Cortado,Morning,Sat,Nov
+9,25.96,Cortado,Morning,Sat,Nov
+10,35.76,Latte,Morning,Sat,Nov
+11,35.76,Cappuccino,Morning,Sat,Nov
+11,25.96,Americano,Morning,Sat,Nov
+11,25.96,Americano,Morning,Sat,Nov
+11,35.76,Hot Chocolate,Morning,Sat,Nov
+22,35.76,Latte,Night,Sat,Nov
+8,35.76,Latte,Morning,Sun,Nov
+7,35.76,Cappuccino,Morning,Mon,Nov
+7,35.76,Latte,Morning,Mon,Nov
+9,30.86,Americano with Milk,Morning,Mon,Nov
+10,25.96,Cortado,Morning,Mon,Nov
+12,35.76,Latte,Afternoon,Mon,Nov
+12,35.76,Latte,Afternoon,Mon,Nov
+16,35.76,Hot Chocolate,Afternoon,Mon,Nov
+19,30.86,Americano with Milk,Night,Mon,Nov
+19,35.76,Hot Chocolate,Night,Mon,Nov
+21,35.76,Hot Chocolate,Night,Mon,Nov
+21,35.76,Cappuccino,Night,Mon,Nov
+7,35.76,Latte,Morning,Tue,Nov
+11,35.76,Cocoa,Morning,Tue,Nov
+11,25.96,Americano,Morning,Tue,Nov
+11,35.76,Cocoa,Morning,Tue,Nov
+11,35.76,Cocoa,Morning,Tue,Nov
+16,35.76,Latte,Afternoon,Tue,Nov
+16,35.76,Latte,Afternoon,Tue,Nov
+17,25.96,Americano,Night,Tue,Nov
+17,30.86,Americano with Milk,Night,Tue,Nov
+19,35.76,Cocoa,Night,Tue,Nov
+8,35.76,Cappuccino,Morning,Thu,Nov
+9,30.86,Americano with Milk,Morning,Thu,Nov
+20,30.86,Americano with Milk,Night,Thu,Nov
+20,35.76,Latte,Night,Thu,Nov
+20,35.76,Latte,Night,Thu,Nov
+22,35.76,Cappuccino,Night,Thu,Nov
+7,35.76,Cocoa,Morning,Fri,Nov
+7,35.76,Latte,Morning,Fri,Nov
+9,30.86,Americano with Milk,Morning,Fri,Nov
+9,30.86,Americano with Milk,Morning,Fri,Nov
+15,30.86,Americano with Milk,Afternoon,Fri,Nov
+15,35.76,Latte,Afternoon,Fri,Nov
+20,35.76,Cocoa,Night,Fri,Nov
+12,35.76,Cocoa,Afternoon,Sat,Nov
+14,25.96,Americano,Afternoon,Sat,Nov
+14,35.76,Hot Chocolate,Afternoon,Sat,Nov
+14,35.76,Cocoa,Afternoon,Sat,Nov
+15,30.86,Americano with Milk,Afternoon,Sat,Nov
+22,30.86,Americano with Milk,Night,Sat,Nov
+10,30.86,Americano with Milk,Morning,Sun,Dec
+10,30.86,Americano with Milk,Morning,Sun,Dec
+10,30.86,Americano with Milk,Morning,Sun,Dec
+14,30.86,Americano with Milk,Afternoon,Sun,Dec
+15,35.76,Cocoa,Afternoon,Sun,Dec
+15,35.76,Cocoa,Afternoon,Sun,Dec
+15,35.76,Cappuccino,Afternoon,Sun,Dec
+15,35.76,Latte,Afternoon,Sun,Dec
+15,35.76,Latte,Afternoon,Sun,Dec
+16,35.76,Latte,Afternoon,Sun,Dec
+16,35.76,Latte,Afternoon,Sun,Dec
+17,30.86,Americano with Milk,Night,Sun,Dec
+17,30.86,Americano with Milk,Night,Sun,Dec
+18,30.86,Americano with Milk,Night,Sun,Dec
+7,35.76,Latte,Morning,Mon,Dec
+7,25.96,Americano,Morning,Mon,Dec
+8,30.86,Americano with Milk,Morning,Mon,Dec
+8,35.76,Cocoa,Morning,Mon,Dec
+11,25.96,Cortado,Morning,Mon,Dec
+15,21.06,Espresso,Afternoon,Mon,Dec
+16,35.76,Cappuccino,Afternoon,Mon,Dec
+17,25.96,Americano,Night,Mon,Dec
+18,35.76,Cappuccino,Night,Mon,Dec
+8,35.76,Latte,Morning,Tue,Dec
+9,30.86,Americano with Milk,Morning,Tue,Dec
+9,30.86,Americano with Milk,Morning,Tue,Dec
+11,25.96,Americano,Morning,Tue,Dec
+11,30.86,Americano with Milk,Morning,Tue,Dec
+11,30.86,Americano with Milk,Morning,Tue,Dec
+11,30.86,Americano with Milk,Morning,Tue,Dec
+20,35.76,Cocoa,Night,Tue,Dec
+21,35.76,Latte,Night,Tue,Dec
+21,35.76,Cappuccino,Night,Tue,Dec
+21,35.76,Hot Chocolate,Night,Tue,Dec
+22,30.86,Americano with Milk,Night,Tue,Dec
+22,35.76,Cappuccino,Night,Tue,Dec
+8,25.96,Cortado,Morning,Wed,Dec
+8,35.76,Latte,Morning,Wed,Dec
+8,35.76,Latte,Morning,Wed,Dec
+9,25.96,Americano,Morning,Wed,Dec
+10,30.86,Americano with Milk,Morning,Wed,Dec
+10,30.86,Americano with Milk,Morning,Wed,Dec
+10,30.86,Americano with Milk,Morning,Wed,Dec
+10,35.76,Hot Chocolate,Morning,Wed,Dec
+11,30.86,Americano with Milk,Morning,Wed,Dec
+14,35.76,Hot Chocolate,Afternoon,Wed,Dec
+8,25.96,Americano,Morning,Thu,Dec
+9,25.96,Cortado,Morning,Thu,Dec
+10,30.86,Americano with Milk,Morning,Thu,Dec
+10,30.86,Americano with Milk,Morning,Thu,Dec
+11,35.76,Latte,Morning,Thu,Dec
+11,25.96,Americano,Morning,Thu,Dec
+14,35.76,Cappuccino,Afternoon,Thu,Dec
+15,35.76,Latte,Afternoon,Thu,Dec
+16,35.76,Latte,Afternoon,Thu,Dec
+11,35.76,Latte,Morning,Fri,Dec
+16,35.76,Hot Chocolate,Afternoon,Fri,Dec
+22,35.76,Latte,Night,Fri,Dec
+22,35.76,Hot Chocolate,Night,Fri,Dec
+11,30.86,Americano with Milk,Morning,Sat,Dec
+14,25.96,Americano,Afternoon,Sat,Dec
+15,35.76,Latte,Afternoon,Sat,Dec
+19,35.76,Cappuccino,Night,Sat,Dec
+22,30.86,Americano with Milk,Night,Sat,Dec
+22,25.96,Americano,Night,Sat,Dec
+8,25.96,Cortado,Morning,Sun,Dec
+10,35.76,Latte,Morning,Sun,Dec
+10,35.76,Cappuccino,Morning,Sun,Dec
+12,25.96,Cortado,Afternoon,Sun,Dec
+13,30.86,Americano with Milk,Afternoon,Sun,Dec
+13,30.86,Americano with Milk,Afternoon,Sun,Dec
+17,35.76,Cappuccino,Night,Sun,Dec
+18,21.06,Espresso,Night,Sun,Dec
+20,35.76,Cappuccino,Night,Sun,Dec
+21,30.86,Americano with Milk,Night,Sun,Dec
+21,30.86,Americano with Milk,Night,Sun,Dec
+8,35.76,Cappuccino,Morning,Mon,Dec
+9,25.96,Americano,Morning,Mon,Dec
+9,30.86,Americano with Milk,Morning,Mon,Dec
+13,25.96,Cortado,Afternoon,Mon,Dec
+21,35.76,Cocoa,Night,Mon,Dec
+12,25.96,Cortado,Afternoon,Tue,Dec
+18,35.76,Hot Chocolate,Night,Tue,Dec
+7,35.76,Latte,Morning,Wed,Dec
+10,25.96,Cortado,Morning,Wed,Dec
+12,35.76,Hot Chocolate,Afternoon,Wed,Dec
+12,21.06,Espresso,Afternoon,Wed,Dec
+17,35.76,Cocoa,Night,Wed,Dec
+21,35.76,Latte,Night,Wed,Dec
+21,35.76,Latte,Night,Wed,Dec
+7,30.86,Americano with Milk,Morning,Thu,Dec
+12,25.96,Americano,Afternoon,Thu,Dec
+16,21.06,Espresso,Afternoon,Thu,Dec
+16,21.06,Espresso,Afternoon,Thu,Dec
+16,25.96,Americano,Afternoon,Thu,Dec
+19,35.76,Cocoa,Night,Thu,Dec
+19,35.76,Cocoa,Night,Thu,Dec
+12,25.96,Americano,Afternoon,Fri,Dec
+12,25.96,Americano,Afternoon,Fri,Dec
+12,35.76,Hot Chocolate,Afternoon,Fri,Dec
+14,35.76,Hot Chocolate,Afternoon,Fri,Dec
+16,35.76,Cocoa,Afternoon,Fri,Dec
+19,35.76,Cappuccino,Night,Fri,Dec
+19,35.76,Cappuccino,Night,Fri,Dec
+21,35.76,Latte,Night,Fri,Dec
+8,30.86,Americano with Milk,Morning,Sat,Dec
+9,35.76,Cocoa,Morning,Sat,Dec
+11,35.76,Cappuccino,Morning,Sat,Dec
+13,25.96,Americano,Afternoon,Sat,Dec
+13,35.76,Latte,Afternoon,Sat,Dec
+16,35.76,Cocoa,Afternoon,Sat,Dec
+16,25.96,Americano,Afternoon,Sat,Dec
+16,25.96,Americano,Afternoon,Sat,Dec
+17,25.96,Americano,Night,Sat,Dec
+17,25.96,Americano,Night,Sat,Dec
+18,30.86,Americano with Milk,Night,Sat,Dec
+11,35.76,Latte,Morning,Sun,Dec
+11,35.76,Cocoa,Morning,Sun,Dec
+17,35.76,Hot Chocolate,Night,Sun,Dec
+7,35.76,Latte,Morning,Mon,Dec
+8,35.76,Hot Chocolate,Morning,Mon,Dec
+8,35.76,Cocoa,Morning,Mon,Dec
+12,30.86,Americano with Milk,Afternoon,Mon,Dec
+13,35.76,Latte,Afternoon,Mon,Dec
+14,35.76,Hot Chocolate,Afternoon,Mon,Dec
+18,35.76,Latte,Night,Mon,Dec
+18,30.86,Americano with Milk,Night,Mon,Dec
+8,25.96,Cortado,Morning,Tue,Dec
+8,35.76,Cappuccino,Morning,Tue,Dec
+10,30.86,Americano with Milk,Morning,Tue,Dec
+16,25.96,Americano,Afternoon,Tue,Dec
+16,35.76,Cocoa,Afternoon,Tue,Dec
+17,35.76,Cappuccino,Night,Tue,Dec
+18,35.76,Cocoa,Night,Tue,Dec
+9,35.76,Latte,Morning,Wed,Dec
+10,30.86,Americano with Milk,Morning,Wed,Dec
+10,35.76,Latte,Morning,Wed,Dec
+10,35.76,Cappuccino,Morning,Wed,Dec
+10,35.76,Hot Chocolate,Morning,Thu,Dec
+11,30.86,Americano with Milk,Morning,Thu,Dec
+12,21.06,Espresso,Afternoon,Thu,Dec
+13,35.76,Hot Chocolate,Afternoon,Thu,Dec
+19,35.76,Cappuccino,Night,Thu,Dec
+19,35.76,Cappuccino,Night,Thu,Dec
+19,30.86,Americano with Milk,Night,Thu,Dec
+19,35.76,Hot Chocolate,Night,Thu,Dec
+21,35.76,Latte,Night,Thu,Dec
+21,35.76,Cappuccino,Night,Thu,Dec
+8,25.96,Cortado,Morning,Fri,Dec
+9,30.86,Americano with Milk,Morning,Fri,Dec
+10,35.76,Cappuccino,Morning,Fri,Dec
+10,25.96,Cortado,Morning,Fri,Dec
+12,21.06,Espresso,Afternoon,Fri,Dec
+12,30.86,Americano with Milk,Afternoon,Fri,Dec
+14,25.96,Cortado,Afternoon,Fri,Dec
+18,35.76,Cappuccino,Night,Fri,Dec
+18,35.76,Cappuccino,Night,Fri,Dec
+10,35.76,Cappuccino,Morning,Sat,Dec
+10,35.76,Latte,Morning,Sat,Dec
+10,25.96,Americano,Morning,Sat,Dec
+15,35.76,Hot Chocolate,Afternoon,Sat,Dec
+15,35.76,Latte,Afternoon,Sat,Dec
+15,30.86,Americano with Milk,Afternoon,Sat,Dec
+15,35.76,Latte,Afternoon,Sat,Dec
+17,35.76,Cocoa,Night,Sat,Dec
+18,35.76,Hot Chocolate,Night,Sat,Dec
+18,25.96,Cortado,Night,Sat,Dec
+19,30.86,Americano with Milk,Night,Sat,Dec
+19,25.96,Cortado,Night,Sat,Dec
+21,25.96,Cortado,Night,Sat,Dec
+21,35.76,Latte,Night,Sat,Dec
+22,25.96,Cortado,Night,Sat,Dec
+10,35.76,Cappuccino,Morning,Sun,Dec
+18,35.76,Cappuccino,Night,Sun,Dec
+19,35.76,Hot Chocolate,Night,Sun,Dec
+19,35.76,Hot Chocolate,Night,Sun,Dec
+20,35.76,Hot Chocolate,Night,Sun,Dec
+21,35.76,Cocoa,Night,Sun,Dec
+21,25.96,Cortado,Night,Sun,Dec
+9,25.96,Cortado,Morning,Mon,Dec
+9,30.86,Americano with Milk,Morning,Mon,Dec
+10,30.86,Americano with Milk,Morning,Mon,Dec
+11,35.76,Cappuccino,Morning,Mon,Dec
+14,35.76,Latte,Afternoon,Mon,Dec
+15,30.86,Americano with Milk,Afternoon,Mon,Dec
+16,35.76,Latte,Afternoon,Mon,Dec
+17,25.96,Cortado,Night,Mon,Dec
+17,35.76,Latte,Night,Mon,Dec
+20,25.96,Cortado,Night,Mon,Dec
+15,30.86,Americano with Milk,Afternoon,Tue,Dec
+16,35.76,Hot Chocolate,Afternoon,Tue,Dec
+17,25.96,Cortado,Night,Tue,Dec
+19,35.76,Hot Chocolate,Night,Tue,Dec
+19,35.76,Latte,Night,Tue,Dec
+19,21.06,Espresso,Night,Tue,Dec
+19,35.76,Cappuccino,Night,Tue,Dec
+10,35.76,Latte,Morning,Wed,Dec
+10,35.76,Latte,Morning,Wed,Dec
+12,30.86,Americano with Milk,Afternoon,Wed,Dec
+12,25.96,Americano,Afternoon,Wed,Dec
+13,30.86,Americano with Milk,Afternoon,Wed,Dec
+13,25.96,Americano,Afternoon,Wed,Dec
+20,35.76,Cappuccino,Night,Wed,Dec
+21,35.76,Cocoa,Night,Wed,Dec
+21,35.76,Cocoa,Night,Wed,Dec
+21,35.76,Latte,Night,Wed,Dec
+22,35.76,Cappuccino,Night,Wed,Dec
+22,30.86,Americano with Milk,Night,Wed,Dec
+13,35.76,Cappuccino,Afternoon,Thu,Dec
+15,21.06,Espresso,Afternoon,Thu,Dec
+7,25.96,Americano,Morning,Fri,Dec
+8,25.96,Cortado,Morning,Fri,Dec
+9,25.96,Cortado,Morning,Fri,Dec
+10,30.86,Americano with Milk,Morning,Fri,Dec
+17,35.76,Latte,Night,Fri,Dec
+19,25.96,Americano,Night,Fri,Dec
+19,30.86,Americano with Milk,Night,Fri,Dec
+22,35.76,Cocoa,Night,Fri,Dec
+9,25.96,Cortado,Morning,Sat,Dec
+9,25.96,Cortado,Morning,Sat,Dec
+10,30.86,Americano with Milk,Morning,Sat,Dec
+10,35.76,Latte,Morning,Sat,Dec
+14,35.76,Cappuccino,Afternoon,Sat,Dec
+14,35.76,Hot Chocolate,Afternoon,Sat,Dec
+17,35.76,Latte,Night,Sat,Dec
+22,35.76,Cappuccino,Night,Sat,Dec
+13,25.96,Cortado,Afternoon,Sun,Dec
+15,21.06,Espresso,Afternoon,Sun,Dec
+15,25.96,Americano,Afternoon,Sun,Dec
+17,25.96,Cortado,Night,Sun,Dec
+17,21.06,Espresso,Night,Sun,Dec
+19,25.96,Cortado,Night,Sun,Dec
+20,35.76,Hot Chocolate,Night,Sun,Dec
+21,35.76,Latte,Night,Sun,Dec
+9,25.96,Cortado,Morning,Mon,Dec
+9,30.86,Americano with Milk,Morning,Mon,Dec
+13,35.76,Latte,Afternoon,Mon,Dec
+13,35.76,Hot Chocolate,Afternoon,Mon,Dec
+15,35.76,Latte,Afternoon,Mon,Dec
+15,30.86,Americano with Milk,Afternoon,Mon,Dec
+16,30.86,Americano with Milk,Afternoon,Mon,Dec
+16,25.96,Americano,Afternoon,Mon,Dec
+16,35.76,Cappuccino,Afternoon,Mon,Dec
+8,25.96,Cortado,Morning,Tue,Dec
+9,35.76,Cappuccino,Morning,Tue,Dec
+9,25.96,Cortado,Morning,Tue,Dec
+9,35.76,Cocoa,Morning,Tue,Dec
+10,30.86,Americano with Milk,Morning,Tue,Dec
+10,30.86,Americano with Milk,Morning,Tue,Dec
+11,35.76,Cappuccino,Morning,Tue,Dec
+11,30.86,Americano with Milk,Morning,Tue,Dec
+15,21.06,Espresso,Afternoon,Tue,Dec
+15,25.96,Americano,Afternoon,Tue,Dec
+16,35.76,Cappuccino,Afternoon,Tue,Dec
+17,35.76,Latte,Night,Tue,Dec
+17,30.86,Americano with Milk,Night,Tue,Dec
+17,35.76,Cappuccino,Night,Tue,Dec
+19,35.76,Latte,Night,Tue,Dec
+19,35.76,Hot Chocolate,Night,Tue,Dec
+9,30.86,Americano with Milk,Morning,Thu,Jan
+13,35.76,Cocoa,Afternoon,Thu,Jan
+13,35.76,Cocoa,Afternoon,Thu,Jan
+14,25.96,Cortado,Afternoon,Thu,Jan
+14,25.96,Cortado,Afternoon,Thu,Jan
+16,25.96,Americano,Afternoon,Thu,Jan
+16,35.76,Hot Chocolate,Afternoon,Thu,Jan
+16,30.86,Americano with Milk,Afternoon,Thu,Jan
+17,35.76,Cappuccino,Night,Thu,Jan
+9,25.96,Cortado,Morning,Fri,Jan
+10,30.86,Americano with Milk,Morning,Fri,Jan
+16,30.86,Americano with Milk,Afternoon,Fri,Jan
+22,35.76,Cappuccino,Night,Fri,Jan
+22,25.96,Americano,Night,Fri,Jan
+22,25.96,Americano,Night,Fri,Jan
+22,35.76,Latte,Night,Fri,Jan
+8,25.96,Cortado,Morning,Sat,Jan
+9,25.96,Americano,Morning,Sat,Jan
+13,35.76,Cappuccino,Afternoon,Sat,Jan
+15,35.76,Cocoa,Afternoon,Sat,Jan
+16,30.86,Americano with Milk,Afternoon,Sat,Jan
+16,35.76,Cappuccino,Afternoon,Sat,Jan
+16,35.76,Cappuccino,Afternoon,Sat,Jan
+16,25.96,Cortado,Afternoon,Sat,Jan
+18,25.96,Americano,Night,Sat,Jan
+22,35.76,Latte,Night,Sat,Jan
+9,30.86,Americano with Milk,Morning,Sun,Jan
+10,35.76,Latte,Morning,Sun,Jan
+22,30.86,Americano with Milk,Night,Sun,Jan
+19,25.96,Americano,Night,Mon,Jan
+13,35.76,Cappuccino,Afternoon,Tue,Jan
+22,35.76,Cocoa,Night,Tue,Jan
+22,35.76,Cocoa,Night,Tue,Jan
+7,30.86,Americano with Milk,Morning,Wed,Jan
+9,35.76,Latte,Morning,Wed,Jan
+10,25.96,Cortado,Morning,Wed,Jan
+17,35.76,Cappuccino,Night,Wed,Jan
+8,25.96,Americano,Morning,Thu,Jan
+8,35.76,Latte,Morning,Thu,Jan
+9,30.86,Americano with Milk,Morning,Thu,Jan
+14,21.06,Espresso,Afternoon,Thu,Jan
+15,35.76,Latte,Afternoon,Thu,Jan
+15,30.86,Americano with Milk,Afternoon,Thu,Jan
+15,25.96,Cortado,Afternoon,Thu,Jan
+20,30.86,Americano with Milk,Night,Thu,Jan
+22,35.76,Latte,Night,Thu,Jan
+8,30.86,Americano with Milk,Morning,Fri,Jan
+9,30.86,Americano with Milk,Morning,Fri,Jan
+17,35.76,Cappuccino,Night,Fri,Jan
+17,35.76,Hot Chocolate,Night,Fri,Jan
+17,30.86,Americano with Milk,Night,Fri,Jan
+7,30.86,Americano with Milk,Morning,Sat,Jan
+10,35.76,Hot Chocolate,Morning,Sat,Jan
+11,25.96,Americano,Morning,Sat,Jan
+11,35.76,Latte,Morning,Sat,Jan
+11,35.76,Latte,Morning,Sat,Jan
+12,35.76,Latte,Afternoon,Sat,Jan
+12,35.76,Latte,Afternoon,Sat,Jan
+14,30.86,Americano with Milk,Afternoon,Sat,Jan
+14,30.86,Americano with Milk,Afternoon,Sat,Jan
+14,35.76,Cappuccino,Afternoon,Sat,Jan
+14,35.76,Latte,Afternoon,Sat,Jan
+17,25.96,Cortado,Night,Sat,Jan
+17,35.76,Latte,Night,Sat,Jan
+17,25.96,Cortado,Night,Sat,Jan
+18,30.86,Americano with Milk,Night,Sat,Jan
+11,30.86,Americano with Milk,Morning,Sun,Jan
+11,25.96,Americano,Morning,Sun,Jan
+11,30.86,Americano with Milk,Morning,Sun,Jan
+16,35.76,Hot Chocolate,Afternoon,Sun,Jan
+20,30.86,Americano with Milk,Night,Sun,Jan
+8,30.86,Americano with Milk,Morning,Mon,Jan
+9,30.86,Americano with Milk,Morning,Mon,Jan
+13,25.96,Cortado,Afternoon,Mon,Jan
+13,35.76,Latte,Afternoon,Mon,Jan
+14,35.76,Latte,Afternoon,Mon,Jan
+14,35.76,Cappuccino,Afternoon,Mon,Jan
+16,35.76,Latte,Afternoon,Mon,Jan
+20,21.06,Espresso,Night,Mon,Jan
+7,35.76,Latte,Morning,Tue,Jan
+9,25.96,Cortado,Morning,Tue,Jan
+10,30.86,Americano with Milk,Morning,Tue,Jan
+12,35.76,Latte,Afternoon,Tue,Jan
+16,30.86,Americano with Milk,Afternoon,Tue,Jan
+16,30.86,Americano with Milk,Afternoon,Tue,Jan
+19,35.76,Cappuccino,Night,Tue,Jan
+21,35.76,Latte,Night,Tue,Jan
+9,30.86,Americano with Milk,Morning,Wed,Jan
+11,25.96,Americano,Morning,Wed,Jan
+13,35.76,Cappuccino,Afternoon,Wed,Jan
+15,35.76,Latte,Afternoon,Wed,Jan
+15,35.76,Cappuccino,Afternoon,Wed,Jan
+15,35.76,Latte,Afternoon,Wed,Jan
+16,35.76,Latte,Afternoon,Wed,Jan
+18,35.76,Latte,Night,Wed,Jan
+19,35.76,Latte,Night,Wed,Jan
+21,35.76,Cappuccino,Night,Wed,Jan
+9,35.76,Latte,Morning,Thu,Jan
+9,30.86,Americano with Milk,Morning,Thu,Jan
+10,30.86,Americano with Milk,Morning,Thu,Jan
+12,25.96,Cortado,Afternoon,Thu,Jan
+15,35.76,Latte,Afternoon,Thu,Jan
+16,35.76,Latte,Afternoon,Thu,Jan
+18,35.76,Cappuccino,Night,Thu,Jan
+21,35.76,Hot Chocolate,Night,Thu,Jan
+21,35.76,Hot Chocolate,Night,Thu,Jan
+21,25.96,Cortado,Night,Thu,Jan
+7,35.76,Cocoa,Morning,Fri,Jan
+8,35.76,Latte,Morning,Fri,Jan
+8,35.76,Cappuccino,Morning,Fri,Jan
+8,30.86,Americano with Milk,Morning,Fri,Jan
+9,30.86,Americano with Milk,Morning,Fri,Jan
+14,35.76,Cocoa,Afternoon,Fri,Jan
+14,35.76,Cocoa,Afternoon,Fri,Jan
+17,35.76,Hot Chocolate,Night,Fri,Jan
+21,35.76,Hot Chocolate,Night,Fri,Jan
+10,30.86,Americano with Milk,Morning,Sat,Jan
+16,35.76,Hot Chocolate,Afternoon,Sat,Jan
+16,35.76,Latte,Afternoon,Sat,Jan
+16,35.76,Hot Chocolate,Afternoon,Sat,Jan
+8,30.86,Americano with Milk,Morning,Mon,Jan
+10,30.86,Americano with Milk,Morning,Mon,Jan
+11,25.96,Cortado,Morning,Mon,Jan
+12,25.96,Americano,Afternoon,Mon,Jan
+12,25.96,Cortado,Afternoon,Mon,Jan
+13,30.86,Americano with Milk,Afternoon,Mon,Jan
+20,35.76,Hot Chocolate,Night,Mon,Jan
+20,35.76,Cappuccino,Night,Mon,Jan
+20,35.76,Cappuccino,Night,Mon,Jan
+21,35.76,Latte,Night,Mon,Jan
+8,35.76,Cocoa,Morning,Tue,Jan
+8,25.96,Cortado,Morning,Tue,Jan
+8,30.86,Americano with Milk,Morning,Tue,Jan
+15,25.96,Americano,Afternoon,Tue,Jan
+18,35.76,Hot Chocolate,Night,Tue,Jan
+18,35.76,Latte,Night,Tue,Jan
+18,35.76,Latte,Night,Tue,Jan
+19,25.96,Americano,Night,Tue,Jan
+11,21.06,Espresso,Morning,Wed,Jan
+17,30.86,Americano with Milk,Night,Wed,Jan
+18,35.76,Cocoa,Night,Wed,Jan
+19,30.86,Americano with Milk,Night,Wed,Jan
+19,35.76,Cappuccino,Night,Wed,Jan
+19,35.76,Latte,Night,Wed,Jan
+20,30.86,Americano with Milk,Night,Wed,Jan
+13,35.76,Cappuccino,Afternoon,Fri,Jan
+13,25.96,Cortado,Afternoon,Fri,Jan
+15,35.76,Cocoa,Afternoon,Fri,Jan
+17,25.96,Americano,Night,Fri,Jan
+21,35.76,Cocoa,Night,Fri,Jan
+22,35.76,Hot Chocolate,Night,Fri,Jan
+22,35.76,Latte,Night,Fri,Jan
+13,35.76,Cappuccino,Afternoon,Sat,Jan
+14,35.76,Cappuccino,Afternoon,Sat,Jan
+14,25.96,Americano,Afternoon,Sat,Jan
+12,25.96,Americano,Afternoon,Sun,Jan
+12,21.06,Espresso,Afternoon,Sun,Jan
+8,25.96,Cortado,Morning,Mon,Jan
+8,25.96,Americano,Morning,Mon,Jan
+12,35.76,Cappuccino,Afternoon,Mon,Jan
+13,30.86,Americano with Milk,Afternoon,Mon,Jan
+15,30.86,Americano with Milk,Afternoon,Mon,Jan
+15,25.96,Cortado,Afternoon,Mon,Jan
+15,30.86,Americano with Milk,Afternoon,Mon,Jan
+18,35.76,Latte,Night,Mon,Jan
+19,35.76,Latte,Night,Mon,Jan
+19,35.76,Latte,Night,Mon,Jan
+8,35.76,Latte,Morning,Tue,Jan
+9,25.96,Americano,Morning,Tue,Jan
+11,30.86,Americano with Milk,Morning,Tue,Jan
+12,25.96,Americano,Afternoon,Tue,Jan
+16,35.76,Cocoa,Afternoon,Tue,Jan
+16,25.96,Cortado,Afternoon,Tue,Jan
+17,25.96,Americano,Night,Tue,Jan
+20,35.76,Latte,Night,Tue,Jan
+20,35.76,Cappuccino,Night,Tue,Jan
+9,25.96,Americano,Morning,Wed,Jan
+16,25.96,Americano,Afternoon,Wed,Jan
+19,30.86,Americano with Milk,Night,Wed,Jan
+19,21.06,Espresso,Night,Wed,Jan
+9,30.86,Americano with Milk,Morning,Thu,Jan
+10,30.86,Americano with Milk,Morning,Thu,Jan
+11,25.96,Cortado,Morning,Thu,Jan
+12,35.76,Hot Chocolate,Afternoon,Thu,Jan
+13,25.96,Americano,Afternoon,Thu,Jan
+14,30.86,Americano with Milk,Afternoon,Thu,Jan
+17,35.76,Hot Chocolate,Night,Thu,Jan
+18,30.86,Americano with Milk,Night,Thu,Jan
+18,25.96,Cortado,Night,Thu,Jan
+8,25.96,Americano,Morning,Fri,Jan
+8,30.86,Americano with Milk,Morning,Fri,Jan
+9,30.86,Americano with Milk,Morning,Fri,Jan
+9,35.76,Cocoa,Morning,Fri,Jan
+9,35.76,Cappuccino,Morning,Fri,Jan
+9,35.76,Cappuccino,Morning,Fri,Jan
+12,35.76,Latte,Afternoon,Fri,Jan
+12,35.76,Latte,Afternoon,Fri,Jan
+14,35.76,Cappuccino,Afternoon,Fri,Jan
+16,30.86,Americano with Milk,Afternoon,Fri,Jan
+22,30.86,Americano with Milk,Night,Fri,Jan
+22,25.96,Americano,Night,Fri,Jan
+8,30.86,Americano with Milk,Morning,Sat,Feb
+10,30.86,Americano with Milk,Morning,Sat,Feb
+13,25.96,Cortado,Afternoon,Sat,Feb
+13,25.96,Cortado,Afternoon,Sat,Feb
+14,35.76,Cappuccino,Afternoon,Sat,Feb
+14,35.76,Cappuccino,Afternoon,Sat,Feb
+15,35.76,Latte,Afternoon,Sat,Feb
+18,35.76,Cappuccino,Night,Sat,Feb
+19,30.86,Americano with Milk,Night,Sat,Feb
+19,30.86,Americano with Milk,Night,Sat,Feb
+21,30.86,Americano with Milk,Night,Sat,Feb
+10,35.76,Cappuccino,Morning,Sun,Feb
+10,35.76,Cappuccino,Morning,Sun,Feb
+12,35.76,Latte,Afternoon,Sun,Feb
+12,35.76,Latte,Afternoon,Sun,Feb
+14,30.86,Americano with Milk,Afternoon,Sun,Feb
+16,35.76,Latte,Afternoon,Sun,Feb
+16,35.76,Latte,Afternoon,Sun,Feb
+7,35.76,Cappuccino,Morning,Mon,Feb
+7,30.86,Americano with Milk,Morning,Mon,Feb
+8,21.06,Espresso,Morning,Mon,Feb
+8,30.86,Americano with Milk,Morning,Mon,Feb
+10,25.96,Americano,Morning,Mon,Feb
+10,35.76,Cappuccino,Morning,Mon,Feb
+10,30.86,Americano with Milk,Morning,Mon,Feb
+13,35.76,Cappuccino,Afternoon,Mon,Feb
+13,35.76,Cappuccino,Afternoon,Mon,Feb
+13,25.96,Americano,Afternoon,Mon,Feb
+14,25.96,Americano,Afternoon,Mon,Feb
+14,35.76,Latte,Afternoon,Mon,Feb
+14,35.76,Latte,Afternoon,Mon,Feb
+15,35.76,Latte,Afternoon,Mon,Feb
+15,25.96,Americano,Afternoon,Mon,Feb
+17,35.76,Cocoa,Night,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+17,35.76,Hot Chocolate,Night,Mon,Feb
+17,35.76,Latte,Night,Mon,Feb
+17,35.76,Hot Chocolate,Night,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+18,25.96,Americano,Night,Mon,Feb
+20,35.76,Cocoa,Night,Mon,Feb
+10,30.86,Americano with Milk,Morning,Tue,Feb
+10,25.96,Americano,Morning,Tue,Feb
+12,30.86,Americano with Milk,Afternoon,Tue,Feb
+13,25.96,Cortado,Afternoon,Tue,Feb
+14,25.96,Americano,Afternoon,Tue,Feb
+14,30.86,Americano with Milk,Afternoon,Tue,Feb
+14,25.96,Americano,Afternoon,Tue,Feb
+18,30.86,Americano with Milk,Night,Tue,Feb
+19,35.76,Cocoa,Night,Tue,Feb
+19,35.76,Cocoa,Night,Tue,Feb
+19,35.76,Cocoa,Night,Tue,Feb
+19,25.96,Cortado,Night,Tue,Feb
+8,30.86,Americano with Milk,Morning,Wed,Feb
+9,30.86,Americano with Milk,Morning,Wed,Feb
+11,25.96,Americano,Morning,Wed,Feb
+11,25.96,Americano,Morning,Wed,Feb
+11,25.96,Americano,Morning,Wed,Feb
+11,30.86,Americano with Milk,Morning,Wed,Feb
+12,25.96,Americano,Afternoon,Wed,Feb
+13,25.96,Americano,Afternoon,Wed,Feb
+13,21.06,Espresso,Afternoon,Wed,Feb
+13,21.06,Espresso,Afternoon,Wed,Feb
+14,35.76,Cappuccino,Afternoon,Wed,Feb
+15,35.76,Cappuccino,Afternoon,Wed,Feb
+16,35.76,Hot Chocolate,Afternoon,Wed,Feb
+16,35.76,Latte,Afternoon,Wed,Feb
+16,35.76,Latte,Afternoon,Wed,Feb
+16,35.76,Cocoa,Afternoon,Wed,Feb
+16,35.76,Hot Chocolate,Afternoon,Wed,Feb
+18,35.76,Cappuccino,Night,Wed,Feb
+18,35.76,Cappuccino,Night,Wed,Feb
+18,35.76,Cocoa,Night,Wed,Feb
+18,30.86,Americano with Milk,Night,Wed,Feb
+18,35.76,Cappuccino,Night,Wed,Feb
+19,35.76,Hot Chocolate,Night,Wed,Feb
+20,35.76,Cocoa,Night,Wed,Feb
+7,30.86,Americano with Milk,Morning,Thu,Feb
+13,25.96,Americano,Afternoon,Thu,Feb
+14,30.86,Americano with Milk,Afternoon,Thu,Feb
+14,35.76,Cappuccino,Afternoon,Thu,Feb
+16,35.76,Cocoa,Afternoon,Thu,Feb
+17,35.76,Cocoa,Night,Thu,Feb
+17,35.76,Cocoa,Night,Thu,Feb
+19,35.76,Cappuccino,Night,Thu,Feb
+19,21.06,Espresso,Night,Thu,Feb
+20,35.76,Cocoa,Night,Thu,Feb
+20,35.76,Cocoa,Night,Thu,Feb
+20,35.76,Latte,Night,Thu,Feb
+8,30.86,Americano with Milk,Morning,Fri,Feb
+9,30.86,Americano with Milk,Morning,Fri,Feb
+10,25.96,Americano,Morning,Fri,Feb
+12,35.76,Cocoa,Afternoon,Fri,Feb
+12,30.86,Americano with Milk,Afternoon,Fri,Feb
+12,25.96,Americano,Afternoon,Fri,Feb
+16,25.96,Cortado,Afternoon,Fri,Feb
+16,35.76,Latte,Afternoon,Fri,Feb
+16,35.76,Hot Chocolate,Afternoon,Fri,Feb
+16,35.76,Latte,Afternoon,Fri,Feb
+18,35.76,Cocoa,Night,Fri,Feb
+18,35.76,Cocoa,Night,Fri,Feb
+18,25.96,Cortado,Night,Fri,Feb
+18,35.76,Cocoa,Night,Fri,Feb
+20,35.76,Cocoa,Night,Fri,Feb
+20,25.96,Cortado,Night,Fri,Feb
+9,25.96,Americano,Morning,Sat,Feb
+10,30.86,Americano with Milk,Morning,Sat,Feb
+11,25.96,Cortado,Morning,Sat,Feb
+11,25.96,Americano,Morning,Sat,Feb
+12,25.96,Americano,Afternoon,Sat,Feb
+13,25.96,Americano,Afternoon,Sat,Feb
+15,25.96,Americano,Afternoon,Sat,Feb
+15,25.96,Americano,Afternoon,Sat,Feb
+8,35.76,Cocoa,Morning,Sun,Feb
+10,30.86,Americano with Milk,Morning,Sun,Feb
+10,25.96,Americano,Morning,Sun,Feb
+12,35.76,Latte,Afternoon,Sun,Feb
+15,35.76,Cocoa,Afternoon,Sun,Feb
+15,35.76,Latte,Afternoon,Sun,Feb
+15,35.76,Hot Chocolate,Afternoon,Sun,Feb
+15,35.76,Cocoa,Afternoon,Sun,Feb
+16,25.96,Cortado,Afternoon,Sun,Feb
+7,25.96,Americano,Morning,Mon,Feb
+8,25.96,Americano,Morning,Mon,Feb
+8,25.96,Americano,Morning,Mon,Feb
+11,30.86,Americano with Milk,Morning,Mon,Feb
+13,25.96,Americano,Afternoon,Mon,Feb
+13,35.76,Cocoa,Afternoon,Mon,Feb
+13,30.86,Americano with Milk,Afternoon,Mon,Feb
+13,25.96,Americano,Afternoon,Mon,Feb
+14,35.76,Latte,Afternoon,Mon,Feb
+14,25.96,Americano,Afternoon,Mon,Feb
+14,35.76,Cocoa,Afternoon,Mon,Feb
+14,35.76,Cocoa,Afternoon,Mon,Feb
+15,35.76,Cappuccino,Afternoon,Mon,Feb
+15,30.86,Americano with Milk,Afternoon,Mon,Feb
+15,35.76,Latte,Afternoon,Mon,Feb
+15,35.76,Hot Chocolate,Afternoon,Mon,Feb
+16,35.76,Cocoa,Afternoon,Mon,Feb
+17,25.96,Americano,Night,Mon,Feb
+18,30.86,Americano with Milk,Night,Mon,Feb
+19,35.76,Latte,Night,Mon,Feb
+19,35.76,Latte,Night,Mon,Feb
+10,25.96,Americano,Morning,Tue,Feb
+11,25.96,Americano,Morning,Tue,Feb
+11,30.86,Americano with Milk,Morning,Tue,Feb
+11,35.76,Cocoa,Morning,Tue,Feb
+15,35.76,Hot Chocolate,Afternoon,Tue,Feb
+16,30.86,Americano with Milk,Afternoon,Tue,Feb
+16,21.06,Espresso,Afternoon,Tue,Feb
+17,35.76,Latte,Night,Tue,Feb
+17,30.86,Americano with Milk,Night,Tue,Feb
+17,30.86,Americano with Milk,Night,Tue,Feb
+17,25.96,Americano,Night,Tue,Feb
+17,30.86,Americano with Milk,Night,Tue,Feb
+19,35.76,Latte,Night,Tue,Feb
+19,35.76,Cocoa,Night,Tue,Feb
+7,35.76,Cappuccino,Morning,Wed,Feb
+7,25.96,Americano,Morning,Wed,Feb
+8,35.76,Cocoa,Morning,Wed,Feb
+9,30.86,Americano with Milk,Morning,Wed,Feb
+10,25.96,Americano,Morning,Wed,Feb
+12,25.96,Americano,Afternoon,Wed,Feb
+13,25.96,Americano,Afternoon,Wed,Feb
+13,35.76,Hot Chocolate,Afternoon,Wed,Feb
+15,35.76,Hot Chocolate,Afternoon,Wed,Feb
+15,35.76,Latte,Afternoon,Wed,Feb
+15,35.76,Hot Chocolate,Afternoon,Wed,Feb
+16,25.96,Americano,Afternoon,Wed,Feb
+16,25.96,Americano,Afternoon,Wed,Feb
+17,35.76,Cappuccino,Night,Wed,Feb
+17,25.96,Americano,Night,Wed,Feb
+20,35.76,Latte,Night,Wed,Feb
+20,35.76,Cocoa,Night,Wed,Feb
+21,35.76,Cappuccino,Night,Wed,Feb
+7,30.86,Americano with Milk,Morning,Thu,Feb
+8,25.96,Americano,Morning,Thu,Feb
+9,21.06,Espresso,Morning,Thu,Feb
+9,35.76,Cocoa,Morning,Thu,Feb
+10,30.86,Americano with Milk,Morning,Thu,Feb
+10,30.86,Americano with Milk,Morning,Thu,Feb
+16,25.96,Americano,Afternoon,Thu,Feb
+16,25.96,Americano,Afternoon,Thu,Feb
+17,30.86,Americano with Milk,Night,Thu,Feb
+17,30.86,Americano with Milk,Night,Thu,Feb
+18,35.76,Latte,Night,Thu,Feb
+18,35.76,Cappuccino,Night,Thu,Feb
+19,35.76,Latte,Night,Thu,Feb
+11,25.96,Americano,Morning,Fri,Feb
+14,35.76,Hot Chocolate,Afternoon,Fri,Feb
+14,25.96,Americano,Afternoon,Fri,Feb
+14,21.06,Espresso,Afternoon,Fri,Feb
+14,30.86,Americano with Milk,Afternoon,Fri,Feb
+15,35.76,Cappuccino,Afternoon,Fri,Feb
+15,35.76,Cappuccino,Afternoon,Fri,Feb
+15,35.76,Latte,Afternoon,Fri,Feb
+15,35.76,Hot Chocolate,Afternoon,Fri,Feb
+15,35.76,Cappuccino,Afternoon,Fri,Feb
+17,25.96,Americano,Night,Fri,Feb
+17,35.76,Cocoa,Night,Fri,Feb
+17,21.06,Espresso,Night,Fri,Feb
+17,30.86,Americano with Milk,Night,Fri,Feb
+21,25.96,Americano,Night,Fri,Feb
+9,35.76,Cappuccino,Morning,Sat,Feb
+12,35.76,Cappuccino,Afternoon,Sat,Feb
+12,25.96,Americano,Afternoon,Sat,Feb
+13,30.86,Americano with Milk,Afternoon,Sat,Feb
+13,30.86,Americano with Milk,Afternoon,Sat,Feb
+14,35.76,Cappuccino,Afternoon,Sat,Feb
+14,25.96,Americano,Afternoon,Sat,Feb
+15,35.76,Hot Chocolate,Afternoon,Sat,Feb
+15,35.76,Hot Chocolate,Afternoon,Sat,Feb
+10,25.96,Americano,Morning,Sun,Feb
+10,25.96,Americano,Morning,Sun,Feb
+10,30.86,Americano with Milk,Morning,Sun,Feb
+11,35.76,Hot Chocolate,Morning,Sun,Feb
+11,25.96,Americano,Morning,Sun,Feb
+14,35.76,Hot Chocolate,Afternoon,Sun,Feb
+14,35.76,Latte,Afternoon,Sun,Feb
+17,35.76,Hot Chocolate,Night,Sun,Feb
+17,30.86,Americano with Milk,Night,Sun,Feb
+17,30.86,Americano with Milk,Night,Sun,Feb
+6,35.76,Cappuccino,Morning,Mon,Feb
+8,25.96,Americano,Morning,Mon,Feb
+9,25.96,Americano,Morning,Mon,Feb
+9,30.86,Americano with Milk,Morning,Mon,Feb
+9,35.76,Hot Chocolate,Morning,Mon,Feb
+10,30.86,Americano with Milk,Morning,Mon,Feb
+10,25.96,Americano,Morning,Mon,Feb
+11,30.86,Americano with Milk,Morning,Mon,Feb
+11,21.06,Espresso,Morning,Mon,Feb
+12,35.76,Cappuccino,Afternoon,Mon,Feb
+14,35.76,Latte,Afternoon,Mon,Feb
+15,30.86,Americano with Milk,Afternoon,Mon,Feb
+15,35.76,Latte,Afternoon,Mon,Feb
+16,21.06,Espresso,Afternoon,Mon,Feb
+16,25.96,Americano,Afternoon,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+18,25.96,Americano,Night,Mon,Feb
+19,25.96,Americano,Night,Mon,Feb
+19,25.96,Americano,Night,Mon,Feb
+20,35.76,Latte,Night,Mon,Feb
+8,25.96,Americano,Morning,Tue,Feb
+8,25.96,Americano,Morning,Tue,Feb
+11,25.96,Americano,Morning,Tue,Feb
+11,25.96,Americano,Morning,Tue,Feb
+11,30.86,Americano with Milk,Morning,Tue,Feb
+12,30.86,Americano with Milk,Afternoon,Tue,Feb
+13,35.76,Cocoa,Afternoon,Tue,Feb
+13,25.96,Americano,Afternoon,Tue,Feb
+13,30.86,Americano with Milk,Afternoon,Tue,Feb
+17,35.76,Hot Chocolate,Night,Tue,Feb
+17,30.86,Americano with Milk,Night,Tue,Feb
+17,21.06,Espresso,Night,Tue,Feb
+17,35.76,Cocoa,Night,Tue,Feb
+17,35.76,Cocoa,Night,Tue,Feb
+19,35.76,Cocoa,Night,Tue,Feb
+20,35.76,Cocoa,Night,Tue,Feb
+20,35.76,Hot Chocolate,Night,Tue,Feb
+21,30.86,Americano with Milk,Night,Tue,Feb
+8,35.76,Cappuccino,Morning,Wed,Feb
+8,25.96,Americano,Morning,Wed,Feb
+8,25.96,Americano,Morning,Wed,Feb
+9,35.76,Cappuccino,Morning,Wed,Feb
+10,25.96,Americano,Morning,Wed,Feb
+10,35.76,Hot Chocolate,Morning,Wed,Feb
+10,30.86,Americano with Milk,Morning,Wed,Feb
+12,25.96,Americano,Afternoon,Wed,Feb
+12,35.76,Cocoa,Afternoon,Wed,Feb
+13,25.96,Americano,Afternoon,Wed,Feb
+15,35.76,Cappuccino,Afternoon,Wed,Feb
+17,25.96,Americano,Night,Wed,Feb
+17,35.76,Cappuccino,Night,Wed,Feb
+17,30.86,Americano with Milk,Night,Wed,Feb
+18,35.76,Cappuccino,Night,Wed,Feb
+19,35.76,Latte,Night,Wed,Feb
+19,35.76,Cocoa,Night,Wed,Feb
+19,35.76,Hot Chocolate,Night,Wed,Feb
+19,35.76,Latte,Night,Wed,Feb
+20,35.76,Cocoa,Night,Wed,Feb
+7,35.76,Cappuccino,Morning,Thu,Feb
+9,25.96,Americano,Morning,Thu,Feb
+10,35.76,Cappuccino,Morning,Thu,Feb
+10,25.96,Americano,Morning,Thu,Feb
+10,25.96,Americano,Morning,Thu,Feb
+10,25.96,Americano,Morning,Thu,Feb
+13,30.86,Americano with Milk,Afternoon,Thu,Feb
+14,35.76,Latte,Afternoon,Thu,Feb
+14,25.96,Americano,Afternoon,Thu,Feb
+14,25.96,Americano,Afternoon,Thu,Feb
+15,21.06,Espresso,Afternoon,Thu,Feb
+16,35.76,Cappuccino,Afternoon,Thu,Feb
+16,35.76,Cappuccino,Afternoon,Thu,Feb
+17,35.76,Hot Chocolate,Night,Thu,Feb
+17,25.96,Americano,Night,Thu,Feb
+18,25.96,Americano,Night,Thu,Feb
+19,35.76,Hot Chocolate,Night,Thu,Feb
+19,35.76,Cocoa,Night,Thu,Feb
+20,35.76,Latte,Night,Thu,Feb
+6,25.96,Americano,Morning,Fri,Feb
+9,35.76,Latte,Morning,Fri,Feb
+9,35.76,Cappuccino,Morning,Fri,Feb
+9,21.06,Espresso,Morning,Fri,Feb
+10,25.96,Americano,Morning,Fri,Feb
+11,30.86,Americano with Milk,Morning,Fri,Feb
+12,25.96,Americano,Afternoon,Fri,Feb
+12,25.96,Americano,Afternoon,Fri,Feb
+12,25.96,Americano,Afternoon,Fri,Feb
+12,25.96,Americano,Afternoon,Fri,Feb
+13,25.96,Americano,Afternoon,Fri,Feb
+14,25.96,Americano,Afternoon,Fri,Feb
+15,35.76,Cappuccino,Afternoon,Fri,Feb
+15,25.96,Americano,Afternoon,Fri,Feb
+15,25.96,Americano,Afternoon,Fri,Feb
+15,25.96,Americano,Afternoon,Fri,Feb
+16,35.76,Cocoa,Afternoon,Fri,Feb
+16,35.76,Latte,Afternoon,Fri,Feb
+16,35.76,Hot Chocolate,Afternoon,Fri,Feb
+16,35.76,Latte,Afternoon,Fri,Feb
+19,35.76,Cocoa,Night,Fri,Feb
+19,35.76,Cocoa,Night,Fri,Feb
+19,35.76,Cappuccino,Night,Fri,Feb
+10,35.76,Hot Chocolate,Morning,Sat,Feb
+11,25.96,Americano,Morning,Sat,Feb
+11,25.96,Americano,Morning,Sat,Feb
+12,21.06,Espresso,Afternoon,Sat,Feb
+15,30.86,Americano with Milk,Afternoon,Sat,Feb
+10,30.86,Americano with Milk,Morning,Sun,Feb
+12,30.86,Americano with Milk,Afternoon,Sun,Feb
+12,30.86,Americano with Milk,Afternoon,Sun,Feb
+13,35.76,Cappuccino,Afternoon,Sun,Feb
+14,35.76,Cocoa,Afternoon,Sun,Feb
+17,25.96,Americano,Night,Sun,Feb
+9,30.86,Americano with Milk,Morning,Mon,Feb
+9,35.76,Latte,Morning,Mon,Feb
+10,25.96,Americano,Morning,Mon,Feb
+10,30.86,Americano with Milk,Morning,Mon,Feb
+10,30.86,Americano with Milk,Morning,Mon,Feb
+10,35.76,Cocoa,Morning,Mon,Feb
+12,35.76,Latte,Afternoon,Mon,Feb
+13,35.76,Cocoa,Afternoon,Mon,Feb
+15,30.86,Americano with Milk,Afternoon,Mon,Feb
+16,35.76,Cocoa,Afternoon,Mon,Feb
+16,35.76,Cappuccino,Afternoon,Mon,Feb
+16,35.76,Latte,Afternoon,Mon,Feb
+16,25.96,Americano,Afternoon,Mon,Feb
+17,25.96,Americano,Night,Mon,Feb
+17,30.86,Americano with Milk,Night,Mon,Feb
+18,30.86,Americano with Milk,Night,Mon,Feb
+18,35.76,Latte,Night,Mon,Feb
+19,30.86,Americano with Milk,Night,Mon,Feb
+19,35.76,Hot Chocolate,Night,Mon,Feb
+19,35.76,Latte,Night,Mon,Feb
+19,35.76,Cocoa,Night,Mon,Feb
+20,35.76,Cocoa,Night,Mon,Feb
+8,30.86,Americano with Milk,Morning,Tue,Feb
+8,25.96,Americano,Morning,Tue,Feb
+8,30.86,Americano with Milk,Morning,Tue,Feb
+10,21.06,Espresso,Morning,Tue,Feb
+11,25.96,Americano,Morning,Tue,Feb
+11,25.96,Americano,Morning,Tue,Feb
+12,35.76,Cappuccino,Afternoon,Tue,Feb
+14,35.76,Cappuccino,Afternoon,Tue,Feb
+16,25.96,Americano,Afternoon,Tue,Feb
+16,25.96,Americano,Afternoon,Tue,Feb
+18,35.76,Cocoa,Night,Tue,Feb
+19,35.76,Cappuccino,Night,Tue,Feb
+8,25.96,Americano,Morning,Wed,Feb
+10,30.86,Americano with Milk,Morning,Wed,Feb
+10,30.86,Americano with Milk,Morning,Wed,Feb
+10,35.76,Hot Chocolate,Morning,Wed,Feb
+13,35.76,Cocoa,Afternoon,Wed,Feb
+13,35.76,Latte,Afternoon,Wed,Feb
+15,25.96,Americano,Afternoon,Wed,Feb
+15,25.96,Americano,Afternoon,Wed,Feb
+15,25.96,Cortado,Afternoon,Wed,Feb
+15,35.76,Hot Chocolate,Afternoon,Wed,Feb
+15,25.96,Americano,Afternoon,Wed,Feb
+15,25.96,Americano,Afternoon,Wed,Feb
+16,35.76,Latte,Afternoon,Wed,Feb
+16,35.76,Hot Chocolate,Afternoon,Wed,Feb
+16,35.76,Latte,Afternoon,Wed,Feb
+17,30.86,Americano with Milk,Night,Wed,Feb
+18,35.76,Latte,Night,Wed,Feb
+18,35.76,Cappuccino,Night,Wed,Feb
+7,35.76,Cappuccino,Morning,Thu,Feb
+7,35.76,Cappuccino,Morning,Thu,Feb
+10,21.06,Espresso,Morning,Thu,Feb
+11,35.76,Cocoa,Morning,Thu,Feb
+12,35.76,Cocoa,Afternoon,Thu,Feb
+13,30.86,Americano with Milk,Afternoon,Thu,Feb
+14,25.96,Americano,Afternoon,Thu,Feb
+14,35.76,Latte,Afternoon,Thu,Feb
+15,25.96,Americano,Afternoon,Thu,Feb
+16,25.96,Americano,Afternoon,Thu,Feb
+17,25.96,Americano,Night,Thu,Feb
+17,25.96,Americano,Night,Thu,Feb
+17,35.76,Latte,Night,Thu,Feb
+18,35.76,Latte,Night,Thu,Feb
+18,35.76,Cappuccino,Night,Thu,Feb
+18,35.76,Cocoa,Night,Thu,Feb
+18,35.76,Cocoa,Night,Thu,Feb
+19,35.76,Latte,Night,Thu,Feb
+20,35.76,Cappuccino,Night,Thu,Feb
+6,30.86,Americano with Milk,Morning,Fri,Feb
+6,30.86,Americano with Milk,Morning,Fri,Feb
+7,35.76,Cappuccino,Morning,Fri,Feb
+8,21.06,Espresso,Morning,Fri,Feb
+9,30.86,Americano with Milk,Morning,Fri,Feb
+14,25.96,Americano,Afternoon,Fri,Feb
+14,25.96,Americano,Afternoon,Fri,Feb
+14,25.96,Americano,Afternoon,Fri,Feb
+14,35.76,Latte,Afternoon,Fri,Feb
+15,25.96,Americano,Afternoon,Fri,Feb
+16,35.76,Cocoa,Afternoon,Fri,Feb
+16,25.96,Americano,Afternoon,Fri,Feb
+17,35.76,Latte,Night,Fri,Feb
+17,30.86,Americano with Milk,Night,Fri,Feb
+17,25.96,Americano,Night,Fri,Feb
+17,25.96,Americano,Night,Fri,Feb
+18,35.76,Latte,Night,Fri,Feb
+10,35.76,Cappuccino,Morning,Sat,Mar
+11,25.96,Americano,Morning,Sat,Mar
+11,25.96,Americano,Morning,Sat,Mar
+14,35.76,Latte,Afternoon,Sat,Mar
+15,25.96,Americano,Afternoon,Sat,Mar
+15,30.86,Americano with Milk,Afternoon,Sat,Mar
+16,35.76,Cappuccino,Afternoon,Sat,Mar
+17,25.96,Americano,Night,Sat,Mar
+9,35.76,Cocoa,Morning,Sun,Mar
+12,35.76,Latte,Afternoon,Sun,Mar
+13,30.86,Americano with Milk,Afternoon,Sun,Mar
+15,30.86,Americano with Milk,Afternoon,Sun,Mar
+15,25.96,Americano,Afternoon,Sun,Mar
+15,25.96,Americano,Afternoon,Sun,Mar
+8,35.76,Cappuccino,Morning,Mon,Mar
+9,35.76,Cocoa,Morning,Mon,Mar
+9,35.76,Latte,Morning,Mon,Mar
+10,35.76,Hot Chocolate,Morning,Mon,Mar
+10,35.76,Hot Chocolate,Morning,Mon,Mar
+12,35.76,Cappuccino,Afternoon,Mon,Mar
+15,35.76,Latte,Afternoon,Mon,Mar
+15,25.96,Americano,Afternoon,Mon,Mar
+16,35.76,Cocoa,Afternoon,Mon,Mar
+16,35.76,Latte,Afternoon,Mon,Mar
+16,35.76,Latte,Afternoon,Mon,Mar
+16,35.76,Cappuccino,Afternoon,Mon,Mar
+16,35.76,Cappuccino,Afternoon,Mon,Mar
+16,25.96,Americano,Afternoon,Mon,Mar
+17,30.86,Americano with Milk,Night,Mon,Mar
+17,25.96,Americano,Night,Mon,Mar
+17,35.76,Hot Chocolate,Night,Mon,Mar
+17,25.96,Americano,Night,Mon,Mar
+17,35.76,Hot Chocolate,Night,Mon,Mar
+17,35.76,Hot Chocolate,Night,Mon,Mar
+18,30.86,Americano with Milk,Night,Mon,Mar
+18,35.76,Latte,Night,Mon,Mar
+7,35.76,Cappuccino,Morning,Tue,Mar
+7,25.96,Americano,Morning,Tue,Mar
+8,30.86,Americano with Milk,Morning,Tue,Mar
+9,25.96,Americano,Morning,Tue,Mar
+9,25.96,Americano,Morning,Tue,Mar
+9,25.96,Americano,Morning,Tue,Mar
+11,30.86,Americano with Milk,Morning,Tue,Mar
+11,25.96,Americano,Morning,Tue,Mar
+11,25.96,Americano,Morning,Tue,Mar
+11,25.96,Americano,Morning,Tue,Mar
+11,25.96,Americano,Morning,Tue,Mar
+12,35.76,Cocoa,Afternoon,Tue,Mar
+16,25.96,Americano,Afternoon,Tue,Mar
+18,35.76,Cocoa,Night,Tue,Mar
+19,35.76,Latte,Night,Tue,Mar
+20,35.76,Latte,Night,Tue,Mar
+8,30.86,Americano with Milk,Morning,Wed,Mar
+9,25.96,Americano,Morning,Wed,Mar
+10,25.96,Americano,Morning,Wed,Mar
+10,25.96,Americano,Morning,Wed,Mar
+10,35.76,Cappuccino,Morning,Wed,Mar
+10,30.86,Americano with Milk,Morning,Wed,Mar
+11,35.76,Cappuccino,Morning,Wed,Mar
+11,35.76,Cocoa,Morning,Wed,Mar
+11,25.96,Americano,Morning,Wed,Mar
+11,25.96,Americano,Morning,Wed,Mar
+12,25.96,Americano,Afternoon,Wed,Mar
+15,35.76,Latte,Afternoon,Wed,Mar
+15,35.76,Latte,Afternoon,Wed,Mar
+15,35.76,Hot Chocolate,Afternoon,Wed,Mar
+17,30.86,Americano with Milk,Night,Wed,Mar
+17,21.06,Espresso,Night,Wed,Mar
+17,35.76,Latte,Night,Wed,Mar
+18,35.76,Cappuccino,Night,Wed,Mar
+19,35.76,Cocoa,Night,Wed,Mar
+9,35.76,Hot Chocolate,Morning,Thu,Mar
+9,21.06,Espresso,Morning,Thu,Mar
+10,30.86,Americano with Milk,Morning,Thu,Mar
+10,25.96,Americano,Morning,Thu,Mar
+10,25.96,Americano,Morning,Thu,Mar
+11,25.96,Americano,Morning,Thu,Mar
+11,35.76,Cappuccino,Morning,Thu,Mar
+13,35.76,Latte,Afternoon,Thu,Mar
+16,30.86,Americano with Milk,Afternoon,Thu,Mar
+17,35.76,Cocoa,Night,Thu,Mar
+18,35.76,Cappuccino,Night,Thu,Mar
+19,30.86,Americano with Milk,Night,Thu,Mar
+7,35.76,Cappuccino,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+9,25.96,Americano,Morning,Fri,Mar
+10,35.76,Hot Chocolate,Morning,Fri,Mar
+10,30.86,Americano with Milk,Morning,Fri,Mar
+10,30.86,Americano with Milk,Morning,Fri,Mar
+10,35.76,Cocoa,Morning,Fri,Mar
+11,35.76,Cocoa,Morning,Fri,Mar
+12,30.86,Americano with Milk,Afternoon,Fri,Mar
+13,35.76,Hot Chocolate,Afternoon,Fri,Mar
+13,25.96,Americano,Afternoon,Fri,Mar
+14,35.76,Cappuccino,Afternoon,Fri,Mar
+15,35.76,Latte,Afternoon,Fri,Mar
+15,35.76,Latte,Afternoon,Fri,Mar
+17,35.76,Latte,Night,Fri,Mar
+17,35.76,Hot Chocolate,Night,Fri,Mar
+9,30.86,Americano with Milk,Morning,Sat,Mar
+9,30.86,Americano with Milk,Morning,Sat,Mar
+10,25.96,Americano,Morning,Sat,Mar
+11,25.96,Americano,Morning,Sat,Mar
+11,25.96,Americano,Morning,Sat,Mar
+12,30.86,Americano with Milk,Afternoon,Sat,Mar
+12,25.96,Americano,Afternoon,Sat,Mar
+13,35.76,Cappuccino,Afternoon,Sat,Mar
+9,21.06,Espresso,Morning,Sun,Mar
+11,30.86,Americano with Milk,Morning,Sun,Mar
+13,35.76,Cappuccino,Afternoon,Sun,Mar
+14,25.96,Americano,Afternoon,Sun,Mar
+15,35.76,Cappuccino,Afternoon,Sun,Mar
+15,25.96,Americano,Afternoon,Sun,Mar
+15,30.86,Americano with Milk,Afternoon,Sun,Mar
+15,35.76,Cocoa,Afternoon,Sun,Mar
+8,25.96,Americano,Morning,Mon,Mar
+8,35.76,Latte,Morning,Mon,Mar
+9,30.86,Americano with Milk,Morning,Mon,Mar
+9,35.76,Hot Chocolate,Morning,Mon,Mar
+9,35.76,Cocoa,Morning,Mon,Mar
+10,35.76,Hot Chocolate,Morning,Mon,Mar
+12,25.96,Americano,Afternoon,Mon,Mar
+15,25.96,Americano,Afternoon,Mon,Mar
+15,35.76,Hot Chocolate,Afternoon,Mon,Mar
+16,35.76,Latte,Afternoon,Mon,Mar
+16,35.76,Latte,Afternoon,Mon,Mar
+16,35.76,Cappuccino,Afternoon,Mon,Mar
+16,30.86,Americano with Milk,Afternoon,Mon,Mar
+18,25.96,Americano,Night,Mon,Mar
+18,35.76,Latte,Night,Mon,Mar
+18,35.76,Latte,Night,Mon,Mar
+19,30.86,Americano with Milk,Night,Mon,Mar
+8,25.96,Americano,Morning,Tue,Mar
+9,35.76,Cappuccino,Morning,Tue,Mar
+9,35.76,Latte,Morning,Tue,Mar
+10,25.96,Americano,Morning,Tue,Mar
+12,25.96,Americano,Afternoon,Tue,Mar
+13,25.96,Americano,Afternoon,Tue,Mar
+16,35.76,Hot Chocolate,Afternoon,Tue,Mar
+16,35.76,Cocoa,Afternoon,Tue,Mar
+16,35.76,Hot Chocolate,Afternoon,Tue,Mar
+17,35.76,Cappuccino,Night,Tue,Mar
+18,30.86,Americano with Milk,Night,Tue,Mar
+19,35.76,Latte,Night,Tue,Mar
+20,35.76,Cocoa,Night,Tue,Mar
+11,35.76,Cocoa,Morning,Wed,Mar
+11,30.86,Americano with Milk,Morning,Wed,Mar
+11,35.76,Cappuccino,Morning,Wed,Mar
+11,25.96,Americano,Morning,Wed,Mar
+11,25.96,Americano,Morning,Wed,Mar
+12,25.96,Americano,Afternoon,Wed,Mar
+12,35.76,Hot Chocolate,Afternoon,Wed,Mar
+13,35.76,Latte,Afternoon,Wed,Mar
+13,35.76,Latte,Afternoon,Wed,Mar
+16,35.76,Cappuccino,Afternoon,Wed,Mar
+16,35.76,Latte,Afternoon,Wed,Mar
+16,35.76,Latte,Afternoon,Wed,Mar
+18,25.96,Americano,Night,Wed,Mar
+18,35.76,Cocoa,Night,Wed,Mar
+18,25.96,Americano,Night,Wed,Mar
+18,35.76,Cappuccino,Night,Wed,Mar
+18,25.96,Americano,Night,Wed,Mar
+7,35.76,Cappuccino,Morning,Thu,Mar
+8,30.86,Americano with Milk,Morning,Thu,Mar
+9,30.86,Americano with Milk,Morning,Thu,Mar
+9,35.76,Latte,Morning,Thu,Mar
+9,21.06,Espresso,Morning,Thu,Mar
+9,25.96,Americano,Morning,Thu,Mar
+9,30.86,Americano with Milk,Morning,Thu,Mar
+11,25.96,Americano,Morning,Thu,Mar
+12,35.76,Latte,Afternoon,Thu,Mar
+14,30.86,Americano with Milk,Afternoon,Thu,Mar
+14,25.96,Americano,Afternoon,Thu,Mar
+18,35.76,Cappuccino,Night,Thu,Mar
+7,25.96,Americano,Morning,Fri,Mar
+8,30.86,Americano with Milk,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+9,35.76,Latte,Morning,Fri,Mar
+9,21.06,Espresso,Morning,Fri,Mar
+9,25.96,Americano,Morning,Fri,Mar
+10,25.96,Americano,Morning,Fri,Mar
+10,35.76,Latte,Morning,Fri,Mar
+10,35.76,Cappuccino,Morning,Fri,Mar
+14,25.96,Americano,Afternoon,Fri,Mar
+14,35.76,Latte,Afternoon,Fri,Mar
+15,35.76,Latte,Afternoon,Fri,Mar
+15,35.76,Latte,Afternoon,Fri,Mar
+16,25.96,Americano,Afternoon,Fri,Mar
+16,35.76,Cocoa,Afternoon,Fri,Mar
+16,35.76,Cocoa,Afternoon,Fri,Mar
+16,35.76,Cocoa,Afternoon,Fri,Mar
+17,25.96,Americano,Night,Fri,Mar
+17,25.96,Americano,Night,Fri,Mar
+17,35.76,Latte,Night,Fri,Mar
+17,35.76,Latte,Night,Fri,Mar
+20,25.96,Americano,Night,Fri,Mar
+21,25.96,Americano,Night,Fri,Mar
+9,30.86,Americano with Milk,Morning,Sat,Mar
+10,35.76,Cappuccino,Morning,Sat,Mar
+13,25.96,Americano,Afternoon,Sat,Mar
+17,35.76,Cappuccino,Night,Sat,Mar
+17,30.86,Americano with Milk,Night,Sat,Mar
+19,30.86,Americano with Milk,Night,Sat,Mar
+19,35.76,Cappuccino,Night,Sat,Mar
+9,35.76,Cappuccino,Morning,Sun,Mar
+9,30.86,Americano with Milk,Morning,Sun,Mar
+10,35.76,Latte,Morning,Sun,Mar
+12,35.76,Hot Chocolate,Afternoon,Sun,Mar
+14,25.96,Americano,Afternoon,Sun,Mar
+6,25.96,Americano,Morning,Mon,Mar
+8,25.96,Americano,Morning,Mon,Mar
+8,25.96,Americano,Morning,Mon,Mar
+9,30.86,Americano with Milk,Morning,Mon,Mar
+10,25.96,Americano,Morning,Mon,Mar
+13,25.96,Americano,Afternoon,Mon,Mar
+14,35.76,Cocoa,Afternoon,Mon,Mar
+14,35.76,Cocoa,Afternoon,Mon,Mar
+14,35.76,Latte,Afternoon,Mon,Mar
+15,35.76,Cappuccino,Afternoon,Mon,Mar
+15,35.76,Latte,Afternoon,Mon,Mar
+15,35.76,Latte,Afternoon,Mon,Mar
+16,25.96,Americano,Afternoon,Mon,Mar
+8,30.86,Americano with Milk,Morning,Tue,Mar
+8,35.76,Latte,Morning,Tue,Mar
+10,35.76,Latte,Morning,Tue,Mar
+10,25.96,Americano,Morning,Tue,Mar
+11,35.76,Hot Chocolate,Morning,Tue,Mar
+11,35.76,Hot Chocolate,Morning,Tue,Mar
+14,30.86,Americano with Milk,Afternoon,Tue,Mar
+15,25.96,Americano,Afternoon,Tue,Mar
+15,30.86,Americano with Milk,Afternoon,Tue,Mar
+16,25.96,Americano,Afternoon,Tue,Mar
+16,35.76,Latte,Afternoon,Tue,Mar
+16,21.06,Espresso,Afternoon,Tue,Mar
+18,35.76,Cocoa,Night,Tue,Mar
+18,35.76,Cocoa,Night,Tue,Mar
+20,35.76,Cocoa,Night,Tue,Mar
+20,35.76,Cocoa,Night,Tue,Mar
+21,35.76,Latte,Night,Tue,Mar
+7,25.96,Americano,Morning,Wed,Mar
+7,25.96,Americano,Morning,Wed,Mar
+7,35.76,Cappuccino,Morning,Wed,Mar
+8,25.96,Americano,Morning,Wed,Mar
+10,35.76,Hot Chocolate,Morning,Wed,Mar
+11,25.96,Americano,Morning,Wed,Mar
+12,25.96,Americano,Afternoon,Wed,Mar
+15,35.76,Latte,Afternoon,Wed,Mar
+15,35.76,Latte,Afternoon,Wed,Mar
+16,35.76,Latte,Afternoon,Wed,Mar
+16,25.96,Americano,Afternoon,Wed,Mar
+16,35.76,Cappuccino,Afternoon,Wed,Mar
+16,35.76,Cappuccino,Afternoon,Wed,Mar
+16,25.96,Americano,Afternoon,Wed,Mar
+16,25.96,Americano,Afternoon,Wed,Mar
+17,35.76,Cocoa,Night,Wed,Mar
+17,30.86,Americano with Milk,Night,Wed,Mar
+17,30.86,Americano with Milk,Night,Wed,Mar
+18,25.96,Cortado,Night,Wed,Mar
+18,21.06,Espresso,Night,Wed,Mar
+18,21.06,Espresso,Night,Wed,Mar
+8,30.86,Americano with Milk,Morning,Thu,Mar
+9,30.86,Americano with Milk,Morning,Thu,Mar
+10,30.86,Americano with Milk,Morning,Thu,Mar
+10,25.96,Americano,Morning,Thu,Mar
+10,25.96,Americano,Morning,Thu,Mar
+12,25.96,Americano,Afternoon,Thu,Mar
+14,25.96,Americano,Afternoon,Thu,Mar
+14,25.96,Americano,Afternoon,Thu,Mar
+14,21.06,Espresso,Afternoon,Thu,Mar
+14,25.96,Cortado,Afternoon,Thu,Mar
+14,35.76,Cappuccino,Afternoon,Thu,Mar
+14,35.76,Cappuccino,Afternoon,Thu,Mar
+15,25.96,Americano,Afternoon,Thu,Mar
+15,25.96,Americano,Afternoon,Thu,Mar
+16,35.76,Cappuccino,Afternoon,Thu,Mar
+17,25.96,Americano,Night,Thu,Mar
+18,35.76,Hot Chocolate,Night,Thu,Mar
+19,35.76,Cocoa,Night,Thu,Mar
+19,35.76,Cappuccino,Night,Thu,Mar
+21,35.76,Latte,Night,Thu,Mar
+7,30.86,Americano with Milk,Morning,Fri,Mar
+7,30.86,Americano with Milk,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+8,25.96,Americano,Morning,Fri,Mar
+8,35.76,Cappuccino,Morning,Fri,Mar
+11,25.96,Americano,Morning,Fri,Mar
+11,35.76,Latte,Morning,Fri,Mar
+13,25.96,Americano,Afternoon,Fri,Mar
+13,35.76,Latte,Afternoon,Fri,Mar
+14,35.76,Cappuccino,Afternoon,Fri,Mar
+15,35.76,Cappuccino,Afternoon,Fri,Mar
+15,25.96,Americano,Afternoon,Fri,Mar
+15,35.76,Latte,Afternoon,Fri,Mar
+15,35.76,Cappuccino,Afternoon,Fri,Mar
+17,35.76,Hot Chocolate,Night,Fri,Mar
+17,35.76,Latte,Night,Fri,Mar
+17,35.76,Latte,Night,Fri,Mar
+18,35.76,Latte,Night,Fri,Mar
+18,25.96,Americano,Night,Fri,Mar
+9,30.86,Americano with Milk,Morning,Sat,Mar
+10,30.86,Americano with Milk,Morning,Sat,Mar
+11,35.76,Hot Chocolate,Morning,Sat,Mar
+11,35.76,Cocoa,Morning,Sat,Mar
+12,30.86,Americano with Milk,Afternoon,Sat,Mar
+12,25.96,Americano,Afternoon,Sat,Mar
+13,25.96,Americano,Afternoon,Sat,Mar
+13,30.86,Americano with Milk,Afternoon,Sat,Mar
+15,21.06,Espresso,Afternoon,Sat,Mar
+16,35.76,Latte,Afternoon,Sat,Mar
+17,30.86,Americano with Milk,Night,Sat,Mar
+19,30.86,Americano with Milk,Night,Sat,Mar
+10,35.76,Latte,Morning,Sun,Mar
+10,35.76,Cappuccino,Morning,Sun,Mar
+14,35.76,Cocoa,Afternoon,Sun,Mar
+14,35.76,Cocoa,Afternoon,Sun,Mar
+15,25.96,Americano,Afternoon,Sun,Mar
+18,35.76,Latte,Night,Sun,Mar
