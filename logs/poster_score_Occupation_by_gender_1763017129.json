@@ -1,0 +1,50 @@
+{
+  "final_score": 8,
+  "justification": {
+    "overall_assessment": "The conclusion is mostly supported by the chart titles and the insights provided, especially the broad claims about Solomon Islands and Vanuatu's employment dominance, male vs female employment discrepancies, and sector-specific gender differences. However, some nuanced points such as near-gender parity in smaller nations like Tokelau and specific stark contrasts between Solomon Islands and Vanuatu in certain sectors lack clear evidence from the current titles and insights.",
+    "supported_claims": [
+      {
+        "claim": "Employment is concentrated heavily in Solomon Islands and Vanuatu, covering over 63% combined.",
+        "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries) and insight stating 'Solomon Islands and Vanuatu dominate employment...'"
+      },
+      {
+        "claim": "Male employment consistently exceeds female across countries, reflecting entrenched gender roles.",
+        "evidence": "Title 2 (Employment by Sex Across Pacific Island Countries), Title 4 (Employment by Sex in Key Pacific Countries), and corresponding insight about males outnumbering females."
+      },
+      {
+        "claim": "Males dominate sectors like Agriculture and Construction, while females lead in Education and Health.",
+        "evidence": "Title 3 (Employment by Sex Across Economic Sectors), insight mentioning 'Males dominate sectors like agriculture and construction while females lead in retail and education.'"
+      },
+      {
+        "claim": "Vanuatu shows marked male dominance in Agriculture versus female strength in Wholesale, Retail, and Education.",
+        "evidence": "Title 6 (Employment by Sex and Sector in Vanuatu) and insight noting female strength in retail and education sectors in Vanuatu."
+      },
+      {
+        "claim": "Solomon Islands reveals a stark male employment majority, unlike Vanuatu's more balanced workforce.",
+        "evidence": "Title 4 and Title 5 (Employment by Sex and Sector in Solomon Islands) aligned with the insight referring to Solomon Islands' male majority."
+      },
+      {
+        "claim": "Agriculture and transport sectors are male-dominated, whereas retail, education, and accommodation favor female employment.",
+        "evidence": "Insight summary combined with Title 3."
+      }
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "Smaller nations like Tokelau show near gender parity but have limited employment scale.",
+        "reason": "None of the chart titles or insights mention Tokelau or provide data about gender parity in smaller nations."
+      },
+      {
+        "claim": "In Solomon Islands, Agriculture employs mostly males; females prevail in Accommodation and Food sectors.",
+        "reason": "While Title 5 suggests sectoral breakdown for Solomon Islands, the specific detail about females prevailing in Accommodation and Food sectors is not explicitly referenced or supported in the given insight or chart titles."
+      },
+      {
+        "claim": "These divergences highlight deep-rooted gender roles specific to sector and country contexts.",
+        "reason": "This interpretive claim about socio-economic or cultural causes is not directly supported by any chart title or insight."
+      }
+    ]
+  },
+  "recommendations": {
+    "is_required": true,
+    "suggestion": "Add or replace a chart focused on gender employment parity in smaller Pacific nations such as Tokelau. Additionally, provide more detailed sector-by-sex breakdowns with clearer explicit data points for Solomon Islands and Vanuatu to confirm female prevalence in sectors like Accommodation and Food. Including some qualitative or contextual data visualizations to support socio-economic interpretations would improve conclusion support."
+  }
+}

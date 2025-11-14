@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T01:37:09.898748Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Scale and Gender Distribution Across Pacific Islands",
+        "charts_title": [
+          "Employment Numbers by Pacific Island Countries",
+          "Employment by Sex Across Pacific Island Countries"
+        ],
+        "insight": "Solomon Islands lead in total employment with males generally outnumbering females across Pacific Island countries."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Patterns within Pacific Island Countries",
+        "charts_title": [
+          "Employment by Sex Across Pacific Island Countries",
+          "Employment by Sex Within Key Economic Sectors"
+        ],
+        "insight": "Male employment dominates in key sectors like Agriculture, showing significant gender disparities across Pacific Islands."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral Employment and Gender Distribution in Solomon Islands and Vanuatu",
+        "charts_title": [
+          "Employment by Sex across Sectors in Solomon Islands",
+          "Employment by Sex across Sectors in Vanuatu"
+        ],
+        "insight": "Agriculture leads employment in both, with males dominating Solomon Islands and females leading Vanuatu's Wholesale and Retail sectors."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment totals vary widely, with Solomon Islands leading at 95,024 workers. Smaller countries like Tokelau and Niue have minimal employment figures below 2,000. These disparities likely stem from population size and economic activity differences across Pacific Islands.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Male employment dominates most countries, notably in Solomon Islands where males represent nearly 67%. Exceptions like Micronesia and Kiribati show female majorities, reflecting varying social or economic factors. This suggests persistent gender roles and potential labor market barriers across the region.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands, males overwhelmingly dominate Agriculture, while females prevail in sectors like Education. Vanuatu shows similar male dominance in Agriculture but female leadership in Wholesale and Retail. These patterns reveal entrenched gendered job segregation affecting workforce equity in both countries.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender Roles Shape Employment Patterns Across Pacific Island Nations?"
+}

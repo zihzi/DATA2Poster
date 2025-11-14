@@ -121,7 +121,23 @@ def agent2_fact_summarizer(data_name, main_column, facts,title, openai_key):
     "insight_list": [
         {{
         "selected_facts": ["<fact 1>","<fact 2>", "..."],
-        "insight": ["Japan has the highest Sales when **OtherColumn** is "X".","The Sales in China are significantly lower than in the US.", "<insight 3>", "<insight 4>", "<insight 5>"],
+        "insight": "<One-sentence insight 1 derived from the selected facts>",
+        }},
+        {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
+        "insight": "<One-sentence insight 2 derived from the selected facts>",
+        }},
+        {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
+        "insight": "<One-sentence insight 3 derived from the selected facts>",
+        }},
+        {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
+        "insight": "<One-sentence insight 4 derived from the selected facts>",
+        }},
+        {{
+        "selected_facts": ["<fact 1>","<fact 2>", "..."],
+        "insight": "<One-sentence insight 5 derived from the selected facts>",
         }}
     
     ]

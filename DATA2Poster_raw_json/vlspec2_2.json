@@ -1,0 +1,191 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Proportion of Employed Persons by Sex Within Economic Sectors",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "Total_By_Sex_Sector"
+        }
+      ],
+      "groupby": [
+        "Economic sector",
+        "Sex"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "rank"
+        }
+      ],
+      "groupby": [
+        "Sex"
+      ],
+      "sort": [
+        {
+          "field": "Total_By_Sex_Sector",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Total_By_Sex_Sector",
+          "as": "Sector_Total"
+        }
+      ],
+      "groupby": [
+        "Economic sector"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Total_By_Sex_Sector",
+          "as": "Grand_Total"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.Total_By_Sex_Sector / datum.Sector_Total",
+      "as": "Proportion_Sex_Sector"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "sectorRank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Sector_Total",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "calculate": "datum.sectorRank <= 4 ? datum['Economic sector'] : 'Others'",
+      "as": "Sector_Filter"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Total_By_Sex_Sector",
+          "as": "Sum_By_Sex_Sector"
+        }
+      ],
+      "groupby": [
+        "Sector_Filter",
+        "Sex"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Sum_By_Sex_Sector",
+          "as": "Sum_By_Sector"
+        }
+      ],
+      "groupby": [
+        "Sex"
+      ]
+    },
+    {
+      "calculate": "datum.Sum_By_Sex_Sector / datum.Sum_By_Sector",
+      "as": "Share_By_Sex"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 50,
+        "outerRadius": 160
+      },
+      "encoding": {
+        "theta": {
+          "field": "Share_By_Sex",
+          "type": "quantitative"
+        },
+        "color": {
+          "field": "Sector_Filter",
+          "type": "nominal",
+          "legend": {
+            "title": "Economic Sector"
+          },
+          "scale": {
+            "scheme": "category10"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "Sex",
+            "type": "nominal",
+            "title": "Sex"
+          },
+          {
+            "field": "Sector_Filter",
+            "type": "nominal",
+            "title": "Economic Sector"
+          },
+          {
+            "field": "Share_By_Sex",
+            "type": "quantitative",
+            "title": "Proportion",
+            "format": ".1%"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "radius": 100,
+        "fontSize": 22,
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "text": {
+          "field": "Share_By_Sex",
+          "type": "quantitative",
+          "format": ".1%"
+        },
+        "color": {
+          "value": "black"
+        }
+      }
+    }
+  ],
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 26,
+      "labelFontSize": 26,
+      "labelLimit": 0
+    }
+  },
+  "width": 800,
+  "height": 600
+}

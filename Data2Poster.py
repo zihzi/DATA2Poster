@@ -12,6 +12,7 @@ from nl4dv import NL4DV
 from dataSchema_builder import get_column_properties
 from data_cleaner import clean_csv_data
 from json_sanitizer import parse_jsonish
+from json_parse import loads_with_diagnostics
 from insight_generation.dataFact_scoring import score_importance
 from insight_generation.main import generate_facts
 from Fact_explorer import agent1_column_selector, agent2_fact_summarizer, agent3_s1q_generator, agent4_s2q_generator, agent5_s3q_generator
@@ -50,7 +51,11 @@ if "datasets" not in st.session_state:
     datasets["Coffee_Chain"] = pd.read_csv("data/Coffee_Chain.csv")
     datasets["movies_record"] = pd.read_csv("data/movies_record.csv")
     datasets["cars"] = pd.read_csv("data/cars.csv")
-    datasets["onlinefoods"] = pd.read_csv("data/onlinefoods.csv")
+    datasets["insurance"] = pd.read_csv("data/insurance.csv")
+    datasets["Coffe_sales"] = pd.read_csv("data/Coffe_sales.csv")    
+    datasets["Customer_Review"] = pd.read_csv("data/Customer_Review.csv")    
+    datasets["movies"] = pd.read_csv("data/movies.csv")
+
 
 
     st.session_state["datasets"] = datasets
@@ -267,10 +272,13 @@ def insight_list_generator():
                 st.write("chart_title:",title)
                 with open(f"DATA2Poster_json/vlspec1_{i+1}.json", "r") as f:
                     spec_json = json.load(f)
-                data_transform_result = agent8_dt_extractor(spec_json["transform"], openai_key)
-                trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
-                exec(trans_code)
-                new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
+                if "transform" in spec_json and spec_json["transform"]:
+                    data_transform_result = agent8_dt_extractor(spec_json["transform"], openai_key)
+                    trans_code = "import pandas as pd\n\n"+f"df = pd.read_csv('data/{chosen_dataset}.csv')\n\n"+data_transform_result+"\n\ntrans_df = trans_data(df)\n\ntrans_df.to_csv('DATA2Poster_df/transformed_df.csv', index=False)\n\n"
+                    exec(trans_code)
+                    new_df = pd.read_csv('DATA2Poster_df/transformed_df.csv')
+                else:
+                    new_df = pd.read_csv(f"data/{chosen_dataset}.csv")
                 # Drop columns whose name contains "rank"
                 cols_to_drop = [col for col in new_df.columns if "rank" in col]
                 new_df = new_df.drop(columns=cols_to_drop)
@@ -388,7 +396,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         # ////zero shot//// Select 4 columns from the chosen dataset
         col_select_result = agent1_column_selector(chosen_data_schema, openai_key)
-        col_select_json = parse_jsonish(col_select_result)
+        col_select_json = loads_with_diagnostics(col_select_result)
         st.write("Selected Columns:",col_select_json)
         
         facts_list = []
@@ -609,7 +617,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         # ////one shot//// Use llm to read the base chart description to generate section 1 follow-up questions
         eda_q_for_sec1_result = agent3_s1q_generator(insight_from_fact_to_llm[0],str(st.session_state["s1c1_fact"]),col_select_json["key_columns"][0]["column"],str([col["column"] for col in col_select_json["key_columns"]]),openai_key)                                               
-        eda_q_for_sec1_json = parse_jsonish(eda_q_for_sec1_result)
+        eda_q_for_sec1_json = loads_with_diagnostics(eda_q_for_sec1_result)
         st.write("Follow-up Questions sec 1:",eda_q_for_sec1_json)
         chart_query.append(eda_q_for_sec1_json["follow_up_questions"][0]["question"])
         chart_query.append(eda_q_for_sec1_json["follow_up_questions"][1]["question"])
@@ -618,7 +626,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         
         #////one shot//// Use llm to read the base chart description to generate section 2 follow-up questions
         eda_q_for_sec2_result = agent4_s2q_generator(insight_from_fact_to_llm[1],eda_q_for_sec1_json["follow_up_questions"][0]["question"],eda_q_for_sec1_json["follow_up_questions"][1]["question"],str(st.session_state["s2c1_fact"]),col_select_json["key_columns"][1]["column"],str([col["column"] for col in col_select_json["key_columns"]]),openai_key)
-        eda_q_for_sec2_json = parse_jsonish(eda_q_for_sec2_result)
+        eda_q_for_sec2_json = loads_with_diagnostics(eda_q_for_sec2_result)
         st.write("Follow-up Questions sec 2:",eda_q_for_sec2_json)
         chart_query.append(eda_q_for_sec2_json["follow_up_questions"][0]["question"])
         chart_query.append(eda_q_for_sec2_json["follow_up_questions"][1]["question"])
@@ -627,7 +635,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         # ////zero shot//// Use llm to read the insights from s1c1 facts to generate section 3 follow-up questions       
         eda_q_for_sec3_result = agent5_s3q_generator(insight_from_fact_to_llm[0],chart_query[0],chart_query[1],chart_query[2],chart_query[3],str([col["column"] for col in col_select_json["key_columns"]]),openai_key)
-        eda_q_for_sec3_json = parse_jsonish(eda_q_for_sec3_result)
+        eda_q_for_sec3_json = loads_with_diagnostics(eda_q_for_sec3_result)
         st.write("Follow-up Questions sec 3:",eda_q_for_sec3_json)
         chart_query.append(eda_q_for_sec3_json["follow_up_questions"][0]["question"])
         chart_query.append(eda_q_for_sec3_json["follow_up_questions"][1]["question"])
@@ -680,11 +688,11 @@ if try_true or (st.session_state["bt_try"] == "T"):
         
         vlspec = agent6_vis_generator(chosen_dataset,chart_query,chart_title,chosen_data_schema,sample_data, rag_spec, openai_key)
         st.write("Vega-Lite Specification:",vlspec)
-        cor_vlspec = parse_jsonish(vlspec)  
+        cor_vlspec = loads_with_diagnostics(vlspec)  
         # Save each chart's vlspec to a json file and generate chart image using altair
         spec_id = 1
         for spec in cor_vlspec["visualizations"]:
-            with open(f"DATA2Poster_json/vlspec1_{spec_id}.json", "w") as f:
+            with open(f"DATA2Poster_raw_json/vlspec1_{spec_id}.json", "w") as f:
                 json.dump(spec, f, indent=2)
             spec["height"] =600
             spec["width"] =800
@@ -693,29 +701,29 @@ if try_true or (st.session_state["bt_try"] == "T"):
             #     spec["encoding"]["x"]["sort"] = "-y"
             try:
                 chart = alt.Chart.from_dict(spec)
-                chart.save(f"DATA2Poster_chart/image{spec_id}.png")
-                st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
+                chart.save(f"DATA2Poster_raw_chart/image{spec_id}.png")
+                st.image(f"DATA2Poster_raw_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
 
             except Exception as e:
                 error = str(e)
                 print(f"\n🔴 Error encountered: {error}\n")
                 corrected_vlspec = agent6_vis_corrector(spec, error, openai_key)
-                json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                 json_corrected_vlspec["height"] =600
                 json_corrected_vlspec["width"] =800
                 final_chart = alt.Chart.from_dict(json_corrected_vlspec)
-                final_chart.save(f"DATA2Poster_chart/image{spec_id}.png")
-                with open(f"DATA2Poster_json/vlspec1_{spec_id}.json", "w") as f:
+                final_chart.save(f"DATA2Poster_raw_chart/image{spec_id}.png")
+                with open(f"DATA2Poster_raw_json/vlspec1_{spec_id}.json", "w") as f:
                     json.dump(json_corrected_vlspec, f, indent=2)
-                st.image(f"DATA2Poster_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
+                st.image(f"DATA2Poster_raw_chart/image{spec_id}.png", caption="Chart "+str(spec_id))
             spec_id += 1
         
         # Refine the chart  using llm
         for i in range(1, 7):
-            binary_chart = open(f"DATA2Poster_chart/image{i}.png", 'rb').read()
+            binary_chart = open(f"DATA2Poster_raw_chart/image{i}.png", 'rb').read()
             base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
             img_url = f'data:image/png;base64,{base64_utf8_chart}'
-            with open(f"DATA2Poster_json/vlspec1_{i}.json", "r") as f:
+            with open(f"DATA2Poster_raw_json/vlspec1_{i}.json", "r") as f:
                 vlspec = json.load(f)
             refined_vlspec = agent6_vis_refiner(vlspec, chart_query[i-1], img_url, openai_key)
             
@@ -728,7 +736,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 error = str(e)
                 print(f"\n🔴 Error encountered: {error}\n")
                 corrected_vlspec = agent6_vis_corrector(refined_vlspec, error, openai_key)
-                json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                 json_corrected_vlspec["height"] =600
                 json_corrected_vlspec["width"] =800
                 final_chart = alt.Chart.from_dict(json_corrected_vlspec)
@@ -774,7 +782,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         # ////zero shot//// Use llm to write section header and section insight based on the chart titles           
         section_result = agent9_section_designer(img_to_llm_list, insight_from_fact, openai_key)
         st.write("section_result:",section_result)
-        section_json = parse_jsonish(section_result)
+        section_json = loads_with_diagnostics(section_result)
         st.write("Section Check JSON:",section_json)
 
         # Create pdf and download
@@ -824,27 +832,36 @@ if try_true or (st.session_state["bt_try"] == "T"):
         vis_checked_1 = agent11_vis_recommender(conclusion_json["conclusion"][0]["content"], eda_q_for_sec1_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"], section_insight_list[0], str([col["column"] for col in col_select_json["key_columns"]]), openai_key)
         vis_checked_2 = agent11_vis_recommender(conclusion_json["conclusion"][1]["content"], eda_q_for_sec2_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec2_json["follow_up_questions"][1]["suggested_viz_title"], section_insight_list[1], str([col["column"] for col in col_select_json["key_columns"]]), openai_key)
         # vis_checked_3 = agent11_vis_recommend(conclusion_json["conclusion"][2]["content"], eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"], openai_key)
-        vis_checked_1_json = parse_jsonish(vis_checked_1)
-        vis_checked_2_json = parse_jsonish(vis_checked_2)
-        # vis_checked_3_json = parse_jsonish(vis_checked_3)
+        vis_checked_1_json = loads_with_diagnostics(vis_checked_1)
+        vis_checked_2_json = loads_with_diagnostics(vis_checked_2)
+        # vis_checked_3_json = loads_with_diagnostics(vis_checked_3)
         st.write("Visualization Check Section 1 JSON:",vis_checked_1_json)
         st.write("Visualization Check Section 2 JSON:",vis_checked_2_json)      
         # st.write("Visualization Check Section 3 JSON:",vis_checked_3_json)
+        replace_s1_flag = False
         if vis_checked_1_json["vis_check"][0]["replace"] != "none":
             if vis_checked_1_json["vis_check"][0]["replace"] == "chart_1":
+                replace_s1_flag = True
                 sec_chartid_for_pdf[0] = 11
                 img_to_llm_list[0] = vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"]
             if vis_checked_1_json["vis_check"][0]["replace"] == "chart_2":
+                replace_s1_flag = True
                 sec_chartid_for_pdf[1] = 11
                 img_to_llm_list[1] = vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"]
             sec_query.append(vis_checked_1_json["vis_check"][0]["recommendation"]["query"])
             sec_title.append(vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"])
         if vis_checked_2_json["vis_check"][0]["replace"] != "none":
             if vis_checked_2_json["vis_check"][0]["replace"] == "chart_1":
-                sec_chartid_for_pdf[2] = 22
+                if replace_s1_flag == True:
+                    sec_chartid_for_pdf[2] = 22
+                else:
+                    sec_chartid_for_pdf[2] = 11
                 img_to_llm_list[2] = vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"]
             if vis_checked_2_json["vis_check"][0]["replace"] == "chart_2":
-                sec_chartid_for_pdf[3] = 22
+                if replace_s1_flag == True:
+                    sec_chartid_for_pdf[3] = 22
+                else:
+                    sec_chartid_for_pdf[3] = 11
                 img_to_llm_list[3] = vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"]
             sec_query.append(vis_checked_2_json["vis_check"][0]["recommendation"]["query"])
             sec_title.append(vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"])
@@ -901,38 +918,38 @@ if try_true or (st.session_state["bt_try"] == "T"):
         for i in range(len(sec_query)):
             sec_vlspec = agent6_sec_vis_generator(chosen_dataset,sec_query[i],sec_title[i],chosen_data_schema,sample_data, sec_rag_spec, openai_key)
             st.write("Vega-Lite Specification:",sec_vlspec)
-            sec_cor_vlspec = parse_jsonish(sec_vlspec)  # -> dict/list or raises clear ValueError
+            sec_cor_vlspec = loads_with_diagnostics(sec_vlspec)  # -> dict/list or raises clear ValueError
             sec_spec_list.append(sec_cor_vlspec["visualizations"][0])
 
         for spec_id in range(len(sec_spec_list)):
-            with open(f"DATA2Poster_json/vlspec2_{spec_id}.json", "w") as f:
+            with open(f"DATA2Poster_raw_json/vlspec2_{spec_id+1}.json", "w") as f:
                 json.dump(sec_spec_list[spec_id], f, indent=2)
             sec_spec_list[spec_id]["height"] =600
             sec_spec_list[spec_id]["width"] =800
             try:
                 chart = alt.Chart.from_dict(sec_spec_list[spec_id])
-                chart.save(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png")
-                st.image(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
+                chart.save(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png")
+                st.image(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
 
             except Exception as e:
                 error = str(e)
                 print(f"\n🔴 Error encountered: {error}\n")
                 corrected_vlspec = agent6_vis_corrector(spec, error, openai_key)
-                json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                 json_corrected_vlspec["height"] =600
                 json_corrected_vlspec["width"] =800
                 final_chart = alt.Chart.from_dict(json_corrected_vlspec)
-                final_chart.save(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png")
-                with open(f"DATA2Poster_json/vlspec2_{spec_id}.json", "w") as f:
+                final_chart.save(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png")
+                with open(f"DATA2Poster_raw_json/vlspec2_{spec_id+1}.json", "w") as f:
                     json.dump(json_corrected_vlspec , f, indent=2)
-                st.image(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
+                st.image(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
 
         # Refine the chart  using llm
         for spec_id in range(len(sec_spec_list)): 
-            binary_chart = open(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", 'rb').read()
+            binary_chart = open(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", 'rb').read()
             base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
             img_url = f'data:image/png;base64,{base64_utf8_chart}'
-            with open(f"DATA2Poster_json/vlspec2_{spec_id+1}.json", "r") as f:
+            with open(f"DATA2Poster_raw_json/vlspec2_{spec_id+1}.json", "r") as f:
                 vlspec = json.load(f)
             refined_vlspec = agent6_vis_refiner(vlspec, sec_query[spec_id], img_url, openai_key)
 
@@ -945,7 +962,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 error = str(e)
                 print(f"\n🔴 Error encountered: {error}\n")
                 corrected_vlspec = agent6_vis_corrector(refined_vlspec, error, openai_key)
-                json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                 json_corrected_vlspec["height"] =600
                 json_corrected_vlspec["width"] =800
                 final_chart = alt.Chart.from_dict(json_corrected_vlspec)
@@ -966,7 +983,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
         #  Second generation section header and section insight based on the chart titles
         sec_section_result = agent9_section_designer(img_to_llm_list, insight_from_fact, openai_key)
-        sec_section_json = parse_jsonish(sec_section_result)
+        sec_section_json = loads_with_diagnostics(sec_section_result)
         st.write("Chart Check JSON:",sec_section_json)
         sec_section_insight_list = []
         sec_section_header_list = []
@@ -974,9 +991,10 @@ if try_true or (st.session_state["bt_try"] == "T"):
             sec_section_insight_list.append(section["insight"])
             sec_section_header_list.append(section["heading"])
         # Score the poster quality
+        replace_s1_flag = False
         iter_flag = 1
-        poster_score = agent12_final_checker(conc_for_pdf, img_to_llm_list, sec_section_insight_list, openai_key)
-        poster_score_json = parse_jsonish(poster_score)
+        poster_score = agent12_final_checker(conc_for_pdf, img_to_llm_list, insight_from_fact, openai_key)
+        poster_score_json = loads_with_diagnostics(poster_score)
         st.write("Poster Score JSON:",poster_score_json)
         # Log poster score JSON
         logs_dir = "logs"
@@ -986,7 +1004,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
         with open(path, "w", encoding="utf-8") as fh:
             json.dump(poster_score_json, fh, ensure_ascii=False, indent=2)
         
-        if poster_score_json["final_score"] >= 90:
+        if poster_score_json["final_score"] >= 8.5:
             agent10_sec_pdf_creator(chosen_dataset, sec_section_insight_list, sec_chartid_for_pdf, sec_chart_for_pdf,conc_for_pdf,sec_section_header_list, openai_key)
             st.success("Poster has been created successfully!🎉")
             with open(f"pdf/{chosen_dataset}_summary_2.pdf", "rb") as f:  
@@ -1003,27 +1021,35 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 vis_checked_1 = agent11_vis_recommender(conclusion_json["conclusion"][0]["content"], eda_q_for_sec1_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec1_json["follow_up_questions"][1]["suggested_viz_title"], section_insight_list[0], str([col["column"] for col in col_select_json["key_columns"]]), openai_key)
                 vis_checked_2 = agent11_vis_recommender(conclusion_json["conclusion"][1]["content"], eda_q_for_sec2_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec2_json["follow_up_questions"][1]["suggested_viz_title"], section_insight_list[1], str([col["column"] for col in col_select_json["key_columns"]]), openai_key)
                 # vis_checked_3 = agent11_vis_recommend(conclusion_json["conclusion"][2]["content"], eda_q_for_sec3_json["follow_up_questions"][0]["suggested_viz_title"], eda_q_for_sec3_json["follow_up_questions"][1]["suggested_viz_title"], openai_key)
-                vis_checked_1_json = parse_jsonish(vis_checked_1)
-                vis_checked_2_json = parse_jsonish(vis_checked_2)
-                # vis_checked_3_json = parse_jsonish(vis_checked_3)
+                vis_checked_1_json = loads_with_diagnostics(vis_checked_1)
+                vis_checked_2_json = loads_with_diagnostics(vis_checked_2)
+                # vis_checked_3_json = loads_with_diagnostics(vis_checked_3)
                 st.write("Visualization Check Section 1 JSON:",vis_checked_1_json)
                 st.write("Visualization Check Section 2 JSON:",vis_checked_2_json)      
                 # st.write("Visualization Check Section 3 JSON:",vis_checked_3_json)
                 if vis_checked_1_json["vis_check"][0]["replace"] != "none":
                     if vis_checked_1_json["vis_check"][0]["replace"] == "chart_1":
+                        replace_s1_flag = True
                         sec_chartid_for_pdf[0] = 11
                         img_to_llm_list[0] = vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"]
                     if vis_checked_1_json["vis_check"][0]["replace"] == "chart_2":
+                        replace_s1_flag = True
                         sec_chartid_for_pdf[1] = 11
                         img_to_llm_list[1] = vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"]
                     sec_query.append(vis_checked_1_json["vis_check"][0]["recommendation"]["query"])
                     sec_title.append(vis_checked_1_json["vis_check"][0]["recommendation"]["revised_title"])
                 if vis_checked_2_json["vis_check"][0]["replace"] != "none":
                     if vis_checked_2_json["vis_check"][0]["replace"] == "chart_1":
-                        sec_chartid_for_pdf[2] = 22
+                        if replace_s1_flag == True:
+                            sec_chartid_for_pdf[2] = 22
+                        else:
+                            sec_chartid_for_pdf[2] = 11
                         img_to_llm_list[2] = vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"]
                     if vis_checked_2_json["vis_check"][0]["replace"] == "chart_2":
-                        sec_chartid_for_pdf[3] = 22
+                        if replace_s1_flag == True:
+                            sec_chartid_for_pdf[3] = 22
+                        else:
+                            sec_chartid_for_pdf[3] = 11
                         img_to_llm_list[3] = vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"]
                     sec_query.append(vis_checked_2_json["vis_check"][0]["recommendation"]["query"])
                     sec_title.append(vis_checked_2_json["vis_check"][0]["recommendation"]["revised_title"])
@@ -1064,36 +1090,36 @@ if try_true or (st.session_state["bt_try"] == "T"):
                 for i in range(len(sec_query)):
                     sec_vlspec = agent6_sec_vis_generator(chosen_dataset,sec_query[i],sec_title[i],chosen_data_schema,sample_data, sec_rag_spec, openai_key)
                     st.write("Vega-Lite Specification:",sec_vlspec)
-                    sec_cor_vlspec = parse_jsonish(sec_vlspec)  # -> dict/list or raises clear ValueError
+                    sec_cor_vlspec = loads_with_diagnostics(sec_vlspec)  # -> dict/list or raises clear ValueError
                     sec_spec_list.append(sec_cor_vlspec["visualizations"][0])
 
                 for spec_id in range(len(sec_spec_list)):
-                    with open(f"DATA2Poster_json/vlspec2_{spec_id+1}.json", "w") as f:
+                    with open(f"DATA2Poster_raw_json/vlspec2_{spec_id+1}.json", "w") as f:
                         json.dump(sec_spec_list[spec_id], f, indent=2)
                     sec_spec_list[spec_id]["height"] =600
                     sec_spec_list[spec_id]["width"] =800
                     try:
                         chart = alt.Chart.from_dict(sec_spec_list[spec_id])
-                        chart.save(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png")
-                        st.image(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
+                        chart.save(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png")
+                        st.image(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
 
                     except Exception as e:
                         error = str(e)
                         print(f"\n🔴 Error encountered: {error}\n")
                         corrected_vlspec = agent6_vis_corrector(spec, error, openai_key)
-                        json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                        json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                         json_corrected_vlspec["height"] =600
                         json_corrected_vlspec["width"] =800
                         final_chart = alt.Chart.from_dict(json_corrected_vlspec)
-                        final_chart.save(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png")
-                        st.image(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
+                        final_chart.save(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png")
+                        st.image(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", caption="Chart "+str(spec_id+1))
 
                 # Refine the chart  using llm
                 for spec_id in range(len(sec_spec_list)): 
-                    binary_chart = open(f"DATA2Poster_chart/image{spec_id+1}{spec_id+1}.png", 'rb').read()
+                    binary_chart = open(f"DATA2Poster_raw_chart/image{spec_id+1}{spec_id+1}.png", 'rb').read()
                     base64_utf8_chart = base64.b64encode(binary_chart).decode('utf-8')
                     img_url = f'data:image/png;base64,{base64_utf8_chart}'
-                    with open(f"DATA2Poster_json/vlspec2_{spec_id+1}.json", "r") as f:
+                    with open(f"DATA2Poster_raw_json/vlspec2_{spec_id+1}.json", "r") as f:
                         vlspec = json.load(f)
                     refined_vlspec = agent6_vis_refiner(vlspec, sec_query[spec_id], img_url, openai_key)
 
@@ -1106,7 +1132,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                         error = str(e)
                         print(f"\n🔴 Error encountered: {error}\n")
                         corrected_vlspec = agent6_vis_corrector(refined_vlspec, error, openai_key)
-                        json_corrected_vlspec = parse_jsonish(corrected_vlspec)
+                        json_corrected_vlspec = loads_with_diagnostics(corrected_vlspec)
                         json_corrected_vlspec["height"] =600
                         json_corrected_vlspec["width"] =800
                         final_chart = alt.Chart.from_dict(json_corrected_vlspec)
@@ -1127,7 +1153,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
 
                 #  Second generation section header and section insight based on the chart titles
                 sec_section_result = agent9_section_designer(img_to_llm_list, insight_from_fact, openai_key)
-                sec_section_json = parse_jsonish(sec_section_result)
+                sec_section_json = loads_with_diagnostics(sec_section_result)
                 st.write("Chart Check JSON:",sec_section_json)
                 sec_section_insight_list = []
                 sec_section_header_list = []
@@ -1135,8 +1161,8 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     sec_section_insight_list.append(section["insight"])
                     sec_section_header_list.append(section["heading"])
                 # Score the poster quality
-                poster_score = agent12_final_checker(conc_for_pdf, img_to_llm_list, sec_section_insight_list, openai_key)
-                poster_score_json = parse_jsonish(poster_score)
+                poster_score = agent12_final_checker(conc_for_pdf, img_to_llm_list, insight_from_fact, openai_key)
+                poster_score_json = loads_with_diagnostics(poster_score)
                 st.write("Poster Score JSON:",poster_score_json)
 
                 # Log poster score JSON
@@ -1154,7 +1180,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     json.dump(log_payload, fh, ensure_ascii=False, indent=2)
 
 
-                if poster_score_json["final_score"] >= 90:
+                if poster_score_json["final_score"] >= 8.5:
                     agent10_sec_pdf_creator(chosen_dataset, sec_section_insight_list, sec_chartid_for_pdf, sec_chart_for_pdf,conc_for_pdf,sec_section_header_list, openai_key)
                     st.success("Poster has been created successfully!🎉")
                     with open(f"pdf/{chosen_dataset}_summary_2.pdf", "rb") as f:  
@@ -1162,7 +1188,7 @@ if try_true or (st.session_state["bt_try"] == "T"):
                     break
                 else:
                     continue
-            if iter_flag ==3 and poster_score_json["final_score"] < 90:
+            if iter_flag ==3 and poster_score_json["final_score"] < 8.5:
                 st.info("Fail to create poster. Please try again.")
         st.write("iter_flag:", iter_flag)
         # Reset session state

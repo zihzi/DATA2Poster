@@ -1,0 +1,132 @@
+{
+  "timestamp": "2025-11-12T07:18:59.509596Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Gender",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      },
+      {
+        "column": "Education",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 3
+        }
+      },
+      {
+        "column": "Age",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 40
+        }
+      },
+      {
+        "column": "Purchased",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Age extremes (both lowest and highest) predominantly correspond to Gender Male across overall data and within Purchased and Education categories.",
+        "selected_facts": [
+          "The lowest (least) value of the Age is Gender Male.",
+          "The highest (most) value of the Age is Gender Male.",
+          "The lowest (least) value of the Age is Gender Male when Purchased is No.",
+          "The highest (most) value of the Age is Gender Male when Purchased is No."
+        ],
+        "question": "How does Age distribution vary across different Gender groups?",
+        "suggested_viz_title": "Age Distribution by Gender",
+        "suggested_viz_type": "boxplot",
+        "column": "Gender",
+        "rationale": "Examines overall Age variability and extremes between Gender groups, building on the insight that Age extremes mostly belong to one Gender."
+      },
+      {
+        "selected_insight": "Age rankings by Gender within Education levels show that School education has relatively more Female representation among the top and bottom compared to UG, where Male dominates.",
+        "selected_facts": [
+          "In the Age ranking of different Gender(s), the top three Gender(s) are Male, Female, Male  when Education is School.",
+          "In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Female  when Education is School.",
+          "In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male  when Education is UG.",
+          "In the Age ranking of different Gender(s), the last three Gender(s) are Female, Male, Male  when Education is UG."
+        ],
+        "question": "How does Age distribution by Gender differ within each Education level?",
+        "suggested_viz_title": "Age by Gender Across Education Levels",
+        "suggested_viz_type": "boxplot",
+        "column": "Gender",
+        "rationale": "Drills down on how Age varies between Genders within specific Education categories, revealing nuanced gender representation patterns tied to education."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Age is generally lowest for customers with PG education and highest for those with School education, with this pattern remaining consistent when considering Purchased = No and Gender = Female.",
+        "selected_facts": [
+          "The lowest (least) value of the Age is Education PG.",
+          "The highest (most) value of the Age is Education School."
+        ],
+        "question": "How does the average Age vary across different Education categories?",
+        "suggested_viz_title": "Average Age Across Education Levels",
+        "suggested_viz_type": "bar",
+        "column": "Education",
+        "rationale": "This question generalizes the Age comparison across all Education groups, offering a high-level view of Age distribution by Education."
+      },
+      {
+        "selected_insight": "The Age ranking for Purchased status differs by Education, with those having UG education being mostly purchasers (top ranks all Yes), while those with School education show a mixed Purchased status in the top and last ranks.",
+        "selected_facts": [
+          "The Age ranking for Purchased status differs by Education, with those having UG education being mostly purchasers (top ranks all Yes), while those with School education show a mixed Purchased status in the top and last ranks."
+        ],
+        "question": "How does Age distribution differ by Purchased status within each Education category?",
+        "suggested_viz_title": "Age by Purchased Status Within Education Levels",
+        "suggested_viz_type": "boxplot",
+        "column": "Education",
+        "rationale": "This question drills down into the significance of Purchase behavior related to Age differences within Education groups, revealing potential Age-Purchased interactions."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, Yes  when Gender is Female.",
+          "In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, Yes, Yes  when Gender is Female.",
+          "In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, No, Yes  when Gender is Male.",
+          "In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No  when Gender is Male.",
+          "Age extremes (both lowest and highest) predominantly correspond to Gender Male across overall data and within Purchased and Education categories."
+        ],
+        "question": "How does the Age distribution vary by Gender and Purchased status across different Education levels?",
+        "suggested_viz_title": "Age Distribution by Gender and Purchase Status Across Education",
+        "suggested_viz_type": "boxplot",
+        "column": "Age",
+        "entity": "Purchased status",
+        "rationale": "Purchased status shows distinct age ranking patterns when combined with Gender, especially with Female always having 'Yes' at age extremes and Male showing mixed presence. Exploring this across Education levels can reveal how purchasing behavior interacts with age stratified by education and gender."
+      },
+      {
+        "selected_facts": [
+          "In the Age ranking of different Education(s), the top three Education(s) are PG, PG, School  when Gender is Female.",
+          "In the Age ranking of different Education(s), the last three Education(s) are School, UG, PG  when Gender is Female.",
+          "In the Age ranking of different Education(s), the top three Education(s) are UG, School, UG  when Gender is Male.",
+          "In the Age ranking of different Education(s), the last three Education(s) are School, PG, PG  when Gender is Male.",
+          "Age extremes (both lowest and highest) predominantly correspond to Gender Male across overall data and within Purchased and Education categories."
+        ],
+        "question": "How does Age vary with Gender and Education within each Purchased category?",
+        "suggested_viz_title": "Age Variation by Gender and Education Within Purchase Categories",
+        "suggested_viz_type": "boxplot",
+        "column": "Age",
+        "entity": "Purchased status",
+        "rationale": "Since Age extremes associate strongly with Gender Male and Education varies in its age ranks by Gender, breaking down by Purchased status can further clarify how Age distribution shifts within these combined categories, revealing nuanced patterns among consumers and non-consumers."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the Age is Gender Male.\",\n        \"The highest (most) value of the Age is Gender Male.\",\n        \"The lowest (least) value of the Age is Gender Male when Purchased is No.\",\n        \"The highest (most) value of the Age is Gender Male when Purchased is No.\",\n        \"The lowest (least) value of the Age is Gender Female when Education is UG.\",\n        \"The highest (most) value of the Age is Gender Male when Education is UG.\",\n        \"The lowest (least) value of the Age is Gender Male when Education is School.\",\n        \"The highest (most) value of the Age is Education School when Gender is Male.\",\n        \"The lowest (least) value of the Age is Gender Male when Education is PG.\",\n        \"The highest (most) value of the Age is Gender Female when Education is PG.\",\n        \"The lowest (least) value of the Age is Gender Male when Purchased is Yes.\",\n        \"The highest (most) value of the Age is Gender Male when Purchased is Yes.\"\n      ],\n      \"insight\": \"Age extremes (both lowest and highest) predominantly correspond to Gender Male across overall data and within Purchased and Education categories.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male .\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Male .\",\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Female, Female, Male  when Education is PG.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Female  when Education is PG.\"\n      ],\n      \"insight\": \"When Education is PG, Age rankings show a more balanced presence of Female in both top and bottom Gender positions compared to the overall male dominance.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Education(s), the top three Education(s) are PG, PG, School  when Gender is Female.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are School, UG, PG  when Gender is Female.\",\n        \"In the Age ranking of different Education(s), the top three Education(s) are UG, School, UG  when Gender is Male.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are School, PG, PG  when Gender is Male.\"\n      ],\n      \"insight\": \"Education levels show varied Age rankings by Gender, with PG dominating top rankings for Females, while UG and School feature more prominently for Males.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\",\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, No, Yes  when Gender is Male.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No  when Gender is Male.\"\n      ],\n      \"insight\": \"Purchase status 'Yes' consistently ranks at the top and bottom ages for Females, whereas for Males, age rankings reflect more variation including both 'Yes' and 'No' categories.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Female, Male  when Education is School.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Female  when Education is School.\",\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male  when Education is UG.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Female, Male, Male  when Education is UG.\"\n      ],\n      \"insight\": \"Age rankings by Gender within Education levels show that School education has relatively more Female representation among the top and bottom compared to UG, where Male dominates.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the Age is Education PG.\",\n        \"The highest (most) value of the Age is Education School.\",\n        \"The lowest (least) value of the Age is Education PG when Purchased is No.\",\n        \"The highest (most) value of the Age is Education School when Purchased is No.\",\n        \"The lowest (least) value of the Age is Education School when Gender is Female.\",\n        \"The highest (most) value of the Age is Education PG when Gender is Female.\"\n      ],\n      \"insight\": [\n        \"Age is generally lowest for customers with PG education and highest for those with School education, with this pattern remaining consistent when considering Purchased = No and Gender = Female.\",\n        \"When Education is PG, the top three genders by Age are Female, Female, Male while the last three are Male, Male, Female, showing a higher Age ranking for females with PG education.\",\n        \"For customers with UG education, the Age ranking by Gender shows a higher Age for Males and a lower Age for Females, indicating gender disparity in age within UG.\",\n        \"The Age ranking for Purchased status differs by Education, with those having UG education being mostly purchasers (top ranks all Yes), while those with School education show a mixed Purchased status in the top and last ranks.\",\n        \"When Gender is Female, Education PG ranks highest in Age but lowest in Age when Gender is Male, indicating an inverse Age relationship of PG education with Gender.\"\n      ]\n    }\n  ]\n}"
+  ]
+}

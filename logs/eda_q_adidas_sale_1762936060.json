@@ -1,0 +1,137 @@
+{
+  "timestamp": "2025-11-12T08:27:40.966274Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Retailer",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 6
+        }
+      },
+      {
+        "column": "Sales Method",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 3
+        }
+      },
+      {
+        "column": "Product",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 6
+        }
+      },
+      {
+        "column": "Total Sales",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 1710
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Walmart consistently leads in highest total sales across the dataset while Foot Locker consistently ranks lowest.",
+        "selected_facts": [
+          "The highest (most) value of the Total Sales is Retailer Walmart.",
+          "The lowest (least) value of the Total Sales is Retailer Foot Locker.",
+          "In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are West Gear, Walmart, Walmart .",
+          "In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, Foot Locker, Foot Locker ."
+        ],
+        "question": "How does the distribution of Total Sales vary across different Retailers?",
+        "suggested_viz_title": "Total Sales Distribution Across Retailers",
+        "suggested_viz_type": "bar",
+        "column": "Retailer",
+        "rationale": "This question explores the overall total sales performance by retailer, extending the insight about Walmart and Foot Locker's ranking to understand broader sales patterns among all retailers."
+      },
+      {
+        "selected_insight": "Sales method impacts total sales value within each retailer, with Online highest for West Gear and In-store sales highest for Walmart, while Foot Locker's Online sales are the lowest.",
+        "selected_facts": [
+          "The highest (most) value of the Total Sales is Sales Method Online when Retailer is West Gear.",
+          "The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Foot Locker.",
+          "The highest (most) value of the Total Sales is Sales Method In-store when Retailer is Walmart.",
+          "The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Walmart."
+        ],
+        "question": "How does Total Sales by Sales Method differ within each Retailer?",
+        "suggested_viz_title": "Total Sales by Sales Method Within Retailers",
+        "suggested_viz_type": "bar",
+        "column": "Retailer",
+        "rationale": "This question drills down into how total sales vary by sales method per retailer, revealing the significance of sales channel impact on retailer performance."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Amazon's total sales are entirely dominated by the Online sales method, which holds both the highest and lowest total sales rankings due to lack of alternative sales methods.",
+        "selected_facts": [
+          "In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, Online, Online  when Retailer is Amazon.",
+          "In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Online, Online  when Retailer is Amazon.",
+          "The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Amazon.",
+          "The highest (most) value of the Total Sales is Sales Method Online when Retailer is Amazon."
+        ],
+        "question": "How does Total Sales distribution vary across different Sales Methods?",
+        "suggested_viz_title": "Total Sales Distribution by Sales Method",
+        "suggested_viz_type": "bar",
+        "column": "Sales Method",
+        "rationale": "This question expands the original comparison by examining the general pattern of Total Sales variation across all Sales Methods, providing insight into how sales channels perform overall."
+      },
+      {
+        "selected_insight": "When comparing retailers within sales methods, Walmart dominates in-store sales, whereas West Gear leads in online sales, with Foot Locker consistently ranking lowest for both methods.",
+        "selected_facts": [
+          "In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, Walmart, Walmart  when Sales Method is In-store.",
+          "In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are West Gear, Foot Locker, Foot Locker  when Sales Method is In-store.",
+          "In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are West Gear, West Gear, West Gear  when Sales Method is Online.",
+          "In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, Foot Locker, Foot Locker  when Sales Method is Online."
+        ],
+        "question": "How does Total Sales by Sales Method differ among Retailers within each Sales Method?",
+        "suggested_viz_title": "Retailer Sales Comparison within Each Sales Method",
+        "suggested_viz_type": "bar",
+        "column": "Sales Method",
+        "rationale": "This question drills down into the significance of Retailer performance differences within each Sales Method, adding depth to the understanding of retailer dominance and weaknesses by sales channel."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "The highest (most) value of the Total Sales is Sales Method Online when Retailer is West Gear.",
+          "The highest (most) value of the Total Sales is Sales Method In-store when Retailer is Walmart.",
+          "In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are In-store, In-store, In-store  when Retailer is Walmart.",
+          "In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, Online, Online  when Retailer is West Gear.",
+          "The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Foot Locker."
+        ],
+        "question": "How do Total Sales vary by Product and Sales Method within Walmart?",
+        "suggested_viz_title": "Total Sales by Product and Sales Method in Walmart",
+        "suggested_viz_type": "bar",
+        "column": "Product",
+        "entity": "Walmart",
+        "rationale": "Walmart leads highest in total sales with In-store methods favored, exploring Product and Sales Method breakdown reveals which products and sales channels contribute most, deepening understanding of Walmart's sales drivers."
+      },
+      {
+        "selected_facts": [
+          "The highest (most) value of the Total Sales is Sales Method Online when Retailer is West Gear.",
+          "In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, Online, Online  when Retailer is West Gear.",
+          "In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, West Gear, Walmart  when Product is Men's Apparel.",
+          "In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, West Gear, West Gear  when Product is Men's Athletic Footwear.",
+          "In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, West Gear, West Gear  when Product is Men's Athletic Footwear."
+        ],
+        "question": "How do Total Sales vary by Product and Sales Method within West Gear?",
+        "suggested_viz_title": "Total Sales by Product and Sales Method in West Gear",
+        "suggested_viz_type": "bar",
+        "column": "Product",
+        "entity": "West Gear",
+        "rationale": "West Gear achieves highest sales through Online sales method and competes with Walmart on men's products; detailed Product and Sales Method analysis helps to clarify which combinations drive their strong performance."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Total Sales is Retailer Walmart.\",\n        \"The lowest (least) value of the Total Sales is Retailer Foot Locker.\",\n        \"In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are West Gear, Walmart, Walmart .\",\n        \"In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, Foot Locker, Foot Locker .\"\n      ],\n      \"insight\": \"Walmart consistently leads in highest total sales across the dataset while Foot Locker consistently ranks lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Total Sales is Sales Method Online when Retailer is West Gear.\",\n        \"The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Foot Locker.\",\n        \"The highest (most) value of the Total Sales is Sales Method In-store when Retailer is Walmart.\",\n        \"The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Walmart.\"\n      ],\n      \"insight\": \"Sales method impacts total sales value within each retailer, with Online highest for West Gear and In-store sales highest for Walmart, while Foot Locker’s Online sales are the lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, West Gear, Walmart  when Product is Men's Apparel.\",\n        \"In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, Foot Locker, Foot Locker  when Product is Men's Apparel.\",\n        \"In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, West Gear, West Gear  when Product is Men's Athletic Footwear.\",\n        \"In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, West Gear, West Gear  when Product is Men's Athletic Footwear.\"\n      ],\n      \"insight\": \"For men’s products like Men's Apparel and Men's Athletic Footwear, Walmart and West Gear dominate total sales while Foot Locker ranks lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Total Sales is Product Men's Street Footwear when Retailer is Amazon.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Retailer is Amazon.\",\n        \"The highest (most) value of the Total Sales is Product Women's Apparel when Retailer is Kohl's.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Retailer is Kohl's.\"\n      ],\n      \"insight\": \"Men's Street Footwear and Women's Apparel products achieve the highest total sales within retailers like Amazon and Kohl's, while Women's Athletic Footwear consistently records the lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are In-store, In-store, In-store  when Retailer is Walmart.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Outlet, Outlet  when Retailer is Walmart.\",\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, Online, Online  when Retailer is West Gear.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Online, Online  when Retailer is West Gear.\"\n      ],\n      \"insight\": \"Walmart’s highest sales come from In-store methods while West Gear’s highest sales come from Online methods.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Total Sales is Sales Method In-store.\",\n        \"The lowest (least) value of the Total Sales is Sales Method Outlet.\",\n        \"The highest (most) value of the Total Sales is Retailer Walmart when Sales Method is In-store.\",\n        \"The lowest (least) value of the Total Sales is Retailer West Gear when Sales Method is In-store.\",\n        \"The highest (most) value of the Total Sales is Retailer West Gear when Sales Method is Online.\",\n        \"The lowest (least) value of the Total Sales is Retailer Foot Locker when Sales Method is Online.\",\n        \"The highest (most) value of the Total Sales is Retailer Walmart when Sales Method is Outlet.\",\n        \"The lowest (least) value of the Total Sales is Retailer Foot Locker when Sales Method is Outlet.\",\n        \"The highest (most) value of the Total Sales is Product Women's Apparel when Sales Method is In-store.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Sales Method is In-store.\",\n        \"The highest (most) value of the Total Sales is Product Men's Street Footwear when Sales Method is Outlet.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Sales Method is Outlet.\"\n      ],\n      \"insight\": \"In-store sales method generates the highest total sales overall, driven primarily by Walmart and Women's Apparel, while Outlet sales method consistently shows the lowest total sales, especially for Foot Locker and Women's Athletic Footwear.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are Walmart, Walmart, Walmart  when Sales Method is In-store.\",\n        \"In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are West Gear, Foot Locker, Foot Locker  when Sales Method is In-store.\",\n        \"In the Total Sales ranking of different Retailer(s), the top three Retailer(s) are West Gear, West Gear, West Gear  when Sales Method is Online.\",\n        \"In the Total Sales ranking of different Retailer(s), the last three Retailer(s) are Foot Locker, Foot Locker, Foot Locker  when Sales Method is Online.\"\n      ],\n      \"insight\": \"When comparing retailers within sales methods, Walmart dominates in-store sales, whereas West Gear leads in online sales, with Foot Locker consistently ranking lowest for both methods.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are In-store, Online, Outlet  when Product is Men's Apparel.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Online, Outlet  when Product is Men's Apparel.\",\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are In-store, Online, In-store  when Product is Men's Athletic Footwear.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Online, Online  when Product is Men's Athletic Footwear.\"\n      ],\n      \"insight\": \"For Men's Apparel and Men's Athletic Footwear, In-store sales method ranks highest in total sales while Online sales method frequently ranks lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, In-store, Outlet  when Product is Women's Athletic Footwear.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Outlet, Online, Online  when Product is Women's Athletic Footwear.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Sales Method is In-store.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Sales Method is Online.\",\n        \"The lowest (least) value of the Total Sales is Product Women's Athletic Footwear when Sales Method is Outlet.\"\n      ],\n      \"insight\": \"Women's Athletic Footwear exhibits the lowest total sales consistently across all sales methods, even though Online is often among the top-ranked methods for this product.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Total Sales ranking of different Sales Method(s), the top three Sales Method(s) are Online, Online, Online  when Retailer is Amazon.\",\n        \"In the Total Sales ranking of different Sales Method(s), the last three Sales Method(s) are Online, Online, Online  when Retailer is Amazon.\",\n        \"The lowest (least) value of the Total Sales is Sales Method Online when Retailer is Amazon.\",\n        \"The highest (most) value of the Total Sales is Sales Method Online when Retailer is Amazon.\"\n      ],\n      \"insight\": \"Amazon's total sales are entirely dominated by the Online sales method, which holds both the highest and lowest total sales rankings due to lack of alternative sales methods.\"\n    }\n  ]\n}"
+  ]
+}

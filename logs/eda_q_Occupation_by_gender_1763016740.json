@@ -1,0 +1,139 @@
+{
+  "timestamp": "2025-11-13T06:52:20.568784Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Pacific Island Countries",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 13
+        }
+      },
+      {
+        "column": "Sex",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      },
+      {
+        "column": "Economic sector",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 10
+        }
+      },
+      {
+        "column": "Number of employed persons",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 205
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Solomon Islands consistently ranks highest in the number of employed persons across Pacific Island Countries, while Niue consistently ranks lowest.",
+        "selected_facts": [
+          "The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands.",
+          "The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue.",
+          "In the Number of employed persons ranking of different Pacific Island Countries(s), the top three Pacific Island Countries(s) are Solomon Islands, Vanuatu, Solomon Islands .",
+          "In the Number of employed persons ranking of different Pacific Island Countries(s), the last three Pacific Island Countries(s) are Niue, Niue, Niue ."
+        ],
+        "question": "How does the number of employed persons vary across different Pacific Island Countries?",
+        "suggested_viz_title": "Employment Numbers Across Pacific Island Countries",
+        "suggested_viz_type": "bar",
+        "column": "Pacific Island Countries",
+        "rationale": "This high-level question helps to visualize and compare overall employment distribution among all Pacific Island Countries, extending the insight by looking broadly across all countries without focusing on specific ones."
+      },
+      {
+        "selected_insight": "Employment gender rankings vary across Pacific Island Countries like Kiribati and Micronesia, showing no uniform dominance of one sex across all countries.",
+        "selected_facts": [
+          "In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Male, Female, Male  when Pacific Island Countries is Kiribati.",
+          "In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Female, Male, Female  when Pacific Island Countries is Kiribati.",
+          "In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Female, Male, Male  when Pacific Island Countries is Micronesia (Federated States of).",
+          "In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Female, Female, Male  when Pacific Island Countries is Micronesia (Federated States of)."
+        ],
+        "question": "How does the number of employed persons differ by sex across Pacific Island Countries?",
+        "suggested_viz_title": "Employment by Sex Across Pacific Island Countries",
+        "suggested_viz_type": "bar",
+        "column": "Pacific Island Countries",
+        "rationale": "This question drills down into gender differences in employment within each country, revealing how male and female employment vary among Pacific Island Countries and adding depth beyond aggregate employment numbers."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "The Social Work and Health sector predominantly employs Female workers, with Female holding the highest employment numbers, while Male employment is the lowest in this sector.",
+        "selected_facts": [
+          "The highest (most) value of the Number of employed persons is Sex Female when Economic sector is Social Work and Health .",
+          "The lowest (least) value of the Number of employed persons is Economic sector Social Work and Health  when Sex is Male.",
+          "In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Female, Male, Female when Economic sector is Social Work and Health .",
+          "In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Male, Male, Female  when Economic sector is Social Work and Health ."
+        ],
+        "question": "How does the number of employed persons vary by Sex across different economic sectors?",
+        "suggested_viz_title": "Employment by Sex Across Economic Sectors",
+        "suggested_viz_type": "bar",
+        "column": "Sex",
+        "rationale": "This question compares employment numbers by Sex across all economic sectors, providing a broad view of gender differences beyond geographic context."
+      },
+      {
+        "selected_insight": "Male workers have the highest number of employed persons overall, especially dominating in Agriculture and Fishing sectors and in Solomon Islands, while Female workers represent the lowest employment numbers overall and particularly in Financial and Insurance sectors and in Niue.",
+        "selected_facts": [
+          "The highest (most) value of the Number of employed persons is Sex Male.",
+          "The lowest (least) value of the Number of employed persons is Sex Female.",
+          "The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands when Sex is Male.",
+          "The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue when Sex is Female.",
+          "The highest (most) value of the Number of employed persons is Economic sector Agriculture and Fishing when Sex is Male.",
+          "The lowest (least) value of the Number of employed persons is Economic sector Financial and Insurance when Sex is Female."
+        ],
+        "question": "How does the number of employed persons differ by Sex within key Pacific Island Countries?",
+        "suggested_viz_title": "Employment by Sex in Key Pacific Countries",
+        "suggested_viz_type": "bar",
+        "column": "Sex",
+        "rationale": "This question drills down into Sex-based employment disparities within significant Pacific Island Countries, revealing gender-specific employment patterns in those locations."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "The Sex Male accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.",
+          "The Economic sector Agriculture and Fishing accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.",
+          "The Sex Male accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.",
+          "The Economic sector Agriculture and Fishing accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.",
+          "In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail when Pacific Island Countries is Solomon Islands."
+        ],
+        "question": "How does the number of employed persons vary by Sex and Economic sector within Solomon Islands?",
+        "suggested_viz_title": "Employment by Sex and Sector in Solomon Islands",
+        "suggested_viz_type": "bar",
+        "column": "Sex",
+        "entity": "Solomon Islands",
+        "rationale": "Solomon Islands has the highest number of employed persons overall, and Agriculture and Fishing dominate key sectors with male employment leading. Exploring Sex and Economic sector jointly deepens understanding of workforce composition in this largest labor market."
+      },
+      {
+        "selected_facts": [
+          "The Sex Male accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.",
+          "The Economic sector Agriculture and Fishing accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.",
+          "The Sex Male accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.",
+          "The Economic sector Agriculture and Fishing accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.",
+          "In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail when Pacific Island Countries is Vanuatu."
+        ],
+        "question": "What are the employment patterns by Sex and Economic sector within Vanuatu's workforce?",
+        "suggested_viz_title": "Employment by Sex and Sector in Vanuatu",
+        "suggested_viz_type": "bar",
+        "column": "Sex",
+        "entity": "Vanuatu",
+        "rationale": "Vanuatu ranks second highest in total employment with a workforce largely engaged in Agriculture and Fishing. Analyzing employment broken down by Sex and sector helps reveal gender roles and key economic activities within this significant labor market."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands.\",\n        \"The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue.\",\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the top three Pacific Island Countries(s) are Solomon Islands, Vanuatu, Solomon Islands .\",\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the last three Pacific Island Countries(s) are Niue, Niue, Niue .\"\n      ],\n      \"insight\": \"Solomon Islands consistently ranks highest in the number of employed persons across Pacific Island Countries, while Niue consistently ranks lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Sex Male accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.\",\n        \"The Economic sector Agriculture and Fishing accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.\",\n        \"The Sex Male accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.\",\n        \"The Economic sector Agriculture and Fishing accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.\"\n      ],\n      \"insight\": \"In Solomon Islands and Vanuatu, the majority of employed persons are male and primarily work in the Agriculture and Fishing sector.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail  when Pacific Island Countries is Solomon Islands.\",\n        \"In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail  when Pacific Island Countries is Vanuatu.\",\n        \"In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Education, Construction, Social Work and Health   when Pacific Island Countries is Tokelau.\"\n      ],\n      \"insight\": \"Agriculture and Fishing dominate top employment sectors in Solomon Islands and Vanuatu, while Education and Construction are key sectors in Tokelau.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue when Sex is Female.\",\n        \"The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands when Sex is Female.\",\n        \"The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue when Sex is Male.\",\n        \"The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands when Sex is Male.\"\n      ],\n      \"insight\": \"Regardless of sex, Solomon Islands has the highest number of employed persons, while Niue has the lowest in both female and male categories.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Male, Female, Male  when Pacific Island Countries is Kiribati.\",\n        \"In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Female, Male, Female  when Pacific Island Countries is Kiribati.\",\n        \"In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Female, Male, Male  when Pacific Island Countries is Micronesia (Federated States of).\",\n        \"In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Female, Female, Male  when Pacific Island Countries is Micronesia (Federated States of).\"\n      ],\n      \"insight\": \"Employment gender rankings vary across Pacific Island Countries like Kiribati and Micronesia, showing no uniform dominance of one sex across all countries.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Number of employed persons is Sex Male.\",\n        \"The lowest (least) value of the Number of employed persons is Sex Female.\",\n        \"The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands when Sex is Male.\",\n        \"The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue when Sex is Female.\",\n        \"The highest (most) value of the Number of employed persons is Economic sector Agriculture and Fishing when Sex is Male.\",\n        \"The lowest (least) value of the Number of employed persons is Economic sector Financial and Insurance when Sex is Female.\",\n        \"The Sex Male accounts for 34.42% of the Number of employed persons when Economic sector is Agriculture and Fishing.\",\n        \"The Sex Male accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.\"\n      ],\n      \"insight\": \"Male workers have the highest number of employed persons overall, especially dominating in Agriculture and Fishing sectors and in Solomon Islands, while Female workers represent the lowest employment numbers overall and particularly in Financial and Insurance sectors and in Niue.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the top three Pacific Island Countries(s) are Solomon Islands, Vanuatu, Solomon Islands when Sex is Male.\",\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the last three Pacific Island Countries(s) are Niue, Tuvalu, Tokelau when Sex is Male.\",\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the top three Pacific Island Countries(s) are Solomon Islands, Vanuatu, Vanuatu when Sex is Female.\",\n        \"In the Number of employed persons ranking of different Pacific Island Countries(s), the last three Pacific Island Countries(s) are Niue, Niue, Tuvalu when Sex is Female.\",\n        \"The highest (most) value of the Number of employed persons is Pacific Island Countries Solomon Islands when Sex is Female.\",\n        \"The lowest (least) value of the Number of employed persons is Pacific Island Countries Niue when Sex is Female.\"\n      ],\n      \"insight\": \"Employment numbers for both Male and Female workers peak in Solomon Islands and Vanuatu while Niue and Tuvalu consistently show the lowest employment among Pacific Island Countries regardless of Sex.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail when Sex is Female.\",\n        \"In the Number of employed persons ranking of different Economic sector(s), the top three Economic sector(s) are Agriculture and Fishing, Agriculture and Fishing, Wholesale and Retail when Sex is Male.\",\n        \"In the Number of employed persons ranking of different Economic sector(s), the last three Economic sector(s) are Financial and Insurance, Transportation and Storage, Transportation and Storage when Sex is Female.\",\n        \"In the Number of employed persons ranking of different Economic sector(s), the last three Economic sector(s) are Social Work and Health , Accommodation and Food, Wholesale and Retail when Sex is Male.\",\n        \"The lowest (least) value of the Number of employed persons is Economic sector Financial and Insurance when Sex is Female.\",\n        \"The highest (most) value of the Number of employed persons is Economic sector Agriculture and Fishing when Sex is Female.\"\n      ],\n      \"insight\": \"Agriculture and Fishing is the top economic sector for employment for both Male and Female, whereas Financial and Insurance and Transportation and Storage sectors have the lowest employment figures for Females.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Number of employed persons is Sex Female when Economic sector is Social Work and Health .\",\n        \"The lowest (least) value of the Number of employed persons is Economic sector Social Work and Health  when Sex is Male.\",\n        \"In the Number of employed persons ranking of different Sex(s), the top three Sex(s) are Female, Male, Female when Economic sector is Social Work and Health .\",\n        \"In the Number of employed persons ranking of different Sex(s), the last three Sex(s) are Male, Male, Female  when Economic sector is Social Work and Health .\"\n      ],\n      \"insight\": \"The Social Work and Health sector predominantly employs Female workers, with Female holding the highest employment numbers, while Male employment is the lowest in this sector.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Sex Male accounts for 34.42% of the Number of employed persons when Economic sector is Agriculture and Fishing.\",\n        \"The Sex Male accounts for 32.25% of the Number of employed persons when Pacific Island Countries is Solomon Islands.\",\n        \"The Sex Male accounts for 29.88% of the Number of employed persons when Pacific Island Countries is Vanuatu.\",\n        \"The Sex Female accounts for 28.49% of the Number of employed persons when Pacific Island Countries is Tokelau.\",\n        \"The Sex Male accounts for 27.06% of the Number of employed persons when Economic sector is Electricity and Gas.\",\n        \"The Sex Male accounts for 26.81% of the Number of employed persons when Economic sector is Construction.\"\n      ],\n      \"insight\": \"Male workers represent a substantial share of employment particularly in Agriculture and Fishing, Solomon Islands, Vanuatu, Electricity and Gas, and Construction sectors, whereas Female employment is notably high primarily in Tokelau.\"\n    }\n  ]\n}"
+  ]
+}

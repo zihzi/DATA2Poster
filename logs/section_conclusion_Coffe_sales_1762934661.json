@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-12T08:04:21.606978Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Time-of-Day Drives Coffee Sales Patterns",
+        "charts_title": [
+          "Average Coffee Sales Revenue by Time of Day",
+          "Coffee Sales Revenue by Type and Time of Day"
+        ],
+        "insight": "Coffee sales peak in mornings and afternoons, with Latte and Americano variants dominating these times."
+      },
+      {
+        "section": "B",
+        "heading": "Coffee Revenue Varies by Coffee Type and Weekday",
+        "charts_title": [
+          "Average Money by Coffee Name",
+          "Money by Coffee Name Over Weekdays"
+        ],
+        "insight": "Milk and chocolate-based coffees earn higher average sales, and Americano revenue peaks on Fri and Mon."
+      },
+      {
+        "section": "C",
+        "heading": "Distinct Revenue Trends by Coffee Type Across Times and Weekdays",
+        "charts_title": [
+          "Coffee Revenue Patterns by Time and Weekday",
+          "Weekly Coffee Revenue by Time and Type"
+        ],
+        "insight": "Coffee types show unique daily and weekly revenue peaks, with Americano and Cortado excelling on different days."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Coffee sales revenue varies notably by time of day, with highest earnings at night possibly from premium drinks. Latte leads total revenue across all times, but preferences shift, with Americano with Milk dominating mornings. These patterns suggest tailoring products and staffing to leverage peak and off-peak periods effectively.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Avg revenue per sale is higher for milk and chocolate-based coffees like Latte and Hot Chocolate versus Espresso. Americano revenue peaks on Fridays, while weekends show notable drops, revealing weekday-driven demand shifts. This implies marketing should target high-revenue days and adjust offerings based on coffee type and weekday preferences.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "Coffee_name trends show Americano peaks in mornings and afternoons, while Cappuccino and Latte excel at night. Cortado revenue concentrates in mornings, highlighting distinct time-of-day and weekday patterns affecting coffee_name sales. Recognizing these nuances enables optimized inventory and promotions tied to coffee type and temporal demand.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Does Time, Coffee Type, and Weekday Influence Coffee Sales Revenue?"
+}

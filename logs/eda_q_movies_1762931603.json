@@ -1,0 +1,136 @@
+{
+  "timestamp": "2025-11-12T07:13:23.473923Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Genre",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 11
+        }
+      },
+      {
+        "column": "Creative Type",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 8
+        }
+      },
+      {
+        "column": "Content Rating",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 4
+        }
+      },
+      {
+        "column": "Worldwide Gross",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 274
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Thriller is the highest grossing genre worldwide, consistently paired with high-value Contemporary Fiction and PG-13 content ratings, while Drama ranks lowest overall but sees strong performance with R ratings and Historical Fiction.",
+        "selected_facts": [
+          "The highest (most) value of the Worldwide Gross is Genre Thriller.",
+          "The lowest (least) value of the Worldwide Gross is Genre Drama."
+        ],
+        "question": "How does the Worldwide Gross vary across different Genre values?",
+        "suggested_viz_title": "Worldwide Gross Distribution Across Genres",
+        "suggested_viz_type": "bar",
+        "column": "Genre",
+        "rationale": "Examining Worldwide Gross by Genre at a high level allows better understanding of revenue disparities and can guide further breakdowns by Creative Type or Content Rating."
+      },
+      {
+        "selected_insight": "Within the Action genre, Contemporary Fiction and Super Hero creative types dominate worldwide gross, with Super Hero contributing significantly through Action and Thriller genres.",
+        "selected_facts": [
+          "In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Science Fiction, Historical Fiction  when Genre is Action.",
+          "The Genre Action accounts for 34.52% of the Worldwide Gross when Creative Type is Super Hero.",
+          "The Genre Thriller accounts for 25.59% of the Worldwide Gross when Creative Type is Super Hero."
+        ],
+        "question": "How does Worldwide Gross differ by Creative Type within each Genre?",
+        "suggested_viz_title": "Worldwide Gross by Creative Type Within Genres",
+        "suggested_viz_type": "stacked bar",
+        "column": "Genre",
+        "rationale": "Drilling down into Worldwide Gross by Creative Type within Genres reveals which creative approaches drive revenue in each genre, clarifying the significance of creative variation in gross performance."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Dramatization consistently ranks lowest in worldwide gross overall and within Drama genre but surprisingly leads within the Musical genre.",
+        "selected_facts": [
+          "In the Worldwide Gross ranking of different Creative Type(s), the last three Creative Type(s) are Dramatization, Historical Fiction, Contemporary Fiction .",
+          "The lowest (least) value of the Worldwide Gross is Creative Type Dramatization.",
+          "The Creative Type Dramatization accounts for 52.08% of the Worldwide Gross when Genre is Musical.",
+          "The highest (most) value of the Worldwide Gross is Creative Type Dramatization when Genre is Musical.",
+          "The lowest (least) value of the Worldwide Gross is Creative Type Dramatization when Genre is Drama."
+        ],
+        "question": "How does Worldwide Gross vary across different Creative Type values?",
+        "suggested_viz_title": "Worldwide Gross by Creative Type",
+        "suggested_viz_type": "bar",
+        "column": "Creative Type",
+        "rationale": "This question explores the overall performance differences among all Creative Types in terms of Worldwide Gross, providing a broad perspective that highlights both leading and lagging types."
+      },
+      {
+        "selected_insight": "Contemporary Fiction is a leading Creative Type across multiple popular genres such as Thriller, Adventure, and Horror, but records the lowest gross in the Black Comedy genre.",
+        "selected_facts": [
+          "In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Science Fiction, Historical Fiction .",
+          "In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Historical Fiction, Science Fiction when Genre is Horror.",
+          "In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Thriller, Adventure, Action when Creative Type is Contemporary Fiction.",
+          "The lowest (least) value of the Worldwide Gross is Genre Black Comedy when Creative Type is Contemporary Fiction.",
+          "The highest (most) value of the Worldwide Gross is Genre Thriller when Creative Type is Contemporary Fiction."
+        ],
+        "question": "How does Worldwide Gross for Contemporary Fiction differ across various Genre values?",
+        "suggested_viz_title": "Contemporary Fiction Gross by Genre",
+        "suggested_viz_type": "bar",
+        "column": "Creative Type",
+        "rationale": "This question drills into the significance of Contemporary Fiction's varying performance by Genre, shedding light on which genres notably boost or hinder its Worldwide Gross."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "The highest (most) value of the Worldwide Gross is Genre Thriller.",
+          "The highest (most) value of the Worldwide Gross is Content Rating PG-13 when Genre is Thriller.",
+          "In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Thriller, Adventure, Action  when Creative Type is Contemporary Fiction.",
+          "The highest (most) value of the Worldwide Gross is Creative Type Contemporary Fiction when Genre is Action.",
+          "The highest (most) value of the Worldwide Gross is Content Rating PG-13 when Genre is Action."
+        ],
+        "question": "How does Worldwide Gross vary by Content Rating and Creative Type within Thriller genre?",
+        "suggested_viz_title": "Thriller Gross by Content Rating and Creative Type",
+        "suggested_viz_type": "bar",
+        "column": "Worldwide Gross",
+        "entity": "Thriller Genre",
+        "rationale": "Thriller is the highest-grossing genre with strong associations to specific Content Ratings (PG-13) and Creative Types (Contemporary Fiction). Exploring the interaction of Content Rating and Creative Type within Thriller can reveal more detailed performance patterns driving its top grossing status."
+      },
+      {
+        "selected_facts": [
+          "The Creative Type Factual accounts for 100.00% of the Worldwide Gross when Genre is Concert.",
+          "The Content Rating R accounts for 100.00% of the Worldwide Gross when Genre is Concert.",
+          "The highest (most) value of the Worldwide Gross is Content Rating R when Genre is Concert.",
+          "The lowest (least) value of the Worldwide Gross is Content Rating R when Genre is Concert.",
+          "The highest (most) value of the Worldwide Gross is Creative Type Factual when Genre is Concert."
+        ],
+        "question": "How does Worldwide Gross vary by Content Rating and Creative Type within Concert genre?",
+        "suggested_viz_title": "Concert Gross by Content Rating and Creative Type",
+        "suggested_viz_type": "bar",
+        "column": "Worldwide Gross",
+        "entity": "Concert Genre",
+        "rationale": "Concert genre's gross is entirely dominated by a single Creative Type (Factual) and Content Rating (R) but with matching lowest and highest values. Exploring variations across these two columns will verify if any finer patterns or exceptions exist that affect revenue."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Worldwide Gross is Genre Thriller.\",\n        \"The lowest (least) value of the Worldwide Gross is Genre Drama.\",\n        \"In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Thriller, Adventure, Action  when Creative Type is Contemporary Fiction.\",\n        \"The highest (most) value of the Worldwide Gross is Creative Type Contemporary Fiction when Genre is Action.\",\n        \"The highest (most) value of the Worldwide Gross is Content Rating PG-13 when Genre is Action.\",\n        \"The highest (most) value of the Worldwide Gross is Content Rating PG-13 when Genre is Thriller.\",\n        \"The highest (most) value of the Worldwide Gross is Content Rating R when Genre is Drama.\",\n        \"The Creative Type Historical Fiction accounts for 100.00% of the Worldwide Gross when Genre is Western.\",\n        \"The Creative Type Factual accounts for 100.00% of the Worldwide Gross when Genre is Concert.\",\n        \"The Content Rating PG-13 accounts for 100.00% of the Worldwide Gross when Genre is Western.\"\n      ],\n      \"insight\": \"Thriller is the highest grossing genre worldwide, consistently paired with high-value Contemporary Fiction and PG-13 content ratings, while Drama ranks lowest overall but sees strong performance with R ratings and Historical Fiction.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Creative Type Factual accounts for 100.00% of the Worldwide Gross when Genre is Concert.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Factual when Genre is Concert.\",\n        \"The highest (most) value of the Worldwide Gross is Creative Type Factual when Genre is Concert.\",\n        \"The Content Rating R accounts for 100.00% of the Worldwide Gross when Genre is Concert.\",\n        \"The lowest (least) value of the Worldwide Gross is Content Rating R when Genre is Concert.\",\n        \"The highest (most) value of the Worldwide Gross is Content Rating R when Genre is Concert.\"\n      ],\n      \"insight\": \"Concert genre's worldwide gross is uniquely dominated entirely by the Factual creative type and R content rating, with both lowest and highest values matching these categories.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Worldwide Gross ranking of different Genre(s), the last three Genre(s) are Drama, Drama, Black Comedy .\",\n        \"The Creative Type Fantasy accounts for 29.23% of the Worldwide Gross when Genre is Black Comedy.\",\n        \"The Content Rating R accounts for 29.23% of the Worldwide Gross when Genre is Black Comedy.\",\n        \"The Creative Type Contemporary Fiction accounts for 25.03% of the Worldwide Gross when Genre is Black Comedy.\",\n        \"The Content Rating R accounts for 25.03% of the Worldwide Gross when Genre is Black Comedy.\"\n      ],\n      \"insight\": \"Black Comedy ranks among the lowest worldwide grossing genres and features a mix of Fantasy and Contemporary Fiction creative types with the R rating strongly represented.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Science Fiction, Historical Fiction  when Genre is Action.\",\n        \"In the Worldwide Gross ranking of different Creative Type(s), the last three Creative Type(s) are Contemporary Fiction, Super Hero, Science Fiction  when Genre is Action.\",\n        \"The Genre Action accounts for 34.52% of the Worldwide Gross when Creative Type is Super Hero.\",\n        \"The Genre Thriller accounts for 25.59% of the Worldwide Gross when Creative Type is Super Hero.\",\n        \"The Genre Action accounts for 24.58% of the Worldwide Gross when Creative Type is Super Hero.\",\n        \"The highest (most) value of the Worldwide Gross is Creative Type Contemporary Fiction when Genre is Action.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Contemporary Fiction when Genre is Action.\"\n      ],\n      \"insight\": \"Within the Action genre, Contemporary Fiction and Super Hero creative types dominate worldwide gross, with Super Hero contributing significantly through Action and Thriller genres.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Genre Adventure accounts for 78.52% of the Worldwide Gross when Creative Type is Factual.\",\n        \"In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Adventure, Adventure, Adventure  when Content Rating is G.\",\n        \"The lowest (least) value of the Worldwide Gross is Content Rating G when Genre is Musical.\",\n        \"The highest (most) value of the Worldwide Gross is Content Rating PG when Genre is Musical.\",\n        \"The Creative Type Dramatization accounts for 52.08% of the Worldwide Gross when Genre is Musical.\",\n        \"The Content Rating PG accounts for 52.08% of the Worldwide Gross when Genre is Musical.\"\n      ],\n      \"insight\": \"Adventure genre significantly benefits from Factual creative types and G ratings, while Musical performs better with Dramatization types and PG ratings, highlighting contrasts in family-friendly and narrative styles.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the Worldwide Gross is Creative Type Historical Fiction.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Dramatization.\",\n        \"In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Historical Fiction, Science Fiction, Contemporary Fiction .\",\n        \"The Creative Type Historical Fiction accounts for 100.00% of the Worldwide Gross when Genre is Western.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Historical Fiction when Genre is Western.\"\n      ],\n      \"insight\": \"Historical Fiction ranks as the highest worldwide grossing Creative Type overall and dominates the Western genre despite also having the lowest value within that genre.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Creative Type Factual accounts for 100.00% of the Worldwide Gross when Genre is Concert.\",\n        \"The lowest (least) value of the Worldwide Gross is Genre Concert when Creative Type is Factual.\",\n        \"The highest (most) value of the Worldwide Gross is Genre Musical when Creative Type is Factual.\",\n        \"The Genre Musical accounts for 78.52% of the Worldwide Gross when Creative Type is Factual.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Factual when Genre is Musical.\"\n      ],\n      \"insight\": \"Factual Creative Type completely dominates the Concert genre's worldwide gross but performs lowest there, while excelling significantly in the Musical genre.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The Content Rating PG-13 accounts for 34.52% of the Worldwide Gross when Creative Type is Super Hero.\",\n        \"The Genre Action accounts for 34.52% of the Worldwide Gross when Creative Type is Super Hero.\",\n        \"In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Action, Thriller, Action when Creative Type is Super Hero.\",\n        \"In the Worldwide Gross ranking of different Content Rating(s), the top three Content Rating(s) are PG-13, PG-13, PG-13 when Creative Type is Super Hero.\",\n        \"In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Science Fiction, Historical Fiction when Genre is Action.\"\n      ],\n      \"insight\": \"Super Hero Creative Type's highest worldwide gross is strongly linked to Action genre and PG-13 rating, emphasizing its appeal in mainstream action-oriented family-friendly films.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Worldwide Gross ranking of different Creative Type(s), the last three Creative Type(s) are Dramatization, Historical Fiction, Contemporary Fiction .\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Dramatization.\",\n        \"The Creative Type Dramatization accounts for 52.08% of the Worldwide Gross when Genre is Musical.\",\n        \"The highest (most) value of the Worldwide Gross is Creative Type Dramatization when Genre is Musical.\",\n        \"The lowest (least) value of the Worldwide Gross is Creative Type Dramatization when Genre is Drama.\"\n      ],\n      \"insight\": \"Dramatization consistently ranks lowest in worldwide gross overall and within Drama genre but surprisingly leads within the Musical genre.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Science Fiction, Historical Fiction .\",\n        \"In the Worldwide Gross ranking of different Creative Type(s), the top three Creative Type(s) are Contemporary Fiction, Historical Fiction, Science Fiction when Genre is Horror.\",\n        \"In the Worldwide Gross ranking of different Genre(s), the top three Genre(s) are Thriller, Adventure, Action when Creative Type is Contemporary Fiction.\",\n        \"The lowest (least) value of the Worldwide Gross is Genre Black Comedy when Creative Type is Contemporary Fiction.\",\n        \"The highest (most) value of the Worldwide Gross is Genre Thriller when Creative Type is Contemporary Fiction.\"\n      ],\n      \"insight\": \"Contemporary Fiction is a leading Creative Type across multiple popular genres such as Thriller, Adventure, and Horror, but records the lowest gross in the Black Comedy genre.\"\n    }\n  ]\n}"
+  ]
+}

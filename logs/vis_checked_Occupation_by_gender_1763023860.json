@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-11-13T08:51:00.672835Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' and 'Proportion' based on keywords like 'vary widely', 'leading', 'dominate', and 'gender gaps'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns well with the titles and conclusion, reflecting variation in total employment and gender distribution in agriculture without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The titles explicitly indicate employment totals across countries and gender employment in agriculture, strongly implying evidence for the stated conclusion about variation and gender gaps."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "The conclusion discusses total employment and gender distribution in agriculture, which directly matches the measures and scope implied by both chart titles."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain clear claim-type cues: 'Across Pacific Island Countries' and 'Gender Employment in Agriculture Across Countries' indicate distribution and proportion respectively."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "Granularity is partially specified; while countries and gender groups are implied, there is no explicit time window or top-N distinctions in titles or conclusion."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The justification is clear and concrete, referencing exact alignments between the titles (scope & measure) and the conclusion's claims."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both chart titles adequately and clearly support the conclusion’s claims about total employment variation and gender disparities in agriculture, aligning well in scope, measure, and claim type.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominance', 'outnumber', and comparison of male vs female employment shares."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight that males dominate employment across countries and sectors except in certain sectors aligns well with both chart titles and the conclusion."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles indicate data disaggregated by sex across countries and sectors, which strongly supports claims about gender dominance and distribution by sector."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Titles reference employment numbers by sex across countries and sectors, fully aligned with the conclusion on gender employment patterns in Pacific Island countries sectors."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain 'by sex', 'across countries', and 'across sectors' indicating distribution and proportion comparison, matching the claim type cues perfectly."
+          },
+          "granularity_specificity": {
+            "score": 2,
+            "reason": "Charts imply appropriate granularity by sex within both country and sector breakdowns; though no explicit time dimension, this aligns with a cross-sectional comparison."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Conclusion is concise, concretely referencing male/female employment dominance patterns across multiple sectors and countries directly supported by the chart scopes."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts' titles and described insight collectively align well with the conclusion's main claims about gender proportions in employment by country and sector. No chart replacement is needed.",
+        "recommendation": null
+      }
+    ]
+  }
+}

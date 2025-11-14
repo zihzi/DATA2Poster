@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-13T03:21:02.601670Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' and 'Distribution' since the conclusion discusses variation ('varies widely'), dominance ('leading significantly', 'male employment exceeds female'), and distribution ('more balanced gender employment in smaller nations')."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the titles and conclusion, both reflecting employment differences across countries and sex-based employment balance; no contradictions detected."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles clearly indicate coverage of employment numbers overall and employment broken down by sex across countries, directly supporting the main claims about variation and gender balance."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Measures (number of employed persons) and scope (all Pacific Island countries, employment by sex) align well with the conclusion about workforce size and gender employment differences."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain appropriate cues: 'Across Pacific Island Countries' signals distribution; 'by Sex' supports comparison; both align well with discussing distribution and proportions."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or further specification is provided; granularity at country and sex levels is adequate but could be improved by clarifying time period or subgroup details."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear reasoning referencing that both titles show employment counts and sex breakdowns across countries supporting the claims about variation and gender dominance, with minor missing time detail."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion about wide variation in employment numbers among Pacific Island countries and consistent male dominance in employment by sex is well supported by the two charts' titles and the insight provided. Both charts together cover total employment and employment by sex distributions needed to justify the conclusion.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'lead', and 'prevail' indicating comparison of shares."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight that males dominate overall employment but females prevail in social and education sectors aligns well with the conclusion and titles, showing no contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The titles clearly imply evidence for comparison of employment numbers by sex overall and across economic sectors, which strongly supports the main claims about gender dominance and sectoral employment."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "While Title 1 covers overall employment counts by sex and Title 2 addresses employment by sex across sectors, the conclusion uses absolute total figures (156,404 males, 96,180 females) not directly verifiable from the titles alone. Moreover, the conclusion includes both overall total and sectoral breakdown, which comes from two charts combined but with a slight mismatch in measure aggregation."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Both chart titles include 'by' and 'across,' which suit distribution and comparison types, fitting the proportion claim type well."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "The titles do not specify any time window or concrete unit of measure beyond 'Employment Numbers' or 'Employment,' limiting granularity. The conclusion implies totals and sector breakdown but lacks time specificity."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Justification explicitly references how titles correspond to overall and sectoral employment by sex and clarifies partial mismatches on exact totals and scope."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "Chart_1 titled 'Employment Numbers by Sex Across Pacific Islands' does not explicitly convey total aggregates or proportions, and the conclusion’s use of exact totals reduces the claim strength from that chart. A clearer visualization focusing on proportional shares by sex overall (e.g., pie chart or 100% stacked bar) would better support the main claim of male dominance in overall employment.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of total employed persons across all Pacific Island Countries does each sex represent?",
+          "revised_title": "Proportion of Total Employment by Sex Across Pacific Islands",
+          "explanation": "A pie chart showing employment share by sex overall would clearly depict male dominance by proportion, strengthening the conclusion's main claim that males dominate overall employment numbers."
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,133 @@
+{
+  "timestamp": "2025-11-13T07:03:14.588556Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'concentrated heavily' and 'over 63% combined'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the titles and conclusion, reflecting employment concentration and sex differences without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles imply data on employment totals and sex breakdowns across countries, which strongly support the conclusion on concentration and gender differences."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Measures (employment numbers by country and sex) and scope (Pacific Island countries) match the conclusion's focus on concentration and gender differences."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles use 'Across' and 'by sex', appropriate for distribution and comparison claims supporting proportion claims."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or aggregation method is mentioned; granularity includes sex and countries but lacks mention of percentages or shares explicitly."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear rationale explaining alignment of titles and measures with the conclusion and insight."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The two charts titled reflect employment distribution and gender breakdown, fully supporting the conclusion about concentration and male dominance without mismatch or missing cues.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'majority', and 'lead' indicating comparison of shares by sex."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight that males dominate overall employment and sex ratios vary across sectors with some female dominance aligns well with the titles and supports the conclusion's claims about gender employment distribution and country differences."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles explicitly cover employment by sex across economic sectors and countries, directly supporting the main claims about gender dominance and differences by sector and country."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "The titles cover employment by sex aggregated across sectors and countries, matching the conclusion's scope and measures related to distribution and dominance."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles include relevant cues: 'across' and 'by' for distribution of employment, and 'by sex' indicating proportions; the use of countries indicates comparison context."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "While the titles specify sectors and countries, there is no explicit time dimension or further granularity like exact years or subsets; the conclusion does not mention time so partial specification is adequate."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The conclusion clearly matches the claim type and titles, with precise reference to sex differences by sector and country; rationale is concise and concrete."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion about male and female dominance in sectors and countries is well-supported by the given chart titles which cover employment by sex across economic sectors and Pacific countries. The insight aligns well with the claim type and scope.",
+        "recommendation": null
+      }
+    ]
+  },
+  "poster_score_json": {
+    "final_score": 8,
+    "justification": {
+      "overall_assessment": "The main claims of the conclusion are well supported by the chart titles and insights, particularly regarding employment concentration in Solomon Islands and Vanuatu, the consistent male dominance across countries, and sectoral gender imbalances. However, some nuanced claims about near gender parity in smaller nations like Tokelau, detailed intra-country sectoral distinctions (especially females prevailing in Accommodation and Food in Solomon Islands, and females’ strength in Wholesale, Retail, and Education in Vanuatu) are only partially or indirectly supported without explicit chart titles or insights covering these smaller nations or these sectors in founding detail.",
+      "supported_claims": [
+        {
+          "claim": "Employment is concentrated heavily in Solomon Islands and Vanuatu, covering over 63% combined.",
+          "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries), Title 4 (Employment by Sex in Key Pacific Countries), Insight 1"
+        },
+        {
+          "claim": "Male employment consistently exceeds female across countries, reflecting entrenched gender roles.",
+          "evidence": "Title 2 (Employment by Sex Across Pacific Island Countries), Insight 1"
+        },
+        {
+          "claim": "Males dominate sectors like Agriculture and Construction, while females lead in Education and Health.",
+          "evidence": "Title 3 (Employment by Sex Across Economic Sectors), Insight 3"
+        },
+        {
+          "claim": "Solomon Islands reveals a stark male employment majority, unlike Vanuatu's more balanced workforce.",
+          "evidence": "Title 4 (Employment by Sex in Key Pacific Countries), Insight 1"
+        },
+        {
+          "claim": "Vanuatu shows marked male dominance in Agriculture versus female strength in Wholesale, Retail, and Education.",
+          "evidence": "Title 6 (Employment by Sex and Sector in Vanuatu), Insight 3"
+        },
+        {
+          "claim": "Construction and Agriculture sectors are male-dominated, while Accommodation and Wholesale favor females, showing clear gender imbalances.",
+          "evidence": "Title 3 (Employment by Sex Across Economic Sectors), Insight 3"
+        }
+      ],
+      "unsupported_claims": [
+        {
+          "claim": "Smaller nations like Tokelau show near gender parity but have limited employment scale.",
+          "reason": "None of the provided chart titles or insight mention or detail Tokelau or small nations specifically; no disaggregated data for smaller nations is indicated."
+        },
+        {
+          "claim": "In Solomon Islands, Agriculture employs mostly males; females prevail in Accommodation and Food sectors.",
+          "reason": "Although Title 5 refers to employment by sex and sector in Solomon Islands, the insight does not explicitly mention female predominance in Accommodation and Food sectors for Solomon Islands; this level of sector-country-gender detail is missing in the insight."
+        }
+      ]
+    },
+    "recommendations": {
+      "is_required": true,
+      "suggestion": "To fully support the conclusion, include or replace one chart with a title like \"Employment by Sex and Sector in Smaller Pacific Island Countries (e.g., Tokelau)\" to confirm near gender parity claims. Additionally, provide explicit data or a chart focusing on \"Detailed Sectoral Employment by Sex in Solomon Islands,\" highlighting female employment in Accommodation and Food sectors to substantiate these more granular claims."
+    }
+  }
+}

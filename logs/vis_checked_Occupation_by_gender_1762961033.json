@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-11-12T15:23:53.907178Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' and 'Distribution' based on keywords like 'varies widely', 'leading', 'generally exceeds', which imply comparison of shares and distributions."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight that employment disparities exist and males hold larger shares aligns well with both chart titles and the conclusion without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both chart titles explicitly state employment counts across countries and by sex, which provide direct evidence for the claims about total employment differences and gender disparities."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "The conclusion discusses total employed persons by country and sex, which aligns with chart 1 showing counts across countries and chart 2 showing breakdown by sex."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Chart titles contain distribution cues: 'Across Pacific Island Countries' and 'by Sex', matching the claim type of variation and comparison."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window is indicated, and the conclusion does not reference time. Granularity by country and sex is implied but exact data periods aren't specified."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear rationale connects titles covering counts by country and sex directly to conclusion about employment variation and gender differences."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The existing charts with the given titles adequately support the conclusion on employment counts and gender disparities across Pacific Island countries. No replacement is necessary.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' / 'Proportion' since the conclusion discusses gender divides and dominance across sectors implying comparison of shares."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight stating male domination in most sectors and some balanced/female-skewed matches well with the titles about employment distribution and numbers by sex, aligning with the conclusion."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles explicitly indicate employment by sex across or within sectors, directly supporting claims on gender divides (distribution and proportion) in key sectors."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Titles and conclusion align on scope (economic sectors) and measure (employment numbers and distribution by sex), matching the conclusion's focus on gender divides across sectors."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles use distribution/by/ across and numbers by sex, which align well with distribution and proportional claims about gender dominance in sectors."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "Titles lack explicit time frame or top-N specification; conclusion refers to 'key sectors' but only Chart 2 partially clarifies 'key economic sectors'. Time window is absent."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear explanation: titles support gender distribution claims through employment numbers and shares by sex across sectors, corresponding to the conclusion about gender divides."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts' titles clearly align with the conclusion about gender distributions by sector, and the insight matches the titles and conclusion. Minor granularity detail is insufficient but not critical to undermine support.",
+        "recommendation": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-12T15:46:25.179330Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' and 'Proportion' based on conclusion words such as 'varies widely', 'leading significantly', 'concentrated', and 'variation across countries'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the titles and conclusion: Solomon Islands leads in total and male agricultural employment, consistent with the conclusion about employment variation and regional concentration."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "The titles imply evidence on employment distribution and male agricultural employment by country, partially supporting the conclusion on wide variation and sector concentration. However, the conclusion also mentions economic dependency and challenges in smaller islands, which are not directly evidenced by these charts."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "The first chart covers overall employment distribution across Pacific Islands but the conclusion emphasizes wide variation in employment and economic dependency, which implies broader economic factors beyond just employment counts. The second chart is on male employment in agriculture, matching part of the conclusion but not the total employment or challenges faced by smaller islands, causing minor scope mismatch."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "The first chart title uses 'Distribution' and 'by Pacific Island Countries', matching the conclusion's distribution claim. The second uses 'Male Employment in Agriculture by Country', also matching the subgroup and focus in the claim."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No time window or specific years provided, and economic dependency or challenges are not explicitly reflected. The subgroup (male) is specified for agriculture employment, but the conclusion also references smaller islands' challenges which are vague."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The conclusion's claims about variation and male agricultural dominance are partially supported by the chart titles and insight, but claims about economic dependency and smaller islands facing challenges are not directly evidenced by the given charts."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "Chart 1 (Employment Distribution by Pacific Island Countries) covers employment distribution but lacks detail on the economic dependency aspect or challenges in smaller islands. Chart 2 aligns well with the male employment in agriculture claim. To fully support the conclusion, Chart 1 should be replaced by a visualization more focused on the proportional employment shares by sector and country or highlighting smaller islands' employment challenges.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of total employment does each Pacific Island Country contribute, and what portion is in agriculture vs other sectors?",
+          "revised_title": "Proportion of Total Employment by Pacific Island Countries and Economic Sectors",
+          "explanation": "A pie chart showing the share of total employment by country and sector would better depict the wide variation and regional concentration referenced in the conclusion, supporting the claim on disparity and economic dependency among islands."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates' and 'lead' indicating share/comparison across gender groups."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight matches the chart titles' scope (employment by sex across sectors) and supports the conclusion's claims on gender disparities without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles imply data showing employment by sex across economic sectors, clearly supporting the main claim of gender disparities."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Titles indicate counts/number of employed persons by sex and economic sector, fully aligned with the conclusion's focus on workforce composition across sectors."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles use 'by sex and economic sector' and 'across economic sectors', which are strong distribution and proportion cues matching the claim type."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "While the titles specify sex and sector, there is no explicit mention of time frame or whether data is for a particular year or aggregated, making granularity only partially specified."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The conclusion's focus on gender disparities in specific sectors is well supported by the titles which indicate clear subgroup breakdown, allowing meaningful interpretation."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The two chart titles adequately cover employment distribution by sex and sector, supporting the conclusion and insight well. No replacement is required.",
+        "recommendation": null
+      }
+    ]
+  }
+}

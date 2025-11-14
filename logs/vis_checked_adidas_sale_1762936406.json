@@ -1,0 +1,23 @@
+{
+  "timestamp": "2025-11-12T08:33:26.569159Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion mainly makes claims about proportions and distribution of total sales across retailers and within sales methods. Chart 1's title \"Total Sales Distribution Across Retailers\" strongly aligns with the claims of market share and dominance, supporting the proportion and distribution claims. Chart 2's title \"Total Sales by Sales Method Within Retailers\" supports the detail about sales method performance, further backing the conclusion. Both charts are well aligned in variables, aggregation, and scope, providing full evidence for the claims made.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion primarily claims proportions and distributions of sales methods (in-store dominance near 40%) and retailer-specific performance within sales methods. Chart 1's title \"Total Sales Distribution by Sales Method\" aligns strongly with proportion and distribution claim types, supported by wording like \"distribution\" and \"by Sales Method\". Chart 2's title \"Retailer Sales Comparison within Each Sales Method\" aligns well with comparison/correlation of retailers within categories. Both charts provide suitable evidence for the conclusion and insights. Measures appear aligned (total sales), dimensions match (sales method and retailer), aggregation consistent (distribution with shares), and scope consistent (overall sales). The conclusion's claim type scores well against both charts, especially in proportion and distribution. Both charts together support the conclusion without evident scope or dimensional mismatch.",
+        "recommendation": null
+      }
+    ]
+  }
+}

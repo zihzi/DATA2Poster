@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-11-12T07:54:59.472206Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "verdict": "partially_supported",
+        "replace": "chart_2",
+        "reason": "Chart 1 with title 'Employment Numbers by Pacific Island Countries' directly supports the claim about employment concentration by country, addressing the 'proportion' and 'distribution' claims effectively. Chart 2 titled 'Employment by Sex across Pacific Island Countries' partially supports the gender disparity claim, but the insight states males and females contribute nearly balanced shares, which contradicts the conclusion stating males consistently outnumber females and revealing gender disparities. Thus, Chart 2's evidence conflicts with the conclusion on gender gap. Therefore, Chart 2 is weaker in supporting the key disparity claim.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of employment comes from males and females across Pacific Island Countries?",
+          "revised_title": "Employment Share by Sex Across Pacific Island Countries",
+          "explanation": "The main claim type in the conclusion is 'proportion' regarding concentration of employment by country and gender disparity (males outnumber females). A pie chart showing the share of employment by sex across countries directly visualizes and supports the gender disparity claim better than a chart merely showing counts without emphasizing proportions. This pie chart complements Chart 1 (which covers distribution/proportion by country) without overlapping in claim type."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion claims gender employment imbalances by sector, with men dominating specific sectors and females leading others, plus near gender parity in least populated sectors. Title 1 ('Employment Numbers by Sex Across Economic Sectors') and Title 2 ('Employment by Sex in Least Populated Economic Sectors') both clearly imply charts that can provide distribution and proportion evidence by gender across sectors, supporting these claims. The insight aligns with dominant gender employment and parity in smaller sectors. Variables (number employed by sex across sectors) and aggregation (total employed) align well with the conclusion. The titles match the subgroup specificity (sex by sector) and proportion/distribution claim type, fully supporting the conclusion.",
+        "recommendation": null
+      }
+    ]
+  }
+}

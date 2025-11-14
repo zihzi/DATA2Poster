@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T06:12:54.061205Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Scale and Gender Trends across Pacific Island Countries",
+        "charts_title": [
+          "Employment Numbers Across Pacific Island Countries",
+          "Gender Employment Distribution by Country"
+        ],
+        "insight": "Solomon Islands and Vanuatu lead in employment, with most countries showing male-dominant workforce proportions."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Disparities by Country and Sex",
+        "charts_title": [
+          "Employment Numbers by Sex",
+          "Sex Employment Differences by Country"
+        ],
+        "insight": "Males consistently outnumber females in employment, with Solomon Islands showing the largest gender difference."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral Employment and Gender Distribution in Pacific Islands",
+        "charts_title": [
+          "Employment by Economic Sector and Sex in Solomon Islands and Vanuatu",
+          "Employment by Economic Sector and Sex in Palau and Kiribati"
+        ],
+        "insight": "Agriculture and Wholesale sectors dominate employment, with males holding a larger share across all sectors."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Solomon Islands and Vanuatu lead employment totals, reflecting larger labor forces. Male employment consistently exceeds female across all countries, indicating entrenched gender roles. Smaller islands show balanced gender ratios, suggesting labor pool size impacts disparity.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Male employment comprises about 62% of total workforce, with Solomon Islands showing the largest sex gap. Tokelau's near-equal gender employment suggests unique socio-economic dynamics. These patterns underscore persistent gender imbalances influenced by cultural and economic factors.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands and Vanuatu, Agriculture skews male while Wholesale favors females, highlighting sectoral divides. Palau and Kiribati exhibit male dominance in Agriculture but more gender-balanced Wholesale and Retail sectors. Such sectoral gender patterns reflect cultural roles shaping employment opportunities.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Sector Influence Employment Patterns Across Pacific Island Nations?"
+}

@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-11-13T09:02:10.577942Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates' and 'share'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight aligns with the titles and conclusion: employment shares (Proportion) by country match title 1 and gender employment comparisons are covered by title 2."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles clearly cover employment distribution by country (Title 1) and employment share by sex (Title 2), directly supporting the main claims regarding dominance and gender imbalance."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Titles suggest employment shares and breakdown across all Pacific Island Countries and by sex, which aligns with conclusion's use of overall employment shares and gender participation rates."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Title 1 includes 'Distribution' and 'Across', indicating share/proportion by country. Title 2 specifies 'by Sex', supporting comparisons between male and female employment."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or top-N mention, but countries and sex subgroups are specified. Slightly limited in temporal or other finer granularity."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The rationale clearly links titles and insight with the conclusion focusing on employment shares and gender differences, explaining how both titles jointly support the claims."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion about employment dominance by Solomon Islands and Vanuatu and gender imbalance is well supported by the given titles and insight. Both charts cover necessary dimensions (country share and sex comparison) appropriate to the conclusion.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'highest male employment proportions', and 'over one-third'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with titles and conclusion; both charts address employment numbers and male employment proportions supporting the stated gender segmentation and sector reliance."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles imply clear evidence relevant to the main claims: total employment across sectors and male employment proportions by sector and country backing the conclusion on primary sector dominance and gendered patterns."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Measures (numbers and male proportions) and scope (across economic sectors and countries) align well with the conclusion’s overall statement about sector employment and gender composition."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Title 1 uses 'Across Economic Sectors' indicating distribution; Title 2 includes 'Male Employment Proportion' and 'by Sector and Country', clearly signaling proportion and comparative analysis relevant for the claims."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "The titles specify sectors and countries (Title 2) but do not mention time frame or whether the data is for a specific year or period; granularity is partial."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Justification clearly references how both titles cover necessary measures and scope to support statements about sector dominance and gender employment shares."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion is fully supported by the two chart titles and the given insight; no replacement needed.",
+        "recommendation": null
+      }
+    ]
+  }
+}

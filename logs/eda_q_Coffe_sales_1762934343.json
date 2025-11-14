@@ -1,0 +1,137 @@
+{
+  "timestamp": "2025-11-12T07:59:03.794964Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Time_of_Day",
+        "properties": {
+          "dtype": "T",
+          "num_unique_values": 3
+        }
+      },
+      {
+        "column": "coffee_name",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 8
+        }
+      },
+      {
+        "column": "money",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 13
+        }
+      },
+      {
+        "column": "Weekday",
+        "properties": {
+          "dtype": "T",
+          "num_unique_values": 7
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Money earned from coffee sales shows a clear decreasing trend throughout the day, peaking in the Morning and declining towards Night.",
+        "selected_facts": [
+          "The decreasing trend of money over Time_of_Day(s) from Morning to Night.",
+          "The lowest (least) value of the money is Time_of_Day Morning.",
+          "The highest (most) value of the money is Time_of_Day Morning."
+        ],
+        "question": "How does the average money earned from coffee sales vary across different Time_of_Day?",
+        "suggested_viz_title": "Average Coffee Sales Revenue by Time of Day",
+        "suggested_viz_type": "line",
+        "column": "Time_of_Day",
+        "rationale": "This question provides a high-level view of revenue distribution over the day, helping to confirm and visualize the overall decreasing pattern."
+      },
+      {
+        "selected_insight": "During the Afternoon, Hot Chocolate generates the highest revenue while Espresso consistently ranks lowest among coffee types.",
+        "selected_facts": [
+          "The highest (most) value of the money is coffee_name Hot Chocolate when Time_of_Day is Afternoon.",
+          "The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Afternoon.",
+          "In the money ranking of different coffee_name(s), the top three coffee_name(s) are Hot Chocolate, Cappuccino, Cappuccino  when Time_of_Day is Afternoon.",
+          "In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso  when Time_of_Day is Afternoon."
+        ],
+        "question": "How does money earned differ among coffee_name categories during different Time_of_Day intervals?",
+        "suggested_viz_title": "Coffee Sales Revenue by Type and Time of Day",
+        "suggested_viz_type": "bar",
+        "column": "Time_of_Day",
+        "rationale": "This question drills into how coffee type performance varies by time, highlighting the significance of the top and bottom performers during specific periods."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Latte consistently ranks highest on Fridays and displays a decreasing trend in revenue towards Sunday.",
+        "selected_facts": [
+          "In the money ranking of different Weekday(s), the top three Weekday(s) are Latte, Latte, Latte  when Weekday is Fri.",
+          "The decreasing trend of money over Weekday(s) when coffee_name is Latte from Fri to Sun.",
+          "The highest (most) value of the money is Weekday Fri when coffee_name is Latte.",
+          "The lowest (least) value of the money is Weekday Sun when coffee_name is Latte."
+        ],
+        "question": "How does average money earned from coffee sales vary across different coffee_name?",
+        "suggested_viz_title": "Average Money by Coffee Name",
+        "suggested_viz_type": "bar",
+        "column": "coffee_name",
+        "rationale": "This question provides a high-level view of revenue distribution across coffee types, building on the insight of Latte's dominance and general revenue variation by coffee_name."
+      },
+      {
+        "selected_insight": "Americano sales peak on Friday and show a decreasing revenue trend towards the weekend, with the lowest values occurring on Monday.",
+        "selected_facts": [
+          "In the money ranking of different Weekday(s), the top three Weekday(s) are Fri, Thu, Tue  when coffee_name is Americano.",
+          "In the money ranking of different Weekday(s), the last three Weekday(s) are Sat, Thu, Wed  when coffee_name is Americano.",
+          "The decreasing trend of money over Weekday(s) when coffee_name is Americano from Fri to Sun.",
+          "The highest (most) value of the money is Weekday Fri when coffee_name is Americano.",
+          "The lowest (least) value of the money is Weekday Mon when coffee_name is Americano."
+        ],
+        "question": "How does money earned from coffee_name vary across Weekday for different coffee_name, especially Americano?",
+        "suggested_viz_title": "Money by Coffee Name Over Weekdays",
+        "suggested_viz_type": "line",
+        "column": "coffee_name",
+        "rationale": "This question drills down into the significance of weekday trends specifically for coffee_name, allowing to see temporal revenue patterns by coffee_name such as the Americano's weekday peak and decline."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "The highest (most) value of the money is coffee_name Hot Chocolate when Time_of_Day is Afternoon.",
+          "The highest (most) value of the money is coffee_name Latte when Time_of_Day is Morning.",
+          "The highest (most) value of the money is coffee_name Cappuccino when Time_of_Day is Night.",
+          "The decreasing trend of money over Time_of_Day(s) from Morning to Night.",
+          "For Americano with Milk, Afternoon is the most profitable time, with revenue declining significantly by Night."
+        ],
+        "question": "How does revenue from different coffee types vary across Weekdays for each Time_of_Day?",
+        "suggested_viz_title": "Coffee Revenue Patterns by Time and Weekday",
+        "suggested_viz_type": "line",
+        "column": "money",
+        "entity": "coffee_name",
+        "rationale": "Exploring 'coffee_name' in relation to 'Time_of_Day' and 'Weekday' reveals how sales for each coffee type fluctuate not only by time but also by the day of the week. This deepens the analysis by showing weekly trends in demand for specific coffees, which is critical for targeted promotions and inventory planning."
+      },
+      {
+        "selected_facts": [
+          "The highest (most) value of the money is coffee_name Hot Chocolate when Time_of_Day is Afternoon.",
+          "The highest (most) value of the money is coffee_name Latte when Time_of_Day is Morning.",
+          "The highest (most) value of the money is coffee_name Cappuccino when Time_of_Day is Night.",
+          "The decreasing trend of money over Time_of_Day(s) from Morning to Night.",
+          "For Americano with Milk, Afternoon is the most profitable time, with revenue declining significantly by Night."
+        ],
+        "question": "What are the differences in money earned across Weekdays for each coffee_name at different Time_of_Day?",
+        "suggested_viz_title": "Weekly Coffee Revenue by Time and Type",
+        "suggested_viz_type": "bar",
+        "column": "money",
+        "entity": "coffee_name",
+        "rationale": "Investigating 'coffee_name' in combination with 'Weekday' and 'Time_of_Day' helps identify which coffee types perform better on particular days and times. This adds granularity to the sales trends and can uncover opportunities for optimizing marketing strategies or menu offerings per day."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The decreasing trend of money over Time_of_Day(s) from Morning to Night.\",\n        \"The lowest (least) value of the money is Time_of_Day Morning.\",\n        \"The highest (most) value of the money is Time_of_Day Morning.\"\n      ],\n      \"insight\": \"Money earned from coffee sales shows a clear decreasing trend throughout the day, peaking in the Morning and declining towards Night.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the money is coffee_name Hot Chocolate when Time_of_Day is Afternoon.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Afternoon.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Hot Chocolate, Cappuccino, Cappuccino  when Time_of_Day is Afternoon.\",\n        \"In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso  when Time_of_Day is Afternoon.\"\n      ],\n      \"insight\": \"During the Afternoon, Hot Chocolate generates the highest revenue while Espresso consistently ranks lowest among coffee types.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the money is coffee_name Latte when Time_of_Day is Morning.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Morning.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Latte, Latte, Hot Chocolate  when Time_of_Day is Morning.\",\n        \"In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso  when Time_of_Day is Morning.\"\n      ],\n      \"insight\": \"In the Morning, Latte leads coffee sales revenue while Espresso consistently ranks lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The highest (most) value of the money is coffee_name Cappuccino when Time_of_Day is Night.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Night.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Latte, Cocoa, Cappuccino  when Time_of_Day is Night.\",\n        \"In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso  when Time_of_Day is Night.\"\n      ],\n      \"insight\": \"At Night, Cappuccino tops coffee sales revenue while Espresso remains the lowest performer.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the money is Time_of_Day Night when coffee_name is Americano with Milk.\",\n        \"The highest (most) value of the money is Time_of_Day Afternoon when coffee_name is Americano with Milk.\",\n        \"The decreasing trend of money over Time_of_Day(s) when coffee_name is Americano with Milk from Afternoon to Night.\"\n      ],\n      \"insight\": \"For Americano with Milk, Afternoon is the most profitable time, with revenue declining significantly by Night.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the money is coffee_name Espresso.\",\n        \"The highest (most) value of the money is coffee_name Latte.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Latte, Latte, Cocoa .\",\n        \"In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso .\"\n      ],\n      \"insight\": \"Latte consistently generates the highest revenue while Espresso consistently generates the lowest, with Cocoa typically ranking just below Latte.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Hot Chocolate, Cappuccino, Cappuccino  when Time_of_Day is Afternoon.\",\n        \"In the money ranking of different coffee_name(s), the last three coffee_name(s) are Espresso, Espresso, Espresso  when Time_of_Day is Afternoon.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Afternoon.\",\n        \"The highest (most) value of the money is coffee_name Hot Chocolate when Time_of_Day is Afternoon.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Latte, Latte, Hot Chocolate  when Time_of_Day is Morning.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Morning.\",\n        \"The highest (most) value of the money is coffee_name Latte when Time_of_Day is Morning.\",\n        \"In the money ranking of different coffee_name(s), the top three coffee_name(s) are Latte, Cocoa, Cappuccino  when Time_of_Day is Night.\",\n        \"The lowest (least) value of the money is coffee_name Espresso when Time_of_Day is Night.\",\n        \"The highest (most) value of the money is coffee_name Cappuccino when Time_of_Day is Night.\"\n      ],\n      \"insight\": \"Hot Chocolate leads revenue in the Afternoon, Latte dominates in the Morning, and Cappuccino ranks highest at Night, while Espresso consistently earns the least across all times of day.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the money ranking of different Weekday(s), the top three Weekday(s) are Fri, Thu, Tue  when coffee_name is Americano.\",\n        \"In the money ranking of different Weekday(s), the last three Weekday(s) are Sat, Thu, Wed  when coffee_name is Americano.\",\n        \"The decreasing trend of money over Weekday(s) when coffee_name is Americano from Fri to Sun.\",\n        \"The highest (most) value of the money is Weekday Fri when coffee_name is Americano.\",\n        \"The lowest (least) value of the money is Weekday Mon when coffee_name is Americano.\"\n      ],\n      \"insight\": \"Americano sales peak on Friday and show a decreasing revenue trend towards the weekend, with the lowest values occurring on Monday.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the money ranking of different Weekday(s), the top three Weekday(s) are Fri, Thu, Fri  when coffee_name is Hot Chocolate.\",\n        \"The decreasing trend of money over Weekday(s) when coffee_name is Hot Chocolate from Fri to Sat.\",\n        \"The highest (most) value of the money is Weekday Fri when coffee_name is Hot Chocolate.\",\n        \"The lowest (least) value of the money is Weekday Fri when coffee_name is Hot Chocolate.\"\n      ],\n      \"insight\": \"Hot Chocolate revenue peaks on Friday but experiences a rapid decline starting the following day.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the money ranking of different Weekday(s), the top three Weekday(s) are Latte, Latte, Latte  when Weekday is Fri.\",\n        \"The decreasing trend of money over Weekday(s) when coffee_name is Latte from Fri to Sun.\",\n        \"The highest (most) value of the money is Weekday Fri when coffee_name is Latte.\",\n        \"The lowest (least) value of the money is Weekday Sun when coffee_name is Latte.\"\n      ],\n      \"insight\": \"Latte consistently ranks highest on Fridays and displays a decreasing trend in revenue towards Sunday.\"\n    }\n  ]\n}"
+  ]
+}

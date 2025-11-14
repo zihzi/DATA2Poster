@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-13T08:38:45.646158Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' and 'Distribution' from keywords such as 'leading', 'dominance', 'varies widely', and 'disparities'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight aligns well with titles and conclusion, highlighting male dominance and country variation without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles imply counts by country and counts by sex across countries, which directly support the conclusion about employment variation and male/female disparities."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Both charts cover employment measures by country and sex collectively, aligning with the conclusion about workforce patterns across Pacific Islands."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles include appropriate distribution and comparison cues: 'by Pacific Island Countries' and 'by Sex Across Pacific Island Countries' fitting the claim on distribution and proportion."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "While clear about countries and sex, time dimension or explicit population size detail is missing; however, conclusion references economic size and cultural factors which are not directly shown."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Explanation clearly links title scopes and measures to the conclusion claims; notes alignment with key claim elements and minor missing detail about external factors."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The given charts and their titles adequately support the conclusion regarding employment count variation and sex disparities across Pacific Island Countries. The insight is consistent and the scope is aligned. No replacement needed.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominate', 'lead', and comparison of gender employment."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight regarding dominance of males in sectors and stable rankings aligns with chart titles and supports parts of the conclusion without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Titles imply some evidence supports claims about sex distribution across sectors and countries, but do not explicitly indicate gender gaps by country or highlight traditional roles, which weakens strong entailment."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Measures (number employed) and scope (sectors and countries by sex) broadly align with the conclusion but aggregation and detail on gender gaps per country or policy implications are not directly shown."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain proper relation and distribution cues like 'by sex', 'across countries', and 'across economic sectors' that match claim type on proportion and distribution."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or top-N details provided; sex and country/sector subgroups implied but not very explicitly granular."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear rationale given explaining partial alignment with conclusions, noting limitations on gender gaps and traditional roles not fully supported."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "Chart 1 titled 'Employment Numbers by Sex Across Countries' does not strongly support the conclusion's focus on significant gender employment gaps reflecting traditional roles, as it mainly shows employment numbers and stable rankings but does not detail gender gaps explicitly by country. Replacing it with a chart better illustrating gender employment proportions or shares by country would strengthen support for the conclusion.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of employed persons in each Pacific Island Country is male versus female?",
+          "revised_title": "Gender Employment Share within Pacific Island Countries",
+          "explanation": "A pie chart showing employment shares by sex within each country would visually highlight gender gaps more directly than total numbers, supporting the conclusion about significant employment gaps and traditional role patterns."
+        }
+      }
+    ]
+  }
+}

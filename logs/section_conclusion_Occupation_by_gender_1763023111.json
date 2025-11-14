@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T08:38:31.578387Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution and Growth Across Pacific Islands",
+        "charts_title": [
+          "Employment Count by Pacific Island Countries",
+          "Employment by Sex Across Pacific Island Countries"
+        ],
+        "insight": "Employment varies widely across Pacific Islands with consistent male dominance and notable growth in Solomon Islands and Vanuatu."
+      },
+      {
+        "section": "B",
+        "heading": "Sex-based Employment Trends by Country and Sector",
+        "charts_title": [
+          "Employment Numbers by Sex Across Countries",
+          "Employment by Sex Across Economic Sectors"
+        ],
+        "insight": "Employment rankings are stable across sexes while males lead in total numbers and dominate specific sectors like Agriculture and Construction."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral and Sex Employment Composition in Solomon and Marshall Islands",
+        "charts_title": [
+          "Employment in Solomon Islands by Sector and Sex",
+          "Employment in Marshall Islands by Sector and Sex"
+        ],
+        "insight": "Solomon and Marshall Islands show sector-driven employment patterns with male dominance but balanced sex distribution in select industries."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment varies widely, with Solomon Islands leading at 95,024 workers. Male employment consistently exceeds female, especially in Solomon Islands. These disparities suggest economic size, population, and cultural factors shape workforce patterns.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Males dominate sectors like Agriculture while females lead in Education and Social Work. Solomon Islands and Vanuatu show significant gender employment gaps, reflecting traditional roles. This pattern highlights persistent occupational segregation affecting policy focus on equity.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands, males dominate Agriculture and Fishing, while females are more present in Accommodation. Marshall Islands show balanced female representation in Education but male dominance in Construction. These trends reveal cultural norms strongly influence sectoral gender employment.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Culture Influence Employment Patterns in Pacific Island Nations?"
+}

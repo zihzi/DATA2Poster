@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-12T07:54:52.347632Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution by Country and Gender in Pacific Islands",
+        "charts_title": [
+          "Employment Numbers by Pacific Island Countries",
+          "Employment by Sex across Pacific Island Countries"
+        ],
+        "insight": "Solomon Islands and Vanuatu lead employment, with males and females contributing nearly balanced shares across countries."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Patterns Across Economic Sectors",
+        "charts_title": [
+          "Employment Numbers by Sex Across Economic Sectors",
+          "Employment by Sex in Least Populated Economic Sectors"
+        ],
+        "insight": "Male employment dominates key sectors, yet least populated sectors show balanced gender employment and sector ranking parity."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral and Gender Employment in Select Pacific Islands",
+        "charts_title": [
+          "Employment by Economic Sector and Sex in Solomon Islands and Vanuatu",
+          "Employment by Sector and Sex in Cook Islands and Niue"
+        ],
+        "insight": "Agriculture and construction dominate employment with more males in Solomon Islands and Vanuatu, while females lead in smaller islands."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment is heavily concentrated in Solomon Islands and Vanuatu, reflecting large labor markets. Males consistently outnumber females, revealing gender disparities across countries. Small island nations show balanced but minimal employment, highlighting population and economic scale differences.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Gender employment imbalances vary sharply by sector, with men dominating Agriculture and Construction. Females lead in Social Work, Health, and sectors like Accommodation and Food, indicating occupational segregation. Low-population sectors show near parity, suggesting greater gender balance where employment is limited.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands and Vanuatu, male employment dominates major sectors like Agriculture, while females lead in others such as Accommodation. Cook Islands exhibits strong gender sector divides, whereas Niue shows lower, balanced employment. These patterns indicate cultural and economic factors shaping gendered labor roles regionally.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Sector Shape Employment Patterns in Pacific Island Countries?"
+}

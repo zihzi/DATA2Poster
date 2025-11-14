@@ -1,0 +1,147 @@
+{
+  "timestamp": "2025-11-12T07:06:11.113755Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "smoker",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      },
+      {
+        "column": "region",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 4
+        }
+      },
+      {
+        "column": "charges",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 1337
+        }
+      },
+      {
+        "column": "age",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 47
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Smokers consistently have the highest insurance charges across all regions, while non-smokers have the lowest charges regardless of region.",
+        "selected_facts": [
+          "In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes .",
+          "In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no .",
+          "The lowest (least) value of the charges is smoker no.",
+          "The highest (most) value of the charges is smoker yes."
+        ],
+        "question": "How does the distribution of insurance charges vary across different smoker categories?",
+        "suggested_viz_title": "Insurance Charges by Smoker Status",
+        "suggested_viz_type": "boxplot",
+        "column": "smoker",
+        "rationale": "This question expands on the overall charges difference by smoker category, encouraging visualization of charge distributions to reveal spread, outliers, and central tendencies within smoker groups."
+      },
+      {
+        "selected_insight": "Among non-smokers, the southwest region has the highest insurance charges while the southeast region has the lowest, whereas among smokers, the southeast region leads in charges and the northeast the lowest.",
+        "selected_facts": [
+          "In the charges ranking of different region(s), the top three region(s) are southwest, southeast, southwest  when smoker is no.",
+          "The lowest (least) value of the charges is region southeast when smoker is no.",
+          "The highest (most) value of the charges is region southwest when smoker is no.",
+          "In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest  when smoker is yes.",
+          "The lowest (least) value of the charges is region northeast when smoker is yes.",
+          "The highest (most) value of the charges is region southeast when smoker is yes."
+        ],
+        "question": "How do insurance charges for smokers differ by region compared to non-smokers?",
+        "suggested_viz_title": "Regional Charges Comparison by Smoker Status",
+        "suggested_viz_type": "grouped bar",
+        "column": "smoker",
+        "rationale": "This question drills down into how charges vary regionally within smoker groups, spotlighting regional charge disparities between smokers and non-smokers."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Region northeast has the oldest average age overall and within non-smokers, whereas region southeast consistently shows the youngest average age across groups.",
+        "selected_facts": [
+          "In the age ranking of different region(s), the top three region(s) are southwest, southeast, northwest .",
+          "In the age ranking of different region(s), the last three region(s) are northeast, northeast, northeast .",
+          "The lowest (least) value of the age is region southeast.",
+          "The highest (most) value of the age is region northeast.",
+          "In the age ranking of different region(s), the top three region(s) are northeast, northeast, northwest  when smoker is no.",
+          "In the age ranking of different region(s), the last three region(s) are southeast, southeast, southeast  when smoker is no.",
+          "In the age ranking of different region(s), the top three region(s) are southwest, southwest, northwest  when smoker is yes.",
+          "In the age ranking of different region(s), the last three region(s) are northeast, southeast, northeast  when smoker is yes."
+        ],
+        "question": "How does the distribution of average age vary across different regions?",
+        "suggested_viz_title": "Average Age Distribution by Region",
+        "suggested_viz_type": "bar",
+        "column": "region",
+        "rationale": "This question adds a new angle by exploring how age, a key demographic factor, varies by region to complement the analysis of charges and smoking status."
+      },
+      {
+        "selected_insight": "Age variation within smoker categories shows that non-smokers tend to represent both the youngest and oldest individuals across multiple regions, reflecting wider age diversity among non-smokers.",
+        "selected_facts": [
+          "The lowest (least) value of the age is smoker no when region is northeast.",
+          "The highest (most) value of the age is smoker no when region is northeast.",
+          "The lowest (least) value of the age is smoker no when region is northwest.",
+          "The highest (most) value of the age is smoker no when region is northwest.",
+          "The lowest (least) value of the age is smoker no when region is southeast.",
+          "The highest (most) value of the age is smoker yes when region is southeast.",
+          "The lowest (least) value of the age is smoker yes when region is southwest.",
+          "The highest (most) value of the age is smoker no when region is southwest."
+        ],
+        "question": "How does age range within smoker and non-smoker groups vary across regions?",
+        "suggested_viz_title": "Age Range by Smoker Status Across Regions",
+        "suggested_viz_type": "boxplot",
+        "column": "region",
+        "rationale": "This drills down into age variation within smoker categories by region, revealing demographic diversity that may influence charge differences."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "In the charges ranking of different region(s), the top three region(s) are southwest, southeast, southwest  when smoker is no.",
+          "The lowest (least) value of the charges is region southeast when smoker is no.",
+          "The highest (most) value of the charges is region southwest when smoker is no.",
+          "In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest  when smoker is yes.",
+          "The highest (most) value of the charges is region southeast when smoker is yes."
+        ],
+        "question": "How do insurance charges vary by age and region for smokers and non-smokers?",
+        "suggested_viz_title": "Insurance Charges by Age and Region by Smoker Status",
+        "suggested_viz_type": "scatter",
+        "column": "charges",
+        "entity": "region",
+        "rationale": "Region significantly influences charges differently for smokers and non-smokers, as shown by distinct highest and lowest charge regions. Exploring how charges vary with both age and region deepens insights on geographical and demographic impacts on insurance costs."
+      },
+      {
+        "selected_facts": [
+          "In the age ranking of different region(s), the top three region(s) are northeast, northeast, northwest  when smoker is no.",
+          "In the age ranking of different region(s), the lowest (least) value of the age is region southeast when smoker is no.",
+          "In the age ranking of different region(s), the highest (most) value of the age is region northeast when smoker is no.",
+          "In the age ranking of different region(s), the top three region(s) are southwest, southwest, northwest  when smoker is yes.",
+          "The highest (most) value of the age is region southwest when smoker is yes."
+        ],
+        "question": "How does the age distribution differ by region and smoker status affecting insurance charges?",
+        "suggested_viz_title": "Age Distribution by Region and Smoker Status",
+        "suggested_viz_type": "scatter",
+        "column": "age",
+        "entity": "region",
+        "rationale": "Age distribution is uneven across regions and smoker categories, with certain regions holding oldest or youngest groups per smoker status. Investigating age trends by region and smoker deepens understanding of demographic factors influencing charges."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes .\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no .\",\n        \"The lowest (least) value of the charges is smoker no.\",\n        \"The highest (most) value of the charges is smoker yes.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is northeast.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is northeast.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is northwest.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is northwest.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is southeast.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is southeast.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is southwest.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is southwest.\",\n        \"The lowest (least) value of the charges is smoker no when region is northeast.\",\n        \"The highest (most) value of the charges is smoker yes when region is northeast.\",\n        \"The lowest (least) value of the charges is smoker no when region is northwest.\",\n        \"The highest (most) value of the charges is smoker yes when region is northwest.\",\n        \"The lowest (least) value of the charges is smoker no when region is southeast.\",\n        \"The highest (most) value of the charges is smoker yes when region is southeast.\",\n        \"The lowest (least) value of the charges is smoker no when region is southwest.\",\n        \"The highest (most) value of the charges is smoker yes when region is southwest.\",\n        \"The lowest (least) value of the charges is region southeast when smoker is no.\",\n        \"The highest (most) value of the charges is region southwest when smoker is no.\",\n        \"The lowest (least) value of the charges is region northeast when smoker is yes.\",\n        \"The highest (most) value of the charges is region southeast when smoker is yes.\"\n      ],\n      \"insight\": \"Smokers consistently have the highest insurance charges across all regions, while non-smokers have the lowest charges regardless of region.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the charges ranking of different region(s), the top three region(s) are southwest, southeast, southwest  when smoker is no.\",\n        \"In the charges ranking of different region(s), the last three region(s) are southeast, southeast, southeast  when smoker is no.\",\n        \"The lowest (least) value of the charges is region southeast when smoker is no.\",\n        \"The highest (most) value of the charges is region southwest when smoker is no.\",\n        \"In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest  when smoker is yes.\",\n        \"In the charges ranking of different region(s), the last three region(s) are northeast, northeast, southwest  when smoker is yes.\"\n      ],\n      \"insight\": \"Among non-smokers, the southwest region has the highest insurance charges while the southeast region has the lowest, whereas among smokers, the southeast region leads in charges and the northeast the lowest.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the age ranking of different smoker(s), the top three smoker(s) are no, no, no .\",\n        \"In the age ranking of different smoker(s), the last three smoker(s) are no, no, no .\",\n        \"The lowest (least) value of the age is smoker no.\",\n        \"The highest (most) value of the age is smoker no.\"\n      ],\n      \"insight\": \"Non-smokers cover the full age range from lowest to highest, indicating age variation is mostly observed within non-smokers.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the age ranking of different region(s), the top three region(s) are northeast, northeast, northwest  when smoker is no.\",\n        \"In the age ranking of different region(s), the last three region(s) are southeast, southeast, southeast  when smoker is no.\",\n        \"In the age ranking of different region(s), the top three region(s) are southwest, southwest, northwest  when smoker is yes.\",\n        \"In the age ranking of different region(s), the last three region(s) are northeast, southeast, northeast  when smoker is yes.\",\n        \"The lowest (least) value of the age is region southeast when smoker is no.\",\n        \"The highest (most) value of the age is region northeast when smoker is no.\",\n        \"The lowest (least) value of the age is region southeast when smoker is yes.\",\n        \"The highest (most) value of the age is region southwest when smoker is yes.\"\n      ],\n      \"insight\": \"Age rankings differ across regions depending on smoker status, with the northeast and northwest regions having the oldest non-smokers, while the southwest region has the oldest smokers.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the age ranking of different smoker(s), the top three smoker(s) are no, no, no  when region is northeast.\",\n        \"In the age ranking of different smoker(s), the last three smoker(s) are no, no, yes  when region is northeast.\",\n        \"In the age ranking of different smoker(s), the top three smoker(s) are yes, no, no  when region is northwest.\",\n        \"In the age ranking of different smoker(s), the last three smoker(s) are yes, yes, no  when region is northwest.\",\n        \"In the age ranking of different smoker(s), the top three smoker(s) are no, yes, no  when region is southeast.\",\n        \"In the age ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is southeast.\",\n        \"In the age ranking of different smoker(s), the top three smoker(s) are no, no, yes  when region is southwest.\",\n        \"In the age ranking of different smoker(s), the last three smoker(s) are yes, yes, no  when region is southwest.\",\n        \"The lowest (least) value of the age is smoker no when region is southeast.\",\n        \"The highest (most) value of the age is smoker yes when region is southeast.\",\n        \"The lowest (least) value of the age is smoker no when region is northeast.\",\n        \"The highest (most) value of the age is smoker no when region is northeast.\",\n        \"The lowest (least) value of the age is smoker no when region is northwest.\",\n        \"The highest (most) value of the age is smoker no when region is northwest.\",\n        \"The lowest (least) value of the age is smoker yes when region is southwest.\",\n        \"The highest (most) value of the age is smoker no when region is southwest.\"\n      ],\n      \"insight\": \"Within specific regions, non-smokers often represent both the youngest and oldest ages, with exceptions like southeast where the oldest age is a smoker and southwest where the youngest is a smoker.\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the charges is region southeast.\",\n        \"The highest (most) value of the charges is region southeast.\",\n        \"In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest .\",\n        \"In the charges ranking of different region(s), the last three region(s) are southeast, southeast, southeast .\",\n        \"The lowest (least) value of the charges is region southeast when smoker is no.\",\n        \"The highest (most) value of the charges is region southwest when smoker is no.\",\n        \"The lowest (least) value of the charges is region northeast when smoker is yes.\",\n        \"The highest (most) value of the charges is region southeast when smoker is yes.\",\n        \"In the charges ranking of different region(s), the top three region(s) are southwest, southeast, southwest  when smoker is no.\",\n        \"In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest  when smoker is yes.\",\n        \"In the charges ranking of different region(s), the last three region(s) are northeast, northeast, southwest  when smoker is yes.\"\n      ],\n      \"insight\": \"Region southeast exhibits the widest variability in insurance charges, having both the lowest and highest charges overall and across smoker segments.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is northeast.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is northeast.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is northwest.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is northwest.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is southeast.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is southeast.\",\n        \"In the charges ranking of different smoker(s), the top three smoker(s) are yes, yes, yes  when region is southwest.\",\n        \"In the charges ranking of different smoker(s), the last three smoker(s) are no, no, no  when region is southwest.\"\n      ],\n      \"insight\": \"For all regions, smokers consistently rank highest in charges while non-smokers rank lowest, highlighting smoking as a major cost driver independent of region.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the age ranking of different region(s), the top three region(s) are southwest, southeast, northwest .\",\n        \"In the age ranking of different region(s), the last three region(s) are northeast, northeast, northeast .\",\n        \"The lowest (least) value of the age is region southeast.\",\n        \"The highest (most) value of the age is region northeast.\",\n        \"In the age ranking of different region(s), the top three region(s) are northeast, northeast, northwest  when smoker is no.\",\n        \"In the age ranking of different region(s), the last three region(s) are southeast, southeast, southeast  when smoker is no.\",\n        \"In the age ranking of different region(s), the top three region(s) are southwest, southwest, northwest  when smoker is yes.\",\n        \"In the age ranking of different region(s), the last three region(s) are northeast, southeast, northeast  when smoker is yes.\"\n      ],\n      \"insight\": \"Region northeast has the oldest average age overall and within non-smokers, whereas region southeast consistently shows the youngest average age across groups.\"\n    },\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the age is smoker no when region is northeast.\",\n        \"The highest (most) value of the age is smoker no when region is northeast.\",\n        \"The lowest (least) value of the age is smoker no when region is northwest.\",\n        \"The highest (most) value of the age is smoker no when region is northwest.\",\n        \"The lowest (least) value of the age is smoker no when region is southeast.\",\n        \"The highest (most) value of the age is smoker yes when region is southeast.\",\n        \"The lowest (least) value of the age is smoker yes when region is southwest.\",\n        \"The highest (most) value of the age is smoker no when region is southwest.\"\n      ],\n      \"insight\": \"Age variation within smoker categories shows that non-smokers tend to represent both the youngest and oldest individuals across multiple regions, reflecting wider age diversity among non-smokers.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the charges ranking of different region(s), the top three region(s) are southwest, southeast, southwest  when smoker is no.\",\n        \"In the charges ranking of different region(s), the last three region(s) are southeast, southeast, southeast  when smoker is no.\",\n        \"In the charges ranking of different region(s), the top three region(s) are southeast, southeast, northwest  when smoker is yes.\",\n        \"In the charges ranking of different region(s), the last three region(s) are northeast, northeast, southwest  when smoker is yes.\"\n      ],\n      \"insight\": \"When considering smoker status, region southwest leads in insurance charges among non-smokers, while region southeast dominates charges among smokers.\"\n    }\n  ]\n}"
+  ]
+}

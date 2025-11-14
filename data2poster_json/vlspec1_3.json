@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Employment Numbers by Sex Across Pacific Island Countries",
+  "data": {
+    "url": "https://raw.githubusercontent.com/zihzi/DATA2Poster/refs/heads/main/data/Occupation_by_gender.csv"
+  },
+  "transform": [
+    {
+      "aggregate": [
+        {
+          "op": "sum",
+          "field": "Number of employed persons",
+          "as": "Employed"
+        }
+      ],
+      "groupby": [
+        "Pacific Island Countries",
+        "Sex"
+      ]
+    },
+    {
+      "joinaggregate": [
+        {
+          "op": "sum",
+          "field": "Employed",
+          "as": "CountryTotal"
+        }
+      ],
+      "groupby": [
+        "Pacific Island Countries"
+      ]
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "CountryTotal",
+          "order": "descending"
+        }
+      ],
+      "frame": [
+        null,
+        null
+      ]
+    },
+    {
+      "filter": "datum.Rank <= 3"
+    }
+  ],
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Pacific Island Countries",
+      "type": "nominal",
+      "title": "Pacific Island Countries",
+      "axis": {
+        "labelAngle": -30,
+        "tickCount": 6
+      },
+      "sort": {
+        "field": "CountryTotal",
+        "order": "descending"
+      }
+    },
+    "xOffset": {
+      "field": "Sex"
+    },
+    "y": {
+      "field": "Employed",
+      "type": "quantitative",
+      "title": "Number of Employed Persons"
+    },
+    "color": {
+      "field": "Sex",
+      "type": "nominal",
+      "legend": {
+        "title": "Sex"
+      },
+      "scale": {
+        "scheme": "category10"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Pacific Island Countries",
+        "type": "nominal",
+        "title": "Country"
+      },
+      {
+        "field": "Sex",
+        "type": "nominal",
+        "title": "Sex"
+      },
+      {
+        "field": "Employed",
+        "type": "quantitative",
+        "title": "Employed Persons",
+        "format": ","
+      }
+    ]
+  },
+  "width": 800,
+  "height": 600,
+  "config": {
+    "title": {
+      "fontSize": 44
+    },
+    "axis": {
+      "titleFontSize": 44,
+      "labelFontSize": 30,
+      "tickCount": 6,
+      "labelLimit": 0,
+      "titlePadding": 10
+    },
+    "legend": {
+      "titleFontSize": 26,
+      "labelFontSize": 26,
+      "labelLimit": 0
+    }
+  }
+}

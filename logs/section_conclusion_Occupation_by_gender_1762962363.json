@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-12T15:46:03.956730Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution and Agricultural Dominance in Pacific Islands",
+        "charts_title": [
+          "Employment Distribution by Pacific Island Countries",
+          "Male Employment in Agriculture by Country"
+        ],
+        "insight": "Solomon Islands lead Pacific Islands in total and male agricultural employment, with others showing varied workforce sizes."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Patterns Across Economic Sectors",
+        "charts_title": [
+          "Employment Numbers by Sex and Economic Sector",
+          "Employment by Sex Across Economic Sectors"
+        ],
+        "insight": "Employment shows clear gender disparities, with males dominating most sectors except female-majority in Social Work and Accommodation."
+      },
+      {
+        "section": "C",
+        "heading": "Gender and Sectoral Employment in Solomon Islands, Micronesia, and Key Islands",
+        "charts_title": [
+          "Employment by Sex in Leading Sectors of Solomon Islands & Micronesia",
+          "Sex-based Employment in Key Sectors: Solomon Islands vs Palau & Niue"
+        ],
+        "insight": "Male employment dominates leading sectors in Solomon Islands and Micronesia, with Wholesale and Retail as a key female-inclusive sector."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment varies widely across Pacific Islands, with Solomon Islands and Vanuatu leading significantly. Male employment in agriculture is heavily concentrated in Solomon Islands and Vanuatu, indicating regional economic dependency on this sector. Smaller islands face challenges in generating employment, which may influence economic development unevenness.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Gender disparities persist, with males dominating sectors like Agriculture and Construction while females lead in Social Work and Accommodation. Some sectors exhibit more balanced employment, suggesting varying barriers or norms by industry. These patterns highlight entrenched gender roles impacting workforce participation across economic sectors.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "Solomon Islands and Micronesia show male dominance in agriculture and support services, while females feature more in certain service roles. Among Solomon Islands, Palau, and Niue, Solomon Islands has the largest and most gender-diverse workforce, especially in Wholesale and Retail. Persistent gender imbalances and sector concentration suggest cultural and economic factors shape labor markets distinctly across these islands.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Island Differences Shape Employment in Pacific Economies?"
+}

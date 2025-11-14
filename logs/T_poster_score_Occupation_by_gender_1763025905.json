@@ -1,0 +1,41 @@
+{
+  "final_score": 9,
+  "justification": {
+    "overall_assessment": "The conclusion is well supported by the six charts and accompanying insights. The main points regarding employment differences across Pacific Island countries, male-female employment disparities, sectoral gender distributions, and detailed sectoral gender employment in Marshall Islands and Nauru are all corroborated by the chart titles and detailed insights. The data contains specific numbers and proportional employment shares aligning closely with the claims made.",
+    "supported_claims": [
+      {
+        "claim": "Solomon Islands leads Pacific Island employment with 95,024 workers.",
+        "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries) and the related insight explicitly mention Solomon Islands having the highest employment number of 95,024."
+      },
+      {
+        "claim": "Male employment consistently exceeds female, highlighting regional gender gaps.",
+        "evidence": "Title 2 (Gender Disparities in Employment Numbers Across Pacific Island Countries) plus insights showing male employment surpassing female employment in multiple countries and sectors."
+      },
+      {
+        "claim": "Smaller nations show near-balanced gender shares but have limited labor markets overall.",
+        "evidence": "Insights reveal countries like Niue and Tokelau having small total employment and shares of females near 50%, supported by Titles 1 and 2."
+      },
+      {
+        "claim": "Employment by sex varies strongly across sectors, with males dominating construction and agriculture; females lead in social work and retail.",
+        "evidence": "Title 3 (Proportion of Employed Persons by Sex Within Economic Sectors) and Title 4 (Employment by Sex Across Economic Sectors) supported by insights detailing gender dominance in Agriculture, Construction, Social Work, and Retail sectors."
+      },
+      {
+        "claim": "Marshall Islands shows sectoral balance but males dominate most fields except social work.",
+        "evidence": "Title 5 (Employment by Sex and Sector in Marshall Islands) and insights indicating gender distributions with males dominating most sectors except social work."
+      },
+      {
+        "claim": "Nauru exhibits strong male dominance in construction and transport; female employment concentrates in health and education.",
+        "evidence": "Title 6 (Employment Distribution by Sex and Sector in Nauru) and insights demonstrating male dominance in Support Service and Financial sectors, and female majority in Education and Social Work."
+      },
+      {
+        "claim": "Gender disparities suggest tailored policies could improve equality.",
+        "evidence": "Indirectly supported by the gender distribution data across sectors and countries as shown in Titles 2, 3, 4, 5, 6."
+      }
+    ],
+    "unsupported_claims": []
+  },
+  "recommendations": {
+    "is_required": false,
+    "suggestion": "N/A"
+  }
+}

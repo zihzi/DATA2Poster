@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-11-13T04:13:43.248599Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' with elements of 'Proportion' because conclusion discusses workforce sizes across countries (variation) and Solomon Islands as leader."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight aligns with titles and conclusion: chart 1 shows employment numbers across countries (supporting size comparison), chart 2 shows sector and sex skew in Solomon Islands employment, consistent with the stated variation and sex-sector skew."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Chart 1 addresses overall workforce size across Pacific Islands consistent with claim; Chart 2 covers sector and sex breakdown only for Solomon Islands, which partially supports the sex-sector skew part but does not reinforce cross-country variation."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Chart 1 aligns well with measure (number of employed) and scope (Pacific Islands); Chart 2 only covers Solomon Islands and employment by sex and sector, narrower scope than conclusion's cross-country workforce size comparison."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Chart 1 uses distribution cues: 'Across Pacific Island Countries'; Chart 2 uses proportion cues: 'by Sex and Sector' implying subgroup distribution; matches claim type of distribution and proportion."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or year referenced in titles; Charts provide country and subgroup granularity but lack temporal dimension. The conclusion does not reference time either, so partial."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear explanation: Chart 1 supports the main claim about workforce size variation; Chart 2 only partially supports conclusion relating to sex-sector skew within Solomon Islands, not cross-country sizes."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_2",
+        "reason": "Chart 1 supports the core workforce size variation claim across Pacific Islands. Chart 2's focus on Solomon Islands by sex and sector only partially supports the conclusion's claim about variation and workforce size differences. To fully support the conclusion (not only Solomon Islands sex-sector variation but also cross-country workforce size variation), Chart 2 should be replaced with a visualization showing employment distribution across all Pacific Island countries by workforce sizes, highlighting the disparities.",
+        "recommendation": {
+          "chart_type": "bar",
+          "query": "What is the distribution of the number of employed persons across Pacific Island Countries?",
+          "revised_title": "Employment Distribution Across Pacific Island Countries",
+          "explanation": "A bar chart showing employment numbers for each Pacific Island country would better emphasize the vast labor force variations and the leading position of Solomon Islands, directly supporting the conclusion about workforce size disparities."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates' and 'share'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the conclusion and both titles focus on employment by sex across Pacific Island countries without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The titles imply data on employment by sex and by country, which strongly supports the conclusion about male dominance overall and differences by country."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Titles indicate 'Number of Employed Persons by Sex' and 'Employed Persons by Sex and Pacific Island Countries' but do not explicitly mention aggregate proportions or shares, making overall aggregation somewhat implicit."
+          },
+          "relation_cues_match": {
+            "score": 1,
+            "reason": "Titles contain distribution cues ('by sex', 'by sex and countries') but lack explicit proportion/share wording to fully cue the proportion claim."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window is given and aggregation level (total vs average vs share) is partly ambiguous, though subgroup specification (sex and country) is present."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear justification referencing how the titles relate to the conclusion is provided, including notes on scope and cue presence."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "Chart 2's title better reflects subgroup distribution by sex and countries as used in the conclusion, while Chart 1 is vague on aggregation and proportion/share. A replacement chart focusing explicitly on proportions (share) of employed persons by sex overall would improve evidence strength.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of the total Number of employed persons is male versus female across all Pacific Island Countries?",
+          "revised_title": "Proportion of Employed Persons by Sex Across Pacific Island Countries",
+          "explanation": "A pie chart of proportional share by sex across all countries directly visualizes the male-female employment dominance claim and clarifies the overall 62% male proportion referenced in the conclusion."
+        }
+      }
+    ]
+  }
+}

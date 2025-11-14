@@ -1,6 +1,18 @@
-region,industry,gender,total_worth,industry_rank
-Europe,Consumer,male,394.3,2.0
-Europe,"Retail, Restaurant",male,320.6,3.0
-North America,Consumer,male,270.7,4.0
-North America,"Retail, Restaurant",male,257.0,5.0
-North America,Technology-Computer,male,412.3,1.0
+Economic sector,Sex,Employed
+Accommodation and Food,Female,118
+Accommodation and Food,Male,141
+Agriculture and Fishing,Female,22
+Agriculture and Fishing,Male,61
+Construction,Male,122
+Education,Female,226
+Education,Male,56
+Electricity and Gas,Male,78
+Financial and Insurance,Female,41
+Financial and Insurance,Male,124
+Social Work and Health ,Female,207
+Social Work and Health ,Male,162
+Support Service,Female,185
+Support Service,Male,401
+Transportation and Storage,Male,82
+Wholesale and Retail,Female,127
+Wholesale and Retail,Male,161

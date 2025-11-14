@@ -1,0 +1,139 @@
+{
+  "timestamp": "2025-11-12T07:24:03.992825Z",
+  "col_select_json": {
+    "key_columns": [
+      {
+        "column": "Gender",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      },
+      {
+        "column": "Purchased",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 2
+        }
+      },
+      {
+        "column": "Age",
+        "properties": {
+          "dtype": "N",
+          "num_unique_values": 40
+        }
+      },
+      {
+        "column": "Education",
+        "properties": {
+          "dtype": "C",
+          "num_unique_values": 3
+        }
+      }
+    ]
+  },
+  "eda_q_for_sec1_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "When analyzing purchase behavior by age ranking, Female customers predominantly show a consistent 'Yes' purchase pattern, while Male customers have a more mixed Yes/No purchase distribution.",
+        "selected_facts": [
+          "In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, Yes  when Gender is Female.",
+          "In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, Yes, Yes  when Gender is Female.",
+          "In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, No, Yes  when Gender is Male.",
+          "In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No  when Gender is Male."
+        ],
+        "question": "How does the average Age vary across different Gender groups?",
+        "suggested_viz_title": "Average Age Distribution by Gender",
+        "suggested_viz_type": "bar",
+        "column": "Gender",
+        "rationale": "This question explores general age differences by gender, complementing purchase behavior patterns by age and showing broad demographic distributions."
+      },
+      {
+        "selected_insight": "Age extremes (both lowest and highest) are predominantly associated with Male customers across overall data, purchase status, and education levels.",
+        "selected_facts": [
+          "The lowest (least) value of the Age is Gender Male.",
+          "The highest (most) value of the Age is Gender Male.",
+          "The lowest (least) value of the Age is Gender Male when Purchased is No.",
+          "The highest (most) value of the Age is Gender Male when Purchased is No.",
+          "The lowest (least) value of the Age is Purchased Yes when Gender is Female.",
+          "The highest (most) value of the Age is Purchased Yes when Gender is Female."
+        ],
+        "question": "How does Age distribution differ across Gender within each Purchased category?",
+        "suggested_viz_title": "Age Distribution by Gender and Purchase Status",
+        "suggested_viz_type": "boxplot",
+        "column": "Gender",
+        "rationale": "This question drills into how gender influences age patterns within purchase behaviors, clarifying the significance of age extremes among genders by purchase status."
+      }
+    ]
+  },
+  "eda_q_for_sec2_json": {
+    "follow_up_questions": [
+      {
+        "selected_insight": "Higher education levels, such as UG and PG, are more common among purchasers, while non-purchasers are more associated with School and PG education.",
+        "selected_facts": [
+          "In the Age ranking of different Education(s), the top three Education(s) are School, PG, PG  when Purchased is No.",
+          "In the Age ranking of different Education(s), the last three Education(s) are PG, School, PG  when Purchased is No.",
+          "In the Age ranking of different Education(s), the top three Education(s) are UG, UG, PG  when Purchased is Yes.",
+          "In the Age ranking of different Education(s), the last three Education(s) are School, School, School  when Purchased is Yes."
+        ],
+        "question": "How does average Age vary across Purchased categories?",
+        "suggested_viz_title": "Average Age by Purchased Category",
+        "suggested_viz_type": "bar",
+        "column": "Purchased",
+        "rationale": "This question extends the original gender-based age comparison by examining how average age changes directly with purchase status, providing a new perspective on the age factor related to purchasing."
+      },
+      {
+        "selected_insight": "Both the youngest and oldest customers fall within the group that did not make a purchase, especially among males.",
+        "selected_facts": [
+          "The lowest (least) value of the Age is Purchased No.",
+          "The highest (most) value of the Age is Purchased No.",
+          "The lowest (least) value of the Age is Gender Male when Purchased is No.",
+          "The highest (most) value of the Age is Gender Male when Purchased is No."
+        ],
+        "question": "How does Age distribution differ across Purchased within Gender groups?",
+        "suggested_viz_title": "Age Distribution by Purchased and Gender",
+        "suggested_viz_type": "boxplot",
+        "column": "Purchased",
+        "rationale": "By drilling down into the combined effect of Gender and Purchased on Age distribution, this question highlights the notable concentration of youngest and oldest customers in the non-purchasing male segment, deepening the understanding of purchasing patterns by age and gender."
+      }
+    ]
+  },
+  "eda_q_for_sec3_json": {
+    "follow_up_questions": [
+      {
+        "selected_facts": [
+          "In the Age ranking of different Education(s), the top three Education(s) are PG, PG, School  when Gender is Female.",
+          "In the Age ranking of different Education(s), the last three Education(s) are School, UG, PG  when Gender is Female.",
+          "In the Age ranking of different Education(s), the top three Education(s) are UG, School, UG  when Gender is Male.",
+          "In the Age ranking of different Education(s), the last three Education(s) are School, PG, PG  when Gender is Male.",
+          "Age extremes (both lowest and highest) are predominantly associated with Male customers across overall data, purchase status, and education levels."
+        ],
+        "question": "How does Age distribution vary across Education levels within Gender groups when considering Purchased status?",
+        "suggested_viz_title": "Age Distribution by Education and Gender by Purchase Status",
+        "suggested_viz_type": "boxplot",
+        "column": "Age",
+        "entity": "Education",
+        "rationale": "Education levels show differing age rankings between genders, which coupled with purchase status may reveal nuanced patterns of customer behavior and demographic dynamics worth exploring."
+      },
+      {
+        "selected_facts": [
+          "In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Female  when Purchased is Yes.",
+          "In the Age ranking of different Gender(s), the last three Gender(s) are Male, Female, Male  when Purchased is Yes.",
+          "In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male  when Purchased is No.",
+          "In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Male  when Purchased is No.",
+          "Age extremes (both lowest and highest) are predominantly associated with Male customers across overall data, purchase status, and education levels."
+        ],
+        "question": "What is the Age distribution pattern by Gender and Education for customers segmented by their Purchased status?",
+        "suggested_viz_title": "Age Distribution by Gender and Education by Purchase Status",
+        "suggested_viz_type": "violin plot",
+        "column": "Age",
+        "entity": "Gender",
+        "rationale": "Gender shows dominance in age extremes, and female presence is more notable among younger purchasers. Exploring this with Education and Purchase status may uncover detailed age demographic and purchasing relationships."
+      }
+    ]
+  },
+  "insight_from_fact_to_llm": [
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the Age is Gender Male.\",\n        \"The highest (most) value of the Age is Gender Male.\",\n        \"The lowest (least) value of the Age is Gender Male when Purchased is No.\",\n        \"The highest (most) value of the Age is Gender Male when Purchased is No.\",\n        \"The lowest (least) value of the Age is Purchased Yes when Gender is Female.\",\n        \"The highest (most) value of the Age is Purchased Yes when Gender is Female.\",\n        \"The lowest (least) value of the Age is Education School when Gender is Female.\",\n        \"The highest (most) value of the Age is Education PG when Gender is Female.\",\n        \"The lowest (least) value of the Age is Gender Female when Education is UG.\",\n        \"The highest (most) value of the Age is Gender Male when Education is UG.\",\n        \"The lowest (least) value of the Age is Purchased Yes when Gender is Male.\",\n        \"The highest (most) value of the Age is Purchased No when Gender is Male.\",\n        \"The lowest (least) value of the Age is Education School when Gender is Male.\",\n        \"The highest (most) value of the Age is Education School when Gender is Male.\",\n        \"The lowest (least) value of the Age is Gender Male when Education is School.\",\n        \"The highest (most) value of the Age is Gender Male when Education is School.\",\n        \"The lowest (least) value of the Age is Gender Male when Education is PG.\",\n        \"The highest (most) value of the Age is Gender Female when Education is PG.\",\n        \"The lowest (least) value of the Age is Gender Male when Purchased is Yes.\",\n        \"The highest (most) value of the Age is Gender Male when Purchased is Yes.\"\n      ],\n      \"insight\": \"Age extremes (both lowest and highest) are predominantly associated with Male customers across overall data, purchase status, and education levels.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\",\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, No, Yes  when Gender is Male.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No  when Gender is Male.\"\n      ],\n      \"insight\": \"When analyzing purchase behavior by age ranking, Female customers predominantly show a consistent 'Yes' purchase pattern, while Male customers have a more mixed Yes/No purchase distribution.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male .\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Male .\"\n      ],\n      \"insight\": \"Male customers dominate both the youngest and oldest age ranks, indicating a wide age distribution within the Male gender group.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Education(s), the top three Education(s) are PG, PG, School  when Gender is Female.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are School, UG, PG  when Gender is Female.\",\n        \"In the Age ranking of different Education(s), the top three Education(s) are UG, School, UG  when Gender is Male.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are School, PG, PG  when Gender is Male.\"\n      ],\n      \"insight\": \"Educational attainment rankings by age vary between genders, with Females topping primarily in PG education and Males in UG and School categories.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Female  when Purchased is Yes.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Female, Male  when Purchased is Yes.\",\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male  when Purchased is No.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Male  when Purchased is No.\"\n      ],\n      \"insight\": \"While Male customers dominate age ranks in both purchase categories, Female representation is more notable among younger purchasers (Purchased Yes).\"\n    }\n  ]\n}",
+    "{\n  \"insight_list\": [\n    {\n      \"selected_facts\": [\n        \"The lowest (least) value of the Age is Purchased No.\",\n        \"The highest (most) value of the Age is Purchased No.\",\n        \"The lowest (least) value of the Age is Gender Male when Purchased is No.\",\n        \"The highest (most) value of the Age is Gender Male when Purchased is No.\"\n      ],\n      \"insight\": \"Both the youngest and oldest customers fall within the group that did not make a purchase, especially among males.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, No .\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No .\",\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, Yes, Yes  when Gender is Female.\"\n      ],\n      \"insight\": \"Customers who purchased tend to be concentrated in certain age ranks, with female purchasers consistently dominating the top and bottom age ranks.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Female  when Purchased is Yes.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Female, Male  when Purchased is Yes.\",\n        \"In the Age ranking of different Gender(s), the top three Gender(s) are Male, Male, Male  when Purchased is No.\",\n        \"In the Age ranking of different Gender(s), the last three Gender(s) are Male, Male, Male  when Purchased is No.\"\n      ],\n      \"insight\": \"Male customers dominate the gender distribution across both top and bottom age ranks, regardless of purchase status, while females appear more among purchasers.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Education(s), the top three Education(s) are School, PG, PG  when Purchased is No.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are PG, School, PG  when Purchased is No.\",\n        \"In the Age ranking of different Education(s), the top three Education(s) are UG, UG, PG  when Purchased is Yes.\",\n        \"In the Age ranking of different Education(s), the last three Education(s) are School, School, School  when Purchased is Yes.\"\n      ],\n      \"insight\": \"Higher education levels, such as UG and PG, are more common among purchasers, while non-purchasers are more associated with School and PG education.\"\n    },\n    {\n      \"selected_facts\": [\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are Yes, No, Yes  when Gender is Male.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, No  when Gender is Male.\",\n        \"In the Age ranking of different Purchased(s), the top three Purchased(s) are No, Yes, Yes  when Education is School.\",\n        \"In the Age ranking of different Purchased(s), the last three Purchased(s) are Yes, No, Yes  when Education is School.\"\n      ],\n      \"insight\": \"Among males and those with School education, purchase behavior varies notably, indicating more mixed purchasing patterns in these segments.\"\n    }\n  ]\n}"
+  ]
+}

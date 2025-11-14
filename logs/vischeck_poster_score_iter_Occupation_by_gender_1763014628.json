@@ -1,0 +1,142 @@
+{
+  "timestamp": "2025-11-13T06:17:08.287092Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'lead', 'exceeds', and 'dominates' in the conclusion."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight aligns well with the titles and conclusion, both highlighting overall employment and gender distribution without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles explicitly represent employment totals by country and gender distribution, directly providing evidence for the main claims."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Measures (employment numbers and gender distribution) and the scope (across Pacific Island countries) match the conclusion on overall employment and gender disparity."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Chart titles contain distribution and comparative cues ('Across', 'by Country') suitable for the claim type (proportion and distribution)."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "Granularity on time is not specified, which is acceptable if the data is cross-sectional, but explicit time frame or groupings like 'smaller islands' are implied but not defined in titles."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Justification clearly links titles and insight to the conclusion, noting how total employment and gender splits are well covered."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts' titles cover employment totals and gender distribution, matching the conclusion about country employment leadership and gender disparities. Insight is consistent with titles, supporting the conclusion fully. No replacement is needed.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'about 62%', 'largest sex gap', and 'near-equal gender employment' indicating share/comparison."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight that males consistently outnumber females and Solomon Islands having the largest difference aligns well with titles and conclusion without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both chart titles focus on employment by sex and differences by country, which directly support the conclusion about male employment proportion and country differences."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Titles mention 'Numbers by Sex' and 'Employment Differences by Country' but the conclusion discusses proportions (62% males) and socio-economic dynamics which may require explicit share/percentage measures rather than just numbers."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Title 2 includes 'Sex Employment Differences by Country' which cues a comparison, matching the claim type of proportion/share differences. Title 1 'Employment Numbers by Sex' cues distribution or proportional data."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or top-N subgroup indicated in titles or conclusion; scope by country and sex is clear but temporal or detailed subgroup granularity is missing."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The conclusion matches the chart topics well, with the rationale clearly linked to sex-based employment proportions and country differences in gender gaps."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "While the charts together support the claims about proportional employment differences by sex and country gaps, the first chart's 'Employment Numbers by Sex' title implies raw counts rather than share or proportion. Since the key claim involves the proportion of male employment (~62%), a chart explicitly showing shares or percentages by sex overall would better support the conclusion.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of total employment is comprised of males versus females across all Pacific Island Countries?",
+          "revised_title": "Proportion of Total Employment by Sex Across Pacific Island Countries",
+          "explanation": "Replacing the first chart with a pie chart depicting proportional shares of employment by sex will directly support the conclusion's key statistic of male employment comprising about 62% of total workforce, strengthening the connection to proportion claims."
+        }
+      }
+    ]
+  },
+  "poster_score_json": {
+    "final_score": 8,
+    "justification": {
+      "overall_assessment": "The conclusion is mostly supported by the provided chart titles and insight. The broad claims about male employment predominance, gender disparities by country sizes, and sectoral gender patterns are well-covered by the charts and the summarized insights. However, some nuanced details, such as exact percentages (e.g., 'Male employment comprises about 62% of total workforce'), the unique socio-economic dynamics in Tokelau, and specific cultural factors influencing gender roles, are not directly verifiable from the provided chart titles or insight summaries.",
+      "supported_claims": [
+        {
+          "claim": "Solomon Islands and Vanuatu lead employment totals, reflecting larger labor forces.",
+          "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries) and the insight mentioning varying employment size."
+        },
+        {
+          "claim": "Male employment consistently exceeds female across all countries, indicating entrenched gender roles.",
+          "evidence": "Title 2 (Gender Employment Distribution by Country), Title 3 (Proportion of Total Employment by Sex), Title 4 (Sex Employment Differences by Country), and corresponding insight statements."
+        },
+        {
+          "claim": "Smaller islands show balanced gender ratios, suggesting labor pool size impacts disparity.",
+          "evidence": "Title 2 and Title 4, along with insight mentioning some nations having near gender parity."
+        },
+        {
+          "claim": "Male employment comprises about 62% of total workforce.",
+          "evidence": "Indirectly supported by Title 3 and the insight on males holding larger shares, but exact figure not stated explicitly."
+        },
+        {
+          "claim": "Solomon Islands showing the largest sex gap.",
+          "evidence": "Title 4 and Title 1 likely show this disparity given Solomon Islands lead employment and have large male-to-female differences."
+        },
+        {
+          "claim": "Tokelau's near-equal gender employment suggests unique socio-economic dynamics.",
+          "evidence": "Title 2 and Title 4 may imply this parity from data (as per insight), but unique socio-economic dynamics are not evidenced in the charts or insight."
+        },
+        {
+          "claim": "In Solomon Islands and Vanuatu, Agriculture skews male while Wholesale favors females, highlighting sectoral divides.",
+          "evidence": "Title 5 (Employment by Economic Sector and Sex in Solomon Islands and Vanuatu) and insight mentioning sectoral gender patterns."
+        },
+        {
+          "claim": "Palau and Kiribati exhibit male dominance in Agriculture but more gender-balanced Wholesale and Retail sectors.",
+          "evidence": "Title 6 (Employment by Economic Sector and Sex in Palau and Kiribati) supported by insight on sectoral gender balances."
+        }
+      ],
+      "unsupported_claims": [
+        {
+          "claim": "These patterns underscore persistent gender imbalances influenced by cultural and economic factors.",
+          "reason": "The charts and insights describe employment data and gender ratios but do not provide or confirm that observed patterns stem specifically from cultural and economic factors."
+        }
+      ]
+    },
+    "recommendations": {
+      "is_required": true,
+      "suggestion": "To fully support the conclusion, add a chart or data visualization explicitly linking gender employment patterns to underlying socio-economic or cultural causes, e.g., a survey or analysis chart on cultural/economic influences on employment by gender. Additionally, include data or annotations displaying precise employment percentages (e.g., the 62% figure) to strengthen quantitative claims."
+    }
+  }
+}

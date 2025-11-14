@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-11-13T06:13:06.213313Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' and 'Distribution' indicated by keywords like 'lead', 'exceeds', 'dominant', and references to gender ratios."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight aligns well with the chart titles and conclusion, reflecting employment totals and gender distribution by country without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Titles clearly imply evidence for main claims: Chart 1 supports total employment figures and Chart 2 addresses gender distribution."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Employment totals and gender distribution by country directly relate to the conclusion and insight with no scope mismatch."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles include 'Across Pacific Island Countries' and 'Gender Employment Distribution by Country', matching distribution and proportion claim types."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "Granularity by country and sex is clear, but no explicit time window or other subgroup (e.g., economic sector) is specified."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear justification referencing how the chart titles correspond with claims on employment totals and gender distribution across countries."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts correspond well to the conclusion and insight. Chart 1 presents total employment by country, and Chart 2 shows gender distribution by country, together substantiating the claims about labor force size and gender disparity.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'comprises about 62% of total workforce' and 'largest sex gap'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight that males consistently outnumber females and Solomon Islands have the largest gender gap aligns well with both titles and the conclusion without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The titles 'Employment Numbers by Sex' and 'Sex Employment Differences by Country' directly imply data supporting total workforce proportions and cross-country sex employment gaps as claimed."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Measures reflect overall employment numbers and differences by country; aggregation and scope align with claims about total workforce share and country-level gaps."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain appropriate cues: 'by Sex' and 'Differences by Country' indicate distribution and comparison; 'Numbers' supports magnitude while 'Differences' signals disparity, matching proportion and comparison claims."
+          },
+          "granularity_specificity": {
+            "score": 2,
+            "reason": "Granularity is appropriate with breakdown by sex and by country, enough to support proportion and difference claims; although no explicit time frame is given, the focus is cross-sectional which is suitable."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The conclusion is clearly tied to observations implied by the titles and insight, such as total male proportion (~62%) and specific country-level differences, justifying the scores comprehensively."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The two charts’ titles and inferred content provide strong evidence for the conclusion about overall male employment share and sex gaps by country, matching the insight and claim type well.",
+        "recommendation": null
+      }
+    ]
+  }
+}

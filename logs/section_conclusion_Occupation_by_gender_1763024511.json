@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T09:01:51.663972Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution and Gender Dynamics Across Pacific Islands",
+        "charts_title": [
+          "Employment Distribution Across Pacific Island Countries",
+          "Employment by Sex Across Pacific Island Countries"
+        ],
+        "insight": "Solomon Islands and Vanuatu lead employment shares while gender balance varies widely among island nations."
+      },
+      {
+        "section": "B",
+        "heading": "Economic Sector Employment Shares and Male Workforce Proportions",
+        "charts_title": [
+          "Employment Numbers Across Economic Sectors",
+          "Male Employment Proportion by Sector and Country"
+        ],
+        "insight": "Agriculture dominates employment overall, but Financial sector shows the highest male employment proportion."
+      },
+      {
+        "section": "C",
+        "heading": "Gender and Sector Employment Patterns in Solomon Islands and Tokelau",
+        "charts_title": [
+          "Employment by Sex and Economic Sector in Solomon Islands",
+          "Employment by Sex and Economic Sector in Tokelau"
+        ],
+        "insight": "Solomon Islands shows male-dominant sectors while Tokelau has female-led employment with diverse sector representation."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Solomon Islands dominates employment with 37.6% share, followed by Vanuatu at 26%. Male employment significantly exceeds female employment, indicating prevailing gender imbalances. Balanced gender participation in countries like Vanuatu suggests diverse labor markets amid broader disparities.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Agriculture and Fishing employ over one-third of workers, highlighting primary sector reliance. Financial and Insurance sectors show highest male employment proportions, reflecting gendered workforce segmentation. These patterns reveal structural economic dependencies and persistent gender roles across sectors.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands, males dominate primary sectors like Agriculture, while females lead in Accommodation and Food. Tokelau shows female employment predominance, especially in Education, contrasting with male dominance in Construction. These disparities underscore cultural and occupational gender divisions influencing labor distribution.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender Roles Affect Employment Patterns Across Pacific Island Nations?"
+}

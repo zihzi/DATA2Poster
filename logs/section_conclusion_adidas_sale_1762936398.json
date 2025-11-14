@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-12T08:33:18.464939Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Retailer Sales Dominance and Leadership",
+        "charts_title": [
+          "Total Sales Distribution Across Retailers",
+          "Total Sales by Sales Method Within Retailers"
+        ],
+        "insight": "West Gear leads total sales with strong market share and dominant sales method performance among retailers."
+      },
+      {
+        "section": "B",
+        "heading": "Sales Method Distribution and Retailer Comparison",
+        "charts_title": [
+          "Total Sales Distribution by Sales Method",
+          "Retailer Sales Comparison within Each Sales Method"
+        ],
+        "insight": "In-store sales dominate total sales distribution while key retailers like West Gear and Walmart excel within methods."
+      },
+      {
+        "section": "C",
+        "heading": "Product and Sales Method Sales Performance",
+        "charts_title": [
+          "Total Sales by Product and Sales Method in Walmart",
+          "Total Sales by Product and Sales Method in West Gear"
+        ],
+        "insight": "Women's Apparel and Men's Street Footwear lead sales with in-store methods driving strong category performance."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "West Gear leads sales with approximately 27%, strongly dominating physical retail. Foot Locker and Sports Direct follow but with distinctly lower shares, indicating a competitive yet uneven market. Walmart's high in-store sales contrast its overall smaller market share, suggesting niche or localized strength.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "In-store sales dominate at nearly 40%, highlighting persistent customer preference for physical shopping. West Gear's overwhelming in-store dominance contrasts Foot Locker's balanced multi-channel approach, showing varied retailer strategies. Walmart's significant sales via outlets imply a focus on discount channels to capture market share.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "Walmart's outlet channels drive dominant sales volumes, emphasizing promotional pricing's importance. West Gear maintains in-store dominance across products, reinforcing physical retail preference in its core market. Gender differences show women's apparel and men's street footwear leading sales, reflecting product line strengths.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Retailers' Sales Channels Influence Market Leadership and Customer Preferences?"
+}

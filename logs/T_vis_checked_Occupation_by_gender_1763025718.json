@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-11-13T09:21:58.114026Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' and 'Proportion' based on keywords like 'varies widely', 'leading', 'exceeds', and 'near-balanced gender shares'."
+          },
+          "insight_consistency": {
+            "score": 0,
+            "reason": "The provided insight states 'mostly balanced gender employment shares' which contradicts the conclusion claiming 'Male employment consistently exceeds female', highlighting gender gaps. Therefore, insight is inconsistent with conclusion though both relate to similar measures."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Chart titles indicate employment numbers and employment by sex across countries, implying relevant data for the conclusion, but exact disparity patterns and specific figures like '95,024 workers' or consistent male dominance are not clearly confirmed by title alone."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Both chart titles reference employment across Pacific Island countries with disaggregation by sex, matching the scope and measures referenced in the conclusion."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles contain 'Across Pacific Island Countries' and 'by Sex', indicating distribution and proportion comparison cues aligned with the conclusion's emphasis on variation and gender gap."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "Granularity on time window is absent; no mention of specific year or period. Subgroup granularity exists (countries and sex), but exact figures and top countries like Solomon Islands mentioned in conclusion suggest some missing details."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Justification clearly explains partial alignment and mismatch between conclusion and insight, indicating titles mostly support general claims but lack full detail to validate specifics about gender dominance and exact employment numbers."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_2",
+        "reason": "The first chart 'Employment Numbers Across Pacific Island Countries' is appropriate for showing scale variation and lead countries as claimed. The second chart titled 'Employment by Sex Across Pacific Island Countries' inadequately supports the claim of consistent male dominance over female employment because the insight derived indicates mostly balanced gender shares, which contradicts the conclusion. Thus, chart 2 should be replaced by a visualization better illustrating gender disparities clearly.",
+        "recommendation": {
+          "chart_type": "bar",
+          "query": "What is the number of employed persons by Sex across Pacific Island Countries highlighting gender disparities?",
+          "revised_title": "Gender Disparities in Employment Numbers Across Pacific Island Countries",
+          "explanation": "A bar chart explicitly showing male vs female employment numbers side-by-side for each country would better illustrate consistent male dominance and highlight gender gaps, directly supporting the conclusion about gender share imbalances."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'lead', and 'disparities' indicating comparison of shares across sex groups."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight about employment ranks being balanced by sex across countries but male dominance in sectors except health and retail aligns with the conclusion and the titles, with no contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Title 2 clearly supports comparison of employment by sex across sectors indicating dominance patterns. Title 1 is about countries and overall employment numbers which only partially supports the claim about sex differences across sectors."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Conclusion focuses on sector-level employment patterns by sex, which aligns well with Title 2; however, Title 1 covers countries and overall employment numbers, which is out of scope for the sector-focused conclusion."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Both titles use 'by sex across…' indicating distribution/proportion comparisons by group, matching the proportion claim type."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or detailed subgroup granularity indicated beyond sex, countries, and sectors; some ambiguity about time frame or year of data."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Clear rationale referencing mismatch between scope in Title 1 (countries) and the conclusion focus on economic sectors; and strong alignment of Title 2 with conclusion."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "The conclusion concentrates on sex distribution across economic sectors and gender disparities in employment by sector. Title 1 on employment by sex across countries is less relevant and does not strongly support the sector-specific claim. Replacing chart 1 with a more focused visualization on proportion of employed persons by sex within each economic sector would better support the conclusion.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of employed persons in each economic sector is accounted for by each sex?",
+          "revised_title": "Proportion of Employed Persons by Sex Within Economic Sectors",
+          "explanation": "A pie chart showing employment shares by sex within each sector would directly illustrate dominance patterns and disparities mentioned in the conclusion, providing clearer evidence for sex distribution differences across sectors."
+        }
+      }
+    ]
+  }
+}

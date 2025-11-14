@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-11-12T08:36:51.781075Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion mainly claims proportion and distribution types: West Gear leads with ~27%, dominating physical retail, and comparisons of shares across retailers and sales methods. Title 1 ('Total Sales Distribution Across Retailers') supports the distribution and proportion claims related to retailers. Title 2 ('Total Sales by Sales Method Within Retailers') supports the breakdown of sales methods within retailers, complementing the dominant sales method claim for West Gear. Both chart titles align well with the conclusion's focus on proportions and distribution, and the insight is consistent. Variables and aggregation (total sales, by retailer, by sales method) match well, and the granularity is appropriate. Therefore, both charts sufficiently support the conclusion and insight.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion makes multiple proportion claims such as 'in-store sales dominate at nearly 40%' and retailer comparisons of sales channel dominance. Chart 1 ('Total Sales Distribution by Sales Method') strongly supports the proportion claim about sales distribution. Chart 2 ('Retailer Sales Comparison within Each Sales Method') supports comparisons among retailers by sales channel, aligning with the conclusion's claims about West Gear, Foot Locker, and Walmart strategies. Both charts match the measures (total sales), primary dimension (sales method and retailer), and aggregation (share/proportion). Titles imply distribution and comparison, consistent with the claims. The insight aligns with the conclusion, and no major mismatch or missing evidence exists.",
+        "recommendation": null
+      }
+    ]
+  },
+  "poster_score_json": {
+    "final_score": 90,
+    "justification": "The conclusion predominantly makes proportion and distribution claims about sales shares, retailer dominance, sales methods, and product categories, all well supported by chart titles indicating distribution and sales by retailer, sales method, and product. Measures (total sales) and primary dimensions (retailers, sales methods, products) are aligned with the titles. Aggregation levels (total sales, shares) are consistent and scopes match overall or key subsets (Walmart, West Gear). The claim type alignment is strong as titles imply proportion and distribution charts, matching the claims about dominance and shares. Essential evidence cues like 'distribution', 'across', 'within', and 'by product and sales method' support the claims. Granularity is precise, with subgroup mentions (retailers, sales channels, products) corresponding to titles that name those groups explicitly. The lack of any explicit time or trend claim is consistent with the absence of time references in titles; hence no points lost there. Minor deduction for some claim elements (e.g., Walmart's niche/localized strength) inferred rather than directly shown in titles or insight, implying slight scope ambiguity."
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "final_score": 8,
+  "justification": {
+    "overall_assessment": "The conclusion is mostly well-supported by the provided charts and insight. The main claims regarding Solomon Islands leading employment totals, male dominance especially in Agriculture and Construction, gender gaps in specific countries and sectors, and sectoral distribution by sex in Solomon Islands and Vanuatu align with data described in the charts and corresponding insights. However, some nuanced assertions on cultural roles, economic diversity influencing employment, and balanced gender employment in Social Work and Accommodation sectors, while hinted at, are not fully detailed in the titles or insight extracts.",
+    "supported_claims": [
+      {
+        "claim": "Solomon Islands leads at 95,024 workers in employment totals.",
+        "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries) and related insights provide data on Solomon Islands' top employment numbers."
+      },
+      {
+        "claim": "Agricultural jobs dominate employment but show strong gender gaps favoring males, especially in Solomon Islands and Vanuatu.",
+        "evidence": "Title 2 (Gender Employment in Agriculture Across Countries) and insights citing agriculture employment counts and male-dominance percentages strongly support this."
+      },
+      {
+        "claim": "Males consistently outnumber females across most sectors.",
+        "evidence": "Title 3 (Employed Persons by Sex Across Countries), Title 4 (Employment Numbers by Sex Across Sectors), and their insights disclose male majority overall and by sector."
+      },
+      {
+        "claim": "Some sectors like Social Work and Accommodation show more balanced gender employment.",
+        "evidence": "Insights under Title 4 mention Social Work and Health as female-dominated and Accommodation sectors with relatively balanced employment."
+      },
+      {
+        "claim": "Significant male dominance in physically demanding sectors such as Construction and Agriculture.",
+        "evidence": "Title 4 supporting insight states Construction is over 98% male, Agriculture about 69% male."
+      },
+      {
+        "claim": "In Solomon Islands, males dominate Agriculture and Transportation sectors, women engage more in Accommodation and Food.",
+        "evidence": "Title 5 (Employment by Sector and Sex in Solomon Islands) insights describe male-heavy Agriculture, Transportation and more female employment in Accommodation and Food."
+      },
+      {
+        "claim": "Vanuatu shows male employment nearly double in Agriculture but more balanced in Wholesale and Accommodation.",
+        "evidence": "Title 6 (Employment by Sector and Sex in Vanuatu) and related insights detail Agriculture male dominance and relatively balanced Wholesale and Accommodation sectors."
+      }
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "These disparities suggest population size, economic diversity, and cultural roles shape employment distribution regionally.",
+        "reason": "The charts and insights provide population-based employment counts and gender distribution by sector but do not explicitly assess or prove how economic diversity or cultural roles impact employment patterns."
+      }
+    ]
+  },
+  "recommendations": {
+    "is_required": true,
+    "suggestion": "To fully support the conclusion, especially regarding the influence of economic diversity and cultural roles on employment distribution, add a chart that breaks down employment patterns by economic diversity indicators or cultural demographics across Pacific Island countries. Additionally, a qualitative or mixed-method chart linking cultural roles to observed workforce segmentation would strengthen the conclusion."
+  }
+}

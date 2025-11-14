@@ -1,0 +1,87 @@
+{
+  "timestamp": "2025-11-13T06:57:03.806553Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' because the conclusion emphasizes shares of employment ('over 63% combined') and gender comparison."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the titles by focusing on employment totals and breakdown by sex, consistent with the conclusion's claims."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The titles 'Employment Numbers Across Pacific Island Countries' and 'Employment by Sex Across Pacific Island Countries' clearly imply evidence about total employment distribution and male/female comparison, supporting the conclusion."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Both charts cover employment numbers by country and sex comprehensively, matching the conclusion's scope on combined shares and gender roles."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles include key cues like 'by Sex' and 'Across Countries' indicating distribution and proportion measures appropriate for the claim."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit mention of time frame or exact aggregation method; however, the categorical breakdown by country and sex offers partial granularity."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Rationale clearly maps how titles support main proportional and distribution claims in conclusion, highlighting alignment and minor granularity limitations."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "The conclusion about employment concentration by country and gender disparity is well-aligned and supported by the two charts' titles and insight. Both charts sufficiently cover the necessary scope and claim type cues to support the conclusion with only minor granularity gaps that do not undermine validity.",
+        "recommendation": null
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates' and 'majority' in the conclusion."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight aligns with the titles and conclusion; it recognizes male dominance in employment and some female-led sectors consistent with the conclusion's focus on sex differences and country comparisons."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "The first chart ('Employment by Sex Across Economic Sectors') directly supports claims about sector gender dominance; the second chart ('Employment by Sex in Key Pacific Countries') supports the claim on country-level employment differences."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "Both charts measure employment by sex either across sectors or across countries, which aligns with the conclusion's comparative statements about sectors and countries."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Both titles include 'by Sex' and 'Across...' or 'in ... Countries', clearly indicating distribution and proportion comparisons matching the claim type."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "The time window or period reference is absent or unspecified; however, subgroup details (sex, sectors, countries) are explicit."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The rationale clearly connects titles and insight to the conclusion, noting how each chart evidences parts of the claim."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts adequately support the conclusion by covering sex differences across sectors and countries; no mismatch or gaps warrant replacement.",
+        "recommendation": null
+      }
+    ]
+  }
+}

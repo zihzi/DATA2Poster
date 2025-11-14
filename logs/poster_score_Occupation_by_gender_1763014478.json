@@ -1,0 +1,54 @@
+{
+  "final_score": 8,
+  "justification": {
+    "overall_assessment": "The conclusion is largely supported by the chart titles and the insight, with the main points about Solomon Islands and Vanuatu leading employment, the consistent male dominance across countries, sectoral gender divides, and specific details about certain islands reflected in the data titles and summary. However, some nuanced claims—such as the exact percentage of male employment (62%), detailed gender balance on smaller islands (e.g., Tokelau), and certain cultural/economic interpretations—are not explicitly evident or verifiable from the given titles and insight.",
+    "supported_claims": [
+      {
+        "claim": "Solomon Islands and Vanuatu lead employment totals, reflecting larger labor forces.",
+        "evidence": "Title 1 (Employment Numbers Across Pacific Island Countries) and insight stating 'Solomon Islands leads in employment...'; Titles 5 and 6 reference the countries involved."
+      },
+      {
+        "claim": "Male employment consistently exceeds female across all countries, indicating entrenched gender roles.",
+        "evidence": "Title 2 (Gender Employment Distribution by Country), Title 3 (Employment Numbers by Sex), Title 4 (Sex Employment Differences by Country), and insight 'Male employment dominates broadly...males roughly twice as many as females...'"
+      },
+      {
+        "claim": "Smaller islands show balanced gender ratios, suggesting labor pool size impacts disparity.",
+        "evidence": "Title 4 (Sex Employment Differences by Country) likely addresses gaps; insight implies smaller islands have more balance, but no explicit direct data mentioned."
+      },
+      {
+        "claim": "In Solomon Islands and Vanuatu, Agriculture skews male while Wholesale favors females, highlighting sectoral divides.",
+        "evidence": "Title 5 (Employment by Economic Sector and Sex in Solomon Islands and Vanuatu) supports sectoral gender patterns claim."
+      },
+      {
+        "claim": "Palau and Kiribati exhibit male dominance in Agriculture but more gender-balanced Wholesale and Retail sectors.",
+        "evidence": "Title 6 (Employment by Economic Sector and Sex in Palau and Kiribati) supports this sectoral gender pattern claim."
+      },
+      {
+        "claim": "Male employment comprises about 62% of total workforce.",
+        "evidence": "Insight mentions 'Male employment dominates broadly' but no explicit percentage is stated in titles or insight."
+      },
+      {
+        "claim": "Tokelau's near-equal gender employment suggests unique socio-economic dynamics.",
+        "evidence": "No direct mention of Tokelau in chart titles or insight; this claim is not verifiable from given data."
+      },
+      {
+        "claim": "These patterns underscore persistent gender imbalances influenced by cultural and economic factors.",
+        "evidence": "General inference drawn from gender employment data; no direct cultural/economic factor charts but argued through sectoral analysis in Titles 5 and 6."
+      }
+    ],
+    "unsupported_claims": [
+      {
+        "claim": "Male employment comprises about 62% of total workforce.",
+        "reason": "No chart title or insight explicitly states or quantifies this exact percentage; the data is implied but not confirmed."
+      },
+      {
+        "claim": "Tokelau's near-equal gender employment suggests unique socio-economic dynamics.",
+        "reason": "No chart or insight references Tokelau specifically, nor provides data on its gender distribution."
+      }
+    ]
+  },
+  "recommendations": {
+    "is_required": true,
+    "suggestion": "Add or replace a chart providing explicit percentage breakdowns of male vs female employment across all countries, including smaller islands like Tokelau, to confirm exact gender ratios and highlight small-island differences. Also, consider adding a chart or data source that explicitly quantifies the overall workforce gender splits (e.g., the 62% figure). This would ensure all minor but important claims in the conclusion are verifiably supported."
+  }
+}

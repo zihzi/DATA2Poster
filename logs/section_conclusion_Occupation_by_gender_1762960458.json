@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-12T15:14:18.874927Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution and Sector Dominance in Pacific Islands",
+        "charts_title": [
+          "Employment Numbers by Pacific Island Countries",
+          "Solomon Islands Employment by Economic Sector"
+        ],
+        "insight": "Solomon Islands lead Pacific employment with agriculture dominant and retail, education also significant sectors."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Patterns Across Pacific Island Countries and Sectors",
+        "charts_title": [
+          "Employment Counts by Sex Across Countries",
+          "Employment by Sex and Sector in Cook Islands"
+        ],
+        "insight": "Males dominate overall employment in most Pacific Islands while Cook Islands shows near gender balance across sectors."
+      },
+      {
+        "section": "C",
+        "heading": "Pronounced Male Dominance in Construction and Energy Sectors",
+        "charts_title": [
+          "Construction Employment by Sex in Marshall Islands and Tuvalu",
+          "Electricity & Gas Employment by Sex: Marshall Islands vs Palau"
+        ],
+        "insight": "Males heavily dominate construction and electricity sectors, revealing significant gender disparities in employment roles."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment is heavily concentrated in Solomon Islands and Vanuatu, leaving smaller islands with minimal workforce. Agriculture and Fishing dominate Solomon Islands, reflecting a rural economy reliant on primary industries. This uneven distribution suggests challenges for balanced regional economic development and resource allocation.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Male employment consistently exceeds female across Pacific Islands, with disparities strongest in larger populations like Solomon Islands. Sectoral gender gaps are evident, as Cook Islands females dominate service sectors, while males lead in construction and utilities. These patterns imply entrenched gender roles limiting female workforce participation and broader economic equality.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "Construction in Marshall Islands and Tuvalu is heavily male-dominated, with males employed nearly five times more than females. Similarly, electricity and gas sectors in Marshall Islands and Palau show strong male majority employment. Such pronounced gender imbalances highlight persistent occupational segregation and traditional labor market dynamics in these countries.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Location Shape Employment Patterns in Pacific Island Countries?"
+}

@@ -1,0 +1,92 @@
+{
+  "timestamp": "2025-11-13T05:12:47.608669Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'leading', and 'distribution'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight that Solomon Islands leads in employment and Vanuatu shows male dominance and agriculture focus aligns well with the chart titles and conclusion without contradictions."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "The first chart's title suggests overall employment by country supporting concentration claim; the second chart provides sector and sex split but limited to Vanuatu only. Together they partially support the conclusion about dominance and sector-sex distribution but lack full coverage of other countries or detailed sector dominance across all."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "The first chart covers overall employment numbers across Pacific countries (good alignment) but the second only spans Vanuatu by sex and sector, limiting scope for broader sector dominance claims. Overall scope partially matches but partial for some claims."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Chart 1 uses 'Across Pacific Island Countries' indicating distribution, matching claim of concentration across countries; Chart 2 includes 'Sex and Sector' implying subgroup distribution and comparison, consistent with claim-type cues."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time dimension or period is stated, but granularity by country and sex-sector is clear. However, exact time window is absent, reducing full specificity."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The explanation clearly identifies partial support from the first chart addressing total employment distribution and the second chart partially supporting sex and sector dominance but limited to one country, justifying partial support."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_2",
+        "reason": "The first chart on employment numbers across Pacific countries supports the conclusion regarding concentration well. However, the second chart is limited to Vanuatu and does not sufficiently illustrate sector dominance and sex distribution comprehensively or for other countries. Replacing chart 2 with a visualization covering sector and sex employment across multiple Pacific Island countries would better support the conclusion about dominance and workforce distribution.",
+        "recommendation": {
+          "chart_type": "stacked_bar",
+          "query": "What is the distribution of employed persons by Sex and Economic sector across Pacific Island Countries?",
+          "revised_title": "Sex and Sector Employment Distribution Across Pacific Island Countries",
+          "explanation": "A stacked bar chart segmented by sex and sector across all Pacific countries will better illustrate where employment is concentrated by sector and sex, supporting the claim about economic size and traditional sector dominance shaping workforce distribution beyond just Vanuatu."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' based on keywords like 'dominates', 'surpasses', and 'share'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "The insight that males outnumber females especially in agriculture and construction aligns well with the titles focusing on sex-based employment distribution and sectoral breakdown, supporting the conclusion without contradiction."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 2,
+            "reason": "Both titles clearly imply evidence for the main claim: Title 1 shows employment by sex across countries (supporting consistent male dominance), and Title 2 shows employment by sex across sectors (supporting sector-specific gender dominance)."
+          },
+          "scope_and_measure_alignment": {
+            "score": 2,
+            "reason": "The measures (employment counts by sex) and scope (Pacific Island Countries overall and by economic sector) align with the conclusion describing proportion of employment by sex and gendered sectoral divides."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "The titles contain appropriate claim-type cues: Title 1 implies comparison of proportions (by sex), Title 2 uses 'by sex across sectors' indicating distribution across categories."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "The granularity is moderately specified — the titles cover Pacific Island Countries and economic sectors but do not specify time period or precise aggregation method, though this is sufficient for the claim."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "Explanation clearly articulates how the titles and derived insights support the claim about gender employment proportions and sectoral dominance without contradictions."
+          }
+        },
+        "verdict": "supported",
+        "replace": "none",
+        "reason": "Both charts together provide clear evidence for the conclusion on sex-based employment proportions generally and by economic sector in Pacific Island countries, matching the insight and claim type.",
+        "recommendation": null
+      }
+    ]
+  }
+}

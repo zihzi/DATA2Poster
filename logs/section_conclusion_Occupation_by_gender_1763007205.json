@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T04:13:25.384230Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Workforce Size Variations Across Pacific Island Countries and Sectors in Solomon Islands",
+        "charts_title": [
+          "Employment Numbers Across Pacific Island Countries",
+          "Employment in Solomon Islands by Sex and Sector"
+        ],
+        "insight": "Pacific Islands show wide employment sizes, with Solomon Islands leading and sector employment skewed by sex."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Distribution Across Pacific Island Countries",
+        "charts_title": [
+          "Number of Employed Persons by Sex",
+          "Employed Persons by Sex and Pacific Island Countries"
+        ],
+        "insight": "Male employment dominates many Pacific Islands, though some countries have higher female workforce shares."
+      },
+      {
+        "section": "C",
+        "heading": "Gender Disparities in Agriculture and Construction Employment in Pacific Islands",
+        "charts_title": [
+          "Employment in Agriculture by Sex in Kiribati and Vanuatu",
+          "Construction Employment by Sex: Tuvalu vs Marshall Islands"
+        ],
+        "insight": "Agriculture and construction sectors reveal strong male dominance with notable inter-country employment variations."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Solomon Islands leads in workforce size with 95,024 workers, far above others. Smaller islands like Tokelau employ under 2,000, showing vast labor force variations. These differences likely reflect population sizes and economic opportunities in each country.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Males dominate employment in most Pacific Islands, comprising about 62% overall and even higher in Solomon Islands. Notable exceptions like Nauru and Micronesia have female-majority workforces. This gender imbalance suggests cultural and structural factors limit female participation.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In agriculture, Kiribati and Vanuatu show male dominance, with Vanuatu having higher workforce numbers and disparity. Construction employment heavily favors males, with Marshall Islands having nearly five times more male workers than Tuvalu. These disparities point to gendered economic roles and differing sectoral demands among Pacific Islands.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Country Shape Workforce Sizes Across Pacific Island Sectors?"
+}

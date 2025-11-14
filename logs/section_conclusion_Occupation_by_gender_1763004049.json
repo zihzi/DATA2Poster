@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T03:20:49.378391Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Distribution Across Pacific Island Countries",
+        "charts_title": [
+          "Employment Numbers Across Pacific Island Countries",
+          "Employment by Sex Across Pacific Island Countries"
+        ],
+        "insight": "Pacific Island countries show vast employment differences and balanced sex employment in smaller nations, while bigger countries have male dominance."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Disparities in Employment Across Pacific Islands",
+        "charts_title": [
+          "Employment Numbers by Sex Across Pacific Islands",
+          "Employment by Sex Across Economic Sectors"
+        ],
+        "insight": "Males dominate employment numbers overall, but females have majority employment in social and education sectors across Pacific Islands."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral and Gender Employment Patterns in Niue and Vanuatu",
+        "charts_title": [
+          "Employment by Sector and Sex in Niue",
+          "Employment by Sector and Sex in Vanuatu"
+        ],
+        "insight": "Vanuatu shows male dominance in agriculture and construction, while females lead in wholesale, retail and some service sectors, highlighting gendered employment."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment varies widely across Pacific Islands, with Solomon Islands leading significantly. Male employment consistently exceeds female across countries, especially in larger populations. Smaller nations show more balanced gender employment but limited workforce size, affecting regional policy focus.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Males dominate overall employment, totaling 156,404 versus 96,180 females, revealing deep gender gaps. Sectoral analysis shows males lead in Agriculture and Construction, while females prevail in Education and Social Work. These patterns reflect entrenched roles, signaling a need for gender-inclusive labor strategies.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Niue, females dominate sectors like Education and Support Services, while males lead physically demanding jobs. Vanuatu displays marked gender segregation, females excel in Wholesale and balanced sectors, males dominate Agriculture. Such splits underscore persistent occupational gender divides influencing economic opportunities.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Region Shape Employment Patterns in Pacific Island Countries?"
+}

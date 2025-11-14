@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T09:21:35.734027Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Scale and Gender Distribution in Pacific Island Countries",
+        "charts_title": [
+          "Employment Numbers Across Pacific Island Countries",
+          "Employment by Sex Across Pacific Island Countries"
+        ],
+        "insight": "Pacific Island countries show wide employment scale variation with mostly balanced gender employment shares."
+      },
+      {
+        "section": "B",
+        "heading": "Employment Patterns by Sex Across Countries and Economic Sectors",
+        "charts_title": [
+          "Employment Numbers by Sex Across Countries",
+          "Employment by Sex Across Economic Sectors"
+        ],
+        "insight": "Employment ranks are balanced by sex while sector employment shows strong male dominance except in health and retail."
+      },
+      {
+        "section": "C",
+        "heading": "Sectoral and Gender Employment Variability in Marshall Islands and Nauru",
+        "charts_title": [
+          "Employment by Sex and Sector in Marshall Islands",
+          "Employment Distribution by Sex and Sector in Nauru"
+        ],
+        "insight": "Marshall Islands and Nauru reveal sector-specific gender differences with some balanced and some male-dominated employment sectors."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Pacific Island employment varies widely, with Solomon Islands leading at 95,024 workers. Male employment consistently exceeds female, highlighting regional gender gaps. Smaller nations show near-balanced gender shares but have limited labor markets overall.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Employment by sex varies strongly across sectors, with males dominating construction and agriculture. Females lead in social work and retail, reflecting traditional gender roles and sector accessibility. Gender disparities suggest tailored policies could improve equality.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "Marshall Islands show sectoral balance but males dominate most fields except social work; Nauru exhibits strong male dominance in construction and transport. Female employment concentrates in health and education, underscoring cultural labor patterns. These patterns highlight targets for gender-inclusive workforce strategies.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender Differences Shape Employment Patterns Across Pacific Island Sectors?"
+}

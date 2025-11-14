@@ -1,0 +1,97 @@
+{
+  "timestamp": "2025-11-12T15:14:38.282005Z",
+  "vis_checked_1_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Distribution' and 'Proportion' based on words like 'concentrated', 'dominates', and 'uneven distribution'."
+          },
+          "insight_consistency": {
+            "score": 1,
+            "reason": "Insight about Solomon Islands leading employment with dominance in agriculture and notable retail and education sectors aligns with chart titles and conclusion."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Title 1 supports employment concentration by country but does not fully show 'smaller islands with minimal workforce' in detail; Title 2 supports sector distribution in Solomon Islands but does not demonstrate entire Pacific distribution, so partial evidence."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Titles cover employment by countries and sectors but do not clarify aggregation or include workforce comparisons for all smaller islands to fully support 'minimal workforce' claim."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Titles use appropriate terms: 'by Pacific Island Countries' (distribution across countries) and 'Solomon Islands Employment by Economic Sector' (distribution by sector), matching distribution and proportion claim types."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window or detailed subgroup granularity is mentioned; charts appear cross-sectional rather than trend or multi-dimensional views."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The reasoning clearly identifies partial support due to lack of detailed workforce distribution across smaller islands and partial scope mismatch while recognizing relevant claim-type cues."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_1",
+        "reason": "Chart 1 shows employment numbers by countries but does not adequately reveal the workforce size or minimal employment in smaller islands to fully support the conclusion's emphasis on uneven distribution and minimal workforce in smaller islands. Chart 2 is appropriate for sectoral employment in Solomon Islands and aligns well with insights and conclusion. Replacing Chart 1 with a more detailed distribution visualization can better show workforce spread across all Pacific islands.",
+        "recommendation": {
+          "chart_type": "histogram",
+          "query": "What is the distribution of number of employed persons across Pacific Island Countries?",
+          "revised_title": "Distribution of Employment Numbers Across Pacific Island Countries",
+          "explanation": "A histogram showing the distribution of employment numbers per island country will more explicitly visualize the workforce concentration skew towards Solomon Islands and Vanuatu and minimal workforce in smaller islands, thus better supporting the conclusion about uneven distribution."
+        }
+      }
+    ]
+  },
+  "vis_checked_2_json": {
+    "vis_check": [
+      {
+        "task_compliance": {
+          "claim_type_detection": {
+            "score": 1,
+            "reason": "Detected claim type is 'Proportion' and 'Distribution' based on keywords like 'dominates', 'exceeds', and 'across'."
+          },
+          "insight_consistency": {
+            "score": 0,
+            "reason": "The insight states that Cook Islands shows near gender balance across sectors, which contradicts the conclusion that Cook Islands females dominate service sectors and males lead in construction and utilities."
+          }
+        },
+        "consistency_quality": {
+          "entailment_strength": {
+            "score": 1,
+            "reason": "Chart 1's title supports the claim of male employment exceeding female in Pacific Islands generally. Chart 2's title suggests employment by sex and sector in Cook Islands but the insight from it conflicts with the stated conclusion's claim of gender dominance in certain sectors."
+          },
+          "scope_and_measure_alignment": {
+            "score": 1,
+            "reason": "Chart 1 aligns well with the conclusion about overall employment counts by sex across countries, but Chart 2 covers sectors only in Cook Islands and the insight does not align well with the conclusion's claim on sector dominance."
+          },
+          "relation_cues_match": {
+            "score": 2,
+            "reason": "Both titles contain appropriate cues for distribution/comparison ('by sex across countries', 'employment by sex and sector'). They properly cue the nature of evidence expected."
+          },
+          "granularity_specificity": {
+            "score": 1,
+            "reason": "No explicit time window is indicated in titles or conclusion, but subgroup detail (sex, sectors, countries) is present. The Cook Islands sectoral detail is consistent but not fully specific on time or population size."
+          },
+          "explanation_quality": {
+            "score": 2,
+            "reason": "The explanation references explicit alignment issues between the conclusion's claims, insight contradictions about Cook Islands, and the titles' scope of evidence."
+          }
+        },
+        "verdict": "partially_supported",
+        "replace": "chart_2",
+        "reason": "The first chart supports the overall male-female employment disparity claim across Pacific Island Countries well. However, the second chart title and derived insight do not support the conclusion's claim about sectoral gender dominance in Cook Islands. The insight contradicts the conclusion's assertion about female dominance in services and male dominance in construction and utilities in Cook Islands. A more suitable chart would provide clearer proportional shares of employment by sex within those specific sectors in the Cook Islands to substantiate the gender dominance claims by sector.",
+        "recommendation": {
+          "chart_type": "pie",
+          "query": "What share of employment by sex exists within each economic sector in Cook Islands?",
+          "revised_title": "Proportion of Employment by Sex Within Economic Sectors in Cook Islands",
+          "explanation": "A pie chart (or 100% stacked bar) showing the proportion of males vs females employed in each economic sector in Cook Islands would clearly illustrate gender dominance differences sector by sector, directly supporting the conclusion's claims on entrenched gender roles."
+        }
+      }
+    ]
+  }
+}

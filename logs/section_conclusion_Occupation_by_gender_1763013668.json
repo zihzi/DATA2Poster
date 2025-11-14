@@ -1,0 +1,63 @@
+{
+  "timestamp": "2025-11-13T06:01:08.784976Z",
+  "section_json": {
+    "sections": [
+      {
+        "section": "A",
+        "heading": "Employment Scale and Gender Balance in Pacific Island Countries",
+        "charts_title": [
+          "Employment Numbers by Pacific Island Countries",
+          "Gender Employment Distribution Across Countries"
+        ],
+        "insight": "Larger Pacific Island countries have significantly higher employment with gender distribution near balanced across nations."
+      },
+      {
+        "section": "B",
+        "heading": "Gender Employment Patterns by Sector Across Pacific Islands",
+        "charts_title": [
+          "Employment Numbers by Sex and Economic Sector",
+          "Employment by Sex in Two Key Economic Sectors"
+        ],
+        "insight": "Male dominance prevails in agriculture and support sectors, while females lead in education, health, and finance sectors."
+      },
+      {
+        "section": "C",
+        "heading": "Sex and Sector Employment Profiles in Solomon Islands and Vanuatu",
+        "charts_title": [
+          "Employment by Sex and Sector in Solomon Islands",
+          "Employment by Sex and Sector in Vanuatu"
+        ],
+        "insight": "Agriculture dominates employment with males prevalent, but other sectors show varied sex employment balances in both countries."
+      }
+    ]
+  },
+  "conclusion_json": {
+    "conclusion": [
+      {
+        "section": "A",
+        "content": "Employment varies widely among Pacific Islands, with Solomon Islands and Vanuatu leading by large margins. Male employment consistently exceeds female employment, especially in bigger countries like Solomon Islands. This suggests regional economic disparities and persistent gender gaps influencing labor markets and development policies.",
+        "charts_id": [
+          "0",
+          "1"
+        ]
+      },
+      {
+        "section": "B",
+        "content": "Gender employment patterns differ by sector, with males dominating Agriculture and Fishing, while females prevail in Education and Health. Some sectors like Financial and Insurance show near gender parity, reflecting varied inclusivity across fields. These trends highlight the impact of traditional roles and opportunities on sectoral gender distributions.",
+        "charts_id": [
+          "2",
+          "3"
+        ]
+      },
+      {
+        "section": "C",
+        "content": "In Solomon Islands, male dominance is stark in Agriculture and Fishing, shaping labor distribution significantly. Vanuatu exhibits similar gender imbalances in key sectors, but shows more balanced employment in Education and Wholesale. Addressing these disparities is vital for equitable growth and harnessing the full workforce potential regionally.",
+        "charts_id": [
+          "4",
+          "5"
+        ]
+      }
+    ]
+  },
+  "poster_Q": "How Do Gender and Sector Impact Employment Patterns in Pacific Island Countries?"
+}

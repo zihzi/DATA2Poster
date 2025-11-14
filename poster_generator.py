@@ -432,7 +432,7 @@ def agent9_section_designer(img_list, insight_list, openai_key):
                             2. Read and evaluate each insight for key findings, themes.
                             3. For each chart, consider what insight it provides.
                             4. Use appropriate conjunctions to connect and synthesize the insights from both charts.
-                            5. Write a single sentence (maximum 18 words) that clearly expresses the key insight of the section.
+                            5. Write a single sentence (maximum 15 words) to introduce the section.
                             6. Create a concise section heading that captures the shared insight of each section.
                             
                             **Output (JSON)**
@@ -815,7 +815,7 @@ def poster_title(intro,conclusion,openai_key):
             You are an excellent data analyst excel at writing title for a data visualization poster.
             Here is the introduction of this poster:\n\n{intro}\n\n
             Here is the conclusion drawn from visualization charts:\n\n{conclusion}\n\n
-            
+
             **Task**
             Generate a simple poster title in the form of a question.
 
