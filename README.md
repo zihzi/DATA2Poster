@@ -13,7 +13,7 @@ Simply upload a CSV or Excel dataset, and the application automatically:
 
 🎨 Creates a professional one-page Data Poster for presentation and decision-making
 
-The project demonstrates how Generative AI can **automate data analytics**, **accelerate insight discovery**, and improve data storytelling for both technical and non-technical users.# DATA2Poster
+The project demonstrates how Generative AI can **automate data analytics**, **accelerate insight discovery**, and **improve data storytelling** for both technical and non-technical users.# DATA2Poster
 
 ## Installation
 
