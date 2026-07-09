@@ -1,4 +1,5 @@
-AI-Powered Data Insight & Poster Generator is an intelligent data analysis platform built with Streamlit and Large Language Models (LLMs).
+## Overview
+**AI-Powered Data Insight & Poster Generator** is an intelligent data analysis platform built with Streamlit and Large Language Models (LLMs).
 
 Simply upload a CSV or Excel dataset, and the application automatically:
 
@@ -12,16 +13,7 @@ Simply upload a CSV or Excel dataset, and the application automatically:
 
 🎨 Creates a professional one-page Data Poster for presentation and decision-making
 
-The project demonstrates how Generative AI can automate data analytics, accelerate insight discovery, and improve data storytelling for both technical and non-technical users.# DATA2Poster
-
-## Overview
-
-**Data2Poster** is an AI-powered tool that helps non-experts transform raw data into visually engaging and informative posters. It automates the process of exploratory data analysis (EDA) to create data-driven posters.
-
-## Features
-
-- **Automated Data Analysis**: Extracts insights using AI-driven EDA.
-- **Chart Generation**: Creates meaningful visualizations to represent key findings.
+The project demonstrates how Generative AI can **automate data analytics**, **accelerate insight discovery**, and improve data storytelling for both technical and non-technical users.# DATA2Poster
 
 ## Installation
 
