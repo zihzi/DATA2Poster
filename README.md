@@ -1,4 +1,4 @@
-## Overview
+## DATA2Poster Overview
 **AI-Powered Data Insight & Poster Generator** is an intelligent data analysis platform built with Streamlit and Large Language Models (LLMs).
 
 Simply upload a CSV or Excel dataset, and the application automatically:
